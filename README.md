@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/deriv-com/deriv-com-v2/badge.svg?branch=main)](https://coveralls.io/github/deriv-com/deriv-com-v2?branch=main)
+
 # Deriv Com V2
 
 Deriv Com V2 Project
