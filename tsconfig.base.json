@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@deriv-com-v2/storybook-host": ["libs/storybook-host/src/index.ts"],
+      "@deriv-com/blocks": ["libs/blocks/src/index.ts"],
+      "@deriv-com/features": ["libs/features/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
