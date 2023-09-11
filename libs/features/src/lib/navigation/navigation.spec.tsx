@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Features from './features';
+import Navigation from './navigation';
 
-describe('Features', () => {
+describe('Navigation', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Features />);
+    const { baseElement } = render(<Navigation />);
     expect(baseElement).toBeTruthy();
   });
 });

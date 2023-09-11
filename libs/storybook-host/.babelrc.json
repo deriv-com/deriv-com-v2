@@ -2,6 +2,13 @@
   "sourceType": "unambiguous",
   "presets": [
     [
+      "@nx/react/babel",
+      {
+        "runtime": "automatic",
+        "useBuiltIns": "usage"
+      }
+    ],
+    [
       "@babel/preset-env",
       {
         "targets": {

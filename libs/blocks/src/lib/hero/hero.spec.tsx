@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Blocks from './blocks';
+import Hero from '.';
 
-describe('Blocks', () => {
+describe('Hero', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Blocks />);
+    const { baseElement } = render(<Hero />);
     expect(baseElement).toBeTruthy();
   });
 });

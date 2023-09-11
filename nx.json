@@ -15,6 +15,7 @@
     }
   },
   "workspaceLayout": {
+    "projectNameAndRootFormat": "derived",
     "appsDir": "apps",
     "libsDir": "libs"
   },

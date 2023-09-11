@@ -4,6 +4,7 @@
   "sourceRoot": "libs/storybook-host/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["blocks", "features", "hooks", "providers"],
   "targets": {
     "storybook": {
       "executor": "@nx/storybook:storybook",
