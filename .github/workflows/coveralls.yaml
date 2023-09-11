@@ -15,6 +15,8 @@ jobs:
           node-version: 18.x
 
       - name: Build, and make test-coverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm ci
           JEST_MAX_WORKERS=3 npm run test:ci
