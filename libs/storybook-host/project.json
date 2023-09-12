@@ -23,7 +23,8 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "dist/storybook/storybook-host",
-        "configDir": "libs/storybook-host/.storybook"
+        "configDir": "libs/storybook-host/.storybook",
+        "webpackStatsJson": true
       },
       "configurations": {
         "ci": {
