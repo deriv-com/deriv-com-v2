@@ -28,8 +28,7 @@
       "configurations": {
         "development": {
           "buildTarget": "deriv-hk:build:development",
-          "dev": true,
-          "hostname": "localhost"
+          "dev": true
         },
         "production": {
           "buildTarget": "deriv-hk:build:production",
