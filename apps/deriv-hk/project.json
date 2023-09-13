@@ -23,13 +23,13 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "deriv-hk:build",
-        "dev": true
+        "dev": true,
+        "hostname": "localhost"
       },
       "configurations": {
         "development": {
           "buildTarget": "deriv-hk:build:development",
-          "dev": true,
-          "hostname": "localhost"
+          "dev": true
         },
         "production": {
           "buildTarget": "deriv-hk:build:production",
