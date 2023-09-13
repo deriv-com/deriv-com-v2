@@ -1,3 +1,4 @@
+import { Hero } from '@deriv-com/blocks';
 import {
   Button,
   FluidContainer,
@@ -19,6 +20,10 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
 
   return (
     <FluidContainer>
+      <Hero.ImageLimitLess
+        title="Test Hero"
+        description="Lets see what you can do"
+      />
       <Heading.Hero>Welcome to {title}</Heading.Hero>
       <Heading.H1>Current theme is {theme}</Heading.H1>
       <Button size="lg" onClick={changeTheme}>
