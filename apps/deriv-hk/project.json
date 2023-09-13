@@ -23,8 +23,7 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "deriv-hk:build",
-        "dev": true,
-        "hostname": "localhost"
+        "dev": true
       },
       "configurations": {
         "development": {
