@@ -1,4 +1,4 @@
-import { FixContainer, Heading } from '@deriv-com/quill-design';
+import { FixContainer, Heading } from '@deriv/quill-design';
 
 export function Navigation() {
   return (

@@ -1,4 +1,4 @@
-import { FluidContainer, Heading } from '@deriv-com/quill-design';
+import { FluidContainer, Heading } from '@deriv/quill-design';
 
 /* eslint-disable-next-line */
 export interface WhoWeAreTemplateProps {}

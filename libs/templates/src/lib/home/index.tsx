@@ -1,10 +1,5 @@
 import { Hero } from '@deriv-com/blocks';
-import {
-  Button,
-  FluidContainer,
-  Heading,
-  useTheme,
-} from '@deriv-com/quill-design';
+import { Button, FluidContainer, Heading, useTheme } from '@deriv/quill-design';
 import { useCallback } from 'react';
 
 export interface HomeTemplateProps {
