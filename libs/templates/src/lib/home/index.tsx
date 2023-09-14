@@ -15,10 +15,37 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
 
   return (
     <FluidContainer>
-      <Hero.ImageLimitLess
-        title="Test Hero"
-        description="Lets see what you can do"
-      />
+      <Hero.ImageLimitless
+        title="Title goes here"
+        description={`Description goes here description goes here
+          description goes here description goes here`}
+        content={
+          <img
+            className="w-full"
+            src="https://placehold.co/712x800"
+            alt="Placeholder"
+          />
+        }
+        className="mb-10"
+      >
+        <p> This is an image limitless hero</p>
+      </Hero.ImageLimitless>
+      <Hero.ImageLimit
+        title="Title goes here"
+        description={`Description goes here description goes here
+          description goes here description goes here`}
+        content={
+          <div className="flex pt-20 pb-20 pr-24">
+            <img
+              className="w-full rounded-3xl"
+              src="https://placehold.co/712x800"
+              alt="Placeholder"
+            />
+          </div>
+        }
+      >
+        <p>this is an image limit hero</p>
+      </Hero.ImageLimit>
       <Heading.Hero>Welcome to {title}</Heading.Hero>
       <Heading.H1>Current theme is {theme}</Heading.H1>
       <Button size="lg" onClick={changeTheme}>

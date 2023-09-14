@@ -1,3 +1,9 @@
 {
-  "tailwindCSS.experimental.configFile": "./tailwind.config.js"
+  "tailwindCSS.experimental.configFile": "./tailwind.config.js",
+  "tailwindCSS.experimental.classRegex": [
+    ["classes \\=([^;]*);", "'([^']*)'"],
+    ["classes \\=([^;]*);", "\"([^\"]*)\""],
+    ["classes \\=([^;]*);", "\\`([^\\`]*)\\`"]
+  ],
+  "tailwindCSS.classAttributes": ["class", "classes", ".*styles"]
 }
