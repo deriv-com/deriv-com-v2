@@ -3,8 +3,8 @@ import type { Preview } from '@storybook/react';
 import { withThemeByClassName } from '@storybook/addon-styling';
 
 // import '../src/styles.scss';
-import '@deriv-com/quill-design/quill-tailwind/styles.css';
-import '@deriv-com/quill-design/quill-tailwind/fonts.css';
+import '@deriv/quill-design/quill-tailwind/styles.css';
+import '@deriv/quill-design/quill-tailwind/fonts.css';
 
 const preview: Preview = {
   parameters: {
