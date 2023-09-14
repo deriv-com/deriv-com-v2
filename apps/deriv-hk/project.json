@@ -23,7 +23,9 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "deriv-hk:build",
-        "dev": true
+        "dev": true,
+        "keepAliveTimeout": 60000,
+        "hostname": "localhost"
       },
       "configurations": {
         "development": {

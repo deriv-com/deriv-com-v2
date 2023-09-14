@@ -20,7 +20,8 @@
       "@deriv-com/features": ["libs/features/src/index.ts"],
       "@deriv-com/hooks": ["libs/hooks/src/index.ts"],
       "@deriv-com/providers": ["libs/providers/src/index.ts"],
-      "@deriv-com/templates": ["libs/templates/src/index.ts"]
+      "@deriv-com/templates": ["libs/templates/src/index.ts"],
+      "@deriv-com/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
