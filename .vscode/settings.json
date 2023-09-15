@@ -1,9 +1,26 @@
 {
   "tailwindCSS.experimental.configFile": "./tailwind.config.js",
   "tailwindCSS.experimental.classRegex": [
-    ["classes \\=([^;]*);", "'([^']*)'"],
-    ["classes \\=([^;]*);", "\"([^\"]*)\""],
-    ["classes \\=([^;]*);", "\\`([^\\`]*)\\`"],
+    [
+      "classes \\=([^;]*);",
+      "'([^']*)'"
+    ],
+    [
+      "classes \\=([^;]*);",
+      "\"([^\"]*)\""
+    ],
+    [
+      "classes \\=([^;]*);",
+      "\\`([^\\`]*)\\`"
+    ],
+    [
+     "{\\s*'[^']*'\\s*:\\s*'[^']*'\\s*,\\s*'[^']*'\\s*:|'([^']*)'"
+    ]
   ],
-  "tailwindCSS.classAttributes": ["class", "classes","Classes", ".*styles"]
+  "tailwindCSS.classAttributes": [
+    "class",
+    "classes",
+    "Classes",
+    ".*styles"
+  ]
 }

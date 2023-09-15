@@ -11,11 +11,6 @@ const ImageLimitless = ({
   className,
   children,
 }: HeroProps) => {
-  const left_panel_classes = {
-    lg: 'pt-4000 pb-4000 pr-3200',
-    md: 'pt-2000 pl-1200 pr-1200 pb-1600',
-  };
-
   return (
     <div
       className={clsx(
@@ -28,7 +23,10 @@ const ImageLimitless = ({
       <div className="lg:flex lg:flex-row md:flex md:flex-col sm:flex  sm:flex-col items-center">
         <div
           className={clsx(
-            generateClassNamePrefixes(left_panel_classes),
+            generateClassNamePrefixes({
+              lg: 'pt-4000 pb-4000 pr-3200',
+              md: 'pt-2000 pl-1200 pr-1200 pb-1600',
+            }),
             'flex flex-1 flex-col pl-5000'
           )}
         >
