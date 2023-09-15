@@ -3,7 +3,7 @@
   "tailwindCSS.experimental.classRegex": [
     ["classes \\=([^;]*);", "'([^']*)'"],
     ["classes \\=([^;]*);", "\"([^\"]*)\""],
-    ["classes \\=([^;]*);", "\\`([^\\`]*)\\`"]
+    ["classes \\=([^;]*);", "\\`([^\\`]*)\\`"],
   ],
-  "tailwindCSS.classAttributes": ["class", "classes", ".*styles"]
+  "tailwindCSS.classAttributes": ["class", "classes","Classes", ".*styles"]
 }
