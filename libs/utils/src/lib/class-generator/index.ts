@@ -1,3 +1,5 @@
+import clsx = require('clsx');
+
 export interface ClassPrefixesProps {
   sm?: string;
   md?: string;
@@ -41,9 +43,17 @@ export const generateClassNamePrefixes = (classes: ClassPrefixesProps) => {
   Object.keys(classes).forEach((prefix) => {
     class_string += classes[prefix]
       .split(' ')
-      .map((e: string) => `${prefix}:${e}`)
-      .join(' ');
+      .map((e: string) => `${prefix}:${e} `)
+      .join(' ')
+      .replace(/\s+/g, ' ');
   });
 
   return class_string;
+};
+
+export const twclsx = (
+  prefix_classes: ClassPrefixesProps,
+  other_classes: string[] | string
+) => {
+  return clsx([generateClassNamePrefixes(prefix_classes)], other_classes);
 };

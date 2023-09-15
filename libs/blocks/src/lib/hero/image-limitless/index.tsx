@@ -1,7 +1,7 @@
 import { Heading } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { HeroProps } from '..';
-import { generateClassNamePrefixes } from '@deriv-com/utils';
+import { twclsx } from '@deriv-com/utils';
 
 const ImageLimitless = ({
   title,
@@ -20,13 +20,23 @@ const ImageLimitless = ({
         className
       )}
     >
-      <div className="lg:flex lg:flex-row md:flex md:flex-col sm:flex  sm:flex-col items-center">
+      <div
+        className={twclsx(
+          {
+            lg: 'flex flex-row',
+            md: 'flex flex-col',
+            sm: 'flex flex-col',
+          },
+          'items-center'
+        )}
+      >
         <div
-          className={clsx(
-            generateClassNamePrefixes({
+          className={twclsx(
+            {
               lg: 'pt-4000 pb-4000 pr-3200',
               md: 'pt-2000 pl-1200 pr-1200 pb-1600',
-            }),
+              sm: 'pt-1000 pl-1000 pr-2000 pb-1500',
+            },
             'flex flex-1 flex-col pl-5000'
           )}
         >
