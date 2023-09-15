@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-import type { Preview } from '@storybook/react';
 import { withThemeByClassName } from '@storybook/addon-styling';
 
-// import '../src/styles.scss';
+import './styles.scss';
 import '@deriv/quill-design/quill-tailwind/styles.css';
 import '@deriv/quill-design/quill-tailwind/fonts.css';
 
-const preview: Preview = {
+const preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
