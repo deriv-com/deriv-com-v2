@@ -23,11 +23,9 @@ const ImageLimitless = ({
       <div
         className={twclsx(
           {
-            lg: 'flex flex-row',
-            md: 'flex flex-col',
-            sm: 'flex flex-col',
+            lg: 'flex-row',
           },
-          'flex items-center'
+          'flex flex-col items-center'
         )}
       >
         <div
