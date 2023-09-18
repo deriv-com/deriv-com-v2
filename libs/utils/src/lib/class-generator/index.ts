@@ -41,7 +41,10 @@ export const generateClassNamePrefixes = (classes: ClassPrefixesProps) => {
   let class_string = '';
 
   Object.keys(classes).forEach((prefix) => {
-    class_string += classes[prefix]
+    const str = classes[prefix as keyof ClassPrefixesProps];
+
+    class_string += str
+      ?.trim()
       .split(' ')
       .map((e: string) => `${prefix}:${e} `)
       .join(' ')
@@ -53,7 +56,7 @@ export const generateClassNamePrefixes = (classes: ClassPrefixesProps) => {
 
 export const twclsx = (
   prefix_classes: ClassPrefixesProps = {},
-  other_classes: string[] | string
+  other_classes: string[] | string = ''
 ) => {
   return clsx([generateClassNamePrefixes(prefix_classes)], other_classes);
 };

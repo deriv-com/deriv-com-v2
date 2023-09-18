@@ -1,3 +1,4 @@
+import { twclsx } from '@deriv-com/utils';
 import { Button, FluidContainer, Heading, useTheme } from '@deriv/quill-design';
 import { useCallback } from 'react';
 
