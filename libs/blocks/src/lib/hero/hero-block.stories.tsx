@@ -1,23 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Hero } from '.';
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
 
-const meta: Meta<typeof Hero> = {
-  component: Hero,
-  title: 'Blocks',
+const meta: Meta<typeof Hero.ContentBottom> = {
+  component: Hero.ContentBottom,
+  title: 'Blocks/Hero/Content-Top-Bottom',
 };
 export default meta;
-type Story = StoryObj<typeof Hero>;
+// type Story = StoryObj<typeof Hero>;
 
-export const Primary = {
-  args: {},
+export const ContentTop = {
+  args: {
+    title: "Title Goes Here",
+    className: "flex-col-reverse",
+    contentClassName: "bg-cyan-100"
+  },
 };
 
-export const Heading: Story = {
-  args: {},
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    expect(canvas.getByText(/Welcome to Hero!/gi)).toBeTruthy();
+export const ContentBottom = {
+  args: {
+    title: "Title Goes Here",
+    contentClassName: "bg-cyan-100",
   },
 };
