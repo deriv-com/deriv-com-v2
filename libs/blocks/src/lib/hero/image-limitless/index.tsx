@@ -27,7 +27,7 @@ const ImageLimitless = ({
             md: 'flex flex-col',
             sm: 'flex flex-col',
           },
-          'items-center'
+          'flex items-center '
         )}
       >
         <div
@@ -35,7 +35,6 @@ const ImageLimitless = ({
             {
               lg: 'pt-4000 pb-4000 pr-3200',
               md: 'pt-2000 pl-1200 pr-1200 pb-1600',
-              sm: 'pt-1000 pl-1000 pr-2000 pb-1500',
             },
             'flex flex-1 flex-col pl-5000'
           )}
