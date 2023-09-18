@@ -27,7 +27,7 @@ const ImageLimitless = ({
             md: 'flex flex-col',
             sm: 'flex flex-col',
           },
-          'flex items-center '
+          'flex items-center'
         )}
       >
         <div
