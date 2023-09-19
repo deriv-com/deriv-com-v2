@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import ContentBottom from '.';
+import ContentTop from '.';
 
-describe('ContentBottom', () => {
+describe('ContentTop', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ContentBottom />);
+    const { baseElement } = render(<ContentTop />);
     expect(baseElement).toBeTruthy();
   });
 });

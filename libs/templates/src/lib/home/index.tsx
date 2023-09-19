@@ -46,6 +46,13 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
       >
         <p>this is an image limit hero</p>
       </Hero.ContentLimit>
+      <Hero.ContentTop title="Content Top" className="mt-10">
+        <img
+          className="w-full"
+          src="https://placehold.co/712x200"
+          alt="Placeholder"
+        />
+      </Hero.ContentTop>
       <Hero.ContentBottom title="Content Bottom" className="mt-10">
         <img
           className="w-full"
