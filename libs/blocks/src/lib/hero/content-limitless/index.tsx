@@ -42,7 +42,7 @@ const ContentLimitless = ({
           )}
         >
           {HeadingComponent && (
-            <HeadingComponent className="pb-8 md:pt-10 sm:pt-10">
+            <HeadingComponent className="pb-8 max-lg:pt-10">
               {title}
             </HeadingComponent>
           )}
