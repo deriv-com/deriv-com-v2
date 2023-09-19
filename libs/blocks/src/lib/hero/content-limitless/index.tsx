@@ -1,4 +1,4 @@
-import { Heading } from '@deriv/quill-design';
+import { Heading, Text } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { HeroProps } from '..';
 
@@ -10,6 +10,13 @@ const ContentLimitless = ({
   className,
   children,
 }: HeroProps) => {
+  const heading_components = {
+    h1: Heading.H1,
+    hero: Heading.Hero,
+  };
+
+  const HeadingComponent = heading_components[title_type];
+
   return (
     <div
       className={clsx(
@@ -29,20 +36,20 @@ const ContentLimitless = ({
       >
         <div
           className={clsx(
-            'lg:pl-28 lg:pr-11',
-            'md:pb-1600 md:px-6',
-            'flex flex-1 flex-col px-4 justify-center'
+            'lg:pr-16',
+            'md:pb-1600 md:pr-6',
+            'flex flex-1 flex-col pr-4'
           )}
         >
-          {title_type === 'hero' && (
-            <Heading.Hero className="pb-8">{title}</Heading.Hero>
+          {HeadingComponent && (
+            <HeadingComponent className="pb-8 max-lg:pt-10">
+              {title}
+            </HeadingComponent>
           )}
-          {title_type === 'h1' && (
-            <Heading.H1 className="pb-8">{title}</Heading.H1>
-          )}
-          <p className="font-sans font-normal text-3xl text-opacity-600 text-400 pb-10">
+
+          <Text size="xl" variant="regular" className="pb-10">
             {description}
-          </p>
+          </Text>
           <div className="w-full">{children}</div>
         </div>
         <div className="flex flex-1">{content && content}</div>
