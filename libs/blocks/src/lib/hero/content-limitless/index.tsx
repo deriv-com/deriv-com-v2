@@ -1,4 +1,4 @@
-import { Heading } from '@deriv/quill-design';
+import { Heading, Text } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { HeroProps } from '..';
 
@@ -35,14 +35,16 @@ const ContentLimitless = ({
           )}
         >
           {title_type === 'hero' && (
-            <Heading.Hero className="pb-8">{title}</Heading.Hero>
+            <Heading.Hero className="pb-8 md:pt-10 sm:pt-10">
+              {title}
+            </Heading.Hero>
           )}
           {title_type === 'h1' && (
-            <Heading.H1 className="pb-8">{title}</Heading.H1>
+            <Heading.H1 className="pb-8 md:pt-10 sm:pt-10">{title}</Heading.H1>
           )}
-          <p className="font-sans font-normal text-3xl text-opacity-600 text-400 pb-10">
+          <Text size="xl" variant="regular" className="pb-10">
             {description}
-          </p>
+          </Text>
           <div className="w-full">{children}</div>
         </div>
         <div className="flex flex-1">{content && content}</div>
