@@ -12,7 +12,6 @@ export interface HeroProps {
   description?: string;
   content?: ReactNode;
   children?: ReactNode;
-  contentClassName?: string;
 }
 
 type HeroVariants = {

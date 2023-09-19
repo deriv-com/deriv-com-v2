@@ -53,7 +53,7 @@ export const generateClassNamePrefixes = (classes: ClassPrefixesProps) => {
 
 export const twclsx = (
   prefix_classes: ClassPrefixesProps = {},
-  other_classes: string[] | string = ''
+  other_classes: string[] | string
 ) => {
   return clsx([generateClassNamePrefixes(prefix_classes)], other_classes);
 };
