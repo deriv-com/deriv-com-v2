@@ -1,5 +1,5 @@
-import ImageLimit from './image-limit';
-import ImageLimitless from './image-limitless';
+import ContentLimit from './content-limit';
+import ContentLimitless from './content-limitless';
 import { ReactNode } from 'react';
 
 /* eslint-disable-next-line */
@@ -14,15 +14,15 @@ export interface HeroProps {
 }
 
 type HeroVariants = {
-  ImageLimitless: typeof ImageLimitless;
-  ImageLimit: typeof ImageLimit;
+  ContentLimitless: typeof ContentLimitless;
+  ContentLimit: typeof ContentLimit;
 };
 
 export const Hero: HeroVariants = ({ children }: { children: ReactNode }) => {
   return children;
 };
 
-Hero.ImageLimitless = ImageLimitless;
-Hero.ImageLimit = ImageLimit;
+Hero.ContentLimitless = ContentLimitless;
+Hero.ContentLimit = ContentLimit;
 
 export default Hero;

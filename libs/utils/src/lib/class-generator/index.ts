@@ -1,4 +1,4 @@
-import clsx = require('clsx');
+import clsx from 'clsx';
 
 export interface ClassPrefixesProps {
   sm?: string;

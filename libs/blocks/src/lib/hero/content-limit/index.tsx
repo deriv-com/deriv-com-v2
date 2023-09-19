@@ -1,7 +1,7 @@
 import { HeroProps } from '..';
-import ImageLimitless from '../image-limitless';
+import ContentLimitless from '../content-limitless';
 
-const ImageLimit = ({
+const ContentLimit = ({
   title,
   description,
   content,
@@ -9,7 +9,7 @@ const ImageLimit = ({
   children,
 }: HeroProps) => {
   return (
-    <ImageLimitless
+    <ContentLimitless
       title={title}
       title_type="h1"
       description={description}
@@ -17,8 +17,8 @@ const ImageLimit = ({
       className={className}
     >
       {children && children}
-    </ImageLimitless>
+    </ContentLimitless>
   );
 };
 
-export default ImageLimit;
+export default ContentLimit;
