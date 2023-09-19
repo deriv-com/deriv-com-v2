@@ -21,7 +21,7 @@ jobs:
 
       - name: Install npm dependencies
         # Skip post-install scripts here, as a malicious script could steal NODE_AUTH_TOKEN.
-        run: 'npm ci --ignore-scripts'
+        run: 'npm ci --ignore-scripts --include=optional'
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ github.token }}
