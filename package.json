@@ -37,7 +37,7 @@
     "@nx/storybook": "16.8.1",
     "@nx/vite": "16.8.1",
     "@nx/web": "16.8.1",
-    "@nx/webpack": "^16.8.1",
+    "@nx/webpack": "16.8.1",
     "@nx/workspace": "16.8.1",
     "@storybook/addon-essentials": "7.4.2",
     "@storybook/addon-interactions": "^7.2.2",
@@ -86,3 +86,4 @@
     "vite": "~4.3.9"
   }
 }
+
