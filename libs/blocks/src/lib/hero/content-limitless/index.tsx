@@ -1,9 +1,8 @@
 import { Heading } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { HeroProps } from '..';
-import { twclsx } from '@deriv-com/utils';
 
-const ImageLimitless = ({
+const ContentLimitless = ({
   title,
   title_type = 'hero',
   description,
@@ -21,20 +20,18 @@ const ImageLimitless = ({
       )}
     >
       <div
-        className={twclsx(
-          {
-            lg: 'flex-row',
-          },
+        className={clsx(
+          'sm:flex-col',
+          'md:flex-col',
+          'lg:flex-row',
           'flex flex-col items-center'
         )}
       >
         <div
-          className={twclsx(
-            {
-              lg: 'pt-4000 pb-4000 pr-3200',
-              md: 'pt-2000 pl-1200 pr-1200 pb-1600',
-            },
-            'flex flex-1 flex-col pl-5000'
+          className={clsx(
+            'lg:pl-28 lg:pr-11',
+            'md:pb-1600 md:px-6',
+            'flex flex-1 flex-col px-4 justify-center'
           )}
         >
           {title_type === 'hero' && (
@@ -43,7 +40,7 @@ const ImageLimitless = ({
           {title_type === 'h1' && (
             <Heading.H1 className="pb-8">{title}</Heading.H1>
           )}
-          <p className="font-sans font-normal text-3xl text-opacity-600 text-400  pb-10">
+          <p className="font-sans font-normal text-3xl text-opacity-600 text-400 pb-10">
             {description}
           </p>
           <div className="w-full">{children}</div>
@@ -54,4 +51,4 @@ const ImageLimitless = ({
   );
 };
 
-export default ImageLimitless;
+export default ContentLimitless;
