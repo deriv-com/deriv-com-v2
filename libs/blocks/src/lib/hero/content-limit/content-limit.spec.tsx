@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import ImageLimit from './index';
+import ContentLimit from './index';
 
-describe('ImageLimit', () => {
+describe('ContentLimit', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ImageLimit />);
+    const { baseElement } = render(<ContentLimit />);
     expect(baseElement).toBeTruthy();
   });
 });
