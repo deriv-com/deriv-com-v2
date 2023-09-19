@@ -10,6 +10,13 @@ const ContentLimitless = ({
   className,
   children,
 }: HeroProps) => {
+  const heading_components = {
+    h1: Heading.H1,
+    hero: Heading.Hero,
+  };
+
+  const HeadingComponent = heading_components[title_type];
+
   return (
     <div
       className={clsx(
@@ -34,14 +41,12 @@ const ContentLimitless = ({
             'flex flex-1 flex-col px-4 justify-center'
           )}
         >
-          {title_type === 'hero' && (
-            <Heading.Hero className="pb-8 md:pt-10 sm:pt-10">
+          {HeadingComponent && (
+            <HeadingComponent className="pb-8 md:pt-10 sm:pt-10">
               {title}
-            </Heading.Hero>
+            </HeadingComponent>
           )}
-          {title_type === 'h1' && (
-            <Heading.H1 className="pb-8 md:pt-10 sm:pt-10">{title}</Heading.H1>
-          )}
+
           <Text size="xl" variant="regular" className="pb-10">
             {description}
           </Text>
