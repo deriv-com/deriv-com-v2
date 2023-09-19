@@ -1,4 +1,4 @@
-import { Hero } from '@deriv-com/blocks';
+import { Hero, Features } from '@deriv-com/blocks';
 import { Button, FluidContainer, Heading, useTheme } from '@deriv/quill-design';
 import { useCallback } from 'react';
 
@@ -55,6 +55,17 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
       </Hero.ContentBottom>
       <Heading.Hero>Welcome to {title}</Heading.Hero>
       <Heading.H1>Current theme is {theme}</Heading.H1>
+      <Features.Card
+        title="Title goes here"
+        description="Description goes here description goes here description goes here description goes here"
+        cta={
+          <div className="flex justify-center w-full">
+            <Button>CTA</Button>
+          </div>
+        }
+      >
+        <div className="flex justify-center w-full">Content will go here</div>
+      </Features.Card>
       <Button size="lg" onClick={changeTheme}>
         Toggle theme
       </Button>
