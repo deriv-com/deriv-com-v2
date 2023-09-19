@@ -36,9 +36,9 @@ const ContentLimitless = ({
       >
         <div
           className={clsx(
-            'lg:pl-28 lg:pr-11',
-            'md:pb-1600 md:px-6',
-            'flex flex-1 flex-col px-4 justify-center'
+            'lg:pr-16',
+            'md:pb-1600 md:pr-6',
+            'flex flex-1 flex-col pr-4'
           )}
         >
           {HeadingComponent && (
