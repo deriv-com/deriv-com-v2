@@ -31,14 +31,17 @@ const ContentLimitless = ({
           'lg:flex-row',
           'flex',
           'items-center',
-          title_type === 'hero' ? 'flex-col' : 'flex-col-reverse'
+          title_type === 'hero'
+            ? 'flex-col'
+            : 'flex-col-reverse lg:px-0 lg:pt-0 px-800 pt-2000'
         )}
       >
         <div
           className={clsx(
-            'lg:pr-3200',
-            'md:pb-1600 max-lg:pr-800',
-            'flex flex-1 flex-col'
+            'lg:pr-3200 ',
+            'pb-1600 lg:pb-0 max-lg:pr-800',
+            'flex flex-1 flex-col',
+            'px-800 lg:px-0'
           )}
         >
           {HeadingComponent && (

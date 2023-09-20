@@ -28,14 +28,14 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         }
         className="mb-10"
       >
-        <p> This is an image limitless hero</p>
+        <p> This is a content limitless hero</p>
       </Hero.ContentLimitless>
       <Hero.ContentLimit
         title="Title goes here"
         description={`Description goes here description goes here
           description goes here description goes here`}
         content={
-          <div className="flex pt-20 lg:pb-20 lg:pr-24 md:pr-0 sm:pr-0 pr-0">
+          <div className="flex lg:pt-20 lg:pb-20 lg:pr-24 md:pr-0 sm:pr-0 pr-0">
             <img
               className="w-full rounded-3xl"
               src="https://placehold.co/712x800"
@@ -44,7 +44,7 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
           </div>
         }
       >
-        <p>this is an image limit hero</p>
+        <p>This is a content limit hero</p>
       </Hero.ContentLimit>
       <Hero.ContentTop title="Content Top" className="mt-10">
         <img
@@ -60,8 +60,19 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
           alt="Placeholder"
         />
       </Hero.ContentBottom>
+
+      <Hero.ContentLess
+        title="Title goes here"
+        description={`Description goes here description goes here
+          description goes here description goes here`}
+        className="mt-10"
+      >
+        <p>This is an content less block</p>
+      </Hero.ContentLess>
+
       <Heading.Hero>Welcome to {title}</Heading.Hero>
       <Heading.H1>Current theme is {theme}</Heading.H1>
+
       <Features.Card
         title="Title goes here"
         description="Description goes here description goes here description goes here description goes here"
