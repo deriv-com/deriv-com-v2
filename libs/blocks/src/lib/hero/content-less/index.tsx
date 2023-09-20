@@ -17,15 +17,11 @@ const ContentBottom = ({
         className
       )}
     >
-      <Heading.H1 className="flex w-full justify-center lg:px-4000 text-center">
-        {title}
-      </Heading.H1>
+      <Heading.H1 className="flex w-full justify-center">{title}</Heading.H1>
       <Text size="xl" variant="regular" className="text-center">
         {description}
       </Text>
-      <div className="w-full flex flex-1 justify-center lg:px-4000">
-        {children}
-      </div>
+      <div className="w-full flex flex-1 justify-center">{children}</div>
     </div>
   );
 };
