@@ -1,12 +1,12 @@
 import { Heading } from '@deriv/quill-design';
-import { HeroProps } from '..';
+import { HeroTopBottomProps } from '..';
 import clsx from 'clsx';
 
 const ContentBottom = ({
   className = '',
   title,
   children,
-}: Pick<HeroProps, 'className' | 'title' | 'children'>) => {
+}: HeroTopBottomProps) => {
   return (
     <div
       className={clsx(
