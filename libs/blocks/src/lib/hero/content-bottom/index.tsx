@@ -10,9 +10,9 @@ const ContentBottom = ({
   return (
     <div
       className={clsx(
-        'md:py-10 md:px-6',
+        'md:py-2000 md:px-1200',
         'lg:py-4000',
-        'w-full flex flex-col py-10 px-4  bg-background-primary-container gap-10',
+        'w-full flex flex-col py-2000 px-800 bg-background-primary-container gap-2000',
         className
       )}
     >

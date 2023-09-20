@@ -35,7 +35,7 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         description={`Description goes here description goes here
           description goes here description goes here`}
         content={
-          <div className="flex pt-20 pb-20 lg:pr-24 md:pr-0 sm:pr-0 pr-0">
+          <div className="flex pt-20 lg:pb-20 lg:pr-24 md:pr-0 sm:pr-0 pr-0">
             <img
               className="w-full rounded-3xl"
               src="https://placehold.co/712x800"
@@ -46,6 +46,13 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
       >
         <p>this is an image limit hero</p>
       </Hero.ContentLimit>
+      <Hero.ContentTop title="Content Top" className="mt-10">
+        <img
+          className="w-full"
+          src="https://placehold.co/712x200"
+          alt="Placeholder"
+        />
+      </Hero.ContentTop>
       <Hero.ContentBottom title="Content Bottom" className="mt-10">
         <img
           className="w-full"
