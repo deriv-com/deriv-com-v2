@@ -27,19 +27,12 @@ const ContentLimitless = ({
       )}
     >
       <div
-        className={
-          title_type == 'hero'
-            ? clsx(
-                'max-lg:flex-col',
-                'lg:flex-row',
-                'flex flex-col items-center'
-              )
-            : clsx(
-                'max-lg:flex-col',
-                'lg:flex-row',
-                'flex flex-col-reverse items-center'
-              )
-        }
+        className={clsx(
+          'lg:flex-row',
+          'flex',
+          'items-center',
+          title_type === 'hero' ? 'flex-col' : 'flex-col-reverse'
+        )}
       >
         <div
           className={clsx(
