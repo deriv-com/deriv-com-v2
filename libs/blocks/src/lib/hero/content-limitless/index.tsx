@@ -28,12 +28,11 @@ const ContentLimitless = ({
     >
       <div
         className={clsx(
-          'lg:flex-row',
+          'lg:flex-row  lg:px-0 lg:pt-0 ',
+          'md:px-1200',
           'flex',
-          'items-center',
-          title_type === 'hero'
-            ? 'flex-col'
-            : 'flex-col-reverse lg:px-0 lg:pt-0 px-800 pt-2000'
+          'items-center px-800',
+          title_type === 'hero' ? 'flex-col' : 'flex-col-reverse pt-2000'
         )}
       >
         <div
