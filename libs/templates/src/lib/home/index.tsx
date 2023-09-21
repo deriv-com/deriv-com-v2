@@ -67,7 +67,7 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
           description goes here description goes here`}
         className="mt-10"
       >
-        <p>This is an content less block</p>
+        <p>This is a content less block</p>
       </Hero.ContentLess>
 
       <Heading.Hero>Welcome to {title}</Heading.Hero>

@@ -16,6 +16,6 @@ export const Default: Story = {
     title: 'Title Goes Here',
     description:
       'Description goes here description goes here description goes here description goes here',
-    children: <p>this is an image limit hero</p>,
+    children: <p>This is a content less block</p>,
   },
 };
