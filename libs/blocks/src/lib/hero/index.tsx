@@ -2,6 +2,7 @@ import ContentLimit from './content-limit';
 import ContentLimitless from './content-limitless';
 import ContentBottom from './content-bottom';
 import ContentTop from './content-top';
+import ContentLess from './content-less';
 import { ReactNode } from 'react';
 
 /* eslint-disable-next-line */
@@ -15,16 +16,12 @@ export interface HeroProps {
   children?: ReactNode;
 }
 
-export type HeroTopBottomProps = Pick<
-  HeroProps,
-  'className' | 'title' | 'children'
->;
-
 type HeroVariants = {
   ContentLimitless: typeof ContentLimitless;
   ContentLimit: typeof ContentLimit;
   ContentBottom: typeof ContentBottom;
   ContentTop: typeof ContentTop;
+  ContentLess: typeof ContentLess;
 };
 
 export const Hero: HeroVariants = ({ children }: { children: ReactNode }) => {
@@ -35,5 +32,6 @@ Hero.ContentLimitless = ContentLimitless;
 Hero.ContentLimit = ContentLimit;
 Hero.ContentBottom = ContentBottom;
 Hero.ContentTop = ContentTop;
+Hero.ContentLess = ContentLess;
 
 export default Hero;
