@@ -1,12 +1,13 @@
-import { Heading } from '@deriv/quill-design';
-import { HeroTopBottomProps } from '..';
+import { Heading, Text } from '@deriv/quill-design';
+import { HeroProps } from '..';
 import clsx from 'clsx';
 
 const ContentBottom = ({
   className = '',
   title,
+  description,
   children,
-}: HeroTopBottomProps) => {
+}: HeroProps) => {
   return (
     <div
       className={clsx(
@@ -19,7 +20,14 @@ const ContentBottom = ({
       <Heading.H1 className="flex w-full justify-center lg:px-4000 text-center">
         {title}
       </Heading.H1>
-      <div className="w-full flex flex-1 lg:px-4000">{children}</div>
+      {description && (
+        <Text size="xl" variant="regular" className="text-center">
+          {description}
+        </Text>
+      )}
+      <div className="w-full flex flex-1 lg:px-4000 justify-center">
+        {children}
+      </div>
     </div>
   );
 };

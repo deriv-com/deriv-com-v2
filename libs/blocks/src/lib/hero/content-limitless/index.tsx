@@ -31,7 +31,9 @@ const ContentLimitless = ({
           'lg:flex-row',
           'flex',
           'items-center',
-          title_type === 'hero' ? 'flex-col' : 'flex-col-reverse'
+          title_type === 'hero'
+            ? 'flex-col'
+            : 'flex-col-reverse lg:px-0 lg:pt-0 px-800 pt-2000'
         )}
       >
         <div
