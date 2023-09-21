@@ -16,11 +16,6 @@ export interface HeroProps {
   children?: ReactNode;
 }
 
-export type HeroTopBottomProps = Pick<
-  HeroProps,
-  'className' | 'title' | 'children'
->;
-
 type HeroVariants = {
   ContentLimitless: typeof ContentLimitless;
   ContentLimit: typeof ContentLimit;
