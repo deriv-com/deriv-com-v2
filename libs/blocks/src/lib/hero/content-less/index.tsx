@@ -21,7 +21,9 @@ const ContentBottom = ({
       <Text size="xl" variant="regular" className="text-center">
         {description}
       </Text>
-      <div className="w-full flex flex-1 justify-center">{children}</div>
+      <div className="w-full flex flex-1 justify-center">
+        {children && children}
+      </div>
     </div>
   );
 };

@@ -31,23 +31,18 @@ const ContentLimitless = ({
           'lg:flex-row',
           'flex',
           'items-center',
-          title_type === 'hero'
-            ? 'flex-col'
-            : 'flex-col-reverse lg:px-0 lg:pt-0 px-800 pt-2000'
+          title_type === 'hero' ? 'flex-col' : 'flex-col-reverse'
         )}
       >
         <div
           className={clsx(
             'lg:pr-3200 ',
-            'pb-1600 lg:pb-0 max-lg:pr-800',
-            'flex flex-1 flex-col',
-            'px-800 lg:px-0'
+            'pb-1600 lg:pb-0',
+            'flex flex-1 flex-col'
           )}
         >
           {HeadingComponent && (
-            <HeadingComponent className="pb-1600 max-lg:pt-2000">
-              {title}
-            </HeadingComponent>
+            <HeadingComponent className="pb-1600">{title}</HeadingComponent>
           )}
 
           <Text size="xl" variant="regular" className="pb-2000">

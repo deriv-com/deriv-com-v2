@@ -35,7 +35,7 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         description={`Description goes here description goes here
           description goes here description goes here`}
         content={
-          <div className="flex lg:pt-20 lg:pb-20 lg:pr-24 md:pr-0 sm:pr-0 pr-0">
+          <div className="flex lg:pt-20 lg:pb-20 lg:pr-24 pr-0 py-10">
             <img
               className="w-full rounded-3xl"
               src="https://placehold.co/712x800"
