@@ -1,16 +1,23 @@
 import { ReactNode } from 'react';
-import Card from './card';
+import CardContent from './card-content';
+import ContentLeft from './content-left';
+import ContentRight from './content-right';
 
 export interface FeaturesProps {
   title?: string;
   description?: string;
-  children: ReactNode;
-  cta: ReactNode;
+  children?: ReactNode;
+  cta?: ReactNode;
   className?: string;
+  content?: ReactNode;
+  image_content?: ReactNode;
+  variant?: 'content-left' | 'content-right';
 }
 
 type FeatureVariants = {
-  Card: typeof Card;
+  CardContent: typeof CardContent;
+  ContentLeft: typeof ContentLeft;
+  ContentRight: typeof ContentRight;
 };
 
 export const Features: FeatureVariants = ({
@@ -21,6 +28,8 @@ export const Features: FeatureVariants = ({
   return children;
 };
 
-Features.Card = Card;
+Features.CardContent = CardContent;
+Features.ContentLeft = ContentLeft
+Features.ContentRight = ContentRight
 
 export default Features;
