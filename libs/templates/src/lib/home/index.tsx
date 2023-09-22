@@ -1,4 +1,4 @@
-import { Button, FluidContainer, Heading, useTheme } from '@deriv/quill-design';
+import { Button, Text, FluidContainer, Heading, useTheme } from '@deriv/quill-design';
 import { Features } from '@deriv-com/blocks';
 import { useCallback } from 'react';
 
@@ -28,6 +28,47 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
       >
         <div className="flex justify-center w-full">Content will go here</div>
       </Features.Card>
+
+      <Features.ContentLeft
+        className='my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200'
+        title='Content Left Title'
+        description={
+          <Text>Description goes here description goes here description goes here description goes here</Text>
+        }
+        left_content={
+          <div className="flex w-full">
+            <Text>Any Content here</Text>
+          </div>
+        }
+        right_content={
+          <img
+            className="flex flex-1 w-full"
+            src="https://placehold.co/712x800"
+            alt="Placeholder"
+          />
+        }
+      />
+
+      <Features.ContentRight
+        className='my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200'
+        title='Content Left Title'
+        description={
+          <Text>Description goes here description goes here description goes here description goes here</Text>
+        }
+        left_content={
+          <div className="flex w-full">
+            <Text>Any Content here</Text>
+          </div>
+        }
+        right_content={
+          <img
+            className="flex flex-1 w-full"
+            src="https://placehold.co/712x800"
+            alt="Placeholder"
+          />
+        }
+      />
+      
       <Button size="lg" onClick={changeTheme}>
         Toggle theme
       </Button>
