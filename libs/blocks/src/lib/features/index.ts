@@ -5,12 +5,12 @@ import ContentRight from './content-right';
 
 export interface FeaturesProps {
   title?: string;
-  description?: string | ReactNode;
+  description?: string;
   children?: ReactNode;
   cta?: ReactNode;
   className?: string;
-  left_content?: ReactNode;
-  right_content?: ReactNode;
+  content?: ReactNode;
+  image_content?: ReactNode;
   variant?: 'content-left' | 'content-right';
 }
 

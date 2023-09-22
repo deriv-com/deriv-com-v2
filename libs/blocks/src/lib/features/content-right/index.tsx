@@ -1,4 +1,3 @@
-import clsx from "clsx"
 import { FeaturesProps } from ".."
 import ContentLeft from "../content-left"
 
@@ -6,8 +5,8 @@ const ContentRight = ({
   title,
   className,
   description,
-  left_content,
-  right_content,
+  content,
+  image_content,
   variant
 }: FeaturesProps) => {
   return (
@@ -15,8 +14,8 @@ const ContentRight = ({
       title={title}
       variant="content-right"
       description={description}
-      left_content={left_content}
-      right_content={right_content}
+      content={content}
+      image_content={image_content}
       className={className}
     >
     </ContentLeft>
