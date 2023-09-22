@@ -11,6 +11,7 @@
     "clean:nx": "nx reset",
     "clean:dist": "rimraf dist",
     "clean": "npm-run-all clean:dist clean:nx",
+    "chromatic": "chromatic --exit-zero-on-changes --only-changed --exit-once-uploaded --output-dir dist/storybook/storybook-host",
     "test:ci": "nx run-many --target=test --all --parallel --coverage --coverageReporters=lcov && node ./tools/coverageMerger.js"
   },
   "private": true,
@@ -60,6 +61,7 @@
     "@typescript-eslint/parser": "^5.60.1",
     "autoprefixer": "10.4.13",
     "babel-jest": "^29.4.1",
+    "chromatic": "^7.2.0",
     "core-js": "^3.6.5",
     "eslint": "~8.46.0",
     "eslint-config-next": "13.4.19",
@@ -92,4 +94,3 @@
     "@nx/nx-win32-x64-msvc": "16.5.1"
   }
 }
-
