@@ -2,7 +2,7 @@ import { HeroProps } from '..';
 import ContentBottom from '../content-bottom';
 
 const ContentLess = ({
-  className = '',
+  className,
   title,
   description,
   children,

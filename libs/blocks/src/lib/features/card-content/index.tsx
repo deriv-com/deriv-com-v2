@@ -3,8 +3,8 @@ import { FeaturesProps } from '..';
 import { Heading, Text } from '@deriv/quill-design';
 
 const CardContent = ({
-  title = '',
-  description = '',
+  title,
+  description,
   children,
   cta,
   className,
