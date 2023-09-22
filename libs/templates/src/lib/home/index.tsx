@@ -17,7 +17,7 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
     <FluidContainer>
       <Heading.Hero>Welcome to {title}</Heading.Hero>
       <Heading.H1>Current theme is {theme}</Heading.H1>
-      <Features.Card
+      <Features.CardContent
         title="Title goes here"
         description="Description goes here description goes here description goes here description goes here"
         cta={
@@ -27,7 +27,7 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         }
       >
         <div className="flex justify-center w-full">Content will go here</div>
-      </Features.Card>
+      </Features.CardContent>
 
       <Features.ContentLeft
         className='my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200'

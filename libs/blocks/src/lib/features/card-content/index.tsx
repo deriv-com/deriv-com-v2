@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { FeaturesProps } from '..';
 import { Heading, Text } from '@deriv/quill-design';
 
-const Card = ({
+const CardContent = ({
   title = '',
   description = '',
   children,
@@ -34,4 +34,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default CardContent;

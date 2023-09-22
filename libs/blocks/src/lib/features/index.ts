@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Card from './card';
+import CardContent from './card-content';
 import ContentLeft from './content-left';
 import ContentRight from './content-right';
 
@@ -15,7 +15,7 @@ export interface FeaturesProps {
 }
 
 type FeatureVariants = {
-  Card: typeof Card;
+  CardContent: typeof CardContent;
   ContentLeft: typeof ContentLeft;
   ContentRight: typeof ContentRight;
 };
@@ -28,7 +28,7 @@ export const Features: FeatureVariants = ({
   return children;
 };
 
-Features.Card = Card;
+Features.CardContent = CardContent;
 Features.ContentLeft = ContentLeft
 Features.ContentRight = ContentRight
 

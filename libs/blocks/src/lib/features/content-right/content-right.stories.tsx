@@ -4,7 +4,7 @@ import { Text } from '@deriv/quill-design';
 import ContentRight from '.'
 
 const meta = {
-  title: 'Blocks/Features/Content-Right',
+  title: 'Blocks/Features/ContentRight',
   component: ContentRight,
   tags: ['autodocs'],
 } satisfies Meta<typeof ContentRight>

@@ -1,13 +1,13 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Button } from '@deriv/quill-design';
-import Card from '.'
+import CardContent from '.'
 
 const meta = {
-  title: 'Blocks/Features/Card',
-  component: Card,
+  title: 'Blocks/Features/CardContent',
+  component: CardContent,
   tags: ['autodocs'],
-} satisfies Meta<typeof Card>
+} satisfies Meta<typeof CardContent>
 
 export default meta
 type Story = StoryObj<typeof meta>
