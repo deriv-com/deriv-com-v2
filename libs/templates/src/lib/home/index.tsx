@@ -1,5 +1,11 @@
 import { Hero, Features } from '@deriv-com/blocks';
-import { Button, Text, FluidContainer, Heading, useTheme } from '@deriv/quill-design';
+import {
+  Button,
+  Text,
+  FluidContainer,
+  Heading,
+  useTheme,
+} from '@deriv/quill-design';
 import { useCallback } from 'react';
 
 export interface HomeTemplateProps {
@@ -26,7 +32,7 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
             alt="Placeholder"
           />
         }
-        className="mb-10"
+        className="mb-2000"
       >
         <p> This is a content limitless hero</p>
       </Hero.ContentLimitless>
@@ -35,9 +41,9 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         description={`Description goes here description goes here
           description goes here description goes here`}
         content={
-          <div className="flex lg:pt-20 lg:pb-20 lg:pr-24 pr-0 py-10">
+          <div className="flex py-2000 pr-50 lg:py-4000 lg:pr-4800">
             <img
-              className="w-full rounded-3xl"
+              className="w-full rounded-pill"
               src="https://placehold.co/712x800"
               alt="Placeholder"
             />
@@ -46,14 +52,14 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
       >
         <p>This is a content limit hero</p>
       </Hero.ContentLimit>
-      <Hero.ContentTop title="Content Top" className="mt-10">
+      <Hero.ContentTop title="Content Top" className="mt-2000">
         <img
           className="w-full"
           src="https://placehold.co/712x200"
           alt="Placeholder"
         />
       </Hero.ContentTop>
-      <Hero.ContentBottom title="Content Bottom" className="mt-10">
+      <Hero.ContentBottom title="Content Bottom" className="mt-2000">
         <img
           className="w-full"
           src="https://placehold.co/712x200"
@@ -65,7 +71,7 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         title="Title goes here"
         description={`Description goes here description goes here
           description goes here description goes here`}
-        className="mt-10"
+        className="mt-2000"
       >
         <p>This is a content less block</p>
       </Hero.ContentLess>
@@ -76,18 +82,18 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         title="Title goes here"
         description="Description goes here description goes here description goes here description goes here"
         cta={
-          <div className="flex justify-center w-full">
+          <div className="flex w-full justify-center">
             <Button>CTA</Button>
           </div>
         }
       >
-        <div className="flex justify-center w-full">Content will go here</div>
+        <div className="flex w-full justify-center">Content will go here</div>
       </Features.CardContent>
 
       <Features.ContentLeft
-        className='my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200'
-        title='Content Left Title'
-        description='Description goes here description goes here description goes here description goes here'
+        className="my-1000 bg-background-primary-container max-lg:px-1200 max-sm:px-800"
+        title="Content Left Title"
+        description="Description goes here description goes here description goes here description goes here"
         content={
           <div className="flex w-full">
             <Text>Any Content here</Text>
@@ -95,7 +101,7 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         }
         image_content={
           <img
-            className="flex flex-1 w-full"
+            className="flex w-full flex-1"
             src="https://placehold.co/712x800"
             alt="Placeholder"
           />
@@ -103,9 +109,9 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
       />
 
       <Features.ContentRight
-        className='my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200'
-        title='Content Left Title'
-        description='Description goes here description goes here description goes here description goes here'
+        className="my-1000 bg-background-primary-container max-lg:px-1200 max-sm:px-800"
+        title="Content Left Title"
+        description="Description goes here description goes here description goes here description goes here"
         content={
           <div className="flex w-full">
             <Text>Any Content here</Text>
@@ -113,13 +119,13 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         }
         image_content={
           <img
-            className="flex flex-1 w-full"
+            className="flex w-full flex-1"
             src="https://placehold.co/712x800"
             alt="Placeholder"
           />
         }
       />
-      
+
       <Button size="lg" onClick={changeTheme}>
         Toggle theme
       </Button>

@@ -14,7 +14,7 @@ describe('ContentLimit', () => {
         className={className}
         title={title}
         description={description}
-      ></ContentLimit>
+      ></ContentLimit>,
     );
     const titleElement = getByText(title);
 

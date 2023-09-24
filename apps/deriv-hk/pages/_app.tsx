@@ -13,7 +13,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to deriv-hk!</title>
       </Head>
-      <main className="app">
+      <main>
         <BuildVariantProvider buildVariant="hk">
           <ThemeProvider>
             <Navigation />
