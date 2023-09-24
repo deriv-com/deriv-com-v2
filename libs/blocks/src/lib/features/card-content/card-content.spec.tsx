@@ -14,7 +14,9 @@ describe('CardContent', () => {
         className={className}
         title={title}
         description={description}
-      ><p>Content</p></CardContent>
+      >
+        <p>Content</p>
+      </CardContent>,
     );
     const titleElement = getByText(title);
 
@@ -26,6 +28,5 @@ describe('CardContent', () => {
 
     //renders with the correct description
     expect(getByText(description)).toBeInTheDocument();
-
-  })
+  });
 });

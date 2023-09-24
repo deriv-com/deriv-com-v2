@@ -29,7 +29,7 @@ export const Features: FeatureVariants = ({
 };
 
 Features.CardContent = CardContent;
-Features.ContentLeft = ContentLeft
-Features.ContentRight = ContentRight
+Features.ContentLeft = ContentLeft;
+Features.ContentRight = ContentRight;
 
 export default Features;

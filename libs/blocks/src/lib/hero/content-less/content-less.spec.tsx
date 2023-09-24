@@ -14,7 +14,7 @@ describe('ContentLess', () => {
         className={className}
         title={title}
         description={description}
-      ></ContentLess>
+      ></ContentLess>,
     );
     const titleElement = getByText(title);
 

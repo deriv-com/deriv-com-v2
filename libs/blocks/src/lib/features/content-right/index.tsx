@@ -1,5 +1,5 @@
-import { FeaturesProps } from ".."
-import ContentLeft from "../content-left"
+import { FeaturesProps } from '..';
+import ContentLeft from '../content-left';
 
 const ContentRight = ({
   title,
@@ -7,7 +7,7 @@ const ContentRight = ({
   description,
   content,
   image_content,
-  variant
+  variant,
 }: FeaturesProps) => {
   return (
     <ContentLeft
@@ -17,10 +17,8 @@ const ContentRight = ({
       content={content}
       image_content={image_content}
       className={className}
-    >
-    </ContentLeft>
-  )
-}
+    ></ContentLeft>
+  );
+};
 
-export default ContentRight
-
+export default ContentRight;

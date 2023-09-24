@@ -14,7 +14,7 @@ describe('ContentLimitless', () => {
         className={className}
         title={title}
         description={description}
-      ></ContentLimitless>
+      ></ContentLimitless>,
     );
     const titleElement = getByText(title);
 

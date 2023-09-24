@@ -14,7 +14,7 @@ describe('ContentLeft', () => {
         className={className}
         title={title}
         description={description}
-      />
+      />,
     );
     const titleElement = getByText(title);
 
@@ -26,6 +26,5 @@ describe('ContentLeft', () => {
 
     //renders with the correct description
     expect(getByText(description)).toBeInTheDocument();
-
-  })
+  });
 });

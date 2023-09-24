@@ -23,23 +23,23 @@ const ContentLimitless = ({
         'bg-background-primary-container',
         'items-center',
         'w-full',
-        className
+        className,
       )}
     >
       <div
         className={clsx(
-          'lg:flex-row  lg:px-0 lg:pt-0 ',
+          'lg:flex-row  lg:px-50 lg:pt-50',
           'md:px-1200',
           'flex',
           'items-center px-800',
-          title_type === 'hero' ? 'flex-col' : 'flex-col-reverse pt-2000'
+          title_type === 'hero' ? 'flex-col' : 'flex-col-reverse pt-2000',
         )}
       >
         <div
           className={clsx(
             'lg:pr-3200 ',
-            'pb-1600 lg:pb-0',
-            'flex flex-1 flex-col'
+            'pb-1600 lg:pb-50',
+            'flex flex-1 flex-col',
           )}
         >
           {HeadingComponent && (
