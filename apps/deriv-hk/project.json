@@ -21,6 +21,7 @@
     "serve": {
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
+      "dependsOn": ["build-images"],
       "options": {
         "buildTarget": "deriv-hk:build",
         "dev": true,
@@ -40,6 +41,7 @@
     },
     "export": {
       "executor": "@nx/next:export",
+      "dependsOn": ["clean", "build-images"],
       "options": {
         "buildTarget": "deriv-hk:build:production"
       }
@@ -63,6 +65,21 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/deriv-hk/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "build-images": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/apps/deriv-hk/public/images"],
+      "options": {
+        "command": "next-image-export-optimizer --nextConfigPath apps/deriv-hk/next.config.js",
+        "parallel": true,
+        "readyWhen": "---- next-image-export-optimizer: Done ----"
+      }
+    },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rimraf dist/apps/deriv-hk && rimraf apps/deriv-hk/.next && rimraf apps/deriv-hk/public/images"
       }
     }
   },

@@ -1,5 +1,4 @@
 import { AppProps } from 'next/app';
-import Head from 'next/head';
 import './styles.css';
 import '@deriv/quill-design/quill-tailwind/styles.css';
 import '@deriv/quill-design/quill-tailwind/fonts.css';
@@ -9,19 +8,12 @@ import { Navigation } from '@deriv-com/features';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Head>
-        <title>Welcome to deriv-hk!</title>
-      </Head>
-      <main>
-        <BuildVariantProvider buildVariant="hk">
-          <ThemeProvider>
-            <Navigation />
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </BuildVariantProvider>
-      </main>
-    </>
+    <BuildVariantProvider buildVariant="hk">
+      <ThemeProvider>
+        <Navigation />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </BuildVariantProvider>
   );
 }
 

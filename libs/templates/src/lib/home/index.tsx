@@ -1,4 +1,5 @@
 import { Hero, Features } from '@deriv-com/blocks';
+import { OptimizedImage } from '@deriv-com/components';
 import {
   Button,
   Text,
@@ -26,10 +27,12 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
         description={`Description goes here description goes here
           description goes here description goes here`}
         content={
-          <img
-            className="w-full"
-            src="https://placehold.co/712x800"
-            alt="Placeholder"
+          <OptimizedImage
+            imageName={'home/features/hk_home_hero_1.png'}
+            alt="hero"
+            width={712}
+            height={800}
+            priority
           />
         }
         className="mb-2000"
@@ -42,10 +45,11 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
           description goes here description goes here`}
         content={
           <div className="flex py-2000 pr-50 lg:py-4000 lg:pr-4800">
-            <img
-              className="w-full rounded-pill"
-              src="https://placehold.co/712x800"
-              alt="Placeholder"
+            <OptimizedImage
+              imageName="home/hero/hk_homepage_feature.png"
+              width={712}
+              height={800}
+              alt="home hero"
             />
           </div>
         }

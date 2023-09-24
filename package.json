@@ -5,12 +5,13 @@
   "scripts": {
     "prepare": "husky install",
     "dev:hk": "nx serve deriv-hk",
+    "clean:hk": "nx clean deriv-hk",
     "build:hk": "nx export deriv-hk",
     "build-storybook": "nx build-storybook storybook-host",
     "storybook": "nx storybook storybook-host",
-    "clean:nx": "nx reset",
     "clean:dist": "rimraf dist",
-    "clean": "npm-run-all clean:dist clean:nx",
+    "clean:assets": "rimraf assets/public/optimized-images",
+    "clean": "npm-run-all clean:dist clean:hk clean:assets",
     "chromatic": "chromatic --exit-zero-on-changes --only-changed --exit-once-uploaded --output-dir dist/storybook/storybook-host",
     "test:ci": "nx run-many --target=test --all --parallel --coverage --coverageReporters=lcov && node ./tools/coverageMerger.js",
     "lint": "npx nx run-many --target=lint --all --parallel"
@@ -22,6 +23,7 @@
     "@swc/helpers": "~0.5.0",
     "clsx": "^2.0.0",
     "next": "13.4.19",
+    "next-image-export-optimizer": "^1.8.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tslib": "^2.3.0"
