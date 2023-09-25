@@ -13,16 +13,15 @@
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "jestConfig": "libs/hooks/jest.config.ts",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/libs/hooks"
       },
       "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
+        "watch": {
+          "watch": true
         }
       }
     }

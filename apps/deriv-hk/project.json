@@ -46,20 +46,6 @@
         "buildTarget": "deriv-hk:build:production"
       }
     },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "apps/deriv-hk/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
-      }
-    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
@@ -80,6 +66,19 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "rimraf dist/apps/deriv-hk && rimraf apps/deriv-hk/.next && rimraf apps/deriv-hk/public/images"
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/deriv-hk"
+      },
+      "configurations": {
+        "watch": {
+          "watch": true
+        }
       }
     }
   },
