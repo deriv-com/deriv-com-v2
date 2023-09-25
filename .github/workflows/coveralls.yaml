@@ -26,6 +26,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ github.token }}
       - name: Run tests
-        run: 'JEST_MAX_WORKERS=3 npm run test:ci'
+        run: 'npm run test:ci'
       - name: Coveralls
         uses: coverallsapp/github-action@v2
