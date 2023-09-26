@@ -83,7 +83,8 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
       <Heading.Hero>Welcome to {title}</Heading.Hero>
       <Heading.H1>Current theme is {theme}</Heading.H1>
       <Features.CardContent
-        title="Title goes here"
+        className="my-2400"
+        title="Card title goes here"
         description="Description goes here description goes here description goes here description goes here"
         cta={
           <div className="flex w-full justify-center">

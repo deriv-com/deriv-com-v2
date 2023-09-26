@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { FeaturesProps } from '..';
-import { Heading, Text } from '@deriv/quill-design';
+import { FluidContainer, Heading, Text } from '@deriv/quill-design';
 
 const CardContent = ({
   title,
@@ -9,28 +9,24 @@ const CardContent = ({
   cta,
   className,
 }: FeaturesProps) => {
-  const content_classes = clsx(
-    'lg:mt-2000',
-    'md:mt-1600',
-    'sm:mt-1200',
-    'mt-1200 flex w-full items-center',
-  );
   return (
-    <div
+    <FluidContainer
       className={clsx(
-        'lg:py-4000',
-        'md:px-800 md:py-2000',
+        'flex flex-col gap-1600 lg:gap-2400',
         'bg-background-primary-container',
-        'flex flex-col items-center',
-        'w-full',
+        'max-xl:px-1200 max-md:px-800',
         className,
       )}
     >
-      <Heading.H2 className="max-lg:mb-800 lg:mb-1200">{title}</Heading.H2>
-      <Text size="xl">{description}</Text>
-      {children && <div className={content_classes}>{children}</div>}
-      {cta && <div className={content_classes}>{cta}</div>}
-    </div>
+      <div className="flex flex-col items-center gap-800 xl:gap-1200">
+        <Heading.H2>{title}</Heading.H2>
+        <Text size="xl" className="text-center">
+          {description}
+        </Text>
+      </div>
+      {children}
+      {cta}
+    </FluidContainer>
   );
 };
 
