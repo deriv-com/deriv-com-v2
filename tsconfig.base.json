@@ -17,6 +17,7 @@
     ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
       "@deriv-com/blocks": [

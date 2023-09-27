@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Navigation from './navigation';
+import PageLayout from '.';
 
-describe('Navigation', () => {
+describe('PageLayout', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Navigation />);
+    const { baseElement } = render(<PageLayout>test</PageLayout>);
     expect(baseElement).toBeTruthy();
   });
 });

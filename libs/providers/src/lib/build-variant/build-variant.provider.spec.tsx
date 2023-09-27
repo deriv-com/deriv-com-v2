@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import BuildVariantProvider from './buildVariant.provider';
+import BuildVariantProvider from './build-variant.provider';
 
 describe('BuildVariantProvider', () => {
   it('should render successfully', () => {
