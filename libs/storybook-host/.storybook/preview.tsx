@@ -14,6 +14,12 @@ const preview = {
         date: /Date$/,
       },
     },
+    nextjs: {
+      navigation: {
+        pathname: '/',
+        query: {},
+      },
+    },
   },
 
   decorators: [

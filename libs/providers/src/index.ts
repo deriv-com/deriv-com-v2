@@ -1,1 +1,2 @@
-export * from './lib/buildVariant';
+export * from './lib/build-variant';
+export * from './lib/navigation';

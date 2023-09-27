@@ -1,10 +1,9 @@
 import { render } from '@testing-library/react';
+import TradeTemplate from '.';
 
-import Navigation from './navigation';
-
-describe('Navigation', () => {
+describe('WhoWeAre', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Navigation />);
+    const { baseElement } = render(<TradeTemplate />);
     expect(baseElement).toBeTruthy();
   });
 });

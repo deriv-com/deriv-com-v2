@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { BuildVariant, BuildVariantContext } from './buildVariant.context';
+import { BuildVariant, BuildVariantContext } from './build-variant.context';
 
 export interface BuildVariantProviderProps {
   buildVariant: BuildVariant;

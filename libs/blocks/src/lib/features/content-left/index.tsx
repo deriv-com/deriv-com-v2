@@ -1,4 +1,4 @@
-import { FluidContainer, Heading, Text } from '@deriv/quill-design';
+import { Heading, Text } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { FeaturesProps } from '..';
 
@@ -11,7 +11,7 @@ const ContentLeft = ({
   variant = 'content-left',
 }: FeaturesProps) => {
   return (
-    <FluidContainer
+    <div
       className={clsx(
         'flex flex-col bg-background-primary-container max-sm:gap-1200',
         'gap-1600 lg:gap-800',
@@ -35,7 +35,7 @@ const ContentLeft = ({
       <div className="flex flex-1 basis-1/2">
         {image_content && image_content}
       </div>
-    </FluidContainer>
+    </div>
   );
 };
 

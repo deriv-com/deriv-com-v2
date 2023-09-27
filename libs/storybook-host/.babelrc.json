@@ -21,5 +21,8 @@
     "@babel/preset-typescript",
     "@babel/preset-react"
   ],
-  "plugins": []
+  "plugins": [
+    ["@babel/plugin-transform-private-property-in-object", { "loose": false }],
+    ["@babel/plugin-transform-private-methods", { "loose": false }]
+  ]
 }

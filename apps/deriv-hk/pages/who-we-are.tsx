@@ -1,7 +1,13 @@
+import { Navigation } from '@deriv-com/features';
 import { WhoWeAreTemplate } from '@deriv-com/templates';
 
 export const WhoWeArePage = () => {
-  return <WhoWeAreTemplate />;
+  return (
+    <>
+      <Navigation.Main />
+      <WhoWeAreTemplate />;
+    </>
+  );
 };
 
 export default WhoWeArePage;

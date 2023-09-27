@@ -1,7 +1,6 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
-  // stories: ['../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   stories: ['../../**/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: [
     '@storybook/addon-essentials',
@@ -24,7 +23,7 @@ const config: StorybookConfig = {
     },
   ],
   framework: {
-    name: '@storybook/react-webpack5',
+    name: '@storybook/nextjs',
     options: {},
   },
   docs: {

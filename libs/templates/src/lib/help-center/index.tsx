@@ -1,13 +1,13 @@
+import { PageLayout } from '@deriv-com/components';
 import { FluidContainer, Heading } from '@deriv/quill-design';
 
-/* eslint-disable-next-line */
-export interface HelpCenterTemplateProps {}
-
-export function HelpCenterTemplate(props: HelpCenterTemplateProps) {
+export function HelpCenterTemplate() {
   return (
-    <FluidContainer>
-      <Heading.Hero>Help Center page</Heading.Hero>
-    </FluidContainer>
+    <PageLayout>
+      <FluidContainer>
+        <Heading.Hero>Help Center page</Heading.Hero>
+      </FluidContainer>
+    </PageLayout>
   );
 }
 

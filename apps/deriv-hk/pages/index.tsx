@@ -1,16 +1,13 @@
-import { HomeTemplate, HomeTemplateProps } from '@deriv-com/templates';
-import { GetStaticProps } from 'next';
+import { Navigation } from '@deriv-com/features';
+import { HomeTemplate } from '@deriv-com/templates';
 
-export function Index({ title }: HomeTemplateProps) {
-  return <HomeTemplate title={title} />;
+export function Index() {
+  return (
+    <>
+      <Navigation.Main />
+      <HomeTemplate />;
+    </>
+  );
 }
 
 export default Index;
-
-export const getStaticProps: GetStaticProps<HomeTemplateProps> = () => {
-  return {
-    props: {
-      title: 'Deriv',
-    },
-  };
-};
