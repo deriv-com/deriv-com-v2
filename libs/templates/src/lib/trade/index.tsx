@@ -1,14 +1,14 @@
 import { PageLayout } from '@deriv-com/components';
 import { FluidContainer, Heading } from '@deriv/quill-design';
 
-export function HelpCenterTemplate() {
+export function TradeTemplate() {
   return (
     <PageLayout>
       <FluidContainer>
-        <Heading.Hero>Help Center page</Heading.Hero>
+        <Heading.Hero>Trade Page</Heading.Hero>
       </FluidContainer>
     </PageLayout>
   );
 }
 
-export default HelpCenterTemplate;
+export default TradeTemplate;

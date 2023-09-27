@@ -1,13 +1,13 @@
+import { PageLayout } from '@deriv-com/components';
 import { FluidContainer, Heading } from '@deriv/quill-design';
 
-/* eslint-disable-next-line */
-export interface WhoWeAreTemplateProps {}
-
-export function WhoWeAreTemplate(props: WhoWeAreTemplateProps) {
+export function WhoWeAreTemplate() {
   return (
-    <FluidContainer>
-      <Heading.Hero>Who We Are page</Heading.Hero>
-    </FluidContainer>
+    <PageLayout>
+      <FluidContainer>
+        <Heading.Hero>Who We Are page</Heading.Hero>
+      </FluidContainer>
+    </PageLayout>
   );
 }
 

@@ -1,11 +1,11 @@
 import { Navigation } from '@deriv-com/features';
-import { HomeTemplate, HomeTemplateProps } from '@deriv-com/templates';
+import { HomeTemplate } from '@deriv-com/templates';
 
-export function Index(props: HomeTemplateProps) {
+export function Index() {
   return (
     <>
       <Navigation.Main />
-      <HomeTemplate title={'yo yo '} />;
+      <HomeTemplate />;
     </>
   );
 }

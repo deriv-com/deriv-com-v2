@@ -1,19 +1,9 @@
 import { Hero, Features } from '@deriv-com/blocks';
 import { OptimizedImage, PageLayout } from '@deriv-com/components';
-import {
-  Button,
-  Text,
-  FluidContainer,
-  Heading,
-  useTheme,
-} from '@deriv/quill-design';
+import { Button, Text, FluidContainer, useTheme } from '@deriv/quill-design';
 import { useCallback } from 'react';
 
-export interface HomeTemplateProps {
-  title: string;
-}
-
-export function HomeTemplate({ title }: HomeTemplateProps) {
+export function HomeTemplate() {
   const { theme, toggleTheme } = useTheme();
 
   const changeTheme = useCallback(() => {
@@ -23,6 +13,9 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
   return (
     <PageLayout>
       <FluidContainer>
+        <Button size="lg" onClick={changeTheme}>
+          Toggle theme
+        </Button>
         <Hero.ContentLimitless
           title="Title goes here"
           description={`Description goes here description goes here
@@ -81,8 +74,6 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
           <p>This is a content less block</p>
         </Hero.ContentLess>
 
-        <Heading.Hero>Welcome to {title}</Heading.Hero>
-        <Heading.H1>Current theme is {theme}</Heading.H1>
         <Features.CardContent
           title="Title goes here"
           description="Description goes here description goes here description goes here description goes here"
@@ -130,10 +121,6 @@ export function HomeTemplate({ title }: HomeTemplateProps) {
             />
           }
         />
-
-        <Button size="lg" onClick={changeTheme}>
-          Toggle theme
-        </Button>
       </FluidContainer>
     </PageLayout>
   );
