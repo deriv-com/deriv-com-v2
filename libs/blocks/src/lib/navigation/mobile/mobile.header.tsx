@@ -17,13 +17,17 @@ export const MobileHeader = () => {
     >
       {hasActiveMenu && (
         <StandaloneChevronLeftRegularIcon
-          className="mx-800 my-general-lg"
+          className="mx-general-lg"
           onClick={() => setActiveMenu?.('none')}
+          width={24}
+          height={24}
         />
       )}
       <LabelPairedXmarkRegularIcon
         onClick={toggleMobileNav}
-        className="m-general-lg"
+        className="mx-general-lg"
+        width={24}
+        height={24}
       />
     </div>
   );

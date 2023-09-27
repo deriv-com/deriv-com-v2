@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import MainNavigation from '.';
+import MainRowNavigation from './man-navigation.row';
 
 const meta = {
-  title: 'Features/Navigation/Main HK',
-  component: MainNavigation,
+  title: 'Features/Navigation/Main Row',
+  component: MainRowNavigation,
   parameters: {
     layout: 'fullscreen',
     docs: {
@@ -12,7 +12,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof MainNavigation>;
+} satisfies Meta<typeof MainRowNavigation>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -8,7 +8,7 @@ export const MobileNavToggle = () => {
     <LabelPairedBarsBoldIcon
       iconSize="md"
       onClick={toggleMobileNav}
-      className="sm:hidden"
+      className="md:hidden"
     />
   );
 };

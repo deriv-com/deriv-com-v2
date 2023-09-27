@@ -500,4 +500,137 @@ export const mainRowNavItems: NavLinkItems = {
       },
     ],
   },
+  more: {
+    id: 3,
+    type: 'nav-dropdown',
+    text: 'More',
+    columns: [
+      {
+        id: 0,
+        header: {
+          href: '/company',
+          text: 'Company',
+          type: 'direct',
+        },
+        items: [
+          {
+            id: 0,
+            href: '/about-us',
+            text: 'About us',
+            type: 'direct',
+          },
+          {
+            id: 1,
+            type: 'direct',
+            href: '/regulation',
+            text: 'Regulation',
+          },
+          {
+            id: 2,
+            type: 'direct',
+            href: '/contanct-us',
+            text: 'Contact us',
+          },
+          {
+            id: 3,
+            type: 'direct',
+            href: '/partner',
+            text: 'Partner',
+          },
+          {
+            id: 4,
+            type: 'direct',
+            href: '/liquidity-provisions',
+            text: 'Liquidity Provisions',
+          },
+          {
+            id: 5,
+            type: 'direct',
+            href: '/trading-api',
+            text: 'Trading API',
+          },
+          {
+            id: 6,
+            type: 'direct',
+            href: '/press-releases',
+            text: 'Press releases',
+          },
+          {
+            id: 7,
+            type: 'direct',
+            href: '/deriv-life',
+            text: 'Deriv life',
+          },
+          {
+            id: 8,
+            type: 'direct',
+            href: '/careers',
+            text: 'Careers',
+          },
+        ],
+      },
+      {
+        id: 1,
+        header: {
+          href: '/learn',
+          text: 'Learn',
+          type: 'direct',
+        },
+        items: [
+          {
+            id: 0,
+            type: 'direct',
+            href: '/deriv-academy',
+            text: 'Deriv academy',
+          },
+          {
+            id: 1,
+            type: 'direct',
+            href: '/how-to-videos',
+            text: 'How to videos',
+          },
+        ],
+      },
+      {
+        id: 2,
+        header: {
+          href: '/help-and-resources',
+          text: 'Help & resources',
+          type: 'direct',
+        },
+        items: [
+          {
+            id: 0,
+            type: 'direct',
+            href: '/help-centre',
+            text: 'Help centre',
+          },
+          {
+            id: 1,
+            type: 'direct',
+            href: '/deriv-blog',
+            text: 'Deriv blog',
+          },
+          {
+            id: 2,
+            type: 'direct',
+            href: '/economic-calendar',
+            text: 'Economic calendar',
+          },
+          {
+            id: 3,
+            type: 'direct',
+            href: '/deriv-trader',
+            text: 'Deriv Trader',
+          },
+          {
+            id: 4,
+            type: 'direct',
+            href: '/glossary',
+            text: 'Glossary',
+          },
+        ],
+      },
+    ],
+  },
 };

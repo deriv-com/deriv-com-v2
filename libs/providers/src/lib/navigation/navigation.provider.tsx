@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { NavItem, NavLinkItems } from './types';
 import { NavigationContext } from './navigation.context';
 
@@ -51,6 +51,14 @@ export const NavigationProvider: React.FC<NavigationProviderProps> = ({
   const hasActiveMenu = useMemo(() => {
     return activeMenu !== 'none';
   }, [activeMenu]);
+
+  useEffect(() => {
+    if (isMobileNavOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMobileNavOpen]);
 
   return (
     <NavigationContext.Provider

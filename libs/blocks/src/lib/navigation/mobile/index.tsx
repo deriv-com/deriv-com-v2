@@ -2,7 +2,7 @@ import { FluidContainer } from '@deriv/quill-design';
 import NavMobileWrapper from './mobile.wrapper';
 import MobileHeader from './mobile.header';
 import MobileNavList from './mobile.nav-list';
-import MobileNavContent from './mobile.nav-content';
+import MobileNavContentContainer from './mobile.nav-content.container';
 import MobileLanguages from './mobile.languages';
 import { NavigationProps } from '..';
 
@@ -11,7 +11,7 @@ export const MobileNav: React.FC<NavigationProps> = ({
   renderButtons,
 }) => {
   return (
-    <FluidContainer className="fixed w-screen bg-background-primary-container sm:hidden">
+    <FluidContainer className="fixed w-screen bg-background-primary-container md:hidden">
       <nav className="flex min-h-[72px] w-full flex-row items-center justify-between gap-gap-3xl">
         {renderLogo?.()}
         <NavMobileWrapper>
@@ -19,7 +19,7 @@ export const MobileNav: React.FC<NavigationProps> = ({
             <MobileHeader />
             <div className="relative flex flex-1 flex-col justify-between px-general-2xl">
               <MobileNavList />
-              <MobileNavContent />
+              <MobileNavContentContainer />
               <MobileLanguages />
             </div>
           </div>

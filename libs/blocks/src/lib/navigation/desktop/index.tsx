@@ -13,7 +13,7 @@ const DesktopNavigation = ({ renderButtons, renderLogo }: NavigationProps) => {
 
   return (
     <DesktopNavigationWrapper>
-      <div className="hidden sm:block">
+      <div className="hidden md:block">
         <nav className="flex min-h-[72px] w-full flex-row items-center justify-between">
           {renderLogo?.()}
           <NavList items={navItems} />
