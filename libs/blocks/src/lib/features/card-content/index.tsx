@@ -19,7 +19,7 @@ const CardContent = ({
     <div
       className={clsx(
         'lg:py-4000',
-        'md:px-800 md:py-2000',
+        'md:py-2000',
         'bg-background-primary-container',
         'flex flex-col items-center',
         'w-full',

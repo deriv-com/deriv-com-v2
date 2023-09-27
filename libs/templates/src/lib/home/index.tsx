@@ -87,7 +87,7 @@ export function HomeTemplate() {
         </Features.CardContent>
 
         <Features.ContentLeft
-          className="my-1000 bg-background-primary-container max-lg:px-1200 max-sm:px-800"
+          className="my-1000 bg-background-primary-container"
           title="Content Left Title"
           description="Description goes here description goes here description goes here description goes here"
           content={
@@ -105,7 +105,7 @@ export function HomeTemplate() {
         />
 
         <Features.ContentRight
-          className="my-1000 bg-background-primary-container max-lg:px-1200 max-sm:px-800"
+          className="my-1000 bg-background-primary-container"
           title="Content Left Title"
           description="Description goes here description goes here description goes here description goes here"
           content={
