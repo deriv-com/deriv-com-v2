@@ -4,8 +4,7 @@ import { HomeTemplate, HomeTemplateProps } from '@deriv-com/templates';
 export function Index(props: HomeTemplateProps) {
   return (
     <>
-      {/* <Navigation.Main /> */}
-      <Navigation.MainRow />
+      <Navigation.Main />
       <HomeTemplate title={'yo yo '} />;
     </>
   );
