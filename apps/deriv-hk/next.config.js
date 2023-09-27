@@ -1,5 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { composePlugins, withNx } = require('@nx/next');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled:
+    process.env.ANALYZE === 'true' &&
+    process.env.NEXT_PUBLIC_NODE_ENV === 'production',
+});
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
@@ -15,7 +20,11 @@ const nextConfig = {
     imageSizes: [10, 16, 32, 48, 64, 96, 128, 256, 384],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   },
-  transpilePackages: ['next-image-export-optimizer'],
+  transpilePackages: [
+    'next-image-export-optimizer',
+    '@deriv/quill-design',
+    '@deriv/quill-icons',
+  ],
   env: {
     nextImageExportOptimizer_imageFolderPath: 'assets/public',
     nextImageExportOptimizer_exportFolderPath: 'apps/deriv-hk/public/images',
@@ -29,6 +38,7 @@ const nextConfig = {
 const plugins = [
   // Add more Next.js plugins to this list if needed.
   withNx,
+  withBundleAnalyzer,
 ];
 
 module.exports = composePlugins(...plugins)(nextConfig);

@@ -25,9 +25,7 @@ const ContentBottom = ({
           {description}
         </Text>
       )}
-      <div className="flex w-full flex-1 justify-center lg:px-4000">
-        {children}
-      </div>
+      <div className="flex w-full flex-1 justify-center">{children}</div>
     </div>
   );
 };
