@@ -21,6 +21,11 @@
           }
         ],
         "tailwindcss/no-custom-classname": "error"
+      },
+      "settings": {
+        "tailwindcss": {
+          "callees": ["classnames", "clsx", "qtMerge"]
+        }
       }
     },
     {

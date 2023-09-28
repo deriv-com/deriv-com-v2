@@ -46,7 +46,7 @@ export function CustomLink({
     <Link
       href={customHref}
       className={qtMerge(
-        'text-typography-prominent text-body-sm hover:text-typography-link',
+        'text-body-sm text-typography-prominent hover:text-typography-link',
         className,
       )}
       {...rest}

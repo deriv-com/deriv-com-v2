@@ -15,7 +15,7 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
     <CustomLink
       href={item.href}
       className={qtMerge(
-        'gap-gap-md justify-center text-body-md font-bold leading-body-md',
+        'justify-center gap-gap-md text-body-md font-bold leading-body-md',
         item.icon && 'grid grid-cols-[24px_1fr]',
         !item.icon && item.description && 'flex flex-col',
         className,
