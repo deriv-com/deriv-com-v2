@@ -1,21 +1,11 @@
 import { Hero, Features } from '@deriv-com/blocks';
 import { OptimizedImage, PageLayout } from '@deriv-com/components';
-import { Button, Text, FluidContainer, useTheme } from '@deriv/quill-design';
-import { useCallback } from 'react';
+import { Button, Text, FluidContainer } from '@deriv/quill-design';
 
 export function HomeTemplate() {
-  const { theme, toggleTheme } = useTheme();
-
-  const changeTheme = useCallback(() => {
-    toggleTheme(theme === 'light' ? 'dark' : 'light');
-  }, [theme, toggleTheme]);
-
   return (
     <PageLayout>
       <FluidContainer>
-        <Button size="lg" onClick={changeTheme}>
-          Toggle theme
-        </Button>
         <Hero.ContentLimitless
           title="Title goes here"
           description={`Description goes here description goes here
