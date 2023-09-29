@@ -6,7 +6,6 @@ import CardContent from '.';
 const meta = {
   title: 'Blocks/Features/CardContent',
   component: CardContent,
-  tags: ['autodocs'],
 } satisfies Meta<typeof CardContent>;
 
 export default meta;

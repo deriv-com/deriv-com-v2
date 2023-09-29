@@ -1,7 +1,9 @@
 {
   "tailwindCSS.experimental.configFile": "./tailwind.config.js",
   "tailwindCSS.experimental.classRegex": [
-    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["(?:qtMerge|qtJoin)\\(([^\\);]*)[\\);]", "[`'\"`]([^'\"`,;]*)[`'\"`]"],
+    [":\\s*?[\"'`]([^\"'`]*).*?,"]
   ],
   "eslint.validate": [
     "javascript",

@@ -1,59 +1,42 @@
-import { Heading, Text } from '@deriv/quill-design';
-import clsx from 'clsx';
-import { HeroProps } from '..';
+import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import { ReactNode } from 'react';
 
-const ContentLimitless = ({
+export interface ContentLimitlessProps {
+  title?: string;
+  description?: string;
+  content?: () => ReactNode;
+  children?: ReactNode;
+}
+const ContentLimitless: React.FC<ContentLimitlessProps> = ({
   title,
-  title_type = 'hero',
   description,
-  content,
-  className,
+  content: Content,
   children,
-}: HeroProps) => {
-  const heading_components = {
-    h1: Heading.H1,
-    hero: Heading.Hero,
-  };
-
-  const HeadingComponent = heading_components[title_type];
-
+}) => {
   return (
-    <div
-      className={clsx(
-        'bg-background-primary-container',
-        'items-center',
-        'w-full',
-        className,
-      )}
-    >
-      <div
-        className={clsx(
-          'lg:flex-row  lg:px-50 lg:pt-50',
-          'md:px-1200',
-          'flex',
-          'items-center px-800',
-          title_type === 'hero' ? 'flex-col' : 'flex-col-reverse pt-2000',
-        )}
-      >
-        <div
-          className={clsx(
-            'lg:pr-3200 ',
-            'pb-1600 lg:pb-50',
-            'flex flex-1 flex-col',
-          )}
-        >
-          {HeadingComponent && (
-            <HeadingComponent className="pb-1600">{title}</HeadingComponent>
-          )}
-
-          <Text size="xl" variant="regular" className="pb-2000">
-            {description}
-          </Text>
-          <div className="w-full">{children}</div>
+    <Section className="relative mx-auto flex max-w-[2048px] flex-col items-center justify-center gap-gap-2xl pt-general-2xl lg:block lg:min-h-[680px] xl:min-h-screen">
+      <FluidContainer className="flex items-center lg:min-h-[680px] xl:min-h-[860px]">
+        <div className="flex flex-col gap-gap-2xl lg:max-w-[580px]">
+          {title && <Heading.Hero>{title}</Heading.Hero>}
+          {description && <Text size="xl">{description}</Text>}
+          {children}
         </div>
-        <div className="flex flex-1">{content && content}</div>
-      </div>
-    </div>
+      </FluidContainer>
+      {Content && (
+        <>
+          <div className="lg:hidden">
+            <Content />
+          </div>
+          <div
+            className={`absolute left-1/2 top-50 hidden h-full w-1/2 before:absolute before:h-full before:w-full before:content-stretch before:bg-solid-coral-700 before:[clip-path:polygon(30%_0,100%_0,100%_100%,10%_100%)] lg:block`}
+          >
+            <div className="absolute bottom-50">
+              <Content />
+            </div>
+          </div>
+        </>
+      )}
+    </Section>
   );
 };
 

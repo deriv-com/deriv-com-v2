@@ -5,7 +5,6 @@ import ContentLess from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Less',
   component: ContentLess,
-  tags: ['autodocs'],
 } satisfies Meta<typeof ContentLess>;
 
 export default meta;
@@ -16,6 +15,6 @@ export const Default: Story = {
     title: 'Title Goes Here',
     description:
       'Description goes here description goes here description goes here description goes here',
-    children: <p>This is a content less block</p>,
+    children: <p className="text-center">This is a content less block</p>,
   },
 };

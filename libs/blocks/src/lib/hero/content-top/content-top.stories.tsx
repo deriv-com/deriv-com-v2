@@ -5,7 +5,6 @@ import ContentTop from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Top',
   component: ContentTop,
-  tags: ['autodocs'],
 } satisfies Meta<typeof ContentTop>;
 
 export default meta;

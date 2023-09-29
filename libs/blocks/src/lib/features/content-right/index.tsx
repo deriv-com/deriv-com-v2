@@ -17,7 +17,7 @@ const ContentRight = ({
       content={content}
       image_content={image_content}
       className={className}
-    ></ContentLeft>
+    />
   );
 };
 

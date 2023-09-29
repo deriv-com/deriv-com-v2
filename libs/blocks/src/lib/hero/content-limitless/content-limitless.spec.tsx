@@ -11,7 +11,6 @@ describe('ContentLimitless', () => {
 
     const { getByText } = render(
       <ContentLimitless
-        className={className}
         title={title}
         description={description}
       ></ContentLimitless>,

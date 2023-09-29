@@ -1,4 +1,4 @@
-import { Heading, Text } from '@deriv/quill-design';
+import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import { HeroProps } from '..';
 import clsx from 'clsx';
 
@@ -9,24 +9,23 @@ const ContentBottom = ({
   children,
 }: HeroProps) => {
   return (
-    <div
+    <Section
       className={clsx(
-        'md:py-2000',
-        'lg:py-4000',
-        'flex w-full flex-col gap-2000 bg-background-primary-container py-2000',
+        'py-general-4xl',
+        'bg-background-primary-container',
         className,
       )}
     >
-      <Heading.H1 className="flex w-full justify-center text-center lg:px-4000">
-        {title}
-      </Heading.H1>
-      {description && (
-        <Text size="xl" variant="regular" className="text-center">
-          {description}
-        </Text>
-      )}
-      <div className="flex w-full flex-1 justify-center">{children}</div>
-    </div>
+      <FluidContainer className="flex flex-col gap-gap-2xl">
+        <Heading.H1 className="text-center">{title}</Heading.H1>
+        {description && (
+          <Text size="xl" className="text-center">
+            {description}
+          </Text>
+        )}
+        {children}
+      </FluidContainer>
+    </Section>
   );
 };
 

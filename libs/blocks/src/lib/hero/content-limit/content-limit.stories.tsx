@@ -5,7 +5,6 @@ import ContentLimit from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Limit',
   component: ContentLimit,
-  tags: ['autodocs'],
 } satisfies Meta<typeof ContentLimit>;
 
 export default meta;
@@ -16,7 +15,7 @@ export const Default: Story = {
     title: 'Title Goes Here',
     description:
       'Description goes here description goes here description goes here description goes here',
-    content: (
+    content: () => (
       <img
         className="w-full rounded-pill"
         src="https://placehold.co/712x800"

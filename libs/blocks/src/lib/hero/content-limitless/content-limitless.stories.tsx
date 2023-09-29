@@ -5,7 +5,6 @@ import ContentLimitless from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Limitless',
   component: ContentLimitless,
-  tags: ['autodocs'],
 } satisfies Meta<typeof ContentLimitless>;
 
 export default meta;
@@ -16,7 +15,7 @@ export const Default: Story = {
     title: 'Title Goes Here',
     description:
       'Description goes here description goes here description goes here description goes here',
-    content: (
+    content: () => (
       <img
         className="w-full"
         src="https://placehold.co/712x800"

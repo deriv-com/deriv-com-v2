@@ -2,9 +2,6 @@ import React, { useEffect } from 'react';
 import { withThemeByClassName } from '@storybook/addon-styling';
 
 import './styles.scss';
-import '@deriv/quill-design/quill-tailwind/styles.css';
-import '@deriv/quill-design/dist/quill-design.css';
-import '@deriv/quill-design/quill-tailwind/fonts.css';
 
 const preview = {
   parameters: {
