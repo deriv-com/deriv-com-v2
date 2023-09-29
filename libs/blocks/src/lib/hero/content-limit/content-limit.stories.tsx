@@ -5,7 +5,6 @@ import ContentLimit from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Limit',
   component: ContentLimit,
-  tags: ['autodocs'],
 } satisfies Meta<typeof ContentLimit>;
 
 export default meta;

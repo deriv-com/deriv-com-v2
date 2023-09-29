@@ -5,7 +5,6 @@ import ContentLess from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Less',
   component: ContentLess,
-  tags: ['autodocs'],
 } satisfies Meta<typeof ContentLess>;
 
 export default meta;

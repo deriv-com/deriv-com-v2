@@ -5,7 +5,6 @@ import ContentBottom from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Bottom',
   component: ContentBottom,
-  tags: ['autodocs'],
 } satisfies Meta<typeof ContentBottom>;
 
 export default meta;

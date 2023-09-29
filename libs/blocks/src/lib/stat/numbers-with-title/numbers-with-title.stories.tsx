@@ -4,7 +4,6 @@ import NumbersWithTitle from '.';
 const meta = {
   title: 'Blocks/StatsBlock/NumbersWithTitle',
   component: NumbersWithTitle,
-  tags: ['autodocs'],
 } satisfies Meta<typeof NumbersWithTitle>;
 
 export default meta;

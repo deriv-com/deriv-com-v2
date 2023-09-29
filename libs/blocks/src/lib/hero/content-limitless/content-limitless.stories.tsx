@@ -5,7 +5,6 @@ import ContentLimitless from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Limitless',
   component: ContentLimitless,
-  tags: ['autodocs'],
 } satisfies Meta<typeof ContentLimitless>;
 
 export default meta;

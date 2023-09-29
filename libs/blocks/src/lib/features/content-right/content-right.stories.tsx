@@ -6,7 +6,6 @@ import ContentRight from '.';
 const meta = {
   title: 'Blocks/Features/ContentRight',
   component: ContentRight,
-  tags: ['autodocs'],
 } satisfies Meta<typeof ContentRight>;
 
 export default meta;
