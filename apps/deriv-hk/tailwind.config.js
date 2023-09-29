@@ -3,6 +3,8 @@ const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
+  mode: 'jit',
   content: [
     join(
       __dirname,

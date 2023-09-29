@@ -1,7 +1,7 @@
 import { Hero, Features, StatBlock } from '@deriv-com/blocks';
 import { OptimizedImage, PageLayout } from '@deriv-com/components';
 import { Button, FluidContainer, Text } from '@deriv/quill-design';
-import { homeStatData, heroItems } from './data';
+import { homeStatData, heroItems, homeStatNumbers } from './data';
 import {
   SocialAppleIcon,
   SocialFacebookIcon,
@@ -86,6 +86,8 @@ export function HomeTemplate() {
         </FluidContainer>
       </Hero.ContentLimitless>
 
+      <StatBlock.NumbersOnly cardsContent={homeStatNumbers} />
+
       <Hero.ContentLimit
         title="Title goes here"
         description={`Description goes here description goes here
@@ -101,6 +103,7 @@ export function HomeTemplate() {
       >
         <p>This is a content limit hero</p>
       </Hero.ContentLimit>
+
       <StatBlock.NumbersWithTitle
         cardsContent={homeStatData}
         title="This is title"
@@ -114,6 +117,7 @@ export function HomeTemplate() {
           alt="Placeholder"
         />
       </Hero.ContentTop>
+
       <Hero.ContentBottom title="Content Bottom">
         <img
           className="w-full"
