@@ -7,20 +7,68 @@ import {
   SocialFacebookIcon,
   SocialGoogleIcon,
 } from '@deriv/quill-icons';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import { ReactNode } from 'react';
 
 export function HomeTemplate() {
+  const hero_items: { key: string; image: ReactNode }[] = [
+    {
+      key: 'hero1',
+      image: (
+        <OptimizedImage
+          imageName="home/features/hk_home_hero_1.png"
+          alt="hero 1"
+          width={760}
+          height={768}
+          className="max-lg:m-auto"
+        />
+      ),
+    },
+    {
+      key: 'hero2',
+      image: (
+        <OptimizedImage
+          imageName="home/features/hk_home_hero_2.png"
+          alt="hero 2"
+          width={760}
+          height={768}
+          className="max-lg:m-auto"
+        />
+      ),
+    },
+  ];
+
   return (
     <PageLayout>
       <Hero.ContentLimitless
         title="Forex spreads from 0.3 pips"
         description="items in this hero banner are not fully styled yet, we need buttons, inputs and social buttons"
         content={() => (
-          <OptimizedImage
-            imageName="home/features/hk_home_hero_1.png"
-            alt="test"
-            width={760}
-            height={768}
-          />
+          <div className="">
+            <Swiper
+              speed={1500}
+              centeredSlides={true}
+              autoplay={{
+                delay: 1000,
+                disableOnInteraction: false,
+              }}
+              effect={'fade'}
+              fadeEffect={{
+                crossFade: true,
+              }}
+              direction="horizontal"
+              slidesPerView={1}
+              modules={[Autoplay, EffectFade]}
+              loop={true}
+            >
+              {hero_items.map((slide) => (
+                <SwiperSlide key={slide.key}>{slide.image}</SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         )}
       >
         <FluidContainer className={`flex flex-col gap-general-lg`}>

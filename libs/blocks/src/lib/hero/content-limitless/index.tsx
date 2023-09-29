@@ -24,13 +24,13 @@ const ContentLimitless: React.FC<ContentLimitlessProps> = ({
       </FluidContainer>
       {Content && (
         <>
-          <div className="lg:hidden">
+          <div className="w-full before:absolute before:h-full before:w-full before:content-stretch before:bg-solid-coral-700 before:[clip-path:polygon(0_15%,100%_5%,100%_100%,0%_100%)] lg:hidden">
             <Content />
           </div>
           <div
-            className={`absolute left-1/2 top-50 hidden h-full w-1/2 before:absolute before:h-full before:w-full before:content-stretch before:bg-solid-coral-700 before:[clip-path:polygon(30%_0,100%_0,100%_100%,10%_100%)] lg:block`}
+            className={`absolute left-1/2 top-50 hidden h-full w-1/2 before:absolute before:h-full before:w-full before:content-stretch before:bg-solid-coral-700 before:[clip-path:polygon(37%_0,100%_0,100%_100%,15%_100%)] lg:block`}
           >
-            <div className="absolute bottom-50">
+            <div className="absolute bottom-50 w-full">
               <Content />
             </div>
           </div>
