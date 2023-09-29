@@ -1,7 +1,7 @@
 import { Hero, Features, StatBlock } from '@deriv-com/blocks';
 import { OptimizedImage, PageLayout } from '@deriv-com/components';
 import { Button, FluidContainer, Text } from '@deriv/quill-design';
-import { homeStatData } from './data';
+import { homeStatData, heroItems } from './data';
 import {
   SocialAppleIcon,
   SocialFacebookIcon,
@@ -11,36 +11,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import { ReactNode } from 'react';
 
 export function HomeTemplate() {
-  const hero_items: { key: string; image: ReactNode }[] = [
-    {
-      key: 'hero1',
-      image: (
-        <OptimizedImage
-          imageName="home/features/hk_home_hero_1.png"
-          alt="hero 1"
-          width={760}
-          height={768}
-          className="max-lg:m-auto"
-        />
-      ),
-    },
-    {
-      key: 'hero2',
-      image: (
-        <OptimizedImage
-          imageName="home/features/hk_home_hero_2.png"
-          alt="hero 2"
-          width={760}
-          height={768}
-          className="max-lg:m-auto"
-        />
-      ),
-    },
-  ];
-
   return (
     <PageLayout>
       <Hero.ContentLimitless
@@ -64,7 +36,7 @@ export function HomeTemplate() {
               modules={[Autoplay, EffectFade]}
               loop={true}
             >
-              {hero_items.map((slide) => (
+              {heroItems.map((slide) => (
                 <SwiperSlide key={slide.key}>{slide.image}</SwiperSlide>
               ))}
             </Swiper>
