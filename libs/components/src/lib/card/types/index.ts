@@ -4,5 +4,5 @@ export interface StatCardContent {
   id: number;
   header: string;
   description: string;
-  color: StatCardVariant;
+  color?: StatCardVariant;
 }

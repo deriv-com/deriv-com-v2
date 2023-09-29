@@ -24,7 +24,7 @@ const ContentLimitless: React.FC<ContentLimitlessProps> = ({
       </FluidContainer>
       {Content && (
         <>
-          <div className="w-full before:absolute before:h-full before:w-full before:content-stretch before:bg-solid-coral-700 before:[clip-path:polygon(0_15%,100%_5%,100%_100%,0%_100%)] lg:hidden">
+          <div className="relative w-full before:absolute before:h-full before:w-full before:content-stretch before:bg-solid-coral-700 before:[clip-path:polygon(0_15%,100%_5%,100%_100%,0%_100%)] lg:hidden">
             <Content />
           </div>
           <div

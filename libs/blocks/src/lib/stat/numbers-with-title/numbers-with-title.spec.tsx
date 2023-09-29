@@ -1,6 +1,7 @@
-import { render } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import NumbersWithTitle from '.';
 import { StatCardContent } from '@deriv-com/components';
+import '@testing-library/jest-dom';
 
 const homeStatData: StatCardContent[] = [
   {
@@ -30,14 +31,41 @@ const homeStatData: StatCardContent[] = [
 ];
 
 describe('NumbersWithTitle', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(
+  beforeEach(() => {
+    render(
       <NumbersWithTitle
         cardsContent={homeStatData}
         title="The title"
         description="The description"
       />,
     );
-    expect(baseElement).toBeTruthy();
+  });
+
+  afterEach(() => {
+    cleanup();
+  });
+
+  it('should render all the card headings', () => {
+    homeStatData.forEach((cardItem) => {
+      expect(
+        screen.getByRole('heading', {
+          name: cardItem.header,
+        }),
+      ).toBeInTheDocument();
+    });
+
+    expect.assertions(4);
+  });
+
+  it('should render all the card descriptions', () => {
+    homeStatData.forEach((cardItem) => {
+      expect(
+        screen.getByRole('heading', {
+          name: cardItem.description,
+        }),
+      ).toBeInTheDocument();
+    });
+
+    expect.assertions(4);
   });
 });

@@ -1,9 +1,9 @@
-import { Heading } from '@deriv/quill-design';
-import clsx from 'clsx';
+import { Heading, Text, qtMerge } from '@deriv/quill-design';
 import { StatCardContent, StatCardVariant } from '../types';
 
-export interface StatCardProps extends StatCardContent {
+export interface StatCardProps extends Omit<StatCardContent, 'id'> {
   className?: string;
+  isOnlyNumbers?: boolean;
 }
 
 const colorVariants: { [key in StatCardVariant]: string } = {
@@ -21,25 +21,40 @@ const textColorVariants: { [key in StatCardVariant]: string } = {
 export const StatCard: React.FC<StatCardProps> = ({
   header,
   description,
-  color,
+  color = 'white',
   className,
+  isOnlyNumbers,
 }) => {
   return (
     <div
-      className={clsx(
+      className={qtMerge(
         colorVariants[color],
-        'min-h-[160px] lg:min-h-[340px]',
-        'w-full',
         'rounded-pill',
         'p-general-xl',
-        'flex flex-col items-start justify-end',
+        'flex flex-col',
+        !isOnlyNumbers && 'min-h-[160px] w-full lg:min-h-[340px]',
+        isOnlyNumbers
+          ? 'items-center justify-center gap-gap-lg'
+          : 'items-start  justify-end',
         className,
       )}
     >
       <Heading.H3 className={textColorVariants[color]}>{header}</Heading.H3>
-      <Heading.H3 className={textColorVariants[color]}>
-        {description}
-      </Heading.H3>
+      {isOnlyNumbers ? (
+        <Text
+          size="lg"
+          className={qtMerge(
+            textColorVariants[color],
+            'text-center text-opacity-black-600',
+          )}
+        >
+          {description}
+        </Text>
+      ) : (
+        <Heading.H4 className={textColorVariants[color]}>
+          {description}
+        </Heading.H4>
+      )}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import NumbersWithTitle from '.';
 
 const meta = {
-  title: 'Blocks/StatsBlock/NumbersWithTitle',
+  title: 'Blocks/Stat/NumbersWithTitle',
   component: NumbersWithTitle,
 } satisfies Meta<typeof NumbersWithTitle>;
 
