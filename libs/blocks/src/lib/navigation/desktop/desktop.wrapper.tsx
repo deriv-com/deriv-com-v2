@@ -12,8 +12,8 @@ export const DesktopNavigationWrapper = ({
   const { onBlurHover, isBlurVisible, isDropContentOpen } = useNavigation();
 
   return (
-    <div className={'fixed w-screen'}>
-      <FixContainer className={'z-50 bg-background-primary-container'}>
+    <div className={'fixed z-50 w-screen'}>
+      <FixContainer className={'bg-background-primary-container'}>
         <FluidContainer
           className={clsx(
             isDropContentOpen ? 'max-h-[100vh]' : 'max-h-[72px]',

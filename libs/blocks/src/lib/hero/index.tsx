@@ -5,12 +5,9 @@ import ContentTop from './content-top';
 import ContentLess from './content-less';
 import { ReactNode } from 'react';
 
-/* eslint-disable-next-line */
-
 export interface HeroProps {
   className?: string;
   title?: string;
-  title_type?: 'hero' | 'h1';
   description?: string;
   content?: ReactNode;
   children?: ReactNode;

@@ -5,7 +5,7 @@ export function Index() {
   return (
     <>
       <Navigation.Main />
-      <HomeTemplate />;
+      <HomeTemplate />
     </>
   );
 }

@@ -11,7 +11,7 @@ export const MobileNav: React.FC<NavigationProps> = ({
   renderButtons,
 }) => {
   return (
-    <FluidContainer className="fixed w-screen bg-background-primary-container md:hidden">
+    <FluidContainer className="fixed z-50 w-screen bg-background-primary-container md:hidden">
       <nav className="flex min-h-[72px] w-full flex-row items-center justify-between gap-gap-3xl">
         {renderLogo?.()}
         <NavMobileWrapper>
