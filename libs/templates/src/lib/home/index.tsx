@@ -26,16 +26,43 @@ export function HomeTemplate() {
 
       <StatBlock.NumbersOnly cardsContent={homeStatNumbers} />
 
+      <Features.ContentLeft
+        title="Fast, reliable forex trading platform"
+        description="Description goes here description goes here description goes here description goes here"
+        content={
+          <div className="flex w-full">
+            <Text>Any Content here</Text>
+          </div>
+        }
+        image_content={
+          <>
+            <OptimizedImage
+              className="block lg:hidden"
+              imageName="home/hero/hk_homepage_feature_2.png"
+              width={712}
+              height={800}
+              alt="home hero"
+            />
+            <OptimizedImage
+              className="hidden lg:block"
+              imageName="home/hero/hk_homepage_feature.png"
+              width={712}
+              height={800}
+              alt="home hero"
+            />
+          </>
+        }
+      />
+
       <Hero.ContentLimit
         title="Title goes here"
         description={`Description goes here description goes here
           description goes here description goes here`}
         content={() => (
-          <OptimizedImage
-            imageName="home/hero/hk_homepage_feature.png"
-            width={712}
-            height={800}
-            alt="home hero"
+          <img
+            className="w-full"
+            src="https://placehold.co/712x600"
+            alt="Placeholder"
           />
         )}
       >
@@ -69,22 +96,21 @@ export function HomeTemplate() {
         />
       </Hero.ContentTop>
 
-      <Features.ContentLeft
-        title="Content Left Title"
-        description="Description goes here description goes here description goes here description goes here"
-        content={
-          <div className="flex w-full">
-            <Text>Any Content here</Text>
-          </div>
-        }
-        image_content={
-          <img
-            className="flex w-full flex-1"
-            src="https://placehold.co/712x800"
-            alt="Placeholder"
-          />
-        }
-      />
+      <Hero.ContentBottom title="Content Bottom">
+        <img
+          className="w-full"
+          src="https://placehold.co/712x200"
+          alt="Placeholder"
+        />
+      </Hero.ContentBottom>
+
+      <Hero.ContentLess
+        title="Title goes here"
+        description={`Description goes here description goes here
+          description goes here description goes here`}
+      >
+        <Text className="text-center">This is a content less block</Text>
+      </Hero.ContentLess>
 
       <Features.ContentRight
         title="Content Right Title"
