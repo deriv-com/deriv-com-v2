@@ -1,5 +1,21 @@
-import { OptimizedImage, StatCardContent } from '@deriv-com/components';
+import {
+  CardContent,
+  OptimizedImage,
+  StatCardContent,
+} from '@deriv-com/components';
+import {
+  IllustrativeLicensedAndRegulatedIcon,
+  IllustrativeProtectedAndSecureIcon,
+  IllustrativeSpreadsIcon,
+  IllustrativeSupport247Icon,
+  SocialAppleIcon,
+  SocialFacebookIcon,
+  SocialGoogleIcon,
+} from '@deriv/quill-icons';
 import { ReactNode } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade } from 'swiper';
+import { Button, FluidContainer, Text } from '@deriv/quill-design';
 
 export const homeStatData: StatCardContent[] = [
   {
@@ -35,9 +51,9 @@ export const heroItems: { key: string; image: ReactNode }[] = [
       <OptimizedImage
         imageName="home/features/hk_home_hero_1.png"
         alt="hero 1"
-        width={760}
-        height={768}
-        className="max-lg:m-auto"
+        fill
+        priority
+        className="object-cover max-lg:m-auto"
       />
     ),
   },
@@ -47,9 +63,9 @@ export const heroItems: { key: string; image: ReactNode }[] = [
       <OptimizedImage
         imageName="home/features/hk_home_hero_2.png"
         alt="hero 2"
-        width={760}
-        height={768}
-        className="max-lg:m-auto"
+        fill
+        priority
+        className="object-cover max-lg:m-auto"
       />
     ),
   },
@@ -82,3 +98,153 @@ export const homeStatNumbers: StatCardContent[] = [
     description: 'commission',
   },
 ];
+
+export const whyTradeWithUsData: CardContent[] = [
+  {
+    title: 'Trade diverse forex assets',
+    description:
+      'Trade over 50 forex pairs including major, minor, and exotic pairs',
+    colorVariant: 'light',
+    alignVariant: 'start',
+    sizeVariant: 'md',
+    link: {
+      content: 'More on forex trading',
+      href: '/',
+    },
+  },
+  {
+    title: 'Leveraged trading',
+    description: 'Enjoy unbeatable spreads and speedy forex trades',
+    colorVariant: 'light',
+    alignVariant: 'start',
+    sizeVariant: 'md',
+    link: {
+      content: 'More on forex trading',
+      href: '/',
+    },
+  },
+  {
+    title: 'Powerful trading platform',
+    description: 'The world’s favorite forex trading platform',
+    colorVariant: 'light',
+    alignVariant: 'start',
+    sizeVariant: 'md',
+    link: {
+      content: 'More on forex trading',
+      href: '/',
+    },
+  },
+];
+
+export const provenExcellenceData: CardContent[] = [
+  {
+    title: 'Protected and secure',
+    description:
+      'Your data is safe, and your funds are in segregated bank accounts per regulatory standards.',
+    icon: <IllustrativeProtectedAndSecureIcon />,
+    colorVariant: 'gray',
+    alignVariant: 'start',
+    sizeVariant: 'sm',
+  },
+  {
+    title: '24/7 support',
+    description:
+      'Reach our professional, multilingual team anytime via live chat.',
+    icon: <IllustrativeSupport247Icon />,
+    colorVariant: 'gray',
+    alignVariant: 'start',
+    sizeVariant: 'sm',
+  },
+  {
+    title: 'Regulated',
+    description:
+      'We are licensed and overseen by leading global financial authorities.',
+    icon: <IllustrativeLicensedAndRegulatedIcon />,
+    colorVariant: 'gray',
+    alignVariant: 'start',
+    sizeVariant: 'sm',
+  },
+  {
+    title: 'Reliable',
+    icon: <IllustrativeSpreadsIcon />,
+    description:
+      'With 99.97% uptime, we process 5.6 million trades daily, offering seamless and uninterrupted trading.',
+    colorVariant: 'gray',
+    alignVariant: 'start',
+    sizeVariant: 'sm',
+  },
+];
+
+export const renderHomeHeroSliderContent = () => (
+  <Swiper
+    speed={1500}
+    centeredSlides={true}
+    autoplay={{
+      delay: 1000,
+      disableOnInteraction: false,
+    }}
+    effect={'fade'}
+    fadeEffect={{
+      crossFade: true,
+    }}
+    direction="horizontal"
+    slidesPerView={1}
+    modules={[Autoplay, EffectFade]}
+    loop={true}
+  >
+    {heroItems.map((slide) => (
+      <SwiperSlide
+        className="min-h-[100vw] lg:max-h-[720px] lg:min-h-[580px] xl:min-h-[768px] 2xl:min-h-[860px]"
+        key={slide.key}
+      >
+        {slide.image}
+      </SwiperSlide>
+    ))}
+  </Swiper>
+);
+
+export const HomeHeroForm = () => {
+  return (
+    <FluidContainer className={`flex flex-col gap-general-lg pr-general-3xl`}>
+      <div className="flex flex-col justify-between gap-gap-lg md:flex-row">
+        <input
+          placeholder="This component is not styled yet"
+          className="rounded-2xl border-300 border-solid-red-600"
+        />
+        <Button size="lg" fullWidth>
+          Create a demo account
+        </Button>
+      </div>
+      <Text>or sign up with</Text>
+      <div className="flex flex-row items-center justify-between gap-general-sm">
+        <Button
+          renderLeftIcon={() => <SocialGoogleIcon iconSize="sm" />}
+          variant="tertiary"
+          colorStyle="black"
+          fullWidth
+          className="rounded-800 border-75 border-solid-slate-300"
+        >
+          Google
+        </Button>
+        <Button
+          renderLeftIcon={() => <SocialFacebookIcon iconSize="sm" />}
+          variant="tertiary"
+          colorStyle="black"
+          fullWidth
+          className="rounded-800 border-75 border-solid-slate-300"
+        >
+          Facebook
+        </Button>
+        <Button
+          renderLeftIcon={() => <SocialAppleIcon iconSize="sm" />}
+          variant="tertiary"
+          colorStyle="black"
+          fullWidth
+          className="rounded-800 border-75 border-solid-slate-300"
+        >
+          Apple
+        </Button>
+      </div>
+    </FluidContainer>
+  );
+};
