@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import CardContent from '.';
+import CardContentBlock from '.';
 
 describe('CardContent', () => {
   it('renders with correct class names and content', () => {
@@ -10,13 +10,11 @@ describe('CardContent', () => {
     const description = 'Description here';
 
     const { getByText } = render(
-      <CardContent
+      <CardContentBlock
         className={className}
         title={title}
         description={description}
-      >
-        <p>Content</p>
-      </CardContent>,
+      />,
     );
     const titleElement = getByText(title);
 

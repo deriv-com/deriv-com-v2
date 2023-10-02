@@ -1,5 +1,6 @@
 import { Card, StatCardContent } from '@deriv-com/components';
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import clsx from 'clsx';
 
 export interface NumbersWithTitleProps {
   title?: string;
@@ -24,7 +25,12 @@ export const NumbersWithTitle: React.FC<NumbersWithTitleProps> = ({
           </Text>
         )}
       </FluidContainer>
-      <FluidContainer className="grid w-full grid-cols-1 gap-gap-lg pt-general-2xl md:grid-cols-2 lg:grid-cols-4">
+      <FluidContainer
+        className={clsx(
+          'grid w-full grid-cols-1 gap-gap-lg md:grid-cols-2 lg:grid-cols-4',
+          (description || title) && 'pt-general-2xl ',
+        )}
+      >
         {cardsContent.map((cardItem) => (
           <Card.Stat key={cardItem.id} {...cardItem} className="flex-1" />
         ))}

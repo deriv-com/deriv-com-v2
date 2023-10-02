@@ -8,12 +8,19 @@ export type ImageNames = PureImageNames extends `/${infer Key}`
   : PureImageNames;
 
 export type OptimizedImageProps = Omit<ExportedImageProps, 'src'> & {
-  imageName: ImageNames;
+  imageName?: ImageNames;
+  remoteSrc?: string;
 };
 
 export const OptimizedImage = forwardRef<HTMLImageElement, OptimizedImageProps>(
-  ({ imageName, ...rest }, ref) => {
-    return <ExportedImage src={`/images/${imageName}`} {...rest} ref={ref} />;
+  ({ imageName, remoteSrc, ...rest }, ref) => {
+    return (
+      <ExportedImage
+        src={remoteSrc ? remoteSrc : `/images/${imageName}`}
+        {...rest}
+        ref={ref}
+      />
+    );
   },
 );
 
