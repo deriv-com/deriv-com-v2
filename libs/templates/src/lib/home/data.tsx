@@ -252,7 +252,7 @@ export const HomeHeroForm = () => {
 
 export const FastAndReliableContent = () => {
   return (
-    <ul className="flex max-w-[500px] flex-col gap-gap-xl">
+    <ul className="flex flex-col gap-gap-xl">
       <li className="flex gap-gap-lg">
         <LabelPairedCheckRegularIcon
           className="min-w-[18px]"
