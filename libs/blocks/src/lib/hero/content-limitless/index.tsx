@@ -1,6 +1,7 @@
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import { ReactNode } from 'react';
-
+import styles from './styles.module.scss';
+import clsx from 'clsx';
 export interface ContentLimitlessProps {
   title?: string;
   description?: string;
@@ -24,11 +25,19 @@ const ContentLimitless: React.FC<ContentLimitlessProps> = ({
       </FluidContainer>
       {Content && (
         <>
-          <div className="relative w-full before:absolute before:h-full before:w-full before:content-stretch before:bg-solid-coral-700 before:[clip-path:polygon(0_15%,100%_5%,100%_100%,0%_100%)] lg:hidden">
+          <div
+            className={clsx(
+              'relative w-full lg:hidden',
+              styles['mobile_big_red'],
+            )}
+          >
             <Content />
           </div>
           <div
-            className={`absolute left-1/2 top-50 hidden h-full w-1/2 before:absolute before:h-full before:w-full before:content-stretch before:bg-solid-coral-700 before:[clip-path:polygon(37%_0,100%_0,100%_100%,15%_100%)] lg:block`}
+            className={clsx(
+              'absolute left-1/2 top-50 hidden h-full w-1/2 lg:block',
+              styles['desktop_big_red'],
+            )}
           >
             <div className="absolute bottom-50 w-full">
               <Content />

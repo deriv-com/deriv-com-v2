@@ -1,0 +1,23 @@
+.mobile_big_red {
+  &::before {
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-content: stretch;
+    background-color: rgb(255 68 79);
+    clip-path: polygon(0 35%, 100% 15%, 100% 100%, 0% 100%);
+  }
+}
+
+.desktop_big_red {
+  &::before {
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-content: stretch;
+    background-color: rgb(255 68 79);
+    clip-path: polygon(37% 0, 100% 0, 100% 100%, 15% 100%);
+  }
+}
