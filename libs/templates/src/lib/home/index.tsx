@@ -26,7 +26,6 @@ export function HomeTemplate() {
       </Hero.ContentLimitless>
 
       <StatBlock.NumbersOnly cardsContent={homeStatNumbers} />
-
       <Features.ContentLeft
         title="Fast and reliable"
         content={<FastAndReliableContent />}
