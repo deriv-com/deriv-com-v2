@@ -8,6 +8,7 @@ import {
   provenExcellenceData,
   renderHomeHeroSliderContent,
   HomeHeroForm,
+  FastAndReliableContent,
 } from './data';
 
 import 'swiper/css';
@@ -27,13 +28,8 @@ export function HomeTemplate() {
       <StatBlock.NumbersOnly cardsContent={homeStatNumbers} />
 
       <Features.ContentLeft
-        title="Fast, reliable forex trading platform"
-        description="Description goes here description goes here description goes here description goes here"
-        content={
-          <div className="flex w-full">
-            <Text>Any Content here</Text>
-          </div>
-        }
+        title="Fast and reliable"
+        content={<FastAndReliableContent />}
         image_content={
           <>
             <OptimizedImage
