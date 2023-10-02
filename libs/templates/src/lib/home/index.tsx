@@ -49,6 +49,34 @@ export function HomeTemplate() {
         }
       />
 
+      <Features.ContentLeft
+        title="Fast, reliable forex trading platform"
+        description="Description goes here description goes here description goes here description goes here"
+        content={
+          <div className="flex w-full">
+            <Text>Any Content here</Text>
+          </div>
+        }
+        image_content={
+          <>
+            <OptimizedImage
+              className="block lg:hidden"
+              imageName="home/hero/hk_homepage_feature_2.png"
+              width={712}
+              height={800}
+              alt="home hero"
+            />
+            <OptimizedImage
+              className="hidden lg:block"
+              imageName="home/hero/hk_homepage_feature.png"
+              width={712}
+              height={800}
+              alt="home hero"
+            />
+          </>
+        }
+      />
+
       <Hero.ContentLimit
         title="Title goes here"
         description={`Description goes here description goes here
