@@ -39,7 +39,9 @@ const ContentLeft = ({
           {content}
         </div>
         {image_content && (
-          <div className="flex flex-1 basis-1/2">{image_content}</div>
+          <div className="flex flex-1 basis-1/2 justify-center">
+            {image_content}
+          </div>
         )}
       </FluidContainer>
     </Section>
