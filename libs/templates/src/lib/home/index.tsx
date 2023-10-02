@@ -3,6 +3,7 @@ import { OptimizedImage, PageLayout } from '@deriv-com/components';
 import { Button, FluidContainer, Text } from '@deriv/quill-design';
 import { homeStatData, heroItems, homeStatNumbers } from './data';
 import {
+  LabelPairedCheckRegularIcon,
   SocialAppleIcon,
   SocialFacebookIcon,
   SocialGoogleIcon,
@@ -87,6 +88,62 @@ export function HomeTemplate() {
       </Hero.ContentLimitless>
 
       <StatBlock.NumbersOnly cardsContent={homeStatNumbers} />
+      <Features.ContentLeft
+        title="Fast and reliable"
+        content={
+          <ul className="flex max-w-[500px] flex-col gap-gap-xl">
+            <li className="flex gap-gap-lg">
+              <LabelPairedCheckRegularIcon
+                className="min-w-[18px]"
+                width={18}
+                height={30}
+              />
+              <Text size="lg">Average execution speeds of under 50ms</Text>
+            </li>
+            <li className="flex gap-gap-lg">
+              <LabelPairedCheckRegularIcon
+                className="min-w-[18px]"
+                width={18}
+                height={30}
+              />
+              <Text size="lg">
+                USD 20+ billion in daily trades from over 90,000+ daily clients
+              </Text>
+            </li>
+            <li className="flex gap-gap-lg">
+              <LabelPairedCheckRegularIcon
+                className="min-w-[18px]"
+                width={18}
+                height={30}
+              />
+              <Text size="lg">
+                99.97% uptime with intelligent routing to servers in London,
+                Frankfurt, Cape Town, and Singapore for performance and
+                reliability
+              </Text>
+            </li>
+            <li className="flex gap-gap-lg">
+              <LabelPairedCheckRegularIcon
+                className="min-w-[18px]"
+                width={18}
+                height={30}
+              />
+              <Text size="lg">
+                Diverse and proprietary mix of liquidity providers for optimal
+                pricing and swift execution whenever you trade
+              </Text>
+            </li>
+          </ul>
+        }
+        image_content={
+          <OptimizedImage
+            imageName="home/hero/hk_homepage_feature.png"
+            width={712}
+            height={800}
+            alt="home hero"
+          />
+        }
+      />
 
       <Hero.ContentLimit
         title="Title goes here"
@@ -147,18 +204,58 @@ export function HomeTemplate() {
       </Features.CardContent>
 
       <Features.ContentLeft
-        title="Content Left Title"
-        description="Description goes here description goes here description goes here description goes here"
+        title="Fast and reliable"
         content={
-          <div className="flex w-full">
-            <Text>Any Content here</Text>
-          </div>
+          <ul className="flex max-w-[500px] flex-col gap-gap-xl">
+            <li className="flex gap-gap-lg">
+              <LabelPairedCheckRegularIcon
+                className="min-w-[18px]"
+                width={18}
+                height={30}
+              />
+              <Text size="lg">Average execution speeds of under 50ms</Text>
+            </li>
+            <li className="flex gap-gap-lg">
+              <LabelPairedCheckRegularIcon
+                className="min-w-[18px]"
+                width={18}
+                height={30}
+              />
+              <Text size="lg">
+                USD 20+ billion in daily trades from over 90,000+ daily clients
+              </Text>
+            </li>
+            <li className="flex gap-gap-lg">
+              <LabelPairedCheckRegularIcon
+                className="min-w-[18px]"
+                width={18}
+                height={30}
+              />
+              <Text size="lg">
+                99.97% uptime with intelligent routing to servers in London,
+                Frankfurt, Cape Town, and Singapore for performance and
+                reliability
+              </Text>
+            </li>
+            <li className="flex gap-gap-lg">
+              <LabelPairedCheckRegularIcon
+                className="min-w-[18px]"
+                width={18}
+                height={30}
+              />
+              <Text size="lg">
+                Diverse and proprietary mix of liquidity providers for optimal
+                pricing and swift execution whenever you trade
+              </Text>
+            </li>
+          </ul>
         }
         image_content={
-          <img
-            className="flex w-full flex-1"
-            src="https://placehold.co/712x800"
-            alt="Placeholder"
+          <OptimizedImage
+            imageName="home/hero/hk_homepage_feature.png"
+            width={712}
+            height={800}
+            alt="home hero"
           />
         }
       />
