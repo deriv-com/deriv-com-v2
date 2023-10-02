@@ -50,13 +50,8 @@ export function HomeTemplate() {
       />
 
       <Features.ContentLeft
-        title="Fast, reliable forex trading platform"
-        description="Description goes here description goes here description goes here description goes here"
-        content={
-          <div className="flex w-full">
-            <Text>Any Content here</Text>
-          </div>
-        }
+        title="Fast and reliable"
+        content={<FastAndReliableContent />}
         image_content={
           <>
             <OptimizedImage
