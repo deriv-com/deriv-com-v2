@@ -16,7 +16,7 @@ import {
 import { ReactNode } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper';
-import { Button, FluidContainer, Text } from '@deriv/quill-design';
+import { Button, FluidContainer, Heading, Text } from '@deriv/quill-design';
 
 export const homeStatData: StatCardContent[] = [
   {
@@ -259,16 +259,8 @@ export const FastAndReliableContent = () => {
           width={18}
           height={30}
         />
-        <Text size="lg">Average execution speeds of under 50ms</Text>
-      </li>
-      <li className="flex gap-gap-lg">
-        <LabelPairedCheckRegularIcon
-          className="min-w-[18px]"
-          width={18}
-          height={30}
-        />
         <Text size="lg">
-          USD 20+ billion in daily trades from over 90,000+ daily clients
+          Average execution speeds of under <strong>50ms</strong>
         </Text>
       </li>
       <li className="flex gap-gap-lg">
@@ -278,8 +270,8 @@ export const FastAndReliableContent = () => {
           height={30}
         />
         <Text size="lg">
-          99.97% uptime with intelligent routing to servers in London,
-          Frankfurt, Cape Town, and Singapore for performance and reliability
+          <strong>USD 20+ billion</strong> in daily trades from over 90,000+
+          daily clients
         </Text>
       </li>
       <li className="flex gap-gap-lg">
@@ -289,8 +281,21 @@ export const FastAndReliableContent = () => {
           height={30}
         />
         <Text size="lg">
-          Diverse and proprietary mix of liquidity providers for optimal pricing
-          and swift execution whenever you trade
+          <strong>99.97% uptime</strong> with intelligent routing to servers in
+          London, Frankfurt, Cape Town, and Singapore for performance and
+          reliability
+        </Text>
+      </li>
+      <li className="flex gap-gap-lg">
+        <LabelPairedCheckRegularIcon
+          className="min-w-[18px]"
+          width={18}
+          height={30}
+        />
+        <Text size="lg">
+          Diverse and proprietary mix of liquidity providers for
+          <strong> optimal pricing </strong>
+          and <strong> swift execution</strong> whenever you trade
         </Text>
       </li>
     </ul>
