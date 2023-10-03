@@ -39,10 +39,7 @@ export const StatCompanyCard: React.FC<StatCardProps> = ({
       <Heading.H4 className={textColorVariants[color]}>{header}</Heading.H4>
       <Text
         size="lg"
-        className={qtMerge(
-          textColorVariants[color],
-          'text-center text-opacity-black-600',
-        )}
+        className={qtMerge(textColorVariants[color], 'text-center')}
       >
         {description}
       </Text>
