@@ -50,7 +50,7 @@ const linkTextSizeVariant = {
 };
 
 export const BaseCard: React.FC<BaseCardProps> = ({
-  title,
+  header,
   description,
   children,
   content,
@@ -58,45 +58,43 @@ export const BaseCard: React.FC<BaseCardProps> = ({
   link,
   className,
   contentPosition,
-  alignVariant,
-  colorVariant,
-  sizeVariant,
+  align,
+  color,
+  size,
   contentClassName,
   nonContentClassName,
 }) => {
-  const HeadingComponent = sizeVariantComponents[sizeVariant];
+  const HeadingComponent = sizeVariantComponents[size];
 
   return (
     <div
       className={clsx(
         'flex h-full overflow-hidden rounded-pill',
         contentVariantClass[contentPosition],
-        bgColorVariantClass[colorVariant],
+        bgColorVariantClass[color],
         className,
       )}
     >
       <div
         className={qtMerge(
           'flex max-h-max  basis-1/2 flex-col justify-center md:flex-1',
-          alignVariant === 'start'
+          align === 'start'
             ? 'items-start md:items-start'
             : 'items-center md:items-center',
-          sizeVariantContainerGap[sizeVariant],
+          sizeVariantContainerGap[size],
           nonContentClassName,
         )}
       >
         {icon && icon}
-        {title && (
-          <HeadingComponent
-            className={clsx(textColorVariantClass[colorVariant])}
-          >
-            {title}
+        {header && (
+          <HeadingComponent className={clsx(textColorVariantClass[color])}>
+            {header}
           </HeadingComponent>
         )}
         {description && (
           <Text
-            size={textSizeVariant[sizeVariant]}
-            className={clsx(textColorVariantClass[colorVariant], 'flex-1')}
+            size={textSizeVariant[size]}
+            className={clsx(textColorVariantClass[color], 'flex-1')}
           >
             {description}
           </Text>
@@ -106,7 +104,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
             href={link.href}
             className={clsx(
               'flex items-center justify-center text-body-md text-typography-link',
-              linkTextSizeVariant[sizeVariant],
+              linkTextSizeVariant[size],
             )}
           >
             {link.content}

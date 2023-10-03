@@ -1,30 +1,48 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ContentLimit from '.';
+import { Button, Heading } from '@deriv/quill-design';
 
 describe('ContentLimit', () => {
-  it('renders with the correct class names and content', () => {
-    const className = 'text-heading-h1';
-    const title = 'Title Goes Here';
-    const description =
-      'Description goes here description goes here description goes here description goes here';
-
-    const { getByText } = render(
+  beforeEach(() => {
+    render(
       <ContentLimit
-        className={className}
-        title={title}
-        description={description}
-      ></ContentLimit>,
+        className={'bg-solid-red-1000'}
+        title={'title goes here'}
+        description={'description goes here'}
+        content={() => (
+          <div>
+            <Heading.H2>content goes here</Heading.H2>
+          </div>
+        )}
+      >
+        <Button>Click me</Button>
+      </ContentLimit>,
     );
-    const titleElement = getByText(title);
+  });
+  it('should render heading successfully', () => {
+    const heading = screen.getByRole('heading', {
+      name: 'title goes here',
+      level: 1,
+    });
+    expect(heading).toBeInTheDocument();
+  });
 
-    //renders with correct Hero classname
-    expect(titleElement).toHaveClass(className);
+  it('should render description successfully', () => {
+    const description = screen.getByText('description goes here');
+    expect(description).toBeInTheDocument();
+  });
 
-    //renders with the correct title
-    expect(getByText(title)).toBeInTheDocument();
+  it('should render children passed to it', () => {
+    const button = screen.getByRole('button', { name: 'Click me' });
+    expect(button).toBeInTheDocument();
+  });
 
-    //renders with the correct description
-    expect(getByText(description)).toBeInTheDocument();
+  it("should render content passed to it's content prop", () => {
+    const content = screen.getByRole('heading', {
+      name: 'content goes here',
+      level: 2,
+    });
+    expect(content).toBeInTheDocument();
   });
 });

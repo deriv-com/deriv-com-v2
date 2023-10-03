@@ -17,11 +17,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    title: 'Content Bottom Card',
+    header: 'Content Bottom Card',
     description: 'This is a description',
-    alignVariant: 'center',
-    colorVariant: 'light',
-    sizeVariant: 'sm',
+    align: 'center',
+    color: 'light',
+    size: 'sm',
     content: (
       <img
         className="flex w-full flex-1"

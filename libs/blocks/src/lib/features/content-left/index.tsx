@@ -1,15 +1,24 @@
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import clsx from 'clsx';
-import { FeaturesProps } from '..';
+import React from 'react';
+
+export interface ContentLeftProps {
+  title: string;
+  className?: string;
+  description?: string;
+  content: React.FC;
+  children: React.ReactNode;
+  variant?: 'content-left' | 'content-right';
+}
 
 const ContentLeft = ({
   title,
   className,
   description,
-  content,
-  image_content,
+  children,
+  content: Content,
   variant = 'content-left',
-}: FeaturesProps) => {
+}: ContentLeftProps) => {
   return (
     <Section
       className={clsx(
@@ -20,7 +29,7 @@ const ContentLeft = ({
     >
       <FluidContainer
         className={clsx(
-          variant === 'content-left' ? 'lg:flex-row' : 'lg:flex-row-reverse',
+          variant === 'content-left' ? 'lg:flex-row-reverse' : 'lg:flex-row',
           'flex flex-col gap-gap-lg',
         )}
       >
@@ -28,19 +37,19 @@ const ContentLeft = ({
           className={clsx(
             'flex flex-1 basis-1/2 flex-col gap-gap-xl lg:justify-center',
             variant === 'content-left'
-              ? 'lg:pr-general-xl'
-              : 'lg:pl-general-xl',
+              ? 'lg:pl-general-xl'
+              : 'lg:pr-general-xl',
           )}
         >
           <div className="flex flex-col gap-gap-xl">
             <Heading.H2>{title}</Heading.H2>
             {description && <Text>{description}</Text>}
           </div>
-          {content}
+          {children}
         </div>
-        {image_content && (
+        {Content && (
           <div className="flex flex-1 basis-1/2 justify-center">
-            {image_content}
+            <Content />
           </div>
         )}
       </FluidContainer>

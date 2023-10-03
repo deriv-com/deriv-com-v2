@@ -1,23 +1,20 @@
-import { Card, StatCardContent } from '@deriv-com/components';
+import { CardsContainer, StatCardContent } from '@deriv-com/components';
 import { FluidContainer, Section } from '@deriv/quill-design';
+import clsx from 'clsx';
 
 export interface NumbersOnlyProps {
-  cardsContent: StatCardContent[];
+  cards: StatCardContent[];
+  className?: string;
 }
 
-export const NumbersOnly: React.FC<NumbersOnlyProps> = ({ cardsContent }) => {
+export const NumbersOnly: React.FC<NumbersOnlyProps> = ({
+  cards,
+  className,
+}) => {
   return (
-    <Section className="bg-solid-slate-50 py-general-2xl">
-      <FluidContainer className="flex flex-col flex-wrap items-center justify-center gap-gap-xl  sm:flex-row">
-        {cardsContent.map((cardItem) => (
-          <Card.Stat
-            key={cardItem.id}
-            header={cardItem.header}
-            description={cardItem.description}
-            isOnlyNumbers
-            className="basis-1/3 sm:basis-1/3 md:min-w-[180px] lg:flex-1"
-          />
-        ))}
+    <Section className={clsx('bg-solid-slate-50 py-general-2xl', className)}>
+      <FluidContainer>
+        <CardsContainer variant="StatCompany" cards={cards} cols="five" />
       </FluidContainer>
     </Section>
   );

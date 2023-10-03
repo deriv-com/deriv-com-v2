@@ -4,14 +4,14 @@ import { StatCardContent } from '@deriv-com/components';
 import '@testing-library/jest-dom';
 
 const cards: StatCardContent[] = [
-  { id: 0, header: 'Header one', description: 'description one' },
-  { id: 1, header: 'Header two', description: 'description two' },
-  { id: 2, header: 'Header three', description: 'description three' },
+  { header: 'Header one', description: 'description one' },
+  { header: 'Header two', description: 'description two' },
+  { header: 'Header three', description: 'description three' },
 ];
 
 describe('Numbers Only Block', () => {
   beforeEach(() => {
-    render(<NumbersOnly cardsContent={cards} />);
+    render(<NumbersOnly cards={cards} />);
   });
 
   afterEach(() => {

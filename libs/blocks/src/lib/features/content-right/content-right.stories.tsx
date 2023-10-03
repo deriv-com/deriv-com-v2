@@ -18,12 +18,12 @@ export const Default: Story = {
     title: 'Title here',
     description:
       'Description goes here description goes here description goes here description goes here',
-    content: (
+    children: (
       <div className="flex w-full">
         <Text>Any Content here</Text>
       </div>
     ),
-    image_content: (
+    content: () => (
       <img
         className="flex w-full flex-1"
         src="https://placehold.co/712x800"

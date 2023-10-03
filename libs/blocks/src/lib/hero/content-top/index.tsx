@@ -1,8 +1,7 @@
-import { HeroProps } from '..';
 import clsx from 'clsx';
-import ContentBottom from '../content-bottom';
+import ContentBottom, { ContentBottomProps } from '../content-bottom';
 
-const ContentTop = ({ className = '', title, children }: HeroProps) => {
+const ContentTop = ({ className, title, children }: ContentBottomProps) => {
   return (
     <ContentBottom
       title={title}

@@ -1,6 +1,6 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import ContentLimit from '.';
+import { Text } from '@deriv/quill-design';
 
 const meta = {
   title: 'Blocks/Hero/Content-Limit',
@@ -22,6 +22,6 @@ export const Default: Story = {
         alt="Placeholder"
       />
     ),
-    children: <p>this is an image limit hero</p>,
+    children: <Text className="text-center">This is a content less block</Text>,
   },
 };

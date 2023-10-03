@@ -4,17 +4,6 @@ import ContentRight from './content-right';
 import CardFeature from './card-feature';
 import CardSlider from './card-slider';
 
-export interface FeaturesProps {
-  title?: string;
-  description?: string;
-  children?: ReactNode;
-  cta?: ReactNode;
-  className?: string;
-  content?: ReactNode;
-  image_content?: ReactNode;
-  variant?: 'content-left' | 'content-right';
-}
-
 type FeatureVariants = {
   CardFeature: typeof CardFeature;
   ContentLeft: typeof ContentLeft;

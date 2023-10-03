@@ -1,20 +1,37 @@
-import { HeroProps } from '..';
-import ContentBottom from '../content-bottom';
+import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import clsx from 'clsx';
+
+export interface ContentLessProps {
+  title: string;
+  description?: string;
+  className?: string;
+  children: React.ReactNode;
+}
 
 const ContentLess = ({
   className,
   title,
   description,
   children,
-}: HeroProps) => {
+}: ContentLessProps) => {
   return (
-    <ContentBottom
-      title={title}
-      description={description}
-      className={className}
+    <Section
+      className={clsx(
+        'py-general-4xl',
+        'bg-background-primary-container',
+        className,
+      )}
     >
-      {children}
-    </ContentBottom>
+      <FluidContainer className="flex flex-col gap-gap-2xl">
+        <Heading.H1 className="text-center">{title}</Heading.H1>
+        {description && (
+          <Text size="xl" className="text-center">
+            {description}
+          </Text>
+        )}
+        {children}
+      </FluidContainer>
+    </Section>
   );
 };
 
