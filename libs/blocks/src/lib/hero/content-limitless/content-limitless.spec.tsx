@@ -38,7 +38,7 @@ describe('ContentLimitless', () => {
     expect(button).toBeInTheDocument();
   });
 
-  it.only("should render content passed to it's content prop", () => {
+  it("should render content passed to it's content prop", () => {
     const contentContainer = screen.getByTestId(
       'content-limitless__mobile-big-red',
     );
