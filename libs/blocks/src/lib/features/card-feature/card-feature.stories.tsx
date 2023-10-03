@@ -9,7 +9,7 @@ import {
 } from '@deriv/quill-icons';
 
 const meta = {
-  title: 'Blocks/Features/CardContent',
+  title: 'Blocks/Features/CardFeature',
   component: CardFeature,
 } satisfies Meta<typeof CardFeature>;
 
