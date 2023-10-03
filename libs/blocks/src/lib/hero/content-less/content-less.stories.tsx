@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import ContentLess from '.';
+import { Text } from '@deriv/quill-design';
 
 const meta = {
   title: 'Blocks/Hero/Content-Less',
@@ -15,6 +16,6 @@ export const Default: Story = {
     title: 'Title Goes Here',
     description:
       'Description goes here description goes here description goes here description goes here',
-    children: <p className="text-center">This is a content less block</p>,
+    children: <Text className="text-center">This is a content less block</Text>,
   },
 };

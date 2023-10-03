@@ -1,4 +1,4 @@
-import { Heading, qtMerge } from '@deriv/quill-design';
+import { Heading, Text, qtMerge } from '@deriv/quill-design';
 import { StatCardContent, StatCardVariant } from '../types';
 
 export interface StatCardProps extends StatCardContent {
@@ -17,7 +17,7 @@ const textColorVariants: { [key in StatCardVariant]: string } = {
   dark: 'text-solid-slate-50',
 };
 
-export const StatCard: React.FC<StatCardProps> = ({
+export const StatCompanyCard: React.FC<StatCardProps> = ({
   header,
   description,
   color = 'white',
@@ -30,17 +30,24 @@ export const StatCard: React.FC<StatCardProps> = ({
         'rounded-pill',
         'p-general-xl',
         'flex flex-col',
-        'min-h-[160px] w-full lg:min-h-[340px]',
-        'items-start  justify-end',
+        'items-center justify-center gap-gap-lg',
+        'basis-1/3 sm:basis-1/3 md:min-w-[180px] lg:flex-1',
+        'sm:last-of-type:col-span-2 lg:last-of-type:col-span-1',
         className,
       )}
     >
       <Heading.H3 className={textColorVariants[color]}>{header}</Heading.H3>
-      <Heading.H4 className={textColorVariants[color]}>
+      <Text
+        size="lg"
+        className={qtMerge(
+          textColorVariants[color],
+          'text-center text-opacity-black-600',
+        )}
+      >
         {description}
-      </Heading.H4>
+      </Text>
     </div>
   );
 };
 
-export default StatCard;
+export default StatCompanyCard;

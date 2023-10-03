@@ -7,15 +7,22 @@ export interface ContentLimitlessProps {
   description?: string;
   content?: () => ReactNode;
   children?: ReactNode;
+  className?: string;
 }
 const ContentLimitless: React.FC<ContentLimitlessProps> = ({
   title,
   description,
   content: Content,
   children,
+  className,
 }) => {
   return (
-    <Section className="relative mx-auto flex max-w-[2048px] flex-col items-center justify-center gap-gap-2xl pt-general-2xl lg:block lg:min-h-[680px] xl:min-h-screen">
+    <Section
+      className={clsx(
+        'relative mx-auto flex max-w-[2048px] flex-col items-center justify-center gap-gap-2xl pt-general-2xl lg:block lg:min-h-[680px] xl:min-h-screen',
+        className,
+      )}
+    >
       <FluidContainer className="flex items-center lg:min-h-[680px] xl:min-h-[860px]">
         <div className="flex flex-col gap-gap-2xl lg:max-w-[580px]">
           {title && <Heading.Hero>{title}</Heading.Hero>}
@@ -30,6 +37,7 @@ const ContentLimitless: React.FC<ContentLimitlessProps> = ({
               'relative w-full lg:hidden',
               styles['mobile_big_red'],
             )}
+            data-testid="content-limitless__mobile-big-red"
           >
             <Content />
           </div>
@@ -38,6 +46,7 @@ const ContentLimitless: React.FC<ContentLimitlessProps> = ({
               'absolute left-1/2 top-50 hidden h-full w-1/2 lg:block',
               styles['desktop_big_red'],
             )}
+            data-testid="content-limitless__desktop-big-red"
           >
             <div className="absolute bottom-50 w-full">
               <Content />

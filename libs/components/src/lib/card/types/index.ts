@@ -1,17 +1,21 @@
 import { ReactNode } from 'react';
 
 export type StatCardVariant = 'white' | 'dark' | 'coral';
+export type CardColorVariant = 'light' | 'gray';
+export type CardAlignVariant = 'start' | 'center';
+export type CardSizeVariant = 'sm' | 'md' | 'lg';
 
-export interface StatCardContent {
-  id: number;
+interface BaseCardContent {
   header: string;
-  description: string;
-  color?: StatCardVariant;
 }
 
-export interface CardContent {
+export interface StatCardContent extends BaseCardContent {
+  color?: StatCardVariant;
+  description: string;
+}
+
+export interface CardContent extends BaseCardContent {
   icon?: ReactNode;
-  title?: string;
   description?: string;
   children?: ReactNode;
   link?: {
@@ -19,9 +23,9 @@ export interface CardContent {
     href: string;
   };
   content?: ReactNode;
-  colorVariant: 'light' | 'gray';
-  alignVariant: 'start' | 'center';
-  sizeVariant: 'sm' | 'md' | 'lg';
+  color: CardColorVariant;
+  align: CardAlignVariant;
+  size: CardSizeVariant;
   className?: string;
   contentClassName?: string;
   nonContentClassName?: string;
