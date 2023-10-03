@@ -8,57 +8,57 @@ import {
 
 export const SliderCardData: CardContent[] = [
   {
-    title: 'Card 1',
+    header: 'Card 1',
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeProtectedAndSecureIcon />,
-    colorVariant: 'gray',
-    alignVariant: 'start',
-    sizeVariant: 'sm',
+    color: 'gray',
+    align: 'start',
+    size: 'sm',
   },
   {
-    title: 'Card 2',
+    header: 'Card 2',
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeSupport247Icon />,
-    colorVariant: 'gray',
-    alignVariant: 'start',
-    sizeVariant: 'sm',
+    color: 'gray',
+    align: 'start',
+    size: 'sm',
   },
   {
-    title: 'Card 3',
+    header: 'Card 3',
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeLicensedAndRegulatedIcon />,
-    colorVariant: 'gray',
-    alignVariant: 'start',
-    sizeVariant: 'sm',
+    color: 'gray',
+    align: 'start',
+    size: 'sm',
   },
   {
-    title: 'Card 4',
+    header: 'Card 4',
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeSpreadsIcon />,
-    colorVariant: 'gray',
-    alignVariant: 'start',
-    sizeVariant: 'sm',
+    color: 'gray',
+    align: 'start',
+    size: 'sm',
   },
   {
-    title: 'Card 5',
+    header: 'Card 5',
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeLicensedAndRegulatedIcon />,
-    colorVariant: 'gray',
-    alignVariant: 'start',
-    sizeVariant: 'sm',
+    color: 'gray',
+    align: 'start',
+    size: 'sm',
   },
   {
-    title: 'Card 6',
+    header: 'Card 6',
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeSupport247Icon />,
-    colorVariant: 'gray',
-    alignVariant: 'start',
-    sizeVariant: 'sm',
+    color: 'gray',
+    align: 'start',
+    size: 'sm',
   },
 ];

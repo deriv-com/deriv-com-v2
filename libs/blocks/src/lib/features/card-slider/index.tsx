@@ -53,7 +53,7 @@ const CardSlider = ({
             spaceBetween={16}
           >
             {cards.map((card) => (
-              <SwiperSlide className={clsx(slideClasses)} key={card.title}>
+              <SwiperSlide className={clsx(slideClasses)} key={card.header}>
                 {renderCard?.(card)}
               </SwiperSlide>
             ))}
