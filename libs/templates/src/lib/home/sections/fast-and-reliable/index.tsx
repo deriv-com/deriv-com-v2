@@ -11,14 +11,14 @@ const FastAndReliableSection = () => {
           <>
             <OptimizedImage
               className="block lg:hidden"
-              imageName="home/hero/hk_homepage_feature_2.png"
+              imageName="home/features/hk_homepage_feature_2.png"
               width={712}
               height={800}
               alt="home hero"
             />
             <OptimizedImage
               className="hidden lg:block"
-              imageName="home/hero/hk_homepage_feature.png"
+              imageName="home/features/hk_homepage_feature.png"
               width={712}
               height={800}
               alt="home hero"
