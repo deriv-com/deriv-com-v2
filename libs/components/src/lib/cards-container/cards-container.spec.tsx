@@ -43,7 +43,7 @@ describe('CardsContainer', () => {
 
     it('should render the proper description', () => {
       expect(
-        screen.getByRole('heading', { name: cardItem.description, level: 4 }),
+        screen.getByRole('heading', { name: cardItem.description, level: 3 }),
       ).toBeInTheDocument();
     });
   });

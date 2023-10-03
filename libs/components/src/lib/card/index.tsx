@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import StatCard from './stat';
+import StatCard from './stat-card';
 import { ContentBottomCard } from './content-bottom';
 import { ContentTopCard } from './content-top';
 import { ContentLeftCard } from './content-left';

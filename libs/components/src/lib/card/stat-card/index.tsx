@@ -36,9 +36,9 @@ export const StatCard: React.FC<StatCardProps> = ({
       )}
     >
       <Heading.H3 className={textColorVariants[color]}>{header}</Heading.H3>
-      <Heading.H4 className={textColorVariants[color]}>
+      <Heading.H3 className={textColorVariants[color]}>
         {description}
-      </Heading.H4>
+      </Heading.H3>
     </div>
   );
 };
