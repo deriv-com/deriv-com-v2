@@ -14,7 +14,7 @@ export const heroItems: { key: string; image: ReactNode }[] = [
     key: 'hero1',
     image: (
       <OptimizedImage
-        imageName="home/features/hk_home_hero_1.png"
+        imageName="home/hero/hk_home_hero_1.png"
         alt="hero 1"
         fill
         priority
@@ -26,7 +26,7 @@ export const heroItems: { key: string; image: ReactNode }[] = [
     key: 'hero2',
     image: (
       <OptimizedImage
-        imageName="home/features/hk_home_hero_2.png"
+        imageName="home/hero/hk_home_hero_2.png"
         alt="hero 2"
         fill
         priority
