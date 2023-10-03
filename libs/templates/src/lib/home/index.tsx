@@ -1,6 +1,4 @@
-import { Hero, Features } from '@deriv-com/blocks';
 import { PageLayout } from '@deriv-com/components';
-import { Text } from '@deriv/quill-design';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import HeroBanner from './sections/hero';

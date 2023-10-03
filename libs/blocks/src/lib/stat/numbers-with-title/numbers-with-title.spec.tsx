@@ -5,25 +5,21 @@ import '@testing-library/jest-dom';
 
 const homeStatData: StatCardContent[] = [
   {
-    id: 0,
     color: 'dark',
     header: '$48M+',
     description: 'Monthly withdrawals',
   },
   {
-    id: 1,
     color: 'white',
     header: '$650B+',
     description: 'Monthly volume',
   },
   {
-    id: 2,
     color: 'dark',
     header: '168M+',
     description: 'Monthly deals',
   },
   {
-    id: 3,
     color: 'coral',
     header: '300K+',
     description: 'Monthly active traders',
@@ -34,7 +30,7 @@ describe('NumbersWithTitle', () => {
   beforeEach(() => {
     render(
       <NumbersWithTitle
-        cardsContent={homeStatData}
+        cards={homeStatData}
         title="The title"
         description="The description"
       />,
@@ -43,6 +39,16 @@ describe('NumbersWithTitle', () => {
 
   afterEach(() => {
     cleanup();
+  });
+
+  it('should render main title', () => {
+    expect(
+      screen.getByRole('heading', { name: 'The title', level: 2 }),
+    ).toBeInTheDocument();
+  });
+
+  it('should render description', () => {
+    expect(screen.getByText('The description')).toBeInTheDocument();
   });
 
   it('should render all the card headings', () => {

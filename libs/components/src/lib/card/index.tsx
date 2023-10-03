@@ -4,9 +4,11 @@ import { ContentBottomCard } from './content-bottom';
 import { ContentTopCard } from './content-top';
 import { ContentLeftCard } from './content-left';
 import { ContentRightCard } from './content-right';
+import { StatCompanyCard } from './stat-company';
 
 export type CardVariants = {
-  Stat: typeof StatCard;
+  StatCard: typeof StatCard;
+  StatCompany: typeof StatCompanyCard;
   ContentBottom: typeof ContentBottomCard;
   ContentTop: typeof ContentTopCard;
   ContentLeft: typeof ContentLeftCard;
@@ -17,7 +19,8 @@ export const Card: CardVariants = ({ children }: { children: ReactNode }) => {
   return children;
 };
 
-Card.Stat = StatCard;
+Card.StatCard = StatCard;
+Card.StatCompany = StatCompanyCard;
 Card.ContentBottom = ContentBottomCard;
 Card.ContentTop = ContentTopCard;
 Card.ContentLeft = ContentLeftCard;

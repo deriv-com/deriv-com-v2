@@ -1,13 +1,17 @@
-import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
-import { HeroProps } from '..';
+import { FluidContainer, Heading, Section } from '@deriv/quill-design';
 import clsx from 'clsx';
+
+export interface ContentBottomProps {
+  title: string;
+  className?: string;
+  children: React.ReactNode;
+}
 
 const ContentBottom = ({
   className = '',
   title,
-  description,
   children,
-}: HeroProps) => {
+}: ContentBottomProps) => {
   return (
     <Section
       className={clsx(
@@ -18,11 +22,6 @@ const ContentBottom = ({
     >
       <FluidContainer className="flex flex-col gap-gap-2xl">
         <Heading.H1 className="text-center">{title}</Heading.H1>
-        {description && (
-          <Text size="xl" className="text-center">
-            {description}
-          </Text>
-        )}
         {children}
       </FluidContainer>
     </Section>
