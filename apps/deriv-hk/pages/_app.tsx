@@ -6,7 +6,7 @@ import { BuildVariantProvider } from '@deriv-com/providers';
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <BuildVariantProvider buildVariant="hk">
-      <ThemeProvider>
+      <ThemeProvider theme="light">
         <Component {...pageProps} />
       </ThemeProvider>
     </BuildVariantProvider>

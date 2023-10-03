@@ -37,7 +37,7 @@ export const CardsContainer = <T extends CardVariantType>({
       className={qtMerge(
         'grid',
         'gap-gap-lg', // TODO: we might need to add sm/md/lg/xl variants
-        dense ? 'max-w-max' : 'w-full',
+        dense ? 'w-full lg:max-w-max' : 'w-full',
         cardColsVariant[cols],
         className,
       )}
