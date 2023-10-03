@@ -17,10 +17,10 @@ export const NumbersWithTitle: React.FC<NumbersWithTitleProps> = ({
     <Section className=" bg-solid-slate-75 py-general-5xl">
       <FluidContainer className="flex flex-col items-center justify-center gap-gap-xl bg-solid-slate-75">
         {title && (
-          <Heading.H2 className="text-solid-slate-1400">{title}</Heading.H2>
+          <Heading.H3 className="text-solid-red-1200">{title}</Heading.H3>
         )}
         {description && (
-          <Text size="lg" className="text-solid-slate-1400">
+          <Text size="xl" className="text-solid-slate-1400">
             {description}
           </Text>
         )}
