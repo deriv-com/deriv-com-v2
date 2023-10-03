@@ -14,6 +14,7 @@ export interface CardSliderProps {
   className?: string;
   cards?: CardContent[];
   renderCard?: React.FC<CardContent>;
+  slideClasses?: string;
 }
 
 const CardSlider = ({
@@ -23,6 +24,7 @@ const CardSlider = ({
   className,
   cards = [],
   renderCard,
+  slideClasses = 'max-w-xs',
 }: CardSliderProps) => {
   return (
     <Section
@@ -47,11 +49,13 @@ const CardSlider = ({
               horizontalClass: `[--swiper-pagination-color:#ff444f]`,
             }}
             rewind
-            slidesPerView={4}
+            slidesPerView={'auto'}
             spaceBetween={16}
           >
             {cards.map((card) => (
-              <SwiperSlide key={card.title}>{renderCard?.(card)}</SwiperSlide>
+              <SwiperSlide className={clsx(slideClasses)} key={card.title}>
+                {renderCard?.(card)}
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>
