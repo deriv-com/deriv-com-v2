@@ -18,7 +18,7 @@ const ContentLimitless: React.FC<ContentLimitlessProps> = ({
     <Section className="relative mx-auto flex max-w-[2048px] flex-col items-center justify-center gap-gap-2xl pt-general-2xl lg:block lg:min-h-[680px] xl:min-h-screen">
       <FluidContainer className="flex items-center lg:min-h-[680px] xl:min-h-[860px]">
         <div className="flex flex-col gap-gap-2xl lg:max-w-[580px]">
-          {title && <Heading.Hero>{title}</Heading.Hero>}
+          {title && <Heading.H5>{title}</Heading.H5>}
           {description && <Text size="xl">{description}</Text>}
           {children}
         </div>
