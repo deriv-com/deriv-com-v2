@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@deriv/quill-design';
-import CardFeature from '.';
+import CardSlider from '.';
 import {
   IllustrativeLicensedAndRegulatedIcon,
   IllustrativeProtectedAndSecureIcon,
@@ -12,9 +12,9 @@ import {
 import { Card } from '@deriv-com/components';
 
 const meta = {
-  title: 'Blocks/Features/CardContent',
-  component: CardFeature,
-} satisfies Meta<typeof CardFeature>;
+  title: 'Blocks/Features/CardSlider',
+  component: CardSlider,
+} satisfies Meta<typeof CardSlider>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -28,42 +28,58 @@ export const Default: Story = {
         <Button>CTA</Button>
       </div>
     ),
-    title: '20+ years of proven excellence',
-    cols: 'four',
-    rows: 'one',
+    title: 'Card Slider Title',
     cards: [
       {
-        title: 'Protected and secure',
+        title: 'Card 1',
         description:
-          'Your data is safe, and your funds are in segregated bank accounts per regulatory standards.',
+          'Description here. Description here. Description here. Description here.',
         icon: <IllustrativeProtectedAndSecureIcon />,
         colorVariant: 'gray',
         alignVariant: 'start',
         sizeVariant: 'sm',
       },
       {
-        title: '24/7 support',
+        title: 'Card 2',
         description:
-          'Reach our professional, multilingual team anytime via live chat.',
+          'Description here. Description here. Description here. Description here.',
         icon: <IllustrativeSupport247Icon />,
         colorVariant: 'gray',
         alignVariant: 'start',
         sizeVariant: 'sm',
       },
       {
-        title: 'Regulated',
+        title: 'Card 3',
         description:
-          'We are licensed and overseen by leading global financial authorities.',
+          'Description here. Description here. Description here. Description here.',
         icon: <IllustrativeLicensedAndRegulatedIcon />,
         colorVariant: 'gray',
         alignVariant: 'start',
         sizeVariant: 'sm',
       },
       {
-        title: 'Reliable',
-        icon: <IllustrativeSpreadsIcon />,
+        title: 'Card 4',
         description:
-          'With 99.97% uptime, we process 5.6 million trades daily, offering seamless and uninterrupted trading.',
+          'Description here. Description here. Description here. Description here.',
+        icon: <IllustrativeSpreadsIcon />,
+        colorVariant: 'gray',
+        alignVariant: 'start',
+        sizeVariant: 'sm',
+      },
+      {
+        title: 'Card 5',
+        description:
+          'Description here. Description here. Description here. Description here.',
+        icon: <IllustrativeLicensedAndRegulatedIcon />,
+        colorVariant: 'gray',
+        alignVariant: 'start',
+        sizeVariant: 'sm',
+      },
+      {
+        title: 'Card 6',
+        description:
+          'Description here. Description here. Description here. Description here.',
+        icon: <IllustrativeSupport247Icon />,
         colorVariant: 'gray',
         alignVariant: 'start',
         sizeVariant: 'sm',

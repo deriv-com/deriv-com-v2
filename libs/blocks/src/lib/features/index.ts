@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 import ContentLeft from './content-left';
 import ContentRight from './content-right';
-import CardFeature from './card-content';
+import CardFeature from './card-feature';
+import CardSlider from './card-slider';
 
 export interface FeaturesProps {
   title?: string;
@@ -18,6 +19,7 @@ type FeatureVariants = {
   CardFeature: typeof CardFeature;
   ContentLeft: typeof ContentLeft;
   ContentRight: typeof ContentRight;
+  CardSlider: typeof CardSlider;
 };
 
 export const Features: FeatureVariants = ({
@@ -31,5 +33,6 @@ export const Features: FeatureVariants = ({
 Features.CardFeature = CardFeature;
 Features.ContentLeft = ContentLeft;
 Features.ContentRight = ContentRight;
+Features.CardSlider = CardSlider;
 
 export default Features;
