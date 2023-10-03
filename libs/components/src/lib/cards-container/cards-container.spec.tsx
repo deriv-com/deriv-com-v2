@@ -29,7 +29,7 @@ const cards: StatCardContent[] = [
 
 describe('CardsContainer', () => {
   beforeEach(() => {
-    render(<CardsContainer cardsVariant="StatCard" cards={cards} />);
+    render(<CardsContainer variant="StatCard" cards={cards} />);
   });
   cards.forEach((cardItem) => {
     it('should render the proper heading', () => {

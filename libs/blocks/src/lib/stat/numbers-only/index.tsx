@@ -14,7 +14,7 @@ export const NumbersOnly: React.FC<NumbersOnlyProps> = ({
   return (
     <Section className={clsx('bg-solid-slate-50 py-general-2xl', className)}>
       <FluidContainer>
-        <CardsContainer cardsVariant="StatCompany" cards={cards} cols="five" />
+        <CardsContainer variant="StatCompany" cards={cards} cols="five" />
       </FluidContainer>
     </Section>
   );

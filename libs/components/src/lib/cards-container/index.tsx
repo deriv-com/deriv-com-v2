@@ -9,7 +9,7 @@ export type CardVariantProps<T extends CardVariantType> =
 export type CardsContainerCols = 'two' | 'three' | 'four' | 'five';
 
 export interface CardsContainerProps<T extends CardVariantType> {
-  cardsVariant: T;
+  variant: T;
   cards: CardVariantProps<T>[];
   cols?: CardsContainerCols;
   dense?: boolean;
@@ -27,10 +27,10 @@ export const CardsContainer = <T extends CardVariantType>({
   cards,
   cols = 'two',
   dense = false,
-  cardsVariant,
+  variant,
   className,
 }: CardsContainerProps<T>) => {
-  const CardComponent = Card[cardsVariant];
+  const CardComponent = Card[variant];
 
   return (
     <div

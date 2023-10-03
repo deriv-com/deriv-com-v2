@@ -14,7 +14,7 @@ export interface CardFeatureProps {
   className?: string;
   cards?: CardContent[];
   cols?: 'two' | 'three' | 'four';
-  cardsVariant?: CardVariantType;
+  variant?: CardVariantType;
 }
 
 const CardFeature = ({
@@ -24,7 +24,7 @@ const CardFeature = ({
   className,
   cards = [],
   cols = 'two',
-  cardsVariant = 'ContentBottom',
+  variant = 'ContentBottom',
 }: CardFeatureProps) => {
   return (
     <Section
@@ -39,7 +39,7 @@ const CardFeature = ({
           {title && <Heading.H2>{title}</Heading.H2>}
           {description && <Text size="xl">{description}</Text>}
         </div>
-        <CardsContainer cardsVariant={cardsVariant} cols={cols} cards={cards} />
+        <CardsContainer variant={variant} cols={cols} cards={cards} />
         {cta}
       </FluidContainer>
     </Section>

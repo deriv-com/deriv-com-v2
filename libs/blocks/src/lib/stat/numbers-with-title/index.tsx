@@ -23,7 +23,7 @@ export const NumbersWithTitle: React.FC<NumbersWithTitleProps> = ({
             {description}
           </Text>
         )}
-        <CardsContainer cardsVariant="StatCard" cards={cards} cols="four" />
+        <CardsContainer variant="StatCard" cards={cards} cols="four" />
       </FluidContainer>
     </Section>
   );
