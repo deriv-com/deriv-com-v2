@@ -17,10 +17,10 @@ export interface CardsContainerProps<T extends CardVariantType> {
 }
 
 const cardColsVariant: { [key in CardsContainerCols]: string } = {
-  two: 'sm:grid-cols-2',
-  three: 'sm:grid-cols-2 lg:grid-cols-3',
-  four: 'sm:grid-cols-2 lg:grid-cols-4',
-  five: 'sm:grid-cols-2 lg:grid-cols-5',
+  two: 'grid-cols-1 sm:grid-cols-2',
+  three: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+  four: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4',
+  five: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-5',
 };
 
 export const CardsContainer = <T extends CardVariantType>({
@@ -35,7 +35,7 @@ export const CardsContainer = <T extends CardVariantType>({
   return (
     <div
       className={qtMerge(
-        'flex flex-col sm:grid',
+        'grid before:hidden after:hidden',
         'gap-gap-lg', // TODO: we might need to add sm/md/lg/xl variants
         dense ? 'w-full lg:max-w-max' : 'w-full',
         cardColsVariant[cols],
