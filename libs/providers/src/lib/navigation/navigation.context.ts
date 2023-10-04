@@ -13,6 +13,8 @@ export interface NavigationContextType {
   onListItemHover?: (navItemName: string) => void;
   toggleMobileNav?: VoidFunction;
   setActiveMenu?: (menuName: string) => void;
+  isLoggedIn: boolean;
+  setIsLoggedIn?: (isLoggedIn: boolean) => void;
 }
 
 export const NavigationContext = createContext<NavigationContextType>({
@@ -22,4 +24,5 @@ export const NavigationContext = createContext<NavigationContextType>({
   isBlurVisible: false,
   hasActiveMenu: false,
   navItems: {},
+  isLoggedIn: false,
 });

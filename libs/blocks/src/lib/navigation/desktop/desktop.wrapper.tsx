@@ -9,7 +9,7 @@ export const DesktopNavigationWrapper = ({
 }: {
   children: ReactNode;
 }) => {
-  const { onBlurHover, isBlurVisible, isDropContentOpen } = useNavigation();
+  const { isBlurVisible, isDropContentOpen } = useNavigation();
 
   return (
     <div className={'fixed z-50 w-screen'}>
@@ -17,16 +17,14 @@ export const DesktopNavigationWrapper = ({
         <FluidContainer
           className={clsx(
             isDropContentOpen ? 'max-h-[100vh]' : 'max-h-[72px]',
-            'transition-max-height duration-500 ease-in-out',
+            'transition-max-height delay-0 duration-500 ease-in-out',
             'overflow-hidden',
           )}
         >
           {children}
         </FluidContainer>
       </FixContainer>
-      {isBlurVisible && (
-        <DesktopNavBlur isVisible={isDropContentOpen} onHover={onBlurHover} />
-      )}
+      {isBlurVisible && <DesktopNavBlur isVisible={isDropContentOpen} />}
     </div>
   );
 };

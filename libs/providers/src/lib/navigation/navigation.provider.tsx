@@ -14,6 +14,9 @@ export const NavigationProvider: React.FC<NavigationProviderProps> = ({
   const [isDropContentOpen, setIsDropContentOpen] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
+  // TODO: when we have backend logic and authentication, please update this
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const onBlurHover = useCallback(() => {
     if (activeMenu !== 'none') {
       setIsDropContentOpen(false);
@@ -74,6 +77,8 @@ export const NavigationProvider: React.FC<NavigationProviderProps> = ({
         navItems,
         setActiveMenu,
         hasActiveMenu,
+        isLoggedIn,
+        setIsLoggedIn,
       }}
     >
       {children}
