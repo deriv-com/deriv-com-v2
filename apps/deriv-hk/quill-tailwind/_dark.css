@@ -1,0 +1,16 @@
+html.dark {
+  --semantic-color-background-primary-base: #11141b;
+  --semantic-color-background-primary-container: #181c25;
+  --semantic-color-background-secondary-base: #11141b;
+  --semantic-color-background-secondary-container: #181c25;
+  --semantic-color-background-dialog: #181c25;
+  --semantic-color-typography-prominent: #ffffff;
+  --semantic-color-typography-default: rgba(255, 255, 255, 0.72);
+  --semantic-color-typography-subtle: rgba(255, 255, 255, 0.48);
+  --semantic-color-typography-disabled: rgba(255, 255, 255, 0.24);
+  --semantic-color-typography-link: #ff444f;
+  --semantic-color-status-info: #3daaff;
+  --semantic-color-status-success: #47dc65;
+  --semantic-color-status-warning: #ffae26;
+  --semantic-color-status-danger: #f92e26;
+}
