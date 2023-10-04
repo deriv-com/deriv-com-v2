@@ -70,6 +70,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
     <div
       className={clsx(
         'flex',
+        'overflow-hidden',
         'rounded-pill',
         contentVariantClass[contentPosition],
         bgColorVariantClass[color],
