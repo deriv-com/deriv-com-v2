@@ -1,22 +1,23 @@
+import { useNavigation } from '@deriv-com/hooks';
 import clsx from 'clsx';
 import { useEffect, useRef } from 'react';
 import { useHover } from 'usehooks-ts';
 
 export interface NavBlurProps {
   isVisible: boolean;
-  onHover?: VoidFunction;
 }
 
-const DesktopNavBlur = ({ isVisible, onHover }: NavBlurProps) => {
+const DesktopNavBlur = ({ isVisible }: NavBlurProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
+  const { onBlurHover } = useNavigation();
   const isHovering = useHover(ref);
 
   useEffect(() => {
     if (isHovering) {
-      onHover?.();
+      onBlurHover?.();
     }
-  }, [isHovering, onHover]);
+  }, [isHovering, onBlurHover]);
 
   return (
     <div
