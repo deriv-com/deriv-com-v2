@@ -19,11 +19,20 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
     <li
       className="flex h-full items-center justify-center px-general-lg text-center"
       onMouseEnter={() => {
-        onListItemHover?.(navItemName);
+        if (item.type === 'nav-dropdown') {
+          onListItemHover?.(navItemName);
+        }
       }}
     >
       {item.type === 'direct' ? (
-        <CustomLink href={item.href}>{item.text}</CustomLink>
+        <CustomLink
+          href={item.href}
+          onMouseEnter={() => {
+            onListItemHover?.(navItemName);
+          }}
+        >
+          {item.text}
+        </CustomLink>
       ) : (
         <Text size="sm" className="cursor-pointer hover:text-typography-link">
           {item.text}
