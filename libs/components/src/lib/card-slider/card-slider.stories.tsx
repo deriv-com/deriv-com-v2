@@ -1,6 +1,4 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@deriv/quill-design';
 import CardSlider from '.';
 import {
   IllustrativeLicensedAndRegulatedIcon,
@@ -8,12 +6,14 @@ import {
   IllustrativeSpreadsIcon,
   IllustrativeSupport247Icon,
 } from '@deriv/quill-icons';
-
-import { Card } from '@deriv-com/components';
+import ContentBottomCard from '../card/content-bottom';
 
 const meta = {
-  title: 'Blocks/Features/CardSlider',
+  title: 'Components/CardSlider',
   component: CardSlider,
+  parameters: {
+    layout: 'centered',
+  },
 } satisfies Meta<typeof CardSlider>;
 
 export default meta;
@@ -21,14 +21,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    description:
-      'Description goes here description goes here description goes here description goes here',
-    cta: (
-      <div className="flex w-full justify-center">
-        <Button>CTA</Button>
-      </div>
-    ),
-    title: 'Card Slider Title',
+    className: '!py-2000 bg-background-primary-container',
+    slideClasses: 'max-w-xs',
     cards: [
       {
         header: 'Card 1',
@@ -75,16 +69,7 @@ export const Default: Story = {
         align: 'start',
         size: 'sm',
       },
-      {
-        header: 'Card 6',
-        description:
-          'Description here. Description here. Description here. Description here.',
-        icon: <IllustrativeSupport247Icon />,
-        color: 'gray',
-        align: 'start',
-        size: 'sm',
-      },
     ],
-    renderCard: Card.ContentBottom,
+    renderCard: ContentBottomCard,
   },
 };

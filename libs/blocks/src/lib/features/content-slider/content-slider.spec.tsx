@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import CardSlider from '.';
+import ContentSlider from '.';
 
 describe('CardSlider', () => {
   it('renders with correct class names and content', () => {
@@ -10,7 +10,7 @@ describe('CardSlider', () => {
     const description = 'Description here';
 
     const { getByText } = render(
-      <CardSlider
+      <ContentSlider
         className={className}
         title={title}
         description={description}

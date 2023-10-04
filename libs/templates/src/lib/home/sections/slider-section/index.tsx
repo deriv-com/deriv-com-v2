@@ -4,10 +4,11 @@ import { SliderCardData } from './data';
 
 const CardSliderSection = () => {
   return (
-    <Features.CardSlider
+    <Features.ContentSlider
       title="Card Slider Title"
       cards={SliderCardData}
       renderCard={Card.ContentBottom}
+      slideClasses="max-w-xs"
     />
   );
 };
