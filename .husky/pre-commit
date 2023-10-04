@@ -2,3 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx lint-staged --concurrent false --relative
+
+bash ./.husky/secret-scanner.sh
