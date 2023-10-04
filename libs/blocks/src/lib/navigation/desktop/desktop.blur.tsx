@@ -22,7 +22,7 @@ const DesktopNavBlur = ({ isVisible, onHover }: NavBlurProps) => {
     <div
       className={clsx(
         'w-screen',
-        'transition-all delay-100 duration-500 ease-in-out',
+        'transition-all delay-0 duration-75 ease-in-out',
         {
           'block absolute h-screen backdrop-blur-lg': isVisible,
           'backdrop-blur-0 h-[72px]': !isVisible,

@@ -1,7 +1,7 @@
 import { CustomLink } from '@deriv-com/components';
 import { useNavigation } from '@deriv-com/hooks';
 import { NavItem } from '@deriv-com/providers';
-import { Heading, Text } from '@deriv/quill-design';
+import { Text } from '@deriv/quill-design';
 import React from 'react';
 
 export interface DesktopNavItemProps {

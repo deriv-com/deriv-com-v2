@@ -17,7 +17,7 @@ export const DesktopNavigationWrapper = ({
         <FluidContainer
           className={clsx(
             isDropContentOpen ? 'max-h-[100vh]' : 'max-h-[72px]',
-            'transition-max-height duration-1000 ease-in-out',
+            'transition-max-height duration-500 ease-in-out',
             'overflow-hidden',
           )}
         >
