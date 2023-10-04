@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta name="color-scheme" content="light dark" />
       </Head>
-      <body>
+      <body className="bg-background-primary-container">
         <Main />
         <NextScript />
       </body>
