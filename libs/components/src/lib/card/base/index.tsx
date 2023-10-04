@@ -69,7 +69,8 @@ export const BaseCard: React.FC<BaseCardProps> = ({
   return (
     <div
       className={clsx(
-        'flex h-full rounded-pill',
+        'flex',
+        'rounded-pill',
         contentVariantClass[contentPosition],
         bgColorVariantClass[color],
         className,
@@ -94,7 +95,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         {description && (
           <Text
             size={textSizeVariant[size]}
-            className={clsx(textColorVariantClass[color], 'flex-1')}
+            className={clsx(textColorVariantClass[color])}
           >
             {description}
           </Text>
