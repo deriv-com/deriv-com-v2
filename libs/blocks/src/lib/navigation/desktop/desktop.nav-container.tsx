@@ -13,7 +13,6 @@ export const DesktopNavContainer: React.FC<{
       <FluidContainer
         className={clsx(
           isDropContentOpen ? 'max-h-[600px]' : 'max-h-[72px]',
-          'transition-max-height duration-1000 ease-in-out',
           'overflow-hidden',
         )}
       >
