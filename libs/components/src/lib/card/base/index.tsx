@@ -95,7 +95,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         {description && (
           <Text
             size={textSizeVariant[size]}
-            className={clsx(textColorVariantClass[color])}
+            className={clsx(textColorVariantClass[color], 'flex-1')}
           >
             {description}
           </Text>
