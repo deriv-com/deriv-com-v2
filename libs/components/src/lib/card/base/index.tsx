@@ -45,7 +45,7 @@ const textSizeVariant: { [key: string]: TextSize } = {
 
 const linkTextSizeVariant = {
   sm: 'text-body-md',
-  md: 'text-body-lg',
+  md: 'text-body-md',
   lg: 'text-body-lg',
 };
 
@@ -103,7 +103,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
           <CustomLink
             href={link.href}
             className={clsx(
-              'flex items-center justify-center text-body-md text-typography-link',
+              'flex items-center justify-center text-typography-link',
               linkTextSizeVariant[size],
             )}
           >
