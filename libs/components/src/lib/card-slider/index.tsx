@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { qtMerge } from '@deriv/quill-design';
 
 interface SwiperPagination {
   pagination?: {
@@ -28,7 +29,7 @@ export interface CardSliderProps {
 }
 
 export const CardSlider = ({
-  className = '!pb-general-2xl',
+  className,
   cards = [],
   renderCard,
   slideClasses,
@@ -45,7 +46,10 @@ export const CardSlider = ({
   return (
     <div className="flex w-full justify-center">
       <Swiper
-        className={clsx(className)}
+        className={qtMerge(
+          swiperData.pagination && '!pb-general-3xl',
+          className,
+        )}
         modules={[Pagination]}
         pagination={swiperData.pagination}
         slidesPerView={swiperData.slidesPerView}

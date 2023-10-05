@@ -3,11 +3,12 @@ import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import { ReactNode } from 'react';
 import { CardSlider, CardSliderProps } from '@deriv-com/components';
 
-export interface ContentSliderProps extends CardSliderProps {
+export interface ContentSliderProps {
   title?: string;
   description?: string;
   cta?: ReactNode;
   className?: string;
+  cardSliderProps?: CardSliderProps;
 }
 
 const ContentSlider = ({
@@ -15,7 +16,7 @@ const ContentSlider = ({
   description,
   cta,
   className,
-  ...rest
+  cardSliderProps,
 }: ContentSliderProps) => {
   return (
     <Section
@@ -27,10 +28,14 @@ const ContentSlider = ({
     >
       <FluidContainer className="flex flex-col items-center gap-gap-2xl">
         <div className="flex flex-col items-center justify-center gap-gap-xl">
-          <Heading.H2>{title}</Heading.H2>
-          <Text size="xl">{description}</Text>
+          <Heading.H2 className="text-center">{title}</Heading.H2>
+          {description && (
+            <Text size="xl" className="text-center">
+              {description}
+            </Text>
+          )}
         </div>
-        <CardSlider {...rest} />
+        <CardSlider {...cardSliderProps} />
         {cta}
       </FluidContainer>
     </Section>

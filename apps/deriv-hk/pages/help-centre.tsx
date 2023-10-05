@@ -4,7 +4,7 @@ const HelpCenterPage = () => {
   return (
     <>
       <Navigation.Main />
-      <HelpCenterTemplate />;
+      <HelpCenterTemplate />
     </>
   );
 };

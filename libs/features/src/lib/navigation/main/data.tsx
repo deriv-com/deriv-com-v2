@@ -35,7 +35,7 @@ export const mainNavItems: NavLinkItems = {
             id: 1,
             type: 'direct',
             href: '/why-choose-us',
-            text: 'Who choose us',
+            text: 'Why choose us',
           },
           { id: 2, type: 'direct', href: '/contact-us', text: 'Contact us' },
         ],

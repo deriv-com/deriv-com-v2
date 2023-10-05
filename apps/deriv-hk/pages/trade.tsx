@@ -5,7 +5,7 @@ export const TradePage = () => {
   return (
     <>
       <Navigation.Main />
-      <TradeTemplate />;
+      <TradeTemplate />
     </>
   );
 };

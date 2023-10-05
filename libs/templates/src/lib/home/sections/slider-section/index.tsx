@@ -6,9 +6,11 @@ const CardSliderSection = () => {
   return (
     <Features.ContentSlider
       title="Card Slider Title"
-      cards={SliderCardData}
-      renderCard={Card.ContentBottom}
-      slideClasses="max-w-xs"
+      cardSliderProps={{
+        cards: SliderCardData,
+        renderCard: Card.ContentBottom,
+        slideClasses: 'max-w-xs',
+      }}
     />
   );
 };
