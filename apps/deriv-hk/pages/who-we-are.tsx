@@ -5,7 +5,7 @@ export const WhoWeArePage = () => {
   return (
     <>
       <Navigation.Main />
-      <WhoWeAreTemplate />;
+      <WhoWeAreTemplate />
     </>
   );
 };

@@ -65,7 +65,7 @@
     "clean": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "rimraf dist/apps/deriv-hk && rimraf apps/deriv-hk/.next && rimraf apps/deriv-hk/public/images"
+        "command": "rimraf apps/deriv-hk/.next && rimraf apps/deriv-hk/public/images"
       }
     },
     "test": {
