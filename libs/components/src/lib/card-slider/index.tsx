@@ -28,32 +28,36 @@ export interface CardSliderProps {
   swiperData?: SwiperProps;
 }
 
+const defaultSwiperProps: SwiperProps = {
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  pagination: {
+    enabled: true,
+    clickable: true,
+    horizontalClass: `[--swiper-pagination-color:#ff444f]`,
+  },
+};
+
 export const CardSlider = ({
   className,
   cards = [],
   renderCard,
   slideClasses,
-  swiperData = {
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    pagination: {
-      enabled: true,
-      clickable: true,
-      horizontalClass: `[--swiper-pagination-color:#ff444f]`,
-    },
-  },
+  swiperData,
 }: CardSliderProps) => {
+  const swiperProps = Object.assign(defaultSwiperProps, swiperData);
+
   return (
     <div className="flex w-full justify-center">
       <Swiper
         className={qtMerge(
-          swiperData.pagination && '!pb-general-3xl',
+          swiperProps.pagination && '!pb-general-3xl',
           className,
         )}
         modules={[Pagination]}
-        pagination={swiperData.pagination}
-        slidesPerView={swiperData.slidesPerView}
-        spaceBetween={swiperData.spaceBetween}
+        pagination={swiperProps.pagination}
+        slidesPerView={swiperProps.slidesPerView}
+        spaceBetween={swiperProps.spaceBetween}
         rewind
       >
         {cards.map((card) => (
