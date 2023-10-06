@@ -12,17 +12,17 @@ export const MobileHeader = () => {
   return (
     <FluidContainer
       className={clsx(
-        'flex min-h-[48px] items-center',
+        'flex min-h-[80px] items-center',
         hasActiveMenu ? 'justify-between' : 'justify-end',
       )}
     >
       {hasActiveMenu && (
         <StandaloneChevronLeftRegularIcon
           onClick={() => setActiveMenu?.('none')}
-          iconSize="sm"
+          iconSize="md"
         />
       )}
-      <StandaloneXmarkRegularIcon onClick={toggleMobileNav} iconSize="sm" />
+      <StandaloneXmarkRegularIcon onClick={toggleMobileNav} iconSize="md" />
     </FluidContainer>
   );
 };

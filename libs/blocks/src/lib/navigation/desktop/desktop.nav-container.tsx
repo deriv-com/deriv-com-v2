@@ -12,7 +12,7 @@ export const DesktopNavContainer: React.FC<{
     <FixContainer className={'z-50 bg-background-primary-container'}>
       <FluidContainer
         className={clsx(
-          isDropContentOpen ? 'max-h-[600px]' : 'max-h-[72px]',
+          isDropContentOpen ? 'max-h-[600px]' : 'max-h-[80px]',
           'overflow-hidden',
         )}
       >
