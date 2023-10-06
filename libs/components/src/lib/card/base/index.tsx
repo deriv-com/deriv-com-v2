@@ -33,8 +33,14 @@ const sizeVariantComponents = {
 
 const sizeVariantContainerGap = {
   sm: 'gap-gap-lg p-general-xl',
-  md: 'gap-gap-lg p-general-2xl',
-  lg: 'gap-gap-xl p-general-2xl',
+  md: 'gap-gap-xl p-general-2xl',
+  lg: 'gap-gap-xl p-general-3xl',
+};
+
+const sizeVariantTextGap = {
+  sm: 'gap-gap-md',
+  md: 'gap-gap-lg',
+  lg: 'gap-gap-xl',
 };
 
 const textSizeVariant: { [key: string]: TextSize } = {
@@ -86,19 +92,18 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         )}
       >
         {icon && icon}
-        {header && (
-          <HeadingComponent className={clsx(textColorVariantClass[color])}>
-            {header}
-          </HeadingComponent>
-        )}
-        {description && (
-          <Text
-            size={textSizeVariant[size]}
-            className={clsx(textColorVariantClass[color], 'flex-1')}
-          >
-            {description}
-          </Text>
-        )}
+        <div
+          className={qtMerge(
+            'flex flex-1 flex-col',
+            textColorVariantClass[color],
+            sizeVariantTextGap[size],
+          )}
+        >
+          {header && <HeadingComponent>{header}</HeadingComponent>}
+          {description && (
+            <Text size={textSizeVariant[size]}>{description}</Text>
+          )}
+        </div>
         {link && (
           <CustomLink
             href={link.href}
