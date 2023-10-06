@@ -13,7 +13,12 @@ export const DesktopNavigationWrapper = ({
 
   return (
     <div className={'fixed z-50 w-screen'}>
-      <FixContainer className={'bg-background-primary-container'}>
+      <FixContainer
+        className={clsx(
+          'bg-background-primary-container',
+          isDropContentOpen ? 'shadow-330' : '',
+        )}
+      >
         <FluidContainer
           className={clsx(
             isDropContentOpen ? 'max-h-[100vh]' : 'max-h-[72px]',
