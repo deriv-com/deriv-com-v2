@@ -5,7 +5,7 @@ import { OptimizedImage } from '@deriv-com/components';
 const FastAndReliableSection = () => {
   return (
     <Features.ContentRight
-      title="Fast and reliable"
+      title="Fast, reliable forex trading platform"
       content={() => {
         return (
           <>

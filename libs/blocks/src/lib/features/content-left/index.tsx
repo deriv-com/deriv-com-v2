@@ -35,7 +35,7 @@ const ContentLeft = ({
       >
         <div
           className={clsx(
-            'flex flex-1 basis-1/2 flex-col gap-gap-xl lg:justify-center',
+            'flex flex-1 basis-1/2 flex-col gap-gap-2xl lg:justify-center',
             variant === 'content-left'
               ? 'lg:pl-general-xl'
               : 'lg:pr-general-xl',
