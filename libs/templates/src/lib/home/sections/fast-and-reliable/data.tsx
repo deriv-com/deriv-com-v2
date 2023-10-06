@@ -10,8 +10,32 @@ export const FastAndReliableContent = () => {
           width={18}
           height={30}
         />
+        <Text size="lg">Average trade execution: Below 50ms</Text>
+      </li>
+      <li className="flex gap-gap-lg">
+        <LabelPairedCheckRegularIcon
+          className="min-w-[18px]"
+          width={18}
+          height={30}
+        />
+        <Text size="lg">Daily trades: Over 20 billion USD</Text>
+      </li>
+      <li className="flex gap-gap-lg">
+        <LabelPairedCheckRegularIcon
+          className="min-w-[18px]"
+          width={18}
+          height={30}
+        />
+        <Text size="lg">Uptime: 99.97%</Text>
+      </li>
+      <li className="flex gap-gap-lg">
+        <LabelPairedCheckRegularIcon
+          className="min-w-[18px]"
+          width={18}
+          height={30}
+        />
         <Text size="lg">
-          Average execution speeds of under <strong>50ms</strong>
+          Intelligent server routing — better performance and reliability
         </Text>
       </li>
       <li className="flex gap-gap-lg">
@@ -21,32 +45,8 @@ export const FastAndReliableContent = () => {
           height={30}
         />
         <Text size="lg">
-          <strong>USD 20+ billion</strong> in daily trades from over 90,000+
-          daily clients
-        </Text>
-      </li>
-      <li className="flex gap-gap-lg">
-        <LabelPairedCheckRegularIcon
-          className="min-w-[18px]"
-          width={18}
-          height={30}
-        />
-        <Text size="lg">
-          <strong>99.97% uptime</strong> with intelligent routing to servers in
-          London, Frankfurt, Cape Town, and Singapore for performance and
-          reliability
-        </Text>
-      </li>
-      <li className="flex gap-gap-lg">
-        <LabelPairedCheckRegularIcon
-          className="min-w-[18px]"
-          width={18}
-          height={30}
-        />
-        <Text size="lg">
-          Diverse and proprietary mix of liquidity providers for
-          <strong> optimal pricing </strong>
-          and <strong> swift execution</strong> whenever you trade
+          Optimal pricing and fast execution thanks to proprietary liquidity
+          providers
         </Text>
       </li>
     </ul>
