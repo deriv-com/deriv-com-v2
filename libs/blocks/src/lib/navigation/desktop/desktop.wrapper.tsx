@@ -16,7 +16,7 @@ export const DesktopNavigationWrapper = ({
       <FixContainer className={'bg-background-primary-container'}>
         <FluidContainer
           className={clsx(
-            isDropContentOpen ? 'max-h-[100vh]' : 'max-h-[72px]',
+            isDropContentOpen ? 'max-h-[100vh]' : 'max-h-[80px]',
             'transition-max-height delay-0 duration-500 ease-in-out',
             'overflow-hidden',
           )}

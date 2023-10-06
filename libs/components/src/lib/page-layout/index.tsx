@@ -5,7 +5,7 @@ export interface PageLayoutProps {
 }
 
 export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
-  return <FixContainer className="pt-[72px]">{children}</FixContainer>;
+  return <FixContainer className="pt-[80px]">{children}</FixContainer>;
 };
 
 export default PageLayout;
