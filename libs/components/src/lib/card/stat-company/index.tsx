@@ -28,17 +28,16 @@ export const StatCompanyCard: React.FC<StatCardProps> = ({
       className={qtMerge(
         colorVariants[color],
         'rounded-pill',
-        'p-general-2xl',
+        'p-general-xl',
         'flex flex-col',
-        'items-center justify-center gap-gap-lg',
+        'items-center justify-center gap-gap-md',
         'basis-1/3 sm:basis-1/3 md:min-w-[180px] lg:flex-1',
-        'sm:last-of-type:col-span-2 lg:last-of-type:col-span-1',
         className,
       )}
     >
-      <Heading.H4 className={textColorVariants[color]}>{header}</Heading.H4>
+      <Heading.H5 className={textColorVariants[color]}>{header}</Heading.H5>
       <Text
-        size="lg"
+        size="md"
         className={qtMerge(textColorVariants[color], 'text-center')}
       >
         {description}
