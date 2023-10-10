@@ -3,7 +3,7 @@ import { Text } from '@deriv/quill-design';
 
 export const FastAndReliableContent = () => {
   return (
-    <ul className="flex flex-col gap-gap-xl">
+    <ul className="flex flex-col gap-gap-lg lg:gap-gap-xl">
       <li className="flex gap-gap-lg">
         <LabelPairedCheckRegularIcon
           className="min-w-[18px]"
