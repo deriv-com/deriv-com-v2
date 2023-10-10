@@ -39,7 +39,7 @@ const ourPrinciplesCards: CardContent[] = [
 
 export const WhoWeArePrinciples = () => {
   return (
-    <Features.CardFeature
+    <Features.Card
       title="Our values are the fabric of our culture"
       cols="two"
       variant="ContentBottom"

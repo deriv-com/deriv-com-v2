@@ -8,6 +8,7 @@ import WhyTradeSection from './sections/why-trade';
 import ProvenExcellenceSection from './sections/proven-excellence';
 import StaticNumberBlock from './sections/static-number-block';
 import CardSliderSection from './sections/slider-section';
+import { Hero } from '@deriv-com/blocks';
 
 export function HomeTemplate() {
   return (

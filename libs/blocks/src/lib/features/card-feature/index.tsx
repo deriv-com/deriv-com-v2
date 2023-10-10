@@ -7,7 +7,7 @@ import {
   CardsContainer,
 } from '@deriv-com/components';
 
-export interface CardFeatureProps {
+export interface FeatureCardProps {
   title?: string;
   description?: string;
   cta?: ReactNode;
@@ -17,7 +17,7 @@ export interface CardFeatureProps {
   variant?: CardVariantType;
 }
 
-const CardFeature = ({
+const Card = ({
   title,
   description,
   cta,
@@ -25,7 +25,7 @@ const CardFeature = ({
   cards = [],
   cols = 'two',
   variant = 'ContentBottom',
-}: CardFeatureProps) => {
+}: FeatureCardProps) => {
   return (
     <Section
       className={clsx(
@@ -50,4 +50,4 @@ const CardFeature = ({
   );
 };
 
-export default CardFeature;
+export default Card;

@@ -3,7 +3,7 @@ import { whyTradeWithUsData } from './data';
 
 const WhyTradeSection = () => {
   return (
-    <Features.CardFeature
+    <Features.Card
       title="Why trade forex with us "
       cols="three"
       className="bg-solid-slate-75"
