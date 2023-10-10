@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import WhoWeAre from '.';
+import WhoWeAre from './index';
 
 describe('WhoWeAre', () => {
   it('should render successfully', () => {

@@ -3,7 +3,7 @@ import { provenExcellenceData } from './data';
 
 const ProvenExcellenceSection = () => {
   return (
-    <Features.CardFeature
+    <Features.Card
       title="20+ years of proven excellence"
       cols="four"
       cards={provenExcellenceData}

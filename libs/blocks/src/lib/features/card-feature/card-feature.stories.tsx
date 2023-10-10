@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@deriv/quill-design';
-import CardFeature from '.';
+import Card from '.';
 import {
   IllustrativeLicensedAndRegulatedIcon,
   IllustrativeProtectedAndSecureIcon,
@@ -9,9 +9,9 @@ import {
 } from '@deriv/quill-icons';
 
 const meta = {
-  title: 'Blocks/Features/CardFeature',
-  component: CardFeature,
-} satisfies Meta<typeof CardFeature>;
+  title: 'Blocks/Features/Card',
+  component: Card,
+} satisfies Meta<typeof Card>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
