@@ -40,7 +40,7 @@ const ourPrinciplesCards: CardContent[] = [
 export const WhoWeArePrinciples = () => {
   return (
     <Features.CardFeature
-      title="Our values are the fabric of our culture"
+      title="Our principles are the framework for our decisions"
       cols="two"
       variant="ContentBottom"
       cards={ourPrinciplesCards}
