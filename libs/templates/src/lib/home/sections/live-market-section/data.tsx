@@ -12,7 +12,7 @@ export const SliderCardData: CardContent[] = [
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeProtectedAndSecureIcon />,
-    color: 'gray',
+    color: 'light',
     align: 'start',
     size: 'sm',
   },
@@ -21,7 +21,7 @@ export const SliderCardData: CardContent[] = [
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeSupport247Icon />,
-    color: 'gray',
+    color: 'light',
     align: 'start',
     size: 'sm',
   },
@@ -30,7 +30,7 @@ export const SliderCardData: CardContent[] = [
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeLicensedAndRegulatedIcon />,
-    color: 'gray',
+    color: 'light',
     align: 'start',
     size: 'sm',
   },
@@ -39,7 +39,7 @@ export const SliderCardData: CardContent[] = [
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeSpreadsIcon />,
-    color: 'gray',
+    color: 'light',
     align: 'start',
     size: 'sm',
   },
@@ -48,16 +48,7 @@ export const SliderCardData: CardContent[] = [
     description:
       'Description here. Description here. Description here. Description here.',
     icon: <IllustrativeLicensedAndRegulatedIcon />,
-    color: 'gray',
-    align: 'start',
-    size: 'sm',
-  },
-  {
-    header: 'Card 6',
-    description:
-      'Description here. Description here. Description here. Description here.',
-    icon: <IllustrativeSupport247Icon />,
-    color: 'gray',
+    color: 'light',
     align: 'start',
     size: 'sm',
   },
