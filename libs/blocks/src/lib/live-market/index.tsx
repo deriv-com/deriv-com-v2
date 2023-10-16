@@ -9,7 +9,7 @@ export interface LiveMarketProps {
   header?: string;
   description?: string;
   className?: string;
-  tabHeader?: ReactNode;
+  tabHeader?: () => ReactNode;
   disclaimer?: string;
   link: {
     href: string;
@@ -25,7 +25,7 @@ export const LiveMarket = ({
   className,
   disclaimer,
   link,
-  tabHeader,
+  tabHeader: TabHeader,
   cardSliderProps,
 }: LiveMarketProps) => {
   return (
@@ -41,7 +41,7 @@ export const LiveMarket = ({
           <div className="flex flex-col items-center gap-gap-lg">
             {header && <Heading.H2>{header}</Heading.H2>}
             {description && <Text size="md">{description}</Text>}
-            {tabHeader}
+            {TabHeader && <TabHeader />}
           </div>
         )}
         <div className="flex w-full flex-col items-center">
