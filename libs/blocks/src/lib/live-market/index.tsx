@@ -37,22 +37,21 @@ export const LiveMarket = ({
       )}
     >
       <FluidContainer className="flex flex-col items-center justify-center gap-gap-2xl">
-        {isHeaderSection ? (
-          <div className="flex flex-col gap-gap-lg">
+        {isHeaderSection && (
+          <div className="flex flex-col items-center gap-gap-lg">
             {header && <Heading.H2>{header}</Heading.H2>}
             {description && <Text size="md">{description}</Text>}
             {tabHeader}
           </div>
-        ) : (
-          <div className="flex w-full flex-col items-center">
-            <CardSlider {...cardSliderProps} />
-            {disclaimer && (
-              <Text className="text-center text-caption text-typography-subtle">
-                {disclaimer}
-              </Text>
-            )}
-          </div>
         )}
+        <div className="flex w-full flex-col items-center">
+          <CardSlider {...cardSliderProps} />
+          {disclaimer && (
+            <Text className="text-center text-caption text-typography-subtle">
+              {disclaimer}
+            </Text>
+          )}
+        </div>
         {link && (
           <CustomLink
             href={link.href}

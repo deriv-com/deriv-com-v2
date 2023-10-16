@@ -20,6 +20,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    isHeaderSection: true,
+    header: 'Header here',
+    description: 'desciption here description here',
     cardSliderProps: {
       slideClasses: 'max-w-xs',
       cards: [
