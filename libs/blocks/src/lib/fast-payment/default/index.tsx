@@ -21,14 +21,14 @@ const FastPayment: React.FC<FastPaymentProps> = ({
   description,
   link,
   disclaimer,
-  content: { cards = [], cols = 'three' },
+  content: { cards = [], cols = 'three', dense },
 }) => {
   return (
     <FluidContainer className="bg-background-primary-container py-general-3xl">
       <div className="flex flex-col items-center">
         <Heading.H2 className="mb-1200">{title}</Heading.H2>
         {description && (
-          <Text size="md" className="mb-gap-md">
+          <Text size="xl" className="mb-gap-md">
             {description}
           </Text>
         )}
@@ -41,8 +41,13 @@ const FastPayment: React.FC<FastPaymentProps> = ({
             <StandaloneChevronRightRegularIcon fill="#FF444F" />
           </CustomLink>
         )}
-        <div className="mt-general-xl">
-          <CardsContainer cards={cards} variant={'ContentBottom'} cols={cols} />
+        <div className="mt-general-xl flex w-full justify-center">
+          <CardsContainer
+            cards={cards}
+            variant={'ContentBottom'}
+            cols={cols}
+            dense={dense}
+          />
         </div>
         {disclaimer && (
           <p className="text-100 text-opacity-black-400">{disclaimer}</p>

@@ -15,6 +15,7 @@ const FastPaymentSection = () => {
         href: '#',
       }}
       content={{
+        className: 'h-fit',
         cards: [
           {
             header: '',
@@ -22,6 +23,8 @@ const FastPaymentSection = () => {
             align: 'center',
             size: 'lg',
             icon: <FlagBurkinaFasoIcon fill="black" iconSize="2xl" />,
+            className: 'h-fit',
+            nonContentClassName: 'p-general-xl',
           },
           {
             header: '',
@@ -29,6 +32,8 @@ const FastPaymentSection = () => {
             align: 'center',
             size: 'lg',
             icon: <FlagAndorraIcon fill="black" iconSize="2xl" />,
+            className: 'h-fit',
+            nonContentClassName: 'p-general-xl',
           },
           {
             header: '',
@@ -36,6 +41,8 @@ const FastPaymentSection = () => {
             align: 'center',
             size: 'lg',
             icon: <FlagAustraliaIcon fill="black" iconSize="2xl" />,
+            className: 'h-fit',
+            nonContentClassName: 'p-general-xl',
           },
         ],
       }}
