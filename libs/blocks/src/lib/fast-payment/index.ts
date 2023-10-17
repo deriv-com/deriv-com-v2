@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
-import Default from './default';
+import Standard from './standard';
 
 type FastPaymentVariants = {
-  Default: typeof Default;
+  Standard: typeof Standard;
 };
 
 export const FastPayment: FastPaymentVariants = ({
@@ -14,6 +14,6 @@ export const FastPayment: FastPaymentVariants = ({
   return children;
 };
 
-FastPayment.Default = Default;
+FastPayment.Standard = Standard;
 
 export default FastPayment;

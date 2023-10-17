@@ -41,7 +41,7 @@ const FastPayment: React.FC<FastPaymentProps> = ({
             <StandaloneChevronRightRegularIcon fill="#FF444F" />
           </CustomLink>
         )}
-        <div className="mt-general-xl flex w-full justify-center">
+        <div className="mb-general-lg mt-general-xl flex w-full justify-center">
           <CardsContainer
             cards={cards}
             variant={'ContentBottom'}
