@@ -8,8 +8,6 @@ import {
   FlagUsaIcon,
 } from '@deriv/quill-icons';
 
-import { Card } from '@deriv-com/components';
-
 const meta = {
   title: 'Blocks/Features/LiveMarket',
   component: LiveMarket,
@@ -24,6 +22,7 @@ export const Default: Story = {
     header: 'Header here',
     description: 'desciption here description here',
     cardSliderProps: {
+      variant: 'LiveMarketCard',
       slideClasses: 'max-w-[286px]',
       swiperData: {
         spaceBetween: 16,
@@ -75,7 +74,6 @@ export const Default: Story = {
           spread: '0.00005',
         },
       ],
-      renderCard: Card.LiveMarketCard,
     },
     className: 'bg-solid-slate-75',
     disclaimer:
