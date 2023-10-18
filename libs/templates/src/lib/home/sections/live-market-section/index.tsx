@@ -1,5 +1,4 @@
 import { LiveMarket } from '@deriv-com/blocks';
-import { Card } from '@deriv-com/components';
 import { LivePriceData } from './data';
 
 const LiveMarketSection = () => {
@@ -10,8 +9,7 @@ const LiveMarketSection = () => {
       link={{ href: '/', content: 'More forex' }}
       cardSliderProps={{
         cards: LivePriceData,
-        //needs refactoring
-        renderCard: Card.LiveMarketCard,
+        variant: 'LiveMarketCard',
         slideClasses: 'max-w-[286px]',
         swiperData: {
           spaceBetween: 16,

@@ -1,10 +1,15 @@
-import { CardSlider, CardSliderProps, CustomLink } from '@deriv-com/components';
+import {
+  CardSlider,
+  CardSliderProps,
+  CardVariantType,
+  CustomLink,
+} from '@deriv-com/components';
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 
-export interface LiveMarketProps {
+export interface LiveMarketProps<T extends CardVariantType> {
   isHeaderSection?: boolean;
   header?: string;
   description?: string;
@@ -15,10 +20,10 @@ export interface LiveMarketProps {
     href: string;
     content: string;
   };
-  cardSliderProps?: CardSliderProps;
+  cardSliderProps?: CardSliderProps<T>;
 }
 
-export const LiveMarket = ({
+export const LiveMarket = <T extends CardVariantType>({
   isHeaderSection = false,
   header,
   description,
@@ -27,7 +32,7 @@ export const LiveMarket = ({
   link,
   tabHeader: TabHeader,
   cardSliderProps,
-}: LiveMarketProps) => {
+}: LiveMarketProps<T>) => {
   return (
     <Section
       className={clsx(
@@ -45,7 +50,11 @@ export const LiveMarket = ({
           </div>
         )}
         <div className="flex w-full flex-col items-center gap-gap-lg md:gap-gap-xl">
-          <CardSlider {...cardSliderProps} />
+          {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            <CardSlider {...cardSliderProps} />
+          }
           {disclaimer && (
             <Text className="text-center text-caption text-typography-subtle">
               {disclaimer}
@@ -56,11 +65,11 @@ export const LiveMarket = ({
           <CustomLink
             href={link.href}
             className={clsx(
-              'flex items-center justify-center text-body-md text-opacity-black-600',
+              'flex items-center justify-center text-body-md text-typography-link',
             )}
           >
             {link.content}
-            <StandaloneChevronRightRegularIcon fill="#000000b8" />
+            <StandaloneChevronRightRegularIcon fill="#FF444F" />
           </CustomLink>
         )}
       </FluidContainer>

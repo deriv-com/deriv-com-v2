@@ -1,23 +1,27 @@
 import clsx from 'clsx';
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import { ReactNode } from 'react';
-import { CardSlider, CardSliderProps } from '@deriv-com/components';
+import {
+  CardSlider,
+  CardSliderProps,
+  CardVariantType,
+} from '@deriv-com/components';
 
-export interface ContentSliderProps {
+export interface ContentSliderProps<T extends CardVariantType> {
   title?: string;
   description?: string;
   cta?: ReactNode;
   className?: string;
-  cardSliderProps?: CardSliderProps;
+  cardSliderProps?: CardSliderProps<T>;
 }
 
-const ContentSlider = ({
+const ContentSlider = <T extends CardVariantType>({
   title,
   description,
   cta,
   className,
   cardSliderProps,
-}: ContentSliderProps) => {
+}: ContentSliderProps<T>) => {
   return (
     <Section
       className={clsx(
@@ -35,7 +39,11 @@ const ContentSlider = ({
             </Text>
           )}
         </div>
-        <CardSlider {...cardSliderProps} />
+        {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          <CardSlider {...cardSliderProps} />
+        }
         {cta}
       </FluidContainer>
     </Section>
