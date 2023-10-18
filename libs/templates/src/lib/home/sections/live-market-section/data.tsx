@@ -1,55 +1,46 @@
-import { CardContent } from '@deriv-com/components';
+import { LiveMarketContent } from '@deriv-com/components';
 import {
-  IllustrativeLicensedAndRegulatedIcon,
-  IllustrativeProtectedAndSecureIcon,
-  IllustrativeSpreadsIcon,
-  IllustrativeSupport247Icon,
+  FlagUsaIcon,
+  FlagJapanIcon,
+  FlagUnitedKingdomIcon,
+  FlagAustraliaIcon,
 } from '@deriv/quill-icons';
 
-export const SliderCardData: CardContent[] = [
+export const LivePriceData: LiveMarketContent[] = [
   {
-    header: 'Card 1',
-    description:
-      'Description here. Description here. Description here. Description here.',
-    icon: <IllustrativeProtectedAndSecureIcon />,
-    color: 'light',
-    align: 'start',
-    size: 'sm',
+    instrumentIcon: <FlagUsaIcon />,
+    instrument: 'EUR/USD',
+    changePercentage: '+0.11%',
+    status: 'up',
+    bidPrice: '1.07219',
+    askPrice: '1.07223',
+    spread: '0.00005',
   },
   {
-    header: 'Card 2',
-    description:
-      'Description here. Description here. Description here. Description here.',
-    icon: <IllustrativeSupport247Icon />,
-    color: 'light',
-    align: 'start',
-    size: 'sm',
+    instrumentIcon: <FlagUnitedKingdomIcon />,
+    instrument: 'GBP/USD',
+    changePercentage: '+0.11%',
+    status: 'down',
+    bidPrice: '1.07219',
+    askPrice: '1.07223',
+    spread: '0.00005',
   },
   {
-    header: 'Card 3',
-    description:
-      'Description here. Description here. Description here. Description here.',
-    icon: <IllustrativeLicensedAndRegulatedIcon />,
-    color: 'light',
-    align: 'start',
-    size: 'sm',
+    instrumentIcon: <FlagJapanIcon />,
+    instrument: 'USD/JPY',
+    changePercentage: '+0.11%',
+    status: 'remain',
+    bidPrice: '1.07219',
+    askPrice: '1.07223',
+    spread: '0.00005',
   },
   {
-    header: 'Card 4',
-    description:
-      'Description here. Description here. Description here. Description here.',
-    icon: <IllustrativeSpreadsIcon />,
-    color: 'light',
-    align: 'start',
-    size: 'sm',
-  },
-  {
-    header: 'Card 5',
-    description:
-      'Description here. Description here. Description here. Description here.',
-    icon: <IllustrativeLicensedAndRegulatedIcon />,
-    color: 'light',
-    align: 'start',
-    size: 'sm',
+    instrumentIcon: <FlagAustraliaIcon />,
+    instrument: 'AUD/USD',
+    changePercentage: '+0.11%',
+    status: 'closed',
+    bidPrice: '1.07219',
+    askPrice: '1.07223',
+    spread: '0.00005',
   },
 ];

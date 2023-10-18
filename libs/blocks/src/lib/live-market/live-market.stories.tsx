@@ -2,10 +2,10 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import LiveMarket from '.';
 import {
-  IllustrativeLicensedAndRegulatedIcon,
-  IllustrativeProtectedAndSecureIcon,
-  IllustrativeSpreadsIcon,
-  IllustrativeSupport247Icon,
+  FlagAustraliaIcon,
+  FlagJapanIcon,
+  FlagUnitedKingdomIcon,
+  FlagUsaIcon,
 } from '@deriv/quill-icons';
 
 import { Card } from '@deriv-com/components';
@@ -24,46 +24,58 @@ export const Default: Story = {
     header: 'Header here',
     description: 'desciption here description here',
     cardSliderProps: {
-      slideClasses: 'max-w-xs',
+      slideClasses: 'max-w-[286px]',
+      swiperData: {
+        spaceBetween: 16,
+        breakpoints: {
+          1280: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 'auto',
+          },
+        },
+        pagination: undefined,
+      },
       cards: [
         {
-          header: 'Card 1',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeProtectedAndSecureIcon />,
-          color: 'light',
-          align: 'start',
-          size: 'sm',
+          instrumentIcon: <FlagUsaIcon />,
+          instrument: 'EUR/USD',
+          changePercentage: '+0.11%',
+          status: 'up',
+          bidPrice: '1.07219',
+          askPrice: '1.07223',
+          spread: '0.00005',
         },
         {
-          header: 'Card 2',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeSupport247Icon />,
-          color: 'light',
-          align: 'start',
-          size: 'sm',
+          instrumentIcon: <FlagUnitedKingdomIcon />,
+          instrument: 'GBP/USD',
+          changePercentage: '+0.11%',
+          status: 'down',
+          bidPrice: '1.07219',
+          askPrice: '1.07223',
+          spread: '0.00005',
         },
         {
-          header: 'Card 3',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeLicensedAndRegulatedIcon />,
-          color: 'light',
-          align: 'start',
-          size: 'sm',
+          instrumentIcon: <FlagJapanIcon />,
+          instrument: 'USD/JPY',
+          changePercentage: '+0.11%',
+          status: 'remain',
+          bidPrice: '1.07219',
+          askPrice: '1.07223',
+          spread: '0.00005',
         },
         {
-          header: 'Card 4',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeSpreadsIcon />,
-          color: 'light',
-          align: 'start',
-          size: 'sm',
+          instrumentIcon: <FlagAustraliaIcon />,
+          instrument: 'AUD/USD',
+          changePercentage: '+0.11%',
+          status: 'closed',
+          bidPrice: '1.07219',
+          askPrice: '1.07223',
+          spread: '0.00005',
         },
       ],
-      renderCard: Card.ContentBottom,
+      renderCard: Card.LiveMarketCard,
     },
     className: 'bg-solid-slate-75',
     disclaimer:

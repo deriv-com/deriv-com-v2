@@ -36,7 +36,7 @@ export const LiveMarket = ({
         className,
       )}
     >
-      <FluidContainer className="flex flex-col items-center justify-center gap-gap-2xl">
+      <FluidContainer className="flex flex-col items-center justify-center gap-gap-xl lg:gap-gap-2xl">
         {isHeaderSection && (
           <div className="flex flex-col items-center gap-gap-lg">
             {header && <Heading.H2>{header}</Heading.H2>}
@@ -44,7 +44,7 @@ export const LiveMarket = ({
             {TabHeader && <TabHeader />}
           </div>
         )}
-        <div className="flex w-full flex-col items-center">
+        <div className="flex w-full flex-col items-center gap-gap-lg md:gap-gap-xl">
           <CardSlider {...cardSliderProps} />
           {disclaimer && (
             <Text className="text-center text-caption text-typography-subtle">
@@ -56,11 +56,11 @@ export const LiveMarket = ({
           <CustomLink
             href={link.href}
             className={clsx(
-              'flex items-center justify-center text-body-md text-typography-link',
+              'flex items-center justify-center text-body-md text-opacity-black-600',
             )}
           >
             {link.content}
-            <StandaloneChevronRightRegularIcon fill="#FF444F" />
+            <StandaloneChevronRightRegularIcon fill="#000000b8" />
           </CustomLink>
         )}
       </FluidContainer>

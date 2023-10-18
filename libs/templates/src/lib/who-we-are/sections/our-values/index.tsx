@@ -59,10 +59,7 @@ export const WhoWeAreValues = () => {
         cards: ourValuesCards,
         renderCard: Card.ContentBottom,
         slideClasses: 'max-w-[242px] md:max-w-[296px]',
-        swiperData: {
-          pagination: undefined,
-        },
-        className: 'w-full',
+        className: 'w-full !pb-general-3xl',
       }}
     />
   );
