@@ -9,7 +9,7 @@ import {
 } from '@deriv/quill-icons';
 
 const meta = {
-  title: 'Blocks/Features/LiveMarket',
+  title: 'Blocks/LiveMarket',
   component: LiveMarket,
 } satisfies Meta<typeof LiveMarket>;
 
