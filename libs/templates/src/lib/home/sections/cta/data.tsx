@@ -12,8 +12,8 @@ export const CTABlockContent = () => {
         <OptimizedImage
           className="block"
           imageName="home/hero/cta_image.png"
-          width={712}
-          height={800}
+          width={1232}
+          height={711}
           alt="cta demo forex mobile"
         />
       }
