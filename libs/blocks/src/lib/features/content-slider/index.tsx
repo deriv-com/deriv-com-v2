@@ -10,7 +10,7 @@ import {
 export interface ContentSliderProps<T extends CardVariantType> {
   title?: string;
   description?: string;
-  cta?: ReactNode;
+  cta?: () => ReactNode;
   className?: string;
   cardSliderProps?: CardSliderProps<T>;
 }
@@ -18,7 +18,7 @@ export interface ContentSliderProps<T extends CardVariantType> {
 const ContentSlider = <T extends CardVariantType>({
   title,
   description,
-  cta,
+  cta: CTA,
   className,
   cardSliderProps,
 }: ContentSliderProps<T>) => {
@@ -44,7 +44,7 @@ const ContentSlider = <T extends CardVariantType>({
           // @ts-ignore
           <CardSlider {...cardSliderProps} />
         }
-        {cta}
+        {CTA && <CTA />}
       </FluidContainer>
     </Section>
   );

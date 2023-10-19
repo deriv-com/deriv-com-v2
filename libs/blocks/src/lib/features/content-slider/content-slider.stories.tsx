@@ -21,7 +21,7 @@ export const Default: Story = {
   args: {
     description:
       'Description goes here description goes here description goes here description goes here',
-    cta: (
+    cta: () => (
       <div className="flex w-full justify-center">
         <Button>CTA</Button>
       </div>
