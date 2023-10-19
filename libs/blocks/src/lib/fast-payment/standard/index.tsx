@@ -35,16 +35,16 @@ const FastPayment: React.FC<FastPaymentProps> = ({
         {link && (
           <CustomLink
             href={link.href}
-            className="flex items-center justify-center text-typography-link"
+            className="flex items-center justify-center text-300 text-opacity-black-600"
           >
             {link.content}
-            <StandaloneChevronRightRegularIcon fill="#FF444F" />
+            <StandaloneChevronRightRegularIcon fill="#000000b8" />
           </CustomLink>
         )}
-        <div className="mb-general-lg mt-general-xl flex w-full justify-center">
+        <div className="mb-general-lg mt-general-2xl flex w-full justify-center">
           <CardsContainer
             cards={cards}
-            variant={'ContentBottom'}
+            variant="ContentBottom"
             cols={cols}
             dense={dense}
           />
