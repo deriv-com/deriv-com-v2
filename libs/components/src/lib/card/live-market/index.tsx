@@ -6,7 +6,6 @@ import {
 } from '@deriv/quill-icons';
 import { LiveMarketContent } from '../types';
 import LivePrice from './live-price';
-import clsx from 'clsx';
 
 export interface LiveMarketCardProps extends LiveMarketContent {
   className?: string;
@@ -27,6 +26,22 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
     down: '#de0040',
     remain: '#0000007a',
     closed: '#0000003d',
+  };
+
+  const ChartIcon = () => {
+    return status === 'up' ? (
+      <StandaloneArrowUpRegularIcon iconSize="sm" fill={colorVariant[status]} />
+    ) : status === 'down' ? (
+      <StandaloneArrowDownRegularIcon
+        iconSize="sm"
+        fill={colorVariant[status]}
+      />
+    ) : (
+      <StandaloneArrowRightRegularIcon
+        iconSize="sm"
+        fill={colorVariant[status]}
+      />
+    );
   };
 
   return (
@@ -50,22 +65,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
           </Text>
         </div>
         <div className="flex flex-row gap-gap-md pt-[2px]">
-          {status === 'up' ? (
-            <StandaloneArrowUpRegularIcon
-              iconSize="sm"
-              fill={colorVariant[status]}
-            />
-          ) : status === 'down' ? (
-            <StandaloneArrowDownRegularIcon
-              iconSize="sm"
-              fill={colorVariant[status]}
-            />
-          ) : (
-            <StandaloneArrowRightRegularIcon
-              iconSize="sm"
-              fill={colorVariant[status]}
-            />
-          )}
+          {status !== 'closed' && <ChartIcon />}
           <Text size="md" style={{ color: colorVariant[status] }}>
             {changePercentage}
           </Text>

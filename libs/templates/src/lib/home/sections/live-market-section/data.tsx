@@ -37,7 +37,7 @@ export const LivePriceData: LiveMarketContent[] = [
   {
     instrumentIcon: <FlagAustraliaIcon />,
     instrument: 'AUD/USD',
-    changePercentage: '+0.11%',
+    changePercentage: '0.00%',
     status: 'closed',
     bidPrice: '1.07219',
     askPrice: '1.07223',
