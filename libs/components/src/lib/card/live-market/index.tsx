@@ -28,20 +28,22 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
     closed: '#0000003d',
   };
 
-  const ChartIcon = () => {
-    return status === 'up' ? (
+  const ChartIcons = {
+    up: (
       <StandaloneArrowUpRegularIcon iconSize="sm" fill={colorVariant[status]} />
-    ) : status === 'down' ? (
+    ),
+    down: (
       <StandaloneArrowDownRegularIcon
         iconSize="sm"
         fill={colorVariant[status]}
       />
-    ) : (
+    ),
+    remain: (
       <StandaloneArrowRightRegularIcon
         iconSize="sm"
         fill={colorVariant[status]}
       />
-    );
+    ),
   };
 
   return (
@@ -65,7 +67,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
           </Text>
         </div>
         <div className="flex flex-row gap-gap-md pt-[2px]">
-          {status !== 'closed' && <ChartIcon />}
+          {status !== 'closed' && ChartIcons[status]}
           <Text size="md" style={{ color: colorVariant[status] }}>
             {changePercentage}
           </Text>
