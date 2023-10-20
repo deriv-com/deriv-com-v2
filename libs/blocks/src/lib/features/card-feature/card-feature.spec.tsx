@@ -55,7 +55,7 @@ describe('CardContent', () => {
       <CardContentBlock
         title={'this is a title'}
         description={'this is a description'}
-        cardsVariant="ContentBottom"
+        variant="ContentBottom"
         cards={cards}
       />,
     );
