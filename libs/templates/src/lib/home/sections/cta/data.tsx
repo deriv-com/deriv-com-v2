@@ -2,6 +2,9 @@ import { Card, OptimizedImage } from '@deriv-com/components';
 import { Button } from '@deriv/quill-design';
 
 export const CTABlockContent = () => {
+  const ScrollFunction = () => {
+    document.documentElement.scrollTop = 0;
+  };
   return (
     <Card.ContentRight
       align="start"
@@ -18,7 +21,7 @@ export const CTABlockContent = () => {
         />
       }
     >
-      <Button className="lg:mt-400" size="md">
+      <Button className="lg:mt-400" size="md" onClick={ScrollFunction}>
         Get a demo forex account
       </Button>
     </Card.ContentRight>
