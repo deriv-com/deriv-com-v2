@@ -5,6 +5,12 @@ export default function Document() {
     <Html lang="en" className="bg-background-primary-container">
       <Head>
         <meta name="color-scheme" content="light dark" />
+        <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+        <link
+          rel="shortcut icon"
+          href="images/favicon.png"
+          type="image/x-icon"
+        />
       </Head>
       <body>
         <Main />
