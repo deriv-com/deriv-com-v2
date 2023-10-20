@@ -5,7 +5,7 @@ export type TableCellColorVariant = 'white' | 'coral';
 
 export interface TableCellContent {
   header?: string;
-  label?: string;
+  label?: string | ReactNode;
   children?: ReactNode;
   icon?: ReactNode;
   description?: string;
