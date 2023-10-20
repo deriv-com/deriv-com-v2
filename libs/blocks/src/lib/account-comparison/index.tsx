@@ -1,11 +1,12 @@
 import { FluidContainer, Heading, Text, Section } from '@deriv/quill-design';
 import clsx from 'clsx';
+import { ReactNode } from 'react';
 
 export interface AccountComparisonProps {
   className?: string;
   title?: string;
   description?: string;
-  content: React.FC;
+  content?: () => ReactNode;
 }
 
 const AccountComparison = ({
