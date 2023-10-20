@@ -1,8 +1,8 @@
 import { FastPayment } from '@deriv-com/blocks';
 import {
-  FlagAndorraIcon,
-  FlagAustraliaIcon,
-  FlagBurkinaFasoIcon,
+  PaymentMethodLitecoinBlackIcon,
+  PaymentMethodMastercardBlackIcon,
+  PaymentMethodPayLivreBlackIcon,
 } from '@deriv/quill-icons';
 
 const FastPaymentSection = () => {
@@ -22,7 +22,13 @@ const FastPaymentSection = () => {
             color: 'gray',
             align: 'center',
             size: 'lg',
-            icon: <FlagBurkinaFasoIcon fill="black" iconSize="2xl" />,
+            icon: (
+              <PaymentMethodMastercardBlackIcon
+                fill="black"
+                width={128}
+                height={64}
+              />
+            ),
             className: 'h-fit',
             nonContentClassName: 'p-general-xl',
           },
@@ -31,7 +37,13 @@ const FastPaymentSection = () => {
             color: 'gray',
             align: 'center',
             size: 'lg',
-            icon: <FlagAndorraIcon fill="black" iconSize="2xl" />,
+            icon: (
+              <PaymentMethodLitecoinBlackIcon
+                fill="black"
+                width={128}
+                height={64}
+              />
+            ),
             className: 'h-fit',
             nonContentClassName: 'p-general-xl',
           },
@@ -40,7 +52,13 @@ const FastPaymentSection = () => {
             color: 'gray',
             align: 'center',
             size: 'lg',
-            icon: <FlagAustraliaIcon fill="black" iconSize="2xl" />,
+            icon: (
+              <PaymentMethodPayLivreBlackIcon
+                fill="black"
+                width={128}
+                height={64}
+              />
+            ),
             className: 'h-fit',
             nonContentClassName: 'p-general-xl',
           },
