@@ -13,10 +13,6 @@ describe('FastPayment', () => {
       <FastPayment
         title="Hassle-free deposits and withdrawals"
         description="Make instant deposits from 10,000 HKD. Withdraw in minutes."
-        link={{
-          content: 'Learn More',
-          href: '#',
-        }}
         content={{
           className: 'h-fit',
           cards: [
