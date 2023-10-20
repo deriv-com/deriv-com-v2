@@ -22,7 +22,12 @@ export const CTABlockContent = () => {
         />
       }
     >
-      <Button className="lg:mt-400" size="md" onClick={ScrollFunction}>
+      <Button
+        colorStyle="black"
+        className="lg:mt-400"
+        size="lg"
+        onClick={ScrollFunction}
+      >
         Get a demo forex account
       </Button>
     </Card.ContentRight>
