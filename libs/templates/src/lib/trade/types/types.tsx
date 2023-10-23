@@ -10,7 +10,7 @@ export type DummyDataType = {
   spread_cost: number;
   commission: number;
   effective_leverage: number | string;
-  margin_requirement: number;
+  margin_requirement: number | string;
   swap_long: number;
   swap_short: number;
   day_swap: string;
