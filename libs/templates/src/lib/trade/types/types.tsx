@@ -1,12 +1,22 @@
 import { ReactElement } from 'react';
 
 export type DummyDataType = {
-  header1: string | ReactElement;
-  header2: string;
-  header3: string;
-  header4: string;
-  header5: string;
-  header6: string;
-  header7: string;
-  header8: string;
+  instrument: string | ReactElement;
+  description: string;
+  current_bid: number;
+  current_ask: number;
+  spread: number;
+  currency: string;
+  spread_cost: number;
+  commission: number;
+  effective_leverage: number | string;
+  margin_requirement: number;
+  swap_long: number;
+  swap_short: number;
+  day_swap: string;
+  contract_size: number;
+  min_volume: number;
+  max_volume: number;
+  volume_step: number;
+  volume_limit: number;
 };
