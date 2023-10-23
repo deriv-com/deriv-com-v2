@@ -23,7 +23,7 @@ export const TableSymbolCell: React.FC<TableCellProps> = ({
       className={qtMerge(
         colorVariants[color],
         'p-200 lg:px-800',
-        'border-b-solid-slate-50',
+        'border-b-75 border-b-solid-slate-75',
         'flex flex-col',
         'min-h-[72px] min-w-[138px] lg:min-w-[250px] ',
         'items-start  justify-center',
