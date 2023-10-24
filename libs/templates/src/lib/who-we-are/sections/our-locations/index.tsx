@@ -34,11 +34,7 @@ const ourLocationCards: CardContent[] = [
 
 export const WhoWeAreLocations = () => {
   return (
-    <Features.CardFeature
-      title="Our locations"
-      cards={ourLocationCards}
-      cols="four"
-    />
+    <Features.Card title="Our locations" cards={ourLocationCards} cols="four" />
   );
 };
 
