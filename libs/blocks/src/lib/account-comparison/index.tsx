@@ -23,7 +23,7 @@ const AccountComparison = ({
         className,
       )}
     >
-      <FluidContainer className="flex flex-col items-center gap-gap-xl lg:gap-gap-2xl">
+      <FluidContainer className="flex flex-col items-center gap-gap-xl text-center lg:gap-gap-2xl">
         {(title || description) && (
           <div className="flex flex-col items-center gap-gap-lg lg:gap-gap-xl">
             {title && <Heading.H2>{title}</Heading.H2>}
