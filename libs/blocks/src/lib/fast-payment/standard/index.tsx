@@ -28,7 +28,7 @@ const FastPayment: React.FC<FastPaymentProps> = ({
       <div className="flex flex-col items-center">
         <div className="flex flex-col gap-general-2xl max-lg:gap-general-xl">
           <div className="flex flex-col gap-general-xl max-lg:gap-general-lg">
-            <div className="flex flex-col items-center justify-center gap-general-lg max-sm:gap-general-md">
+            <div className="flex flex-col items-center justify-center gap-general-lg text-center max-sm:gap-general-md">
               <Heading.H2>{title}</Heading.H2>
               {description && <Text size="xl">{description}</Text>}
             </div>
