@@ -26,7 +26,7 @@ const FastPayment: React.FC<FastPaymentProps> = ({
   return (
     <FluidContainer className="bg-background-primary-container py-general-3xl">
       <div className="flex flex-col items-center">
-        <div className="flex flex-col gap-general-2xl max-lg:gap-general-xl">
+        <div className="flex w-full flex-col gap-general-2xl max-lg:gap-general-xl">
           <div className="flex flex-col gap-general-xl max-lg:gap-general-lg">
             <div className="flex flex-col items-center justify-center gap-general-lg text-center max-sm:gap-general-md">
               <Heading.H2>{title}</Heading.H2>
