@@ -9,7 +9,7 @@ export interface AccountComparisonProps {
   content?: () => ReactNode;
 }
 
-const AccountComparison = ({
+export const AccountComparison = ({
   className,
   title,
   description,
