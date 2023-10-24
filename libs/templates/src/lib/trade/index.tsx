@@ -11,9 +11,8 @@ export function TradeTemplate() {
           title="Leveraged forex on Deriv MT5"
           description={`Deriv MT5 offers various trading assets on the forex market via a single platform.`}
         >
-          <input placeholder="Search" />
+          <TradingSpecTable />
         </Hero.ContentLess>
-        <TradingSpecTable />
       </FluidContainer>
     </PageLayout>
   );

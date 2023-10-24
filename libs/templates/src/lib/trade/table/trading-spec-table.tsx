@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import DummyData from '../data/data';
-import { DummyDataType } from '../types/types';
+import { mainInfo, trading_condition, additional_info } from '../data/data';
+import { TableDataType } from '../types/types';
 import {
   flexRender,
   getCoreRowModel,
@@ -13,15 +13,20 @@ import { Button, qtMerge } from '@deriv/quill-design';
 import {
   StandaloneChevronLeftRegularIcon,
   StandaloneChevronRightRegularIcon,
+  StandaloneSearchRegularIcon,
 } from '@deriv/quill-icons';
 
 const TradingSpecTable = () => {
-  const [data, setData] = useState<DummyDataType[]>([]);
+  const [data, setData] = useState<TableDataType[]>([]);
+  const [selected_filter, setSelectedFilter] = useState<TableDataType[]>(
+    mainInfo.data,
+  );
+  const [selected, setSelected] = useState('mainInfo');
   useEffect(() => {
-    setData(DummyData);
-  }, [data]);
+    setData(selected_filter);
+  }, [selected_filter, data]);
 
-  const columns = UseColumns();
+  const columns = UseColumns(selected);
 
   const table = useReactTable({
     data,
@@ -35,6 +40,54 @@ const TradingSpecTable = () => {
   }, [table]);
   return (
     <>
+      <div className="flex flex-col justify-between pt-3600 lg:flex-row">
+        <div className="flex justify-start border-75 border-solid-slate-100 p-200">
+          <StandaloneSearchRegularIcon fill="black" iconSize="sm" />
+          <input placeholder="Search" />
+        </div>
+
+        <div className="flex flex-col justify-end gap-400 lg:flex-row">
+          <Button
+            className={qtMerge(
+              selected === 'mainInfo'
+                ? 'bg-solid-slate-1400'
+                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
+            )}
+            onClick={() => {
+              setSelectedFilter(mainInfo.data);
+              setSelected('mainInfo');
+            }}
+          >
+            Main info
+          </Button>
+          <Button
+            className={qtMerge(
+              selected === 'trading_condition'
+                ? 'bg-solid-slate-1400'
+                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
+            )}
+            onClick={() => {
+              setSelectedFilter(trading_condition.data);
+              setSelected('trading_condition');
+            }}
+          >
+            Trading condition
+          </Button>
+          <Button
+            className={qtMerge(
+              selected === 'additional_info'
+                ? 'bg-solid-slate-1400'
+                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
+            )}
+            onClick={() => {
+              setSelectedFilter(additional_info.data);
+              setSelected('additional_info');
+            }}
+          >
+            Additional info
+          </Button>
+        </div>
+      </div>
       <table className={qtMerge('overflow-auto', 'inline-block', 'w-[100%]')}>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -101,7 +154,7 @@ const TradingSpecTable = () => {
           </Button>
         </div>
         <div className={qtMerge('flex justify-center')}>
-          <Button>Trade now</Button>
+          <Button className={qtMerge('bg-solid-slate-1400')}>Trade now</Button>
         </div>
       </div>
     </>

@@ -25,7 +25,7 @@ export const TableSymbolCell: React.FC<TableCellProps> = ({
         'p-200 lg:px-800',
         'border-b-75 border-b-solid-slate-75',
         'flex flex-col',
-        'min-h-[72px] min-w-[138px] lg:min-w-[250px] ',
+        'min-h-[72px] min-w-[110px] lg:min-w-[250px] ',
         'items-start  justify-center',
         className,
       )}
@@ -35,7 +35,14 @@ export const TableSymbolCell: React.FC<TableCellProps> = ({
         <Heading.H7>{header}</Heading.H7>
         <div className={qtMerge('flex flex-col', 'items-start justify-center')}>
           {label && <Text size="sm">{label}</Text>}
-          {description && <Text size="sm">{description}</Text>}
+          {description && (
+            <Text
+              size="sm"
+              className="w-[98px] truncate text-typography-disabled lg:w-[198px]"
+            >
+              {description}
+            </Text>
+          )}
         </div>
       </div>
     </div>
