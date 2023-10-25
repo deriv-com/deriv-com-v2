@@ -9,7 +9,7 @@ export function HelpCenterTemplate() {
       <FluidContainer>
         <Hero.ContentTop title="How can we help?">
           <OptimizedImage
-            imageName="help-centre/hero/hk_help_centre.png"
+            imageName="help-centre/hero/help-centre-hero.png"
             className="rounded-pill"
             width={1232}
             height={526}
