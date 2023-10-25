@@ -24,7 +24,7 @@ const FastPayment: React.FC<FastPaymentProps> = ({
   content: { cards = [], cols = 'three', dense },
 }) => {
   return (
-    <FluidContainer className="bg-background-primary-container py-general-3xl">
+    <FluidContainer className="bg-background-primary-container py-general-4xl">
       <div className="flex flex-col items-center">
         <div className="flex w-full flex-col gap-general-2xl max-lg:gap-general-xl">
           <div className="flex flex-col gap-general-xl max-lg:gap-general-lg">
