@@ -2,7 +2,7 @@ import { TableContent } from '@deriv-com/components';
 import { Button } from '@deriv/quill-design';
 import {
   IllustrativeForexIcon,
-  StandaloneArrowDownRightRegularIcon,
+  LabelPairedMinusRegularIcon,
 } from '@deriv/quill-icons';
 
 export const TableData: TableContent = {
@@ -19,16 +19,28 @@ export const TableData: TableContent = {
       cols: [
         {
           subheader: 'Features',
-          items: ['Zero commission', '1:1000 leverage'],
+          listItems: [
+            {
+              type: 'simple',
+              text: 'Zero commission',
+            },
+            {
+              type: 'simple',
+              text: '1:1000 leverage',
+            },
+          ],
         },
         {
           subheader: 'Markets',
-          items: [
+          listItems: [
             {
-              icon: <StandaloneArrowDownRightRegularIcon iconSize="sm" />,
+              type: 'compound',
               text: 'Forex',
-              listIcon: <IllustrativeForexIcon iconSize="sm" />,
-              lists: ['Majors', 'Minors', 'Exotics'],
+              icon: <IllustrativeForexIcon iconSize="sm" />,
+              listIcon: (
+                <LabelPairedMinusRegularIcon iconSize="sm" fill="#0000007a" />
+              ),
+              items: ['Majors', 'Minors', 'Exotics'],
             },
           ],
         },
