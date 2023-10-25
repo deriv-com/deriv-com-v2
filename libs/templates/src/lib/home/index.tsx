@@ -8,6 +8,7 @@ import WhyTradeSection from './sections/why-trade';
 import ProvenExcellenceSection from './sections/proven-excellence';
 import StaticNumberBlock from './sections/static-number-block';
 import CardSliderSection from './sections/slider-section';
+import ReviewSection from './sections/review';
 
 export function HomeTemplate() {
   return (
@@ -16,6 +17,7 @@ export function HomeTemplate() {
       <NumberSection />
       <FastAndReliableSection />
       <WhyTradeSection />
+      <ReviewSection />
       <ProvenExcellenceSection />
       <CardSliderSection />
       <StaticNumberBlock />
