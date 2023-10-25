@@ -7,10 +7,13 @@ interface ListContentProps {
 export const ListContent = ({ colData }: ListContentProps) => {
   return (
     <div>
-      {colData.items.map((item) =>
-        typeof item === 'string' ? (
-          <Text key={item} className="py-general-sm text-opacity-black-600">
-            {item}
+      {colData.listItems.map((item) =>
+        item.type === 'simple' ? (
+          <Text
+            key={item.text}
+            className="py-general-sm text-opacity-black-600"
+          >
+            {item.text}
           </Text>
         ) : (
           <div
@@ -18,13 +21,13 @@ export const ListContent = ({ colData }: ListContentProps) => {
             className="flex flex-col gap-gap-md py-general-sm"
           >
             <div className="flex flex-row gap-gap-md">
-              {item.listIcon}
+              {item.icon}
               <Text className="text-opacity-black-600">{item.text}</Text>
             </div>
             <div className="flex flex-col gap-gap-md px-general-xl">
-              {item.lists.map((list) => (
+              {item.items.map((list) => (
                 <div key={list} className="flex flex-row">
-                  {item.icon}{' '}
+                  {item.listIcon}
                   <Text className="text-opacity-black-400">{list}</Text>
                 </div>
               ))}

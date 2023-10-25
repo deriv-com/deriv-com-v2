@@ -1,15 +1,21 @@
 import { ReactNode } from 'react';
 
-type listItems = {
-  icon: ReactNode;
+interface SimpleListItem {
+  type: 'simple';
   text: string;
+}
+
+interface CompoundListItem {
+  type: 'compound';
+  text: string;
+  icon: ReactNode;
   listIcon: ReactNode;
-  lists: string[];
-};
+  items: string[];
+}
 
 export interface ColContent {
   subheader: string;
-  items: string[] | listItems[];
+  listItems: Array<SimpleListItem | CompoundListItem>;
 }
 
 interface RowContent {
