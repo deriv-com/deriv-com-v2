@@ -1,20 +1,21 @@
-import React from 'react';
-import { Heading, Text } from '@deriv/quill-design';
+import { ReactNode } from 'react';
 import { TableContent } from '../types';
-import { TableContentSection } from './table.content';
+import { Heading, Text } from '@deriv/quill-design';
 import clsx from 'clsx';
 
 export interface AccountTableProps {
   className?: string;
   tableData: TableContent;
   contentClasses?: string;
+  children: ReactNode;
 }
 
-export const AccountTable2: React.FC<AccountTableProps> = ({
+export const Container = ({
   className,
   tableData,
   contentClasses,
-}) => {
+  children,
+}: AccountTableProps) => {
   return (
     <div
       className={clsx(
@@ -38,11 +39,11 @@ export const AccountTable2: React.FC<AccountTableProps> = ({
         )}
       >
         <div className="grid h-full grid-cols-1 max-md:gap-gap-xl md:grid-cols-2">
-          <TableContentSection tableData={tableData} />
+          {children}
         </div>
       </div>
     </div>
   );
 };
 
-export default AccountTable2;
+export default Container;
