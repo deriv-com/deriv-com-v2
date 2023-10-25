@@ -3,10 +3,11 @@ import { useEffect, useRef } from 'react';
 import Script from 'next/script';
 
 const ReviewSection = () => {
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    window?.Trustpilot?.loadFromElement(ref.current, true);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any)?.Trustpilot?.loadFromElement(ref.current, true);
   }, []);
 
   return (
