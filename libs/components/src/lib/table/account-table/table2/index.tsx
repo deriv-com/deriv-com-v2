@@ -1,7 +1,8 @@
 import React from 'react';
-import { Heading, Text, qtMerge } from '@deriv/quill-design';
+import { Heading, Text } from '@deriv/quill-design';
 import { TableContent } from '../types';
 import { TableContentSection } from './table.content';
+import clsx from 'clsx';
 
 export interface AccountTableProps {
   className?: string;
@@ -16,7 +17,7 @@ export const AccountTable2: React.FC<AccountTableProps> = ({
 }) => {
   return (
     <div
-      className={qtMerge(
+      className={clsx(
         'grid w-full grid-cols-1 lg:grid-cols-3 lg:gap-gap-lg',
         className,
       )}
@@ -31,7 +32,7 @@ export const AccountTable2: React.FC<AccountTableProps> = ({
         {tableData.cta}
       </div>
       <div
-        className={qtMerge(
+        className={clsx(
           'col-span-2 p-general-xl max-md:rounded-b-2xl md:rounded-r-2xl lg:p-general-2xl',
           contentClasses,
         )}
