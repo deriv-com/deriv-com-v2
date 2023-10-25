@@ -15,7 +15,6 @@ const FastPaymentSection = () => {
         href: '#',
       }}
       content={{
-        className: 'h-fit',
         cards: [
           {
             header: '',
@@ -29,7 +28,6 @@ const FastPaymentSection = () => {
                 height={64}
               />
             ),
-            className: 'h-fit',
             nonContentClassName: 'p-general-xl',
           },
           {
@@ -44,7 +42,6 @@ const FastPaymentSection = () => {
                 height={64}
               />
             ),
-            className: 'h-fit',
             nonContentClassName: 'p-general-xl',
           },
           {
@@ -59,7 +56,6 @@ const FastPaymentSection = () => {
                 height={64}
               />
             ),
-            className: 'h-fit',
             nonContentClassName: 'p-general-xl',
           },
         ],
