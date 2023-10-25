@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { CardContent } from '@deriv-com/components';
 import { Text } from '@deriv/quill-design';
 import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
@@ -19,8 +20,10 @@ const generateFaqs = (questions: string[], link: string) => {
         ))}
       </div>
       <div className="mt-auto flex">
-        <Text size="sm">View Questions</Text>
-        <StandaloneChevronRightRegularIcon iconSize="sm" />
+        <a href="#" className="flex">
+          <Text size="md">View Questions</Text>
+          <StandaloneChevronRightRegularIcon iconSize="sm" />
+        </a>
       </div>
     </div>
   );

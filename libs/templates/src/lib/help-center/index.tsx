@@ -2,6 +2,7 @@ import { Hero } from '@deriv-com/blocks';
 import { OptimizedImage, PageLayout } from '@deriv-com/components';
 import { FluidContainer } from '@deriv/quill-design';
 import QuestionCardSection from './sections/question-cards';
+import HelpCardSection from './sections/help-cards';
 
 export function HelpCenterTemplate() {
   return (
@@ -18,6 +19,7 @@ export function HelpCenterTemplate() {
         </Hero.ContentTop>
       </FluidContainer>
       <QuestionCardSection />
+      <HelpCardSection />
     </PageLayout>
   );
 }
