@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 export type TableCellVariant = 'header' | 'symbol' | 'text';
 export type TableCellColorVariant = 'white' | 'coral';
+export type TableWidthVariant = 'xl' | 'lg' | 'md' | 'sm';
 
 export interface TableCellContent {
   header?: string;
@@ -11,4 +12,5 @@ export interface TableCellContent {
   description?: string;
   color?: TableCellColorVariant;
   className?: string;
+  width?: TableWidthVariant;
 }

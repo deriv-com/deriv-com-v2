@@ -1,10 +1,20 @@
 import { Heading, Text, qtMerge } from '@deriv/quill-design';
-import { TableCellContent, TableCellColorVariant } from '../types';
+import {
+  TableCellContent,
+  TableCellColorVariant,
+  TableWidthVariant,
+} from '../types';
 
 export interface TableCellProps extends TableCellContent {
   className?: string;
 }
 
+const sizeVariants: { [key in TableWidthVariant]: string } = {
+  xl: 'lg:w-[246px] md:w-[138px] w-[110px]',
+  lg: 'lg:w-[246px] w-[204px]',
+  md: 'lg:w-[196px] w-[120px]',
+  sm: 'lg:w-[140px] w-[120px]',
+};
 const colorVariants: { [key in TableCellColorVariant]: string } = {
   coral: 'bg-solid-slate-75',
   white: 'bg-solid-slate-50',
@@ -16,16 +26,18 @@ export const TableSymbolCell: React.FC<TableCellProps> = ({
   description,
   color = 'white',
   icon,
+  width = 'lg',
   className,
 }) => {
   return (
     <div
       className={qtMerge(
         colorVariants[color],
+        sizeVariants[width],
         'p-200 lg:px-800',
         'border-b-75 border-b-solid-slate-75',
         'flex flex-col',
-        'min-h-[72px] min-w-[110px] lg:min-w-[250px] ',
+        'min-h-[72px]',
         'items-start  justify-center',
         className,
       )}
@@ -38,7 +50,7 @@ export const TableSymbolCell: React.FC<TableCellProps> = ({
           {description && (
             <Text
               size="sm"
-              className="w-[98px] truncate text-typography-disabled lg:w-[198px]"
+              className="w-[142px] truncate text-typography-disabled lg:w-[198px]"
             >
               {description}
             </Text>

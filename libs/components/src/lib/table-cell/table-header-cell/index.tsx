@@ -4,12 +4,15 @@ import { TableCellContent } from '../types';
 export const TableHeaderCell: React.FC<TableCellContent> = ({
   header,
   className,
+
+  width,
 }) => {
   return (
     <TableSymbolCell
       className={className}
-      color="coral"
       header={header}
+      color="coral"
+      width={width}
     ></TableSymbolCell>
   );
 };
