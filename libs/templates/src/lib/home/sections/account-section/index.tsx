@@ -2,7 +2,7 @@ import { TableData } from './data';
 import { AccountComparison } from '@deriv-com/blocks';
 import { Table } from '@deriv-com/components';
 
-const account = () => {
+const AccountTable = () => {
   return (
     <Table.AccountTable.Container
       tableData={TableData}
@@ -17,7 +17,7 @@ const AccountSection = () => {
   return (
     <AccountComparison
       title="One trading account is all you need"
-      content={account}
+      content={AccountTable}
     />
   );
 };
