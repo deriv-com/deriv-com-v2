@@ -8,9 +8,7 @@ interface TableContentSectionProps {
   tableData: TableContent;
 }
 
-export const TableContentSection = ({
-  tableData,
-}: TableContentSectionProps) => {
+const TableContentSection = ({ tableData }: TableContentSectionProps) => {
   return tableData.rows.map((row, rowIndex) => (
     <React.Fragment key={rowIndex}>
       {row.cols.map((colData, colIndex) => (
@@ -31,3 +29,5 @@ export const TableContentSection = ({
     </React.Fragment>
   ));
 };
+
+export default TableContentSection;

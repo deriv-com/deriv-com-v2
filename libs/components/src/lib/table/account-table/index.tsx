@@ -1,15 +1,15 @@
 import { ReactNode } from 'react';
-import { AccountTable2 } from './table2';
+import { AccountTable } from './variant';
 
 export type TableVariants = {
-  AccountTable2: typeof AccountTable2;
+  AccountTable: typeof AccountTable;
 };
 
 export const Table: TableVariants = ({ children }: { children: ReactNode }) => {
   return children;
 };
 
-Table.AccountTable2 = AccountTable2;
+Table.AccountTable = AccountTable;
 
 export default Table;
 
