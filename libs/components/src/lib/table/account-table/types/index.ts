@@ -1,7 +1,5 @@
 import { ReactNode } from 'react';
 
-// type WithId<T> = T & { id: number };
-
 type listItems = {
   icon: ReactNode;
   text: string;
