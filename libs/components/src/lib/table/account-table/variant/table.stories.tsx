@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import AccountTable2 from '.';
+import AccountTable from '.';
 import { Button } from '@deriv/quill-design';
 import {
   IllustrativeForexIcon,
@@ -7,18 +7,32 @@ import {
 } from '@deriv/quill-icons';
 
 const meta = {
-  title: 'Components/Table/AccountTable2',
+  title: 'Components/Table/AccountTable',
   tags: ['auto-docs'],
   parameters: {
     layout: 'centered',
   },
-  component: AccountTable2,
-} satisfies Meta<typeof AccountTable2>;
+  component: AccountTable,
+} satisfies Meta<typeof AccountTable>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+const Template: Story = {
+  render: ({ ...args }) => {
+    return (
+      <AccountTable.Container
+        tableData={args.tableData}
+        contentClasses={args.contentClasses}
+      >
+        <AccountTable.Content tableData={args.tableData} />
+      </AccountTable.Container>
+    );
+  },
+};
+
+export const Default = {
+  ...Template,
   args: {
     className: '',
     contentClasses: 'bg-background-primary-container',
