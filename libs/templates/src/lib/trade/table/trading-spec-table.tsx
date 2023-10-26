@@ -13,8 +13,8 @@ import { Button, qtMerge } from '@deriv/quill-design';
 import {
   StandaloneChevronLeftRegularIcon,
   StandaloneChevronRightRegularIcon,
-  StandaloneSearchRegularIcon,
 } from '@deriv/quill-icons';
+import { SearchChip } from '@deriv-com/components';
 
 const TradingSpecTable = () => {
   const [data, setData] = useState<TableDataType[]>([]);
@@ -22,10 +22,14 @@ const TradingSpecTable = () => {
     mainInfo.data,
   );
   const [selected, setSelected] = useState('mainInfo');
+  const [searchValue, setSearchValue] = useState('');
   useEffect(() => {
     setData(selected_filter);
   }, [selected_filter, data]);
-
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    setSearchValue(e.target.value);
+  };
   const columns = UseColumns(selected);
 
   const table = useReactTable({
@@ -41,10 +45,11 @@ const TradingSpecTable = () => {
   return (
     <>
       <div className="flex flex-col justify-between pt-3600 lg:flex-row">
-        <div className="flex justify-start border-75 border-solid-slate-100 p-200">
-          <StandaloneSearchRegularIcon fill="black" iconSize="sm" />
-          <input placeholder="Search" />
-        </div>
+        <SearchChip
+          onChangeInput={handleChange}
+          value={searchValue}
+          placeholder="Search"
+        />
 
         <div className="flex flex-col justify-end gap-400 lg:flex-row">
           <Button
