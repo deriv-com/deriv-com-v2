@@ -1,3 +1,4 @@
+export * from './lib/content-text';
 export * from './lib/stat';
 export * from './lib/navigation';
 export * from './lib/navigation/mobile/mobile.nav-toggle';
