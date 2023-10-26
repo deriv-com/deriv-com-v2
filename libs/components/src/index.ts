@@ -6,3 +6,4 @@ export * from './lib/page-layout';
 export * from './lib/link';
 export * from './lib/table-cell';
 export * from './lib/search-chip';
+export * from './lib/table/account-table';
