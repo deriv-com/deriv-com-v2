@@ -45,11 +45,13 @@ const TradingSpecTable = () => {
   return (
     <>
       <div className="flex flex-col justify-between pt-3600 lg:flex-row">
-        <SearchChip
-          onChangeInput={handleChange}
-          value={searchValue}
-          placeholder="Search"
-        />
+        <div className={qtMerge('w-[313px] lg:w-[360px]')}>
+          <SearchChip
+            onChangeInput={handleChange}
+            value={searchValue}
+            placeholder="Search"
+          />
+        </div>
 
         <div className="flex flex-col justify-end gap-400 lg:flex-row">
           <Button
@@ -159,7 +161,7 @@ const TradingSpecTable = () => {
           </Button>
         </div>
         <div className={qtMerge('flex justify-center')}>
-          <Button className={qtMerge('bg-solid-slate-1400')}>Trade now</Button>
+          <Button className="bg-solid-slate-1400">Trade now</Button>
         </div>
       </div>
     </>

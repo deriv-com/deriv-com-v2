@@ -7,7 +7,9 @@ export function TradeTemplate() {
     <PageLayout>
       <Hero.ContentLess
         title="Leveraged forex on Deriv MT5"
-        description={`Deriv MT5 offers various trading assets on the forex market via a single platform.`}
+        description={
+          'Deriv MT5 offers various trading assets on the forex market via a single platform.'
+        }
       >
         <TradingSpecTable />
       </Hero.ContentLess>

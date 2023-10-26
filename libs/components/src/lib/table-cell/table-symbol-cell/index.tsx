@@ -50,7 +50,7 @@ export const TableSymbolCell: React.FC<TableCellProps> = ({
           {description && (
             <Text
               size="sm"
-              className="w-[142px] truncate text-typography-disabled lg:w-[198px]"
+              className="w-[144px] truncate text-50 text-typography-disabled lg:w-[186px]"
             >
               {description}
             </Text>
