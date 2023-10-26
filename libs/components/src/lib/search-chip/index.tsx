@@ -5,17 +5,19 @@ export type InputProps = {
   placeholder?: string;
   value?: string;
   onChangeInput: any;
+  width?: string;
 };
 
 export const SearchChip = ({
   placeholder,
   value = '',
   onChangeInput,
+  width,
 }: InputProps) => {
   return (
     <div
       className={qtMerge(
-        'flex w-[313px] justify-start gap-general-sm rounded-400 border-75 border-solid-slate-100 bg-background-primary-container p-200 ps-200 lg:w-[360px]',
+        'flex justify-start gap-general-sm rounded-400 border-75 border-solid-slate-100 bg-background-primary-container p-200 ps-200 ',
       )}
     >
       <StandaloneSearchRegularIcon fill="black" iconSize="sm" />
