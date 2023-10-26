@@ -22,10 +22,10 @@ export const ContentText = ({
         className,
       )}
     >
-      <FluidContainer className="lg:max-w-[816px]">
+      <FluidContainer className="md:px-general-xl lg:max-w-[816px] lg:px-general-none">
         <div className="flex flex-col gap-gap-xl">
           {title && <Heading.H2>{title}</Heading.H2>}
-          <Text size="md">{content}</Text>
+          {content}
         </div>
       </FluidContainer>
     </Section>
