@@ -8,3 +8,4 @@ export * from './lib/table-cell';
 export * from './lib/search-chip';
 export * from './lib/table/account-table';
 export * from './lib/table-cell';
+export * from './lib/search-chip';
