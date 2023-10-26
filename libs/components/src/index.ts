@@ -14,3 +14,4 @@ export * from './lib/table/account-table';
 export * from './lib/action-sheet/bottom-sheet';
 export * from './lib/table-cell';
 export * from './lib/search-chip';
+export * from './lib/table/account-table';
