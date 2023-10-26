@@ -5,14 +5,14 @@ export type InputProps = {
   placeholder?: string;
   value?: string;
   onChangeInput: any;
-  width?: string;
+  className?: string;
 };
 
 export const SearchChip = ({
   placeholder,
   value = '',
   onChangeInput,
-  width,
+  className,
 }: InputProps) => {
   return (
     <div
@@ -23,7 +23,7 @@ export const SearchChip = ({
       <StandaloneSearchRegularIcon fill="black" iconSize="sm" />
 
       <input
-        className={qtMerge('w-[100%] text-75 outline-none')}
+        className={qtMerge('w-full text-75 outline-none', className)}
         placeholder={placeholder}
         value={value}
         onChange={onChangeInput}
