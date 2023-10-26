@@ -9,6 +9,7 @@ import ProvenExcellenceSection from './sections/proven-excellence';
 import StaticNumberBlock from './sections/static-number-block';
 import CardSliderSection from './sections/slider-section';
 import FastPaymentSection from './sections/fast-payments';
+import AccountSection from './sections/account-section';
 
 export function HomeTemplate() {
   return (
@@ -17,6 +18,7 @@ export function HomeTemplate() {
       <NumberSection />
       <FastAndReliableSection />
       <WhyTradeSection />
+      <AccountSection />
       <FastPaymentSection />
       <ProvenExcellenceSection />
       <CardSliderSection />
