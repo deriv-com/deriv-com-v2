@@ -21,16 +21,32 @@ const TradingSpecTable = () => {
   const [selected_filter, setSelectedFilter] = useState<TableDataType[]>(
     mainInfo.data,
   );
-  const [selected, setSelected] = useState('mainInfo');
+  const [selectedInfo, setSelectedInfo] = useState('mainInfo');
   const [searchValue, setSearchValue] = useState('');
-  useEffect(() => {
-    setData(selected_filter);
-  }, [selected_filter, data]);
+
+  const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     setSearchValue(e.target.value);
   };
-  const columns = UseColumns(selected);
+  useEffect(() => {
+    let updatedRowData = [];
+    if (searchValue.length >= 1) {
+      updatedRowData = [
+        ...selected_filter.filter(
+          (item) => item.instrument?.match(new RegExp(searchValue, 'i')),
+        ),
+      ];
+      setData(updatedRowData);
+    } else {
+      setData(selected_filter);
+    }
+  }, [searchValue, selected_filter]);
+
+  const columns = UseColumns(selectedInfo);
 
   const table = useReactTable({
     data,
@@ -45,50 +61,53 @@ const TradingSpecTable = () => {
   return (
     <>
       <div className="flex flex-col justify-between pt-3600 lg:flex-row">
-        <div className={qtMerge('w-[313px] lg:w-[360px]')}>
+        <form
+          className={qtMerge('w-[313px] lg:w-[360px]')}
+          onSubmit={() => handleSubmit}
+        >
           <SearchChip
             onChangeInput={handleChange}
             value={searchValue}
             placeholder="Search"
           />
-        </div>
+        </form>
 
         <div className="flex flex-col justify-end gap-400 lg:flex-row">
           <Button
             className={qtMerge(
-              selected === 'mainInfo'
+              selectedInfo === 'mainInfo'
                 ? 'bg-solid-slate-1400'
                 : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
             )}
             onClick={() => {
               setSelectedFilter(mainInfo.data);
-              setSelected('mainInfo');
+              setSelectedInfo('mainInfo');
             }}
           >
             Main info
           </Button>
           <Button
             className={qtMerge(
-              selected === 'trading_condition'
+              selectedInfo === 'trading_condition'
                 ? 'bg-solid-slate-1400'
                 : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
             )}
             onClick={() => {
               setSelectedFilter(trading_condition.data);
-              setSelected('trading_condition');
+              setSelectedInfo('trading_condition');
             }}
           >
             Trading condition
           </Button>
           <Button
             className={qtMerge(
-              selected === 'additional_info'
+              selectedInfo === 'additional_info'
                 ? 'bg-solid-slate-1400'
                 : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
             )}
             onClick={() => {
               setSelectedFilter(additional_info.data);
-              setSelected('additional_info');
+              setSelectedInfo('additional_info');
             }}
           >
             Additional info

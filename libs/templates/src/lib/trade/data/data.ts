@@ -3,7 +3,7 @@ import { TableDataTypeProps } from '../types/types';
 export const mainInfo: TableDataTypeProps = {
   data: [
     {
-      instrument: 'AUDCAD',
+      instrument: 'AUD/CAD',
       description: 'Australian Dollar vs Canadian Dollar',
       current_bid: 0.87451,
       current_ask: 0.87467,
@@ -11,7 +11,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CAD',
     },
     {
-      instrument: 'AUDCHF',
+      instrument: 'AUD/CHF',
       description: 'Australian Dollar vs Swiss Franc',
       current_bid: 0.56766,
       current_ask: 0.56779,
@@ -19,7 +19,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CHF',
     },
     {
-      instrument: 'AUDJPY',
+      instrument: 'AUD/JPY',
       description: 'Australian Dollar vs Japanese Yen',
       current_bid: 94.327,
       current_ask: 94.342,
@@ -27,7 +27,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'JPY',
     },
     {
-      instrument: 'AUDNZD',
+      instrument: 'AUD/NZD',
       description: 'Australian Dollar vs New Zealand Dollar',
       current_bid: 1.08749,
       current_ask: 1.08767,
@@ -35,7 +35,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'NZD',
     },
     {
-      instrument: 'AUDSGD',
+      instrument: 'AUD/SGD',
       description: 'Australian Dollar vs Singapore Dollar',
       current_bid: 0.87393,
       current_ask: 0.87414,
@@ -43,7 +43,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'SGD',
     },
     {
-      instrument: 'AUDUSD',
+      instrument: 'AUD/USD',
       description: 'Australian Dollar vs US Dollar',
       current_bid: 0.642,
       current_ask: 0.6425,
@@ -51,7 +51,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'USD',
     },
     {
-      instrument: 'CADCHF',
+      instrument: 'CAD/CHF',
       description: 'Canadian Dollar vs Swiss Franc',
       current_bid: 0.64909,
       current_ask: 0.6492,
@@ -59,7 +59,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CHF',
     },
     {
-      instrument: 'CADJPY',
+      instrument: 'CAD/JPY',
       description: 'Canadian Dollar vs Japanese Yen',
       current_bid: 107.943,
       current_ask: 107.961,
@@ -67,7 +67,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'JPY',
     },
     {
-      instrument: 'CHFJPY',
+      instrument: 'CHF/JPY',
       description: 'Swiss Franc vs Japanese Yen',
       current_bid: 166.287,
       current_ask: 166.311,
@@ -75,7 +75,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'JPY',
     },
     {
-      instrument: 'EURAUD',
+      instrument: 'EUR/AUD',
       description: 'Euro vs Australian Dollar',
       current_bid: 1.68265,
       current_ask: 1.68283,
@@ -83,7 +83,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'AUD',
     },
     {
-      instrument: 'EURCAD',
+      instrument: 'EUR/CAD',
       description: 'Euro vs Canadian Dollar',
       current_bid: 1.47083,
       current_ask: 1.47098,
@@ -91,7 +91,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CAD',
     },
     {
-      instrument: 'EURCHF',
+      instrument: 'EUR/CHF',
       description: 'Euro vs Swiss Franc',
       current_bid: 0.95518,
       current_ask: 0.95525,
@@ -99,7 +99,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CHF',
     },
     {
-      instrument: 'EURGBP',
+      instrument: 'EUR/GBP',
       description: 'Euro vs Great Britain Pound',
       current_bid: 0.85833,
       current_ask: 0.85841,
@@ -107,7 +107,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'GBP',
     },
     {
-      instrument: 'EURHKD',
+      instrument: 'EUR/HKD',
       description: 'Euro vs Hong Kong Dollar',
       current_bid: 8.52078,
       current_ask: 8.52235,
@@ -115,7 +115,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'HKD',
     },
     {
-      instrument: 'EURILS',
+      instrument: 'EUR/ILS',
       description: 'Euro vs Israeli Shekel',
       current_bid: 4.12638,
       current_ask: 4.14888,
@@ -123,7 +123,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'ILS',
     },
     {
-      instrument: 'EURJPY',
+      instrument: 'EURJ/PY',
       description: 'Euro vs Japanese Yen',
       current_bid: 158.909,
       current_ask: 158.922,
@@ -131,7 +131,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'JPY',
     },
     {
-      instrument: 'EURMXN',
+      instrument: 'EUR/MXN',
       description: 'Euro vs Mexican Peso',
       current_bid: 18.20247,
       current_ask: 18.20892,
@@ -139,7 +139,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'MXN',
     },
     {
-      instrument: 'EURNOK',
+      instrument: 'EUR/NOK',
       description: 'Euro vs Norwegian Krone',
       current_bid: 11.56386,
       current_ask: 11.56733,
@@ -147,7 +147,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'NOK',
     },
     {
-      instrument: 'EURNZD',
+      instrument: 'EUR/NZD',
       description: 'Euro vs New Zealand Dollar',
       current_bid: 1.83124,
       current_ask: 1.83137,
@@ -155,7 +155,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'NZD',
     },
     {
-      instrument: 'EURPLN',
+      instrument: 'EUR/PLN',
       description: 'Euro vs Polish Zloty',
       current_bid: 4.47103,
       current_ask: 4.47225,
@@ -163,7 +163,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'PLN',
     },
     {
-      instrument: 'EURSGD',
+      instrument: 'EUR/SGD',
       description: 'Euro vs Singapore Dollar',
       current_bid: 1.47002,
       current_ask: 1.47051,
@@ -171,7 +171,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'SGD',
     },
     {
-      instrument: 'EURSEK',
+      instrument: 'EUR/SEK',
       description: 'Euro vs Swedish Krona',
       current_bid: 11.88361,
       current_ask: 11.88671,
@@ -179,7 +179,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'SEK',
     },
     {
-      instrument: 'EURUSD',
+      instrument: 'EUR/USD',
       description: 'Euro vs US Dollar',
       current_bid: 1.08422,
       current_ask: 1.08427,
@@ -187,7 +187,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'USD',
     },
     {
-      instrument: 'EURZAR',
+      instrument: 'EUR/ZAR',
       description: 'Euro vs South African Rand',
       current_bid: 20.174418,
       current_ask: 20.183,
@@ -195,7 +195,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'ZAR',
     },
     {
-      instrument: 'GBPAUD',
+      instrument: 'GBP/AUD',
       description: 'Great Britain Pound vs Australian Dollar',
       current_bid: 1.95456,
       current_ask: 1.9547,
@@ -203,7 +203,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'AUD',
     },
     {
-      instrument: 'GBPCAD',
+      instrument: 'GBP/CAD',
       description: 'Great Britain Pound vs Canadian Dollar',
       current_bid: 1.71552,
       current_ask: 1.7158,
@@ -211,7 +211,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CAD',
     },
     {
-      instrument: 'GBPCHF',
+      instrument: 'GBP/CHF',
       description: 'Great Britain Pound vs Swiss Franc',
       current_bid: 1.11361,
       current_ask: 1.11379,
@@ -219,7 +219,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CHF',
     },
     {
-      instrument: 'GBPJPY',
+      instrument: 'GBP/JPY',
       description: 'Great Britain Pound vs Japanese Yen',
       current_bid: 184.458,
       current_ask: 184.47,
@@ -227,7 +227,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'JPY',
     },
     {
-      instrument: 'GBPNOK',
+      instrument: 'GBP/NOK',
       description: 'Great British Pound vs Norwegian Krone',
       current_bid: 13.47212,
       current_ask: 13.47637,
@@ -235,7 +235,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'NOK',
     },
     {
-      instrument: 'GBPNZD',
+      instrument: 'GBP/NZD',
       description: 'Great Britain Pound vs New Zealand Dollar',
       current_bid: 2.13328,
       current_ask: 2.13367,
@@ -243,7 +243,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'NZD',
     },
     {
-      instrument: 'GBPSEK',
+      instrument: 'GBP/SEK',
       description: 'Great British Pound vs Swedish Krona',
       current_bid: 13.84388,
       current_ask: 13.84835,
@@ -251,7 +251,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'SEK',
     },
     {
-      instrument: 'GBPSGD',
+      instrument: 'GBP/SGD',
       description: 'Great British Pound vs Singapore Dollar',
       current_bid: 1.7105,
       current_ask: 1.71117,
@@ -259,7 +259,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'SGD',
     },
     {
-      instrument: 'GBPUSD',
+      instrument: 'GBP/USD',
       description: 'Great Britain Pound vs US Dollar',
       current_bid: 1.2599,
       current_ask: 1.25998,
@@ -267,7 +267,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'USD',
     },
     {
-      instrument: 'HKDJPY',
+      instrument: 'HKD/JPY',
       description: 'Hong Kong Dollar vs Japanese Yen',
       current_bid: 18.66,
       current_ask: 18.84,
@@ -275,7 +275,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'JPY',
     },
     {
-      instrument: 'NZDCAD',
+      instrument: 'NZD/CAD',
       description: 'New Zealand Dollar vs Canadian Dollar',
       current_bid: 0.80407,
       current_ask: 0.80424,
@@ -283,7 +283,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CAD',
     },
     {
-      instrument: 'NZDCHF',
+      instrument: 'NZD/CHF',
       description: 'New Zealand Dollar vs Swiss Franc',
       current_bid: 0.523,
       current_ask: 0.52312,
@@ -291,7 +291,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CHF',
     },
     {
-      instrument: 'NZDJPY',
+      instrument: 'NZD/JPY',
       description: 'New Zealand Dollar vs Japanese Yen',
       current_bid: 86.806,
       current_ask: 86.816,
@@ -299,7 +299,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'JPY',
     },
     {
-      instrument: 'NZDUSD',
+      instrument: 'NZD/USD',
       description: 'New Zealand Dollar vs US Dollar',
       current_bid: 0.58997,
       current_ask: 0.59007,
@@ -307,7 +307,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'USD',
     },
     {
-      instrument: 'USDCAD',
+      instrument: 'USD/CAD',
       description: 'US Dollar vs Canadian Dollar',
       current_bid: 1.361,
       current_ask: 1.3611,
@@ -323,7 +323,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CHF',
     },
     {
-      instrument: 'USDCNH',
+      instrument: 'USD/CNH',
       description: 'US Dollar vs Chinese Renminbi',
       current_bid: 7.30773,
       current_ask: 7.30892,
@@ -331,7 +331,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'CNH',
     },
     {
-      instrument: 'USDILS',
+      instrument: 'USD/ILS',
       description: 'US Dollar vs Israeli Shekel',
       current_bid: 3.79241,
       current_ask: 3.79477,
@@ -339,7 +339,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'ILS',
     },
     {
-      instrument: 'USDSGD',
+      instrument: 'USD/SGD',
       description: 'US Dollar vs Singapore Dollar',
       current_bid: 1.35341,
       current_ask: 1.3536,
@@ -347,7 +347,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'SGD',
     },
     {
-      instrument: 'USDJPY',
+      instrument: 'USD/JPY',
       description: 'US Dollar vs Japanese Yen',
       current_bid: 146.368,
       current_ask: 146.377,
@@ -355,7 +355,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'JPY',
     },
     {
-      instrument: 'USDHKD',
+      instrument: 'USD/HKD',
       description: 'US Dollar vs Hong Kong Dollar',
       current_bid: 7.84734,
       current_ask: 7.84236,
@@ -363,7 +363,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'HKD',
     },
     {
-      instrument: 'USDMXN',
+      instrument: 'USD/MXN',
       description: 'US Dollar vs Mexican Peso',
       current_bid: 16.8275,
       current_ask: 16.83108,
@@ -371,7 +371,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'MXN',
     },
     {
-      instrument: 'USDNOK',
+      instrument: 'USD/NOK',
       description: 'US Dollar vs Norwegian Krone',
       current_bid: 10.72642,
       current_ask: 10.72889,
@@ -379,7 +379,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'NOK',
     },
     {
-      instrument: 'USDPLN',
+      instrument: 'USD/PLN',
       description: 'US Dollar vs Polish Zloty',
       current_bid: 4.14253,
       current_ask: 4.14384,
@@ -387,7 +387,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'PLN',
     },
     {
-      instrument: 'USDSEK',
+      instrument: 'USD/SEK',
       description: 'US Dollar vs Swedish Krona',
       current_bid: 11.01484,
       current_ask: 11.018,
@@ -395,7 +395,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'SEK',
     },
     {
-      instrument: 'USDTHB',
+      instrument: 'USD/THB',
       description: 'US Dollar vs Thai Baht',
       current_bid: 35.112,
       current_ask: 35.124,
@@ -403,7 +403,7 @@ export const mainInfo: TableDataTypeProps = {
       currency: 'THB',
     },
     {
-      instrument: 'USDZAR',
+      instrument: 'USD/ZAR',
       description: 'US Dollar vs South African Rand',
       current_bid: 18.58367,
       current_ask: 18.58873,
@@ -416,7 +416,7 @@ export const mainInfo: TableDataTypeProps = {
 export const trading_condition = {
   data: [
     {
-      instrument: 'AUDCAD',
+      instrument: 'AUD/CAD',
       description: 'Australian Dollar vs Canadian Dollar',
       spread_cost: -12.07,
       commission: 0,
@@ -427,7 +427,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'AUDCHF',
+      instrument: 'AUD/CHF',
       description: 'Australian Dollar vs Swiss Franc',
       spread_cost: -14.46,
       commission: 0,
@@ -438,7 +438,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'AUDJPY',
+      instrument: 'AUD/JPY',
       description: 'Australian Dollar vs Japanese Yen',
       spread_cost: -10.36,
       commission: 0,
@@ -449,7 +449,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'AUDNZD',
+      instrument: 'AUD/NZD',
       description: 'Australian Dollar vs New Zealand Dollar',
       spread_cost: -10.92,
       commission: 0,
@@ -460,7 +460,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'AUDSGD',
+      instrument: 'AUD/SGD',
       description: 'Australian Dollar vs Singapore Dollar',
       spread_cost: -15.48,
       commission: 0,
@@ -471,7 +471,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'AUDUSD',
+      instrument: 'AUD/USD',
       description: 'Australian Dollar vs US Dollar',
       spread_cost: -50,
       commission: 0,
@@ -482,7 +482,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'CADCHF',
+      instrument: 'CAD/CHF',
       description: 'Canadian Dollar vs Swiss Franc',
       spread_cost: -12.23,
       commission: 0,
@@ -493,7 +493,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'CADJPY',
+      instrument: 'CAD/JPY',
       description: 'Canadian Dollar vs Japanese Yen',
       spread_cost: -12.43,
       commission: 0,
@@ -504,7 +504,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'CHFJPY',
+      instrument: 'CHF/JPY',
       description: 'Swiss Franc vs Japanese Yen',
       spread_cost: -16.57,
       commission: 0,
@@ -515,7 +515,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURAUD',
+      instrument: 'EUR/AUD',
       description: 'Euro vs Australian Dollar',
       spread_cost: -11.91,
       commission: 0,
@@ -526,7 +526,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURCAD',
+      instrument: 'EUR/CAD',
       description: 'Euro vs Canadian Dollar',
       spread_cost: -11.32,
       commission: 0,
@@ -537,7 +537,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURCHF',
+      instrument: 'EUR/CHF',
       description: 'Euro vs Swiss Franc',
       spread_cost: -7.78,
       commission: 0,
@@ -548,7 +548,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURGBP',
+      instrument: 'EUR/GBP',
       description: 'Euro vs Great Britain Pound',
       spread_cost: -10.09,
       commission: 0,
@@ -559,7 +559,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURHKD',
+      instrument: 'EUR/HKD',
       description: 'Euro vs Hong Kong Dollar',
       spread_cost: -20.03,
       commission: 0,
@@ -570,7 +570,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURILS',
+      instrument: 'EUR/ILS',
       description: 'Euro vs Israeli Shekel',
       spread_cost: -608.21,
       commission: 0,
@@ -581,7 +581,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURJPY',
+      instrument: 'EURJ/PY',
       description: 'Euro vs Japanese Yen',
       spread_cost: -8.98,
       commission: 0,
@@ -592,7 +592,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURMXN',
+      instrument: 'EUR/MXN',
       description: 'Euro vs Mexican Peso',
       spread_cost: -37.67,
       commission: 0,
@@ -603,7 +603,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURNOK',
+      instrument: 'EUR/NOK',
       description: 'Euro vs Norwegian Krone',
       spread_cost: -32.12,
       commission: 0,
@@ -614,7 +614,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURNZD',
+      instrument: 'EUR/NZD',
       description: 'Euro vs New Zealand Dollar',
       spread_cost: -7.88,
       commission: 0,
@@ -625,7 +625,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURPLN',
+      instrument: 'EUR/PLN',
       description: 'Euro vs Polish Zloty',
       spread_cost: -29.84,
       commission: 0,
@@ -636,7 +636,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURSGD',
+      instrument: 'EUR/SGD',
       description: 'Euro vs Singapore Dollar',
       spread_cost: -36.13,
       commission: 0,
@@ -647,7 +647,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURSEK',
+      instrument: 'EUR/SEK',
       description: 'Euro vs Swedish Krona',
       spread_cost: -28.54,
       commission: 0,
@@ -658,7 +658,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURUSD',
+      instrument: 'EUR/USD',
       description: 'Euro vs US Dollar',
       spread_cost: -5,
       commission: 0,
@@ -669,7 +669,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'EURZAR',
+      instrument: 'EUR/ZAR',
       description: 'Euro vs South African Rand',
       spread_cost: -45.73,
       commission: 0,
@@ -680,7 +680,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'GBPAUD',
+      instrument: 'GBP/AUD',
       description: 'Great Britain Pound vs Australian Dollar',
       spread_cost: -9.26,
       commission: 0,
@@ -691,7 +691,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'GBPCAD',
+      instrument: 'GBP/CAD',
       description: 'Great Britain Pound vs Canadian Dollar',
       spread_cost: -21.13,
       commission: 0,
@@ -702,7 +702,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'GBPCHF',
+      instrument: 'GBP/CHF',
       description: 'Great Britain Pound vs Swiss Franc',
       spread_cost: -20.02,
       commission: 0,
@@ -713,7 +713,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'GBPJPY',
+      instrument: 'GBP/JPY',
       description: 'Great Britain Pound vs Japanese Yen',
       spread_cost: -8.29,
       commission: 0,
@@ -724,7 +724,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'GBPNOK',
+      instrument: 'GBP/NOK',
       description: 'Great British Pound vs Norwegian Krone',
       spread_cost: -39.34,
       commission: 0,
@@ -735,7 +735,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'GBPNZD',
+      instrument: 'GBP/NZD',
       description: 'Great Britain Pound vs New Zealand Dollar',
       spread_cost: -23.65,
       commission: 0,
@@ -746,7 +746,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'GBPSEK',
+      instrument: 'GBP/SEK',
       description: 'Great British Pound vs Swedish Krona',
       spread_cost: -41.15,
       commission: 0,
@@ -757,7 +757,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'GBPSGD',
+      instrument: 'GBP/SGD',
       description: 'Great British Pound vs Singapore Dollar',
       spread_cost: -49.4,
       commission: 0,
@@ -768,7 +768,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'GBPUSD',
+      instrument: 'GBP/USD',
       description: 'Great Britain Pound vs US Dollar',
       spread_cost: -8,
       commission: 0,
@@ -779,7 +779,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'HKDJPY',
+      instrument: 'HKD/JPY',
       description: 'Hong Kong Dollar vs Japanese Yen',
       spread_cost: -124.31,
       commission: 0,
@@ -790,7 +790,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'NZDCAD',
+      instrument: 'NZD/CAD',
       description: 'New Zealand Dollar vs Canadian Dollar',
       spread_cost: -12.83,
       commission: 0,
@@ -801,7 +801,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'NZDCHF',
+      instrument: 'NZD/CHF',
       description: 'New Zealand Dollar vs Swiss Franc',
       spread_cost: -13.34,
       commission: 0,
@@ -812,7 +812,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'NZDJPY',
+      instrument: 'NZD/JPY',
       description: 'New Zealand Dollar vs Japanese Yen',
       spread_cost: -6.91,
       commission: 0,
@@ -823,7 +823,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'NZDUSD',
+      instrument: 'NZD/USD',
       description: 'New Zealand Dollar vs US Dollar',
       spread_cost: -10,
       commission: 0,
@@ -834,7 +834,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDCAD',
+      instrument: 'USD/CAD',
       description: 'US Dollar vs Canadian Dollar',
       spread_cost: -7.55,
       commission: 0,
@@ -856,7 +856,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDCNH',
+      instrument: 'USD/CNH',
       description: 'US Dollar vs Chinese Renminbi',
       spread_cost: -16.37,
       commission: 0,
@@ -867,7 +867,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDILS',
+      instrument: 'USD/ILS',
       description: 'US Dollar vs Israeli Shekel',
       spread_cost: -63.79,
       commission: 0,
@@ -878,7 +878,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDSGD',
+      instrument: 'USD/SGD',
       description: 'US Dollar vs Singapore Dollar',
       spread_cost: -14.01,
       commission: 0,
@@ -889,7 +889,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDJPY',
+      instrument: 'USD/JPY',
       description: 'US Dollar vs Japanese Yen',
       spread_cost: -6.22,
       commission: 0,
@@ -900,7 +900,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDHKD',
+      instrument: 'USD/HKD',
       description: 'US Dollar vs Hong Kong Dollar',
       spread_cost: 63.53,
       commission: 0,
@@ -911,7 +911,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDMXN',
+      instrument: 'USD/MXN',
       description: 'US Dollar vs Mexican Peso',
       spread_cost: -20.91,
       commission: 0,
@@ -922,7 +922,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDNOK',
+      instrument: 'USD/NOK',
       description: 'US Dollar vs Norwegian Krone',
       spread_cost: -22.87,
       commission: 0,
@@ -933,7 +933,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDPLN',
+      instrument: 'USD/PLN',
       description: 'US Dollar vs Polish Zloty',
       spread_cost: -32.04,
       commission: 0,
@@ -944,7 +944,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDSEK',
+      instrument: 'USD/SEK',
       description: 'US Dollar vs Swedish Krona',
       spread_cost: -29.09,
       commission: 0,
@@ -955,7 +955,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDTHB',
+      instrument: 'USD/THB',
       description: 'US Dollar vs Thai Baht',
       spread_cost: -33.66,
       commission: 0,
@@ -966,7 +966,7 @@ export const trading_condition = {
       day_swap: 'Wednesday',
     },
     {
-      instrument: 'USDZAR',
+      instrument: 'USD/ZAR',
       description: 'US Dollar vs South African Rand',
       spread_cost: -26.96,
       commission: 0,
@@ -981,7 +981,7 @@ export const trading_condition = {
 export const additional_info = {
   data: [
     {
-      instrument: 'AUDCAD',
+      instrument: 'AUD/CAD',
       description: 'Australian Dollar vs Canadian Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -990,7 +990,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'AUDCHF',
+      instrument: 'AUD/CHF',
       description: 'Australian Dollar vs Swiss Franc',
       contract_size: 100000,
       min_volume: 0.01,
@@ -999,7 +999,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'AUDJPY',
+      instrument: 'AUD/JPY',
       description: 'Australian Dollar vs Japanese Yen',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1008,7 +1008,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'AUDNZD',
+      instrument: 'AUD/NZD',
       description: 'Australian Dollar vs New Zealand Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1017,7 +1017,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'AUDSGD',
+      instrument: 'AUD/SGD',
       description: 'Australian Dollar vs Singapore Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1026,7 +1026,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'AUDUSD',
+      instrument: 'AUD/USD',
       description: 'Australian Dollar vs US Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1035,7 +1035,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'CADCHF',
+      instrument: 'CAD/CHF',
       description: 'Canadian Dollar vs Swiss Franc',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1044,7 +1044,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'CADJPY',
+      instrument: 'CAD/JPY',
       description: 'Canadian Dollar vs Japanese Yen',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1053,7 +1053,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'CHFJPY',
+      instrument: 'CHF/JPY',
       description: 'Swiss Franc vs Japanese Yen',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1062,7 +1062,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURAUD',
+      instrument: 'EUR/AUD',
       description: 'Euro vs Australian Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1071,7 +1071,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURCAD',
+      instrument: 'EUR/CAD',
       description: 'Euro vs Canadian Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1080,7 +1080,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURCHF',
+      instrument: 'EUR/CHF',
       description: 'Euro vs Swiss Franc',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1089,7 +1089,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURGBP',
+      instrument: 'EUR/GBP',
       description: 'Euro vs Great Britain Pound',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1098,7 +1098,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURHKD',
+      instrument: 'EUR/HKD',
       description: 'Euro vs Hong Kong Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1107,7 +1107,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'EURILS',
+      instrument: 'EUR/ILS',
       description: 'Euro vs Israeli Shekel',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1116,7 +1116,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'EURJPY',
+      instrument: 'EURJ/PY',
       description: 'Euro vs Japanese Yen',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1125,7 +1125,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURMXN',
+      instrument: 'EUR/MXN',
       description: 'Euro vs Mexican Peso',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1134,7 +1134,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'EURNOK',
+      instrument: 'EUR/NOK',
       description: 'Euro vs Norwegian Krone',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1143,7 +1143,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURNZD',
+      instrument: 'EUR/NZD',
       description: 'Euro vs New Zealand Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1152,7 +1152,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURPLN',
+      instrument: 'EUR/PLN',
       description: 'Euro vs Polish Zloty',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1161,7 +1161,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURSGD',
+      instrument: 'EUR/SGD',
       description: 'Euro vs Singapore Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1170,7 +1170,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'EURSEK',
+      instrument: 'EUR/SEK',
       description: 'Euro vs Swedish Krona',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1179,7 +1179,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURUSD',
+      instrument: 'EUR/USD',
       description: 'Euro vs US Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1188,7 +1188,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'EURZAR',
+      instrument: 'EUR/ZAR',
       description: 'Euro vs South African Rand',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1197,7 +1197,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'GBPAUD',
+      instrument: 'GBP/AUD',
       description: 'Great Britain Pound vs Australian Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1206,7 +1206,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'GBPCAD',
+      instrument: 'GBP/CAD',
       description: 'Great Britain Pound vs Canadian Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1215,7 +1215,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'GBPCHF',
+      instrument: 'GBP/CHF',
       description: 'Great Britain Pound vs Swiss Franc',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1224,7 +1224,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'GBPJPY',
+      instrument: 'GBP/JPY',
       description: 'Great Britain Pound vs Japanese Yen',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1233,7 +1233,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'GBPNOK',
+      instrument: 'GBP/NOK',
       description: 'Great British Pound vs Norwegian Krone',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1242,7 +1242,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'GBPNZD',
+      instrument: 'GBP/NZD',
       description: 'Great Britain Pound vs New Zealand Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1251,7 +1251,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'GBPSEK',
+      instrument: 'GBP/SEK',
       description: 'Great British Pound vs Swedish Krona',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1260,7 +1260,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'GBPSGD',
+      instrument: 'GBP/SGD',
       description: 'Great British Pound vs Singapore Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1269,7 +1269,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'GBPUSD',
+      instrument: 'GBP/USD',
       description: 'Great Britain Pound vs US Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1278,7 +1278,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'HKDJPY',
+      instrument: 'HKD/JPY',
       description: 'Hong Kong Dollar vs Japanese Yen',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1287,7 +1287,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'NZDCAD',
+      instrument: 'NZD/CAD',
       description: 'New Zealand Dollar vs Canadian Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1296,7 +1296,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'NZDCHF',
+      instrument: 'NZD/CHF',
       description: 'New Zealand Dollar vs Swiss Franc',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1305,7 +1305,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'NZDJPY',
+      instrument: 'NZD/JPY',
       description: 'New Zealand Dollar vs Japanese Yen',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1314,7 +1314,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'NZDUSD',
+      instrument: 'NZD/USD',
       description: 'New Zealand Dollar vs US Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1323,7 +1323,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'USDCAD',
+      instrument: 'USD/CAD',
       description: 'US Dollar vs Canadian Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1341,7 +1341,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'USDCNH',
+      instrument: 'USD/CNH',
       description: 'US Dollar vs Chinese Renminbi',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1350,7 +1350,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'USDILS',
+      instrument: 'USD/ILS',
       description: 'US Dollar vs Israeli Shekel',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1359,7 +1359,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'USDSGD',
+      instrument: 'USD/SGD',
       description: 'US Dollar vs Singapore Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1368,7 +1368,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'USDJPY',
+      instrument: 'USD/JPY',
       description: 'US Dollar vs Japanese Yen',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1377,7 +1377,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'USDHKD',
+      instrument: 'USD/HKD',
       description: 'US Dollar vs Hong Kong Dollar',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1386,7 +1386,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'USDMXN',
+      instrument: 'USD/MXN',
       description: 'US Dollar vs Mexican Peso',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1395,7 +1395,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'USDNOK',
+      instrument: 'USD/NOK',
       description: 'US Dollar vs Norwegian Krone',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1404,7 +1404,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'USDPLN',
+      instrument: 'USD/PLN',
       description: 'US Dollar vs Polish Zloty',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1413,7 +1413,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'USDSEK',
+      instrument: 'USD/SEK',
       description: 'US Dollar vs Swedish Krona',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1422,7 +1422,7 @@ export const additional_info = {
       volume_limit: 15,
     },
     {
-      instrument: 'USDTHB',
+      instrument: 'USD/THB',
       description: 'US Dollar vs Thai Baht',
       contract_size: 100000,
       min_volume: 0.01,
@@ -1431,7 +1431,7 @@ export const additional_info = {
       volume_limit: 5,
     },
     {
-      instrument: 'USDZAR',
+      instrument: 'USD/ZAR',
       description: 'US Dollar vs South African Rand',
       contract_size: 100000,
       min_volume: 0.01,

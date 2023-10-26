@@ -1,7 +1,7 @@
-import { ReactElement } from 'react';
+import { ReactEventHandler, ReactNode } from 'react';
 
 export type TableDataType = {
-  instrument?: string | ReactElement;
+  instrument?: any;
   description?: string;
   current_bid?: number;
   current_ask?: number;
