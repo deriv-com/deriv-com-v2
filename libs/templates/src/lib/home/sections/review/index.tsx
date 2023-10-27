@@ -1,4 +1,5 @@
-import { FluidContainer, Heading } from '@deriv/quill-design';
+import styles from './review.module.css';
+import { FluidContainer, qtMerge } from '@deriv/quill-design';
 import { useEffect, useRef } from 'react';
 import Script from 'next/script';
 
@@ -12,9 +13,8 @@ const ReviewSection = () => {
 
   return (
     <FluidContainer>
-      <div className="my-general-xl flex flex-col items-center gap-general-xl rounded-xl bg-background-secondary-container py-general-3xl">
-        <Heading.H2>Rated excellent on</Heading.H2>
-        <div className="flex">
+      <div className="my-general-xl flex flex-col items-center gap-general-xl rounded-xl py-general-3xl">
+        <div className={qtMerge('flex', styles['truspilot-zoom'])}>
           <Script
             key="trustpilot-widget"
             type="text/javascript"
