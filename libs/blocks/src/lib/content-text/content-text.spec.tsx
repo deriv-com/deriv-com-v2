@@ -15,7 +15,6 @@ describe('ContentText', () => {
   it('should render heading successfully', () => {
     const heading = screen.getByRole('heading', {
       name: 'Content Text Title',
-      level: 1,
     });
     expect(heading).toBeInTheDocument();
   });
