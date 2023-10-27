@@ -4,7 +4,7 @@ import { Text } from '@deriv/quill-design';
 import ContentText from '.';
 
 const meta = {
-  title: 'Blocks/Features/ContentText',
+  title: 'Blocks/ContentText',
   component: ContentText,
 } satisfies Meta<typeof ContentText>;
 
@@ -47,6 +47,6 @@ export const Default: Story = {
     className:
       'my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200',
     title: 'Title here',
-    content: <Content />,
+    children: <Content />,
   },
 };
