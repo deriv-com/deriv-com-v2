@@ -4,7 +4,7 @@ import { StandaloneSearchRegularIcon } from '@deriv/quill-icons';
 export type InputProps = {
   placeholder?: string;
   value?: string;
-  onChangeInput: any;
+  onChangeInput: () => void;
   className?: string;
 };
 
