@@ -6,3 +6,4 @@ export * from './lib/optimized-image';
 export * from './lib/page-layout';
 export * from './lib/link';
 export * from './lib/table/account-table';
+export * from './lib/search-chip';
