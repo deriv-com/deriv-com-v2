@@ -9,12 +9,17 @@ import {
   getPaginationRowModel,
 } from '@tanstack/react-table';
 import UseColumns from '../hooks/use-columns';
-import { Button, qtMerge } from '@deriv/quill-design';
+import { Button, qtMerge, Text } from '@deriv/quill-design';
 import {
+  LabelPairedEllipsisVerticalBoldIcon,
   StandaloneChevronLeftRegularIcon,
   StandaloneChevronRightRegularIcon,
+  StandaloneCircleDotFillIcon,
+  StandaloneCircleRegularIcon,
+  StandaloneXmarkRegularIcon,
 } from '@deriv/quill-icons';
 import { SearchChip } from '@deriv-com/components';
+import { BottomSheet } from '@deriv-com/components';
 
 const TradingSpecTable = () => {
   const [data, setData] = useState<TableDataType[]>([]);
@@ -23,6 +28,7 @@ const TradingSpecTable = () => {
   );
   const [selectedInfo, setSelectedInfo] = useState('mainInfo');
   const [searchValue, setSearchValue] = useState('');
+  const [showBottomSheet, setShowBottomSheet] = useState(false);
 
   const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -58,11 +64,14 @@ const TradingSpecTable = () => {
   useEffect(() => {
     table.setPageSize(15);
   }, [table]);
+  useEffect(() => {
+    document.body.style.overflow = showBottomSheet ? 'hidden' : 'scroll';
+  }, [showBottomSheet]);
   return (
-    <>
-      <div className="flex flex-col justify-between pt-3600 lg:flex-row">
+    <div>
+      <div className="flex flex-row  pb-800 pt-3600 lg:pb-1200">
         <form
-          className={qtMerge('w-[313px] lg:w-[360px]')}
+          className={qtMerge('w-[313px] gap-2500 lg:w-[360px]')}
           onSubmit={() => handleSubmit}
         >
           <SearchChip
@@ -72,9 +81,24 @@ const TradingSpecTable = () => {
           />
         </form>
 
-        <div className="flex flex-col justify-end gap-400 lg:flex-row">
+        <div className="flex gap-400 ">
+          <LabelPairedEllipsisVerticalBoldIcon
+            fill="black"
+            iconSize="md"
+            className={qtMerge('block md:hidden lg:hidden')}
+            onClick={() => {
+              setShowBottomSheet(true);
+              window.scrollTo(
+                0,
+                document.body.scrollHeight ||
+                  document.documentElement.scrollHeight,
+              );
+            }}
+          />
+
           <Button
             className={qtMerge(
+              'hidden md:block lg:block',
               selectedInfo === 'mainInfo'
                 ? 'bg-solid-slate-1400'
                 : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
@@ -88,6 +112,7 @@ const TradingSpecTable = () => {
           </Button>
           <Button
             className={qtMerge(
+              'hidden md:block lg:block',
               selectedInfo === 'trading_condition'
                 ? 'bg-solid-slate-1400'
                 : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
@@ -101,6 +126,7 @@ const TradingSpecTable = () => {
           </Button>
           <Button
             className={qtMerge(
+              'hidden md:block lg:block',
               selectedInfo === 'additional_info'
                 ? 'bg-solid-slate-1400'
                 : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
@@ -183,7 +209,74 @@ const TradingSpecTable = () => {
           <Button className="bg-solid-slate-1400">Trade now</Button>
         </div>
       </div>
-    </>
+      {showBottomSheet && (
+        <BottomSheet
+          heading="Table view"
+          icon={
+            <StandaloneXmarkRegularIcon
+              fill="black"
+              iconSize="md"
+              onClick={() => {
+                setShowBottomSheet(false);
+              }}
+            />
+          }
+        >
+          <div className={qtMerge('mb-gap-lg flex flex-col p-800')}>
+            <div
+              className={qtMerge(
+                'flex flex-row items-center gap-gap-md py-gap-md',
+              )}
+              onClick={() => {
+                setSelectedFilter(mainInfo.data);
+                setSelectedInfo('mainInfo');
+              }}
+            >
+              {selectedInfo === 'mainInfo' ? (
+                <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
+              ) : (
+                <StandaloneCircleRegularIcon fill="black" iconSize="md" />
+              )}
+
+              <Text size="md">Main info</Text>
+            </div>
+            <div
+              className={qtMerge(
+                'flex flex-row items-center gap-gap-md py-gap-md',
+              )}
+              onClick={() => {
+                setSelectedFilter(trading_condition.data);
+                setSelectedInfo('trading_condition');
+              }}
+            >
+              {selectedInfo === 'trading_condition' ? (
+                <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
+              ) : (
+                <StandaloneCircleRegularIcon fill="black" iconSize="md" />
+              )}
+              <Text size="md">Trading conditions</Text>
+            </div>
+            <div
+              className={qtMerge(
+                'flex flex-row items-center gap-gap-md py-gap-md',
+              )}
+              onClick={() => {
+                setSelectedFilter(additional_info.data);
+                setSelectedInfo('additional_info');
+              }}
+            >
+              {selectedInfo === 'additional_info' ? (
+                <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
+              ) : (
+                <StandaloneCircleRegularIcon fill="black" iconSize="md" />
+              )}
+
+              <Text size="md">Additional info</Text>
+            </div>
+          </div>
+        </BottomSheet>
+      )}
+    </div>
   );
 };
 

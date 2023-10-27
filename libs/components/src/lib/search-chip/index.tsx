@@ -4,7 +4,7 @@ import { StandaloneSearchRegularIcon } from '@deriv/quill-icons';
 export type InputProps = {
   placeholder?: string;
   value?: string;
-  onChangeInput: any;
+  onChangeInput: () => void;
 };
 
 export const SearchChip = ({
@@ -15,7 +15,7 @@ export const SearchChip = ({
   return (
     <div
       className={qtMerge(
-        'flex justify-start gap-general-sm rounded-400 border-75 border-solid-slate-100 bg-background-primary-container p-200 ps-200',
+        'flex justify-start gap-general-sm rounded-lg border-75 border-solid-slate-100 bg-background-primary-container p-200 ps-200',
       )}
     >
       <StandaloneSearchRegularIcon fill="black" iconSize="sm" />
