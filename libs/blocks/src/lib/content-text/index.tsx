@@ -5,15 +5,14 @@ import { ReactNode } from 'react';
 export interface ContentTextProps {
   title?: string;
   className?: string;
-  content: ReactNode;
+  children: ReactNode;
 }
 
 export const ContentText = ({
   title,
   className,
-  content,
+  children,
 }: ContentTextProps) => {
-  console.log(content);
   return (
     <Section
       className={clsx(
@@ -25,7 +24,7 @@ export const ContentText = ({
       <FluidContainer className="md:px-general-xl lg:max-w-[816px] lg:px-general-none">
         <div className="flex flex-col gap-gap-xl">
           {title && <Heading.H2>{title}</Heading.H2>}
-          {content}
+          {children}
         </div>
       </FluidContainer>
     </Section>
