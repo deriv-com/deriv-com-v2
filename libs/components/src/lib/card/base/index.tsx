@@ -107,13 +107,10 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         {link && (
           <CustomLink
             href={link.href}
-            className={clsx(
-              'flex items-center justify-center text-typography-link',
-              linkTextSizeVariant[size],
-            )}
+            className={clsx(linkTextSizeVariant[size])}
+            hasIcon
           >
             {link.content}
-            <StandaloneChevronRightRegularIcon fill="#FF444F" />
           </CustomLink>
         )}
         {children}

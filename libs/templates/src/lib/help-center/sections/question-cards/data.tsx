@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { CardContent } from '@deriv-com/components';
-import { Text } from '@deriv/quill-design';
-import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
+import { CardContent, CustomLink } from '@deriv-com/components';
 
 const card_setting: Partial<CardContent> = {
   size: 'sm',
@@ -14,16 +12,15 @@ const generateFaqs = (questions: string[], link: string) => {
     <div className="flex min-h-[212px] flex-col">
       <div className="flex flex-col gap-general-md">
         {questions.map((question) => (
-          <Text key={question} className="hover:underline">
+          <CustomLink key={question} href={link} className="justify-start">
             {question}
-          </Text>
+          </CustomLink>
         ))}
       </div>
       <div className="mt-auto flex">
-        <a href="#" className="flex">
-          <Text size="md">View Questions</Text>
-          <StandaloneChevronRightRegularIcon iconSize="sm" />
-        </a>
+        <CustomLink href="#" hasIcon hasHoverColor>
+          View Questions
+        </CustomLink>
       </div>
     </div>
   );
