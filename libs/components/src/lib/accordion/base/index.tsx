@@ -24,6 +24,8 @@ export const Base = ({
 
   const toggleCollapse = () => {
     setExpanded((current) => !current);
+    setAutoExpand(false);
+    scrollToExpanded(500);
 
     if (onExpand) {
       onExpand(!is_expanded, title);
@@ -39,6 +41,20 @@ export const Base = ({
     }
   }, []);
 
+  // Scroll to expanded item
+  const scrollToExpanded = (delay = 1000) => {
+    const acc_element = accordion_element.current;
+
+    if (acc_element) {
+      setTimeout(() => {
+        acc_element.scrollIntoView({
+          block: 'center',
+          behavior: 'smooth',
+        });
+      }, delay);
+    }
+  };
+
   // Handle auto expand and auto scroll on hash targets
   useEffect(() => {
     const hashWithoutSymbol =
@@ -46,17 +62,7 @@ export const Base = ({
 
     if (hashWithoutSymbol === id) {
       setAutoExpand(true);
-
-      const acc_element = accordion_element.current;
-
-      if (acc_element) {
-        setTimeout(() => {
-          acc_element.scrollIntoView({
-            block: 'center',
-            behavior: 'smooth',
-          });
-        }, 1000);
-      }
+      scrollToExpanded();
     }
   }, []);
 
@@ -78,7 +84,7 @@ export const Base = ({
       tabIndex={0}
       className={qtMerge(
         'flex w-full flex-col',
-        //hover:bg-opacity-black-100
+        //hover:bg-opacity-black-100 - setting bg on hover is quite distracting needs to discuss with design team
         'focus-visible:outline-1 focus-visible:outline-opacity-red-100',
         divider === 'bottom' && 'border-xs border-b-opacity-black-100',
         divider === 'both' &&
@@ -115,11 +121,7 @@ export const Base = ({
               styles['accordion-button-expanded'],
           )}
         >
-          <StandaloneChevronDownRegularIcon
-            fill="black"
-            iconSize="sm"
-            onClick={() => toggleCollapse()}
-          />
+          <StandaloneChevronDownRegularIcon fill="black" iconSize="sm" />
         </div>
       </div>
       <div

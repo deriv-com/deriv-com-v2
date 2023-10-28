@@ -1,10 +1,11 @@
 import { Features } from '@deriv-com/blocks';
-import { CardsFAQ, FAQData, getHelpCentreLink } from './data';
+import { CardsFAQ, FAQData } from './data';
 import { CustomLink, SearchChip } from '@deriv-com/components';
 import { FluidContainer, Text } from '@deriv/quill-design';
 import { useState } from 'react';
 import { searchString } from '@deriv-com/utils';
 import { FAQSearchResults } from '../../types';
+import { getHelpCentreLink } from './components';
 
 interface SearchSectionProps {
   hasQuestionCards?: boolean;

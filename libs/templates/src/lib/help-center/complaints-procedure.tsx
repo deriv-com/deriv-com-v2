@@ -5,8 +5,8 @@ import AnswerSection from './sections/answers';
 import { FAQData } from './sections/search/data';
 import { FAQDataType } from './types';
 
-export function HelpCenterAccountTemplate() {
-  const data = FAQData.find(({ header }) => header === 'Account');
+export function HelpCenterComplaintsTemplate() {
+  const data = FAQData.find(({ header }) => header === 'Complaints procedure');
   return (
     <PageLayout>
       <SearchSection hasQuestionCards={false} />
@@ -16,4 +16,4 @@ export function HelpCenterAccountTemplate() {
   );
 }
 
-export default HelpCenterAccountTemplate;
+export default HelpCenterComplaintsTemplate;
