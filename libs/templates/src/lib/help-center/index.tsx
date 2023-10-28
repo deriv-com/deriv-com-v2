@@ -9,7 +9,7 @@ export function HelpCenterTemplate() {
         <Hero.ContentTop title="How can we help?">
           <OptimizedImage
             imageName="help-centre/hero/hk_help_centre.png"
-            className="rounded-pill"
+            className="rounded-xl"
             width={1232}
             height={526}
             alt="help centre hero"
