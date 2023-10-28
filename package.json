@@ -21,7 +21,7 @@
   "private": true,
   "dependencies": {
     "@deriv/quill-design": "^1.0.19",
-    "@deriv/quill-icons": "^1.0.2",
+    "@deriv/quill-icons": "^1.0.5",
     "@nx/next": "16.8.1",
     "@swc/helpers": "~0.5.0",
     "clsx": "^2.0.0",
