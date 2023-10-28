@@ -5,7 +5,7 @@ import { PropsWithChildren, ReactNode } from 'react';
 
 export const getHelpCentreLink = (page: string, sub_page?: string) => {
   const sub_link = sub_page ? `#${slugify(sub_page)}` : '';
-  return `help-centre/${slugify(page)}${sub_link}`;
+  return `/help-centre/${slugify(page)}${sub_link}`;
 };
 
 export const generateFaqs = (questions: string[], header: string) => {
