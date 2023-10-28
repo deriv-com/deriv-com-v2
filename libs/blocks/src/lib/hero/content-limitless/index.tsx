@@ -19,12 +19,12 @@ const ContentLimitless: React.FC<ContentLimitlessProps> = ({
   return (
     <Section
       className={clsx(
-        'relative mx-auto flex max-w-[2048px] flex-col items-center justify-center gap-gap-2xl pt-general-2xl lg:block lg:min-h-[680px] xl:min-h-screen',
+        'relative mx-auto flex max-w-[2048px] flex-col items-center justify-center gap-gap-3xl pt-general-2xl lg:block lg:min-h-[680px] xl:min-h-screen',
         className,
       )}
     >
       <FluidContainer className="flex items-center lg:min-h-[680px] xl:min-h-[860px]">
-        <div className="flex flex-col gap-gap-2xl lg:max-w-[580px]">
+        <div className="flex flex-col gap-gap-3xl lg:max-w-[580px]">
           {title && <Heading.Hero>{title}</Heading.Hero>}
           {description && <Text size="xl">{description}</Text>}
           {children}

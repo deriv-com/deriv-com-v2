@@ -39,7 +39,7 @@ const ContentLimit: React.FC<ContentLimitProps> = ({
           'gap-gap-lg',
         )}
       >
-        <div className={clsx('flex flex-1 flex-col gap-gap-2xl')}>
+        <div className={clsx('flex flex-1 flex-col gap-gap-3xl')}>
           <Heading.H1>{title}</Heading.H1>
           {description && <Text size="xl">{description}</Text>}
           <div className="w-full">{children}</div>
