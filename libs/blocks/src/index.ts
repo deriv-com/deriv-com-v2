@@ -1,3 +1,4 @@
+export * from './accordion';
 export * from './lib/account-comparison';
 export * from './lib/stat';
 export * from './lib/navigation';

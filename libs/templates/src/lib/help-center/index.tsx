@@ -1,7 +1,7 @@
 import { Hero } from '@deriv-com/blocks';
 import { OptimizedImage, PageLayout } from '@deriv-com/components';
 import { FluidContainer } from '@deriv/quill-design';
-import QuestionCardSection from './sections/question-cards';
+import SearchSection from './sections/search';
 import HelpCardSection from './sections/help-cards';
 
 export function HelpCenterTemplate() {
@@ -18,7 +18,7 @@ export function HelpCenterTemplate() {
           />
         </Hero.ContentTop>
       </FluidContainer>
-      <QuestionCardSection />
+      <SearchSection />
       <HelpCardSection />
     </PageLayout>
   );

@@ -15,7 +15,7 @@
 }
 
 .accordion-content-expanded {
-  max-height: 9999px;
+  max-height: 999px;
   transition: max-height 1s ease;
   overflow: hidden;
 }
