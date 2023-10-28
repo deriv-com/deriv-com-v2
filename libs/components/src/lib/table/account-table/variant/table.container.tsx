@@ -23,7 +23,7 @@ export const Container = ({
         className,
       )}
     >
-      <div className="flex flex-col gap-gap-xl p-general-xl lg:gap-gap-2xl lg:p-general-2xl">
+      <div className="flex flex-col gap-gap-xl p-general-xl lg:gap-gap-3xl lg:p-general-2xl">
         <div className="flex flex-col gap-gap-lg">
           <Heading.H3>{tableData.header}</Heading.H3>
           <Text className="text-opacity-black-600">
