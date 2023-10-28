@@ -17,7 +17,7 @@ export const Default: Story = {
       'Description goes here description goes here description goes here description goes here',
     content: () => (
       <img
-        className="w-full rounded-pill"
+        className="w-full rounded-xl"
         src="https://placehold.co/712x800"
         alt="Placeholder"
       />
