@@ -20,7 +20,7 @@ const ContentBottom = ({
         className,
       )}
     >
-      <FluidContainer className="flex flex-col gap-gap-2xl">
+      <FluidContainer className="flex flex-col gap-gap-3xl">
         <Heading.H1 className="text-center">{title}</Heading.H1>
         {children}
       </FluidContainer>
