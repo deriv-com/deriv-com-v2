@@ -68,10 +68,10 @@ const TradingSpecTable = () => {
     document.body.style.overflow = showBottomSheet ? 'hidden' : 'scroll';
   }, [showBottomSheet]);
   return (
-    <div>
-      <div className="flex flex-row  pb-800 pt-3600 lg:pb-1200">
+    <div className={qtMerge('pt-general-none lg:pt-general-5xl')}>
+      <div className="flex flex-row gap-gap-lg pb-general-md pt-general-4xl lg:justify-between lg:pb-general-lg">
         <form
-          className={qtMerge('w-[313px] gap-2500 lg:w-[360px]')}
+          className={qtMerge('w-[323px] md:w-[340px] lg:w-[360px]')}
           onSubmit={() => handleSubmit}
         >
           <SearchChip
@@ -81,7 +81,7 @@ const TradingSpecTable = () => {
           />
         </form>
 
-        <div className="flex gap-400 ">
+        <div className="flex gap-gap-md ">
           <LabelPairedEllipsisVerticalBoldIcon
             fill="black"
             iconSize="md"
@@ -161,7 +161,7 @@ const TradingSpecTable = () => {
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <td key={cell.id} className={qtMerge('p-50')}>
+                <td key={cell.id} className={qtMerge('p-general-none')}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}
@@ -170,8 +170,14 @@ const TradingSpecTable = () => {
         </tbody>
       </table>
 
-      <div className={qtMerge('flex flex-col', 'p-1200', 'gap-1200')}>
-        <div className={qtMerge('flex justify-center', 'gap-400')}>
+      <div
+        className={qtMerge(
+          'flex flex-col',
+          'pt-general-lg',
+          'gap-gap-xl lg:gap-gap-2xl ',
+        )}
+      >
+        <div className={qtMerge('flex justify-center', 'gap-gap-md')}>
           <Button
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
@@ -190,7 +196,7 @@ const TradingSpecTable = () => {
                   selected
                     ? 'bg-solid-slate-1400'
                     : ' bg-background-primary-container text-opacity-black-600',
-                  'p-800',
+                  'p-general-md',
                 )}
               >
                 {page + 1}
@@ -206,7 +212,9 @@ const TradingSpecTable = () => {
           </Button>
         </div>
         <div className={qtMerge('flex justify-center')}>
-          <Button className="bg-solid-slate-1400">Trade now</Button>
+          <Button colorStyle="black" size="lg">
+            Trade now
+          </Button>
         </div>
       </div>
       {showBottomSheet && (
@@ -222,7 +230,7 @@ const TradingSpecTable = () => {
             />
           }
         >
-          <div className={qtMerge('mb-gap-lg flex flex-col p-800')}>
+          <div className={qtMerge('mb-gap-lg flex flex-col p-general-md')}>
             <div
               className={qtMerge(
                 'flex flex-row items-center gap-gap-md py-gap-md',

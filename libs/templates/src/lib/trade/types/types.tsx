@@ -1,5 +1,3 @@
-import { ReactEventHandler, ReactNode } from 'react';
-
 export type TableDataType = {
   instrument?: any;
   description?: string;

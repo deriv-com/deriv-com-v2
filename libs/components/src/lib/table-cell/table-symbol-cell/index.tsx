@@ -34,15 +34,15 @@ export const TableSymbolCell: React.FC<TableCellProps> = ({
       className={qtMerge(
         colorVariants[color],
         sizeVariants[width],
-        'p-200 lg:px-800',
-        'border-b-75 border-b-solid-slate-75',
+        'p-general-xs lg:px-general-md',
+        'border-b-xs border-b-solid-slate-75',
         'flex flex-col',
         'min-h-[72px]',
         'items-start  justify-center',
         className,
       )}
     >
-      <div className={qtMerge('gap-200', 'flex', 'items-start')}>
+      <div className={qtMerge('gap-gap-md', 'flex', 'items-center')}>
         {icon && icon}
         <Heading.H7>{header}</Heading.H7>
         <div className={qtMerge('flex flex-col', 'items-start justify-center')}>

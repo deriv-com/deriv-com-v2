@@ -4,24 +4,27 @@ import { StandaloneSearchRegularIcon } from '@deriv/quill-icons';
 export type InputProps = {
   placeholder?: string;
   value?: string;
-  onChangeInput: () => void;
+  onChangeInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
 };
 
 export const SearchChip = ({
   placeholder,
   value = '',
   onChangeInput,
+  className,
 }: InputProps) => {
   return (
     <div
       className={qtMerge(
-        'flex justify-start gap-general-sm rounded-lg border-75 border-solid-slate-100 bg-background-primary-container p-200 ps-200',
+        'flex min-h-[32px] items-center justify-start gap-general-sm rounded-lg border-75 border-solid-slate-100 bg-background-primary-container px-general-sm',
+        className,
       )}
     >
       <StandaloneSearchRegularIcon fill="black" iconSize="sm" />
 
       <input
-        className={qtMerge('w-[100%] text-75 outline-none')}
+        className={qtMerge('w-full text-body-sm outline-none')}
         placeholder={placeholder}
         value={value}
         onChange={onChangeInput}
