@@ -1,6 +1,7 @@
 import { Hero } from '@deriv-com/blocks';
 import { PageLayout } from '@deriv-com/components';
 import { Button, FluidContainer } from '@deriv/quill-design';
+import AppDownload from './app-download';
 
 export function TradeTemplate() {
   return (
@@ -12,6 +13,7 @@ export function TradeTemplate() {
         >
           <Button>This is a button</Button>
         </Hero.ContentLess>
+        <AppDownload />
       </FluidContainer>
     </PageLayout>
   );
