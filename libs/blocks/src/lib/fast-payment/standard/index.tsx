@@ -32,14 +32,19 @@ const FastPayment: React.FC<FastPaymentProps> = ({
               <Heading.H2>{title}</Heading.H2>
               {description && <Text size="xl">{description}</Text>}
             </div>
+
             {link && (
-              <CustomLink
-                href={link.href}
-                className="flex items-center justify-center text-300 text-opacity-black-600"
-              >
-                {link.content}
-                <StandaloneChevronRightRegularIcon fill="#000000b8" />
-              </CustomLink>
+              <div className="flex justify-center">
+                <CustomLink
+                  size="lg"
+                  href={link.href}
+                  className="w-fit"
+                  hasHoverColor
+                  hasIcon
+                >
+                  {link.content}
+                </CustomLink>
+              </div>
             )}
           </div>
           <div className="flex flex-col items-center justify-center gap-general-lg">
