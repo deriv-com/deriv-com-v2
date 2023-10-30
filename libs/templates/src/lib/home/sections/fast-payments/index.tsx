@@ -25,7 +25,7 @@ const FastPaymentSection = () => {
               <PaymentMethodChequeBrandLightIcon
                 fill="black"
                 width={128}
-                height={64}
+                height={80}
               />
             ),
             nonContentClassName: 'p-general-xl',
@@ -39,7 +39,7 @@ const FastPaymentSection = () => {
               <PaymentMethodFpsBrandLightIcon
                 fill="black"
                 width={128}
-                height={64}
+                height={80}
               />
             ),
             nonContentClassName: 'p-general-xl',
@@ -53,7 +53,7 @@ const FastPaymentSection = () => {
               <PaymentMethodWireTransferBrandLightIcon
                 fill="black"
                 width={128}
-                height={64}
+                height={80}
               />
             ),
             nonContentClassName: 'p-general-xl',
