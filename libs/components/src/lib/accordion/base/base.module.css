@@ -1,7 +1,7 @@
 
  .accordion-button {
     cursor: pointer;
-    transition: transform 0.6s ease;
+    transition: transform 0.160s ease;
 }
 
 .accordion-button-expanded {
@@ -9,13 +9,13 @@
 }
 
 .accordion-content {
-    transition: max-height 0.5s ease;
+    transition: max-height 0.160s ease;
     max-height: 0;
     overflow: hidden;
 }
 
 .accordion-content-expanded {
   max-height: 9999px;
-  transition: max-height 1s ease;
+  transition: max-height 0.160s ease;
   overflow: hidden;
 }

@@ -1,8 +1,7 @@
 import { Heading, Text, TextSize, qtMerge } from '@deriv/quill-design';
-import CustomLink from '../../link';
 import clsx from 'clsx';
 import { CardContent } from '../types';
-import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
+import CustomLink from '../../link';
 
 export interface BaseCardProps extends CardContent {
   contentPosition: 'bottom' | 'top' | 'start' | 'end';
@@ -92,7 +91,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         )}
       >
         {icon && icon}
-        {(description || header) && (
+        {(header || description) && (
           <div
             className={qtMerge(
               'flex flex-1 flex-col',
@@ -106,16 +105,10 @@ export const BaseCard: React.FC<BaseCardProps> = ({
             )}
           </div>
         )}
+
         {link && (
-          <CustomLink
-            href={link.href}
-            className={clsx(
-              'flex items-center justify-center text-typography-link',
-              linkTextSizeVariant[size],
-            )}
-          >
+          <CustomLink href={link.href} size={size} hasIcon hasHoverColor>
             {link.content}
-            <StandaloneChevronRightRegularIcon fill="#FF444F" />
           </CustomLink>
         )}
         {children}
