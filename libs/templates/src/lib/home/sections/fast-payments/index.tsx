@@ -7,7 +7,7 @@ import {
 
 const FastPaymentSection = () => {
   return (
-    <FastPayment.Standard
+    <FastPayment
       title="Hassle-free deposits and withdrawals"
       description="Make instant deposits from 10,000 HKD. Withdraw in minutes."
       link={{

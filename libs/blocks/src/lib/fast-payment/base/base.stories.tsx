@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import FastPayment from '.';
+import Base from '.';
 
 const meta = {
   title: 'Blocks/FastPayment/Default',
-  component: FastPayment,
-} satisfies Meta<typeof FastPayment>;
+  component: Base,
+} satisfies Meta<typeof Base>;
 
 export default meta;
 

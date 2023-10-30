@@ -1,16 +1,16 @@
 import { render } from '@testing-library/react';
 
-import FastPayment from './index';
 import {
   FlagAndorraIcon,
   FlagAustraliaIcon,
   FlagBurkinaFasoIcon,
 } from '@deriv/quill-icons';
+import Base from './index';
 
 describe('FastPayment', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <FastPayment
+      <Base
         title="Hassle-free deposits and withdrawals"
         description="Make instant deposits from 10,000 HKD. Withdraw in minutes."
         content={{
