@@ -67,7 +67,7 @@ export const FAQData: FAQDataType[] = [
           </FaqText>
 
           <FaqBox variant="sm">
-            <FaqText variant="bold">Why can't I create an account?</FaqText>
+            <FaqText bold>Why can't I create an account?</FaqText>
             <FaqText>
               Here are some possible reasons you aren't able to create an
               account:
@@ -268,7 +268,7 @@ export const FAQData: FAQDataType[] = [
           <FaqList
             data={[
               <FaqBox variant="md">
-                <FaqText variant="bold">Proof of identity</FaqText>
+                <FaqText bold>Proof of identity</FaqText>
                 <FaqText>
                   You’ll need a valid government-issued identity document such
                   as a Hong Kong ID card or passport. Your document must clearly
@@ -276,7 +276,7 @@ export const FAQData: FAQDataType[] = [
                 </FaqText>
               </FaqBox>,
               <FaqBox variant="md">
-                <FaqText variant="bold">Proof of address</FaqText>
+                <FaqText bold>Proof of address</FaqText>
                 <FaqText>
                   You’ll need a bank statement, credit card statement, tax
                   statement, or utility bill. Your document must be issued

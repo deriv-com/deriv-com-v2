@@ -1,6 +1,6 @@
 import { CustomLink, CustomLinkProps } from '@deriv-com/components';
 import { slugify } from '@deriv-com/utils';
-import { Text, TextProps, qtMerge } from '@deriv/quill-design';
+import { BodyTypographyProps, Text, qtMerge } from '@deriv/quill-design';
 import { PropsWithChildren, ReactNode } from 'react';
 
 export const getHelpCentreLink = (page: string, sub_page?: string) => {
@@ -46,7 +46,7 @@ export const FaqBox = ({
     {children}
   </div>
 );
-export const FaqText = ({ children, ...otherProps }: TextProps) => (
+export const FaqText = ({ children, ...otherProps }: BodyTypographyProps) => (
   <Text className="pr-general-2xl" {...otherProps} size="md">
     {children}
   </Text>
