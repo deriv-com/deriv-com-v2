@@ -6,6 +6,7 @@ import { StandaloneChevronDownRegularIcon } from '@deriv/quill-icons';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 export const Base = ({
+  id,
   className,
   title,
   subtitle,
@@ -14,12 +15,21 @@ export const Base = ({
   icon,
   divider = 'both',
   customContent: CustomContent,
+  onExpand,
 }: AccordionProps) => {
   const [is_expanded, setExpanded] = useState(expanded);
-  const accordion_element = useRef(null);
+  const [is_auto_expand, setAutoExpand] = useState(false);
+
+  const accordion_element = useRef<HTMLDivElement>(null);
 
   const toggleCollapse = () => {
     setExpanded((current) => !current);
+    setAutoExpand(false);
+    scrollToExpanded(500);
+
+    if (onExpand) {
+      onExpand(!is_expanded, title);
+    }
   };
 
   // Handle Collapse via Keyboard
@@ -28,6 +38,31 @@ export const Base = ({
       if (accordion_element.current === document.activeElement) {
         toggleCollapse();
       }
+    }
+  }, []);
+
+  // Scroll to expanded item
+  const scrollToExpanded = (delay = 1000) => {
+    const acc_element = accordion_element.current;
+
+    if (acc_element) {
+      setTimeout(() => {
+        acc_element.scrollIntoView({
+          block: 'center',
+          behavior: 'smooth',
+        });
+      }, delay);
+    }
+  };
+
+  // Handle auto expand and auto scroll on hash targets
+  useEffect(() => {
+    const hashWithoutSymbol =
+      typeof window !== 'undefined' && window.location.hash.slice(1);
+
+    if (hashWithoutSymbol === id) {
+      setAutoExpand(true);
+      scrollToExpanded();
     }
   }, []);
 
@@ -44,20 +79,26 @@ export const Base = ({
 
   return (
     <div
+      data-id={id}
       ref={accordion_element}
       tabIndex={0}
       className={qtMerge(
-        'flex w-full max-w-[800px] flex-col',
-        'hover:bg-opacity-black-100',
+        'flex w-full flex-col',
         'focus-visible:outline-1 focus-visible:outline-opacity-red-100',
-        divider === 'bottom' && 'border-xs border-b-opacity-black-600',
+        divider === 'bottom' && 'border-xs border-b-opacity-black-100',
         divider === 'both' &&
-          'border-xs border-b-opacity-black-600 border-t-opacity-black-600',
+          'border-100 border-b-opacity-black-100 border-t-opacity-black-100',
         className,
       )}
-      onClick={() => toggleCollapse()}
     >
-      <div className="flex items-center justify-between gap-general-lg p-general-lg">
+      <div
+        className={qtMerge(
+          'flex cursor-pointer items-center justify-between',
+          'gap-general-lg p-general-lg',
+          'hover:bg-opacity-black-100',
+        )}
+        onClick={() => toggleCollapse()}
+      >
         {CustomContent ? (
           <CustomContent />
         ) : (
@@ -79,7 +120,8 @@ export const Base = ({
         <div
           className={qtMerge(
             styles['accordion-button'],
-            is_expanded && styles['accordion-button-expanded'],
+            (is_auto_expand || is_expanded) &&
+              styles['accordion-button-expanded'],
           )}
         >
           <StandaloneChevronDownRegularIcon fill="black" iconSize="sm" />
@@ -88,10 +130,11 @@ export const Base = ({
       <div
         className={qtMerge(
           styles['accordion-content'],
-          is_expanded && styles['accordion-content-expanded'],
+          (is_auto_expand || is_expanded) &&
+            styles['accordion-content-expanded'],
         )}
       >
-        <div className="flex h-fit p-general-lg">{<Content />}</div>
+        <div className="flex h-fit p-general-lg">{Content && <Content />}</div>
       </div>
     </div>
   );
