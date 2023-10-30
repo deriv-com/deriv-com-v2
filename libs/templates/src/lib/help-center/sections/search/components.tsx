@@ -23,7 +23,12 @@ export const generateFaqs = (questions: string[], header: string) => {
         ))}
       </div>
       <div className="mt-auto flex">
-        <CustomLink href={getHelpCentreLink(header)} hasIcon hasHoverColor>
+        <CustomLink
+          href={getHelpCentreLink(header)}
+          hasIcon
+          hasHoverColor
+          hasLinkColor
+        >
           View Questions
         </CustomLink>
       </div>

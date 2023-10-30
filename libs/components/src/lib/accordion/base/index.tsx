@@ -84,7 +84,6 @@ export const Base = ({
       tabIndex={0}
       className={qtMerge(
         'flex w-full flex-col',
-        //hover:bg-opacity-black-100 - setting bg on hover is quite distracting needs to discuss with design team
         'focus-visible:outline-1 focus-visible:outline-opacity-red-100',
         divider === 'bottom' && 'border-xs border-b-opacity-black-100',
         divider === 'both' &&
@@ -93,7 +92,11 @@ export const Base = ({
       )}
     >
       <div
-        className="flex cursor-pointer items-center justify-between gap-general-lg p-general-lg"
+        className={qtMerge(
+          'flex cursor-pointer items-center justify-between',
+          'gap-general-lg p-general-lg',
+          'hover:bg-opacity-black-100',
+        )}
         onClick={() => toggleCollapse()}
       >
         {CustomContent ? (

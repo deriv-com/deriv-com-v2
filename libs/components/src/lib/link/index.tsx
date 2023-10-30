@@ -78,10 +78,11 @@ export function CustomLink({
       {...rest}
     >
       {children}
+
       {hasIcon && (
         <StandaloneChevronRightRegularIcon
           iconSize="sm"
-          fill={is_hover && hasLinkColor ? '#FF444F' : '#000000'}
+          fill={is_hover || hasLinkColor ? '#FF444F' : '#000000'}
         />
       )}
     </Link>
