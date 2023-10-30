@@ -1,7 +1,7 @@
 import { createColumnHelper } from '@tanstack/react-table';
 import { TableDataType } from '../types/types';
 import { TableCell } from '@deriv-com/components';
-import { FlagUsaIcon } from '@deriv/quill-icons';
+import { MarketForexAudcadIcon } from '@deriv/quill-icons';
 import { qtMerge } from '@deriv/quill-design';
 
 const columnHelper = createColumnHelper<TableDataType>();
@@ -22,7 +22,7 @@ const UseColumns = (selected: string) => {
               <TableCell.TableSymbolCell
                 className={qtMerge('px-600')}
                 width="lg"
-                icon={<FlagUsaIcon fill="black" iconSize="sm" />}
+                icon={<MarketForexAudcadIcon fill="black" iconSize="sm" />}
                 label={info.getValue()}
                 description="Australian Dollar vs Canadian Dollar"
               ></TableCell.TableSymbolCell>
@@ -101,7 +101,7 @@ const UseColumns = (selected: string) => {
             cell: (info) => (
               <TableCell.TableSymbolCell
                 className={qtMerge('px-600')}
-                icon={<FlagUsaIcon fill="black" iconSize="sm" />}
+                icon={<MarketForexAudcadIcon fill="black" iconSize="sm" />}
                 label={info.getValue()}
                 description="Australian Dollar vs Canadian Dollar"
               ></TableCell.TableSymbolCell>
@@ -225,7 +225,7 @@ const UseColumns = (selected: string) => {
             cell: (info) => (
               <TableCell.TableSymbolCell
                 className={qtMerge('px-600')}
-                icon={<FlagUsaIcon fill="black" iconSize="sm" />}
+                icon={<MarketForexAudcadIcon fill="black" iconSize="sm" />}
                 label={info.getValue()}
                 description="Australian Dollar vs Canadian Dollar"
               ></TableCell.TableSymbolCell>
