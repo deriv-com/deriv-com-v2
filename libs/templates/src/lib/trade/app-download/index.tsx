@@ -13,10 +13,8 @@ const AppDownload = () => {
       size="lg"
       content={content}
       className="items-end lg:gap-gap-lg"
-      header="title here"
-      // description="description here"
     >
-      <div className="flex flex-col gap-gap-xl lg:gap-gap-2xl">
+      <div className="flex flex-col gap-gap-2xl">
         <div className="flex flex-col gap-gap-xl">
           <Heading.H2>{heading}</Heading.H2>
           <Text className="text-body-lg leading-body-lg">{description}</Text>
