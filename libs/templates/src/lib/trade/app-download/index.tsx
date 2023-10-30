@@ -13,20 +13,22 @@ const AppDownload = () => {
       size="lg"
       content={content}
       contentClassName="w-full flex justify-center"
-      className="items-end lg:gap-gap-lg"
+      className="lg:gap-gap-lg"
     >
       <div className="flex flex-col gap-gap-2xl">
         <div className="flex flex-col gap-gap-xl">
           <Heading.H2>{heading}</Heading.H2>
-          <Text className="text-body-lg leading-body-lg">{description}</Text>
+          <Text className="text-body-lg leading-body-lg text-opacity-black-600">
+            {description}
+          </Text>
         </div>
 
         <div className="flex w-full flex-col gap-gap-xl md:flex-row lg:flex-col">
           <div className="flex w-full items-start gap-gap-lg">
             {cta.qr}
             <div className="grid w-[134px] gap-gap-md lg:w-full">
-              <Text>{cta.description}</Text>
-              <Text bold className="text-body-lg">
+              <Text className="text-opacity-black-600">{cta.description}</Text>
+              <Text bold className="text-body-lg text-opacity-black-600">
                 {cta.devices}
               </Text>
             </div>
