@@ -18,8 +18,6 @@ const SearchSection = ({ hasQuestionCards = true }: SearchSectionProps) => {
   const showSearchresults = (query: string) => {
     const final_matches: FAQSearchResults[] = [];
 
-    console.log(FAQData);
-
     FAQData.forEach(({ header, questions }) => {
       const matches = searchString(query, questions);
 
