@@ -34,10 +34,6 @@ const TradingSpecTable = () => {
     e.preventDefault();
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    setSearchValue(e.target.value);
-  };
   useEffect(() => {
     let updatedRowData = [];
     if (searchValue.length >= 1) {
@@ -81,7 +77,7 @@ const TradingSpecTable = () => {
           onSubmit={() => handleSubmit}
         >
           <SearchChip
-            onChangeInput={handleChange}
+            onChange={(i) => setSearchValue(i)}
             value={searchValue}
             placeholder="Search"
           />
