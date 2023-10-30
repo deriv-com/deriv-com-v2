@@ -88,7 +88,7 @@ export const Base = ({
         'focus-visible:outline-1 focus-visible:outline-opacity-red-100',
         divider === 'bottom' && 'border-xs border-b-opacity-black-100',
         divider === 'both' &&
-          'border-xs border-b-opacity-black-100 border-t-opacity-black-100',
+          'border-100 border-b-opacity-black-100 border-t-opacity-black-100',
         className,
       )}
     >
