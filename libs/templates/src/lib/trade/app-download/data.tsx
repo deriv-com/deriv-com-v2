@@ -11,22 +11,12 @@ import {
 
 export const data = {
   content: (
-    <div className="flex">
-      <OptimizedImage
-        className="hidden lg:block"
-        imageName="trade/features/hk_trade_feature_desktop_mt5.png"
-        width={608}
-        height={536}
-        alt="MT5 App"
-      />
-      <OptimizedImage
-        className="block lg:hidden"
-        imageName="trade/features/hk_trade_feature_mobile_mt5.png"
-        width={809}
-        height={460}
-        alt="MT5 App"
-      />
-    </div>
+    <OptimizedImage
+      imageName="trade/features/hk_trade_feature_desktop_mt5.png"
+      width={608}
+      height={536}
+      alt="MT5 App"
+    />
   ),
   heading: 'Get trading with Deriv MT5',
   description:

@@ -12,6 +12,7 @@ const AppDownload = () => {
       align="start"
       size="lg"
       content={content}
+      contentClassName="w-full flex justify-center"
       className="items-end lg:gap-gap-lg"
     >
       <div className="flex flex-col gap-gap-2xl">
@@ -25,7 +26,7 @@ const AppDownload = () => {
             {cta.qr}
             <div className="grid w-[134px] gap-gap-md lg:w-full">
               <Text>{cta.description}</Text>
-              <Text bold className="text-200 lg:text-300">
+              <Text bold className="text-body-lg">
                 {cta.devices}
               </Text>
             </div>
