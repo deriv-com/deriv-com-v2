@@ -10,7 +10,7 @@ export const MobileNavList = () => {
         <li key={navItemName}>
           <Text
             size="md"
-            variant="bold"
+            bold
             onClick={() => {
               setActiveMenu?.(navItemName);
             }}
