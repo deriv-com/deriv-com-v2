@@ -8,6 +8,8 @@ import WhyTradeSection from './sections/why-trade';
 import ProvenExcellenceSection from './sections/proven-excellence';
 import StaticNumberBlock from './sections/static-number-block';
 import LiveMarketSection from './sections/live-market-section';
+import ReviewSection from './sections/review';
+import AccountSection from './sections/account-section';
 
 export function HomeTemplate() {
   return (
@@ -17,6 +19,8 @@ export function HomeTemplate() {
       <LiveMarketSection />
       <FastAndReliableSection />
       <WhyTradeSection />
+      <AccountSection />
+      <ReviewSection />
       <ProvenExcellenceSection />
       <StaticNumberBlock />
     </PageLayout>
