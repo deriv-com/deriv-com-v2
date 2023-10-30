@@ -12,7 +12,7 @@ import {
 export const data = {
   content: (
     <OptimizedImage
-      imageName="trade/features/hk_trade_feature_desktop_mt5.png"
+      imageName="trade/features/hk_trade_feature_mt5.png"
       width={608}
       height={536}
       alt="MT5 App"
