@@ -1,5 +1,13 @@
+import { ReactNode } from 'react';
+
+export type TInstrumentData = {
+  instrument?: string;
+  icon?: ReactNode;
+  description?: string;
+};
+
 export type TableDataType = {
-  instrument?: any;
+  instrument?: TInstrumentData;
   description?: string;
   current_bid?: number;
   current_ask?: number;

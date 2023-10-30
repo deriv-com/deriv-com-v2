@@ -13,7 +13,7 @@ export const TableHeaderCell: React.FC<TableCellContent> = ({
       header={header}
       color="coral"
       width={width}
-    ></TableSymbolCell>
+    />
   );
 };
 

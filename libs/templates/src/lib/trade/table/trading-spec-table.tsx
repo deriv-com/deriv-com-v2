@@ -43,7 +43,8 @@ const TradingSpecTable = () => {
     if (searchValue.length >= 1) {
       updatedRowData = [
         ...selected_filter.filter(
-          (item) => item.instrument?.match(new RegExp(searchValue, 'i')),
+          (item) =>
+            item.instrument?.instrument?.match(new RegExp(searchValue, 'i')),
         ),
       ];
 

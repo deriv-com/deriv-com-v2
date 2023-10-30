@@ -13,7 +13,7 @@ const sizeVariants: { [key in TableWidthVariant]: string } = {
   xl: 'lg:w-[246px] md:w-[138px] w-[110px]',
   lg: 'lg:w-[246px] w-[204px]',
   md: 'lg:w-[196px] w-[120px]',
-  sm: 'lg:w-[140px] w-[120px]',
+  sm: 'lg:w-[142px] w-[120px]',
 };
 const colorVariants: { [key in TableCellColorVariant]: string } = {
   coral: 'bg-solid-slate-75',
