@@ -1,5 +1,4 @@
 import { Heading, Text, TextSize, qtMerge } from '@deriv/quill-design';
-
 import clsx from 'clsx';
 import { CardContent } from '../types';
 import CustomLink from '../../link';
