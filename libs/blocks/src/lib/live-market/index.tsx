@@ -10,7 +10,6 @@ import clsx from 'clsx';
 import { ReactNode } from 'react';
 
 export interface LiveMarketProps<T extends CardVariantType> {
-  isHeaderSection?: boolean;
   header?: string;
   description?: string;
   className?: string;
@@ -24,7 +23,6 @@ export interface LiveMarketProps<T extends CardVariantType> {
 }
 
 export const LiveMarket = <T extends CardVariantType>({
-  isHeaderSection = false,
   header,
   description,
   className,
@@ -41,35 +39,45 @@ export const LiveMarket = <T extends CardVariantType>({
         className,
       )}
     >
-      <FluidContainer className="flex flex-col items-center justify-center gap-gap-xl lg:gap-gap-2xl">
-        {isHeaderSection && (
-          <div className="flex flex-col items-center gap-gap-lg">
+      <FluidContainer className="flex flex-col items-center justify-center gap-gap-3xl">
+        {(header || description || TabHeader) && (
+          <div className="flex w-full flex-col items-center gap-gap-2xl">
             {header && <Heading.H2>{header}</Heading.H2>}
-            {description && <Text size="md">{description}</Text>}
-            {TabHeader && <TabHeader />}
+            {(description || TabHeader) && (
+              <div className="flex w-full flex-col items-center gap-gap-xl">
+                {TabHeader && <TabHeader />}
+                {description && (
+                  <Text className="text-center" size="md">
+                    {description}
+                  </Text>
+                )}
+              </div>
+            )}
           </div>
         )}
-        <div className="flex w-full flex-col items-center gap-gap-lg md:gap-gap-xl">
+        <div className="flex w-full flex-col items-center gap-gap-xl">
           {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             <CardSlider {...cardSliderProps} />
           }
           {disclaimer && (
-            <Text className="text-center text-caption text-typography-subtle">
-              {disclaimer}
-            </Text>
+            <div className="max-sm:px-general-md">
+              <Text className="text-center text-caption text-typography-subtle">
+                {disclaimer}
+              </Text>
+            </div>
           )}
         </div>
         {link && (
           <CustomLink
             href={link.href}
             className={clsx(
-              'flex items-center justify-center text-body-md text-typography-link',
+              'flex items-center justify-center text-body-md text-solid-slate-1400 hover:text-solid-slate-1400 hover:underline',
             )}
           >
             {link.content}
-            <StandaloneChevronRightRegularIcon fill="#FF444F" />
+            <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />
           </CustomLink>
         )}
       </FluidContainer>

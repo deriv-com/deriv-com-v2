@@ -22,26 +22,29 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   spread,
 }) => {
   const colorVariant = {
-    up: '#00ae7a',
-    down: '#de0040',
-    remain: '#0000007a',
-    closed: '#0000003d',
+    up: 'fill-solid-emerald-900',
+    down: 'fill-solid-cherry-700',
+    remain: 'fill-opacity-black-400',
+    closed: 'fill-opacity-black-300',
   };
 
   const ChartIcons = {
     up: (
-      <StandaloneArrowUpRegularIcon iconSize="sm" fill={colorVariant[status]} />
+      <StandaloneArrowUpRegularIcon
+        iconSize="sm"
+        className={colorVariant[status]}
+      />
     ),
     down: (
       <StandaloneArrowDownRegularIcon
         iconSize="sm"
-        fill={colorVariant[status]}
+        className={colorVariant[status]}
       />
     ),
     remain: (
       <StandaloneArrowRightRegularIcon
         iconSize="sm"
-        fill={colorVariant[status]}
+        className={colorVariant[status]}
       />
     ),
   };
@@ -50,17 +53,17 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
     <div
       className={qtMerge(
         'flex flex-col',
-        'rounded-pill',
+        'rounded-xl',
         'h-[262px] w-[286px]',
         'bg-background-primary-container',
-        'p-general-lg lg:p-general-xl',
+        'p-general-xl',
         'gap-gap-xl',
         className,
         status === 'closed' ? 'opacity-700' : '',
       )}
     >
-      <div className="flex h-[52px] flex-row justify-between">
-        <div className="flex flex-row gap-gap-md">
+      <div className="flex h-[52px] flex-row gap-gap-sm">
+        <div className="flex flex-1 flex-row gap-gap-md">
           {instrumentIcon}
           <Text size="md" className="pt-general-xs">
             {instrument}
@@ -81,7 +84,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
           <Text size="sm" className="text-typography-default">
             Spread
           </Text>
-          <Text size="sm" variant="bold">
+          <Text size="sm" bold>
             {spread}
           </Text>
         </div>

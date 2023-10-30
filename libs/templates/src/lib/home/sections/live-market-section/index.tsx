@@ -6,7 +6,7 @@ const LiveMarketSection = () => {
     <LiveMarket
       className="bg-solid-slate-75"
       disclaimer="*Prices are used for currency conversion and are published for reference only. Prices shown on our website are indicative and for reference only."
-      link={{ href: '/', content: 'More forex' }}
+      link={{ href: '/', content: 'See all forex pairs' }}
       cardSliderProps={{
         cards: LivePriceData,
         variant: 'LiveMarketCard',
