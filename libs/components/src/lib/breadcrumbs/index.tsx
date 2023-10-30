@@ -1,18 +1,10 @@
-import { ReactNode } from 'react';
 import Base from './base';
+import { BreadcrumbsProps } from './types';
 
-export type BreadcrumbsVariants = {
-  Base: typeof Base;
+export const Breadcrumbs = ({ ...otherProps }: BreadcrumbsProps) => {
+  return <Base {...otherProps} />;
 };
-
-export const Breadcrumbs: BreadcrumbsVariants = ({
-  children,
-}: {
-  children: ReactNode;
-}) => {
-  return children;
-};
-
-Breadcrumbs.Base = Base;
 
 export default Breadcrumbs;
+
+export * from './types';
