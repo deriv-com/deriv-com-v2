@@ -13,6 +13,8 @@ const AppDownload = () => {
       size="lg"
       content={content}
       className="items-end lg:gap-gap-lg"
+      header="title here"
+      // description="description here"
     >
       <div className="flex flex-col gap-gap-xl lg:gap-gap-2xl">
         <div className="flex flex-col gap-gap-xl">
@@ -31,14 +33,12 @@ const AppDownload = () => {
             </div>
           </div>
           <div className="flex w-full flex-wrap gap-gap-lg">
-            {platforms.map((platform, index) => {
-              return (
-                <div className="flex items-center gap-gap-md" key={index}>
-                  {platform.icon}
-                  <Text>{platform.name}</Text>
-                </div>
-              );
-            })}
+            {platforms.map((platform) => (
+              <div className="flex items-center gap-gap-md" key={platform.name}>
+                {platform.icon}
+                <Text>{platform.name}</Text>
+              </div>
+            ))}
           </div>
         </div>
       </div>
