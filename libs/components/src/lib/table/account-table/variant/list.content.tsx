@@ -24,11 +24,16 @@ export const ListContent = ({ colData }: ListContentProps) => {
               {item.icon}
               <Text className="text-opacity-black-600">{item.text}</Text>
             </div>
-            <div className="flex flex-col gap-gap-md px-general-xl">
+            <div className="flex flex-col gap-gap-md px-general-md">
               {item.items.map((list) => (
-                <div key={list} className="flex flex-row">
+                <div
+                  key={list}
+                  className="flex flex-row gap-gap-md px-general-md"
+                >
                   {item.listIcon}
-                  <Text className="text-opacity-black-400">{list}</Text>
+                  <Text size="sm" className="text-opacity-black-400">
+                    {list}
+                  </Text>
                 </div>
               ))}
             </div>
