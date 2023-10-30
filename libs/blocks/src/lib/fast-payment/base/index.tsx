@@ -1,22 +1,9 @@
 import { FluidContainer, Heading, Text } from '@deriv/quill-design';
-import {
-  CardsContainer,
-  CardsContainerProps,
-  CustomLink,
-} from '@deriv-com/components';
-import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
-import { LinkProps } from '@deriv-com/utils';
+import { CardsContainer, CustomLink } from '@deriv-com/components';
 
-/* eslint-disable-next-line */
-export interface FastPaymentProps {
-  title: string;
-  description?: string;
-  link?: LinkProps;
-  disclaimer?: string;
-  content: Omit<CardsContainerProps<'ContentBottom'>, 'variant'>;
-}
+import { FastPaymentProps } from '../types';
 
-const FastPayment: React.FC<FastPaymentProps> = ({
+const Base: React.FC<FastPaymentProps> = ({
   title,
   description,
   link,
@@ -66,4 +53,4 @@ const FastPayment: React.FC<FastPaymentProps> = ({
   );
 };
 
-export default FastPayment;
+export default Base;
