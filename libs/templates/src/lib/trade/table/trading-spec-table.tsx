@@ -9,7 +9,7 @@ import {
   getPaginationRowModel,
 } from '@tanstack/react-table';
 import UseColumns from '../hooks/use-columns';
-import { Button, FluidContainer, qtMerge, Text } from '@deriv/quill-design';
+import { Button, qtMerge, Section, Text } from '@deriv/quill-design';
 import {
   LabelPairedEllipsisVerticalBoldIcon,
   StandaloneChevronLeftRegularIcon,
@@ -69,8 +69,12 @@ const TradingSpecTable = () => {
     document.body.style.overflow = showBottomSheet ? 'hidden' : 'scroll';
   }, [showBottomSheet]);
   return (
-    <FluidContainer className={qtMerge('py-general-4xl')}>
-      <div className="flex flex-row gap-gap-lg pb-general-md lg:justify-between lg:pb-general-lg">
+    <Section
+      className={qtMerge(
+        'py-general-4xl md:mx-auto lg:mx-auto lg:max-w-[1232px]',
+      )}
+    >
+      <div className="flex flex-row gap-gap-lg px-general-md pb-general-md lg:justify-between lg:px-general-none lg:pb-general-lg">
         <form
           className={qtMerge('w-[323px] md:w-[340px] lg:w-[360px]')}
           onSubmit={() => handleSubmit}
@@ -297,7 +301,7 @@ const TradingSpecTable = () => {
           </div>
         </BottomSheet>
       )}
-    </FluidContainer>
+    </Section>
   );
 };
 

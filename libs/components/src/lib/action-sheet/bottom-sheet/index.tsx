@@ -16,7 +16,7 @@ export const BottomSheet = ({ heading, icon, children }: BottomSheetProps) => {
     >
       <div
         className={qtMerge(
-          'fixed w-full rounded-t-2xl bg-solid-slate-50 p-general-sm',
+          'fixed w-full rounded-t-lg bg-solid-slate-50 p-general-sm',
         )}
       >
         <div className="flex flex-row items-center justify-between p-general-md">
