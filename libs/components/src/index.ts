@@ -1,3 +1,4 @@
+export * from './lib/breadcrumbs/base';
 export * from './lib/accordion';
 export * from './lib/cards-container';
 export * from './lib/card';
