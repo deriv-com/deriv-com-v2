@@ -16,5 +16,6 @@ type Story = StoryObj<typeof meta>;
 export const SearchInput: Story = {
   args: {
     placeholder: 'Search',
+    size: 'sm',
   },
 };

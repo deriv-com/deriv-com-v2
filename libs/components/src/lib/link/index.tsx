@@ -1,17 +1,31 @@
 import { qtMerge } from '@deriv/quill-design';
+import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { ComponentPropsWithRef } from 'react';
+import { ComponentPropsWithRef, useState } from 'react';
 
 export interface CustomLinkProps extends ComponentPropsWithRef<typeof Link> {
   skipLocaleHandling?: boolean;
+  size?: textSize;
   href: string;
+  hasIcon?: boolean;
+  hasHoverColor?: boolean;
+  hasHoverDecoration?: boolean;
+  hasLinkColor?: boolean;
 }
+
+type textSize = 'sm' | 'md' | 'lg';
 
 export function CustomLink({
   skipLocaleHandling,
   href,
   className,
+  size = 'sm',
+  hasIcon = false,
+  hasHoverColor = false,
+  hasHoverDecoration = true,
+  hasLinkColor = false,
+  children,
   ...rest
 }: CustomLinkProps) {
   // TODO: uncomment this when we have localization
@@ -42,15 +56,36 @@ export function CustomLink({
         : router.pathname.replace('[locale]', locale as string);
     }
   }
+
+  const [is_hover, setHover] = useState(false);
+
   return (
     <Link
+      onMouseOver={() => hasHoverColor && setHover(true)}
+      onMouseOut={() => setHover(false)}
       href={customHref}
       className={qtMerge(
-        'text-body-sm text-typography-prominent hover:text-typography-link',
+        'flex items-center justify-center',
+        'text-typography-prominent',
+        size === 'sm' && 'text-body-sm',
+        size === 'md' && 'text-body-md',
+        size === 'lg' && 'text-body-lg',
+        hasLinkColor && 'text-typography-link',
+        hasHoverColor && 'hover:text-typography-link',
+        hasHoverDecoration && 'hover:underline',
         className,
       )}
       {...rest}
-    />
+    >
+      {children}
+
+      {hasIcon && (
+        <StandaloneChevronRightRegularIcon
+          iconSize="sm"
+          fill={is_hover || hasLinkColor ? '#FF444F' : '#000000'}
+        />
+      )}
+    </Link>
   );
 }
 

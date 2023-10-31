@@ -1,3 +1,4 @@
+import { LinkProps } from '@deriv-com/utils';
 import { ReactNode } from 'react';
 
 export type StatCardVariant = 'white' | 'dark' | 'coral';
@@ -18,10 +19,7 @@ export interface CardContent extends BaseCardContent {
   icon?: ReactNode;
   description?: string;
   children?: ReactNode;
-  link?: {
-    content: ReactNode;
-    href: string;
-  };
+  link?: LinkProps;
   content?: ReactNode;
   color: CardColorVariant;
   align: CardAlignVariant;
