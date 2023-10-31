@@ -5,7 +5,7 @@ import { BreadcrumbsProps } from '../types';
 import { isMobile } from 'react-device-detect';
 import { Fragment, useEffect, useState } from 'react';
 
-export function Base({ size = 'sm', links }: BreadcrumbsProps) {
+export function Base({ size = 'sm', links = [] }: BreadcrumbsProps) {
   const [render_links, setRenderLinks] = useState<LinkProps[]>([]);
   const [dropwdown_links, setDropdownLinks] = useState<LinkProps[]>([]);
 
