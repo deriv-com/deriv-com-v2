@@ -6,20 +6,19 @@ export function HelpCenterTemplate() {
   return (
     <PageLayout>
       <FluidContainer>
-        <div className="py-general-md">
-          <Breadcrumbs
-            links={[
-              {
-                content: 'Home',
-                href: '/',
-              },
-              {
-                content: 'Help Centre',
-                href: '/help-centre',
-              },
-            ]}
-          />
-        </div>
+        <Breadcrumbs
+          className="py-general-md"
+          links={[
+            {
+              content: 'Home',
+              href: '/',
+            },
+            {
+              content: 'Help Centre',
+              href: '/help-centre',
+            },
+          ]}
+        />
         <Hero.ContentTop title="How can we help?">
           <OptimizedImage
             imageName="help-centre/hero/hk_help_centre.png"

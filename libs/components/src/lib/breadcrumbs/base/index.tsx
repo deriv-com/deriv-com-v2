@@ -4,8 +4,9 @@ import CustomLink from '../../link';
 import { BreadcrumbsProps } from '../types';
 import { isMobile } from 'react-device-detect';
 import { Fragment, useEffect, useState } from 'react';
+import { qtMerge } from '@deriv/quill-design';
 
-export function Base({ size = 'sm', links = [] }: BreadcrumbsProps) {
+export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
   const [render_links, setRenderLinks] = useState<LinkProps[]>([]);
   const [dropwdown_links, setDropdownLinks] = useState<LinkProps[]>([]);
 
@@ -37,7 +38,7 @@ export function Base({ size = 'sm', links = [] }: BreadcrumbsProps) {
   }, [links]);
 
   return (
-    <div className="flex">
+    <div className={qtMerge('flex', className)}>
       {render_links.map(({ content, href }, lk) => (
         <Fragment key={`${href}-${lk}`}>
           {hasExtra && lk === 1 && (
