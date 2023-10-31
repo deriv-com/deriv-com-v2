@@ -3,7 +3,7 @@
 import { Accordion, AccordionProps } from '@deriv-com/components';
 import { slugify } from '@deriv-com/utils';
 import { FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 export interface AccordionBlockProps {
   title?: string;
