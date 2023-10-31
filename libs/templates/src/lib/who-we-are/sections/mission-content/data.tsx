@@ -17,7 +17,7 @@ const Content = () => {
     <>
       {data.map((data, index) => {
         return (
-          <Text className="text-opacity-black-600" key={index}>
+          <Text className="text-typography-default" key={index}>
             {data}
           </Text>
         );
