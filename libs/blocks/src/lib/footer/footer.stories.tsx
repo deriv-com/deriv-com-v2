@@ -2,9 +2,9 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import FooterBlock from '.';
 import {
-  SocialAppleIcon,
-  SocialFacebookIcon,
-  SocialInstagramIcon,
+  StandaloneAppleIcon,
+  StandaloneFacebookIcon,
+  StandaloneInstagramIcon,
 } from '@deriv/quill-icons';
 
 const meta = {
@@ -17,15 +17,15 @@ type Story = StoryObj<typeof meta>;
 
 const social = [
   {
-    icon: <SocialFacebookIcon width={20} />,
+    icon: <StandaloneFacebookIcon iconSize="md" />,
     href: 'https://www.facebook.com/derivdotcom/',
   },
   {
-    icon: <SocialAppleIcon width={20} />,
+    icon: <StandaloneAppleIcon iconSize="md" />,
     href: 'https://www.facebook.com/derivdotcom/',
   },
   {
-    icon: <SocialInstagramIcon width={20} />,
+    icon: <StandaloneInstagramIcon iconSize="md" />,
     href: 'https://www.facebook.com/derivdotcom/',
   },
 ];

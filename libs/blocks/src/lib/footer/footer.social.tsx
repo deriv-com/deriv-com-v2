@@ -1,5 +1,5 @@
-import { Text } from '@deriv/quill-design';
 import { SocialIcons } from '.';
+import React from 'react';
 
 export const SocialMediaSection = ({
   socialButtons,
@@ -9,9 +9,7 @@ export const SocialMediaSection = ({
   return (
     <div className="flex gap-gap-lg max-lg:justify-center">
       {socialButtons.map((item) => (
-        <Text className="px-[6px] text-icon-standalone-md" key={item.href}>
-          {item.icon}
-        </Text>
+        <React.Fragment key={item.href}>{item.icon}</React.Fragment>
       ))}
     </div>
   );
