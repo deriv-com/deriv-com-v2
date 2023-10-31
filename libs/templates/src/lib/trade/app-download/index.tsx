@@ -26,9 +26,9 @@ const AppDownload = () => {
         <div className="flex w-full flex-col gap-gap-xl md:flex-row lg:flex-col">
           <div className="flex w-full items-start gap-gap-lg">
             {cta.qr}
-            <div className="grid w-[134px] gap-gap-md lg:w-full">
-              <Text className="text-opacity-black-600">{cta.description}</Text>
-              <Text bold className="text-body-lg text-opacity-black-600">
+            <div className="grid w-[134px] gap-gap-md lg:w-full [&>p]:text-opacity-black-600">
+              <Text>{cta.description}</Text>
+              <Text bold className="text-body-lg">
                 {cta.devices}
               </Text>
             </div>
