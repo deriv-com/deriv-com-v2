@@ -34,11 +34,11 @@ export const Container = ({
       </div>
       <div
         className={clsx(
-          'col-span-2 p-general-xl max-md:rounded-b-2xl md:rounded-r-2xl',
+          'col-span-2 p-general-xl max-sm:rounded-b-xl sm:rounded-r-xl',
           contentClasses,
         )}
       >
-        <div className="grid h-full grid-cols-1 max-md:gap-gap-xl md:grid-cols-2">
+        <div className="grid h-full grid-cols-1 max-sm:gap-gap-xl sm:grid-cols-2">
           {children}
         </div>
       </div>
