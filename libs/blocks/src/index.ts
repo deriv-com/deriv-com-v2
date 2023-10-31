@@ -8,3 +8,4 @@ export * from './lib/hero';
 export * from './lib/features';
 export * from './lib/trade-types';
 export * from './lib/fast-payment';
+export * from './lib/footer';
