@@ -91,18 +91,21 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         )}
       >
         {icon && icon}
-        <div
-          className={qtMerge(
-            'flex flex-1 flex-col',
-            textColorVariantClass[color],
-            sizeVariantTextGap[size],
-          )}
-        >
-          {header && <HeadingComponent>{header}</HeadingComponent>}
-          {description && (
-            <Text size={textSizeVariant[size]}>{description}</Text>
-          )}
-        </div>
+        {(header || description) && (
+          <div
+            className={qtMerge(
+              'flex flex-1 flex-col',
+              textColorVariantClass[color],
+              sizeVariantTextGap[size],
+            )}
+          >
+            {header && <HeadingComponent>{header}</HeadingComponent>}
+            {description && (
+              <Text size={textSizeVariant[size]}>{description}</Text>
+            )}
+          </div>
+        )}
+
         {link && (
           <CustomLink href={link.href} size={size} hasIcon hasHoverColor>
             {link.content}

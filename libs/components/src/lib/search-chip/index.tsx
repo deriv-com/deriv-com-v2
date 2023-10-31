@@ -3,17 +3,26 @@ import { qtMerge } from '@deriv/quill-design';
 import { StandaloneSearchRegularIcon } from '@deriv/quill-icons';
 import { useEffect, useState } from 'react';
 
+export type sizeVariant = 'sm' | 'md';
+
 export type InputProps = {
   placeholder?: string;
   value?: string;
   onChange: (e: string, i?: React.FormEvent<HTMLInputElement>) => void;
   className?: string;
   inputClassName?: string;
+  size?: sizeVariant;
+};
+
+const sizeVariantClass: { [key in sizeVariant]: string } = {
+  sm: 'p-general-xs',
+  md: 'p-general-md',
 };
 
 export const SearchChip = ({
   placeholder,
   value = '',
+  size = 'md',
   onChange,
   className,
   inputClassName,
@@ -29,7 +38,7 @@ export const SearchChip = ({
       className={qtMerge(
         'flex justify-start gap-general-sm rounded-lg border-75',
         'border-solid-slate-100 bg-background-primary-container',
-        'p-general-md',
+        sizeVariantClass[size],
         className,
       )}
     >
