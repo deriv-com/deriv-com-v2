@@ -2,7 +2,7 @@ import styles from './base.module.css';
 import { LinkProps } from '@deriv-com/utils';
 import CustomLink from '../../link';
 import { BreadcrumbsProps } from '../types';
-import { isMobile } from 'react-device-detect';
+import { useWindowWidth } from '@react-hook/window-size';
 import { Fragment, useEffect, useState } from 'react';
 import { qtMerge } from '@deriv/quill-design';
 
@@ -13,7 +13,7 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
   const isLastItem = (key: number) => links.length - 1 > key;
   const links_len = links.length;
   const max_links = 3;
-  const hasExtra = isMobile && max_links < links_len;
+  const hasExtra = useWindowWidth() < 768 && max_links < links_len;
 
   useEffect(() => {
     setRenderLinks(links);
@@ -40,7 +40,7 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
   return (
     <div className={qtMerge('flex', className)}>
       {render_links.map(({ content, href }, lk) => (
-        <Fragment key={`${href}-${lk}`}>
+        <Fragment key={`breadcrumbs-${content}`}>
           {hasExtra && lk === 1 && (
             <select
               className={styles['breadcrumbs-select']}
@@ -52,7 +52,7 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
             >
               {dropwdown_links.map(({ href, content }, dk) => {
                 return (
-                  <option key={`dropdown-${href}`} value={href}>
+                  <option key={`dropdown-${content}`} value={href}>
                     {content}
                   </option>
                 );
