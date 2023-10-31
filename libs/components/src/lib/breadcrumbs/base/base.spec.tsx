@@ -4,9 +4,7 @@ import Base from '.';
 
 describe('Base', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(
-      <Base links={[{ href: 'home', content: 'Home' }]} />,
-    );
+    const { baseElement } = render(<Base />);
     expect(baseElement).toBeTruthy();
   });
 });
