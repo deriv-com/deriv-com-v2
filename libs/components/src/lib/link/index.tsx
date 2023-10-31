@@ -12,6 +12,7 @@ export interface CustomLinkProps extends ComponentPropsWithRef<typeof Link> {
   hasHoverColor?: boolean;
   hasHoverDecoration?: boolean;
   hasLinkColor?: boolean;
+  disabled?: boolean;
 }
 
 type textSize = 'sm' | 'md' | 'lg';
@@ -25,6 +26,7 @@ export function CustomLink({
   hasHoverColor = false,
   hasHoverDecoration = true,
   hasLinkColor = false,
+  disabled = false,
   children,
   ...rest
 }: CustomLinkProps) {
@@ -73,6 +75,7 @@ export function CustomLink({
         hasLinkColor && 'text-typography-link',
         hasHoverColor && 'hover:text-typography-link',
         hasHoverDecoration && 'hover:underline',
+        disabled && 'pointer-events-none text-opacity-black-400',
         className,
       )}
       {...rest}
