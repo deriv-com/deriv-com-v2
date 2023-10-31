@@ -7,7 +7,7 @@ export const SocialMediaSection = ({
   socialButtons: SocialIcons[];
 }) => {
   return (
-    <div className="flex flex-row gap-gap-lg max-lg:justify-center">
+    <div className="flex gap-gap-lg max-lg:justify-center">
       {socialButtons.map((item) => (
         <Text className="px-[6px] text-icon-standalone-md" key={item.href}>
           {item.icon}
