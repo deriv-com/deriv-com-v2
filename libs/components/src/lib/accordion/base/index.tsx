@@ -93,9 +93,11 @@ export const Base = ({
     >
       <div
         className={qtMerge(
-          'flex cursor-pointer items-center justify-between',
+          'flex cursor-pointer items-center justify-between rounded-t-1200',
+          !is_expanded && 'rounded-b-1200',
           'gap-general-lg p-general-lg',
           'hover:bg-opacity-black-100',
+          'active:bg-opacity-black-200',
         )}
         onClick={() => toggleCollapse()}
       >
