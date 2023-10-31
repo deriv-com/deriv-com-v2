@@ -6,7 +6,8 @@ export const Flush = ({ ...otherProps }: AccordionProps) => {
   return (
     <Base
       divider="bottom"
-      className="border-x-none [&>div:first-child]:rounded-50"
+      className="border-x-none"
+      contentClass="rounded-50"
       {...otherProps}
     />
   );
