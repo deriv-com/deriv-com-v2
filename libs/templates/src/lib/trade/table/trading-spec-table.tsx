@@ -80,6 +80,7 @@ const TradingSpecTable = () => {
             onChange={(i) => setSearchValue(i)}
             value={searchValue}
             placeholder="Search"
+            size="sm"
           />
         </form>
 
