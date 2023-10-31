@@ -34,19 +34,6 @@ export const helpCardsData = [
     },
   },
   {
-    header: 'Ask community',
-    description:
-      'Chat with a Deriv representative for personalized assistance.',
-    size: 'sm',
-    color: 'light',
-    align: 'start',
-    icon: <IllustrativeCommunityIcon fill="black" iconSize="md" />,
-    link: {
-      href: '#',
-      content: 'Explore now',
-    },
-  },
-  {
     header: 'Complaints',
     description: "File a complaint with Deriv's customer support team.",
     size: 'sm',
