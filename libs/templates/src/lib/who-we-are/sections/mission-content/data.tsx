@@ -27,7 +27,7 @@ const Content = () => {
 
   return (
     <>
-      {datas.map((data, index) => {
+      {datas.map((data) => {
         return (
           <Text className="text-typography-default" key={data.id}>
             {data.text}
