@@ -19,22 +19,6 @@ export function HelpCenterTemplate() {
               content: 'Help Centre',
               href: '/help-centre',
             },
-            {
-              content: 'Help Centre1',
-              href: '/help-centre1',
-            },
-            {
-              content: 'Help Centre2',
-              href: '/help-centre2',
-            },
-            {
-              content: 'Help Centre3',
-              href: '/help-centre3',
-            },
-            {
-              content: 'Help Centre4',
-              href: '/help-centre4',
-            },
           ]}
         />
         <Hero.ContentTop title="How can we help?">
