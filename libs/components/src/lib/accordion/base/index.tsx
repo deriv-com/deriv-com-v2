@@ -15,7 +15,7 @@ export const Base = ({
   icon,
   divider = 'both',
   customContent: CustomContent,
-  contentClass,
+  borderRadius = true,
   onExpand,
 }: AccordionProps) => {
   const [is_expanded, setExpanded] = useState(expanded);
@@ -94,11 +94,11 @@ export const Base = ({
     >
       <div
         className={qtMerge(
-          'flex cursor-pointer items-center justify-between rounded-t-1200',
+          'flex cursor-pointer items-center justify-between',
           'gap-general-lg p-general-lg',
           'hover:bg-opacity-black-100',
           'active:bg-opacity-black-200',
-          contentClass,
+          borderRadius && 'rounded-t-1200',
         )}
         onClick={() => toggleCollapse()}
       >

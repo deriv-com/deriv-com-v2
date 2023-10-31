@@ -10,7 +10,7 @@ export interface AccordionProps {
   expanded?: boolean;
   customContent?: () => ReactNode;
   divider?: AccordionDivider;
-  contentClass?: string;
+  borderRadius?: boolean;
   onExpand?: (e: boolean, i: string) => void;
 }
 

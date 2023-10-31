@@ -7,7 +7,7 @@ export const Flush = ({ ...otherProps }: AccordionProps) => {
     <Base
       divider="bottom"
       className="border-x-none"
-      contentClass="rounded-50"
+      borderRadius={false}
       {...otherProps}
     />
   );
