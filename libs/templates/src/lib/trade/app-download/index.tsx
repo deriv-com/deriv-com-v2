@@ -1,12 +1,8 @@
 import React, { HTMLAttributes } from 'react';
-import {
-  BodyTypographyProps,
-  Heading,
-  Text,
-  qtMerge,
-} from '@deriv/quill-design';
+import { BodyTypographyProps, Heading, Text } from '@deriv/quill-design';
 import { Card } from '@deriv-com/components';
 import { data } from './data';
+import clsx from 'clsx';
 
 const AppDownload = () => {
   const { content, heading, description, cta, platforms } = data;
@@ -16,10 +12,7 @@ const AppDownload = () => {
     ...props
   }) => {
     return (
-      <Text
-        className={qtMerge('text-typography-default', className)}
-        {...props}
-      />
+      <Text className={clsx('text-typography-default', className)} {...props} />
     );
   };
 
@@ -27,7 +20,7 @@ const AppDownload = () => {
     className,
     ...props
   }) => {
-    return <div className={qtMerge('flex', className)} {...props} />;
+    return <div className={clsx('flex', className)} {...props} />;
   };
 
   return (
