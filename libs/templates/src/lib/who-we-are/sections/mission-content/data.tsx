@@ -2,7 +2,7 @@ import { Text } from '@deriv/quill-design';
 
 const Content = () => {
   return (
-    <>
+    <div className="flex flex-col gap-gap-xl [&>p]:text-opacity-black-600">
       <Text>
         Deriv is one of the world’s largest online brokers for forex. We offer
         millions of traders worldwide a diverse range of trading assets on the
@@ -22,7 +22,7 @@ const Content = () => {
           Make trading accessible to anyone, anywhere
         </span>
       </Text>
-    </>
+    </div>
   );
 };
 
