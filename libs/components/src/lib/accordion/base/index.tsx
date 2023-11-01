@@ -15,7 +15,7 @@ export const Base = ({
   icon,
   divider = 'both',
   customContent: CustomContent,
-  borderRadius = true,
+  contentClass,
   onExpand,
 }: AccordionProps) => {
   const [is_expanded, setExpanded] = useState(expanded);
@@ -98,7 +98,7 @@ export const Base = ({
           'gap-general-lg p-general-lg',
           'hover:bg-opacity-black-100',
           'active:bg-opacity-black-200',
-          borderRadius && 'rounded-t-1200',
+          contentClass,
         )}
         onClick={() => toggleCollapse()}
       >
