@@ -51,11 +51,12 @@ export function AccordionBlock({
   return (
     <FluidContainer
       className={qtMerge(
-        'flex w-full max-w-[1024px] flex-col items-center justify-center py-general-xl',
+        'flex w-full max-w-[1024px] flex-col items-center justify-center gap-gap-3xl py-general-xl',
         className,
       )}
     >
       {title && <Heading.H2>{title}</Heading.H2>}
+
       <div className="flex w-full flex-col gap-general-lg">
         <div className={content?.className}>
           {content.data.map((acc_data) => {

@@ -14,28 +14,15 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     className: '',
-    title: 'Title here',
-    tab: 'label',
+    title: 'Title goes here',
     variant: 'fill',
     content: {
-      className: '', // Optionally, if needed based on the error message
       data: [
         {
           icon: <StandaloneAndroidIcon />,
-          title: 'Test title',
-          subtitle: 'This is a test subtitle',
-          content: () => (
-            <img
-              className="flex w-full flex-1"
-              src="https://placehold.co/640x320"
-              alt="Placeholder"
-            />
-          ),
-        },
-        {
-          icon: <StandaloneAndroidIcon />,
-          title: 'Test title',
-          subtitle: 'This is a test subtitle',
+          title: 'This is the title',
+          subtitle: 'Subtitle goes here',
+          className: 'border-opacity-black-100 border-x-none',
           content: () => (
             <img
               className="flex w-full flex-1"
