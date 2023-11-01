@@ -5,10 +5,22 @@ import { slugify } from '@deriv-com/utils';
 import { FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
 import { useState } from 'react';
 
+export type AccordionVariant = 'flush' | 'fill' | 'elevate' | 'outline';
+
+const accordionVariant: {
+  [key in AccordionVariant]: React.ComponentType<AccordionProps>;
+} = {
+  flush: Accordion.Flush,
+  fill: Accordion.Fill,
+  elevate: Accordion.Elevate,
+  outline: Accordion.Outline,
+};
+
 export interface AccordionBlockProps {
   title?: string;
   tab?: string;
   className?: string;
+  variant: string;
   content: {
     className?: string;
     data: AccordionProps[];
@@ -21,6 +33,7 @@ export function AccordionBlock({
   tab,
   content,
   className,
+  variant,
   multiCollapse = false,
 }: AccordionBlockProps) {
   const [expanded, setExpanded] = useState('');
@@ -47,8 +60,10 @@ export function AccordionBlock({
             const { title: acc_title } = acc_data;
             const id = slugify(acc_title as string);
 
+            const ChosenAccordion = accordionVariant['flush'];
+
             return (
-              <Accordion.Flush
+              <ChosenAccordion
                 {...acc_data}
                 id={id}
                 key={acc_title}
