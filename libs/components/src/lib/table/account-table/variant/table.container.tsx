@@ -23,7 +23,7 @@ export const Container = ({
         className,
       )}
     >
-      <div className="flex flex-col gap-gap-xl p-general-xl lg:gap-gap-2xl lg:p-general-2xl">
+      <div className="flex flex-col gap-gap-xl p-general-xl lg:gap-gap-3xl">
         <div className="flex flex-col gap-gap-lg">
           <Heading.H3>{tableData.header}</Heading.H3>
           <Text className="text-opacity-black-600">
@@ -34,11 +34,11 @@ export const Container = ({
       </div>
       <div
         className={clsx(
-          'col-span-2 p-general-xl max-md:rounded-b-2xl md:rounded-r-2xl lg:p-general-2xl',
+          'col-span-2 p-general-xl max-sm:rounded-b-xl sm:rounded-r-xl',
           contentClasses,
         )}
       >
-        <div className="grid h-full grid-cols-1 max-md:gap-gap-xl md:grid-cols-2">
+        <div className="grid h-full grid-cols-1 max-sm:gap-gap-xl sm:grid-cols-2">
           {children}
         </div>
       </div>
