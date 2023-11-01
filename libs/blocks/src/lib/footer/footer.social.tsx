@@ -1,4 +1,4 @@
-import { SocialIcons } from '.';
+import { SocialIcons } from './footer-block';
 import React from 'react';
 
 export const SocialMediaSection = ({
