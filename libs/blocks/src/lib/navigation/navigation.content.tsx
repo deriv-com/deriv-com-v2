@@ -10,7 +10,7 @@ export const NavigationContent = () => {
           {activeItem.columns.map((column) => (
             <div
               key={column.id}
-              className="flex flex-col justify-center gap-gap-lg"
+              className="flex flex-col items-start justify-center gap-gap-lg"
             >
               {column.header && (
                 <NavigationLink
