@@ -1,4 +1,5 @@
 export * from './lib/live-market';
+export * from './accordion';
 export * from './lib/content-text';
 export * from './lib/account-comparison';
 export * from './lib/stat';

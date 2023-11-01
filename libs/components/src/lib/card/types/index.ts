@@ -7,7 +7,7 @@ export type CardAlignVariant = 'start' | 'center';
 export type CardSizeVariant = 'sm' | 'md' | 'lg';
 
 interface BaseCardContent {
-  header: string;
+  header?: string;
 }
 
 export interface StatCardContent extends BaseCardContent {
