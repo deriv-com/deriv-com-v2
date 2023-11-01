@@ -1,9 +1,8 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import SearchChip from './index';
 
 const meta = {
-  title: 'Components/Search-chip',
+  title: 'Components/SearchChip',
   component: SearchChip,
   parameters: {
     layout: 'centered',
