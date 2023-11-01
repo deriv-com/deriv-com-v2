@@ -15,6 +15,7 @@ export const Base = ({
   icon,
   divider = 'both',
   customContent: CustomContent,
+  contentClass,
   onExpand,
 }: AccordionProps) => {
   const [is_expanded, setExpanded] = useState(expanded);
@@ -83,7 +84,7 @@ export const Base = ({
       ref={accordion_element}
       tabIndex={0}
       className={qtMerge(
-        'flex w-full flex-col',
+        'flex w-full flex-col overflow-hidden',
         'focus-visible:outline-1 focus-visible:outline-opacity-red-100',
         divider === 'bottom' && 'border-xs border-b-opacity-black-100',
         divider === 'both' &&
@@ -96,6 +97,8 @@ export const Base = ({
           'flex cursor-pointer items-center justify-between',
           'gap-general-lg p-general-lg',
           'hover:bg-opacity-black-100',
+          'active:bg-opacity-black-200',
+          contentClass,
         )}
         onClick={() => toggleCollapse()}
       >
