@@ -1,8 +1,8 @@
 import { qtMerge, Text, Button } from '@deriv/quill-design';
 import {
-  StandaloneArrowUpRegularIcon,
-  StandaloneArrowDownRegularIcon,
-  StandaloneArrowRightRegularIcon,
+  StandaloneChartTrendDownRegularIcon,
+  StandaloneChartTrendSidewayRegularIcon,
+  StandaloneChartTrendUpRegularIcon,
 } from '@deriv/quill-icons';
 import { LiveMarketContent } from '../types';
 import LivePrice from './live-price';
@@ -22,27 +22,27 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   spread,
 }) => {
   const colorVariant = {
-    up: 'fill-solid-emerald-900',
-    down: 'fill-solid-cherry-700',
-    remain: 'fill-opacity-black-400',
-    closed: 'fill-opacity-black-300',
+    up: 'fill-solid-emerald-900 text-solid-emerald-900',
+    down: 'fill-solid-cherry-700 text-solid-cherry-700',
+    remain: 'fill-opacity-black-400 text-opacity-black-400',
+    closed: 'fill-opacity-black-300 text-opacity-black-300',
   };
 
   const ChartIcons = {
     up: (
-      <StandaloneArrowUpRegularIcon
+      <StandaloneChartTrendUpRegularIcon
         iconSize="sm"
         className={colorVariant[status]}
       />
     ),
     down: (
-      <StandaloneArrowDownRegularIcon
+      <StandaloneChartTrendDownRegularIcon
         iconSize="sm"
         className={colorVariant[status]}
       />
     ),
     remain: (
-      <StandaloneArrowRightRegularIcon
+      <StandaloneChartTrendSidewayRegularIcon
         iconSize="sm"
         className={colorVariant[status]}
       />
@@ -71,7 +71,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         </div>
         <div className="flex flex-row gap-gap-md pt-[2px]">
           {status !== 'closed' && ChartIcons[status]}
-          <Text size="md" style={{ color: colorVariant[status] }}>
+          <Text size="md" className={colorVariant[status]}>
             {changePercentage}
           </Text>
         </div>

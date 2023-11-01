@@ -72,9 +72,7 @@ export const LiveMarket = <T extends CardVariantType>({
         {link && (
           <CustomLink
             href={link.href}
-            className={clsx(
-              'flex items-center justify-center text-body-md text-solid-slate-1400 hover:text-solid-slate-1400 hover:underline',
-            )}
+            className={clsx('flex items-center justify-center text-body-md')}
           >
             {link.content}
             <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />
