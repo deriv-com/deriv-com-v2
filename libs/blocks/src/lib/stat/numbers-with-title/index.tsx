@@ -20,7 +20,7 @@ export const NumbersWithTitle: React.FC<NumbersWithTitleProps> = ({
             <Heading.H2 className="text-solid-slate-1400">{title}</Heading.H2>
           )}
           {description && (
-            <Text size="lg" className="text-solid-slate-1400">
+            <Text size="xl" className="text-solid-slate-1400">
               {description}
             </Text>
           )}
