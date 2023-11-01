@@ -22,6 +22,7 @@ const AnswerSection = ({ header, questions, answers }: FAQDataType) => {
         content={{
           data: accordion_items,
         }}
+        variant="flush"
       />
     </Section>
   );

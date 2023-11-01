@@ -20,7 +20,7 @@ export interface AccordionBlockProps {
   title?: string;
   tab?: string;
   className?: string;
-  variant: string;
+  variant: AccordionVariant;
   content: {
     className?: string;
     data: AccordionProps[];
@@ -46,6 +46,8 @@ export function AccordionBlock({
     }
   };
 
+  const ChosenAccordion = accordionVariant[variant];
+
   return (
     <FluidContainer
       className={qtMerge(
@@ -59,8 +61,6 @@ export function AccordionBlock({
           {content.data.map((acc_data) => {
             const { title: acc_title } = acc_data;
             const id = slugify(acc_title as string);
-
-            const ChosenAccordion = accordionVariant['flush'];
 
             return (
               <ChosenAccordion
