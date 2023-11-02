@@ -62,7 +62,7 @@
 #  deriv-com-v2/config
 # ==============================================================
 
-/.github/**/*                                                    @mohsen-deriv @prince-deriv
-/.husky/*                                                        @mohsen-deriv @prince-deriv
+/.github/**/*                                                    @mohsen-deriv
+/.husky/*                                                        @mohsen-deriv
 
 
