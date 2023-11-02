@@ -1,20 +1,10 @@
 /* eslint-disable-next-line */
-
 import { Accordion, AccordionProps } from '@deriv-com/components';
 import { slugify } from '@deriv-com/utils';
 import { FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
 import { useState } from 'react';
 
-export type AccordionVariant = 'flush' | 'fill' | 'elevate' | 'outline';
-
-const accordionVariant: {
-  [key in AccordionVariant]: React.ComponentType<AccordionProps>;
-} = {
-  flush: Accordion.Flush,
-  fill: Accordion.Fill,
-  elevate: Accordion.Elevate,
-  outline: Accordion.Outline,
-};
+export type AccordionVariant = 'Flush' | 'Fill' | 'Elevate' | 'Outline';
 
 export interface AccordionBlockProps {
   title?: string;
@@ -46,7 +36,7 @@ export function AccordionBlock({
     }
   };
 
-  const ChosenAccordion = accordionVariant[variant];
+  const DynamicAccordion = Accordion[variant];
 
   return (
     <FluidContainer
@@ -64,7 +54,7 @@ export function AccordionBlock({
             const id = slugify(acc_title as string);
 
             return (
-              <ChosenAccordion
+              <DynamicAccordion
                 {...acc_data}
                 id={id}
                 key={acc_title}
