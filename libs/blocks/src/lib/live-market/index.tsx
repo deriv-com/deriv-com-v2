@@ -4,7 +4,13 @@ import {
   CardVariantType,
   CustomLink,
 } from '@deriv-com/components';
-import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import {
+  FluidContainer,
+  Heading,
+  Section,
+  Text,
+  qtMerge,
+} from '@deriv/quill-design';
 import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
@@ -33,7 +39,7 @@ export const LiveMarket = <T extends CardVariantType>({
 }: LiveMarketProps<T>) => {
   return (
     <Section
-      className={clsx(
+      className={qtMerge(
         'py-general-4xl',
         'bg-background-primary-container',
         className,
