@@ -34,6 +34,6 @@ const FAQData = [
 
 export const Default: Story = {
   args: {
-    FAQdata: FAQData,
+    data: FAQData,
   },
 };
