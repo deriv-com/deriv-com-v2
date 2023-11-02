@@ -21,7 +21,7 @@ export const Default: Story = {
   args: {
     className: '',
     title: 'Title goes here',
-    variant: 'Fill',
+    variant: 'Flush',
     content: {
       data: [
         {
