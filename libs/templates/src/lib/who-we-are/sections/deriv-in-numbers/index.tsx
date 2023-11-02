@@ -3,8 +3,8 @@ import { StatCardContent } from '@deriv-com/components';
 
 const derivInNumbersCard: StatCardContent[] = [
   {
-    header: '2.5 million+',
-    description: 'online traders worldwide',
+    header: '2.5M+',
+    description: 'Online traders worldwide',
     color: 'dark',
   },
   {
