@@ -12,7 +12,7 @@ export interface AccordionBlockProps {
   title?: string;
   tab?: string;
   className?: string;
-  variant: keyof AccordionVariants;
+  variant?: keyof AccordionVariants;
   content: {
     className?: string;
     data: AccordionProps[];
@@ -25,7 +25,7 @@ export function AccordionBlock({
   tab,
   content,
   className,
-  variant,
+  variant = 'Flush',
   multiCollapse = false,
 }: AccordionBlockProps) {
   const [expanded, setExpanded] = useState('');
