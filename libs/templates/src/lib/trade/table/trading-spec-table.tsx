@@ -68,7 +68,7 @@ const TradingSpecTable = () => {
   return (
     <Section
       className={qtMerge(
-        'py-general-4xl md:mx-auto lg:mx-auto lg:max-w-[1232px]',
+        'py-general-4xl md:px-general-md lg:mx-auto lg:max-w-[1232px]',
       )}
     >
       <div className="flex flex-row gap-gap-lg px-general-md pb-general-md lg:justify-between lg:px-general-none lg:pb-general-lg">

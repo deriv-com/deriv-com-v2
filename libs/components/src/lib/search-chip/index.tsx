@@ -15,7 +15,7 @@ export type InputProps = {
 };
 
 const sizeVariantClass: { [key in sizeVariant]: string } = {
-  sm: 'p-general-xs',
+  sm: 'px-general-sm py-general-xs',
   md: 'p-general-md',
 };
 
@@ -36,7 +36,7 @@ export const SearchChip = ({
   return (
     <div
       className={qtMerge(
-        'flex justify-start gap-general-sm rounded-lg border-75',
+        'relative flex justify-start gap-general-sm rounded-lg border-75',
         'border-solid-slate-100 bg-background-primary-container',
         sizeVariantClass[size],
         className,
