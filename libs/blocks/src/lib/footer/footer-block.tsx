@@ -13,7 +13,7 @@ export interface FooterProps {
   className?: string;
   children: ReactNode;
   socialButtons?: SocialIcons[];
-  descriptionContent: () => ReactNode;
+  descriptionContent?: () => ReactNode;
   warningText?: string;
 }
 
@@ -43,10 +43,10 @@ export const FooterBlock = ({
         </div>
         <div className="hidden lg:block">{children}</div>
         <div className="flex flex-col gap-gap-lg">
-          <DescriptionContent />
+          {DescriptionContent && <DescriptionContent />}
           {warningText && (
-            <div className="rounded-lg bg-solid-slate-75 p-general-md">
-              <Text size="sm" className="text-opacity-black-400">
+            <div className="rounded-lg bg-background-primary-base p-general-md">
+              <Text size="sm" className="text-typography-subtle">
                 {warningText}
               </Text>
             </div>

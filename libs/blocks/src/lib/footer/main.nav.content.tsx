@@ -2,14 +2,25 @@ import { Heading, Text } from '@deriv/quill-design';
 import { FooterItems } from './types';
 import { CustomLink } from '@deriv-com/components';
 import React from 'react';
+import clsx from 'clsx';
 
+export type gridCols = 'four' | 'six';
 export interface MainNavContentProps {
   items: FooterItems[];
+  cols?: gridCols;
 }
 
-export const MainNavContent = ({ items }: MainNavContentProps) => {
+const gridColsVariant: { [key in gridCols]: string } = {
+  four: 'grid-cols-4',
+  six: 'grid-cols-6',
+};
+
+export const MainNavContent = ({
+  items,
+  cols = 'four',
+}: MainNavContentProps) => {
   return (
-    <div className="grid grid-cols-4 gap-gap-lg">
+    <div className={clsx('grid gap-gap-lg', gridColsVariant[cols])}>
       {items.map((item) => (
         <div className="flex flex-col gap-gap-xl" key={item.id}>
           {item.layers.map((layer) =>

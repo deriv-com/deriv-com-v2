@@ -1,8 +1,10 @@
 import { ReactNode } from 'react';
 import MainFooter from './main';
+import ROWFooter from './main/row.footer';
 
 export type FooterVariants = {
   Main: typeof MainFooter;
+  ROW: typeof ROWFooter;
 };
 
 export const Footer: FooterVariants = ({
@@ -14,5 +16,6 @@ export const Footer: FooterVariants = ({
 };
 
 Footer.Main = MainFooter;
+Footer.ROW = ROWFooter;
 
 export default Footer;

@@ -16,15 +16,15 @@ export default meta;
 const social = [
   {
     icon: <StandaloneFacebookIcon iconSize="md" />,
-    href: 'https://www.facebook.com/derivdotcom/',
+    href: '/',
   },
   {
     icon: <StandaloneAppleIcon iconSize="md" />,
-    href: 'https://www.facebook.com/derivdotcom/',
+    href: '/',
   },
   {
     icon: <StandaloneInstagramIcon iconSize="md" />,
-    href: 'https://www.facebook.com/derivdotcom/',
+    href: '/',
   },
 ];
 
