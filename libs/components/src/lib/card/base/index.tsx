@@ -94,9 +94,10 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         {(header || description) && (
           <div
             className={qtMerge(
-              'flex flex-1 flex-col',
+              'flex flex-col',
               textColorVariantClass[color],
               sizeVariantTextGap[size],
+              content ? '' : 'flex-1',
             )}
           >
             {header && <HeadingComponent>{header}</HeadingComponent>}
