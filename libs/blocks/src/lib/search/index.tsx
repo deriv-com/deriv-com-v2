@@ -1,29 +1,27 @@
-import { CardContent, CustomLink, SearchChip } from '@deriv-com/components';
+import { CustomLink, SearchChip } from '@deriv-com/components';
 import { searchString } from '@deriv-com/utils';
 import { Text } from '@deriv/quill-design';
-import { FAQSearchResults } from 'libs/templates/src/lib/help-center/types';
 import { useState } from 'react';
-import Features from '../features';
 import { getHelpCentreLink } from 'libs/templates/src/lib/help-center/sections/search/components';
 
-export type SearchBlockProps = {
-  FAQdata: FAQSearchResults[];
-  hasQuestionCards?: boolean;
-  CardsFAQ?: CardContent[];
+type SearchResults = {
+  header: string;
+  questions: string[];
 };
 
-export const SearchBlock = ({
-  FAQdata,
-  hasQuestionCards,
-  CardsFAQ,
-}: SearchBlockProps) => {
+export type SearchBlockProps = {
+  data: SearchResults[];
+  onSearchKeyChange: (searchKey: string) => void;
+};
+
+export const SearchBlock = ({ data, onSearchKeyChange }: SearchBlockProps) => {
   const [search_key, setSearchKey] = useState('');
-  const [results, setResults] = useState<FAQSearchResults[]>([]);
+  const [results, setResults] = useState<SearchResults[]>([]);
 
   const showSearchresults = (query: string) => {
-    const final_matches: FAQSearchResults[] = [];
+    const final_matches: SearchResults[] = [];
 
-    FAQdata.forEach(({ header, questions }) => {
+    data.forEach(({ header, questions }) => {
       const matches = searchString(query, questions);
 
       if (matches.length) {
@@ -37,6 +35,7 @@ export const SearchBlock = ({
     setResults(final_matches);
 
     setSearchKey(query);
+    onSearchKeyChange(query);
   };
   return (
     <>
@@ -75,9 +74,6 @@ export const SearchBlock = ({
           </div>
         )}
       </section>
-      {!search_key && hasQuestionCards && (
-        <Features.Card variant="ContentLeft" cards={CardsFAQ} cols="three" />
-      )}
     </>
   );
 };
