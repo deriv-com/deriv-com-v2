@@ -45,6 +45,7 @@ export const SearchChip = ({
       <StandaloneSearchRegularIcon fill="black" iconSize="sm" />
 
       <input
+        autoFocus
         className={qtMerge(
           'w-full text-75 outline-none',
           'text-solid-slate-1400',

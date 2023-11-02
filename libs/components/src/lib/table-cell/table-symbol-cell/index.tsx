@@ -42,10 +42,10 @@ export const TableSymbolCell: React.FC<TableCellProps> = ({
         className,
       )}
     >
-      <div className={qtMerge('gap-gap-md', 'flex', 'items-center')}>
+      <div className="flex items-center gap-gap-md">
         {icon && icon}
         <Heading.H7>{header}</Heading.H7>
-        <div className={qtMerge('flex flex-col', 'items-start justify-center')}>
+        <div className="flex flex-col items-start justify-center">
           {label && <Text size="sm">{label}</Text>}
           {description && (
             <Text

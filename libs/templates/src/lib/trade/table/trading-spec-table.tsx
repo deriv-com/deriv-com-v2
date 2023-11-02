@@ -66,14 +66,10 @@ const TradingSpecTable = () => {
     document.body.style.overflow = showBottomSheet ? 'hidden' : 'scroll';
   }, [showBottomSheet]);
   return (
-    <Section
-      className={qtMerge(
-        'py-general-4xl md:px-general-md lg:mx-auto lg:max-w-[1232px]',
-      )}
-    >
+    <Section className="py-general-4xl md:px-general-md lg:mx-auto lg:max-w-[1232px]">
       <div className="flex flex-row gap-gap-lg px-general-md pb-general-md lg:justify-between lg:px-general-none lg:pb-general-lg">
         <form
-          className={qtMerge('w-[323px] md:w-[340px] lg:w-[360px]')}
+          className="w-[323px] md:w-[340px] lg:w-[360px]"
           onSubmit={() => handleSubmit}
         >
           <SearchChip
@@ -88,7 +84,7 @@ const TradingSpecTable = () => {
           <LabelPairedEllipsisVerticalBoldIcon
             fill="black"
             iconSize="md"
-            className={qtMerge('block md:hidden lg:hidden')}
+            className="block md:hidden lg:hidden"
             onClick={() => {
               setShowBottomSheet(true);
               window.scrollTo(
@@ -143,7 +139,7 @@ const TradingSpecTable = () => {
           </Button>
         </div>
       </div>
-      <table className={qtMerge('overflow-auto', 'inline-block', 'w-[100%]')}>
+      <table className="inline-block w-[100%] overflow-auto">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
@@ -164,7 +160,7 @@ const TradingSpecTable = () => {
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <td key={cell.id} className={qtMerge('p-general-none')}>
+                <td key={cell.id} className="p-general-none">
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}
@@ -175,26 +171,18 @@ const TradingSpecTable = () => {
       {data.length < 1 && (
         <Text
           size="lg"
-          className={qtMerge(
-            'pt-general-4xl text-center text-typography-default',
-          )}
+          className="pt-general-4xl text-center text-typography-default"
         >
           Sorry, we couldn’t find any results with "{searchValue}" in it
         </Text>
       )}
       {data.length > 1 && (
-        <div
-          className={qtMerge(
-            'flex flex-col',
-            'pt-general-lg',
-            'gap-gap-xl lg:gap-gap-2xl ',
-          )}
-        >
-          <div className={qtMerge('flex justify-center', 'gap-gap-md')}>
+        <div className="flex flex-col gap-gap-xl pt-general-lg lg:gap-gap-2xl">
+          <div className="flex justify-center gap-gap-md">
             <Button
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
-              className={qtMerge('bg-opacity-white-100')}
+              className="bg-opacity-white-100"
             >
               <StandaloneChevronLeftRegularIcon fill="black" iconSize="sm" />
             </Button>
@@ -219,14 +207,14 @@ const TradingSpecTable = () => {
             <Button
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
-              className={qtMerge('bg-opacity-white-100')}
+              className="bg-opacity-white-100"
             >
               <StandaloneChevronRightRegularIcon fill="black" iconSize="sm" />
             </Button>
           </div>
         </div>
       )}
-      <div className={qtMerge('flex justify-center pt-general-2xl')}>
+      <div className="flex justify-center pt-general-2xl">
         <Button colorStyle="black" size="lg">
           Trade now
         </Button>
@@ -245,11 +233,9 @@ const TradingSpecTable = () => {
             />
           }
         >
-          <div className={qtMerge('mb-gap-lg flex flex-col p-general-md')}>
+          <div className="mb-gap-lg flex flex-col p-general-md">
             <div
-              className={qtMerge(
-                'flex flex-row items-center gap-gap-md py-gap-md',
-              )}
+              className="flex flex-row items-center gap-gap-md py-gap-md"
               onClick={() => {
                 setSelectedFilter(mainInfo.data);
                 setSelectedInfo('mainInfo');
@@ -264,9 +250,7 @@ const TradingSpecTable = () => {
               <Text size="md">Main info</Text>
             </div>
             <div
-              className={qtMerge(
-                'flex flex-row items-center gap-gap-md py-gap-md',
-              )}
+              className="flex flex-row items-center gap-gap-md py-gap-md"
               onClick={() => {
                 setSelectedFilter(trading_condition.data);
                 setSelectedInfo('trading_condition');
@@ -280,9 +264,7 @@ const TradingSpecTable = () => {
               <Text size="md">Trading conditions</Text>
             </div>
             <div
-              className={qtMerge(
-                'flex flex-row items-center gap-gap-md py-gap-md',
-              )}
+              className="flex flex-row items-center gap-gap-md py-gap-md"
               onClick={() => {
                 setSelectedFilter(additional_info.data);
                 setSelectedInfo('additional_info');

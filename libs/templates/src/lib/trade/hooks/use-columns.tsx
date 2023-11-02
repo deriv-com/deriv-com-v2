@@ -1,7 +1,6 @@
 import { createColumnHelper } from '@tanstack/react-table';
 import { TableDataType } from '../types/types';
 import { TableCell } from '@deriv-com/components';
-import { qtMerge } from '@deriv/quill-design';
 
 const columnHelper = createColumnHelper<TableDataType>();
 
@@ -12,14 +11,14 @@ const UseColumns = (selected: string) => {
           columnHelper.accessor('instrument', {
             header: () => (
               <TableCell.TableHeaderCell
-                className={qtMerge('px-600')}
+                className="px-600"
                 width="lg"
                 header="Instrument"
               ></TableCell.TableHeaderCell>
             ),
             cell: (info) => (
               <TableCell.TableSymbolCell
-                className={qtMerge('px-600')}
+                className="px-600"
                 width="lg"
                 icon={info.getValue()?.icon}
                 label={info.getValue()?.instrument}
@@ -30,7 +29,7 @@ const UseColumns = (selected: string) => {
           columnHelper.accessor('current_bid', {
             header: () => (
               <TableCell.TableHeaderCell
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Current Bid"
                 width="xl"
               ></TableCell.TableHeaderCell>
@@ -46,7 +45,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="xl"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Current Ask"
               ></TableCell.TableHeaderCell>
             ),
@@ -61,7 +60,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="xl"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Spread"
               ></TableCell.TableHeaderCell>
             ),
@@ -76,7 +75,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="xl"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Currency"
               ></TableCell.TableHeaderCell>
             ),
@@ -93,13 +92,13 @@ const UseColumns = (selected: string) => {
           columnHelper.accessor('instrument', {
             header: () => (
               <TableCell.TableHeaderCell
-                className={qtMerge('px-600')}
+                className="px-600"
                 header="Instrument"
               ></TableCell.TableHeaderCell>
             ),
             cell: (info) => (
               <TableCell.TableSymbolCell
-                className={qtMerge('px-600')}
+                className="px-600"
                 icon={info.getValue()?.icon}
                 label={info.getValue()?.instrument}
                 description={info.getValue()?.description}
@@ -110,7 +109,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Spread Cost per 1 Lot [USD]"
               ></TableCell.TableHeaderCell>
             ),
@@ -125,7 +124,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Commissions [USD]"
               ></TableCell.TableHeaderCell>
             ),
@@ -140,7 +139,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Effective Leverage"
               ></TableCell.TableHeaderCell>
             ),
@@ -155,7 +154,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Margin Requirement/lot"
               ></TableCell.TableHeaderCell>
             ),
@@ -170,7 +169,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Daily Swap Long (points)"
               ></TableCell.TableHeaderCell>
             ),
@@ -185,7 +184,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Daily Swap Short (points)"
               ></TableCell.TableHeaderCell>
             ),
@@ -201,7 +200,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="3 Day Swap"
               ></TableCell.TableHeaderCell>
             ),
@@ -217,13 +216,13 @@ const UseColumns = (selected: string) => {
           columnHelper.accessor('instrument', {
             header: () => (
               <TableCell.TableHeaderCell
-                className={qtMerge('px-600')}
+                className="px-600"
                 header="Instrument"
               ></TableCell.TableHeaderCell>
             ),
             cell: (info) => (
               <TableCell.TableSymbolCell
-                className={qtMerge('px-600')}
+                className="px-600"
                 icon={info.getValue()?.icon}
                 label={info.getValue()?.instrument}
                 description={info.getValue()?.description}
@@ -234,7 +233,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Contract Size"
               ></TableCell.TableHeaderCell>
             ),
@@ -249,7 +248,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Minimum Volume"
               ></TableCell.TableHeaderCell>
             ),
@@ -264,7 +263,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Maximum Volume"
               ></TableCell.TableHeaderCell>
             ),
@@ -279,7 +278,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Volume Step"
               ></TableCell.TableHeaderCell>
             ),
@@ -294,7 +293,7 @@ const UseColumns = (selected: string) => {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"
-                className={qtMerge('text-left')}
+                className="text-left"
                 header="Volume Limit"
               ></TableCell.TableHeaderCell>
             ),
