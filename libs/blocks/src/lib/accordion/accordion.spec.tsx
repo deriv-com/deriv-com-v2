@@ -31,7 +31,7 @@ describe('AccordionBlock', () => {
     const { getByText } = render(
       <AccordionBlock
         title={title}
-        variant="flush"
+        variant="Flush"
         content={{
           data: data,
         }}
