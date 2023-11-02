@@ -1,6 +1,9 @@
 /* eslint-disable-next-line */
-
-import { Accordion, AccordionProps } from '@deriv-com/components';
+import {
+  Accordion,
+  AccordionProps,
+  AccordionVariants,
+} from '@deriv-com/components';
 import { slugify } from '@deriv-com/utils';
 import { FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
 import { useState } from 'react';
@@ -9,6 +12,7 @@ export interface AccordionBlockProps {
   title?: string;
   tab?: string;
   className?: string;
+  variant?: keyof AccordionVariants;
   content: {
     className?: string;
     data: AccordionProps[];
@@ -21,6 +25,7 @@ export function AccordionBlock({
   tab,
   content,
   className,
+  variant = 'Flush',
   multiCollapse = false,
 }: AccordionBlockProps) {
   const [expanded, setExpanded] = useState('');
@@ -33,14 +38,17 @@ export function AccordionBlock({
     }
   };
 
+  const DynamicAccordion = Accordion[variant];
+
   return (
     <FluidContainer
       className={qtMerge(
-        'flex w-full max-w-[1024px] flex-col items-center justify-center py-general-xl',
+        'flex w-full max-w-[1024px] flex-col items-center justify-center gap-gap-3xl py-general-xl',
         className,
       )}
     >
       {title && <Heading.H2>{title}</Heading.H2>}
+
       <div className="flex w-full flex-col gap-general-lg">
         <div className={content?.className}>
           {content.data.map((acc_data) => {
@@ -48,7 +56,7 @@ export function AccordionBlock({
             const id = slugify(acc_title as string);
 
             return (
-              <Accordion.Flush
+              <DynamicAccordion
                 {...acc_data}
                 id={id}
                 key={acc_title}
