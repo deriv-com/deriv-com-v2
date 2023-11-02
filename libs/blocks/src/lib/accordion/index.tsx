@@ -1,16 +1,18 @@
 /* eslint-disable-next-line */
-import { Accordion, AccordionProps } from '@deriv-com/components';
+import {
+  Accordion,
+  AccordionProps,
+  AccordionVariants,
+} from '@deriv-com/components';
 import { slugify } from '@deriv-com/utils';
 import { FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
 import { useState } from 'react';
-
-export type AccordionVariants = 'Flush' | 'Fill' | 'Elevate' | 'Outline';
 
 export interface AccordionBlockProps {
   title?: string;
   tab?: string;
   className?: string;
-  variant: AccordionVariants;
+  variant: keyof AccordionVariants;
   content: {
     className?: string;
     data: AccordionProps[];

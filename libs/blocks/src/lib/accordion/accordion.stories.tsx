@@ -12,6 +12,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  argTypes: {
+    variant: {
+      options: ['Flush', 'Fill', 'Outline', 'Elevate'],
+      control: { type: 'radio' },
+    },
+  },
   args: {
     className: '',
     title: 'Title goes here',
