@@ -11,7 +11,7 @@ import LiveMarketSection from './sections/live-market-section';
 import FastPaymentSection from './sections/fast-payments';
 import ReviewSection from './sections/review';
 import AccountSection from './sections/account-section';
-import CTABlock from './sections/cta';
+import CTASection from './sections/cta';
 
 export function HomeTemplate() {
   return (
@@ -26,7 +26,7 @@ export function HomeTemplate() {
       <ReviewSection />
       <ProvenExcellenceSection />
       <StaticNumberBlock />
-      <CTABlock />
+      <CTASection />
     </PageLayout>
   );
 }
