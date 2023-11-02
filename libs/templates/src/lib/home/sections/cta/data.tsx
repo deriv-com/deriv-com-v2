@@ -1,5 +1,5 @@
 import { Card, OptimizedImage } from '@deriv-com/components';
-import { Button, qtMerge } from '@deriv/quill-design';
+import { Button } from '@deriv/quill-design';
 
 export const CTABlockContent = () => {
   return (
@@ -27,7 +27,7 @@ export const CTABlockContent = () => {
         </>
       }
     >
-      <Button className={qtMerge('lg:mt-400')} size="md">
+      <Button className="lg:mt-400" size="md">
         Get a demo forex account
       </Button>
     </Card.ContentRight>
