@@ -74,7 +74,7 @@ export const Default: Story = {
         },
       ],
     },
-    className: 'bg-solid-slate-75',
+    className: 'bg-background-primary-base',
     disclaimer:
       '*Prices are used for currency conversion and are published for reference only. Prices shown on our website are indicative and for reference only.',
     link: { href: '/', content: 'More forex' },
