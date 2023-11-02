@@ -23,12 +23,15 @@ const ContentLess = ({
       )}
     >
       <FluidContainer className="flex flex-col gap-gap-3xl">
-        <Heading.H1 className="text-center">{title}</Heading.H1>
-        {description && (
-          <Text size="xl" className="text-center">
-            {description}
-          </Text>
-        )}
+        <div className="flex flex-col gap-gap-2xl">
+          <Heading.H1 className="text-center">{title}</Heading.H1>
+          {description && (
+            <Text size="xl" className="text-center text-typography-default">
+              {description}
+            </Text>
+          )}
+        </div>
+
         {children}
       </FluidContainer>
     </Section>
