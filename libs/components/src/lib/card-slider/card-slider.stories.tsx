@@ -6,7 +6,6 @@ import {
   IllustrativeSpreadsIcon,
   IllustrativeSupport247Icon,
 } from '@deriv/quill-icons';
-import ContentBottomCard from '../card/content-bottom';
 
 const meta = {
   title: 'Components/CardSlider',
@@ -23,6 +22,7 @@ export const Default: Story = {
   args: {
     className: '!py-2000 bg-background-primary-container',
     slideClasses: 'max-w-xs',
+    variant: 'ContentBottom',
     cards: [
       {
         header: 'Card 1',
@@ -70,6 +70,5 @@ export const Default: Story = {
         size: 'sm',
       },
     ],
-    renderCard: ContentBottomCard,
   },
 };

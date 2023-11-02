@@ -7,7 +7,7 @@ export type CardAlignVariant = 'start' | 'center';
 export type CardSizeVariant = 'sm' | 'md' | 'lg';
 
 interface BaseCardContent {
-  header: string;
+  header?: string;
 }
 
 export interface StatCardContent extends BaseCardContent {
@@ -27,4 +27,15 @@ export interface CardContent extends BaseCardContent {
   className?: string;
   contentClassName?: string;
   nonContentClassName?: string;
+}
+
+export type MarketStatus = 'up' | 'down' | 'remain' | 'closed';
+export interface LiveMarketContent {
+  instrumentIcon: ReactNode;
+  instrument: string;
+  changePercentage: string;
+  status: MarketStatus;
+  bidPrice: string;
+  askPrice: string;
+  spread: string;
 }

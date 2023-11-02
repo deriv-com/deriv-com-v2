@@ -7,7 +7,7 @@ import FastAndReliableSection from './sections/fast-and-reliable';
 import WhyTradeSection from './sections/why-trade';
 import ProvenExcellenceSection from './sections/proven-excellence';
 import StaticNumberBlock from './sections/static-number-block';
-import CardSliderSection from './sections/slider-section';
+import LiveMarketSection from './sections/live-market-section';
 import FastPaymentSection from './sections/fast-payments';
 import ReviewSection from './sections/review';
 import AccountSection from './sections/account-section';
@@ -17,13 +17,13 @@ export function HomeTemplate() {
     <PageLayout>
       <HeroBanner />
       <NumberSection />
+      <LiveMarketSection />
       <FastAndReliableSection />
       <WhyTradeSection />
       <AccountSection />
       <FastPaymentSection />
       <ReviewSection />
       <ProvenExcellenceSection />
-      <CardSliderSection />
       <StaticNumberBlock />
     </PageLayout>
   );
