@@ -4,13 +4,13 @@ import { slugify } from '@deriv-com/utils';
 import { FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
 import { useState } from 'react';
 
-export type AccordionVariant = 'Flush' | 'Fill' | 'Elevate' | 'Outline';
+export type AccordionVariants = 'Flush' | 'Fill' | 'Elevate' | 'Outline';
 
 export interface AccordionBlockProps {
   title?: string;
   tab?: string;
   className?: string;
-  variant: AccordionVariant;
+  variant: AccordionVariants;
   content: {
     className?: string;
     data: AccordionProps[];
