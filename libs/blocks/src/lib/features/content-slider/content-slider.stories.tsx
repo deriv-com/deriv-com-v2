@@ -9,8 +9,6 @@ import {
   IllustrativeSupport247Icon,
 } from '@deriv/quill-icons';
 
-import { Card } from '@deriv-com/components';
-
 const meta = {
   title: 'Blocks/Features/ContentSlider',
   component: ContentSlider,
@@ -23,7 +21,7 @@ export const Default: Story = {
   args: {
     description:
       'Description goes here description goes here description goes here description goes here',
-    cta: (
+    cta: () => (
       <div className="flex w-full justify-center">
         <Button>CTA</Button>
       </div>
@@ -31,6 +29,8 @@ export const Default: Story = {
     title: 'Card Slider Title',
     cardSliderProps: {
       slideClasses: 'max-w-xs',
+      variant: 'ContentBottom',
+      className: '!pb-general-3xl',
       cards: [
         {
           header: 'Card 1',
@@ -87,7 +87,6 @@ export const Default: Story = {
           size: 'sm',
         },
       ],
-      renderCard: Card.ContentBottom,
     },
   },
 };
