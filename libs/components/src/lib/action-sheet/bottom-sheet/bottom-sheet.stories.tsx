@@ -6,7 +6,7 @@ import {
   StandaloneCircleRegularIcon,
   StandaloneXmarkRegularIcon,
 } from '@deriv/quill-icons';
-import { qtMerge, Text } from '@deriv/quill-design';
+import { Text } from '@deriv/quill-design';
 
 const meta = {
   title: 'Components/Actionsheet/Bottom',
@@ -24,24 +24,18 @@ export const ActionSheetBottom: Story = {
     heading: 'Table view',
     icon: <StandaloneXmarkRegularIcon fill="black" iconSize="md" />,
     children: (
-      <div className={qtMerge('mb-gap-lg flex flex-col p-800')}>
-        <div
-          className={qtMerge('flex flex-row items-center gap-gap-md py-gap-md')}
-        >
+      <div className="mb-gap-lg flex flex-col p-800">
+        <div className="flex flex-row items-center gap-gap-md py-gap-md">
           <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
 
           <Text size="md">Main info</Text>
         </div>
-        <div
-          className={qtMerge('flex flex-row items-center gap-gap-md py-gap-md')}
-        >
+        <div className="flex flex-row items-center gap-gap-md py-gap-md">
           <StandaloneCircleRegularIcon fill="black" iconSize="md" />
 
           <Text size="md">Trading conditions</Text>
         </div>
-        <div
-          className={qtMerge('flex flex-row items-center gap-gap-md py-gap-md')}
-        >
+        <div className="flex flex-row items-center gap-gap-md py-gap-md">
           <StandaloneCircleRegularIcon fill="black" iconSize="md" />
 
           <Text size="md">Additional info</Text>
