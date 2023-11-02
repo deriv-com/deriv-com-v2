@@ -10,8 +10,8 @@ export const getHelpCentreLink = (page: string, sub_page?: string) => {
 
 export const generateFaqs = (questions: string[], header: string) => {
   return (
-    <div className="flex min-h-[212px] flex-col items-start">
-      <div className="flex flex-col gap-general-md">
+    <div className="flex min-h-[212px] flex-col items-start gap-general-lg">
+      <div className="mb-auto flex flex-col">
         {questions.map((question) => (
           <CustomLink
             key={question}
@@ -23,7 +23,7 @@ export const generateFaqs = (questions: string[], header: string) => {
           </CustomLink>
         ))}
       </div>
-      <div className="mt-auto flex">
+      <div className="flex">
         <CustomLink href={getHelpCentreLink(header)} hasIcon>
           <Text>View Questions</Text>
         </CustomLink>
