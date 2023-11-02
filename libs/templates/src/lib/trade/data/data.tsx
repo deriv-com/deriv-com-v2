@@ -30,13 +30,16 @@ import {
   MarketForexGbpnokIcon,
   MarketForexGbpnzdIcon,
   MarketForexGbpsekIcon,
+  MarketForexGbpsgdIcon,
   MarketForexGbpusdIcon,
+  MarketForexHkdjpyIcon,
   MarketForexNzdcadIcon,
   MarketForexNzdchfIcon,
   MarketForexNzdjpnIcon,
   MarketForexNzdusdIcon,
   MarketForexUsdcadIcon,
   MarketForexUsdchfIcon,
+  MarketForexUsdcnhIcon,
   MarketForexUsdhkdIcon,
   MarketForexUsdilsIcon,
   MarketForexUsdjpyIcon,
@@ -219,7 +222,7 @@ export const mainInfo: TableDataTypeProps = {
     },
     {
       instrument: {
-        instrument: 'EURJ/PY',
+        instrument: 'EUR/JPY',
         description: 'Euro vs Japanese Yen',
         icon: <MarketForexEurjpyIcon fill="black" iconSize="sm" />,
       },
@@ -375,7 +378,7 @@ export const mainInfo: TableDataTypeProps = {
       instrument: {
         instrument: 'GBP/NZD',
         description: 'Great Britain Pound vs New Zealand Dollar',
-        icon: <MarketForexGbpnzdIcon fill="black" iconSize="2xl" />,
+        icon: <MarketForexGbpnzdIcon fill="black" iconSize="sm" />,
       },
       current_bid: 2.13328,
       current_ask: 2.13367,
@@ -397,7 +400,7 @@ export const mainInfo: TableDataTypeProps = {
       instrument: {
         instrument: 'GBP/SGD',
         description: 'Great British Pound vs Singapore Dollar',
-        icon: <MarketForexGbpsekIcon fill="black" iconSize="sm" />,
+        icon: <MarketForexGbpsgdIcon fill="black" iconSize="sm" />,
       },
       current_bid: 1.7105,
       current_ask: 1.71117,
@@ -419,7 +422,7 @@ export const mainInfo: TableDataTypeProps = {
       instrument: {
         instrument: 'HKD/JPY',
         description: 'Hong Kong Dollar vs Japanese Yen',
-        icon: <MarketForexGbpusdIcon fill="black" iconSize="sm" />,
+        icon: <MarketForexHkdjpyIcon fill="black" iconSize="sm" />,
       },
       current_bid: 18.66,
       current_ask: 18.84,
@@ -483,7 +486,7 @@ export const mainInfo: TableDataTypeProps = {
     },
     {
       instrument: {
-        instrument: 'USDCHF',
+        instrument: 'USD/CHF',
         description: 'US Dollar vs Swiss Franc',
         icon: <MarketForexUsdchfIcon fill="black" iconSize="sm" />,
       },
@@ -496,7 +499,7 @@ export const mainInfo: TableDataTypeProps = {
       instrument: {
         instrument: 'USD/CNH',
         description: 'US Dollar vs Chinese Renminbi',
-        icon: <MarketForexUsdchfIcon fill="black" iconSize="sm" />,
+        icon: <MarketForexUsdcnhIcon fill="black" iconSize="sm" />,
       },
       current_bid: 7.30773,
       current_ask: 7.30892,
@@ -830,7 +833,7 @@ export const trading_condition = {
     },
     {
       instrument: {
-        instrument: 'EURJ/PY',
+        instrument: 'EUR/JPY',
         description: 'Euro vs Japanese Yen',
         icon: <MarketForexEurjpyIcon fill="black" iconSize="sm" />,
       },
@@ -1056,7 +1059,7 @@ export const trading_condition = {
       instrument: {
         instrument: 'GBP/SGD',
         description: 'Great British Pound vs Singapore Dollar',
-        icon: <MarketForexGbpsekIcon fill="black" iconSize="sm" />,
+        icon: <MarketForexGbpsgdIcon fill="black" iconSize="sm" />,
       },
       spread_cost: -49.4,
       commission: 0,
@@ -1084,7 +1087,7 @@ export const trading_condition = {
       instrument: {
         instrument: 'HKD/JPY',
         description: 'Hong Kong Dollar vs Japanese Yen',
-        icon: <MarketForexGbpusdIcon fill="black" iconSize="sm" />,
+        icon: <MarketForexHkdjpyIcon fill="black" iconSize="sm" />,
       },
       spread_cost: -124.31,
       commission: 0,
@@ -1166,7 +1169,7 @@ export const trading_condition = {
     },
     {
       instrument: {
-        instrument: 'USDCHF',
+        instrument: 'USD/CHF',
         description: 'US Dollar vs Swiss Franc',
         icon: <MarketForexUsdchfIcon fill="black" iconSize="sm" />,
       },
@@ -1182,7 +1185,7 @@ export const trading_condition = {
       instrument: {
         instrument: 'USD/CNH',
         description: 'US Dollar vs Chinese Renminbi',
-        icon: <MarketForexUsdchfIcon fill="black" iconSize="sm" />,
+        icon: <MarketForexUsdcnhIcon fill="black" iconSize="sm" />,
       },
       spread_cost: -16.37,
       commission: 0,
@@ -1518,7 +1521,7 @@ export const additional_info = {
     },
     {
       instrument: {
-        instrument: 'EURJ/PY',
+        instrument: 'EUR/JPY',
         description: 'Euro vs Japanese Yen',
         icon: <MarketForexEurjpyIcon fill="black" iconSize="sm" />,
       },
@@ -1712,7 +1715,7 @@ export const additional_info = {
       instrument: {
         instrument: 'GBP/SGD',
         description: 'Great British Pound vs Singapore Dollar',
-        icon: <MarketForexGbpsekIcon fill="black" iconSize="sm" />,
+        icon: <MarketForexGbpsgdIcon fill="black" iconSize="sm" />,
       },
       contract_size: 100000,
       min_volume: 0.01,
@@ -1736,7 +1739,7 @@ export const additional_info = {
       instrument: {
         instrument: 'HKD/JPY',
         description: 'Hong Kong Dollar vs Japanese Yen',
-        icon: <MarketForexGbpusdIcon fill="black" iconSize="sm" />,
+        icon: <MarketForexHkdjpyIcon fill="black" iconSize="sm" />,
       },
       contract_size: 100000,
       min_volume: 0.01,
@@ -1806,7 +1809,7 @@ export const additional_info = {
     },
     {
       instrument: {
-        instrument: 'USDCHF',
+        instrument: 'USD/CHF',
         description: 'US Dollar vs Swiss Franc',
         icon: <MarketForexUsdchfIcon fill="black" iconSize="sm" />,
       },
@@ -1820,7 +1823,7 @@ export const additional_info = {
       instrument: {
         instrument: 'USD/CNH',
         description: 'US Dollar vs Chinese Renminbi',
-        icon: <MarketForexUsdchfIcon fill="black" iconSize="sm" />,
+        icon: <MarketForexUsdcnhIcon fill="black" iconSize="sm" />,
       },
       contract_size: 100000,
       min_volume: 0.01,
