@@ -1,11 +1,11 @@
 import { Card, OptimizedImage } from '@deriv-com/components';
 import { scrollToTop } from '@deriv-com/utils';
-import { Button, qtMerge } from '@deriv/quill-design';
+import { Button } from '@deriv/quill-design';
 
 export const CTABlockContent = () => {
   return (
     <Card.ContentRight
-      className={qtMerge('lg:gap-800')}
+      className="lg:gap-gap-lg"
       align="start"
       size="lg"
       header="Join over 2.5 million online traders"
