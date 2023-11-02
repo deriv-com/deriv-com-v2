@@ -88,7 +88,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
             : 'items-center md:items-center',
           sizeVariantContainerGap[size],
           nonContentClassName,
-          content ? '' : 'md:flex-1',
+          !content && 'flex-1',
         )}
       >
         {icon && icon}
@@ -98,7 +98,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
               'flex flex-col',
               textColorVariantClass[color],
               sizeVariantTextGap[size],
-              content ? '' : 'flex-1',
+              !content && 'flex-1',
             )}
           >
             {header && <HeadingComponent>{header}</HeadingComponent>}
