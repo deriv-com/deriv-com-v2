@@ -28,3 +28,14 @@ export interface CardContent extends BaseCardContent {
   contentClassName?: string;
   nonContentClassName?: string;
 }
+
+export type MarketStatus = 'up' | 'down' | 'remain' | 'closed';
+export interface LiveMarketContent {
+  instrumentIcon: ReactNode;
+  instrument: string;
+  changePercentage: string;
+  status: MarketStatus;
+  bidPrice: string;
+  askPrice: string;
+  spread: string;
+}
