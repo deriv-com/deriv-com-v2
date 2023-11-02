@@ -17,6 +17,7 @@ export const generateFaqs = (questions: string[], header: string) => {
             key={question}
             href={getHelpCentreLink(header, question)}
             className="justify-start"
+            size="md"
           >
             {question}
           </CustomLink>
