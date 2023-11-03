@@ -51,7 +51,7 @@ export const SearchChip = ({
 
       <input
         className={qtMerge(
-          'w-full text-75 outline-none',
+          'w-full text-100 outline-none',
           'text-solid-slate-1400',
           inputClassName,
 
