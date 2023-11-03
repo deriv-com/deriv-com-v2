@@ -1,34 +1,25 @@
 import clsx from 'clsx';
-import { CardContent } from '../card/types';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Pagination, SwiperOptions } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { qtMerge } from '@deriv/quill-design';
+import Card, { CardVariants } from '../card';
 
-interface SwiperPagination {
-  pagination?: {
-    enabled?: boolean;
-    clickable?: boolean;
-    horizontalClass?: string;
-  };
-}
+type CardVariantType = keyof CardVariants;
 
-interface SwiperProps extends SwiperPagination {
+type CardVariantProps<T extends CardVariantType> =
+  React.ComponentPropsWithoutRef<CardVariants[T]>;
+
+export interface CardSliderProps<T extends CardVariantType> {
+  variant: T;
+  cards: CardVariantProps<T>[];
   className?: string;
-  slidesPerView?: 'auto' | number;
-  spaceBetween?: number;
-}
-
-export interface CardSliderProps {
-  className?: string;
-  cards?: CardContent[];
-  renderCard?: React.FC<CardContent>;
   slideClasses?: string;
-  swiperData?: SwiperProps;
+  swiperData?: SwiperOptions;
 }
 
-const defaultSwiperProps: SwiperProps = {
+const defaultSwiperProps: SwiperOptions = {
   slidesPerView: 'auto',
   spaceBetween: 16,
   pagination: {
@@ -38,31 +29,35 @@ const defaultSwiperProps: SwiperProps = {
   },
 };
 
-export const CardSlider = ({
-  className,
+export const CardSlider = <T extends CardVariantType>({
+  variant,
   cards = [],
-  renderCard,
+  className,
   slideClasses,
   swiperData,
-}: CardSliderProps) => {
-  const swiperProps = Object.assign(defaultSwiperProps, swiperData);
+}: CardSliderProps<T>) => {
+  const { pagination, slidesPerView, spaceBetween, breakpoints } =
+    Object.assign(defaultSwiperProps, swiperData);
+  const CardComponent = Card[variant];
 
   return (
     <div className="flex w-full justify-center">
       <Swiper
-        className={qtMerge(
-          swiperProps.pagination && '!pb-general-3xl',
-          className,
-        )}
+        className={qtMerge(className)}
         modules={[Pagination]}
-        pagination={swiperProps.pagination}
-        slidesPerView={swiperProps.slidesPerView}
-        spaceBetween={swiperProps.spaceBetween}
+        pagination={pagination}
+        slidesPerView={slidesPerView}
+        spaceBetween={spaceBetween}
+        breakpoints={breakpoints}
         rewind
       >
-        {cards.map((card) => (
-          <SwiperSlide className={clsx(slideClasses)} key={card.header}>
-            {renderCard?.(card)}
+        {cards.map((card, index) => (
+          <SwiperSlide className={clsx(slideClasses)} key={index}>
+            {
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              <CardComponent {...card} />
+            }
           </SwiperSlide>
         ))}
       </Swiper>

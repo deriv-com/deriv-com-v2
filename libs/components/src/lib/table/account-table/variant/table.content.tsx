@@ -17,9 +17,9 @@ const TableContentSection = ({ tableData }: TableContentSectionProps) => {
           className={clsx(
             'flex flex-col gap-gap-md',
             colIndex % 2 === 0 &&
-              'md:border-r-75 md:border-opacity-black-100 md:pr-general-xl lg:pr-general-2xl',
-            colIndex % 2 === 1 && 'md:pl-general-xl lg:pl-general-2xl',
-            rowIndex > 0 && 'mt-general-2xl',
+              'border-opacity-black-100 sm:border-r-75 sm:pr-general-xl lg:pr-general-2xl',
+            colIndex % 2 === 1 && 'sm:pl-general-xl lg:pl-general-2xl',
+            rowIndex > 0 && 'sm:mt-general-xl lg:mt-general-xl',
           )}
         >
           <Heading.H6>{colData.subheader}</Heading.H6>
