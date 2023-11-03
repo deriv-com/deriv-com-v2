@@ -215,7 +215,11 @@ const TradingSpecTable = () => {
         </div>
       )}
       <div className="flex justify-center pt-general-2xl">
-        <Button colorStyle="black" size="lg">
+        <Button
+          colorStyle="black"
+          size="lg"
+          className={qtMerge('px-general-md py-600 font-sans')}
+        >
           Trade now
         </Button>
       </div>
