@@ -113,7 +113,7 @@ export const Base = ({
               {subtitle && (
                 <Text
                   size="sm"
-                  className="overflow-hidden text-opacity-black-400"
+                  className="overflow-hidden text-typography-subtle"
                 >
                   {subtitle}
                 </Text>
