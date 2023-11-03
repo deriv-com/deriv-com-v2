@@ -12,8 +12,8 @@ export const LivePrice = ({ status, bidPrice, askPrice }: LivePriceProps) => {
   const colorVariant = {
     up: 'text-solid-emerald-900',
     down: 'text-solid-cherry-700',
-    remain: 'text-opacity-black-400',
-    closed: 'text-opacity-black-300',
+    remain: 'text-typography-subtle',
+    closed: 'text-typography-disabled',
   };
 
   const PriceContent = (price: string, status: MarketStatus) => {
