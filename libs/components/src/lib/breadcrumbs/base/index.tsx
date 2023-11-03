@@ -1,12 +1,17 @@
-import { LinkProps } from '@deriv-com/utils';
 import CustomLink from '../../link';
 import { BreadcrumbsProps } from '../types';
 import { useWindowWidth } from '@react-hook/window-size';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, ReactNode, useEffect, useState } from 'react';
 import { qtMerge } from '@deriv/quill-design';
 import { maxLinks } from './constants';
 
 export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
+  //todo: removed [LinkProps] from utils/generics and added here. we need to update this because we are using this on multiple places
+  interface LinkProps {
+    content: ReactNode;
+    href: string;
+  }
+
   const [renderLinks, setRenderLinks] = useState<LinkProps[]>([]);
   const [dropdownLinks, setDropdownLinks] = useState<LinkProps[]>([]);
 
