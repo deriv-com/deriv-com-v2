@@ -40,7 +40,7 @@ export default defineConfig({
         'swiper',
       ],
     },
-    minify: false,
+    minify: true,
   },
 
   test: {
