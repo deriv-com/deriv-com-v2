@@ -4,7 +4,6 @@ import {
   AccordionProps,
   AccordionVariants,
 } from '@deriv-com/components';
-import { slugify } from '@deriv-com/utils';
 import { FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
 import { useState } from 'react';
 
@@ -19,6 +18,15 @@ export interface AccordionBlockProps {
   };
   multiCollapse?: boolean;
 }
+
+//todo: removed [slugify] from utils/../utils and added here. we need to update this because we are using this on multiple places
+
+export const slugify = (input: string): string =>
+  input
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s]+/g, '-')
+    .trim();
 
 export function AccordionBlock({
   title,

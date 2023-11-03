@@ -1,4 +1,3 @@
-import { LinkProps } from '@deriv-com/utils';
 import { ReactNode } from 'react';
 
 export type StatCardVariant = 'white' | 'dark' | 'coral';
@@ -8,6 +7,11 @@ export type CardSizeVariant = 'sm' | 'md' | 'lg';
 
 interface BaseCardContent {
   header?: string;
+}
+//todo: removed [LinkProps] from utils/generics and added here. we need to update this because we are using this on multiple places
+interface LinkProps {
+  content: ReactNode;
+  href: string;
 }
 
 export interface StatCardContent extends BaseCardContent {
