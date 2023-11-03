@@ -14,7 +14,7 @@ export interface CustomLinkProps extends ComponentPropsWithRef<typeof Link> {
   hasLinkColor?: boolean;
 }
 
-type textSize = 'sm' | 'md' | 'lg';
+export type textSize = 'sm' | 'md' | 'lg';
 
 export function CustomLink({
   skipLocaleHandling,
