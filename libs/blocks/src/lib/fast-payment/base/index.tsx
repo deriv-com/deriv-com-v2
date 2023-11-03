@@ -44,7 +44,7 @@ const Base: React.FC<FastPaymentProps> = ({
               />
             </div>
             {disclaimer && (
-              <p className="text-100 text-opacity-black-400">{disclaimer}</p>
+              <p className="text-100 text-typography-subtle">{disclaimer}</p>
             )}
           </div>
         </div>

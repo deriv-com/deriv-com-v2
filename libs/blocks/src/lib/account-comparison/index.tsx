@@ -19,7 +19,7 @@ export const AccountComparison = ({
     <Section
       className={clsx(
         'py-general-4xl',
-        'bg-background-primary-container',
+        'bg-background-secondary-base',
         className,
       )}
     >

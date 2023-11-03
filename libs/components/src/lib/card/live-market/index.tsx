@@ -11,8 +11,8 @@ import { BuySellButtons } from './buy-sell.buttons';
 const colorVariant: { [key: string]: string } = {
   up: 'fill-solid-emerald-900 text-solid-emerald-900',
   down: 'fill-solid-cherry-700 text-solid-cherry-700',
-  remain: 'fill-opacity-black-400 text-opacity-black-400',
-  closed: 'fill-opacity-black-300 text-opacity-black-300',
+  remain: 'fill-opacity-black-400 text-typography-subtle',
+  closed: 'fill-opacity-black-300 text-typography-disabled',
 };
 
 const ChartIcons = {

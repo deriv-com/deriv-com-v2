@@ -11,7 +11,7 @@ export const ListContent = ({ colData }: ListContentProps) => {
         item.type === 'simple' ? (
           <Text
             key={item.text}
-            className="py-general-sm text-opacity-black-600"
+            className="py-general-sm text-typography-default"
           >
             {item.text}
           </Text>
@@ -22,7 +22,7 @@ export const ListContent = ({ colData }: ListContentProps) => {
           >
             <div className="flex flex-row gap-gap-md">
               {item.icon}
-              <Text className="text-opacity-black-600">{item.text}</Text>
+              <Text className="text-typography-default">{item.text}</Text>
             </div>
             <div className="flex flex-col gap-gap-md px-general-md">
               {item.items.map((list) => (
@@ -31,7 +31,7 @@ export const ListContent = ({ colData }: ListContentProps) => {
                   className="flex flex-row gap-gap-md px-general-md"
                 >
                   {item.listIcon}
-                  <Text size="sm" className="text-opacity-black-400">
+                  <Text size="sm" className="text-typography-subtle">
                     {list}
                   </Text>
                 </div>
