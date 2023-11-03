@@ -62,7 +62,7 @@ const SearchSection = ({ hasQuestionCards = true }: SearchSectionProps) => {
               )}
             </div>
             {!results.length && (
-              <div className="flex justify-center py-general-2xl">
+              <div className="flex justify-center py-general-5xl pt-general-none">
                 <Text size="lg">
                   Sorry, we couldn’t find any results with "{search_key}" in it
                 </Text>
@@ -72,7 +72,12 @@ const SearchSection = ({ hasQuestionCards = true }: SearchSectionProps) => {
         )}
       </section>
       {!search_key && hasQuestionCards && (
-        <Features.Card variant="ContentLeft" cards={CardsFAQ} cols="three" />
+        <Features.Card
+          variant="ContentLeft"
+          cards={CardsFAQ}
+          cols="three"
+          className="mt-general-4xl py-general-none"
+        />
       )}
     </FluidContainer>
   );

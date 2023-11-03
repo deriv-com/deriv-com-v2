@@ -20,7 +20,7 @@
   },
   "private": true,
   "dependencies": {
-    "@deriv/quill-design": "^1.0.19",
+    "@deriv/quill-design": "^1.0.21",
     "@deriv/quill-icons": "^1.0.6",
     "@nx/next": "16.8.1",
     "@react-hook/window-size": "^3.1.1",
