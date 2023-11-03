@@ -35,7 +35,11 @@ export const FooterBlock = ({
       <FluidContainer className="flex flex-col gap-gap-3xl">
         <div className="flex flex-col py-general-xs max-lg:gap-gap-xl lg:flex-row">
           <div className="flex flex-1 max-lg:justify-center">
-            <BrandDerivWordmarkSlateIcon height="24px" width="72.33px" />
+            <BrandDerivWordmarkSlateIcon
+              height="24px"
+              width="72.33px"
+              className="opacity-800"
+            />
           </div>
           {socialButtons && (
             <SocialMediaSection socialButtons={socialButtons} />
