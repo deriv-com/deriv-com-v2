@@ -6,7 +6,7 @@ import { ComponentPropsWithRef, useState } from 'react';
 
 export interface CustomLinkProps extends ComponentPropsWithRef<typeof Link> {
   skipLocaleHandling?: boolean;
-  size?: textSize;
+  size?: string;
   href: string;
   hasIcon?: boolean;
   hasHoverColor?: boolean;
@@ -14,13 +14,11 @@ export interface CustomLinkProps extends ComponentPropsWithRef<typeof Link> {
   hasLinkColor?: boolean;
 }
 
-type textSize = 'sm' | 'md' | 'lg';
-
 export function CustomLink({
   skipLocaleHandling,
   href,
   className,
-  size = 'sm',
+  size,
   hasIcon = false,
   hasHoverColor = false,
   hasHoverDecoration = true,
@@ -67,9 +65,7 @@ export function CustomLink({
       className={qtMerge(
         'flex items-center justify-center',
         'text-typography-prominent',
-        size === 'sm' && 'text-body-sm',
-        size === 'md' && 'text-body-md',
-        size === 'lg' && 'text-body-lg',
+        size,
         hasLinkColor && 'text-typography-link',
         hasHoverColor && 'hover:text-typography-link',
         hasHoverDecoration && 'hover:underline',

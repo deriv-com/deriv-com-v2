@@ -50,7 +50,7 @@ const textSizeVariant: { [key: string]: TextSize } = {
 
 const linkTextSizeVariant = {
   sm: 'text-body-md',
-  md: 'text-body-md',
+  md: 'text-body-lg',
   lg: 'text-body-lg',
 };
 
@@ -107,7 +107,12 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         )}
 
         {link && (
-          <CustomLink href={link.href} size={size} hasIcon hasHoverColor>
+          <CustomLink
+            href={link.href}
+            size={linkTextSizeVariant[size]}
+            hasIcon
+            hasHoverColor
+          >
             {link.content}
           </CustomLink>
         )}
