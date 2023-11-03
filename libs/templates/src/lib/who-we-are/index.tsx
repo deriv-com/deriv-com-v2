@@ -5,23 +5,26 @@ import WhoWeArePrinciples from './sections/our-principles';
 import WhoWeAreNumbers from './sections/deriv-in-numbers';
 import WhoWeAreLocations from './sections/our-locations';
 import MissionContent from './sections/mission-content';
+import { FluidContainer } from '@deriv/quill-design';
 
 export function WhoWeAreTemplate() {
   return (
     <PageLayout>
-      <Breadcrumbs
-        className="py-general-md"
-        links={[
-          {
-            content: 'Home',
-            href: '/',
-          },
-          {
-            content: 'Who we are',
-            href: '/',
-          },
-        ]}
-      />
+      <FluidContainer>
+        <Breadcrumbs
+          className="py-general-md"
+          links={[
+            {
+              content: 'Home',
+              href: '/',
+            },
+            {
+              content: 'Who we are',
+              href: '/',
+            },
+          ]}
+        />
+      </FluidContainer>
       <WhoWeAreHero />
       <MissionContent />
       <WhoWeAreValues />
