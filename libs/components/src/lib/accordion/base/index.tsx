@@ -98,6 +98,7 @@ export const Base = ({
           'gap-general-lg p-general-lg',
           'hover:bg-opacity-black-100',
           'active:bg-opacity-black-200',
+          'border-opacity-black-100',
           contentClass,
         )}
         onClick={() => toggleCollapse()}
