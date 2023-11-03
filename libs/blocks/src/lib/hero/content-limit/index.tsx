@@ -36,12 +36,22 @@ const ContentLimit: React.FC<ContentLimitProps> = ({
           'flex',
           'items-center',
           'flex-col-reverse',
-          'gap-gap-lg',
+          'lg:gap-gap-lg',
+          'gap-gap-3xl',
         )}
       >
-        <div className={clsx('flex flex-1 flex-col gap-gap-3xl')}>
-          <Heading.H1>{title}</Heading.H1>
-          {description && <Text size="xl">{description}</Text>}
+        <div
+          className={clsx('flex flex-1 flex-col gap-gap-3xl pr-general-2xl')}
+        >
+          <div className="flex flex-col gap-gap-2xl">
+            <Heading.H1>{title}</Heading.H1>
+            {description && (
+              <Text size="xl" className="text-typography-default">
+                {description}
+              </Text>
+            )}
+          </div>
+
           <div className="w-full">{children}</div>
         </div>
         {Content && (
