@@ -4,6 +4,7 @@ import { BreadcrumbsProps } from '../types';
 import { useWindowWidth } from '@react-hook/window-size';
 import { Fragment, useEffect, useState } from 'react';
 import { qtMerge } from '@deriv/quill-design';
+import { maxLinks } from './constants';
 
 export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
   const [renderLinks, setRenderLinks] = useState<LinkProps[]>([]);
@@ -11,7 +12,6 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
 
   const isLastItem = (key: number) => renderLinks.length - 1 > key;
   const linksLen = links.length;
-  const maxLinks = 3;
   const hasExtra = useWindowWidth() < 768 && maxLinks < linksLen;
 
   useEffect(() => {
