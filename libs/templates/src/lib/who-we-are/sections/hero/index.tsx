@@ -6,7 +6,7 @@ export const WhoWeAreHero = () => {
     <Hero.ContentBottom title="Who we are">
       <OptimizedImage
         imageName="who-we-are/hero/hk_who_we_are.png"
-        className="rounded-pill"
+        className="rounded-xl"
         alt="Who we are"
         width={1232}
         height={711}

@@ -1,0 +1,21 @@
+
+ .accordion-button {
+    cursor: pointer;
+    transition: transform 0.160s ease;
+}
+
+.accordion-button-expanded {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    transition: max-height 0.160s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.accordion-content-expanded {
+  max-height: 9999px;
+  transition: max-height 0.160s ease;
+  overflow: hidden;
+}

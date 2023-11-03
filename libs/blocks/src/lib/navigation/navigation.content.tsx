@@ -4,13 +4,13 @@ import NavigationLink from './navigation.link';
 export const NavigationContent = () => {
   const { activeItem } = useNavigation();
   return (
-    <div className="my-general-xl grid w-full grid-cols-4 items-start gap-gap-2xl overflow-y-auto overscroll-y-contain py-general-lg">
+    <div className="my-general-xl grid w-full grid-cols-4 items-start gap-gap-3xl overflow-y-auto overscroll-y-contain py-general-lg">
       {activeItem && activeItem.type === 'nav-dropdown' ? (
         <>
           {activeItem.columns.map((column) => (
             <div
               key={column.id}
-              className="flex flex-col justify-center gap-gap-lg"
+              className="flex flex-col items-start justify-center gap-gap-lg"
             >
               {column.header && (
                 <NavigationLink
