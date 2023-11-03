@@ -171,7 +171,7 @@ const TradingSpecTable = () => {
       {data.length < 1 && (
         <Text
           size="lg"
-          className="pt-general-4xl text-center text-typography-default"
+          className="px-general-md pt-general-4xl text-center text-typography-default"
         >
           Sorry, we couldn’t find any results with "{searchValue}" in it
         </Text>
