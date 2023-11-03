@@ -1,7 +1,6 @@
 import { FooterItems } from '@deriv-com/blocks';
 import { DerivGoBanner } from './deriv-go.banner';
 import {
-  StandaloneAppleIcon,
   StandaloneFacebookIcon,
   StandaloneInstagramIcon,
   StandaloneLinkedinIcon,
