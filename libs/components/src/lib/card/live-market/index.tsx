@@ -1,4 +1,4 @@
-import { qtMerge, Text, Button } from '@deriv/quill-design';
+import { qtMerge, Text } from '@deriv/quill-design';
 import {
   StandaloneChartTrendDownRegularIcon,
   StandaloneChartTrendSidewayRegularIcon,
@@ -6,6 +6,35 @@ import {
 } from '@deriv/quill-icons';
 import { LiveMarketContent } from '../types';
 import LivePrice from './live-price';
+import { BuySellButtons } from './buy-sell.buttons';
+
+const colorVariant: { [key: string]: string } = {
+  up: 'fill-solid-emerald-900 text-solid-emerald-900',
+  down: 'fill-solid-cherry-700 text-solid-cherry-700',
+  remain: 'fill-opacity-black-400 text-opacity-black-400',
+  closed: 'fill-opacity-black-300 text-opacity-black-300',
+};
+
+const ChartIcons = {
+  up: (
+    <StandaloneChartTrendUpRegularIcon
+      iconSize="sm"
+      className={colorVariant['up']}
+    />
+  ),
+  down: (
+    <StandaloneChartTrendDownRegularIcon
+      iconSize="sm"
+      className={colorVariant['down']}
+    />
+  ),
+  remain: (
+    <StandaloneChartTrendSidewayRegularIcon
+      iconSize="sm"
+      className={colorVariant['remain']}
+    />
+  ),
+};
 
 export interface LiveMarketCardProps extends LiveMarketContent {
   className?: string;
@@ -21,34 +50,6 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   askPrice,
   spread,
 }) => {
-  const colorVariant = {
-    up: 'fill-solid-emerald-900 text-solid-emerald-900',
-    down: 'fill-solid-cherry-700 text-solid-cherry-700',
-    remain: 'fill-opacity-black-400 text-typography-subtle',
-    closed: 'fill-opacity-black-300 text-opacity-disabled',
-  };
-
-  const ChartIcons = {
-    up: (
-      <StandaloneChartTrendUpRegularIcon
-        iconSize="sm"
-        className={colorVariant[status]}
-      />
-    ),
-    down: (
-      <StandaloneChartTrendDownRegularIcon
-        iconSize="sm"
-        className={colorVariant[status]}
-      />
-    ),
-    remain: (
-      <StandaloneChartTrendSidewayRegularIcon
-        iconSize="sm"
-        className={colorVariant[status]}
-      />
-    ),
-  };
-
   return (
     <div
       className={qtMerge(
@@ -59,7 +60,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         'p-general-xl',
         'gap-gap-xl',
         className,
-        status === 'closed' ? 'opacity-700' : '',
+        status === 'closed' && 'opacity-700',
       )}
     >
       <div className="flex h-[52px] flex-row gap-gap-sm">
@@ -78,29 +79,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
       </div>
 
       <LivePrice status={status} bidPrice={bidPrice} askPrice={askPrice} />
-
-      <div className="flex flex-col gap-gap-md">
-        <div className="flex flex-row gap-gap-md">
-          <Text size="sm" className="text-typography-default">
-            Spread
-          </Text>
-          <Text size="sm" bold>
-            {spread}
-          </Text>
-        </div>
-        <div className="flex flex-row gap-gap-md">
-          <Button disabled={status === 'closed'} className="flex-1">
-            Buy
-          </Button>
-          <Button
-            disabled={status === 'closed'}
-            className="flex-1"
-            colorStyle="black"
-          >
-            Sell
-          </Button>
-        </div>
-      </div>
+      <BuySellButtons status={status} spread={spread} />
     </div>
   );
 };
