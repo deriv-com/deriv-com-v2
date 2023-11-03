@@ -1,4 +1,3 @@
-import styles from './base.module.css';
 import { LinkProps } from '@deriv-com/utils';
 import CustomLink from '../../link';
 import { BreadcrumbsProps } from '../types';
@@ -7,13 +6,13 @@ import { Fragment, useEffect, useState } from 'react';
 import { qtMerge } from '@deriv/quill-design';
 
 export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
-  const [render_links, setRenderLinks] = useState<LinkProps[]>([]);
-  const [dropwdown_links, setDropdownLinks] = useState<LinkProps[]>([]);
+  const [renderLinks, setRenderLinks] = useState<LinkProps[]>([]);
+  const [dropdownLinks, setDropdownLinks] = useState<LinkProps[]>([]);
 
-  const isLastItem = (key: number) => links.length - 1 > key;
-  const links_len = links.length;
-  const max_links = 3;
-  const hasExtra = useWindowWidth() < 768 && max_links < links_len;
+  const isLastItem = (key: number) => renderLinks.length - 1 > key;
+  const linksLen = links.length;
+  const maxLinks = 3;
+  const hasExtra = useWindowWidth() < 768 && maxLinks < linksLen;
 
   useEffect(() => {
     setRenderLinks(links);
@@ -22,8 +21,8 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
       const limited_links = [
         links[0],
         { content: '...', href: '' },
-        links[links_len - 2],
-        links[links_len - 1],
+        links[linksLen - 2],
+        links[linksLen - 1],
       ];
 
       setRenderLinks(limited_links);
@@ -34,23 +33,22 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
 
       setDropdownLinks(remaining_links);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [links]);
 
   return (
     <div className={qtMerge('flex', className)}>
-      {render_links.map(({ content, href }, lk) => (
+      {renderLinks.map(({ content, href }, lk) => (
         <Fragment key={`breadcrumbs-${content}`}>
           {hasExtra && lk === 1 && (
             <select
-              className={styles['breadcrumbs-select']}
+              className="relative -right-600 -ml-1200 w-1300 opacity-50"
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
                 if (typeof window !== 'undefined') {
                   window.location.href = e.target.value;
                 }
               }}
             >
-              {dropwdown_links.map(({ href, content }, dk) => {
+              {dropdownLinks.map(({ href, content }, dk) => {
                 return (
                   <option key={`dropdown-${content}`} value={href}>
                     {content}
