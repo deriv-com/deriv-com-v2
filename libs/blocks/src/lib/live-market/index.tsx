@@ -4,16 +4,11 @@ import {
   CardVariantType,
   CustomLink,
 } from '@deriv-com/components';
-import {
-  FluidContainer,
-  Heading,
-  Section,
-  Text,
-  qtMerge,
-} from '@deriv/quill-design';
+import { FluidContainer, Section, Text, qtMerge } from '@deriv/quill-design';
 import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
+import { HeaderSection } from './header-section';
 
 export interface LiveMarketProps<T extends CardVariantType> {
   header?: string;
@@ -47,19 +42,11 @@ export const LiveMarket = <T extends CardVariantType>({
     >
       <FluidContainer className="flex flex-col items-center justify-center gap-gap-3xl">
         {(header || description || TabHeader) && (
-          <div className="flex w-full flex-col items-center gap-gap-2xl">
-            {header && <Heading.H2>{header}</Heading.H2>}
-            {(description || TabHeader) && (
-              <div className="flex w-full flex-col items-center gap-gap-xl">
-                {TabHeader && <TabHeader />}
-                {description && (
-                  <Text className="text-center" size="md">
-                    {description}
-                  </Text>
-                )}
-              </div>
-            )}
-          </div>
+          <HeaderSection
+            header={header}
+            description={description}
+            TabHeader={TabHeader}
+          />
         )}
         <div className="flex w-full flex-col items-center gap-gap-xl">
           {
