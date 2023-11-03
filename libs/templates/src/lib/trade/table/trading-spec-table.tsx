@@ -16,7 +16,7 @@ import {
   StandaloneChevronRightRegularIcon,
   StandaloneCircleDotFillIcon,
   StandaloneCircleRegularIcon,
-  StandaloneXmarkRegularIcon,
+  StandaloneXmarkBoldIcon,
 } from '@deriv/quill-icons';
 import { SearchChip } from '@deriv-com/components';
 import { BottomSheet } from '@deriv-com/components';
@@ -87,11 +87,6 @@ const TradingSpecTable = () => {
             className="block md:hidden lg:hidden"
             onClick={() => {
               setShowBottomSheet(true);
-              window.scrollTo(
-                0,
-                document.body.scrollHeight ||
-                  document.documentElement.scrollHeight,
-              );
             }}
           />
 
@@ -228,7 +223,7 @@ const TradingSpecTable = () => {
         <BottomSheet
           heading="Table view"
           icon={
-            <StandaloneXmarkRegularIcon
+            <StandaloneXmarkBoldIcon
               fill="black"
               iconSize="md"
               onClick={() => {
@@ -237,12 +232,13 @@ const TradingSpecTable = () => {
             />
           }
         >
-          <div className="mb-gap-lg flex flex-col p-general-md">
+          <div className=" flex flex-col p-general-md">
             <div
-              className="flex flex-row items-center gap-gap-md py-gap-md"
+              className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
               onClick={() => {
                 setSelectedFilter(mainInfo.data);
                 setSelectedInfo('mainInfo');
+                setShowBottomSheet(false);
               }}
             >
               {selectedInfo === 'mainInfo' ? (
@@ -251,13 +247,16 @@ const TradingSpecTable = () => {
                 <StandaloneCircleRegularIcon fill="black" iconSize="md" />
               )}
 
-              <Text size="md">Main info</Text>
+              <Text size="md" className="text-typography-default">
+                Main info
+              </Text>
             </div>
             <div
-              className="flex flex-row items-center gap-gap-md py-gap-md"
+              className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
               onClick={() => {
                 setSelectedFilter(trading_condition.data);
                 setSelectedInfo('trading_condition');
+                setShowBottomSheet(false);
               }}
             >
               {selectedInfo === 'trading_condition' ? (
@@ -265,13 +264,16 @@ const TradingSpecTable = () => {
               ) : (
                 <StandaloneCircleRegularIcon fill="black" iconSize="md" />
               )}
-              <Text size="md">Trading conditions</Text>
+              <Text size="md" className="text-typography-default">
+                Trading conditions
+              </Text>
             </div>
             <div
-              className="flex flex-row items-center gap-gap-md py-gap-md"
+              className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
               onClick={() => {
                 setSelectedFilter(additional_info.data);
                 setSelectedInfo('additional_info');
+                setShowBottomSheet(false);
               }}
             >
               {selectedInfo === 'additional_info' ? (
@@ -280,7 +282,9 @@ const TradingSpecTable = () => {
                 <StandaloneCircleRegularIcon fill="black" iconSize="md" />
               )}
 
-              <Text size="md">Additional info</Text>
+              <Text size="md" className="text-typography-default">
+                Additional info
+              </Text>
             </div>
           </div>
         </BottomSheet>

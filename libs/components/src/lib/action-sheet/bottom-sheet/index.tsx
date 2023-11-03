@@ -10,10 +10,10 @@ export type BottomSheetProps = {
 export const BottomSheet = ({ heading, icon, children }: BottomSheetProps) => {
   return (
     <div className="fixed inset-y-gap-xs left-50 z-10 flex h-full w-full flex-col justify-end bg-typography-default ">
-      <div className="fixed w-full rounded-t-lg bg-solid-slate-50 p-general-sm">
-        <div className="flex flex-row items-center justify-between p-general-md">
-          {heading && <Heading.H6>{heading}</Heading.H6>}
-          {icon && icon}
+      <div className="fixed w-full rounded-t-lg bg-solid-slate-50 ">
+        <div className="flex min-h-[64px] flex-row items-center justify-center px-general-md py-general-sm">
+          {heading && <Heading.H6 className="px-400">{heading}</Heading.H6>}
+          {icon && <div className="px-general-md py-general-sm">{icon}</div>}
         </div>
 
         {children}
