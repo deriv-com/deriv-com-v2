@@ -214,7 +214,7 @@ const TradingSpecTable = () => {
           </div>
         </div>
       )}
-      <div className="flex justify-center pt-general-2xl">
+      <div className="flex justify-center pt-general-lg lg:pt-general-2xl">
         <Button
           colorStyle="black"
           size="lg"

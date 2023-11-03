@@ -9,7 +9,7 @@ export function Index() {
         <meta
           name="viewport"
           key="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+          content="width=device-width, initial-scale=1.0"
         />
         <title>Deriv Hk - Home Page</title>
       </Head>
