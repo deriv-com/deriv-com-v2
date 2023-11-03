@@ -1,7 +1,7 @@
 import { Heading, Text, TextSize, qtMerge } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { CardContent } from '../types';
-import CustomLink from '../../link';
+import CustomLink, { textSize } from '../../link';
 
 export interface BaseCardProps extends CardContent {
   contentPosition: 'bottom' | 'top' | 'start' | 'end';
@@ -109,7 +109,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         {link && (
           <CustomLink
             href={link.href}
-            size={linkTextSizeVariant[size]}
+            size={textSizeVariant[size] as textSize}
             hasIcon
             hasHoverColor
           >
