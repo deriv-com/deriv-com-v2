@@ -33,7 +33,10 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
 
   return (
     <SearchBlock
+<<<<<<< HEAD
       searchPlaceholder='Try "Trade"'
+=======
+>>>>>>> dc0b2a4 (fix: updated search block)
       showSearchresults={showSearchresults}
       content={
         <div className="flex flex-col items-start gap-general-md">
