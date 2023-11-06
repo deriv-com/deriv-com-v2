@@ -1,4 +1,4 @@
-import { Navigation } from '@deriv-com/features';
+import { Footer, Navigation } from '@deriv-com/features';
 import { HomeTemplate } from '@deriv-com/templates';
 import Head from 'next/head';
 
@@ -10,6 +10,7 @@ export function Index() {
       </Head>
       <Navigation.Main />
       <HomeTemplate />
+      <Footer.Main />
     </>
   );
 }
