@@ -173,7 +173,7 @@ const TradingSpecTable = () => {
         <div>
           <Text
             size="lg"
-            className="px-general-md py-general-2xl text-center text-typography-default"
+            className="break-words px-general-md py-general-2xl text-center text-typography-default"
           >
             Sorry, we couldn’t find any results with "{searchValue}" in it
           </Text>
