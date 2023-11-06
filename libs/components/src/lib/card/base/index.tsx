@@ -82,12 +82,13 @@ export const BaseCard: React.FC<BaseCardProps> = ({
     >
       <div
         className={qtMerge(
-          'flex max-h-max  basis-1/2 flex-col justify-center md:flex-1',
+          'flex max-h-max  basis-1/2 flex-col justify-center',
           align === 'start'
             ? 'items-start md:items-start'
             : 'items-center md:items-center',
           sizeVariantContainerGap[size],
           nonContentClassName,
+          content ? '' : 'md:flex-1',
         )}
       >
         {icon && icon}

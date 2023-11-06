@@ -1,10 +1,8 @@
 import { Card, OptimizedImage } from '@deriv-com/components';
+import { ScrollToTop } from '@deriv-com/utils';
 import { Button, qtMerge } from '@deriv/quill-design';
 
 export const CTABlockContent = () => {
-  const ScrollFunction = () => {
-    document.documentElement.scrollTop = 0;
-  };
   return (
     <Card.ContentRight
       className={qtMerge('lg:gap-800')}
@@ -26,7 +24,7 @@ export const CTABlockContent = () => {
         colorStyle="black"
         className="lg:mt-400"
         size="lg"
-        onClick={ScrollFunction}
+        onClick={ScrollToTop}
       >
         Get a demo forex account
       </Button>
