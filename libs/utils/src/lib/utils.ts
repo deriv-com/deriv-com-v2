@@ -48,10 +48,3 @@ export const searchString = (
 
   return [];
 };
-
-export const slugify = (input: string): string =>
-  input
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/[\s]+/g, '-')
-    .trim();
