@@ -1,5 +1,5 @@
 import { Card, OptimizedImage } from '@deriv-com/components';
-import { ScrollToTop } from '@deriv-com/utils';
+import { scrollToTop } from '@deriv-com/utils';
 import { Button, qtMerge } from '@deriv/quill-design';
 
 export const CTABlockContent = () => {
@@ -24,7 +24,7 @@ export const CTABlockContent = () => {
         colorStyle="black"
         className="lg:mt-400"
         size="lg"
-        onClick={ScrollToTop}
+        onClick={scrollToTop}
       >
         Get a demo forex account
       </Button>
