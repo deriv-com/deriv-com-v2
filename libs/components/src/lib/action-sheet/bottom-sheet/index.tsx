@@ -11,11 +11,11 @@ export const BottomSheet = ({ heading, icon, children }: BottomSheetProps) => {
   return (
     <div className="fixed inset-y-gap-xs left-50 z-10 flex h-full w-full flex-col justify-end bg-typography-default ">
       <div className="fixed w-full rounded-t-lg bg-solid-slate-50 p-general-sm">
-        {heading || icon} &&
         <div className="flex flex-row items-center justify-between p-general-md">
           {heading && <Heading.H6>{heading}</Heading.H6>}
           {icon && icon}
         </div>
+
         {children}
       </div>
       <div></div>
