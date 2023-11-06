@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import SearchBlock from '.';
+import { CustomLink } from '../../../../components/src';
+import { getHelpCentreLink } from '../../../../templates/src/lib/help-center/sections/search/components';
 
 const meta = {
   title: 'Blocks/SearchBlock',
@@ -34,6 +36,22 @@ const FAQData = [
 
 export const Default: Story = {
   args: {
-    data: FAQData,
+    content: (
+      <div className="flex flex-col items-start gap-general-md">
+        {FAQData.map(({ header, questions }) =>
+          questions.map((question) => {
+            return (
+              <CustomLink
+                key={question}
+                href={getHelpCentreLink(header, question)}
+                className="justify-start"
+              >
+                {question}
+              </CustomLink>
+            );
+          }),
+        )}
+      </div>
+    ),
   },
 };
