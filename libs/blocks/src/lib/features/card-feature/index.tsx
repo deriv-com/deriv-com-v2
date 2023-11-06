@@ -1,5 +1,11 @@
 import clsx from 'clsx';
-import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import {
+  FluidContainer,
+  Heading,
+  Section,
+  Text,
+  qtMerge,
+} from '@deriv/quill-design';
 import { ReactNode } from 'react';
 import {
   CardContent,
@@ -34,7 +40,12 @@ const Card = ({
         className,
       )}
     >
-      <FluidContainer className="flex flex-col items-center gap-gap-3xl">
+      <FluidContainer
+        className={qtMerge(
+          'flex flex-col items-center',
+          title || (description && 'gap-gap-3xl'),
+        )}
+      >
         <div className="flex flex-col items-center justify-center gap-gap-xl">
           {title && <Heading.H2 className="text-center">{title}</Heading.H2>}
           {description && (

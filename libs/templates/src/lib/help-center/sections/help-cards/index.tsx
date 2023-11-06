@@ -9,7 +9,7 @@ const HelpCardSection = () => {
         <CardsContainer
           variant="ContentLeft"
           cards={helpCardsData}
-          cols="four"
+          cols="three"
         />
       </FluidContainer>
     </Section>

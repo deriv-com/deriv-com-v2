@@ -16,7 +16,12 @@ const SearchSection = ({ hasQuestionCards = true }: SearchSectionProps) => {
     <FluidContainer className="flex w-full flex-col items-center">
       <SearchResults onSearchKeyChange={handleSearchKeyChange} />
       {!search_key && hasQuestionCards && (
-        <Features.Card variant="ContentLeft" cards={CardsFAQ} cols="three" />
+        <Features.Card
+          variant="ContentLeft"
+          cards={CardsFAQ}
+          cols="three"
+          className="mt-general-4xl py-general-none pb-general-4xl"
+        />
       )}
     </FluidContainer>
   );
