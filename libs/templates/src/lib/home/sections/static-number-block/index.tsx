@@ -1,8 +1,8 @@
 import { StatBlock } from '@deriv-com/blocks';
 import { homeStatData } from './data';
 
-const StaticNumberBlock = () => {
+const StaticNumberSection = () => {
   return <StatBlock.NumbersWithTitle cards={homeStatData} />;
 };
 
-export default StaticNumberBlock;
+export default StaticNumberSection;
