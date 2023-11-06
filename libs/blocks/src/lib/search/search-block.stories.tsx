@@ -36,6 +36,7 @@ const FAQData = [
 
 export const Default: Story = {
   args: {
+    searchPlaceholder: 'Try "Trade"',
     content: (
       <div className="flex flex-col items-start gap-general-md">
         {FAQData.map(({ header, questions }) =>
