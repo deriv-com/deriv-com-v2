@@ -1,20 +1,18 @@
 import { Hero } from '@deriv-com/blocks';
 import { PageLayout } from '@deriv-com/components';
-import { Button, FluidContainer } from '@deriv/quill-design';
-import AppDownload from './app-download';
+import { Text } from '@deriv/quill-design';
+import TradingSpecTable from './table/trading-spec-table';
 
 export function TradeTemplate() {
   return (
     <PageLayout>
-      <FluidContainer>
-        <Hero.ContentLess
-          title="Leveraged forex on the world’s favorite trading platform"
-          description={`Deriv MT5 offers various trading assets on the forex market via a single platform.`}
-        >
-          <Button>This is a button</Button>
-        </Hero.ContentLess>
-        <AppDownload />
-      </FluidContainer>
+      <Hero.ContentLess title="Leveraged forex on Deriv MT5">
+        <Text size="xl" className="text-center text-typography-default">
+          Deriv MT5 offers various trading assets on the forex market via a
+          single platform.
+        </Text>
+      </Hero.ContentLess>
+      <TradingSpecTable />
     </PageLayout>
   );
 }

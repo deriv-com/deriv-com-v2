@@ -1,7 +1,7 @@
 import styles from './search.module.css';
 import { qtMerge } from '@deriv/quill-design';
 import { StandaloneSearchRegularIcon } from '@deriv/quill-icons';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export type sizeVariant = 'sm' | 'md';
 
@@ -15,7 +15,7 @@ export type InputProps = {
 };
 
 const sizeVariantClass: { [key in sizeVariant]: string } = {
-  sm: 'p-general-xs',
+  sm: 'px-general-sm py-general-xs',
   md: 'p-general-md',
 };
 
@@ -28,7 +28,12 @@ export const SearchChip = ({
   inputClassName,
 }: InputProps) => {
   const [current_value, setValue] = useState(value);
-
+  const search_input_ref = useRef<HTMLInputElement | null>(null);
+  useEffect(() => {
+    if (search_input_ref.current) {
+      search_input_ref.current.focus();
+    }
+  }, []);
   useEffect(() => {
     setValue(value);
   }, [value]);
@@ -36,7 +41,7 @@ export const SearchChip = ({
   return (
     <div
       className={qtMerge(
-        'flex justify-start gap-general-sm rounded-lg border-75',
+        'relative flex justify-start gap-general-sm rounded-lg border-75',
         'border-solid-slate-100 bg-background-primary-container',
         sizeVariantClass[size],
         className,
@@ -46,11 +51,13 @@ export const SearchChip = ({
 
       <input
         className={qtMerge(
-          'w-full text-75 outline-none',
+          'w-full outline-none',
           'text-solid-slate-1400',
           inputClassName,
+
           styles['bg-transparent'],
         )}
+        ref={search_input_ref}
         placeholder={placeholder}
         value={current_value}
         onChange={(e) => {
