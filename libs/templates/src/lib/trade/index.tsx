@@ -14,8 +14,8 @@ export function TradeTemplate() {
           Deriv MT5 offers various trading assets on the forex market via a
           single platform.
         </Text>
-        <TradingSpecTable />
       </Hero.ContentLess>
+      <TradingSpecTable />
     </PageLayout>
   );
 }
