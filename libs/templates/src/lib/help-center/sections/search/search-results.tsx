@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { searchString } from '@deriv-com/utils';
 import { FAQSearchResults } from '../../types';
 import { getHelpCentreLink } from './components';
+import { Text } from '@deriv/quill-design';
 
 export type SearchResultsProps = {
   onSearchKeyChange: (searchKey: string) => void;
@@ -12,6 +13,7 @@ export type SearchResultsProps = {
 
 export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
   const [results, setResults] = useState<FAQSearchResults[]>([]);
+  const [searchKey, setSearchKey] = useState('');
 
   const showSearchresults = (query: string) => {
     const final_matches: FAQSearchResults[] = [];
@@ -35,8 +37,10 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
     <SearchBlock
       placeholder='Try "Trade"'
       showSearchresults={showSearchresults}
+      onChange={(e) => setSearchKey(e)}
       content={
         <div className="flex flex-col items-start gap-general-md">
+          {searchKey !== '' && <Text size="lg">Results for “{searchKey}”</Text>}
           {results.map(({ header, questions }) =>
             questions.map((question) => {
               return (
@@ -49,6 +53,13 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
                 </CustomLink>
               );
             }),
+          )}
+          {!results.length && searchKey && (
+            <div className="flex w-full justify-center py-general-2xl">
+              <Text size="lg">
+                Sorry, we couldn’t find any results with "{searchKey}" in it
+              </Text>
+            </div>
           )}
         </div>
       }
