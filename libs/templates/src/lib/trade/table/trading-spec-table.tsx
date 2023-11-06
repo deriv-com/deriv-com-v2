@@ -20,6 +20,7 @@ import {
 } from '@deriv/quill-icons';
 import { SearchChip } from '@deriv-com/components';
 import { BottomSheet } from '@deriv-com/components';
+import clsx from 'clsx';
 
 const TradingSpecTable = () => {
   const [data, setData] = useState<TableDataType[]>([]);
@@ -134,7 +135,12 @@ const TradingSpecTable = () => {
           </Button>
         </div>
       </div>
-      <table className="inline-block w-[100%] overflow-auto">
+      <table
+        className={clsx(
+          data.length < 1 && 'pb-general-lg',
+          'inline-block w-[100%] overflow-auto',
+        )}
+      >
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
@@ -164,12 +170,14 @@ const TradingSpecTable = () => {
         </tbody>
       </table>
       {data.length < 1 && (
-        <Text
-          size="lg"
-          className="px-general-md pt-general-4xl text-center text-typography-default"
-        >
-          Sorry, we couldn’t find any results with "{searchValue}" in it
-        </Text>
+        <div>
+          <Text
+            size="lg"
+            className="px-general-md py-general-2xl text-center text-typography-default"
+          >
+            Sorry, we couldn’t find any results with "{searchValue}" in it
+          </Text>
+        </div>
       )}
       {data.length > 1 && (
         <div className="flex flex-col gap-gap-xl pt-general-lg lg:gap-gap-2xl">
@@ -222,6 +230,9 @@ const TradingSpecTable = () => {
       {showBottomSheet && (
         <BottomSheet
           heading="Table view"
+          placeholdericon={
+            <StandaloneXmarkBoldIcon fill="white" iconSize="md" />
+          }
           icon={
             <StandaloneXmarkBoldIcon
               fill="black"
