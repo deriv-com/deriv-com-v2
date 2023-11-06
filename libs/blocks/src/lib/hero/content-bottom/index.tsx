@@ -4,11 +4,13 @@ import clsx from 'clsx';
 export interface ContentBottomProps {
   title: string;
   className?: string;
+  containerClassName?: string;
   children: React.ReactNode;
 }
 
 const ContentBottom = ({
   className = '',
+  containerClassName = '',
   title,
   children,
 }: ContentBottomProps) => {
@@ -20,7 +22,12 @@ const ContentBottom = ({
         className,
       )}
     >
-      <FluidContainer className="flex flex-col gap-gap-3xl md:px-general-lg lg:px-general-none">
+      <FluidContainer
+        className={clsx(
+          'flex flex-col gap-gap-3xl md:px-general-lg lg:px-general-none',
+          containerClassName,
+        )}
+      >
         <Heading.H1 className="text-center">{title}</Heading.H1>
         {children}
       </FluidContainer>
