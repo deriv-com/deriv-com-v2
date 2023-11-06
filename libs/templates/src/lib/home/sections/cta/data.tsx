@@ -1,8 +1,10 @@
 import { Card, OptimizedImage } from '@deriv-com/components';
-import { scrollTop } from '@deriv-com/utils';
 import { Button } from '@deriv/quill-design';
 
 export const CTABlockContent = () => {
+  const scrollTop = () => {
+    document.documentElement.scrollTop = 0;
+  };
   return (
     <Card.ContentRight
       className="lg:gap-gap-lg"
