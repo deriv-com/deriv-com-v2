@@ -20,7 +20,7 @@ const SearchSection = ({ hasQuestionCards = true }: SearchSectionProps) => {
           variant="ContentLeft"
           cards={CardsFAQ}
           cols="three"
-          className="mt-general-4xl py-general-none"
+          className="mt-general-4xl py-general-none pb-general-4xl"
         />
       )}
     </FluidContainer>
