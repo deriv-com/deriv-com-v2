@@ -14,7 +14,7 @@ export type TableDataType = {
   spread?: number;
   currency?: string;
   spread_cost?: number;
-  commission?: number;
+  commission?: string | number;
   effective_leverage?: number | string;
   margin_requirement?: number | string;
   swap_long?: number;
