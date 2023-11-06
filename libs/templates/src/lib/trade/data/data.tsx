@@ -1031,7 +1031,7 @@ export const trading_condition = {
       instrument: {
         instrument: 'GBP/NZD',
         description: 'Great Britain Pound vs New Zealand Dollar',
-        icon: <MarketForexGbpnzdIcon fill="black" iconSize="2xl" />,
+        icon: <MarketForexGbpnzdIcon fill="black" iconSize="sm" />,
       },
       spread_cost: -23.65,
       commission: '0',
@@ -1691,7 +1691,7 @@ export const additional_info = {
       instrument: {
         instrument: 'GBP/NZD',
         description: 'Great Britain Pound vs New Zealand Dollar',
-        icon: <MarketForexGbpnzdIcon fill="black" iconSize="2xl" />,
+        icon: <MarketForexGbpnzdIcon fill="black" iconSize="sm" />,
       },
       contract_size: 100000,
       min_volume: 0.01,
