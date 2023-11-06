@@ -4,18 +4,18 @@ import { ReactNode } from 'react';
 export type SearchBlockProps = {
   showSearchresults: (e: string) => void;
   content?: ReactNode;
-  searchPlaceholder: string;
+  placeholder: string;
 };
 
 export const SearchBlock = ({
   showSearchresults,
   content,
-  searchPlaceholder,
+  placeholder,
 }: SearchBlockProps) => {
   return (
     <section className="flex w-full max-w-[1024px] flex-col gap-general-xl py-general-xl ">
       <SearchChip
-        placeholder={searchPlaceholder}
+        placeholder={placeholder}
         onChange={(value) => showSearchresults(value)}
         className="w-full "
         inputClassName="!bg-gradient-slate-110"
