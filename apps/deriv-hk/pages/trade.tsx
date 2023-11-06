@@ -1,4 +1,4 @@
-import { Navigation } from '@deriv-com/features';
+import { Footer, Navigation } from '@deriv-com/features';
 import { TradeTemplate } from '@deriv-com/templates';
 
 export const TradePage = () => {
@@ -6,6 +6,7 @@ export const TradePage = () => {
     <>
       <Navigation.Main />
       <TradeTemplate />
+      <Footer.Main />
     </>
   );
 };
