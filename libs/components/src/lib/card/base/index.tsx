@@ -82,21 +82,23 @@ export const BaseCard: React.FC<BaseCardProps> = ({
     >
       <div
         className={qtMerge(
-          'flex max-h-max  basis-1/2 flex-col justify-center md:flex-1',
+          'flex max-h-max  basis-1/2 flex-col justify-center',
           align === 'start'
             ? 'items-start md:items-start'
             : 'items-center md:items-center',
           sizeVariantContainerGap[size],
           nonContentClassName,
+          !content && 'flex-1',
         )}
       >
         {icon && icon}
         {(header || description) && (
           <div
             className={qtMerge(
-              'flex flex-1 flex-col',
+              'flex flex-col',
               textColorVariantClass[color],
               sizeVariantTextGap[size],
+              !content && 'flex-1',
             )}
           >
             {header && <HeadingComponent>{header}</HeadingComponent>}

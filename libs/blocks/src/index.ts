@@ -1,5 +1,4 @@
 import './styles.scss';
-
 export * from './lib/accordion';
 export * from './lib/live-market';
 export * from './lib/content-text';
@@ -12,3 +11,5 @@ export * from './lib/hero';
 export * from './lib/features';
 export * from './lib/trade-types';
 export * from './lib/fast-payment';
+export * from './lib/footer';
+export * from './lib/search';
