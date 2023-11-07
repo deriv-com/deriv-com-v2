@@ -22,7 +22,7 @@ const AppDownload = () => {
   };
 
   return (
-    <FluidContainer>
+    <FluidContainer className="py-general-4xl">
       <Card.ContentRight
         color="gray"
         align="start"
