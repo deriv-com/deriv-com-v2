@@ -30,7 +30,7 @@ const ourPrinciplesCards: CardContent[] = [
   {
     header: 'Be responsible',
     description:
-      'We don’t practice hard-selling, offer financial or trading advice, nor make promises of guaranteed returns. We don’t encourage vulnerable people to trade and implement controls to prevent any unlawful activity.',
+      'We don’t practise hard-selling, offer financial or trading advice, nor make promises of guaranteed returns. We don’t encourage vulnerable people to trade and implement controls to prevent any unlawful activity.',
     align: 'start',
     size: 'sm',
     color: 'light',
@@ -44,7 +44,11 @@ export const WhoWeArePrinciples = () => {
       cols="two"
       variant="ContentBottom"
       cards={ourPrinciplesCards}
-      cta={<Button size="lg">Learn more about our principles</Button>}
+      cta={
+        <Button size="lg" colorStyle="black">
+          Learn more about our principles
+        </Button>
+      }
     />
   );
 };
