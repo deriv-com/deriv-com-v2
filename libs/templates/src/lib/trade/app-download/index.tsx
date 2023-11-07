@@ -31,16 +31,16 @@ const AppDownload = () => {
         contentClassName="w-full flex justify-center"
         className="lg:gap-gap-lg"
       >
-        <div className="flex  flex-col gap-gap-2xl">
-          <div className="flex  flex-col gap-gap-xl">
+        <div className="flex flex-col gap-gap-2xl">
+          <div className="flex flex-col gap-gap-xl">
             <Heading.H2>{heading}</Heading.H2>
             <CustomText className="text-body-lg leading-body-lg">
               {description}
             </CustomText>
           </div>
 
-          <div className="flex  w-full flex-col gap-gap-xl md:flex-row lg:flex-col">
-            <div className="flex  w-full items-start gap-gap-lg">
+          <div className="flex w-full flex-col gap-gap-xl md:flex-row lg:flex-col">
+            <div className="flex w-full items-start gap-gap-lg">
               {cta.qr}
               <div className="grid w-[134px] gap-gap-md lg:w-full">
                 <CustomText>{cta.description}</CustomText>
@@ -49,7 +49,7 @@ const AppDownload = () => {
                 </CustomText>
               </div>
             </div>
-            <div className="flex  w-full flex-wrap gap-gap-lg">
+            <div className="flex w-full flex-wrap gap-gap-lg">
               {platforms.map((platform) => (
                 <div
                   className="flex items-center gap-gap-md"
