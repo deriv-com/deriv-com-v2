@@ -117,7 +117,7 @@ const TradingSpecTable = () => {
               setSelectedInfo('trading_condition');
             }}
           >
-            Trading condition
+            Trading conditions
           </Button>
           <Button
             className={qtMerge(
