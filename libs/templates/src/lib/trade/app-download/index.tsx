@@ -21,13 +21,6 @@ const AppDownload = () => {
     );
   };
 
-  const CustomDiv: React.FC<HTMLAttributes<HTMLParagraphElement>> = ({
-    className,
-    ...props
-  }) => {
-    return <div className={clsx('flex', className)} {...props} />;
-  };
-
   return (
     <FluidContainer>
       <Card.ContentRight
@@ -38,16 +31,16 @@ const AppDownload = () => {
         contentClassName="w-full flex justify-center"
         className="lg:gap-gap-lg"
       >
-        <CustomDiv className="flex-col gap-gap-2xl">
-          <CustomDiv className="flex-col gap-gap-xl">
+        <div className="flex  flex-col gap-gap-2xl">
+          <div className="flex  flex-col gap-gap-xl">
             <Heading.H2>{heading}</Heading.H2>
             <CustomText className="text-body-lg leading-body-lg">
               {description}
             </CustomText>
-          </CustomDiv>
+          </div>
 
-          <CustomDiv className="w-full flex-col gap-gap-xl md:flex-row lg:flex-col">
-            <CustomDiv className="w-full items-start gap-gap-lg">
+          <div className="flex  w-full flex-col gap-gap-xl md:flex-row lg:flex-col">
+            <div className="flex  w-full items-start gap-gap-lg">
               {cta.qr}
               <div className="grid w-[134px] gap-gap-md lg:w-full">
                 <CustomText>{cta.description}</CustomText>
@@ -55,20 +48,20 @@ const AppDownload = () => {
                   {cta.devices}
                 </CustomText>
               </div>
-            </CustomDiv>
-            <CustomDiv className="w-full flex-wrap gap-gap-lg">
+            </div>
+            <div className="flex  w-full flex-wrap gap-gap-lg">
               {platforms.map((platform) => (
-                <CustomDiv
-                  className="items-center gap-gap-md"
+                <div
+                  className="flex items-center gap-gap-md"
                   key={platform.name}
                 >
                   {platform.icon}
                   <Text>{platform.name}</Text>
-                </CustomDiv>
+                </div>
               ))}
-            </CustomDiv>
-          </CustomDiv>
-        </CustomDiv>
+            </div>
+          </div>
+        </div>
       </Card.ContentRight>
     </FluidContainer>
   );
