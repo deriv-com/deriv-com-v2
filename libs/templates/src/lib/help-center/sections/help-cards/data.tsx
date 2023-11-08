@@ -39,7 +39,7 @@ export const helpCardsData: CardContent[] = [
     icon: <StandaloneFileCircleInfoRegularIcon fill="black" iconSize="md" />,
     link: {
       href: '#',
-      content: 'Learn More',
+      content: 'Learn more',
     },
   },
 ];
