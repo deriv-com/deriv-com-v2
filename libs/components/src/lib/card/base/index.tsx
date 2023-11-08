@@ -103,7 +103,12 @@ export const BaseCard: React.FC<BaseCardProps> = ({
           >
             {header && <HeadingComponent>{header}</HeadingComponent>}
             {description && (
-              <Text size={textSizeVariant[size]}>{description}</Text>
+              <Text
+                size={textSizeVariant[size]}
+                className="text-typography-default"
+              >
+                {description}
+              </Text>
             )}
           </div>
         )}

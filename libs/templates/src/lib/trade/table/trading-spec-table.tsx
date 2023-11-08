@@ -138,7 +138,7 @@ const TradingSpecTable = () => {
       <table
         className={clsx(
           data.length < 1 && 'pb-general-lg',
-          'inline-block w-[100%] overflow-auto',
+          'block w-[100%] overflow-auto',
         )}
       >
         <thead>
