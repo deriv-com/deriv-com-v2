@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    header: 'Content Left Card',
+    header: 'Content Right Card',
     description: 'This is a description',
     align: 'center',
     color: 'light',
