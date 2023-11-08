@@ -16,7 +16,8 @@
     "chromatic": "chromatic --exit-zero-on-changes --only-changed --exit-once-uploaded --output-dir dist/storybook/storybook-host",
     "test:ci": "nx run-many --target=test --all --parallel --coverage --coverageReporters=lcov && node ./tools/coverageMerger.js",
     "lint": "npx nx run-many --target=lint --all --parallel",
-    "lint:fix": "npx nx run-many --target=lint --all --parallel --fix"
+    "lint:fix": "npx nx run-many --target=lint --all --parallel --fix",
+    "test-script": "node test-script.js"
   },
   "private": true,
   "dependencies": {
