@@ -29,7 +29,7 @@ const AppDownload = () => {
         size="lg"
         content={content}
         contentClassName="w-full flex justify-center"
-        className="lg:gap-gap-lg"
+        className="items-center lg:gap-gap-lg xl:items-end"
       >
         <div className="flex flex-col gap-gap-2xl">
           <div className="flex flex-col gap-gap-xl">
