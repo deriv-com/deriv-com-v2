@@ -45,7 +45,7 @@ export const data = {
     },
     {
       icon: <StandaloneIosIcon />,
-      name: 'IOS',
+      name: 'iOS',
     },
     {
       icon: <StandaloneLinuxIcon />,
