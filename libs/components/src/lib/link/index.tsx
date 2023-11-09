@@ -1,10 +1,9 @@
+import { useSharedLink } from '@deriv-com/hooks';
 import { qtMerge } from '@deriv/quill-design';
 import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { ComponentPropsWithRef, useState } from 'react';
+import { HTMLAttributes, useState } from 'react';
 
-export interface CustomLinkProps extends ComponentPropsWithRef<typeof Link> {
+export interface CustomLinkProps extends HTMLAttributes<HTMLAnchorElement> {
   skipLocaleHandling?: boolean;
   size?: textSize;
   href: string;
@@ -30,42 +29,15 @@ export function CustomLink({
   children,
   ...rest
 }: CustomLinkProps) {
-  // TODO: uncomment this when we have localization
-  // const customHref = useCustomLink({
-  //   href,
-  //   locale: rest.locale,
-  //   skipLocaleHandling: skipLocaleHandling,
-  // });
-
-  // TODO: remove this when we have localization
-  const router = useRouter();
-  const locale = rest.locale || router.query.locale || 'en';
-
-  let customHref = href.toString() || router.asPath;
-  if (customHref.indexOf('http') === 0) skipLocaleHandling = true;
-  if (locale && !skipLocaleHandling) {
-    if (locale === 'en') {
-      if (customHref === '/') {
-        customHref = '/';
-      } else {
-        customHref = customHref
-          ? `${customHref}`
-          : router.pathname.replace('[locale]', locale as string);
-      }
-    } else {
-      customHref = customHref
-        ? `/${locale}${customHref}`
-        : router.pathname.replace('[locale]', locale as string);
-    }
-  }
+  const { DerivLink } = useSharedLink();
 
   const [isHover, setHover] = useState(false);
 
   return (
-    <Link
+    <DerivLink
       onMouseOver={() => hasHoverColor && setHover(true)}
       onMouseOut={() => setHover(false)}
-      href={customHref}
+      href={href}
       className={qtMerge(
         'flex items-center justify-center',
         'text-typography-prominent',
@@ -88,7 +60,7 @@ export function CustomLink({
           fill={isHover || hasLinkColor ? '#FF444F' : '#000000'}
         />
       )}
-    </Link>
+    </DerivLink>
   );
 }
 
