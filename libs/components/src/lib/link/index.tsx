@@ -70,7 +70,7 @@ export function CustomLink({
         'flex items-center justify-center',
         'text-typography-prominent',
         size === 'sm' && 'text-body-sm',
-        size === 'md' && 'text-body-md',
+        size === 'md' && 'text-body-sm lg:text-body-md',
         size === 'lg' && 'text-body-lg',
         hasLinkColor && 'text-typography-link',
         hasHoverColor && 'hover:text-typography-link',

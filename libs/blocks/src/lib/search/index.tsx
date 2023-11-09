@@ -15,7 +15,7 @@ export const SearchBlock = ({
   onChange,
 }: SearchBlockProps) => {
   return (
-    <section className="flex w-full max-w-[1024px] flex-col gap-general-xl py-general-xl ">
+    <section className="flex w-full max-w-[1024px] flex-col gap-general-xl py-general-xl">
       <SearchChip
         placeholder={placeholder}
         onChange={(value) => {
