@@ -32,8 +32,8 @@ export const generateFaqs = (questions: string[], header: string) => {
         ))}
       </div>
       <div className="flex">
-        <CustomLink href={getHelpCentreLink(header)} hasIcon>
-          <Text>View Questions</Text>
+        <CustomLink size="md" href={getHelpCentreLink(header)} hasIcon>
+          View Questions
         </CustomLink>
       </div>
     </div>
