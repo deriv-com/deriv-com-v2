@@ -30,7 +30,6 @@ export const Default: Story = {
     cardSliderProps: {
       slideClasses: 'max-w-xs',
       variant: 'ContentBottom',
-      className: '!pb-general-3xl',
       cards: [
         {
           header: 'Card 1',

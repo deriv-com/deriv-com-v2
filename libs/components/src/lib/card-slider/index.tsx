@@ -36,8 +36,10 @@ export const CardSlider = <T extends CardVariantType>({
   slideClasses,
   swiperData,
 }: CardSliderProps<T>) => {
-  const { pagination, slidesPerView, spaceBetween, breakpoints } =
-    Object.assign(defaultSwiperProps, swiperData);
+  const { slidesPerView, spaceBetween, breakpoints } = Object.assign(
+    defaultSwiperProps,
+    swiperData,
+  );
   const CardComponent = Card[variant];
 
   return (
@@ -45,7 +47,6 @@ export const CardSlider = <T extends CardVariantType>({
       <Swiper
         className={qtMerge(className)}
         modules={[Pagination]}
-        pagination={pagination}
         slidesPerView={slidesPerView}
         spaceBetween={spaceBetween}
         breakpoints={breakpoints}
