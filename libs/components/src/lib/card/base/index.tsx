@@ -98,7 +98,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
               'flex flex-col',
               textColorVariantClass[color],
               sizeVariantTextGap[size],
-              !content && 'flex-1',
+              !content && description && 'flex-1',
             )}
           >
             {header && <HeadingComponent>{header}</HeadingComponent>}
