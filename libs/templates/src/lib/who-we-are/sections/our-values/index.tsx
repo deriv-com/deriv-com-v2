@@ -59,7 +59,7 @@ export const WhoWeAreValues = () => {
         cards: ourValuesCards,
         variant: 'ContentBottom',
         slideClasses: 'max-w-[242px] md:max-w-[296px]',
-        className: 'w-full !pb-general-3xl',
+        className: 'w-full',
       }}
     />
   );
