@@ -1,5 +1,4 @@
 import { Features } from '@deriv-com/blocks';
-import { FluidContainer } from '@deriv/quill-design';
 import { useState } from 'react';
 import { CardsFAQ } from './data';
 import { SearchResults } from './search-results';
@@ -13,7 +12,7 @@ const SearchSection = ({ hasQuestionCards = true }: SearchSectionProps) => {
     setSearchKey(searchKey);
   };
   return (
-    <FluidContainer className="flex w-full flex-col items-center">
+    <>
       <SearchResults onSearchKeyChange={handleSearchKeyChange} />
       {!search_key && hasQuestionCards && (
         <Features.Card
@@ -23,7 +22,7 @@ const SearchSection = ({ hasQuestionCards = true }: SearchSectionProps) => {
           className="mt-general-4xl py-general-none pb-general-4xl"
         />
       )}
-    </FluidContainer>
+    </>
   );
 };
 
