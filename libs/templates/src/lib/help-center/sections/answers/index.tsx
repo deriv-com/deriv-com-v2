@@ -4,12 +4,12 @@ import { FAQDataType } from '../../types';
 import { AccordionProps } from '@deriv-com/components';
 
 const AnswerSection = ({ header, questions, answers }: FAQDataType) => {
-  const accordion_items: AccordionProps[] = [];
+  const accordionItems: AccordionProps[] = [];
 
   questions.forEach((question, qk) => {
     const answer = answers ? answers[qk] : () => <></>;
 
-    accordion_items.push({
+    accordionItems.push({
       title: question,
       content: answer,
     });
@@ -20,7 +20,7 @@ const AnswerSection = ({ header, questions, answers }: FAQDataType) => {
       <AccordionBlock
         title={header}
         content={{
-          data: accordion_items,
+          data: accordionItems,
         }}
       />
     </Section>

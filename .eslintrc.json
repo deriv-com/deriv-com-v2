@@ -20,8 +20,10 @@
             ]
           }
         ],
-        "tailwindcss/no-custom-classname": "error"
+        "tailwindcss/no-custom-classname": "error",
+        "camelcase":"warn"
       },
+      
       "settings": {
         "tailwindcss": {
           "callees": ["classnames", "clsx", "qtMerge"]
