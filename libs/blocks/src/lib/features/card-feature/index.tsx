@@ -46,7 +46,7 @@ const Card = ({
           (title || description) && 'gap-gap-3xl',
         )}
       >
-        <div className="flex flex-col items-center justify-center gap-gap-xl ">
+        <div className="flex flex-col items-center justify-center gap-gap-xl">
           {title && (
             <Heading.H2 className="text-center lg:max-w-[816px]">
               {title}
