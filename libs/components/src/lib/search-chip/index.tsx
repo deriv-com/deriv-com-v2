@@ -27,11 +27,11 @@ export const SearchChip = ({
   className,
   inputClassName,
 }: InputProps) => {
-  const [current_value, setValue] = useState(value);
-  const search_input_ref = useRef<HTMLInputElement | null>(null);
+  const [currentValue, setValue] = useState(value);
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
   useEffect(() => {
-    if (search_input_ref.current) {
-      search_input_ref.current.focus();
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
     }
   }, []);
   useEffect(() => {
@@ -57,13 +57,13 @@ export const SearchChip = ({
 
           styles['bg-transparent'],
         )}
-        ref={search_input_ref}
+        ref={searchInputRef}
         placeholder={placeholder}
-        value={current_value}
+        value={currentValue}
         onChange={(e) => {
-          const input_value = e.target.value;
-          setValue(input_value);
-          onChange(input_value, e);
+          const inputValue = e.target.value;
+          setValue(inputValue);
+          onChange(inputValue, e);
         }}
       />
     </div>

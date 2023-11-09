@@ -30,7 +30,6 @@ export const slugify = (input: string): string =>
 
 export function AccordionBlock({
   title,
-  tab,
   content,
   className,
   variant = 'Flush',

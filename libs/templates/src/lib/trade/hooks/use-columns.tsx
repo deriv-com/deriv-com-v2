@@ -26,7 +26,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableSymbolCell>
             ),
           }),
-          columnHelper.accessor('current_bid', {
+          columnHelper.accessor('currentBid', {
             header: () => (
               <TableCell.TableHeaderCell
                 className="text-left"
@@ -41,7 +41,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableTextCell>
             ),
           }),
-          columnHelper.accessor('current_ask', {
+          columnHelper.accessor('currentAsk', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="xl"
@@ -87,7 +87,7 @@ const UseColumns = (selected: string) => {
             ),
           }),
         ]
-      : selected === 'trading_condition'
+      : selected === 'tradingCondition'
       ? [
           columnHelper.accessor('instrument', {
             header: () => (
@@ -105,7 +105,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableSymbolCell>
             ),
           }),
-          columnHelper.accessor('spread_cost', {
+          columnHelper.accessor('spreadCost', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
@@ -135,7 +135,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableTextCell>
             ),
           }),
-          columnHelper.accessor('effective_leverage', {
+          columnHelper.accessor('effectiveLeverage', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
@@ -150,7 +150,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableTextCell>
             ),
           }),
-          columnHelper.accessor('margin_requirement', {
+          columnHelper.accessor('marginRequirement', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
@@ -165,7 +165,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableTextCell>
             ),
           }),
-          columnHelper.accessor('swap_long', {
+          columnHelper.accessor('swapLong', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
@@ -180,7 +180,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableTextCell>
             ),
           }),
-          columnHelper.accessor('swap_short', {
+          columnHelper.accessor('swapShort', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
@@ -196,7 +196,7 @@ const UseColumns = (selected: string) => {
             ),
           }),
 
-          columnHelper.accessor('day_swap', {
+          columnHelper.accessor('daySwap', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="sm"
@@ -229,7 +229,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableSymbolCell>
             ),
           }),
-          columnHelper.accessor('contract_size', {
+          columnHelper.accessor('contractSize', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"
@@ -244,7 +244,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableTextCell>
             ),
           }),
-          columnHelper.accessor('min_volume', {
+          columnHelper.accessor('minVolume', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"
@@ -259,7 +259,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableTextCell>
             ),
           }),
-          columnHelper.accessor('max_volume', {
+          columnHelper.accessor('maxVolume', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"
@@ -274,7 +274,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableTextCell>
             ),
           }),
-          columnHelper.accessor('volume_step', {
+          columnHelper.accessor('volumeStep', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"
@@ -289,7 +289,7 @@ const UseColumns = (selected: string) => {
               ></TableCell.TableTextCell>
             ),
           }),
-          columnHelper.accessor('volume_limit', {
+          columnHelper.accessor('volumeLimit', {
             header: () => (
               <TableCell.TableHeaderCell
                 width="md"

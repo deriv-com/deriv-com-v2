@@ -7,14 +7,14 @@ interface SearchSectionProps {
   hasQuestionCards?: boolean;
 }
 const SearchSection = ({ hasQuestionCards = true }: SearchSectionProps) => {
-  const [search_key, setSearchKey] = useState('');
+  const [searchKey, setSearchKey] = useState('');
   const handleSearchKeyChange = (searchKey: string) => {
     setSearchKey(searchKey);
   };
   return (
     <>
       <SearchResults onSearchKeyChange={handleSearchKeyChange} />
-      {!search_key && hasQuestionCards && (
+      {!searchKey && hasQuestionCards && (
         <Features.Card
           variant="ContentLeft"
           cards={CardsFAQ}
