@@ -18,10 +18,10 @@ export const Base = ({
   contentClass,
   onExpand,
 }: AccordionProps) => {
-  const [is_expanded, setExpanded] = useState(expanded);
-  const [is_auto_expand, setAutoExpand] = useState(false);
+  const [isExpanded, setExpanded] = useState(expanded);
+  const [isAutoExpand, setAutoExpand] = useState(false);
 
-  const accordion_element = useRef<HTMLDivElement>(null);
+  const accordionElement = useRef<HTMLDivElement>(null);
 
   const toggleCollapse = () => {
     setExpanded((current) => !current);
@@ -29,14 +29,14 @@ export const Base = ({
     scrollToExpanded(500);
 
     if (onExpand) {
-      onExpand(!is_expanded, title);
+      onExpand(!isExpanded, title);
     }
   };
 
   // Handle Collapse via Keyboard
   const handleKeyUp = useCallback((e: KeyboardEvent) => {
     if (e.code === 'Enter' || e.key === 'Enter' || e.keyCode === 13) {
-      if (accordion_element.current === document.activeElement) {
+      if (accordionElement.current === document.activeElement) {
         toggleCollapse();
       }
     }
@@ -44,11 +44,11 @@ export const Base = ({
 
   // Scroll to expanded item
   const scrollToExpanded = (delay = 1000) => {
-    const acc_element = accordion_element.current;
+    const accElement = accordionElement.current;
 
-    if (acc_element) {
+    if (accElement) {
       setTimeout(() => {
-        acc_element.scrollIntoView({
+        accElement.scrollIntoView({
           block: 'center',
           behavior: 'smooth',
         });
@@ -81,7 +81,7 @@ export const Base = ({
   return (
     <div
       data-id={id}
-      ref={accordion_element}
+      ref={accordionElement}
       tabIndex={0}
       className={qtMerge(
         'flex w-full flex-col overflow-hidden',
@@ -124,8 +124,7 @@ export const Base = ({
         <div
           className={qtMerge(
             styles['accordion-button'],
-            (is_auto_expand || is_expanded) &&
-              styles['accordion-button-expanded'],
+            (isAutoExpand || isExpanded) && styles['accordion-button-expanded'],
           )}
         >
           <StandaloneChevronDownRegularIcon fill="black" iconSize="sm" />
@@ -134,8 +133,7 @@ export const Base = ({
       <div
         className={qtMerge(
           styles['accordion-content'],
-          (is_auto_expand || is_expanded) &&
-            styles['accordion-content-expanded'],
+          (isAutoExpand || isExpanded) && styles['accordion-content-expanded'],
         )}
       >
         <div className="flex h-fit p-general-lg">{Content && <Content />}</div>
