@@ -1,5 +1,8 @@
 import { OptimizedImage } from '@deriv-com/components';
 import { Swiper, SwiperSlide } from 'swiper/react';
+// TODO: remove this eslint-disable when we have a better solution
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { Autoplay, EffectFade } from 'swiper';
 import { ReactNode } from 'react';
 import { Button, FluidContainer, Text } from '@deriv/quill-design';
@@ -7,7 +10,7 @@ import {
   SocialAppleIcon,
   SocialFacebookIcon,
   SocialGoogleIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Social';
 
 export const heroItems: { key: string; image: ReactNode }[] = [
   {

@@ -1,13 +1,13 @@
 import { OptimizedImage } from '@deriv-com/components';
 import {
   StandaloneGlobeRegularIcon,
-  LabelPairedWindowsIcon,
   StandaloneIosIcon,
   StandaloneLinuxIcon,
   StandaloneHuaweiAppGalleryIcon,
   StandaloneGooglePlayIcon,
   StandaloneAppStoreIosIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Standalone';
+import { LabelPairedWindowsIcon } from '@deriv/quill-icons/LabelPaired';
 
 export const data = {
   content: (

@@ -3,7 +3,7 @@ import {
   StandaloneAppleIcon,
   StandaloneFacebookIcon,
   StandaloneInstagramIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Standalone';
 import Footer from '.';
 
 const meta = {

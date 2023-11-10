@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Fill from '.';
-import { StandaloneAndroidIcon } from '@deriv/quill-icons';
+import { StandaloneAndroidIcon } from '@deriv/quill-icons/Standalone';
 
 const meta = {
   title: 'Components/Accordion/Fill',

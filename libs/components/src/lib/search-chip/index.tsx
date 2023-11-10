@@ -1,6 +1,6 @@
 import styles from './search.module.css';
 import { qtMerge } from '@deriv/quill-design';
-import { StandaloneSearchRegularIcon } from '@deriv/quill-icons';
+import { StandaloneSearchRegularIcon } from '@deriv/quill-icons/Standalone';
 import { useEffect, useRef, useState } from 'react';
 
 export type sizeVariant = 'sm' | 'md';

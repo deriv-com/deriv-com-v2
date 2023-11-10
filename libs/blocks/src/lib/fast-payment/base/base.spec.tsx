@@ -4,7 +4,7 @@ import {
   FlagAndorraIcon,
   FlagAustraliaIcon,
   FlagBurkinaFasoIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Flags';
 import Base from './index';
 
 describe('FastPayment', () => {

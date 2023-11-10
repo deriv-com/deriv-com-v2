@@ -6,7 +6,7 @@ import {
   MarketForexEurusdIcon,
   MarketForexGbpusdIcon,
   MarketForexUsdjpyIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Markets';
 
 const meta = {
   title: 'Blocks/LiveMarket',

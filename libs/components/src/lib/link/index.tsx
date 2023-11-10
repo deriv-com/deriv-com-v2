@@ -1,5 +1,5 @@
 import { qtMerge } from '@deriv/quill-design';
-import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
+import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ComponentPropsWithRef, useState } from 'react';
