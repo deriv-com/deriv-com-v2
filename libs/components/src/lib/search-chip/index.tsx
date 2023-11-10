@@ -53,7 +53,7 @@ export const SearchChip = ({
         className={qtMerge(
           'w-full outline-none',
           'text-solid-slate-1400',
-          'placeholder:text-opacity-black-300',
+          'placeholder:text-typography-disabled',
           inputClassName,
           styles['bg-transparent'],
         )}
