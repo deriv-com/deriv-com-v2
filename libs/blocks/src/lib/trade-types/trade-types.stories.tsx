@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import TradeTypeBlock from '.';
 import { CardContent } from '@deriv-com/components';
-import { IllustrativeAdvertiseIcon } from '@deriv/quill-icons';
+import { IllustrativeAdvertiseIcon } from '@deriv/quill-icons/Illustrative';
 
 const meta = {
   title: 'Blocks/TradeTypes',

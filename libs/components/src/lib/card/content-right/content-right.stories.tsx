@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import ContentRightCard from '.';
 import { Button } from '@deriv/quill-design';
-import { IllustrativeProtectedAndSecureIcon } from '@deriv/quill-icons';
+import { IllustrativeProtectedAndSecureIcon } from '@deriv/quill-icons/Illustrative';
 
 const meta = {
   title: 'Components/Card/ContentRight',

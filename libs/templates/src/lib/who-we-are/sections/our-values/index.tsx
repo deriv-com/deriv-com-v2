@@ -5,7 +5,7 @@ import {
   IllustrativeCustomerFocusIcon,
   IllustrativeIntegrityIcon,
   IllustrativeTeamworkIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Illustrative';
 
 const ourValuesCards: CardContent[] = [
   {

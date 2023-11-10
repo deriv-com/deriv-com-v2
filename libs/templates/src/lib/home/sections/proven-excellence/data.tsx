@@ -4,7 +4,7 @@ import {
   IllustrativeProtectedAndSecureIcon,
   IllustrativeSpreadsIcon,
   IllustrativeSupport247Icon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Illustrative';
 
 export const provenExcellenceData: CardContent[] = [
   {

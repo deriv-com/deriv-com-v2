@@ -11,13 +11,13 @@ import {
 import UseColumns from '../hooks/use-columns';
 import { Button, qtMerge, Section, Text } from '@deriv/quill-design';
 import {
-  LabelPairedEllipsisVerticalBoldIcon,
   StandaloneChevronLeftRegularIcon,
   StandaloneChevronRightRegularIcon,
   StandaloneCircleDotFillIcon,
   StandaloneCircleRegularIcon,
   StandaloneXmarkBoldIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Standalone';
+import { LabelPairedEllipsisVerticalBoldIcon } from '@deriv/quill-icons/LabelPaired';
 import { SearchChip } from '@deriv-com/components';
 import { BottomSheet } from '@deriv-com/components';
 import clsx from 'clsx';
