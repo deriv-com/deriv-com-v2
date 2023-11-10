@@ -9,22 +9,22 @@ export type TInstrumentData = {
 export type TableDataType = {
   instrument?: TInstrumentData;
   description?: string;
-  current_bid?: number;
-  current_ask?: number;
+  currentBid?: number;
+  currentAsk?: number;
   spread?: number;
   currency?: string;
-  spread_cost?: number;
+  spreadCost?: number;
   commission?: string | number;
-  effective_leverage?: number | string;
-  margin_requirement?: number | string;
-  swap_long?: number;
-  swap_short?: number;
-  day_swap?: string;
-  contract_size?: number;
-  min_volume?: number;
-  max_volume?: number;
-  volume_step?: number;
-  volume_limit?: number;
+  effectiveLeverage?: number | string;
+  marginRequirement?: number | string;
+  swapLong?: number;
+  swapShort?: number;
+  daySwap?: string;
+  contractSize?: number;
+  minVolume?: number;
+  maxVolume?: number;
+  volumeStep?: number;
+  volumeLimit?: number;
 };
 
 export type TableDataTypeProps = {

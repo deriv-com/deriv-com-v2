@@ -15,13 +15,7 @@ const ContentBottom = ({
   children,
 }: ContentBottomProps) => {
   return (
-    <Section
-      className={clsx(
-        'py-general-4xl',
-        'bg-background-primary-container',
-        className,
-      )}
-    >
+    <Section className={clsx('py-general-4xl', className)}>
       <FluidContainer
         className={clsx(
           'flex flex-col gap-gap-3xl md:px-general-lg lg:px-general-none',

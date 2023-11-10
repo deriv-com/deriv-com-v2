@@ -48,12 +48,6 @@ const textSizeVariant: { [key: string]: TextSize } = {
   lg: 'lg',
 };
 
-const linkTextSizeVariant = {
-  sm: 'text-body-md',
-  md: 'text-body-lg',
-  lg: 'text-body-lg',
-};
-
 export const BaseCard: React.FC<BaseCardProps> = ({
   header,
   description,

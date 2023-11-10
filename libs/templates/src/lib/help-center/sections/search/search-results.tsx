@@ -16,20 +16,20 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
   const [searchKey, setSearchKey] = useState('');
 
   const showSearchresults = (query: string) => {
-    const final_matches: FAQSearchResults[] = [];
+    const finalMatches: FAQSearchResults[] = [];
 
     FAQData.forEach(({ header, questions }) => {
       const matches = searchString(query, questions);
 
       if (matches.length) {
-        final_matches.push({
+        finalMatches.push({
           header,
           questions: matches,
         });
       }
     });
 
-    setResults(final_matches);
+    setResults(finalMatches);
     onSearchKeyChange(query);
   };
 
