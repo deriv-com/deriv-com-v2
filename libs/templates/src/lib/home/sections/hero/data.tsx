@@ -1,5 +1,7 @@
 import { OptimizedImage } from '@deriv-com/components';
 import { Swiper, SwiperSlide } from 'swiper/react';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { Autoplay, EffectFade } from 'swiper';
 import { ReactNode } from 'react';
 import { Button, FluidContainer, Text } from '@deriv/quill-design';

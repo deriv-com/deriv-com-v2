@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AccordionBlock from '.';
-import { StandaloneAndroidIcon } from '@deriv/quill-icons';
+import { StandaloneAndroidIcon } from '@deriv/quill-icons/Standalone';
 
 const childTitle = 'This is the title';
 const subTitle = 'Subtitle goes here';
