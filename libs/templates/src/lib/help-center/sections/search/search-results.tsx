@@ -40,27 +40,31 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
         showSearchresults={showSearchresults}
         onChange={(e) => setSearchKey(e)}
         content={
-          results.length !== 0 && (
-            <div className="flex flex-col items-start gap-general-md">
-              {searchKey !== '' && (
-                <Text size="lg">Results for “{searchKey}”</Text>
-              )}
-              {results.map(({ header, questions }) =>
-                questions.map((question) => {
-                  return (
-                    <CustomLink
-                      key={question}
-                      href={getHelpCentreLink(header, question)}
-                      className="justify-start"
-                    >
-                      {question}
-                    </CustomLink>
-                  );
-                }),
-              )}
+          searchKey !== '' && (
+            <div className="flex flex-col items-start">
+              <Text size="lg" bold className="w-full break-all py-general-xl">
+                Results for “{searchKey}”
+              </Text>
+
+              <div className="flex flex-col gap-general-lg pb-general-2xl">
+                {results.map(({ header, questions }) =>
+                  questions.map((question) => {
+                    return (
+                      <CustomLink
+                        key={question}
+                        href={getHelpCentreLink(header, question)}
+                        className="justify-start"
+                      >
+                        {question}
+                      </CustomLink>
+                    );
+                  }),
+                )}
+              </div>
+
               {!results.length && searchKey && (
                 <div className="flex w-full justify-center py-general-2xl">
-                  <Text size="lg">
+                  <Text size="lg" className="break-all">
                     Sorry, we couldn’t find any results with "{searchKey}" in it
                   </Text>
                 </div>
