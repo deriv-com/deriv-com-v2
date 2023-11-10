@@ -40,7 +40,7 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
         showSearchresults={showSearchresults}
         onChange={(e) => setSearchKey(e)}
         content={
-          results.length !== 0 && (
+          (results.length || searchKey) && (
             <div className="flex flex-col items-start gap-general-md">
               {searchKey !== '' && (
                 <Text size="lg">Results for “{searchKey}”</Text>
