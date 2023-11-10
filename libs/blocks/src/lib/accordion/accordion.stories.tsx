@@ -17,27 +17,86 @@ export const Default: Story = {
       options: ['Flush', 'Fill', 'Outline', 'Elevate'],
       control: { type: 'radio' },
     },
+    content: {
+      options: ['single', 'multiple'],
+    },
   },
   args: {
     className: '',
     title: 'Title goes here',
     variant: 'Flush',
     content: {
-      data: [
-        {
-          icon: <StandaloneAndroidIcon />,
-          title: 'This is the title',
-          subtitle: 'Subtitle goes here',
-          className: 'border-opacity-black-100 border-x-none',
-          content: () => (
-            <img
-              className="flex w-full flex-1"
-              src="https://placehold.co/640x320"
-              alt="Placeholder"
-            />
-          ),
-        },
-      ],
+      // eslint-disable-next-line no-constant-condition
+      data: 'single'
+        ? [
+            {
+              icon: <StandaloneAndroidIcon />,
+              title: 'This is the title',
+              subtitle: 'Subtitle goes here',
+              className: 'border-opacity-black-100 border-x-none',
+              content: () => (
+                <img
+                  className="flex w-full flex-1"
+                  src="https://placehold.co/640x320"
+                  alt="Placeholder"
+                />
+              ),
+            },
+          ]
+        : [
+            {
+              icon: <StandaloneAndroidIcon />,
+              title: 'This is the title',
+              subtitle: 'Subtitle goes here',
+              className: 'border-opacity-black-100 border-x-none',
+              content: () => (
+                <img
+                  className="flex w-full flex-1"
+                  src="https://placehold.co/640x320"
+                  alt="Placeholder"
+                />
+              ),
+            },
+            {
+              icon: <StandaloneAndroidIcon />,
+              title: 'This is the title',
+              subtitle: 'Subtitle goes here',
+              className: 'border-opacity-black-100 border-x-none',
+              content: () => (
+                <img
+                  className="flex w-full flex-1"
+                  src="https://placehold.co/640x320"
+                  alt="Placeholder"
+                />
+              ),
+            },
+            {
+              icon: <StandaloneAndroidIcon />,
+              title: 'This is the title',
+              subtitle: 'Subtitle goes here',
+              className: 'border-opacity-black-100 border-x-none',
+              content: () => (
+                <img
+                  className="flex w-full flex-1"
+                  src="https://placehold.co/640x320"
+                  alt="Placeholder"
+                />
+              ),
+            },
+            {
+              icon: <StandaloneAndroidIcon />,
+              title: 'This is the title',
+              subtitle: 'Subtitle goes here',
+              className: 'border-opacity-black-100 border-x-none',
+              content: () => (
+                <img
+                  className="flex w-full flex-1"
+                  src="https://placehold.co/640x320"
+                  alt="Placeholder"
+                />
+              ),
+            },
+          ],
     },
   },
 };
