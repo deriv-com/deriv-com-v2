@@ -1,0 +1,127 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LinkItem > should render correctly with caption size and color black 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-1400 hover:underline hover:cursor-pointer active:underline p-400 text-50"
+  >
+    Click me - 
+    caption
+  </span>
+</div>
+`;
+
+exports[`LinkItem > should render correctly with caption size and color white 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-50 hover:underline hover:cursor-pointer active:underline p-400 text-50"
+  >
+    Click me - 
+    caption
+  </span>
+</div>
+`;
+
+exports[`LinkItem > should render correctly with disabled false 1`] = `
+<span
+  class="inline-flex items-center gap-500 text-solid-slate-1400 hover:underline hover:cursor-pointer active:underline p-400 text-50"
+>
+  Click me disabled
+</span>
+`;
+
+exports[`LinkItem > should render correctly with disabled true 1`] = `
+<span
+  class="inline-flex items-center gap-500 text-solid-slate-1400 hover:underline hover:cursor-pointer active:underline p-400 text-50 opacity-300 cursor-none pointer-events-none"
+>
+  Click me disabled
+</span>
+`;
+
+exports[`LinkItem > should render correctly with lg size and color black 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-1400 hover:underline hover:cursor-pointer active:underline p-800 text-100"
+  >
+    Click me - 
+    lg
+  </span>
+</div>
+`;
+
+exports[`LinkItem > should render correctly with lg size and color white 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-50 hover:underline hover:cursor-pointer active:underline p-800 text-100"
+  >
+    Click me - 
+    lg
+  </span>
+</div>
+`;
+
+exports[`LinkItem > should render correctly with md size and color black 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-1400 hover:underline hover:cursor-pointer active:underline p-600 text-75"
+  >
+    Click me - 
+    md
+  </span>
+</div>
+`;
+
+exports[`LinkItem > should render correctly with md size and color white 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-50 hover:underline hover:cursor-pointer active:underline p-600 text-75"
+  >
+    Click me - 
+    md
+  </span>
+</div>
+`;
+
+exports[`LinkItem > should render correctly with sm size and color black 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-1400 hover:underline hover:cursor-pointer active:underline p-400 text-50"
+  >
+    Click me - 
+    sm
+  </span>
+</div>
+`;
+
+exports[`LinkItem > should render correctly with sm size and color white 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-50 hover:underline hover:cursor-pointer active:underline p-400 text-50"
+  >
+    Click me - 
+    sm
+  </span>
+</div>
+`;
+
+exports[`LinkItem > should render correctly with xl size and color black 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-1400 hover:underline hover:cursor-pointer active:underline p-1200 text-300"
+  >
+    Click me - 
+    xl
+  </span>
+</div>
+`;
+
+exports[`LinkItem > should render correctly with xl size and color white 1`] = `
+<div>
+  <span
+    class="inline-flex items-center gap-500 text-solid-slate-50 hover:underline hover:cursor-pointer active:underline p-1200 text-300"
+  >
+    Click me - 
+    xl
+  </span>
+</div>
+`;
