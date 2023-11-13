@@ -42,7 +42,7 @@ const Card = ({
     >
       <FluidContainer
         className={qtMerge(
-          'flex flex-col items-center lg:px-general-none',
+          'flex flex-col items-center',
           (title || description) && 'gap-gap-3xl',
         )}
       >
