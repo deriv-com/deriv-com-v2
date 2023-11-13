@@ -5,7 +5,7 @@ import {
   StandaloneCircleDotFillIcon,
   StandaloneCircleRegularIcon,
   StandaloneXmarkRegularIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Standalone';
 import { Text } from '@deriv/quill-design';
 
 const meta = {

@@ -1,10 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import AccountTable from '.';
 import { Button } from '@deriv/quill-design';
-import {
-  IllustrativeForexIcon,
-  LabelPairedMinusRegularIcon,
-} from '@deriv/quill-icons';
+import { LabelPairedMinusRegularIcon } from '@deriv/quill-icons/LabelPaired';
+import { IllustrativeForexIcon } from '@deriv/quill-icons/Illustrative';
 
 const meta = {
   title: 'Components/Table/AccountTable',

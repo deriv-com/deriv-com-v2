@@ -1,6 +1,6 @@
 import { OptimizedImage } from '@deriv-com/components';
 import { CaptionText, Heading, Text } from '@deriv/quill-design';
-import { DerivProductDerivGoBrandLightLogoHorizontalIcon } from '@deriv/quill-icons';
+import { DerivProductDerivGoBrandLightLogoHorizontalIcon } from '@deriv/quill-icons/Logo';
 
 export const DerivGoBanner = () => {
   return (

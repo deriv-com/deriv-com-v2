@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import TableSymbolCell from './index';
-import { StandalonePlaceholderRegularIcon } from '@deriv/quill-icons';
+import { StandalonePlaceholderRegularIcon } from '@deriv/quill-icons/Standalone';
 
 const meta = {
   title: 'Components/TableCell/TableSymbolCell',

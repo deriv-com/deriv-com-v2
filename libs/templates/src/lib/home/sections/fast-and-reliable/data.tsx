@@ -1,4 +1,4 @@
-import { LabelPairedCheckRegularIcon } from '@deriv/quill-icons';
+import { LabelPairedCheckRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import { Text } from '@deriv/quill-design';
 
 export const FastAndReliableContent = () => {

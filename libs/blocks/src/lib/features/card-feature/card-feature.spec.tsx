@@ -7,7 +7,7 @@ import {
   IllustrativeProtectedAndSecureIcon,
   IllustrativeSpreadsIcon,
   IllustrativeSupport247Icon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Illustrative';
 import { CardContent } from '@deriv-com/components';
 
 const cards: CardContent[] = [

@@ -1,12 +1,12 @@
 import { AppProps } from 'next/app';
 import '../styles.css';
-import { ThemeProvider } from '@deriv/quill-design';
 import {
   BuildVariantProvider,
   SharedLinkProvider,
   SharedLink,
 } from '@deriv-com/providers';
 import Link from 'next/link';
+import { BreakpointProvider, ThemeProvider } from '@deriv/quill-design';
 
 const NextSharedLink: SharedLink = ({ href, ...rest }) => {
   return <Link href={href ?? '/'} {...rest} />;
@@ -15,9 +15,11 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <BuildVariantProvider buildVariant="hk">
       <ThemeProvider theme="light">
-        <SharedLinkProvider DerivLink={NextSharedLink}>
-          <Component {...pageProps} />
-        </SharedLinkProvider>
+        <BreakpointProvider>
+          <SharedLinkProvider DerivLink={NextSharedLink}>
+            <Component {...pageProps} />
+          </SharedLinkProvider>
+        </BreakpointProvider>
       </ThemeProvider>
     </BuildVariantProvider>
   );

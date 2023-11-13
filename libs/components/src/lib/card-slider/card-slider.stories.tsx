@@ -5,7 +5,7 @@ import {
   IllustrativeProtectedAndSecureIcon,
   IllustrativeSpreadsIcon,
   IllustrativeSupport247Icon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Illustrative';
 
 const meta = {
   title: 'Components/CardSlider',

@@ -9,16 +9,22 @@ import {
   getPaginationRowModel,
 } from '@tanstack/react-table';
 import UseColumns from '../hooks/use-columns';
-import { Button, qtMerge, Section, Text } from '@deriv/quill-design';
 import {
-  LabelPairedEllipsisVerticalBoldIcon,
+  Button,
+  Chip,
+  qtMerge,
+  SearchField,
+  Section,
+  Text,
+} from '@deriv/quill-design';
+import {
   StandaloneChevronLeftRegularIcon,
   StandaloneChevronRightRegularIcon,
   StandaloneCircleDotFillIcon,
   StandaloneCircleRegularIcon,
   StandaloneXmarkBoldIcon,
-} from '@deriv/quill-icons';
-import { SearchChip } from '@deriv-com/components';
+} from '@deriv/quill-icons/Standalone';
+import { LabelPairedEllipsisVerticalBoldIcon } from '@deriv/quill-icons/LabelPaired';
 import { BottomSheet } from '@deriv-com/components';
 import clsx from 'clsx';
 
@@ -73,11 +79,12 @@ const TradingSpecTable = () => {
           className="w-[323px] md:w-[340px] lg:w-[360px]"
           onSubmit={() => handleSubmit}
         >
-          <SearchChip
-            onChange={(i) => setSearchValue(i)}
+          <SearchField
+            inputSize="sm"
+            onChange={(i) => setSearchValue(i.target.value)}
+            type="text"
             value={searchValue}
             placeholder="Search"
-            size="sm"
           />
         </form>
 
@@ -91,48 +98,30 @@ const TradingSpecTable = () => {
             }}
           />
 
-          <Button
-            className={qtMerge(
-              'hidden md:block lg:block',
-              selectedInfo === 'mainInfo'
-                ? 'bg-solid-slate-1400'
-                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
-            )}
+          <Chip.Selectable
             onClick={() => {
               setSelectedFilter(mainInfo.data);
               setSelectedInfo('mainInfo');
             }}
           >
-            Main info
-          </Button>
-          <Button
-            className={qtMerge(
-              'hidden md:block lg:block',
-              selectedInfo === 'tradingCondition'
-                ? 'bg-solid-slate-1400'
-                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
-            )}
+            Main Info
+          </Chip.Selectable>
+          <Chip.Selectable
             onClick={() => {
               setSelectedFilter(tradingCondition.data);
               setSelectedInfo('tradingCondition');
             }}
           >
             Trading conditions
-          </Button>
-          <Button
-            className={qtMerge(
-              'hidden md:block lg:block',
-              selectedInfo === 'additionalInfo'
-                ? 'bg-solid-slate-1400'
-                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
-            )}
+          </Chip.Selectable>
+          <Chip.Selectable
             onClick={() => {
               setSelectedFilter(additionalInfo.data);
               setSelectedInfo('additionalInfo');
             }}
           >
             Additional info
-          </Button>
+          </Chip.Selectable>
         </div>
       </div>
       <table
@@ -219,7 +208,7 @@ const TradingSpecTable = () => {
       )}
       <div className="flex justify-center pt-general-xl md:pt-general-2xl lg:pt-general-2xl">
         <Button
-          colorStyle="black"
+          colorStyle="coral"
           size="lg"
           className={qtMerge('px-general-md py-600 font-sans')}
         >

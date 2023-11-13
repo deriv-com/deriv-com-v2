@@ -3,7 +3,7 @@ import { FluidContainer } from '@deriv/quill-design';
 import {
   StandaloneChevronLeftRegularIcon,
   StandaloneXmarkRegularIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Standalone';
 import clsx from 'clsx';
 
 export const MobileHeader = () => {

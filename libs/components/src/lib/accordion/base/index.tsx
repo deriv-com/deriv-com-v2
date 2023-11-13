@@ -2,7 +2,7 @@ import styles from './base.module.css';
 
 import { Heading, qtMerge, Text } from '@deriv/quill-design';
 import { AccordionProps } from '../types';
-import { StandaloneChevronDownRegularIcon } from '@deriv/quill-icons';
+import { StandaloneChevronDownRegularIcon } from '@deriv/quill-icons/Standalone';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 export const Base = ({

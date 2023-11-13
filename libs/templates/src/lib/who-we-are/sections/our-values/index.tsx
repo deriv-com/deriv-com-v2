@@ -5,7 +5,7 @@ import {
   IllustrativeCustomerFocusIcon,
   IllustrativeIntegrityIcon,
   IllustrativeTeamworkIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Illustrative';
 
 const ourValuesCards: CardContent[] = [
   {
@@ -59,7 +59,7 @@ export const WhoWeAreValues = () => {
         cards: ourValuesCards,
         variant: 'ContentBottom',
         slideClasses: 'max-w-[242px] md:max-w-[296px]',
-        className: 'w-full !pb-general-3xl',
+        className: 'w-full',
       }}
     />
   );

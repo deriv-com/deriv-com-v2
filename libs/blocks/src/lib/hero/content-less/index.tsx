@@ -15,13 +15,7 @@ const ContentLess = ({
   children,
 }: ContentLessProps) => {
   return (
-    <Section
-      className={clsx(
-        'py-general-4xl',
-        'bg-background-primary-container',
-        className,
-      )}
-    >
+    <Section className={clsx('py-general-4xl', className)}>
       <FluidContainer className="flex flex-col gap-gap-3xl lg:px-general-none">
         <div className="flex flex-col gap-gap-2xl">
           <Heading.H1 className="text-center">{title}</Heading.H1>
