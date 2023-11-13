@@ -8,12 +8,10 @@ import { ReactNode } from 'react';
 import {
   Button,
   FacebookSocialButton,
-  FluidContainer,
   SocialAppleButton,
   SocialGoogleButton,
   Text,
   TextField,
-  useScreen,
 } from '@deriv/quill-design';
 
 export const heroItems: { key: string; image: ReactNode }[] = [
