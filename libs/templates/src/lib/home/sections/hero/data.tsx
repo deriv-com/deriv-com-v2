@@ -5,12 +5,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // @ts-ignore
 import { Autoplay, EffectFade } from 'swiper';
 import { ReactNode } from 'react';
-import { Button, FluidContainer, Text } from '@deriv/quill-design';
 import {
-  SocialAppleIcon,
-  SocialFacebookIcon,
-  SocialGoogleIcon,
-} from '@deriv/quill-icons/Social';
+  Button,
+  FacebookSocialButton,
+  SocialAppleButton,
+  SocialGoogleButton,
+  Text,
+  TextField,
+} from '@deriv/quill-design';
 
 export const heroItems: { key: string; image: ReactNode }[] = [
   {
@@ -69,46 +71,29 @@ export const renderHomeHeroSliderContent = () => (
 
 export const HomeHeroForm = () => {
   return (
-    <FluidContainer className={`flex flex-col gap-general-lg pr-general-3xl`}>
-      <div className="flex flex-col justify-between gap-gap-lg md:flex-row">
-        <input
-          placeholder="This component is not styled yet"
-          className="rounded-2xl border-300 border-solid-red-600"
-        />
+    <div className={'flex flex-col gap-general-lg'}>
+      <div className="flex flex-col items-center justify-between gap-gap-lg md:flex-row">
+        <TextField placeholder="Email Address" type="email" />
         <Button size="lg" fullWidth>
-          Create a demo account
+          Open demo account
         </Button>
       </div>
       <Text>or sign up with</Text>
-      <div className="flex flex-row items-center justify-between gap-general-sm">
-        <Button
-          renderLeftIcon={() => <SocialGoogleIcon iconSize="sm" />}
-          variant="tertiary"
-          colorStyle="black"
+      <div className="flex flex-row items-center justify-between gap-general-sm sm:hidden">
+        <SocialGoogleButton variant="secondary" fullWidth size="lg" hideLabel />
+        <FacebookSocialButton
+          variant="secondary"
           fullWidth
-          className="rounded-800 border-75 border-solid-slate-300"
-        >
-          Google
-        </Button>
-        <Button
-          renderLeftIcon={() => <SocialFacebookIcon iconSize="sm" />}
-          variant="tertiary"
-          colorStyle="black"
-          fullWidth
-          className="rounded-800 border-75 border-solid-slate-300"
-        >
-          Facebook
-        </Button>
-        <Button
-          renderLeftIcon={() => <SocialAppleIcon iconSize="sm" />}
-          variant="tertiary"
-          colorStyle="black"
-          fullWidth
-          className="rounded-800 border-75 border-solid-slate-300"
-        >
-          Apple
-        </Button>
+          size="lg"
+          hideLabel
+        />
+        <SocialAppleButton variant="secondary" fullWidth size="lg" hideLabel />
       </div>
-    </FluidContainer>
+      <div className="hidden flex-row items-center justify-between gap-general-sm sm:flex">
+        <SocialGoogleButton variant="secondary" fullWidth size="lg" />
+        <FacebookSocialButton variant="secondary" fullWidth size="lg" />
+        <SocialAppleButton variant="secondary" fullWidth size="lg" />
+      </div>
+    </div>
   );
 };

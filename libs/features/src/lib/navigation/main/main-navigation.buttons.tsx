@@ -25,11 +25,10 @@ export const MainNavigationButtons = () => {
         <Button
           variant="secondary"
           colorStyle="coral"
-          size="md"
+          size="lg"
           onClick={onTradersHubClick}
-          renderLeftIcon={() => (
-            <StandalonePlaceholderRegularIcon width={12} height={12} />
-          )}
+          icon={StandalonePlaceholderRegularIcon}
+          iconPosition="start"
         >
           Traders Hub
         </Button>
@@ -37,13 +36,13 @@ export const MainNavigationButtons = () => {
         <>
           <Button
             variant="secondary"
-            colorStyle="coral"
-            size="md"
+            colorStyle="black"
+            size="lg"
             onClick={onLoginClick}
           >
             Log in
           </Button>
-          <Button size="md" className="hidden lg:block" onClick={onSignupClick}>
+          <Button size="lg" className="hidden lg:block" onClick={onSignupClick}>
             Create free demo account
           </Button>
         </>

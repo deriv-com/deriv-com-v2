@@ -15,7 +15,7 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
   const [results, setResults] = useState<FAQSearchResults[]>([]);
   const [searchKey, setSearchKey] = useState('');
 
-  const showSearchresults = (query: string) => {
+  const showSearchResults = (query: string) => {
     const finalMatches: FAQSearchResults[] = [];
 
     FAQData.forEach(({ header, questions }) => {
@@ -37,7 +37,7 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
     <FluidContainer className="flex w-full flex-col items-center">
       <SearchBlock
         placeholder='Try "Trade"'
-        showSearchresults={showSearchresults}
+        showSearchResults={showSearchResults}
         onChange={(e) => setSearchKey(e)}
         content={
           (results.length || searchKey) && (
