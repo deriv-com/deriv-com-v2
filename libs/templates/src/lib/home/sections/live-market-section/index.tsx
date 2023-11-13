@@ -10,9 +10,11 @@ import {
   MarketForexUsdcadIcon,
   StandaloneLocationCrosshairsBoldIcon,
 } from '@deriv/quill-icons';
+import usePricingFeed from './hooks/use-pricing-feed';
 
 const LiveMarketSection = () => {
   const [LivePriceData, setLivePriceData] = useState<LiveMarketContent[]>([]);
+  const [error, liveMarketsData] = usePricingFeed();
 
   const forexIcons: { [key: string]: ReactNode } = {
     'AUD/USD': <MarketForexAudusdIcon />,
@@ -21,14 +23,15 @@ const LiveMarketSection = () => {
     'GBP/USD': <MarketForexGbpusdIcon />,
     'USD/CAD': <MarketForexUsdcadIcon />,
   };
-
   const handleLiveMarketData = (data: any) => {
     if (data) {
       const markets = data?.row?.mkt;
 
       if (markets) {
         const { fx } = markets;
+
         const newLivePriceData = [...LivePriceData];
+        console.log('fnewLivePriceDatax', newLivePriceData);
 
         Object.keys(fx).forEach((marketKey) => {
           const { sym, ask, bid, chng, sprd } = fx[marketKey];
@@ -53,17 +56,13 @@ const LiveMarketSection = () => {
         });
 
         setLivePriceData(newLivePriceData);
-      }
+      } else return error;
     }
   };
 
   useEffect(() => {
-    setInterval(() => {
-      fetch('https://deriv-static-pricingfeedv2.firebaseio.com/.json')
-        .then((response) => response.json())
-        .then((data) => handleLiveMarketData(data));
-    }, 900);
-  }, []);
+    handleLiveMarketData(liveMarketsData);
+  }, [liveMarketsData]);
 
   return (
     <LiveMarket

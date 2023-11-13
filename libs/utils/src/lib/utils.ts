@@ -48,3 +48,7 @@ export const searchString = (
 
   return [];
 };
+
+export const firebaseConfig = {
+  databaseURL: 'https://deriv-static-pricingfeedv2.firebaseio.com/',
+};
