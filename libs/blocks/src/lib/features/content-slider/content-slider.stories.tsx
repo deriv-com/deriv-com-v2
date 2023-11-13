@@ -7,7 +7,7 @@ import {
   IllustrativeProtectedAndSecureIcon,
   IllustrativeSpreadsIcon,
   IllustrativeSupport247Icon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Illustrative';
 
 const meta = {
   title: 'Blocks/Features/ContentSlider',
@@ -30,7 +30,6 @@ export const Default: Story = {
     cardSliderProps: {
       slideClasses: 'max-w-xs',
       variant: 'ContentBottom',
-      className: '!pb-general-3xl',
       cards: [
         {
           header: 'Card 1',

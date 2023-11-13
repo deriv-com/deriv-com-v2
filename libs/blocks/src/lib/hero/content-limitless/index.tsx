@@ -18,8 +18,9 @@ const ContentLimitless: React.FC<ContentLimitlessProps> = ({
 }) => {
   return (
     <Section
+      // todo: we need 72px gap for desktop 48px gap for mobile and tablet
       className={clsx(
-        'relative mx-auto flex max-w-[2048px] flex-col items-center justify-center gap-gap-3xl pt-general-2xl lg:block lg:min-h-[680px] xl:min-h-screen',
+        'relative mx-auto flex max-w-[2048px] flex-col items-center justify-center gap-general-4xl pt-general-4xl lg:block lg:min-h-[680px] lg:pt-general-2xl xl:min-h-screen',
         className,
       )}
     >

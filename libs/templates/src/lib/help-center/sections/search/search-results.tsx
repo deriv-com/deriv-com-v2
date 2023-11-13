@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { searchString } from '@deriv-com/utils';
 import { FAQSearchResults } from '../../types';
 import { getHelpCentreLink } from './components';
-import { Text } from '@deriv/quill-design';
+import { FluidContainer, Text } from '@deriv/quill-design';
 
 export type SearchResultsProps = {
   onSearchKeyChange: (searchKey: string) => void;
@@ -16,53 +16,59 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
   const [searchKey, setSearchKey] = useState('');
 
   const showSearchresults = (query: string) => {
-    const final_matches: FAQSearchResults[] = [];
+    const finalMatches: FAQSearchResults[] = [];
 
     FAQData.forEach(({ header, questions }) => {
       const matches = searchString(query, questions);
 
       if (matches.length) {
-        final_matches.push({
+        finalMatches.push({
           header,
           questions: matches,
         });
       }
     });
 
-    setResults(final_matches);
+    setResults(finalMatches);
     onSearchKeyChange(query);
   };
 
   return (
-    <SearchBlock
-      placeholder='Try "Trade"'
-      showSearchresults={showSearchresults}
-      onChange={(e) => setSearchKey(e)}
-      content={
-        <div className="flex flex-col items-start gap-general-md">
-          {searchKey !== '' && <Text size="lg">Results for “{searchKey}”</Text>}
-          {results.map(({ header, questions }) =>
-            questions.map((question) => {
-              return (
-                <CustomLink
-                  key={question}
-                  href={getHelpCentreLink(header, question)}
-                  className="justify-start"
-                >
-                  {question}
-                </CustomLink>
-              );
-            }),
-          )}
-          {!results.length && searchKey && (
-            <div className="flex w-full justify-center py-general-2xl">
-              <Text size="lg">
-                Sorry, we couldn’t find any results with "{searchKey}" in it
-              </Text>
+    <FluidContainer className="flex w-full flex-col items-center">
+      <SearchBlock
+        placeholder='Try "Trade"'
+        showSearchresults={showSearchresults}
+        onChange={(e) => setSearchKey(e)}
+        content={
+          (results.length || searchKey) && (
+            <div className="flex flex-col items-start gap-general-md">
+              {searchKey !== '' && (
+                <Text size="lg">Results for “{searchKey}”</Text>
+              )}
+              {results.map(({ header, questions }) =>
+                questions.map((question) => {
+                  return (
+                    <CustomLink
+                      key={question}
+                      href={getHelpCentreLink(header, question)}
+                      className="justify-start"
+                    >
+                      {question}
+                    </CustomLink>
+                  );
+                }),
+              )}
+              {!results.length && searchKey && (
+                <div className="flex w-full justify-center py-general-2xl">
+                  <Text size="lg">
+                    Sorry, we couldn’t find any results with "{searchKey}" in it
+                  </Text>
+                </div>
+              )}
             </div>
-          )}
-        </div>
-      }
-    />
+          )
+        }
+      />
+    </FluidContainer>
   );
 };

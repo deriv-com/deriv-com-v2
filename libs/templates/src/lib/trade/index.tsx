@@ -2,6 +2,7 @@ import { Hero } from '@deriv-com/blocks';
 import { PageLayout } from '@deriv-com/components';
 import { Text } from '@deriv/quill-design';
 import TradingSpecTable from './table/trading-spec-table';
+import AppDownload from './app-download';
 
 export function TradeTemplate() {
   return (
@@ -13,6 +14,7 @@ export function TradeTemplate() {
         </Text>
       </Hero.ContentLess>
       <TradingSpecTable />
+      <AppDownload />
     </PageLayout>
   );
 }

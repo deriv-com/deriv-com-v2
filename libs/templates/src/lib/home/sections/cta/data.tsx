@@ -10,7 +10,7 @@ export const CTABlockContent = () => {
       className="lg:gap-gap-lg"
       align="start"
       size="lg"
-      header="Join over 2.5 million online traders"
+      header="Join over 2.5 million online traders worldwide"
       color="gray"
       content={
         <OptimizedImage

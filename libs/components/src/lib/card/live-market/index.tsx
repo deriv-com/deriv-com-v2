@@ -3,7 +3,7 @@ import {
   StandaloneChartTrendDownRegularIcon,
   StandaloneChartTrendSidewayRegularIcon,
   StandaloneChartTrendUpRegularIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Standalone';
 import { LiveMarketContent } from '../types';
 import LivePrice from './live-price';
 import { BuySellButtons } from './buy-sell.buttons';

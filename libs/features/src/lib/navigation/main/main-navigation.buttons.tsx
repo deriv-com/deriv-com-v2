@@ -1,7 +1,7 @@
 import { MobileNavToggle } from '@deriv-com/blocks';
 import { useNavigation } from '@deriv-com/hooks';
 import { Button, useTheme } from '@deriv/quill-design';
-import { StandalonePlaceholderRegularIcon } from '@deriv/quill-icons';
+import { StandalonePlaceholderRegularIcon } from '@deriv/quill-icons/Standalone';
 
 export const MainNavigationButtons = () => {
   const { theme, toggleTheme } = useTheme();
