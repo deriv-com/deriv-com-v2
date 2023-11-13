@@ -5,7 +5,7 @@ import { firebaseConfig } from '@deriv-com/utils';
 
 const usePricingFeed = () => {
   const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<null | Error>(null);
 
   useEffect(() => {
     const app = initializeApp(firebaseConfig);
