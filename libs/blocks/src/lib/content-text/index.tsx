@@ -1,4 +1,4 @@
-import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import { FluidContainer, Heading, Section } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 

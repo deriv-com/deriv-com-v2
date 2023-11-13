@@ -24,12 +24,7 @@ const ContentLimit: React.FC<ContentLimitProps> = ({
   children,
 }) => {
   return (
-    <Section
-      className={qtMerge(
-        'relative bg-background-primary-container py-general-4xl',
-        className,
-      )}
-    >
+    <Section className={qtMerge('relative py-general-4xl', className)}>
       <FluidContainer
         className={clsx(
           'lg:flex-row',

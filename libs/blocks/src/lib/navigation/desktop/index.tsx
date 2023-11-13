@@ -3,7 +3,7 @@ import DesktopNavigationWrapper from './desktop.wrapper';
 import NavList from './desktop.nav-list';
 import { NavigationContent } from '../navigation.content';
 import { useNavigation } from '@deriv-com/hooks';
-import { FlagUnitedKingdomIcon } from '@deriv/quill-icons';
+import { FlagUnitedKingdomIcon } from '@deriv/quill-icons/Flags';
 import { Text } from '@deriv/quill-design';
 
 const DesktopNavigation = ({ renderButtons, renderLogo }: NavigationProps) => {

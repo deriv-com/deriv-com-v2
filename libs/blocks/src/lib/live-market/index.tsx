@@ -5,7 +5,7 @@ import {
   CustomLink,
 } from '@deriv-com/components';
 import { FluidContainer, Section, Text, qtMerge } from '@deriv/quill-design';
-import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
+import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 import { HeaderSection } from './header-section';

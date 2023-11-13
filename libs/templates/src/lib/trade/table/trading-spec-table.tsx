@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { mainInfo, trading_condition, additional_info } from '../data/data';
+import { mainInfo, tradingCondition, additionalInfo } from '../data/data';
 import { TableDataType } from '../types/types';
 import {
   flexRender,
@@ -9,22 +9,28 @@ import {
   getPaginationRowModel,
 } from '@tanstack/react-table';
 import UseColumns from '../hooks/use-columns';
-import { Button, qtMerge, Section, Text } from '@deriv/quill-design';
 import {
-  LabelPairedEllipsisVerticalBoldIcon,
+  Button,
+  Chip,
+  qtMerge,
+  SearchField,
+  Section,
+  Text,
+} from '@deriv/quill-design';
+import {
   StandaloneChevronLeftRegularIcon,
   StandaloneChevronRightRegularIcon,
   StandaloneCircleDotFillIcon,
   StandaloneCircleRegularIcon,
   StandaloneXmarkBoldIcon,
-} from '@deriv/quill-icons';
-import { SearchChip } from '@deriv-com/components';
+} from '@deriv/quill-icons/Standalone';
+import { LabelPairedEllipsisVerticalBoldIcon } from '@deriv/quill-icons/LabelPaired';
 import { BottomSheet } from '@deriv-com/components';
 import clsx from 'clsx';
 
 const TradingSpecTable = () => {
   const [data, setData] = useState<TableDataType[]>([]);
-  const [selected_filter, setSelectedFilter] = useState<TableDataType[]>(
+  const [selectedFilter, setSelectedFilter] = useState<TableDataType[]>(
     mainInfo.data,
   );
   const [selectedInfo, setSelectedInfo] = useState('mainInfo');
@@ -39,7 +45,7 @@ const TradingSpecTable = () => {
     let updatedRowData = [];
     if (searchValue.length >= 1) {
       updatedRowData = [
-        ...selected_filter.filter(
+        ...selectedFilter.filter(
           (item) =>
             item.instrument?.instrument?.match(new RegExp(searchValue, 'i')),
         ),
@@ -47,9 +53,9 @@ const TradingSpecTable = () => {
 
       setData(updatedRowData);
     } else {
-      setData(selected_filter);
+      setData(selectedFilter);
     }
-  }, [searchValue, selected_filter]);
+  }, [searchValue, selectedFilter]);
 
   const columns = UseColumns(selectedInfo);
 
@@ -73,11 +79,12 @@ const TradingSpecTable = () => {
           className="w-[323px] md:w-[340px] lg:w-[360px]"
           onSubmit={() => handleSubmit}
         >
-          <SearchChip
-            onChange={(i) => setSearchValue(i)}
+          <SearchField
+            inputSize="sm"
+            onChange={(i) => setSearchValue(i.target.value)}
+            type="text"
             value={searchValue}
             placeholder="Search"
-            size="sm"
           />
         </form>
 
@@ -91,48 +98,30 @@ const TradingSpecTable = () => {
             }}
           />
 
-          <Button
-            className={qtMerge(
-              'hidden md:block lg:block',
-              selectedInfo === 'mainInfo'
-                ? 'bg-solid-slate-1400'
-                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
-            )}
+          <Chip.Selectable
             onClick={() => {
               setSelectedFilter(mainInfo.data);
               setSelectedInfo('mainInfo');
             }}
           >
-            Main info
-          </Button>
-          <Button
-            className={qtMerge(
-              'hidden md:block lg:block',
-              selectedInfo === 'trading_condition'
-                ? 'bg-solid-slate-1400'
-                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
-            )}
+            Main Info
+          </Chip.Selectable>
+          <Chip.Selectable
             onClick={() => {
-              setSelectedFilter(trading_condition.data);
-              setSelectedInfo('trading_condition');
+              setSelectedFilter(tradingCondition.data);
+              setSelectedInfo('tradingCondition');
             }}
           >
             Trading conditions
-          </Button>
-          <Button
-            className={qtMerge(
-              'hidden md:block lg:block',
-              selectedInfo === 'additional_info'
-                ? 'bg-solid-slate-1400'
-                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
-            )}
+          </Chip.Selectable>
+          <Chip.Selectable
             onClick={() => {
-              setSelectedFilter(additional_info.data);
-              setSelectedInfo('additional_info');
+              setSelectedFilter(additionalInfo.data);
+              setSelectedInfo('additionalInfo');
             }}
           >
             Additional info
-          </Button>
+          </Chip.Selectable>
         </div>
       </div>
       <table
@@ -219,7 +208,7 @@ const TradingSpecTable = () => {
       )}
       <div className="flex justify-center pt-general-xl md:pt-general-2xl lg:pt-general-2xl">
         <Button
-          colorStyle="black"
+          colorStyle="coral"
           size="lg"
           className={qtMerge('px-general-md py-600 font-sans')}
         >
@@ -230,7 +219,7 @@ const TradingSpecTable = () => {
       {showBottomSheet && (
         <BottomSheet
           heading="Table view"
-          placeholdericon={
+          placeholderIcon={
             <StandaloneXmarkBoldIcon fill="white" iconSize="md" />
           }
           icon={
@@ -265,12 +254,12 @@ const TradingSpecTable = () => {
             <div
               className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
               onClick={() => {
-                setSelectedFilter(trading_condition.data);
-                setSelectedInfo('trading_condition');
+                setSelectedFilter(tradingCondition.data);
+                setSelectedInfo('tradingCondition');
                 setShowBottomSheet(false);
               }}
             >
-              {selectedInfo === 'trading_condition' ? (
+              {selectedInfo === 'tradingCondition' ? (
                 <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
               ) : (
                 <StandaloneCircleRegularIcon fill="black" iconSize="md" />
@@ -282,12 +271,12 @@ const TradingSpecTable = () => {
             <div
               className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
               onClick={() => {
-                setSelectedFilter(additional_info.data);
-                setSelectedInfo('additional_info');
+                setSelectedFilter(additionalInfo.data);
+                setSelectedInfo('additionalInfo');
                 setShowBottomSheet(false);
               }}
             >
-              {selectedInfo === 'additional_info' ? (
+              {selectedInfo === 'additionalInfo' ? (
                 <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
               ) : (
                 <StandaloneCircleRegularIcon fill="black" iconSize="md" />

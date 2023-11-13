@@ -7,43 +7,43 @@ export function utils(): string {
 export const searchString = (
   query: string,
   items: string[],
-  max_distance = 2,
+  maxDistance = 2,
 ) => {
   const matches = closestMatch(query, items, true);
-  const final_matches: string[] = [];
+  const finalMatches: string[] = [];
 
   if (Array.isArray(matches)) {
     matches.forEach((match) => {
-      let lowest_distance = 10;
-      let string_exist = false;
+      let lowestDistance = 10;
+      let stringExist = false;
 
       match.split(' ').forEach((m) => {
         const dist = distance(query, m);
 
-        if (lowest_distance > dist) {
-          lowest_distance = dist;
+        if (lowestDistance > dist) {
+          lowestDistance = dist;
         }
 
         if (m.toLowerCase().includes(query.toLowerCase())) {
-          string_exist = true;
+          stringExist = true;
         }
       });
 
       if (
-        lowest_distance <= max_distance ||
-        string_exist ||
+        lowestDistance <= maxDistance ||
+        stringExist ||
         match.toLowerCase().includes(query.toLowerCase())
       ) {
-        final_matches.push(match);
+        finalMatches.push(match);
       }
     });
 
     // Merge other exact matches inside the string
-    const other_matches = items.filter((e) =>
+    const otherMatches = items.filter((e) =>
       e.toLowerCase().includes(query.toLowerCase()),
     );
 
-    return Array.from(new Set(other_matches.concat(final_matches)));
+    return Array.from(new Set(otherMatches.concat(finalMatches)));
   }
 
   return [];

@@ -2,7 +2,7 @@ import { CardContent, OptimizedImage } from '@deriv-com/components';
 
 import { FAQDataType } from '../../types';
 
-import { card_setting, faqCardsMaxItems } from './types';
+import { cardSetting, faqCardsMaxItems } from './types';
 import { FaqBox, FaqLink, FaqList, FaqText, generateFaqs } from './components';
 
 export const FAQData: FAQDataType[] = [
@@ -1099,13 +1099,13 @@ export const FAQData: FAQDataType[] = [
 ];
 
 export const CardsFAQ = [...FAQData].map(({ header, questions }, faqKey) => {
-  const trimmed_questions = [...questions];
+  const trimmedQuestions = [...questions];
 
-  trimmed_questions.length = faqCardsMaxItems[faqKey];
+  trimmedQuestions.length = faqCardsMaxItems[faqKey];
 
   return {
     header,
-    children: generateFaqs(trimmed_questions, header),
-    ...card_setting,
+    children: generateFaqs(trimmedQuestions, header),
+    ...cardSetting,
   };
 }) as CardContent[];

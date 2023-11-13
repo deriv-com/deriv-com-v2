@@ -3,7 +3,7 @@ import {
   PaymentMethodChequeBrandLightIcon,
   PaymentMethodFpsBrandLightIcon,
   PaymentMethodWireTransferBrandLightIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Logo';
 
 const FastPaymentSection = () => {
   return (

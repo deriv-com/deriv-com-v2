@@ -30,7 +30,6 @@ export const slugify = (input: string): string =>
 
 export function AccordionBlock({
   title,
-  tab,
   content,
   className,
   variant = 'Flush',
@@ -38,9 +37,9 @@ export function AccordionBlock({
 }: AccordionBlockProps) {
   const [expanded, setExpanded] = useState('');
 
-  const handleExpand = (is_expanded: boolean, id: string) => {
+  const handleExpand = (isExpanded: boolean, id: string) => {
     if (!multiCollapse) {
-      if (is_expanded) {
+      if (isExpanded) {
         setExpanded(id);
       }
     }
@@ -59,17 +58,17 @@ export function AccordionBlock({
 
       <div className="flex w-full flex-col gap-general-lg">
         <div className={content?.className}>
-          {content.data.map((acc_data) => {
-            const { title: acc_title } = acc_data;
-            const id = slugify(acc_title as string);
+          {content.data.map((accData) => {
+            const { title: accTitle } = accData;
+            const id = slugify(accTitle as string);
 
             return (
               <DynamicAccordion
-                {...acc_data}
+                {...accData}
                 id={id}
-                key={acc_title}
-                expanded={multiCollapse ? false : expanded === acc_title}
-                onExpand={(is_expanded, id) => handleExpand(is_expanded, id)}
+                key={accTitle}
+                expanded={multiCollapse ? false : expanded === accTitle}
+                onExpand={(isExpanded, id) => handleExpand(isExpanded, id)}
               />
             );
           })}

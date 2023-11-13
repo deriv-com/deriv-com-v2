@@ -1,9 +1,9 @@
 import { CardContent } from '@deriv-com/components';
 import {
-  IllustrativeChatIcon,
   StandaloneFileCircleInfoRegularIcon,
   StandaloneWhatsappIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Standalone';
+import { IllustrativeChatIcon } from '@deriv/quill-icons/Illustrative';
 
 export const helpCardsData: CardContent[] = [
   {

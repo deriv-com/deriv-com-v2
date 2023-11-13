@@ -1,5 +1,5 @@
 import { qtMerge } from '@deriv/quill-design';
-import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
+import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ComponentPropsWithRef, useState } from 'react';
@@ -59,7 +59,7 @@ export function CustomLink({
     }
   }
 
-  const [is_hover, setHover] = useState(false);
+  const [isHover, setHover] = useState(false);
 
   return (
     <Link
@@ -85,7 +85,7 @@ export function CustomLink({
       {hasIcon && (
         <StandaloneChevronRightRegularIcon
           iconSize="sm"
-          fill={is_hover || hasLinkColor ? '#FF444F' : '#000000'}
+          fill={isHover || hasLinkColor ? '#FF444F' : '#000000'}
         />
       )}
     </Link>

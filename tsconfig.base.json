@@ -4,47 +4,27 @@
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
     "resolveJsonModule": true,
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "@deriv-com/blocks": [
-        "libs/blocks/src/index.ts"
-      ],
-      "@deriv-com/components": [
-        "libs/components/src/index.ts"
-      ],
-      "@deriv-com/features": [
-        "libs/features/src/index.ts"
-      ],
-      "@deriv-com/hooks": [
-        "libs/hooks/src/index.ts"
-      ],
-      "@deriv-com/providers": [
-        "libs/providers/src/index.ts"
-      ],
-      "@deriv-com/templates": [
-        "libs/templates/src/index.ts"
-      ],
-      "@deriv-com/utils": [
-        "libs/utils/src/index.ts"
-      ]
+      "@deriv-com/blocks": ["libs/blocks/src/index.ts"],
+      "@deriv-com/components": ["libs/components/src/index.ts"],
+      "@deriv-com/features": ["libs/features/src/index.ts"],
+      "@deriv-com/hooks": ["libs/hooks/src/index.ts"],
+      "@deriv-com/providers": ["libs/providers/src/index.ts"],
+      "@deriv-com/templates": ["libs/templates/src/index.ts"],
+      "@deriv-com/utils": ["libs/utils/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

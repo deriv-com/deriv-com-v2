@@ -1,5 +1,5 @@
 import { CustomLink, CustomLinkProps } from '@deriv-com/components';
-import { BodyTypographyProps, Text, qtMerge } from '@deriv/quill-design';
+import { Text, qtMerge, BodyTypographyProps } from '@deriv/quill-design';
 import { PropsWithChildren, ReactNode } from 'react';
 
 //todo: removed [slugify] from utils/../utils and added here. we need to update this because we are using this on multiple places
@@ -11,9 +11,9 @@ export const slugify = (input: string): string =>
     .replace(/[\s]+/g, '-')
     .trim();
 
-export const getHelpCentreLink = (page: string, sub_page?: string) => {
-  const sub_link = sub_page ? `#${slugify(sub_page)}` : '';
-  return `/help-centre/${slugify(page)}${sub_link}`;
+export const getHelpCentreLink = (page: string, subPage?: string) => {
+  const subLink = subPage ? `#${slugify(subPage)}` : '';
+  return `/help-centre/${slugify(page)}${subLink}`;
 };
 
 export const generateFaqs = (questions: string[], header: string) => {

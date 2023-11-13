@@ -1,14 +1,16 @@
 import { AppProps } from 'next/app';
 import '../styles.css';
-import { ThemeProvider } from '@deriv/quill-design';
+import { BreakpointProvider, ThemeProvider } from '@deriv/quill-design';
 import { BuildVariantProvider } from '@deriv-com/providers';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <BuildVariantProvider buildVariant="hk">
-      <ThemeProvider theme="light">
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <BreakpointProvider>
+        <ThemeProvider theme="light">
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </BreakpointProvider>
     </BuildVariantProvider>
   );
 }
