@@ -45,7 +45,7 @@ export const WhoWeArePrinciples = () => {
       variant="ContentBottom"
       cards={ourPrinciplesCards}
       cta={
-        <Button size="lg" colorStyle="black">
+        <Button size="lg" colorStyle="coral">
           Learn more about our principles
         </Button>
       }

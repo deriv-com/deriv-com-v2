@@ -1,4 +1,4 @@
-import { Text, Button } from '@deriv/quill-design';
+import { Text, TradeButton } from '@deriv/quill-design';
 import { MarketStatus } from '../types';
 
 export const BuySellButtons = ({
@@ -19,16 +19,22 @@ export const BuySellButtons = ({
         </Text>
       </div>
       <div className="flex flex-row gap-gap-md">
-        <Button disabled={status === 'closed'} className="flex-1">
-          Buy
-        </Button>
-        <Button
+        <TradeButton
+          tradeType="buy"
+          variant="secondary"
           disabled={status === 'closed'}
           className="flex-1"
-          colorStyle="black"
+        >
+          Buy
+        </TradeButton>
+        <TradeButton
+          tradeType="sell"
+          variant="secondary"
+          disabled={status === 'closed'}
+          className="flex-1"
         >
           Sell
-        </Button>
+        </TradeButton>
       </div>
     </div>
   );
