@@ -6,6 +6,7 @@ export interface LivePriceProps {
   status: MarketStatus;
   bidPrice: string;
   askPrice: string;
+  textClass: string;
 }
 
 const colorVariant = {
@@ -13,12 +14,6 @@ const colorVariant = {
   down: 'text-solid-cherry-700',
   remain: 'text-typography-subtle',
   closed: 'text-typography-disabled',
-};
-
-const textClass = (status: MarketStatus) => {
-  return status === 'closed'
-    ? 'text-typography-disabled'
-    : 'text-typography-default';
 };
 
 const PriceContent = (price: string, status: MarketStatus) => {
@@ -37,17 +32,22 @@ const PriceContent = (price: string, status: MarketStatus) => {
   );
 };
 
-export const LivePrice = ({ status, bidPrice, askPrice }: LivePriceProps) => {
+export const LivePrice = ({
+  status,
+  bidPrice,
+  askPrice,
+  textClass,
+}: LivePriceProps) => {
   return (
     <div className="flex flex-row gap-gap-md">
       <div className="flex flex-1 flex-col">
-        <Text size="sm" className={textClass(status)}>
+        <Text size="sm" className={textClass}>
           Bid
         </Text>
         {PriceContent(bidPrice, status)}
       </div>
       <div className="flex flex-1 flex-col">
-        <Text size="sm" className={textClass(status)}>
+        <Text size="sm" className={textClass}>
           Ask
         </Text>
         {PriceContent(askPrice, status)}

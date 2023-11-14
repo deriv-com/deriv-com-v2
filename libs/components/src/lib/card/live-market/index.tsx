@@ -51,6 +51,11 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   askPrice,
   spread,
 }) => {
+  const textClassName =
+    status === 'closed'
+      ? 'text-typography-disabled'
+      : 'text-typography-default';
+
   return (
     <div
       className={qtMerge(
@@ -86,8 +91,17 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         </div>
       </div>
 
-      <LivePrice status={status} bidPrice={bidPrice} askPrice={askPrice} />
-      <BuySellButtons status={status} spread={spread} />
+      <LivePrice
+        status={status}
+        bidPrice={bidPrice}
+        askPrice={askPrice}
+        textClass={textClassName}
+      />
+      <BuySellButtons
+        status={status}
+        spread={spread}
+        textClass={textClassName}
+      />
     </div>
   );
 };

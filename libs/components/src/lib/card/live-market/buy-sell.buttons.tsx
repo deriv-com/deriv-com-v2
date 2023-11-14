@@ -1,26 +1,22 @@
 import { Text, TradeButton } from '@deriv/quill-design';
 import { MarketStatus } from '../types';
 
-const spreadClass = (status: MarketStatus) => {
-  return status === 'closed'
-    ? 'text-typography-disabled'
-    : 'text-typography-default';
-};
-
 export const BuySellButtons = ({
   status,
   spread,
+  textClass,
 }: {
   status: MarketStatus;
   spread: string;
+  textClass: string;
 }) => {
   return (
     <div className="flex flex-col gap-gap-md">
       <div className="flex flex-row gap-gap-md">
-        <Text size="sm" className={spreadClass(status)}>
+        <Text size="sm" className={textClass}>
           Spread
         </Text>
-        <Text size="sm" bold className={spreadClass(status)}>
+        <Text size="sm" bold className={textClass}>
           {spread}
         </Text>
       </div>
