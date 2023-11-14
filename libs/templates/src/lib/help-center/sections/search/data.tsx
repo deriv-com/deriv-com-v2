@@ -66,7 +66,7 @@ export const FAQData: FAQDataType[] = [
             address on Deriv.
           </FaqText>
 
-          <FaqBox variant="sm">
+          <FaqBox>
             <FaqText bold>Why can't I create an account?</FaqText>
             <FaqText>
               Here are some possible reasons you aren't able to create an
@@ -98,7 +98,7 @@ export const FAQData: FAQDataType[] = [
             resetting your Apple/Google/Facebook password. After that, you
             should be able to log in to Deriv as usual.
           </FaqText>
-          <FaqBox variant="md">
+          <FaqBox>
             <FaqText>
               If you'd like to log in using your email address instead, follow
               these steps:
@@ -267,7 +267,7 @@ export const FAQData: FAQDataType[] = [
           </FaqText>
           <FaqList
             data={[
-              <FaqBox variant="md">
+              <FaqBox>
                 <FaqText bold>Proof of identity</FaqText>
                 <FaqText>
                   You’ll need a valid government-issued identity document such
@@ -275,7 +275,7 @@ export const FAQData: FAQDataType[] = [
                   show your name, photo, and date of birth.
                 </FaqText>
               </FaqBox>,
-              <FaqBox variant="md">
+              <FaqBox>
                 <FaqText bold>Proof of address</FaqText>
                 <FaqText>
                   You’ll need a bank statement, credit card statement, tax
@@ -840,7 +840,6 @@ export const FAQData: FAQDataType[] = [
                   width={568}
                   height={236}
                 />
-                ,
               </FaqBox>,
               <FaqBox>
                 <FaqText>Hit the pencil icon next the password.</FaqText>
