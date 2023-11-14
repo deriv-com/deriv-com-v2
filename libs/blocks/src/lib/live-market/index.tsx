@@ -63,7 +63,7 @@ export const LiveMarket = <T extends CardVariantType>({
           </CustomLink>
         )}
         {disclaimer && (
-          <div className="max-sm:px-general-md">
+          <div className="max-w-[816px] max-sm:px-general-md">
             <Text size="sm" className="text-center text-typography-subtle">
               {disclaimer}
             </Text>
