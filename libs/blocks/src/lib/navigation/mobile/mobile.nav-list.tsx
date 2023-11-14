@@ -1,24 +1,32 @@
 import { useNavigation } from '@deriv-com/hooks';
 import { Text } from '@deriv/quill-design';
+import MobileNavLink from './mobile.nav-link';
 
 export const MobileNavList = () => {
   const { navItems, setActiveMenu } = useNavigation();
 
   return (
     <ul className="flex flex-col gap-gap-lg">
-      {Object.keys(navItems).map((navItemName) => (
-        <li key={navItemName}>
-          <Text
-            size="md"
-            bold
-            onClick={() => {
-              setActiveMenu?.(navItemName);
-            }}
-          >
-            {navItems[navItemName].text}
-          </Text>
-        </li>
-      ))}
+      {Object.keys(navItems).map((navItemName) => {
+        const { id, ...item } = navItems[navItemName];
+        if (item.type === 'direct') {
+          return <MobileNavLink item={item} key={navItemName} />;
+        }
+        return (
+          <li key={navItemName}>
+            <Text
+              size="md"
+              className="cursor-pointer"
+              bold
+              onClick={() => {
+                setActiveMenu?.(navItemName);
+              }}
+            >
+              {navItems[navItemName].text}
+            </Text>
+          </li>
+        );
+      })}
     </ul>
   );
 };
