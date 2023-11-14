@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import LiveMarketCard from '.';
-import { MarketForexEurusdIcon } from '@deriv/quill-icons';
+import { MarketForexEurusdIcon } from '@deriv/quill-icons/Markets';
 
 const meta = {
   title: 'Components/Card/LiveMarketCard',

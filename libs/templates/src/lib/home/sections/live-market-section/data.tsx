@@ -4,7 +4,7 @@ import {
   MarketForexGbpusdIcon,
   MarketForexUsdjpyIcon,
   MarketForexAudusdIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Markets';
 
 export const LivePriceData: LiveMarketContent[] = [
   {

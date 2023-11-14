@@ -23,7 +23,7 @@ export const CTABlockContent = () => {
       }
     >
       <Button
-        colorStyle="black"
+        colorStyle="coral"
         className="lg:mt-general-xl"
         size="lg"
         onClick={() => scrollTop()}
