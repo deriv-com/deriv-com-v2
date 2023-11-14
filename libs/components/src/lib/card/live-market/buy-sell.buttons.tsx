@@ -1,6 +1,5 @@
 import { Text, TradeButton } from '@deriv/quill-design';
 import { MarketStatus } from '../types';
-import clsx from 'clsx';
 
 const spreadClass = (status: MarketStatus) => {
   return status === 'closed'
@@ -18,10 +17,10 @@ export const BuySellButtons = ({
   return (
     <div className="flex flex-col gap-gap-md">
       <div className="flex flex-row gap-gap-md">
-        <Text size="sm" className={clsx(spreadClass(status))}>
+        <Text size="sm" className={spreadClass(status)}>
           Spread
         </Text>
-        <Text size="sm" bold className={clsx(spreadClass(status))}>
+        <Text size="sm" bold className={spreadClass(status)}>
           {spread}
         </Text>
       </div>

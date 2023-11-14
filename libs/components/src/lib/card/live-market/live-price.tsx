@@ -41,13 +41,13 @@ export const LivePrice = ({ status, bidPrice, askPrice }: LivePriceProps) => {
   return (
     <div className="flex flex-row gap-gap-md">
       <div className="flex flex-1 flex-col">
-        <Text size="sm" className={clsx(textClass(status))}>
+        <Text size="sm" className={textClass(status)}>
           Bid
         </Text>
         {PriceContent(bidPrice, status)}
       </div>
       <div className="flex flex-1 flex-col">
-        <Text size="sm" className={clsx(textClass(status))}>
+        <Text size="sm" className={textClass(status)}>
           Ask
         </Text>
         {PriceContent(askPrice, status)}
