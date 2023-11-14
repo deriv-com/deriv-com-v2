@@ -60,13 +60,19 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         'p-general-xl',
         'gap-gap-xl',
         className,
-        status === 'closed' && 'opacity-700',
+        status === 'closed' && 'opacity-600',
       )}
     >
       <div className="flex h-[52px] flex-row gap-gap-sm">
         <div className="flex flex-1 flex-row gap-gap-md">
           {instrumentIcon}
-          <Text size="md" className="pt-general-xs">
+          <Text
+            size="md"
+            className={qtMerge(
+              'pt-general-xs',
+              status === 'closed' && 'text-typography-subtle',
+            )}
+          >
             {instrument}
           </Text>
         </div>
