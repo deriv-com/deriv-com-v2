@@ -85,10 +85,11 @@ const TradingSpecTable = () => {
             type="text"
             value={searchValue}
             placeholder="Search"
+            className="w-auto"
           />
         </form>
 
-        <div className="flex gap-gap-md ">
+        <div className="flex gap-gap-md">
           <LabelPairedEllipsisVerticalBoldIcon
             fill="black"
             iconSize="md"
@@ -99,7 +100,8 @@ const TradingSpecTable = () => {
           />
 
           <Chip.Selectable
-            onClick={() => {
+            className="hidden md:block lg:block"
+            onChipSelect={() => {
               setSelectedFilter(mainInfo.data);
               setSelectedInfo('mainInfo');
             }}
@@ -107,17 +109,29 @@ const TradingSpecTable = () => {
             Main Info
           </Chip.Selectable>
           <Chip.Selectable
-            onClick={() => {
-              setSelectedFilter(tradingCondition.data);
-              setSelectedInfo('tradingCondition');
+            className="hidden md:block lg:block"
+            onChipSelect={(_, value) => {
+              if (value) {
+                setSelectedFilter(tradingCondition.data);
+                setSelectedInfo('tradingCondition');
+              } else {
+                setSelectedFilter(mainInfo.data);
+                setSelectedInfo('mainInfo');
+              }
             }}
           >
             Trading conditions
           </Chip.Selectable>
           <Chip.Selectable
-            onClick={() => {
-              setSelectedFilter(additionalInfo.data);
-              setSelectedInfo('additionalInfo');
+            className="hidden md:block lg:block"
+            onChipSelect={(_, value) => {
+              if (value) {
+                setSelectedFilter(additionalInfo.data);
+                setSelectedInfo('additionalInfo');
+              } else {
+                setSelectedFilter(mainInfo.data);
+                setSelectedInfo('mainInfo');
+              }
             }}
           >
             Additional info
