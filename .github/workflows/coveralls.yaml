@@ -27,5 +27,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ github.token }}
       - name: Run tests
         run: 'npm run test:ci'
+      - name: Build Blocks
+        run: 'npx nx run blocks:build'
       - name: Coveralls
         uses: coverallsapp/github-action@v2
