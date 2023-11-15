@@ -1,5 +1,5 @@
 name: Build Packages2
-on: 
+on:
   pull_request:
     types: [opened]
     - name: Run blocks
