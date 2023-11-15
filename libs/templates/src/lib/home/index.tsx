@@ -20,13 +20,13 @@ export function HomeTemplate() {
       <NumberSection />
       <LiveMarketSection />
       <FastAndReliableSection />
-      {/* <WhyTradeSection />
+      <WhyTradeSection />
       <AccountSection />
       <FastPaymentSection />
-      <ReviewSection />
+      {/* <ReviewSection /> */}
       <ProvenExcellenceSection />
       <StaticNumberBlock />
-      <CTASection /> */}
+      <CTASection />
     </PageLayout>
   );
 }
