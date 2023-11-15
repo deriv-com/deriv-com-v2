@@ -1,9 +1,9 @@
 import { useNavigation } from '@deriv-com/hooks';
-import { FluidContainer } from '@deriv/quill-design';
+import { FluidContainer, IconButton } from '@deriv/quill-design';
 import {
-  StandaloneChevronLeftRegularIcon,
-  StandaloneXmarkRegularIcon,
-} from '@deriv/quill-icons/Standalone';
+  LabelPairedChevronLeftRegularIcon,
+  LabelPairedXmarkRegularIcon,
+} from '@deriv/quill-icons/LabelPaired';
 import clsx from 'clsx';
 
 export const MobileHeader = () => {
@@ -17,12 +17,21 @@ export const MobileHeader = () => {
       )}
     >
       {hasActiveMenu && (
-        <StandaloneChevronLeftRegularIcon
+        <IconButton
+          colorStyle="black"
           onClick={() => setActiveMenu?.('none')}
-          iconSize="md"
+          size="lg"
+          variant="tertiary"
+          icon={LabelPairedChevronLeftRegularIcon}
         />
       )}
-      <StandaloneXmarkRegularIcon onClick={toggleMobileNav} iconSize="md" />
+      <IconButton
+        colorStyle="black"
+        onClick={toggleMobileNav}
+        size="lg"
+        variant="tertiary"
+        icon={LabelPairedXmarkRegularIcon}
+      />
     </FluidContainer>
   );
 };
