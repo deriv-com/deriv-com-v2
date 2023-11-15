@@ -12,7 +12,7 @@ export const MobileHeader = () => {
   return (
     <FluidContainer
       className={clsx(
-        'flex min-h-[80px] items-center',
+        'flex min-h-[80px] items-center py-800',
         hasActiveMenu ? 'justify-between' : 'justify-end',
       )}
     >
