@@ -70,6 +70,7 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
             hasHoverDecoration={isLastItem(lk)}
             hasIcon={isLastItem(lk)}
             disabled={!isLastItem(lk)}
+            className="items-center"
           >
             {content}
           </CustomLink>
