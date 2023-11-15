@@ -6,14 +6,14 @@ export const MobileNavList = () => {
   const { navItems, setActiveMenu } = useNavigation();
 
   return (
-    <ul className="flex flex-col gap-gap-lg">
+    <ul className="flex flex-col">
       {Object.keys(navItems).map((navItemName) => {
         const { id, ...item } = navItems[navItemName];
         if (item.type === 'direct') {
           return <MobileNavLink item={item} key={navItemName} />;
         }
         return (
-          <li key={navItemName}>
+          <li key={navItemName} className="py-general-sm">
             <Text
               size="md"
               className="cursor-pointer text-typography-default"
