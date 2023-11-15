@@ -9,7 +9,14 @@ import {
   getPaginationRowModel,
 } from '@tanstack/react-table';
 import UseColumns from '../hooks/use-columns';
-import { Button, qtMerge, Section, Text } from '@deriv/quill-design';
+import {
+  Button,
+  Chip,
+  qtMerge,
+  SearchField,
+  Section,
+  Text,
+} from '@deriv/quill-design';
 import {
   StandaloneChevronLeftRegularIcon,
   StandaloneChevronRightRegularIcon,
@@ -18,7 +25,6 @@ import {
   StandaloneXmarkBoldIcon,
 } from '@deriv/quill-icons/Standalone';
 import { LabelPairedEllipsisVerticalBoldIcon } from '@deriv/quill-icons/LabelPaired';
-import { SearchChip } from '@deriv-com/components';
 import { BottomSheet } from '@deriv-com/components';
 import clsx from 'clsx';
 
@@ -73,15 +79,17 @@ const TradingSpecTable = () => {
           className="w-[323px] md:w-[340px] lg:w-[360px]"
           onSubmit={() => handleSubmit}
         >
-          <SearchChip
-            onChange={(i) => setSearchValue(i)}
+          <SearchField
+            inputSize="sm"
+            onChange={(i) => setSearchValue(i.target.value)}
+            type="text"
             value={searchValue}
             placeholder="Search"
-            size="sm"
+            className="w-auto"
           />
         </form>
 
-        <div className="flex gap-gap-md ">
+        <div className="flex gap-gap-md">
           <LabelPairedEllipsisVerticalBoldIcon
             fill="black"
             iconSize="md"
@@ -91,48 +99,43 @@ const TradingSpecTable = () => {
             }}
           />
 
-          <Button
-            className={qtMerge(
-              'hidden md:block lg:block',
-              selectedInfo === 'mainInfo'
-                ? 'bg-solid-slate-1400'
-                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
-            )}
-            onClick={() => {
+          <Chip.Selectable
+            className="hidden md:block lg:block"
+            onChipSelect={() => {
               setSelectedFilter(mainInfo.data);
               setSelectedInfo('mainInfo');
             }}
           >
-            Main info
-          </Button>
-          <Button
-            className={qtMerge(
-              'hidden md:block lg:block',
-              selectedInfo === 'tradingCondition'
-                ? 'bg-solid-slate-1400'
-                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
-            )}
-            onClick={() => {
-              setSelectedFilter(tradingCondition.data);
-              setSelectedInfo('tradingCondition');
+            Main Info
+          </Chip.Selectable>
+          <Chip.Selectable
+            className="hidden md:block lg:block"
+            onChipSelect={(_, value) => {
+              if (value) {
+                setSelectedFilter(tradingCondition.data);
+                setSelectedInfo('tradingCondition');
+              } else {
+                setSelectedFilter(mainInfo.data);
+                setSelectedInfo('mainInfo');
+              }
             }}
           >
             Trading conditions
-          </Button>
-          <Button
-            className={qtMerge(
-              'hidden md:block lg:block',
-              selectedInfo === 'additionalInfo'
-                ? 'bg-solid-slate-1400'
-                : 'border-75 border-solid-slate-100 bg-background-primary-container text-opacity-black-700',
-            )}
-            onClick={() => {
-              setSelectedFilter(additionalInfo.data);
-              setSelectedInfo('additionalInfo');
+          </Chip.Selectable>
+          <Chip.Selectable
+            className="hidden md:block lg:block"
+            onChipSelect={(_, value) => {
+              if (value) {
+                setSelectedFilter(additionalInfo.data);
+                setSelectedInfo('additionalInfo');
+              } else {
+                setSelectedFilter(mainInfo.data);
+                setSelectedInfo('mainInfo');
+              }
             }}
           >
             Additional info
-          </Button>
+          </Chip.Selectable>
         </div>
       </div>
       <table
@@ -219,7 +222,7 @@ const TradingSpecTable = () => {
       )}
       <div className="flex justify-center pt-general-xl md:pt-general-2xl lg:pt-general-2xl">
         <Button
-          colorStyle="black"
+          colorStyle="coral"
           size="lg"
           className={qtMerge('px-general-md py-600 font-sans')}
         >

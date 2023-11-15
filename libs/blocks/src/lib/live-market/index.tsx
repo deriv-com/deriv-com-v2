@@ -48,28 +48,26 @@ export const LiveMarket = <T extends CardVariantType>({
             TabHeader={TabHeader}
           />
         )}
-        <div className="flex w-full flex-col items-center gap-gap-xl">
-          {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            <CardSlider {...cardSliderProps} />
-          }
-          {disclaimer && (
-            <div className="max-sm:px-general-md">
-              <Text className="text-center text-caption text-typography-subtle">
-                {disclaimer}
-              </Text>
-            </div>
-          )}
-        </div>
+        {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          <CardSlider {...cardSliderProps} />
+        }
         {link && (
           <CustomLink
             href={link.href}
-            className={clsx('flex items-center justify-center text-body-md')}
+            className={clsx('flex items-center justify-center text-body-lg')}
           >
             {link.content}
             <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />
           </CustomLink>
+        )}
+        {disclaimer && (
+          <div className="max-w-[816px] max-sm:px-general-md">
+            <Text size="sm" className="text-center text-typography-subtle">
+              {disclaimer}
+            </Text>
+          </div>
         )}
       </FluidContainer>
     </Section>
