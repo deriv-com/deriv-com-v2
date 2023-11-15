@@ -7,6 +7,7 @@ export const MobileNavToggle = () => {
 
   return (
     <IconButton
+      className="md:hidden"
       colorStyle="black"
       size="lg"
       variant="tertiary"
