@@ -4,17 +4,19 @@ import { MarketStatus } from '../types';
 export const BuySellButtons = ({
   status,
   spread,
+  textClass,
 }: {
   status: MarketStatus;
   spread: string;
+  textClass: string;
 }) => {
   return (
     <div className="flex flex-col gap-gap-md">
       <div className="flex flex-row gap-gap-md">
-        <Text size="sm" className="text-typography-default">
+        <Text size="sm" className={textClass}>
           Spread
         </Text>
-        <Text size="sm" bold>
+        <Text size="sm" bold className={textClass}>
           {spread}
         </Text>
       </div>

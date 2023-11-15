@@ -22,12 +22,7 @@ export const CTABlockContent = () => {
         />
       }
     >
-      <Button
-        colorStyle="coral"
-        className="lg:mt-general-xl"
-        size="lg"
-        onClick={() => scrollTop()}
-      >
+      <Button colorStyle="coral" size="lg" onClick={() => scrollTop()}>
         Get a demo forex account
       </Button>
     </Card.ContentRight>
