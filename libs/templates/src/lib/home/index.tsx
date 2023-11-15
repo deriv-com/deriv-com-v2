@@ -23,7 +23,7 @@ export function HomeTemplate() {
       <WhyTradeSection />
       <AccountSection />
       <FastPaymentSection />
-      {/* <ReviewSection /> */}
+      <ReviewSection />
       <ProvenExcellenceSection />
       <StaticNumberBlock />
       <CTASection />
