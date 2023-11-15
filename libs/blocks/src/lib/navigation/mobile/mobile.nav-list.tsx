@@ -16,7 +16,7 @@ export const MobileNavList = () => {
           <li key={navItemName}>
             <Text
               size="md"
-              className="cursor-pointer"
+              className="cursor-pointer text-typography-default"
               bold
               onClick={() => {
                 setActiveMenu?.(navItemName);
