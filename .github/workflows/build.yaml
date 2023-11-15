@@ -1,0 +1,6 @@
+name: Build Packages
+on: 
+    pull_request:
+    types: [opened]
+    - name: Run blocks
+      run: npx nx run blocks:build 
