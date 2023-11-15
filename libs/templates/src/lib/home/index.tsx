@@ -19,14 +19,14 @@ export function HomeTemplate() {
       <HeroBanner />
       <NumberSection />
       <LiveMarketSection />
-      <FastAndReliableSection />
+      {/* <FastAndReliableSection />
       <WhyTradeSection />
       <AccountSection />
       <FastPaymentSection />
       <ReviewSection />
       <ProvenExcellenceSection />
       <StaticNumberBlock />
-      <CTASection />
+      <CTASection /> */}
     </PageLayout>
   );
 }
