@@ -19,13 +19,22 @@ const colorVariant = {
 const PriceContent = (price: string, status: MarketStatus) => {
   return (
     <div className="flex flex-row items-center gap-[2px]">
-      <Text size="md" className={clsx('pt-[6px]', colorVariant[status])}>
+      <Text
+        size="md"
+        className={clsx('flex h-full items-end pb-[3px]', colorVariant[status])}
+      >
         {price?.substring(0, 4)}
       </Text>
-      <Text size="xl" className={clsx(colorVariant[status])}>
+      <Text className={clsx('text-400 leading-700', colorVariant[status])}>
         {price?.substring(4, 6)}
       </Text>
-      <Text size="md" className={clsx('pb-[6px]', colorVariant[status])}>
+      <Text
+        size="md"
+        className={clsx(
+          'flex h-full items-start pt-[3px]',
+          colorVariant[status],
+        )}
+      >
         {price?.substring(6)}
       </Text>
     </div>
