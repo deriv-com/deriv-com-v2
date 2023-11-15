@@ -19,8 +19,8 @@ export function HomeTemplate() {
       <HeroBanner />
       <NumberSection />
       <LiveMarketSection />
-      {/* <FastAndReliableSection />
-      <WhyTradeSection />
+      <FastAndReliableSection />
+      {/* <WhyTradeSection />
       <AccountSection />
       <FastPaymentSection />
       <ReviewSection />
