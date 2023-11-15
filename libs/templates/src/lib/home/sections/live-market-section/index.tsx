@@ -1,5 +1,4 @@
 import { LiveMarket } from '@deriv-com/blocks';
-import { LivePriceData } from './data';
 import { ReactNode, useEffect, useState } from 'react';
 import { LiveMarketContent } from '@deriv-com/components';
 import {
@@ -30,8 +29,7 @@ const LiveMarketSection = () => {
       if (markets) {
         const { fx } = markets;
 
-        const newLivePriceData = [...LivePriceData];
-        console.log('fnewLivePriceDatax', newLivePriceData);
+        const newLivePriceData: LiveMarketContent[] = [];
 
         Object.keys(fx).forEach((marketKey) => {
           const { sym, ask, bid, chng, sprd } = fx[marketKey];
