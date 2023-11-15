@@ -1,9 +1,16 @@
-import { CardContent, OptimizedImage } from '@deriv-com/components';
+import { CardContent } from '@deriv-com/components';
 
 import { FAQDataType } from '../../types';
 
 import { cardSetting, faqCardsMaxItems } from './types';
-import { FaqBox, FaqLink, FaqList, FaqText, generateFaqs } from './components';
+import {
+  FaqBox,
+  FaqLink,
+  FaqList,
+  FaqText,
+  FaqImage,
+  generateFaqs,
+} from './components';
 
 export const FAQData: FAQDataType[] = [
   {
@@ -834,7 +841,7 @@ export const FAQData: FAQDataType[] = [
                   On the <strong>Trader’s Hub</strong>, hit{' '}
                   <strong>Open</strong> next to your Deriv MT5 account.
                 </FaqText>
-                <OptimizedImage
+                <FaqImage
                   imageName="help-centre/faq/deriv-mt5-open.png"
                   alt="MT5 Open"
                   width={568}
@@ -843,7 +850,7 @@ export const FAQData: FAQDataType[] = [
               </FaqBox>,
               <FaqBox>
                 <FaqText>Hit the pencil icon next the password.</FaqText>
-                <OptimizedImage
+                <FaqImage
                   imageName="help-centre/faq/hit-the-pencil.png"
                   alt="MT5 Pencil"
                   width={568}
@@ -855,7 +862,7 @@ export const FAQData: FAQDataType[] = [
                   In the next screen, hit Change password under Deriv MT5
                   password.
                 </FaqText>
-                <OptimizedImage
+                <FaqImage
                   imageName="help-centre/faq/deriv-mt5-password.png"
                   alt="MT5 Password"
                   width={568}
@@ -864,7 +871,7 @@ export const FAQData: FAQDataType[] = [
               </FaqBox>,
               <FaqBox>
                 <FaqText>Hit the pencil icon next the password.</FaqText>
-                <OptimizedImage
+                <FaqImage
                   imageName="help-centre/faq/hit-the-pencil.png"
                   alt="MT5 Pencil"
                   width={568}
@@ -876,7 +883,7 @@ export const FAQData: FAQDataType[] = [
                   Hit Confirm and follow the on-screen instructions to change
                   your Deriv MT5 password.
                 </FaqText>
-                <OptimizedImage
+                <FaqImage
                   imageName="help-centre/faq/hit-confirm.png"
                   alt="Hit Confirm"
                   width={568}
@@ -927,7 +934,7 @@ export const FAQData: FAQDataType[] = [
                   On the <strong>Trader’s Hub</strong>, hit{' '}
                   <strong>Open</strong> next to your Deriv MT5 account.
                 </FaqText>
-                <OptimizedImage
+                <FaqImage
                   imageName="help-centre/faq/deriv-mt5-open.png"
                   alt="MT5 Open"
                   width={568}
@@ -937,7 +944,7 @@ export const FAQData: FAQDataType[] = [
               </FaqBox>,
               <FaqBox>
                 <FaqText>Hit the pencil icon next to the password.</FaqText>
-                <OptimizedImage
+                <FaqImage
                   imageName="help-centre/faq/hit-the-pencil.png"
                   alt="MT5 Pencil"
                   width={568}
@@ -948,7 +955,7 @@ export const FAQData: FAQDataType[] = [
                 <FaqText>
                   On the next screen, select <strong>Investor password.</strong>
                 </FaqText>
-                <OptimizedImage
+                <FaqImage
                   imageName="help-centre/faq/investor-password.png"
                   alt="Investor Password"
                   width={568}
@@ -972,7 +979,7 @@ export const FAQData: FAQDataType[] = [
             Hit <strong>Open</strong> next to your Deriv MT5 account and find
             the server below the broker name.
           </FaqText>
-          <OptimizedImage
+          <FaqImage
             imageName="help-centre/faq/deriv-mt5-server.png"
             alt="MT5 Server"
             width={568}

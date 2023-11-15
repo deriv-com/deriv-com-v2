@@ -1,4 +1,9 @@
-import { CustomLink, CustomLinkProps } from '@deriv-com/components';
+import {
+  CustomLink,
+  CustomLinkProps,
+  OptimizedImage,
+  OptimizedImageProps,
+} from '@deriv-com/components';
 import { Text, qtMerge, BodyTypographyProps } from '@deriv/quill-design';
 import { PropsWithChildren, ReactNode } from 'react';
 
@@ -73,4 +78,8 @@ export const FaqList = ({
       <li key={`${d}-${k}`}>{d}</li>
     ))}
   </ul>
+);
+
+export const FaqImage = ({ ...otherProps }: OptimizedImageProps) => (
+  <OptimizedImage className="p-general-md" {...otherProps} />
 );

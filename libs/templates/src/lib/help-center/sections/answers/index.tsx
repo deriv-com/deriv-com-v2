@@ -22,6 +22,7 @@ const AnswerSection = ({ header, questions, answers }: FAQDataType) => {
         content={{
           data: accordionItems,
         }}
+        className="p-general-none"
       />
     </Section>
   );
