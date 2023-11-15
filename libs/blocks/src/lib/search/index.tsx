@@ -1,32 +1,31 @@
-import { SearchChip } from '@deriv-com/components';
+import { SearchField } from '@deriv/quill-design';
 import { ReactNode } from 'react';
 
 export type SearchBlockProps = {
-  showSearchresults: (e: string) => void;
+  showSearchResults: (e: string) => void;
   content?: ReactNode;
   placeholder: string;
   onChange: (e: string) => void;
 };
 
 export const SearchBlock = ({
-  showSearchresults,
+  showSearchResults,
   content,
   placeholder,
   onChange,
 }: SearchBlockProps) => {
   return (
     <section className="flex w-full max-w-[1024px] flex-col gap-general-xl py-general-xl">
-      <SearchChip
+      <SearchField
         placeholder={placeholder}
-        onChange={(value) => {
-          showSearchresults(value);
+        onChange={(e) => {
+          showSearchResults(e.target.value);
 
           if (onChange) {
-            onChange(value);
+            onChange(e.target.value);
           }
         }}
-        className="w-full "
-        inputClassName="!bg-gradient-slate-110"
+        className="w-full"
       />
       {content && content}
     </section>

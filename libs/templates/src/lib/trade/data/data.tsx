@@ -50,7 +50,7 @@ import {
   MarketForexUsdsgdIcon,
   MarketForexUsdthbIcon,
   MarketForexUsdzarIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Markets';
 import { TableDataTypeProps } from '../types/types';
 
 export const mainInfo: TableDataTypeProps = {

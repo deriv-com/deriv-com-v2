@@ -1,5 +1,5 @@
 import { qtMerge } from '@deriv/quill-design';
-import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
+import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ComponentPropsWithRef, useState } from 'react';
@@ -67,7 +67,7 @@ export function CustomLink({
       onMouseOut={() => setHover(false)}
       href={customHref}
       className={qtMerge(
-        'flex items-center justify-center',
+        'flex',
         'text-typography-prominent',
         size === 'sm' && 'text-body-sm',
         size === 'md' && 'text-body-sm lg:text-body-md',

@@ -1,5 +1,5 @@
 import { CustomLink, CustomLinkProps } from '@deriv-com/components';
-import { BodyTypographyProps, Text, qtMerge } from '@deriv/quill-design';
+import { Text, qtMerge, BodyTypographyProps } from '@deriv/quill-design';
 import { PropsWithChildren, ReactNode } from 'react';
 
 //todo: removed [slugify] from utils/../utils and added here. we need to update this because we are using this on multiple places

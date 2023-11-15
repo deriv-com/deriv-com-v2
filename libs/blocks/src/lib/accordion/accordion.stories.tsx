@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import AccordionBlock from '.';
-import { StandaloneAndroidIcon } from '@deriv/quill-icons';
+import { StandaloneAndroidIcon } from '@deriv/quill-icons/Standalone';
 
 const meta = {
   title: 'Blocks/Accordion',

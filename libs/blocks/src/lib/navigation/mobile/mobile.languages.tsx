@@ -1,5 +1,5 @@
 import { Text } from '@deriv/quill-design';
-import { FlagUnitedKingdomIcon } from '@deriv/quill-icons';
+import { FlagUnitedKingdomIcon } from '@deriv/quill-icons/Flags';
 
 export const MobileLanguages = () => {
   return (

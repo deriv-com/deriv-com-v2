@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, SwiperOptions } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { qtMerge } from '@deriv/quill-design';
 import Card, { CardVariants } from '../card';
+import { SwiperOptions } from 'swiper/types';
 
 type CardVariantType = keyof CardVariants;
 
@@ -46,7 +46,6 @@ export const CardSlider = <T extends CardVariantType>({
     <div className="flex w-full justify-center">
       <Swiper
         className={qtMerge(className)}
-        modules={[Pagination]}
         slidesPerView={slidesPerView}
         spaceBetween={spaceBetween}
         breakpoints={breakpoints}
