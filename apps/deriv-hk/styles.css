@@ -7,6 +7,10 @@
 @import '@deriv/quill-design/quill-tailwind/fonts.css';
 
 
+/* TODO: 
+  This is for weird scrollbar color on some mac devices
+  We need to handle this in the quill design later 
+  */
 ::-webkit-scrollbar  {
     display: none;
 }
