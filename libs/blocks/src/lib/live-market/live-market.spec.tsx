@@ -13,7 +13,6 @@ describe('LiveMarket', () => {
           content: 'More forex',
         }}
         header="header here"
-        isHeaderSection={true}
         disclaimer="Disclaimer here"
       />,
       {
