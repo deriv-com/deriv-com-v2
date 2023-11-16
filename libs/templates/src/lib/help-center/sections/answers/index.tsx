@@ -16,12 +16,13 @@ const AnswerSection = ({ header, questions, answers }: FAQDataType) => {
   });
 
   return (
-    <Section className="flex flex-col ">
+    <Section className="mt-2400 flex flex-col">
       <AccordionBlock
         title={header}
         content={{
           data: accordionItems,
         }}
+        className="pb-2400 pt-general-none"
       />
     </Section>
   );
