@@ -13,7 +13,7 @@ export const Base = ({
   content: Content,
   expanded = false,
   icon,
-  divider = 'both',
+  divider = 'none',
   customContent: CustomContent,
   contentClass,
   onExpand,
@@ -31,6 +31,12 @@ export const Base = ({
     if (onExpand) {
       onExpand(!isExpanded, title);
     }
+  };
+
+  const dividerClassNames = {
+    both: 'border-x-none border-b-opacity-black-100 border-t-opacity-black-100',
+    bottom: 'border-b-opacity-black-100 !border-t-none',
+    none: '!border-t-none',
   };
 
   // Handle Collapse via Keyboard
@@ -86,9 +92,8 @@ export const Base = ({
       className={qtMerge(
         'flex w-full flex-col overflow-hidden',
         'focus-visible:outline-1 focus-visible:outline-opacity-red-100',
-        divider === 'bottom' && 'border-xs border-b-opacity-black-100',
-        divider === 'both' &&
-          'border-100 border-b-opacity-black-100 border-t-opacity-black-100',
+        dividerClassNames[divider],
+        'border-100 border-b-opacity-black-100 border-t-opacity-black-100',
         className,
       )}
     >
@@ -136,7 +141,11 @@ export const Base = ({
           (isAutoExpand || isExpanded) && styles['accordion-content-expanded'],
         )}
       >
-        <div className="flex h-fit p-general-lg">{Content && <Content />}</div>
+        {(isAutoExpand || isExpanded) && (
+          <div className="flex h-fit p-general-lg">
+            {Content && <Content />}
+          </div>
+        )}
       </div>
     </div>
   );

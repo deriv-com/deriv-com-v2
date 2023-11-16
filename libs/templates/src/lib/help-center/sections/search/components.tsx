@@ -1,4 +1,9 @@
-import { CustomLink, CustomLinkProps } from '@deriv-com/components';
+import {
+  CustomLink,
+  CustomLinkProps,
+  OptimizedImage,
+  OptimizedImageProps,
+} from '@deriv-com/components';
 import { Text, qtMerge, BodyTypographyProps } from '@deriv/quill-design';
 import { PropsWithChildren, ReactNode } from 'react';
 
@@ -40,20 +45,8 @@ export const generateFaqs = (questions: string[], header: string) => {
   );
 };
 
-export const FaqBox = ({
-  variant = 'lg',
-  children,
-}: { variant?: 'sm' | 'md' | 'lg' } & PropsWithChildren) => (
-  <div
-    className={qtMerge(
-      'flex flex-col',
-      variant === 'sm' && 'gap-general-2xs',
-      variant === 'md' && 'gap-general-xs',
-      variant === 'lg' && 'gap-general-lg',
-    )}
-  >
-    {children}
-  </div>
+export const FaqBox = ({ children }: PropsWithChildren) => (
+  <div className="mb-1200 flex flex-col gap-800">{children}</div>
 );
 export const FaqText = ({ children, ...otherProps }: BodyTypographyProps) => (
   <Text className="pr-general-2xl" {...otherProps} size="md">
@@ -78,11 +71,18 @@ export const FaqList = ({
       variant === 'bullet' && 'list-disc',
       variant === 'decimal' && 'list-decimal',
       variant === 'none' && 'list-none',
-      'flex flex-col gap-general-xs pl-general-xl text-opacity-black-800',
+      'flex flex-col gap-general-sm pl-general-md text-opacity-black-800',
     )}
   >
     {data.map((d, k) => (
       <li key={`${d}-${k}`}>{d}</li>
     ))}
   </ul>
+);
+
+export const FaqImage = ({ ...otherProps }: OptimizedImageProps) => (
+  <OptimizedImage
+    className="border-xs border-opacity-black-200 p-general-md"
+    {...otherProps}
+  />
 );

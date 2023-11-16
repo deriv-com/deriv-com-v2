@@ -14,7 +14,10 @@ export const MobileNavLink: React.FC<MobileNavLinkProps> = ({
   return (
     <CustomLink
       href={item.href}
-      className={qtMerge('text-body-md font-bold leading-body-md', className)}
+      className={qtMerge(
+        'py-general-sm text-body-md font-bold leading-body-md text-typography-default',
+        className,
+      )}
     >
       {item.text}
     </CustomLink>
