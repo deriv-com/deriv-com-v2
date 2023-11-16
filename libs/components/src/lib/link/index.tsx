@@ -39,7 +39,7 @@ export function CustomLink({
       onMouseOut={() => setHover(false)}
       href={href}
       className={qtMerge(
-        'flex items-center justify-center',
+        'flex',
         'text-typography-prominent',
         size === 'sm' && 'text-body-sm',
         size === 'md' && 'text-body-sm lg:text-body-md',

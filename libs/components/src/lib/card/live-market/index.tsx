@@ -7,6 +7,7 @@ import {
 import { LiveMarketContent } from '../types';
 import LivePrice from './live-price';
 import { BuySellButtons } from './buy-sell.buttons';
+import clsx from 'clsx';
 
 const colorVariant: { [key: string]: string } = {
   up: 'fill-solid-emerald-900 text-solid-emerald-900',
@@ -50,6 +51,11 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   askPrice,
   spread,
 }) => {
+  const textClassName =
+    status === 'closed'
+      ? 'text-typography-disabled'
+      : 'text-typography-default';
+
   return (
     <div
       className={qtMerge(
@@ -60,13 +66,20 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         'p-general-xl',
         'gap-gap-xl',
         className,
-        status === 'closed' && 'opacity-700',
       )}
     >
       <div className="flex h-[52px] flex-row gap-gap-sm">
         <div className="flex flex-1 flex-row gap-gap-md">
-          {instrumentIcon}
-          <Text size="md" className="pt-general-xs">
+          <div className={clsx(status === 'closed' && 'opacity-600')}>
+            {instrumentIcon}
+          </div>
+          <Text
+            size="md"
+            className={qtMerge(
+              'pt-general-xs',
+              status === 'closed' && 'text-typography-subtle',
+            )}
+          >
             {instrument}
           </Text>
         </div>
@@ -78,8 +91,17 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         </div>
       </div>
 
-      <LivePrice status={status} bidPrice={bidPrice} askPrice={askPrice} />
-      <BuySellButtons status={status} spread={spread} />
+      <LivePrice
+        status={status}
+        bidPrice={bidPrice}
+        askPrice={askPrice}
+        textClass={textClassName}
+      />
+      <BuySellButtons
+        status={status}
+        spread={spread}
+        textClass={textClassName}
+      />
     </div>
   );
 };
