@@ -21,6 +21,7 @@ export const Default: Story = {
     },
     disclaimer: '*Disclaimer text goes here.',
     content: {
+      cols: 'three',
       cards: [
         {
           header: '',
