@@ -65,7 +65,7 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
 
               {!results.length && searchKey && (
                 <div className="flex w-full justify-center py-general-2xl">
-                  <Text size="lg" className="break-all text-typography-default">
+                  <Text size="lg" className="break-all">
                     Sorry, we couldn’t find any results with "{searchKey}" in it
                   </Text>
                 </div>
