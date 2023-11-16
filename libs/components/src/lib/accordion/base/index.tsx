@@ -13,7 +13,7 @@ export const Base = ({
   content: Content,
   expanded = false,
   icon,
-  divider = 'both',
+  divider = 'none',
   customContent: CustomContent,
   contentClass,
   onExpand,
@@ -34,7 +34,7 @@ export const Base = ({
   };
 
   const dividerClassNames = {
-    both: 'border-xs border-x-none border-b-opacity-black-100 border-t-opacity-black-100',
+    both: 'border-x-none border-b-opacity-black-100 border-t-opacity-black-100',
     bottom: 'border-b-opacity-black-100 !border-t-none',
     none: '!border-t-none',
   };
