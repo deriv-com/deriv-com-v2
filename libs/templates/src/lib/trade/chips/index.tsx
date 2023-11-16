@@ -3,12 +3,12 @@ import { TableDataType } from '../types/types';
 import { additionalInfo, mainInfo, tradingCondition } from '../data/data';
 import { useState } from 'react';
 
-export type ChipsPros = {
+export type ChipsProps = {
   onChangeChips: (value: TableDataType[]) => void;
   onChangeSelectedInfo: (value: string) => void;
 };
 
-const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsPros) => {
+const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsProps) => {
   const [selectedInfo, setSelectedInfo] = useState('mainInfo');
 
   return (
