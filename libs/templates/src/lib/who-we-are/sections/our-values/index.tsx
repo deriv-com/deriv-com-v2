@@ -58,7 +58,7 @@ export const WhoWeAreValues = () => {
       cardSliderProps={{
         cards: ourValuesCards,
         variant: 'ContentBottom',
-        slideClasses: 'max-w-[242px] md:max-w-[296px]',
+        slideClasses: 'max-w-[286px] md:max-w-[296px]',
         className: 'w-full',
       }}
     />
