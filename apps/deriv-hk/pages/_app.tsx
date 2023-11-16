@@ -25,6 +25,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
                   name="viewport"
                   content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
                 />
+                <meta
+                  name="trustpilot-one-time-domain-verification-id"
+                  content="8780f148-a297-414b-bd41-65c08c74b2a1"
+                />
               </Head>
               <Component {...pageProps} />
             </>
