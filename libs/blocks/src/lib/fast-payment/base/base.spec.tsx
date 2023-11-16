@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import {
   FlagAndorraIcon,
   FlagAustraliaIcon,
@@ -6,13 +7,15 @@ import {
 } from '@deriv/quill-icons/Flags';
 import Base from './index';
 
+const title = 'Hassle-free deposits and withdrawals';
+const desc = 'Make instant deposits from 10,000 HKD. Withdraw in minutes.';
+
 describe('FastPayment', () => {
   it('should render successfully', () => {
-    const { queryByText } = render(
+    const { baseElement, queryByText } = render(
       <Base
-        title="Hassle-free deposits and withdrawals"
-        description="Make instant deposits from 10,000 HKD. Withdraw in minutes."
-        link={{ content: 'Link Text', href: 'https://example.com' }}
+        title={title}
+        description={desc}
         content={{
           className: 'h-fit',
           cards: [
@@ -48,8 +51,8 @@ describe('FastPayment', () => {
       />,
     );
 
-    expect(
-      queryByText('Hassle-free deposits and withdrawals'),
-    ).toBeInTheDocument();
+    expect(baseElement).toBeTruthy();
+
+    expect(queryByText(title)).toBeInTheDocument();
   });
 });
