@@ -66,7 +66,6 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
           <CustomLink
             size={size}
             href={href}
-            hasHoverColor={isLastItem(lk)}
             hasHoverDecoration={isLastItem(lk)}
             hasIcon={isLastItem(lk)}
             disabled={!isLastItem(lk)}
