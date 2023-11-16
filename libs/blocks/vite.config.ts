@@ -45,7 +45,7 @@ export default defineConfig({
         '@deriv-com/components',
       ],
     },
-    minify: true,
+    minify: false,
   },
 
   test: {
