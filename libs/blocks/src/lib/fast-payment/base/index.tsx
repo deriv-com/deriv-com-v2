@@ -26,7 +26,6 @@ const Base: React.FC<FastPaymentProps> = ({
                   size="lg"
                   href={link.href}
                   className="w-fit"
-                  hasHoverColor
                   hasIcon
                 >
                   {link.content}
