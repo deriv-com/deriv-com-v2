@@ -15,7 +15,7 @@ export const SearchBlock = ({
   onChange,
 }: SearchBlockProps) => {
   return (
-    <section className="flex w-full max-w-[1024px] flex-col gap-general-xl py-general-xl">
+    <section className="flex w-full max-w-[1024px] flex-col py-general-xl">
       <SearchField
         placeholder={placeholder}
         onChange={(e) => {
@@ -25,7 +25,7 @@ export const SearchBlock = ({
             onChange(e.target.value);
           }
         }}
-        className="w-full"
+        className="w-full gap-gap-md"
       />
       {content && content}
     </section>

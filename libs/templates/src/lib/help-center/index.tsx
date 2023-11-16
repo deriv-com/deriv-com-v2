@@ -21,7 +21,7 @@ export function HelpCenterTemplate() {
             },
           ]}
         />
-        <Hero.ContentTop title="How can we help?">
+        <Hero.ContentBottom title="How can we help?">
           <OptimizedImage
             imageName="help-centre/hero/help-centre-hero.png"
             className="rounded-pill"
@@ -29,7 +29,7 @@ export function HelpCenterTemplate() {
             height={526}
             alt="help centre hero"
           />
-        </Hero.ContentTop>
+        </Hero.ContentBottom>
       </FluidContainer>
       <SearchSection />
       <HelpCardSection />
