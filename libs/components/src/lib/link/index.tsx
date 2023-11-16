@@ -41,6 +41,7 @@ export function CustomLink({
       className={qtMerge(
         'flex',
         'text-typography-prominent',
+        hasIcon && 'items-center justify-center',
         size === 'sm' && 'text-body-sm',
         size === 'md' && 'text-body-sm lg:text-body-md',
         size === 'lg' && 'text-body-lg',
