@@ -112,7 +112,6 @@ export const BaseCard: React.FC<BaseCardProps> = ({
             href={link.href}
             size={textSizeVariant[size] as textSize}
             hasIcon
-            // hasHoverColor
           >
             {link.content}
           </CustomLink>

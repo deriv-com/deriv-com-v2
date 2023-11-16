@@ -46,7 +46,6 @@ export function CustomLink({
         size === 'md' && 'text-body-sm lg:text-body-md',
         size === 'lg' && 'text-body-lg',
         hasLinkColor && 'text-typography-link',
-        hasHoverColor && 'hover:text-typography-link',
         hasHoverDecoration && 'hover:underline',
         disabled && 'pointer-events-none text-opacity-black-400',
         className,
