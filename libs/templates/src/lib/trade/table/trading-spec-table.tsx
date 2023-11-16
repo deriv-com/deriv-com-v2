@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { mainInfo, tradingCondition, additionalInfo } from '../data/data';
+import { mainInfo } from '../data/data';
 import { TableDataType } from '../types/types';
 import {
   flexRender,
@@ -11,7 +11,6 @@ import {
 import UseColumns from '../hooks/use-columns';
 import {
   Button,
-  Chip,
   qtMerge,
   SearchField,
   Section,
@@ -20,13 +19,13 @@ import {
 import {
   StandaloneChevronLeftRegularIcon,
   StandaloneChevronRightRegularIcon,
-  StandaloneCircleDotFillIcon,
-  StandaloneCircleRegularIcon,
   StandaloneXmarkBoldIcon,
 } from '@deriv/quill-icons/Standalone';
 import { LabelPairedEllipsisVerticalBoldIcon } from '@deriv/quill-icons/LabelPaired';
 import { BottomSheet } from '@deriv-com/components';
 import clsx from 'clsx';
+import Chips from '../chips';
+import ActionSheetBottom from '../action-sheet';
 
 const TradingSpecTable = () => {
   const [data, setData] = useState<TableDataType[]>([]);
@@ -40,7 +39,15 @@ const TradingSpecTable = () => {
   const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
   };
-
+  const handleChipsData = (value: TableDataType[]) => {
+    setSelectedFilter(value);
+  };
+  const handleChipsInfo = (value: string) => {
+    setSelectedInfo(value);
+  };
+  const handleBottomSheet = (value: boolean) => {
+    setShowBottomSheet(value);
+  };
   useEffect(() => {
     let updatedRowData = [];
     if (searchValue.length >= 1) {
@@ -99,43 +106,10 @@ const TradingSpecTable = () => {
             }}
           />
 
-          <Chip.Selectable
-            className="hidden md:block lg:block"
-            onChipSelect={() => {
-              setSelectedFilter(mainInfo.data);
-              setSelectedInfo('mainInfo');
-            }}
-          >
-            Main Info
-          </Chip.Selectable>
-          <Chip.Selectable
-            className="hidden md:block lg:block"
-            onChipSelect={(_, value) => {
-              if (value) {
-                setSelectedFilter(tradingCondition.data);
-                setSelectedInfo('tradingCondition');
-              } else {
-                setSelectedFilter(mainInfo.data);
-                setSelectedInfo('mainInfo');
-              }
-            }}
-          >
-            Trading conditions
-          </Chip.Selectable>
-          <Chip.Selectable
-            className="hidden md:block lg:block"
-            onChipSelect={(_, value) => {
-              if (value) {
-                setSelectedFilter(additionalInfo.data);
-                setSelectedInfo('additionalInfo');
-              } else {
-                setSelectedFilter(mainInfo.data);
-                setSelectedInfo('mainInfo');
-              }
-            }}
-          >
-            Additional info
-          </Chip.Selectable>
+          <Chips
+            onChangeChips={handleChipsData}
+            onChangeSelectedInfo={handleChipsInfo}
+          />
         </div>
       </div>
       <table
@@ -246,61 +220,11 @@ const TradingSpecTable = () => {
             />
           }
         >
-          <div className=" flex flex-col p-general-md">
-            <div
-              className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
-              onClick={() => {
-                setSelectedFilter(mainInfo.data);
-                setSelectedInfo('mainInfo');
-                setShowBottomSheet(false);
-              }}
-            >
-              {selectedInfo === 'mainInfo' ? (
-                <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
-              ) : (
-                <StandaloneCircleRegularIcon fill="black" iconSize="md" />
-              )}
-
-              <Text size="md" className="text-typography-default">
-                Main info
-              </Text>
-            </div>
-            <div
-              className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
-              onClick={() => {
-                setSelectedFilter(tradingCondition.data);
-                setSelectedInfo('tradingCondition');
-                setShowBottomSheet(false);
-              }}
-            >
-              {selectedInfo === 'tradingCondition' ? (
-                <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
-              ) : (
-                <StandaloneCircleRegularIcon fill="black" iconSize="md" />
-              )}
-              <Text size="md" className="text-typography-default">
-                Trading conditions
-              </Text>
-            </div>
-            <div
-              className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
-              onClick={() => {
-                setSelectedFilter(additionalInfo.data);
-                setSelectedInfo('additionalInfo');
-                setShowBottomSheet(false);
-              }}
-            >
-              {selectedInfo === 'additionalInfo' ? (
-                <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
-              ) : (
-                <StandaloneCircleRegularIcon fill="black" iconSize="md" />
-              )}
-
-              <Text size="md" className="text-typography-default">
-                Additional info
-              </Text>
-            </div>
-          </div>
+          <ActionSheetBottom
+            onChangeChips={handleChipsData}
+            onChangeBottomSheet={handleBottomSheet}
+            onChangeSelectedInfo={handleChipsInfo}
+          />
         </BottomSheet>
       )}
     </Section>
