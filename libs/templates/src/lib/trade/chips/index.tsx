@@ -1,6 +1,7 @@
 import { Chip } from '@deriv/quill-design';
 import { TableDataType } from '../types/types';
 import { additionalInfo, mainInfo, tradingCondition } from '../data/data';
+import { useState } from 'react';
 
 export type ChipsPros = {
   onChangeChips: (value: TableDataType[]) => void;
@@ -8,14 +9,18 @@ export type ChipsPros = {
 };
 
 const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsPros) => {
+  const [selectedInfo, setSelectedInfo] = useState('mainInfo');
+
   return (
     <>
       <Chip.Selectable
         className="hidden md:block lg:block"
         onChipSelect={() => {
           onChangeSelectedInfo('mainInfo');
+          setSelectedInfo('mainInfo');
           onChangeChips(mainInfo.data);
         }}
+        selected={selectedInfo === 'mainInfo'}
       >
         Main Info
       </Chip.Selectable>
@@ -24,7 +29,9 @@ const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsPros) => {
         onChipSelect={() => {
           onChangeChips(tradingCondition.data);
           onChangeSelectedInfo('tradingCondition');
+          setSelectedInfo('tradingCondition');
         }}
+        selected={selectedInfo === 'tradingCondition'}
       >
         Trading conditions
       </Chip.Selectable>
@@ -33,7 +40,9 @@ const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsPros) => {
         onChipSelect={() => {
           onChangeChips(additionalInfo.data);
           onChangeSelectedInfo('additionalInfo');
+          setSelectedInfo('additionalInfo');
         }}
+        selected={selectedInfo === 'additionalInfo'}
       >
         Additional info
       </Chip.Selectable>
