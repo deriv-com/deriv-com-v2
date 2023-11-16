@@ -46,7 +46,7 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
                 Results for “{searchKey}”
               </Text>
               {results.length > 0 && (
-                <div className="flex flex-col gap-general-lg pb-general-2xl">
+                <div className="flex flex-col gap-general-lg pb-2400">
                   {results.map(({ header, questions }) =>
                     questions.map((question) => {
                       return (
@@ -65,7 +65,7 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
 
               {!results.length && searchKey && (
                 <div className="flex w-full justify-center py-general-2xl">
-                  <Text size="lg" className="break-all">
+                  <Text size="lg" className="break-all text-typography-default">
                     Sorry, we couldn’t find any results with "{searchKey}" in it
                   </Text>
                 </div>
