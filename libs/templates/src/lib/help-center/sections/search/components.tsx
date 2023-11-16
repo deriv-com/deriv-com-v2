@@ -71,7 +71,7 @@ export const FaqList = ({
       variant === 'bullet' && 'list-disc',
       variant === 'decimal' && 'list-decimal',
       variant === 'none' && 'list-none',
-      'block gap-general-xs pl-general-md text-opacity-black-800',
+      'flex flex-col gap-general-sm pl-general-md text-opacity-black-800',
     )}
   >
     {data.map((d, k) => (
@@ -81,5 +81,8 @@ export const FaqList = ({
 );
 
 export const FaqImage = ({ ...otherProps }: OptimizedImageProps) => (
-  <OptimizedImage className="p-general-md" {...otherProps} />
+  <OptimizedImage
+    className="border-xs border-opacity-black-200 p-general-md"
+    {...otherProps}
+  />
 );
