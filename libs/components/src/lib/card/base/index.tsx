@@ -1,4 +1,4 @@
-import { Heading, Text, TextSize, qtMerge } from '@deriv/quill-design';
+import { Heading, Text, qtMerge } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { CardContent } from '../types';
 import CustomLink, { textSize } from '../../link';
@@ -33,7 +33,7 @@ const sizeVariantComponents = {
 const sizeVariantContainerGap = {
   sm: 'gap-gap-lg p-general-xl',
   md: 'gap-gap-xl p-general-2xl',
-  lg: 'gap-gap-xl p-general-3xl',
+  lg: 'gap-gap-2xl p-general-3xl',
 };
 
 const sizeVariantTextGap = {
@@ -42,16 +42,10 @@ const sizeVariantTextGap = {
   lg: 'gap-gap-xl',
 };
 
-const textSizeVariant: { [key: string]: TextSize } = {
+const textSizeVariant: { [key: string]: 'sm' | 'md' | 'lg' } = {
   sm: 'md',
   md: 'lg',
   lg: 'lg',
-};
-
-const linkTextSizeVariant = {
-  sm: 'text-body-md',
-  md: 'text-body-lg',
-  lg: 'text-body-lg',
 };
 
 export const BaseCard: React.FC<BaseCardProps> = ({
@@ -118,7 +112,6 @@ export const BaseCard: React.FC<BaseCardProps> = ({
             href={link.href}
             size={textSizeVariant[size] as textSize}
             hasIcon
-            hasHoverColor
           >
             {link.content}
           </CustomLink>

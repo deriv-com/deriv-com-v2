@@ -20,7 +20,7 @@ export const whyTradeWithUsData: CardContent[] = [
     align: 'start',
     size: 'md',
     link: {
-      content: 'More on forex trading',
+      content: 'More on leveraged trading',
       href: '/',
     },
   },
@@ -31,7 +31,7 @@ export const whyTradeWithUsData: CardContent[] = [
     align: 'start',
     size: 'md',
     link: {
-      content: 'More on forex trading',
+      content: 'More on Deriv MT5',
       href: '/',
     },
   },

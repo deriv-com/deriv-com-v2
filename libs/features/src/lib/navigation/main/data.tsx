@@ -8,7 +8,7 @@ import {
   DerivProductDerivXBrandDarkLogoIcon,
   PartnersProductDerivCtraderBrandDarkLogoHorizontalIcon,
   PartnersProductDerivMt5BrandDarkLogoHorizontalIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Logo';
 
 export const mainNavItems: NavLinkItems = {
   trade: {

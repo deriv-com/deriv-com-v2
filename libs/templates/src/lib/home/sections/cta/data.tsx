@@ -10,7 +10,7 @@ export const CTABlockContent = () => {
       className="lg:gap-gap-lg"
       align="start"
       size="lg"
-      header="Join over 2.5 million online traders"
+      header="Join over 2.5 million online traders worldwide"
       color="gray"
       content={
         <OptimizedImage
@@ -22,12 +22,7 @@ export const CTABlockContent = () => {
         />
       }
     >
-      <Button
-        colorStyle="black"
-        className="lg:mt-general-xl"
-        size="lg"
-        onClick={() => scrollTop()}
-      >
+      <Button colorStyle="coral" size="lg" onClick={() => scrollTop()}>
         Get a demo forex account
       </Button>
     </Card.ContentRight>

@@ -7,7 +7,7 @@ import {
   StandaloneTelegramIcon,
   StandaloneXTwitterIcon,
   StandaloneYoutubeIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Standalone';
 
 export const footerData: FooterItems[] = [
   {

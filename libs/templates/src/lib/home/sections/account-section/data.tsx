@@ -1,16 +1,14 @@
 import { TableContent } from '@deriv-com/components';
 import { Button } from '@deriv/quill-design';
-import {
-  IllustrativeForexIcon,
-  LabelPairedMinusRegularIcon,
-} from '@deriv/quill-icons';
+import { IllustrativeForexIcon } from '@deriv/quill-icons/Illustrative';
+import { LabelPairedMinusRegularIcon } from '@deriv/quill-icons/LabelPaired';
 
 export const TableData: TableContent = {
   header: 'The STP trading account',
   description:
     'Direct market access with fast order execution and no dealing desk intervention.',
   cta: (
-    <Button variant="secondary" className="w-1/2">
+    <Button variant="secondary" colorStyle="black" size="lg" className="w-1/2">
       Get this account
     </Button>
   ),

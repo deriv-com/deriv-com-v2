@@ -1,7 +1,7 @@
 import { MobileNavToggle } from '@deriv-com/blocks';
 import { useNavigation } from '@deriv-com/hooks';
 import { Button, useTheme } from '@deriv/quill-design';
-import { StandalonePlaceholderRegularIcon } from '@deriv/quill-icons';
+import { StandalonePlaceholderRegularIcon } from '@deriv/quill-icons/Standalone';
 
 export const MainNavigationButtons = () => {
   const { theme, toggleTheme } = useTheme();
@@ -20,16 +20,15 @@ export const MainNavigationButtons = () => {
   };
 
   return (
-    <div className="flex flex-row items-center gap-gap-md">
+    <div className="flex flex-row items-center gap-gap-sm">
       {isLoggedIn ? (
         <Button
           variant="secondary"
           colorStyle="coral"
-          size="md"
+          size="lg"
           onClick={onTradersHubClick}
-          renderLeftIcon={() => (
-            <StandalonePlaceholderRegularIcon width={12} height={12} />
-          )}
+          icon={StandalonePlaceholderRegularIcon}
+          iconPosition="start"
         >
           Traders Hub
         </Button>
@@ -37,13 +36,13 @@ export const MainNavigationButtons = () => {
         <>
           <Button
             variant="secondary"
-            colorStyle="coral"
-            size="md"
+            colorStyle="black"
+            size="lg"
             onClick={onLoginClick}
           >
             Log in
           </Button>
-          <Button size="md" className="hidden lg:block" onClick={onSignupClick}>
+          <Button size="lg" className="hidden lg:block" onClick={onSignupClick}>
             Create free demo account
           </Button>
         </>

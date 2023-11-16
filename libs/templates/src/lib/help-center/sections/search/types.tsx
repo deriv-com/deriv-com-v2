@@ -1,6 +1,6 @@
 import { CardContent } from '@deriv-com/components';
 
-export const card_setting: Partial<CardContent> = {
+export const cardSetting: Partial<CardContent> = {
   size: 'sm',
   color: 'gray',
   align: 'start',

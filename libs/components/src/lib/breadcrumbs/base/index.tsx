@@ -23,20 +23,20 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
     setRenderLinks(links);
 
     if (hasExtra) {
-      const limited_links = [
+      const limitedLinks = [
         links[0],
         { content: '...', href: '' },
         links[linksLen - 2],
         links[linksLen - 1],
       ];
 
-      setRenderLinks(limited_links);
+      setRenderLinks(limitedLinks);
 
-      const remaining_links: LinkProps[] = links.filter(
-        (item) => !new Set(limited_links).has(item),
+      const remainingLinks: LinkProps[] = links.filter(
+        (item) => !new Set(limitedLinks).has(item),
       );
 
-      setDropdownLinks(remaining_links);
+      setDropdownLinks(remainingLinks);
     }
   }, [links]);
 
@@ -66,10 +66,10 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
           <CustomLink
             size={size}
             href={href}
-            hasHoverColor={isLastItem(lk)}
             hasHoverDecoration={isLastItem(lk)}
             hasIcon={isLastItem(lk)}
             disabled={!isLastItem(lk)}
+            className="items-center"
           >
             {content}
           </CustomLink>

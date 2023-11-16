@@ -1,13 +1,13 @@
 import { CardContent } from '@deriv-com/components';
 import {
-  IllustrativeChatIcon,
   StandaloneFileCircleInfoRegularIcon,
   StandaloneWhatsappIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Standalone';
+import { IllustrativeChatIcon } from '@deriv/quill-icons/Illustrative';
 
 export const helpCardsData: CardContent[] = [
   {
-    header: 'Live Chat',
+    header: 'Live chat',
     description: 'Get help from our expert support team.',
     size: 'sm',
     color: 'light',
@@ -19,7 +19,7 @@ export const helpCardsData: CardContent[] = [
     },
   },
   {
-    header: 'Message Us',
+    header: 'Message us',
     description: 'Get personalised assistance via WhatsApp.',
     size: 'sm',
     color: 'light',
