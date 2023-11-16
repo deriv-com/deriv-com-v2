@@ -23,13 +23,7 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
     >
       {item.icon ? item.icon : null}
       {item.text}
-      <Text
-        size="sm"
-        className={qtJoin(
-          'text-typography-default',
-          item.icon && 'col-start-2',
-        )}
-      >
+      <Text size="sm" className={qtJoin(item.icon && 'col-start-2')}>
         {item.description}
       </Text>
     </CustomLink>

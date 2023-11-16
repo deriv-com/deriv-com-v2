@@ -35,10 +35,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
           {item.text}
         </CustomLink>
       ) : (
-        <Text
-          size="sm"
-          className="cursor-pointer text-typography-default hover:text-typography-link"
-        >
+        <Text size="sm" className="cursor-pointer hover:text-typography-link">
           {item.text}
         </Text>
       )}

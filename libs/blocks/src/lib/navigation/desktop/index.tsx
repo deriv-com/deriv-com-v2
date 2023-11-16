@@ -26,7 +26,7 @@ const DesktopNavigation = ({ renderButtons, renderLogo }: NavigationProps) => {
                 width={24}
                 height={16}
               />
-              <Text className="inline-block text-typography-default">EN</Text>
+              <Text className="inline-block">EN</Text>
             </div>
           </div>
         </nav>
