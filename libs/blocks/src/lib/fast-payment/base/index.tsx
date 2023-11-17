@@ -17,7 +17,11 @@ const Base: React.FC<FastPaymentProps> = ({
           <div className="flex flex-col gap-gap-2xl">
             <div className="flex flex-col items-center justify-center gap-general-lg text-center max-sm:gap-general-md">
               <Heading.H2>{title}</Heading.H2>
-              {description && <Text size="xl">{description}</Text>}
+              {description && (
+                <Text size="xl" id="fast-payment-description">
+                  {description}
+                </Text>
+              )}
             </div>
 
             {link && (

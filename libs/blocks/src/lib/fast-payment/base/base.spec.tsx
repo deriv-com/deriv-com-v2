@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { getByText, render } from '@testing-library/react';
 
 import {
   FlagAndorraIcon,
@@ -8,15 +8,14 @@ import {
 import Base from './index';
 
 const title = 'Hassle-free deposits and withdrawals';
-const description =
-  'Make instant deposits from 10,000 HKD. Withdraw in minutes.';
+const desc = 'Make instant deposits from 10,000 HKD. Withdraw in minutes.';
 
 describe('FastPayment', () => {
   it('should render successfully', () => {
-    const { baseElement, container, getByText } = render(
+    const { baseElement, queryByText, container } = render(
       <Base
-        title="Hassle-free deposits and withdrawals"
-        description="Make instant deposits from 10,000 HKD. Withdraw in minutes."
+        title={title}
+        description={desc}
         content={{
           className: 'h-fit',
           cards: [
@@ -52,18 +51,55 @@ describe('FastPayment', () => {
       />,
     );
 
-    // Check if the component renders at all
-    expect(container.firstChild).toBeTruthy();
+    expect(baseElement).toBeTruthy();
+    expect(container.querySelector('h2')).toBeTruthy();
+    expect(queryByText(title)).toBeTruthy();
+    expect(queryByText(desc)).toBeTruthy();
+    expect(document.getElementById('cards-container')).toBeTruthy();
+  });
 
-    // Check for the presence of the h2 element
-    const h2Element = getByText(title);
-    expect(h2Element).toBeTruthy();
+  //render without description
+  it('should render successfully', () => {
+    const { container } = render(
+      <Base
+        title={title}
+        content={{
+          className: 'h-fit',
+          cards: [
+            {
+              header: '',
+              color: 'gray',
+              align: 'center',
+              size: 'lg',
+              icon: <FlagBurkinaFasoIcon fill="black" iconSize="2xl" />,
+              className: 'h-fit',
+              nonContentClassName: 'p-general-xl',
+            },
+            {
+              header: '',
+              color: 'gray',
+              align: 'center',
+              size: 'lg',
+              icon: <FlagAndorraIcon fill="black" iconSize="2xl" />,
+              className: 'h-fit',
+              nonContentClassName: 'p-general-xl',
+            },
+            {
+              header: '',
+              color: 'gray',
+              align: 'center',
+              size: 'lg',
+              icon: <FlagAustraliaIcon fill="black" iconSize="2xl" />,
+              className: 'h-fit',
+              nonContentClassName: 'p-general-xl',
+            },
+          ],
+        }}
+      />,
+    );
 
-    // Check for any other specific elements or content
-    // Example: const someElement = getByTestId('someTestId');
-    // expect(someElement).toBeInTheDocument();
-
-    // Use debug to print the rendered HTML to the console
-    console.log(container.innerHTML);
+    expect(container.querySelector('h2')).toBeTruthy();
+    expect(document.getElementById('fast-payment-description')).toBeNull();
+    expect(document.getElementById('cards-container')).toBeTruthy();
   });
 });

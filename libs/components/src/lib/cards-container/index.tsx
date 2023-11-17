@@ -41,6 +41,7 @@ export const CardsContainer = <T extends CardVariantType>({
         cardColsVariant[cols],
         className,
       )}
+      id="cards-container"
     >
       {cards.map((card) => (
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
