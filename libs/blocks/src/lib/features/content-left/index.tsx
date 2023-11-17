@@ -43,7 +43,9 @@ const ContentLeft = ({
         >
           <div className="flex flex-col gap-gap-xl">
             <Heading.H2>{title}</Heading.H2>
-            {description && <Text>{description}</Text>}
+            {description && (
+              <Text id="content-left-description">{description}</Text>
+            )}
           </div>
           {children}
         </div>
