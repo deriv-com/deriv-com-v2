@@ -4,14 +4,11 @@ import MobileNavLink from './mobile.nav-link';
 export const MobileNavContent = () => {
   const { activeItem } = useNavigation();
   return (
-    <div className="flex w-full flex-col gap-gap-xl  overflow-y-auto overscroll-y-contain">
+    <div className="flex w-full flex-col gap-gap-xl overflow-y-auto overscroll-y-contain">
       {activeItem && activeItem.type === 'nav-dropdown' ? (
         <>
           {activeItem.columns.map((column) => (
-            <div
-              key={column.id}
-              className="flex flex-col justify-between gap-gap-lg"
-            >
+            <div key={column.id} className="flex flex-col justify-between">
               {column.header && (
                 <MobileNavLink
                   item={column.header}
