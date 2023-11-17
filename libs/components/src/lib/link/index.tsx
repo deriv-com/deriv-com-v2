@@ -1,6 +1,7 @@
 import { useSharedLink } from '@deriv-com/hooks';
 import { qtMerge } from '@deriv/quill-design';
 import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
+import clsx from 'clsx';
 import { HTMLAttributes } from 'react';
 
 export interface CustomLinkProps extends HTMLAttributes<HTMLAnchorElement> {
@@ -11,9 +12,17 @@ export interface CustomLinkProps extends HTMLAttributes<HTMLAnchorElement> {
   hasHoverDecoration?: boolean;
   hasLinkColor?: boolean;
   disabled?: boolean;
+  iconColor?: iconColorVariant;
 }
-
+export type iconColorVariant = 'black' | 'subtle' | 'disabled' | 'default';
 export type textSize = 'sm' | 'md' | 'lg';
+
+const iconColorStyle = {
+  black: 'fill-typography-prominent',
+  subtle: 'fill-typography-subtle',
+  disabled: 'fill-typography-disabled',
+  default: 'fill-typography-default',
+};
 
 export function CustomLink({
   skipLocaleHandling,
@@ -21,6 +30,7 @@ export function CustomLink({
   className,
   size = 'sm',
   hasIcon = false,
+  iconColor = 'black',
   hasHoverDecoration = true,
   hasLinkColor = false,
   disabled = false,
@@ -34,7 +44,7 @@ export function CustomLink({
       href={href}
       className={qtMerge(
         'flex',
-        'text-typography-prominent',
+        'text-typography-default',
         hasIcon && 'items-center justify-center',
         size === 'sm' && 'text-body-sm',
         size === 'md' && 'text-body-sm lg:text-body-md',
@@ -47,7 +57,12 @@ export function CustomLink({
       {...rest}
     >
       {children}
-      {hasIcon && <StandaloneChevronRightRegularIcon iconSize="sm" />}
+      {hasIcon && (
+        <StandaloneChevronRightRegularIcon
+          iconSize="sm"
+          className={clsx(iconColorStyle[iconColor])}
+        />
+      )}
     </DerivLink>
   );
 }
