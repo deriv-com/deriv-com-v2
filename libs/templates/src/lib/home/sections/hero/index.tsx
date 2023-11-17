@@ -5,7 +5,7 @@ const HeroBanner = () => {
   return (
     <Hero.ContentLimitless
       title="Forex spreads from 0.3 pips"
-      description="items in this hero banner are not fully styled yet, we need buttons, inputs and social buttons"
+      description="Enter your email to get a demo account."
       content={renderHomeHeroSliderContent}
     >
       <HomeHeroForm />
