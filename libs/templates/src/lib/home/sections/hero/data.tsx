@@ -73,11 +73,7 @@ export const HomeHeroForm = () => {
   return (
     <div className={'flex flex-col gap-general-lg'}>
       <div className="flex flex-col items-center justify-between gap-gap-md md:flex-row">
-        <TextField
-          placeholder="Email Address"
-          type="email"
-          className="w-full"
-        />
+        <TextField placeholder="Email Address" type="email" />
         <Button size="lg" fullWidth>
           Open demo account
         </Button>
