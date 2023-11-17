@@ -26,7 +26,7 @@ export const MainNavContent = ({
           {item.layers.map((layer) =>
             layer.type === 'link' ? (
               <div className="flex w-full flex-col gap-gap-lg" key={layer.id}>
-                <Heading.H7>{layer.header}</Heading.H7>
+                <Heading.H6>{layer.header}</Heading.H6>
                 {layer.items.map((link) => (
                   <div
                     className="flex flex-col items-start gap-gap-lg"
