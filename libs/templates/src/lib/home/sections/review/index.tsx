@@ -1,13 +1,34 @@
 import { FluidContainer, Section, qtMerge } from '@deriv/quill-design';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Script from 'next/script';
+import axios from 'axios';
 
 const ReviewSection = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const [trustPilot, setTrustPilot] = useState(null);
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any)?.Trustpilot?.loadFromElement(ref.current, true);
+  }, []);
+
+  const appName = 'deriv.com';
+  const apiKey = 'akv2qmqDeOA8utqGyVhmLhGPSsN4ADaL';
+
+  useEffect(() => {
+    axios({
+      method: 'GET',
+      url: `https://api.trustpilot.com/v1/business-units/find?name=${appName}&apikey=${apiKey}`,
+    })
+      .then((res) => {
+        setTrustPilot(res.data);
+        console.log({
+          data: res.data,
+        });
+      })
+      .catch((e) => {
+        throw new Error(e);
+      });
   }, []);
 
   return (
