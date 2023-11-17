@@ -33,7 +33,7 @@ const sizeVariantComponents = {
 const sizeVariantContainerGap = {
   sm: 'gap-gap-lg p-general-xl',
   md: 'gap-gap-xl p-general-2xl',
-  lg: 'gap-gap-xl p-general-3xl',
+  lg: 'gap-gap-2xl p-general-3xl',
 };
 
 const sizeVariantTextGap = {
@@ -112,7 +112,6 @@ export const BaseCard: React.FC<BaseCardProps> = ({
             href={link.href}
             size={textSizeVariant[size] as textSize}
             hasIcon
-            hasHoverColor
           >
             {link.content}
           </CustomLink>

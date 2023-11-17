@@ -50,7 +50,7 @@ export function AccordionBlock({
   return (
     <FluidContainer
       className={qtMerge(
-        'flex w-full max-w-[1024px] flex-col items-center justify-center gap-gap-3xl py-general-xl',
+        'flex w-full max-w-[1024px] flex-col items-center justify-center gap-1600 py-general-xl',
         className,
       )}
     >
