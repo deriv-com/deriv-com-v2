@@ -1,7 +1,7 @@
 import { Heading, Text, qtMerge } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { CardContent } from '../types';
-import CustomLink, { textSize } from '../../link';
+import CustomLink from '../../link';
 
 export interface BaseCardProps extends CardContent {
   contentPosition: 'bottom' | 'top' | 'start' | 'end';
@@ -25,27 +25,21 @@ const textColorVariantClass = {
 };
 
 const sizeVariantComponents = {
-  sm: Heading.H5,
-  md: Heading.H4,
+  sm: Heading.H4,
+  md: Heading.H3,
   lg: Heading.H2,
 };
 
 const sizeVariantContainerGap = {
-  sm: 'gap-gap-lg p-general-xl',
-  md: 'gap-gap-xl p-general-2xl',
-  lg: 'gap-gap-2xl p-general-3xl',
+  sm: 'gap-gap-lg p-general-lg',
+  md: 'gap-gap-xl p-general-xl',
+  lg: 'gap-gap-2xl p-general-2xl',
 };
 
 const sizeVariantTextGap = {
   sm: 'gap-gap-md',
-  md: 'gap-gap-lg',
-  lg: 'gap-gap-xl',
-};
-
-const textSizeVariant: { [key: string]: 'sm' | 'md' | 'lg' } = {
-  sm: 'md',
-  md: 'lg',
-  lg: 'lg',
+  md: 'gap-gap-md',
+  lg: 'gap-gap-lg',
 };
 
 export const BaseCard: React.FC<BaseCardProps> = ({
@@ -97,22 +91,14 @@ export const BaseCard: React.FC<BaseCardProps> = ({
           >
             {header && <HeadingComponent>{header}</HeadingComponent>}
             {description && (
-              <Text
-                size={textSizeVariant[size]}
-                className="text-typography-default"
-              >
+              <Text size="md" className="text-typography-default">
                 {description}
               </Text>
             )}
           </div>
         )}
-
         {link && (
-          <CustomLink
-            href={link.href}
-            size={textSizeVariant[size] as textSize}
-            hasIcon
-          >
+          <CustomLink href={link.href} size="md" hasIcon>
             {link.content}
           </CustomLink>
         )}
