@@ -8,14 +8,15 @@ import {
 import Base from './index';
 
 const title = 'Hassle-free deposits and withdrawals';
-const desc = 'Make instant deposits from 10,000 HKD. Withdraw in minutes.';
+const description =
+  'Make instant deposits from 10,000 HKD. Withdraw in minutes.';
 
 describe('FastPayment', () => {
   it('should render successfully', () => {
-    const { baseElement, queryByText } = render(
+    const { baseElement, container, getByText } = render(
       <Base
-        title={title}
-        description={desc}
+        title="Hassle-free deposits and withdrawals"
+        description="Make instant deposits from 10,000 HKD. Withdraw in minutes."
         content={{
           className: 'h-fit',
           cards: [
@@ -51,8 +52,18 @@ describe('FastPayment', () => {
       />,
     );
 
-    expect(baseElement).toBeTruthy();
+    // Check if the component renders at all
+    expect(container.firstChild).toBeTruthy();
 
-    expect(queryByText(title)).toBeInTheDocument();
+    // Check for the presence of the h2 element
+    const h2Element = getByText(title);
+    expect(h2Element).toBeTruthy();
+
+    // Check for any other specific elements or content
+    // Example: const someElement = getByTestId('someTestId');
+    // expect(someElement).toBeInTheDocument();
+
+    // Use debug to print the rendered HTML to the console
+    console.log(container.innerHTML);
   });
 });
