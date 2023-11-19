@@ -1,0 +1,81 @@
+name: release libs to github npm packages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'libs/hooks/**'
+      - 'libs/blocks/**'
+      - 'libs/components/**'
+      - 'libs/providers/**'
+
+permissions:
+  contents: write # to be able to publish a GitHub release
+  issues: write # to be able to comment on released issues
+  pull-requests: write # to be able to comment on released pull requests
+  id-token: write # to enable use of OIDC for npm provenance
+  packages: write
+
+jobs:
+  build:
+    name: Build and Publish Libs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Setup Git
+        run: |
+          git config user.name "mohsen-deriv"
+          git config user.email "mohsen@regentmarkets.com"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Bump version Hooks
+        shell: bash
+        run: npx nx run hooks:version --skip-nx-cache
+
+      - name: Bump version Blocks
+        shell: bash
+        run: npx nx run blocks:version --skip-nx-cache
+
+      - name: Bump version Components
+        shell: bash
+        run: npx nx run components:version --skip-nx-cache
+
+      - name: Bump version Providers
+        shell: bash
+        run: npx nx run providers:version --skip-nx-cache
+
+      - name: Create npmrc file
+        shell: bash
+        run: echo '//npm.pkg.github.com/:_authToken=${{ secrets.PUBLISH_GITHUB_TOKEN }}' > .npmrc
+
+      - name: Publish Hooks
+        shell: bash
+        run: npx nx run hooks:deploy --skip-nx-cache
+
+      - name: Publish Blocks
+        shell: bash
+        run: npx nx run blocks:deploy --skip-nx-cache
+
+      - name: Publish Components
+        shell: bash
+        run: npx nx run components:deploy --skip-nx-cache
+
+      - name: Publish Providers
+        shell: bash
+        run: npx nx run providers:deploy --skip-nx-cache
+
+      - name: Push Tags and Commits
+        shell: bash
+        run: git push origin main --follow-tags
