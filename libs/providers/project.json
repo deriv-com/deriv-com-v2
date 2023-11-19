@@ -44,7 +44,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "preset": "angular",
+        "preset": "conventionalcommits",
         "branchName": "main",
         "releaseAs": "minor",
         "noVerify": true,
