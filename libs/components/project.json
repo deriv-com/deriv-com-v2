@@ -48,7 +48,7 @@
         "branchName": "main",
         "releaseAs": "minor",
         "noVerify": true,
-        "commitFormatMessage": "chore: {{projectName}} release {{version}} [skip ci]",
+        "commitMessageFormat": "chore: {projectName} release {version} [skip ci]",
         "allowEmptyRelease": true
       }
     },
