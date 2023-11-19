@@ -35,15 +35,7 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: [
-        'react',
-        'react-dom',
-        'react/jsx-runtime',
-        'tailwind-merge',
-        '@deriv/quill-design',
-        '@deriv/quill-icons',
-        '@deriv-com/components',
-      ],
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
     },
     minify: true,
   },

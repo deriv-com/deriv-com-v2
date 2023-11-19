@@ -1,14 +1,15 @@
 {
-    "name": "@deriv-com/providers",
-    "version": "0.0.1",
-    "main": "./index.js",
-    "types": "./index.d.ts",
-    "exports": {
-      ".": {
-        "import": "./index.mjs",
-        "require": "./index.js"
-      },
-      "./style.css": "./style.css"
+  "name": "@deriv-com/providers",
+  "version": "0.1.0",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
-  
+}

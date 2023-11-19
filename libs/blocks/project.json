@@ -40,6 +40,26 @@
           "watch": true
         }
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "angular",
+        "branchName": "main",
+        "releaseAs": "minor",
+        "noVerify": true,
+        "commitFormatMessage": "chore: {{projectName}} release {{version}} [skip ci]",
+        "allowEmptyRelease": true
+      }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public",
+        "buildTarget": "production",
+        "registry": "https://npm.pkg.github.com",
+        "dist-folder-path": "dist/libs/blocks"
+      }
     }
   }
 }
