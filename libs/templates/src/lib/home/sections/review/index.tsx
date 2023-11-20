@@ -1,7 +1,8 @@
-import { FluidContainer, Section, qtMerge } from '@deriv/quill-design';
+import { FluidContainer, Heading, Section, qtMerge } from '@deriv/quill-design';
 import { useEffect, useRef, useState } from 'react';
-import Script from 'next/script';
+
 import axios from 'axios';
+import { Rating } from '@deriv-com/components';
 
 const ReviewSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -36,7 +37,11 @@ const ReviewSection = () => {
       className={qtMerge('py-general-4xl', 'bg-background-primary-container')}
     >
       <FluidContainer className="flex flex-col items-center rounded-xl max-sm:w-[90%] sm:py-general-lg">
-        <div className={qtMerge('flex scale-150 max-sm:scale-100')}>
+        <Heading.H1>Trustpilot</Heading.H1>
+        <Rating rate="4.5" />
+        {trustPilot}
+
+        {/* <div className={qtMerge('flex scale-150 max-sm:scale-100')}>
           <Script
             key="trustpilot-widget"
             type="text/javascript"
@@ -63,7 +68,7 @@ const ReviewSection = () => {
               Trustpilot
             </a>
           </div>
-        </div>
+        </div> */}
       </FluidContainer>
     </Section>
   );
