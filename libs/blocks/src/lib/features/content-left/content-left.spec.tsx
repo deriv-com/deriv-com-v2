@@ -5,7 +5,7 @@ import ContentLeft from '.';
 import { Button, Heading } from '@deriv/quill-design';
 
 const ContentLeftContent = () => (
-  <Heading.H2>This is a heading content</Heading.H2>
+  <Heading.H2 id="content-left-content">This is a heading content</Heading.H2>
 );
 
 describe('ContentLeft', () => {
@@ -36,10 +36,10 @@ describe('ContentLeft', () => {
     expect(getByText(description)).toBeInTheDocument();
   });
 
-  it('renders without description', () => {
+  it('render without description', () => {
     const { getByText } = render(
       <ContentLeft title={title} content={ContentLeftContent}>
-        <Button>This is a button</Button>
+        <Button id="test-button">This is a button</Button>
       </ContentLeft>,
     );
 
@@ -47,6 +47,12 @@ describe('ContentLeft', () => {
     expect(getByText(title)).toBeInTheDocument();
 
     //renders with the correct description
-    expect(document.getElementById('content-left-description')).toBeNull();
+    expect(document.getElementById('content-description')).toBeNull();
+
+    //renders with the correct children
+    expect(document.getElementById('test-button')).toBeInTheDocument();
+
+    //render with correct content
+    expect(document.getElementById('content-left-content')).toBeInTheDocument();
   });
 });
