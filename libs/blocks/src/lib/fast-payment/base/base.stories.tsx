@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Base from '.';
 
 const meta = {
-  title: 'Blocks/FastPayment/Default',
+  title: 'Blocks/FastPayment',
   component: Base,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Base>;
 
 export default meta;

@@ -6,6 +6,10 @@ import ContentText from '.';
 const meta = {
   title: 'Blocks/ContentText',
   component: ContentText,
+  tags: ['autodocs'],
+  argTypes: {
+    children: { description: '`() => ReactNode`', control: 'none' },
+  },
 } satisfies Meta<typeof ContentText>;
 
 const Content = () => {
@@ -40,7 +44,7 @@ const Content = () => {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof ContentText>;
 
 export const Default: Story = {
   args: {

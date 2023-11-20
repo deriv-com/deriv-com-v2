@@ -4,10 +4,12 @@ import SearchBlock from '.';
 const meta = {
   title: 'Blocks/SearchBlock',
   component: SearchBlock,
+  tags: ['autodocs'],
 } satisfies Meta<typeof SearchBlock>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+
+type Story = StoryObj<typeof SearchBlock>;
 
 export const Default: Story = {
   args: {

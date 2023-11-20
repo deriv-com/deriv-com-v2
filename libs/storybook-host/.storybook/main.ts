@@ -7,6 +7,7 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     '@nx/react/plugins/storybook',
     '@storybook/addon-links',
+    '@storybook/addon-docs',
     {
       name: '@storybook/addon-styling',
       options: {

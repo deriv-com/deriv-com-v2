@@ -28,6 +28,9 @@ export const slugify = (input: string): string =>
     .replace(/[\s]+/g, '-')
     .trim();
 
+/**
+ * Accordion
+ */
 export function AccordionBlock({
   title,
   content,

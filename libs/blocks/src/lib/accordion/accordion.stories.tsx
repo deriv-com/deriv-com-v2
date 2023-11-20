@@ -6,27 +6,24 @@ import { StandaloneAndroidIcon } from '@deriv/quill-icons/Standalone';
 const meta = {
   title: 'Blocks/Accordion',
   component: AccordionBlock,
-} satisfies Meta<typeof AccordionBlock>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       options: ['Flush', 'Fill', 'Outline', 'Elevate'],
       control: { type: 'radio' },
     },
-    content: {
-      options: ['single', 'multiple'],
-    },
   },
+} satisfies Meta<typeof AccordionBlock>;
+
+export default meta;
+type Story = StoryObj<typeof AccordionBlock>;
+
+export const Flush: Story = {
   args: {
     className: '',
     title: 'Title goes here',
     variant: 'Flush',
     content: {
-      // eslint-disable-next-line no-constant-condition
       data: [
         {
           icon: <StandaloneAndroidIcon />,
@@ -69,5 +66,26 @@ export const Default: Story = {
         },
       ],
     },
+  },
+};
+
+export const Fill: Story = {
+  args: {
+    ...Flush.args,
+    variant: 'Fill',
+  },
+};
+
+export const Outline: Story = {
+  args: {
+    ...Flush.args,
+    variant: 'Outline',
+  },
+};
+
+export const Elevate: Story = {
+  args: {
+    ...Flush.args,
+    variant: 'Elevate',
   },
 };

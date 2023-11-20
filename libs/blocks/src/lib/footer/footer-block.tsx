@@ -49,7 +49,10 @@ export const FooterBlock = ({
         <div className="flex flex-col gap-gap-lg">
           {DescriptionContent && <DescriptionContent />}
           {warningText && (
-            <div className="rounded-lg bg-background-primary-base p-general-md">
+            <div
+              className="rounded-lg bg-background-primary-base p-general-md"
+              id="footer-warning-text"
+            >
               <Text size="sm" className="text-typography-subtle">
                 {warningText}
               </Text>

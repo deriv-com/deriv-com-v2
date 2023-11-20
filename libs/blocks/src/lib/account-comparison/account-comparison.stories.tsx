@@ -2,9 +2,13 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import AccountComparison from '.';
 
-const meta = {
+const meta: Meta = {
   title: 'Blocks/AccountComparison',
   component: AccountComparison,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
 } satisfies Meta<typeof AccountComparison>;
 
 export default meta;

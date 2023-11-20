@@ -7,7 +7,7 @@ import {
 import Footer from '.';
 
 const meta = {
-  title: 'Blocks/Footer',
+  title: 'Blocks/Footer/FooterBlock',
   component: Footer.FooterBlock,
 } satisfies Meta<typeof Footer.FooterBlock>;
 
@@ -35,6 +35,7 @@ const Template = {
         descriptionContent={args.descriptionContent}
         socialButtons={args.socialButtons}
         warningText={args.warningText}
+        className={args.className}
       >
         <img
           className="flex w-full flex-1"
@@ -53,5 +54,6 @@ export const Default = {
     descriptionContent: () => <p>Description content here</p>,
     warningText:
       'Risk warning description goes here. A risk warning description is a crucial component of various financial, investment, or business documents, including prospectuses, investment brochures, loan agreements, and other legal or financial disclosures.',
+    className: '',
   },
 };
