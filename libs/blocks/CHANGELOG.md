@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.3.0...blocks-0.4.0) (2023-11-20)
+
+
+### Bug Fixes
+
+* hover issue in desktop nav bar ([0051432](https://github.com/deriv-com/deriv-com-v2/commit/0051432f8a2781979652ba0acefe1554f2934953))
+
 ## [0.3.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.2.0...blocks-0.3.0) (2023-11-20)
 
 ## [0.2.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.1.0...blocks-0.2.0) (2023-11-19)
