@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import SearchBlock from '.';
 import { Text } from '@deriv/quill-design';
+import { CustomLink } from '@deriv-com/components';
 
 const meta = {
   title: 'Blocks/SearchBlock',
@@ -38,9 +39,13 @@ export const Default: Story = {
         </Text>
         {results.length > 0 && (
           <div className="flex flex-col gap-general-lg pb-2400">
-            {results.map(({ header, questions }) =>
+            {results.map(({ questions }) =>
               questions.map((question) => {
-                return question;
+                return (
+                  <CustomLink key={question} href="" className="justify-start">
+                    {question}
+                  </CustomLink>
+                );
               }),
             )}
           </div>
