@@ -1,6 +1,6 @@
 {
   "name": "@deriv-com/components",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "./index.js",
   "types": "./index.bundle.d.ts",
   "exports": {
