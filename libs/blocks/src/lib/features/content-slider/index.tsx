@@ -32,9 +32,17 @@ const ContentSlider = <T extends CardVariantType>({
     >
       <FluidContainer className="flex flex-col items-center gap-gap-3xl">
         <div className="flex flex-col items-center justify-center gap-gap-xl">
-          <Heading.H2 className="text-center">{title}</Heading.H2>
+          {title && (
+            <Heading.H2 className="text-center" id="content-slider-title">
+              {title}
+            </Heading.H2>
+          )}
           {description && (
-            <Text size="xl" className="text-center">
+            <Text
+              size="xl"
+              className="text-center"
+              id="content-slider-description"
+            >
               {description}
             </Text>
           )}
