@@ -68,6 +68,7 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
             href={href}
             hasHoverDecoration={isLastItem(lk)}
             hasIcon={isLastItem(lk)}
+            iconColor="subtle"
             disabled={!isLastItem(lk)}
             className="items-center"
           >
