@@ -1,30 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import SearchBlock from '.';
-
-const meta = {
-  title: 'Blocks/SearchBlock',
-  component: SearchBlock,
-} satisfies Meta<typeof SearchBlock>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  args: {
-    placeholder: 'Try "Trade"',
-    content: (
-      <div className="flex flex-col items-start gap-general-md">
-        FAQ Question
-      </div>
-    ),
-  },
-};
-import type { Meta, StoryObj } from '@storybook/react';
-import SearchBlock from '.';
 import { Text } from '@deriv/quill-design';
-import { FAQDataType } from 'libs/templates/src/lib/help-center/types';
-import { CustomLink } from '@deriv-com/components';
-import { getHelpCentreLink } from 'libs/templates/src/lib/help-center/sections/search/components';
 
 const meta = {
   title: 'Blocks/SearchBlock',
@@ -40,7 +16,7 @@ const handleSearchKeyChange = (value: string) => {
 
 const searchKey = 'email';
 const noSearchKey = 'asdd';
-const results: FAQDataType[] = [
+const results = [
   {
     header: 'Account',
     questions: [
@@ -64,15 +40,7 @@ export const Default: Story = {
           <div className="flex flex-col gap-general-lg pb-2400">
             {results.map(({ header, questions }) =>
               questions.map((question) => {
-                return (
-                  <CustomLink
-                    key={question}
-                    href={getHelpCentreLink(header, question)}
-                    className="justify-start"
-                  >
-                    {question}
-                  </CustomLink>
-                );
+                return question;
               }),
             )}
           </div>
