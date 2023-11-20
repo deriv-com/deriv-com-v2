@@ -26,7 +26,7 @@ const DesktopNavBlur = ({ isVisible }: NavBlurProps) => {
         'transition-all delay-0 duration-75 ease-in-out',
         {
           'block absolute h-screen backdrop-blur-lg': isVisible,
-          'backdrop-blur-0 h-[80px]': !isVisible,
+          hidden: !isVisible,
         },
       )}
       ref={ref}
