@@ -11,6 +11,10 @@ import {
 const meta = {
   title: 'Blocks/Features/Card',
   component: Card,
+  tags: ['autodocs'],
+  argTypes: {
+    cta: { description: '`() => ReactNode`', control: 'function' },
+  },
 } satisfies Meta<typeof Card>;
 
 export default meta;

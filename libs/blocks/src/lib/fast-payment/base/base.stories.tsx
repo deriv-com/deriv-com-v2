@@ -6,6 +6,23 @@ const meta = {
   title: 'Blocks/FastPayment',
   component: Base,
   tags: ['autodocs'],
+  argTypes: {
+    description: {
+      description: '`string`',
+    },
+    title: {
+      description: '`string`',
+    },
+    disclaimer: {
+      description: '`string`',
+    },
+    link: {
+      description: '`object`',
+    },
+    content: {
+      description: '`object`',
+    },
+  },
 } satisfies Meta<typeof Base>;
 
 export default meta;
