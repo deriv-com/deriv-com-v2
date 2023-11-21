@@ -37,7 +37,11 @@ export const useTrustpilotApi = (): TrustpilotResult => {
     const fetchData = async () => {
       try {
         // const appName = process.env.NEXT_PUBLIC_TRUSTPILOT_APP_NAME;
-        // const apiKey = process.env.NEXT_PUBLIC_TRUSTPILOT_API_KEY;
+        const ak = import.meta.env.VITE_TRUSTPILOT_API_KEY;
+
+        console.log({
+          ak,
+        });
 
         const appName = 'deriv.com';
         const apiKey = '1r8zJRzpGhWKWh6VuiAje4HWPVhEg3Hj';

@@ -3,6 +3,8 @@ import OptimizedImage from '../optimized-image';
 
 export type RatingProps = {
   rate: number | undefined;
+  size?: 'sm' | 'md';
+  className?: string;
 };
 
 export interface TrustPilotDataProps {
@@ -30,9 +32,10 @@ export interface TrustPilotDataProps {
 type StarBoxProps = {
   percent: number;
   colorKey?: number;
+  size?: 'sm' | 'md';
 };
 
-const StarBox = ({ percent, colorKey = 0 }: StarBoxProps) => {
+const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
   const rateWidths: { [key: number]: string } = {
     10: 'w-1/6',
     20: 'w-1/5',
@@ -48,8 +51,24 @@ const StarBox = ({ percent, colorKey = 0 }: StarBoxProps) => {
 
   const widthClassName = rateWidths[percent];
 
+  const BoxSizeClassName = {
+    sm: 'w-1200 h-1200',
+    md: 'lg:w-[96px] lg:h-[96px] w-[56px] h-[56px]',
+  };
+
+  const StarClassName = {
+    sm: 'p-200',
+    md: 'lg:px-700 lg:py-800 px-500 py-400',
+  };
+
   return (
-    <div className="relative flex h-1200 w-1200 bg-opacity-black-100">
+    <div
+      className={qtMerge(
+        'relative flex h-fit',
+        'bg-[#D9D9D9]',
+        BoxSizeClassName[size],
+      )}
+    >
       <div
         className={qtMerge(
           'absolute left-50 top-50 h-full',
@@ -66,15 +85,20 @@ const StarBox = ({ percent, colorKey = 0 }: StarBoxProps) => {
         <OptimizedImage
           imageName="home/trustpilot/star.png"
           alt="star"
-          width={16.8}
-          height={16.8}
+          width={100}
+          height={100}
+          className={StarClassName[size]}
         />
       </div>
     </div>
   );
 };
 
-export const Rating = ({ rate = 0 }: RatingProps) => {
+export const Rating = ({
+  rate = 0,
+  size = 'md',
+  className = '',
+}: RatingProps) => {
   const starContainers = Array.from({ length: 5 }).map((_, index) => index * 1);
   const rateFloat = rate.toString();
   const rateParts = rateFloat.split('.');
@@ -86,14 +110,20 @@ export const Rating = ({ rate = 0 }: RatingProps) => {
 
   const colorKey = Math.ceil(rate);
 
+  const gapClassName = {
+    sm: 'gap-gap-md',
+    md: 'gap-200',
+  };
+
   return (
-    <div className="flex w-fit gap-300 bg-background-secondary-container">
+    <div className={qtMerge('flex h-fit w-fit', gapClassName[size], className)}>
       {starContainers.map((container, ci) => {
         return (
           <StarBox
             key={`star-${container}`}
             percent={getStarPercentage(ci)}
             colorKey={colorKey}
+            size={size}
           />
         );
       })}
