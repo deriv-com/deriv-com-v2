@@ -1,5 +1,10 @@
 import { Features } from '@deriv-com/blocks';
 import { CardContent } from '@deriv-com/components';
+import dynamic from 'next/dynamic';
+
+const LocationMap = dynamic(() => import('./map'), {
+  ssr: false,
+});
 
 const ourLocationCards: CardContent[] = [
   {
@@ -34,7 +39,14 @@ const ourLocationCards: CardContent[] = [
 
 export const WhoWeAreLocations = () => {
   return (
-    <Features.Card title="Our locations" cards={ourLocationCards} cols="four" />
+    <>
+      <Features.Card
+        title="Our locations"
+        cards={ourLocationCards}
+        cols="four"
+      />
+      <LocationMap />
+    </>
   );
 };
 
