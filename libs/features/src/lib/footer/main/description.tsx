@@ -13,7 +13,7 @@ const Link = ({ href, children }: { href: string; children: string }) => {
   );
 };
 
-export const MainDescriptionContent = () => {
+export const DescriptionContent = () => {
   return (
     <Text size="sm">
       Please read our <Link href="/">Terms and conditions</Link>,{' '}
