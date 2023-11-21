@@ -39,7 +39,7 @@ const sizeVariantContainerGap = {
 const sizeVariantTextGap = {
   sm: 'gap-gap-md',
   md: 'gap-gap-lg',
-  lg: 'gap-gap-xl',
+  lg: 'gap-gap-lg',
 };
 
 const textSizeVariant: { [key: string]: 'sm' | 'md' | 'lg' } = {
@@ -92,6 +92,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
               'flex flex-col',
               textColorVariantClass[color],
               sizeVariantTextGap[size],
+              // 'gap-gap-lg',
               !content && description && 'flex-1',
               align === 'center' && 'text-center',
             )}
