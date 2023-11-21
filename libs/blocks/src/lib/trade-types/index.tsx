@@ -35,7 +35,7 @@ export const TradeTypeBlock = <T extends CardVariantType>({
           {title}
         </Heading.H2>
         {description && (
-          <Text size="lg" className="pb-gap-3xl text-typography-default">
+          <Text size="lg" className="pb-gap-3xl">
             {description}
           </Text>
         )}
