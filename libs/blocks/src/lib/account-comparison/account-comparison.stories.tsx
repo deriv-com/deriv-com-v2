@@ -5,10 +5,12 @@ import AccountComparison from '.';
 const meta: Meta = {
   title: 'Blocks/AccountComparison',
   component: AccountComparison,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
+  argTypes: {
+    content: {
+      control: { type: 'function' },
+    },
+  },
 } satisfies Meta<typeof AccountComparison>;
 
 export default meta;

@@ -8,7 +8,7 @@ const meta = {
   component: ContentText,
   tags: ['autodocs'],
   argTypes: {
-    children: { description: '`() => ReactNode`', control: 'none' },
+    // children: { description: '`() => ReactNode`', control: 'function' },
   },
 } satisfies Meta<typeof ContentText>;
 
