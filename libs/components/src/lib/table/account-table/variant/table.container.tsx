@@ -30,7 +30,7 @@ export const Container = ({
             {tableData.description}
           </Text>
         </div>
-        {tableData.cta}
+        <div>{tableData.cta}</div>
       </div>
       <div
         className={clsx(

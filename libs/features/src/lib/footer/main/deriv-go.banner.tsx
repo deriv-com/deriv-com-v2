@@ -4,7 +4,7 @@ import { DerivProductDerivGoBrandLightLogoHorizontalIcon } from '@deriv/quill-ic
 
 export const DerivGoBanner = () => {
   return (
-    <div className="flex flex-col gap-gap-lg rounded-xl border-xs border-opacity-black-100 p-general-md">
+    <div className="flex flex-col gap-gap-lg rounded-lg border-xs border-opacity-black-100 p-general-md">
       <div className="flex flex-col gap-gap-md">
         <div className="flex items-center gap-gap-md">
           <DerivProductDerivGoBrandLightLogoHorizontalIcon
