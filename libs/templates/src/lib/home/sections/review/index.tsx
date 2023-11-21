@@ -1,36 +1,18 @@
 import { FluidContainer, Heading, Section, qtMerge } from '@deriv/quill-design';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
-import axios from 'axios';
 import { Rating } from '@deriv-com/components';
+import { useTrustpilotApi } from '@deriv-com/hooks';
 
 const ReviewSection = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const [trustPilot, setTrustPilot] = useState(null);
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any)?.Trustpilot?.loadFromElement(ref.current, true);
   }, []);
 
-  const appName = 'deriv.com';
-  const apiKey = 'akv2qmqDeOA8utqGyVhmLhGPSsN4ADaL';
-
-  useEffect(() => {
-    axios({
-      method: 'GET',
-      url: `https://api.trustpilot.com/v1/business-units/find?name=${appName}&apikey=${apiKey}`,
-    })
-      .then((res) => {
-        setTrustPilot(res.data);
-        console.log({
-          data: res.data,
-        });
-      })
-      .catch((e) => {
-        throw new Error(e);
-      });
-  }, []);
+  const { data } = useTrustpilotApi();
 
   return (
     <Section
@@ -38,8 +20,7 @@ const ReviewSection = () => {
     >
       <FluidContainer className="flex flex-col items-center rounded-xl max-sm:w-[90%] sm:py-general-lg">
         <Heading.H1>Trustpilot</Heading.H1>
-        <Rating rate="4.5" />
-        {trustPilot}
+        {data && <Rating rate={data.score.stars} />}
 
         {/* <div className={qtMerge('flex scale-150 max-sm:scale-100')}>
           <Script
