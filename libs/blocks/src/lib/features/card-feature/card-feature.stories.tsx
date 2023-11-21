@@ -13,14 +13,15 @@ const meta = {
   component: Card,
   tags: ['autodocs'],
   argTypes: {
-    cta: { description: '`() => ReactNode`', control: 'function' },
+    cta: { control: 'function' },
+    cols: { description: '`"two"`, `"three"`, `"four"`' },
   },
 } satisfies Meta<typeof Card>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const TwoColumn: Story = {
   args: {
     description:
       'Description goes here description goes here description goes here description goes here',
@@ -30,7 +31,7 @@ export const Default: Story = {
       </div>
     ),
     title: '20+ years of proven excellence',
-    cols: 'four',
+    cols: 'two',
     cards: [
       {
         header: 'Protected and secure',
@@ -69,5 +70,33 @@ export const Default: Story = {
         size: 'sm',
       },
     ],
+  },
+};
+
+export const ThreeColumn: Story = {
+  args: {
+    ...TwoColumn.args,
+    cols: 'three',
+  },
+};
+
+export const FourColumn: Story = {
+  args: {
+    ...TwoColumn.args,
+    cols: 'four',
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...TwoColumn.args,
+    description: '',
+  },
+};
+
+export const WithoutCTA: Story = {
+  args: {
+    ...TwoColumn.args,
+    cta: '',
   },
 };

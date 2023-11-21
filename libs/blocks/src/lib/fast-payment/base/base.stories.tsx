@@ -29,15 +29,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+const Data: Story = {
   args: {
-    description: 'Make instant deposits from 10,000 HKD. Withdraw in minutes.',
     title: 'Hassle-free deposits and withdrawals',
-    link: {
-      content: 'Learn More',
-      href: '#',
-    },
-    disclaimer: '*Disclaimer text goes here.',
     content: {
       cols: 'three',
       cards: [
@@ -63,6 +57,48 @@ export const Default: Story = {
           description: 'test',
         },
       ],
+    },
+  },
+};
+
+export const Default: Story = {
+  args: {
+    ...Data.args,
+    description: 'Make instant deposits from 10,000 HKD. Withdraw in minutes.',
+    disclaimer: '*Disclaimer text goes here.',
+    link: {
+      content: 'Learn More',
+      href: '#',
+    },
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Data.args,
+    disclaimer: '*Disclaimer text goes here.',
+    link: {
+      content: 'Learn More',
+      href: '#',
+    },
+  },
+};
+
+export const WithoutLink: Story = {
+  args: {
+    ...Data.args,
+    disclaimer: '*Disclaimer text goes here.',
+    description: 'Make instant deposits from 10,000 HKD. Withdraw in minutes.',
+  },
+};
+
+export const WithoutDisclaimer: Story = {
+  args: {
+    ...Data.args,
+    description: 'Make instant deposits from 10,000 HKD. Withdraw in minutes.',
+    link: {
+      content: 'Learn More',
+      href: '#',
     },
   },
 };

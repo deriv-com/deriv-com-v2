@@ -4,9 +4,16 @@ import { Text } from '@deriv/quill-design';
 import ContentLeft from '.';
 
 const meta = {
-  title: 'Blocks/Features/ContentLeft',
+  title: 'Blocks/Features/Content',
   component: ContentLeft,
   tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      description: '`content-left`, `content-right`',
+      options: ['content-left', 'content-right'],
+      control: { type: 'radio' },
+    },
+  },
 } satisfies Meta<typeof ContentLeft>;
 
 export default meta;
@@ -31,5 +38,12 @@ export const Default: Story = {
         alt="Placeholder"
       />
     ),
+  },
+};
+
+export const ContentRight: Story = {
+  args: {
+    ...Default.args,
+    variant: 'content-right',
   },
 };

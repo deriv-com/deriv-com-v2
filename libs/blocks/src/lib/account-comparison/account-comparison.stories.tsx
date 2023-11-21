@@ -31,3 +31,24 @@ export const Default: Story = {
     ),
   },
 };
+
+export const WithoutDescription: Story = {
+  args: {
+    title: 'Title here',
+    content: () => (
+      <img
+        className="flex w-full flex-1"
+        src="https://placehold.co/712x200"
+        alt="Placeholder"
+      />
+    ),
+  },
+};
+
+export const WithoutContent: Story = {
+  args: {
+    title: 'Title here',
+    description:
+      'Description goes here description goes here description goes here description goes here',
+  },
+};
