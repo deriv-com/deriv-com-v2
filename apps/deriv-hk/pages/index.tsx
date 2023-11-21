@@ -10,7 +10,7 @@ export function Index() {
       </Head>
       <Navigation.Main />
       <HomeTemplate />
-      <Footer.Main />
+      <Footer.ROW />
     </>
   );
 }

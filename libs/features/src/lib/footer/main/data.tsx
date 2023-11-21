@@ -1,5 +1,5 @@
 import { FooterItems } from '@deriv-com/blocks';
-import { DerivGoBanner } from './deriv-go.banner';
+import { DerivGoBannerAndAwards } from './banner-and-awards';
 import {
   StandaloneFacebookIcon,
   StandaloneInstagramIcon,
@@ -232,7 +232,7 @@ export const footerDataROW: FooterItems[] = [
       {
         id: 0,
         type: 'node',
-        node: <DerivGoBanner />,
+        node: <DerivGoBannerAndAwards />,
       },
     ],
   },
@@ -244,26 +244,26 @@ export const warnTextROW =
 export const socialButtonsROW = [
   {
     icon: <StandaloneFacebookIcon iconSize="md" />,
-    href: '/',
+    href: '/fb',
   },
   {
     icon: <StandaloneInstagramIcon iconSize="md" />,
-    href: '/',
+    href: '/insta',
   },
   {
     icon: <StandaloneXTwitterIcon iconSize="md" />,
-    href: '/',
+    href: '/twitter',
   },
   {
     icon: <StandaloneYoutubeIcon iconSize="md" />,
-    href: '/',
+    href: '/youtube',
   },
   {
     icon: <StandaloneLinkedinIcon iconSize="md" />,
-    href: '/',
+    href: '/linkedin',
   },
   {
     icon: <StandaloneTelegramIcon iconSize="md" />,
-    href: '/',
+    href: '/telegram',
   },
 ];
