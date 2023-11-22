@@ -22,29 +22,30 @@ export interface TrustPilotDataProps {
   };
 }
 
-interface TrustpilotResult {
-  data: TrustPilotDataProps | null;
-  loading: boolean;
-  error: Error | null | unknown;
+export interface TPilotDataProps {
+  numberOfReviews: string;
+  stars: number;
+  trustScore: number;
 }
 
-export const useTrustpilotApi = (): TrustpilotResult => {
-  const [data, setData] = useState<TrustPilotDataProps | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<TrustpilotResult['error']>(null);
+interface TrustpilotResult {
+  data: TPilotDataProps | null | undefined;
+  isLoading: boolean;
+  hasError: Error | null | unknown;
+}
+
+export const useTrustpilotApi = (
+  staticData?: TPilotDataProps | null,
+): TrustpilotResult => {
+  const [data, setData] = useState<TPilotDataProps | null>(null);
+  const [isLoading, setLoading] = useState(true);
+  const [hasError, setError] = useState<TrustpilotResult['hasError']>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const appName = process.env.NEXT_PUBLIC_TRUSTPILOT_APP_NAME;
-        const ak = import.meta.env.VITE_TRUSTPILOT_API_KEY;
-
-        console.log({
-          ak,
-        });
-
-        const appName = 'deriv.com';
-        const apiKey = '1r8zJRzpGhWKWh6VuiAje4HWPVhEg3Hj';
+        const appName = process.env.NEXT_PUBLIC__TRUSTPILOT_APP_NAME || '';
+        const apiKey = process.env.NEXT_PUBLIC_TRUSTPILOT_API_KEY || '';
 
         if (!appName || !apiKey) {
           throw new Error('Trustpilot app name or API key is missing');
@@ -59,8 +60,15 @@ export const useTrustpilotApi = (): TrustpilotResult => {
           );
         }
 
-        const result = await response.json();
-        setData(result);
+        const result: TrustPilotDataProps = await response.json();
+
+        setData({
+          stars: result.score?.stars || 0,
+          trustScore: result.score?.trustScore || 0,
+          numberOfReviews:
+            result.numberOfReviews?.usedForTrustScoreCalculation.toLocaleString() ||
+            '',
+        });
       } catch (error) {
         setError(error);
       } finally {
@@ -68,10 +76,14 @@ export const useTrustpilotApi = (): TrustpilotResult => {
       }
     };
 
-    fetchData();
+    if (!staticData) {
+      fetchData();
+    } else {
+      setData(staticData);
+    }
   }, []);
 
-  return { data, loading, error };
+  return { data, isLoading, hasError };
 };
 
 export default useTrustpilotApi;

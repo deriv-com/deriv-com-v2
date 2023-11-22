@@ -29,6 +29,12 @@ export interface TrustPilotDataProps {
   };
 }
 
+export interface TPilotDataProps {
+  numberOfReviews: string;
+  stars: number;
+  trustScore: number;
+}
+
 type StarBoxProps = {
   percent: number;
   colorKey?: number;
@@ -53,7 +59,7 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
 
   const BoxSizeClassName = {
     sm: 'w-1200 h-1200',
-    md: 'lg:w-[96px] lg:h-[96px] w-[56px] h-[56px]',
+    md: 'lg:w-[96px] lg:h-[96px] w-[48px] h-[48px]',
   };
 
   const StarClassName = {
