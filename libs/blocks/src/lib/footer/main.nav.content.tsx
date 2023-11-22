@@ -20,10 +20,7 @@ export const MainNavContent = ({
   cols = 'four',
 }: MainNavContentProps) => {
   return (
-    <div
-      className={clsx('grid gap-gap-lg', gridColsVariant[cols])}
-      id="main-nav-container"
-    >
+    <div className={clsx('grid gap-gap-lg', gridColsVariant[cols])}>
       {items.map((item) => (
         <div className="flex flex-col gap-gap-xl" key={item.id}>
           {item.layers.map((layer) =>

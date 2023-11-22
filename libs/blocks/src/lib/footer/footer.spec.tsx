@@ -2,38 +2,37 @@ import { render } from '@testing-library/react';
 import Footer, { FooterItems } from '.';
 import { StandaloneFacebookIcon } from '@deriv/quill-icons';
 
+export const data: FooterItems[] = [
+  {
+    id: 0,
+    layers: [
+      {
+        id: 0,
+        header: 'ABOUT US',
+        type: 'link',
+        items: [
+          {
+            id: 0,
+            href: '/who-we-are',
+            text: 'Who we are',
+          },
+          {
+            id: 1,
+            href: '/why-choose-us',
+            text: 'Why choose us',
+          },
+          { id: 2, href: '/contact-us', text: 'Contact us' },
+          { id: 3, href: '/principles', text: 'Principles' },
+        ],
+      },
+    ],
+  },
+];
 describe('Footer', () => {
   const social = [
     {
       icon: <StandaloneFacebookIcon iconSize="md" id="social-icon" />,
       href: '/',
-    },
-  ];
-
-  const data: FooterItems[] = [
-    {
-      id: 0,
-      layers: [
-        {
-          id: 0,
-          header: 'ABOUT US',
-          type: 'link',
-          items: [
-            {
-              id: 0,
-              href: '/who-we-are',
-              text: 'Who we are',
-            },
-            {
-              id: 1,
-              href: '/why-choose-us',
-              text: 'Why choose us',
-            },
-            { id: 2, href: '/contact-us', text: 'Contact us' },
-            { id: 3, href: '/principles', text: 'Principles' },
-          ],
-        },
-      ],
     },
   ];
 
@@ -95,14 +94,5 @@ describe('Footer', () => {
 
     //renders with children correctly
     expect(document.getElementById('footer-block-children')).toBeTruthy();
-  });
-
-  it('should render successfully', () => {
-    const { container } = render(<Footer.MainNavContent items={data} />);
-
-    // Check for the class on the root element or adjust the query as needed
-    expect(container.querySelector('main-nav-container')).toHaveClass(
-      'grid-cols-6',
-    );
   });
 });

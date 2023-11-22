@@ -115,6 +115,7 @@ export const WithoutTitle: Story = {
 export const WithoutCTA: Story = {
   args: {
     ...Default.args,
+    // eslint-disable-next-line react/jsx-no-useless-fragment
     cta: () => <></>,
   },
 };
