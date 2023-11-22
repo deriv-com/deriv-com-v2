@@ -65,7 +65,7 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
     <div
       className={qtMerge(
         'relative flex h-fit',
-        'bg-[#D9D9D9]',
+        'bg-[#DCDCE5]',
         BoxSizeClassName[size],
       )}
     >

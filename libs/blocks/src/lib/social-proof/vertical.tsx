@@ -35,13 +35,6 @@ const SocialProofVertical = ({
           {data && (
             <>
               <Rating rate={data?.score?.stars} />
-              <Rating rate={3.5} />
-              <Rating rate={2.9} />
-              <Rating rate={2.1} />
-              <Rating rate={1.8} />
-              <Rating rate={1.2} />
-              <Rating rate={0.8} />
-              <Rating rate={0.2} />
               <div className="flex gap-gap-lg">
                 <Text size="xl" className={colorClassName}>
                   TrustScore {data?.score?.trustScore}
