@@ -67,7 +67,7 @@ export function AccordionBlock({
             <Chip.Selectable
               key={tab.id}
               selected={selectedChip === tab.id}
-              onChipSelect={() => selectedChip !== tab.id && handleChip(tab.id)}
+              onChipSelect={() => handleChip(tab.id)}
             >
               {tab.title}
             </Chip.Selectable>
