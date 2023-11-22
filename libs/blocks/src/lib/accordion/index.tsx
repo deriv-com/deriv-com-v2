@@ -4,12 +4,12 @@ import {
   AccordionProps,
   AccordionVariants,
 } from '@deriv-com/components';
-import { FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
+import { Chip, FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
 import { useState } from 'react';
 
 export interface AccordionBlockProps {
   title?: string;
-  tab?: string;
+  tab?: { id: number; title: string }[];
   className?: string;
   variant?: keyof AccordionVariants;
   content: {
@@ -30,12 +30,14 @@ export const slugify = (input: string): string =>
 
 export function AccordionBlock({
   title,
+  tab,
   content,
   className,
   variant = 'Flush',
   multiCollapse = false,
 }: AccordionBlockProps) {
   const [expanded, setExpanded] = useState('');
+  const [selectedChip, setSelectedChip] = useState(0);
 
   const handleExpand = (isExpanded: boolean, id: string) => {
     if (!multiCollapse) {
@@ -43,6 +45,10 @@ export function AccordionBlock({
         setExpanded(id);
       }
     }
+  };
+
+  const handleChip = (id: number) => {
+    selectedChip !== id && setSelectedChip(id);
   };
 
   const DynamicAccordion = Accordion[variant];
@@ -55,6 +61,18 @@ export function AccordionBlock({
       )}
     >
       {title && <Heading.H2>{title}</Heading.H2>}
+      <div className="flex w-full gap-gap-md">
+        {tab &&
+          tab.map((tab) => (
+            <Chip.Selectable
+              key={tab.id}
+              selected={selectedChip === tab.id}
+              onChipSelect={() => selectedChip !== tab.id && handleChip(tab.id)}
+            >
+              {tab.title}
+            </Chip.Selectable>
+          ))}
+      </div>
 
       <div className="flex w-full flex-col gap-general-lg">
         <div className={content?.className}>
