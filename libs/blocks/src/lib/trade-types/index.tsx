@@ -30,12 +30,12 @@ export const TradeTypeBlock = <T extends CardVariantType>({
     <Section className="bg-background-primary-container py-general-4xl">
       <FluidContainer className="flex flex-col items-center justify-center">
         <Heading.H2
-          className={qtJoin(description ? 'pb-gap-xl' : 'pb-gap-3xl')}
+          className={qtJoin(description ? 'pb-general-lg' : 'pb-general-2xl')}
         >
           {title}
         </Heading.H2>
         {description && (
-          <Text size="lg" className="pb-gap-3xl">
+          <Text size="lg" className="pb-general-2xl">
             {description}
           </Text>
         )}
