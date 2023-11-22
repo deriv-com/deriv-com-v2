@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import {
   StandaloneAppleIcon,
   StandaloneFacebookIcon,
@@ -9,9 +9,11 @@ import Footer from '.';
 const meta = {
   title: 'Blocks/Footer/FooterBlock',
   component: Footer.FooterBlock,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Footer.FooterBlock>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
 const social = [
   {
@@ -28,27 +30,7 @@ const social = [
   },
 ];
 
-const Template = {
-  render: ({ ...args }) => {
-    return (
-      <Footer.FooterBlock
-        descriptionContent={args.descriptionContent}
-        socialButtons={args.socialButtons}
-        warningText={args.warningText}
-        className={args.className}
-      >
-        <img
-          className="flex w-full flex-1"
-          src="https://placehold.co/712x100"
-          alt="Placeholder"
-        />
-      </Footer.FooterBlock>
-    );
-  },
-};
-
-export const Default = {
-  ...Template,
+export const Default: Story = {
   args: {
     socialButtons: social,
     descriptionContent: () => <p>Description content here</p>,

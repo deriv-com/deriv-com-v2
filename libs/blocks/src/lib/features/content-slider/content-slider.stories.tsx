@@ -14,7 +14,8 @@ const meta = {
   component: ContentSlider,
   tags: ['autodocs'],
   argTypes: {
-    cta: { description: '`() => ReactNode`', table: { disable: true } },
+    className: { table: { disable: true } },
+    cta: { description: '`() => ReactNode`' },
   },
   parameters: {
     layout: 'centered',
@@ -94,5 +95,26 @@ export const Default: Story = {
         },
       ],
     },
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: '',
+  },
+};
+
+export const WithoutTitle: Story = {
+  args: {
+    ...Default.args,
+    title: '',
+  },
+};
+
+export const WithoutCTA: Story = {
+  args: {
+    ...Default.args,
+    cta: () => <></>,
   },
 };

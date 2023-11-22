@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react';
-
-import Footer from '.';
+import Footer, { FooterItems } from '.';
 import { StandaloneFacebookIcon } from '@deriv/quill-icons';
 
 describe('Footer', () => {
@@ -8,6 +7,33 @@ describe('Footer', () => {
     {
       icon: <StandaloneFacebookIcon iconSize="md" id="social-icon" />,
       href: '/',
+    },
+  ];
+
+  const data: FooterItems[] = [
+    {
+      id: 0,
+      layers: [
+        {
+          id: 0,
+          header: 'ABOUT US',
+          type: 'link',
+          items: [
+            {
+              id: 0,
+              href: '/who-we-are',
+              text: 'Who we are',
+            },
+            {
+              id: 1,
+              href: '/why-choose-us',
+              text: 'Why choose us',
+            },
+            { id: 2, href: '/contact-us', text: 'Contact us' },
+            { id: 3, href: '/principles', text: 'Principles' },
+          ],
+        },
+      ],
     },
   ];
 
@@ -72,24 +98,11 @@ describe('Footer', () => {
   });
 
   it('should render successfully', () => {
-    render(
-      <Footer.MainNavContent
-        descriptionContent={() => (
-          <p id="description-content">Description content here</p>
-        )}
-      />,
+    const { container } = render(<Footer.MainNavContent items={data} />);
+
+    // Check for the class on the root element or adjust the query as needed
+    expect(container.querySelector('main-nav-container')).toHaveClass(
+      'grid-cols-6',
     );
-
-    //renders social buttons correctly
-    expect(document.getElementById('social-icon')).toBeNull();
-
-    //renders description content correctly
-    expect(document.getElementById('description-content')).toBeTruthy();
-
-    //renders with warning text correctly
-    expect(document.getElementById('footer-warning-text')).toBeNull();
-
-    //renders with children correctly
-    expect(document.getElementById('footer-block-children')).toBeTruthy();
   });
 });
