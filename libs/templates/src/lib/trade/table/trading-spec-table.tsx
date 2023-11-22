@@ -98,16 +98,18 @@ const TradingSpecTable = () => {
           <LabelPairedEllipsisVerticalBoldIcon
             fill="black"
             iconSize="md"
-            className="block max-lg:hidden md:hidden lg:hidden"
+            className="min-sm:block max-lg:block md:hidden lg:hidden"
             onClick={() => {
               setShowBottomSheet(true);
             }}
           />
 
-          <Chips
-            onChangeChips={handleChipsData}
-            onChangeSelectedInfo={handleChipsInfo}
-          />
+          <div className="min-sm:hidden w-max max-lg:hidden md:block lg:block">
+            <Chips
+              onChangeChips={handleChipsData}
+              onChangeSelectedInfo={handleChipsInfo}
+            />
+          </div>
         </div>
       </div>
       <table

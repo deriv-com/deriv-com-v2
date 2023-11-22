@@ -15,7 +15,6 @@ const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsProps) => {
   return (
     <>
       <Chip.Selectable
-        className="hidden max-lg:block md:block lg:block"
         onChipSelect={() => {
           onChangeSelectedInfo('mainInfo');
           setSelectedInfo('mainInfo');
@@ -26,7 +25,6 @@ const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsProps) => {
         <div className="w-max">Main Info</div>
       </Chip.Selectable>
       <Chip.Selectable
-        className="hidden max-lg:block md:block lg:block "
         onChipSelect={() => {
           onChangeChips(tradingCondition.data);
           onChangeSelectedInfo('tradingCondition');
@@ -37,7 +35,6 @@ const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsProps) => {
         <div className="w-max">Trading conditions</div>
       </Chip.Selectable>
       <Chip.Selectable
-        className="hidden max-lg:block md:block lg:block "
         onChipSelect={() => {
           onChangeChips(additionalInfo.data);
           onChangeSelectedInfo('additionalInfo');
