@@ -41,19 +41,43 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - uses: marceloprado/has-changed-path@v1.0.1
+        id: changed-hooks
+        with:
+          paths: libs/hooks
+
+      - uses: marceloprado/has-changed-path@v1.0.1
+        id: changed-providers
+        with:
+          paths: libs/providers
+
+      - uses: marceloprado/has-changed-path@v1.0.1
+        id: changed-components
+        with:
+          paths: libs/components
+
+      - uses: marceloprado/has-changed-path@v1.0.1
+        id: changed-blocks
+        with:
+          paths: libs/blocks
+
       - name: Bump version Hooks
+        if: steps.changed-hooks.outputs.changed == 'true'
         shell: bash
         run: npx nx run hooks:version --skip-nx-cache
 
       - name: Bump version Blocks
+        if: steps.changed-blocks.outputs.changed == 'true'
         shell: bash
         run: npx nx run blocks:version --skip-nx-cache
 
       - name: Bump version Components
+        if: steps.changed-components.outputs.changed == 'true'
         shell: bash
         run: npx nx run components:version --skip-nx-cache
 
       - name: Bump version Providers
+        if: steps.changed-providers.outputs.changed == 'true'
         shell: bash
         run: npx nx run providers:version --skip-nx-cache
 
@@ -62,18 +86,22 @@ jobs:
         run: echo '//npm.pkg.github.com/:_authToken=${{ secrets.PUBLISH_GITHUB_TOKEN }}' > .npmrc
 
       - name: Publish Hooks
+        if: steps.changed-hooks.outputs.changed == 'true'
         shell: bash
         run: npx nx run hooks:deploy --skip-nx-cache
 
       - name: Publish Blocks
+        if: steps.changed-blocks.outputs.changed == 'true'
         shell: bash
         run: npx nx run blocks:deploy --skip-nx-cache
 
       - name: Publish Components
+        if: steps.changed-components.outputs.changed == 'true'
         shell: bash
         run: npx nx run components:deploy --skip-nx-cache
 
       - name: Publish Providers
+        if: steps.changed-providers.outputs.changed == 'true'
         shell: bash
         run: npx nx run providers:deploy --skip-nx-cache
 
