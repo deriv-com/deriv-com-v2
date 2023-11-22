@@ -12,6 +12,13 @@ import {
 const meta = {
   title: 'Blocks/Features/ContentSlider',
   component: ContentSlider,
+  tags: ['autodocs'],
+  argTypes: {
+    cta: { description: '`() => ReactNode`', table: { disable: true } },
+  },
+  parameters: {
+    layout: 'centered',
+  },
 } satisfies Meta<typeof ContentSlider>;
 
 export default meta;

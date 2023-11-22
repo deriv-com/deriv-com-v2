@@ -1,11 +1,11 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Text } from '@deriv/quill-design';
-import ContentLeft from '.';
+import Content from '.';
 
 const meta = {
   title: 'Blocks/Features/Content',
-  component: ContentLeft,
+  component: Content,
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -14,12 +14,12 @@ const meta = {
       control: { type: 'radio' },
     },
   },
-} satisfies Meta<typeof ContentLeft>;
+} satisfies Meta<typeof Content>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const ContentLeft: Story = {
   args: {
     className:
       'my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200',
@@ -43,7 +43,15 @@ export const Default: Story = {
 
 export const ContentRight: Story = {
   args: {
-    ...Default.args,
+    ...ContentLeft.args,
+    variant: 'content-right',
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...ContentLeft.args,
+    description: '',
     variant: 'content-right',
   },
 };
