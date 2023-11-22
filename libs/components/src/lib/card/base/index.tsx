@@ -92,7 +92,6 @@ export const BaseCard: React.FC<BaseCardProps> = ({
               'flex flex-col',
               textColorVariantClass[color],
               sizeVariantTextGap[size],
-              // 'gap-gap-lg',
               !content && description && 'flex-1',
               align === 'center' && 'text-center',
             )}
