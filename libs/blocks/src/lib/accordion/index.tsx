@@ -4,8 +4,15 @@ import {
   AccordionProps,
   AccordionVariants,
 } from '@deriv-com/components';
-import { Chip, FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
+import {
+  Chip,
+  FluidContainer,
+  Heading,
+  qtJoin,
+  qtMerge,
+} from '@deriv/quill-design';
 import { useState } from 'react';
+import styles from './styles.module.scss';
 
 export interface AccordionBlockProps {
   title?: string;
@@ -14,7 +21,7 @@ export interface AccordionBlockProps {
   variant?: keyof AccordionVariants;
   content: {
     className?: string;
-    data: AccordionProps[];
+    data: AccordionProps[][];
   };
   multiCollapse?: boolean;
 }
@@ -48,7 +55,10 @@ export function AccordionBlock({
   };
 
   const handleChip = (id: number) => {
-    selectedChip !== id && setSelectedChip(id);
+    if (selectedChip !== id) {
+      setSelectedChip(id);
+      setExpanded('');
+    }
   };
 
   const DynamicAccordion = Accordion[variant];
@@ -61,13 +71,19 @@ export function AccordionBlock({
       )}
     >
       {title && <Heading.H2>{title}</Heading.H2>}
-      <div className="flex w-full gap-gap-md">
+      <div
+        className={qtJoin(
+          'flex w-full flex-nowrap gap-gap-md overflow-x-scroll',
+          styles['scrollbar_hide'],
+        )}
+      >
         {tab &&
           tab.map((tab) => (
             <Chip.Selectable
               key={tab.id}
               selected={selectedChip === tab.id}
               onChipSelect={() => handleChip(tab.id)}
+              className="whitespace-nowrap"
             >
               {tab.title}
             </Chip.Selectable>
@@ -76,20 +92,22 @@ export function AccordionBlock({
 
       <div className="flex w-full flex-col gap-general-lg">
         <div className={content?.className}>
-          {content.data.map((accData) => {
-            const { title: accTitle } = accData;
-            const id = slugify(accTitle as string);
+          {content &&
+            content.data[selectedChip].map((accData) => {
+              const { title: accTitle, ...rest } = accData;
+              const id = slugify(accTitle as string);
 
-            return (
-              <DynamicAccordion
-                {...accData}
-                id={id}
-                key={accTitle}
-                expanded={multiCollapse ? false : expanded === accTitle}
-                onExpand={(isExpanded, id) => handleExpand(isExpanded, id)}
-              />
-            );
-          })}
+              return (
+                <DynamicAccordion
+                  {...rest}
+                  id={id}
+                  title={accTitle}
+                  key={accTitle}
+                  expanded={multiCollapse ? false : expanded === accTitle}
+                  onExpand={(isExpanded, id) => handleExpand(isExpanded, id)}
+                />
+              );
+            })}
         </div>
       </div>
     </FluidContainer>

@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 export interface AccordionProps {
   id?: string;
+  tabId?: number;
   className?: string;
   title: string;
   subtitle?: string;

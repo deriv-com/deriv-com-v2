@@ -8,6 +8,7 @@ const meta = {
   component: AccordionBlock,
   tags: ['autodocs'],
   argTypes: {
+    tab: { description: '`id` here is refer to `content.data.index`' },
     variant: {
       options: ['Flush', 'Fill', 'Outline', 'Elevate'],
       control: { type: 'radio' },
@@ -24,58 +25,156 @@ export const Flush: Story = {
   args: {
     className: '',
     tab: [
-      { id: 0, title: 'Label' },
-      { id: 1, title: 'Label' },
-      { id: 2, title: 'Label' },
-      { id: 3, title: 'Label' },
-      { id: 4, title: 'Label' },
-      { id: 5, title: 'Label' },
-      { id: 6, title: 'Label' },
-      { id: 7, title: 'Label' },
+      { id: 0, title: 'Label 1' },
+      { id: 1, title: 'Label 2' },
+      { id: 2, title: 'Label 3' },
+      { id: 3, title: 'Label 4' },
+      { id: 4, title: 'Label 5' },
     ],
     title: 'Title goes here',
     variant: 'Flush',
     content: {
       data: [
-        {
-          icon: <StandaloneAndroidIcon />,
-          title: 'Title 1',
-          subtitle: 'Subtitle 1',
-          className: 'border-opacity-black-100 border-x-none',
-          content: () => (
-            <img
-              className="flex w-full flex-1"
-              src="https://placehold.co/640x320"
-              alt="Placeholder"
-            />
-          ),
-        },
-        {
-          icon: <StandaloneAndroidIcon />,
-          title: 'Title 2',
-          subtitle: 'Subtitle 2',
-          className: 'border-opacity-black-100 border-x-none',
-          content: () => (
-            <img
-              className="flex w-full flex-1"
-              src="https://placehold.co/640x320"
-              alt="Placeholder"
-            />
-          ),
-        },
-        {
-          icon: <StandaloneAndroidIcon />,
-          title: 'Title 3',
-          subtitle: 'Subtitle 3',
-          className: 'border-opacity-black-100 border-x-none',
-          content: () => (
-            <img
-              className="flex w-full flex-1"
-              src="https://placehold.co/640x320"
-              alt="Placeholder"
-            />
-          ),
-        },
+        [
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 1 - Label 1',
+            subtitle: 'Subtitle 1',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 2 - Label 1',
+            subtitle: 'Subtitle 2',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+        ],
+        [
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 1 - Label 2',
+            subtitle: 'Subtitle 1',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 2 - Label 2',
+            subtitle: 'Subtitle 2',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 3 - Label 2',
+            subtitle: 'Subtitle 3',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+        ],
+        [
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 1 - Label 3',
+            subtitle: 'Subtitle 1',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+        ],
+        [
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 1 - Label 4',
+            subtitle: 'Subtitle 1',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 2 - Label 4',
+            subtitle: 'Subtitle 2',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+        ],
+        [
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 1 - Label 5',
+            subtitle: 'Subtitle 1',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+          {
+            icon: <StandaloneAndroidIcon />,
+            title: 'Title 2 - Label 5',
+            subtitle: 'Subtitle 2',
+            className: 'border-opacity-black-100 border-x-none',
+            content: () => (
+              <img
+                className="flex w-full flex-1"
+                src="https://placehold.co/640x320"
+                alt="Placeholder"
+              />
+            ),
+          },
+        ],
       ],
     },
   },
