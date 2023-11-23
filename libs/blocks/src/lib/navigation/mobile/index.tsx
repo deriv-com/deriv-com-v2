@@ -17,7 +17,7 @@ export const MobileNav: React.FC<NavigationProps> = ({
         <NavMobileWrapper>
           <div className="flex h-full flex-col justify-between">
             <MobileHeader />
-            <div className="relative flex flex-1 flex-col justify-between px-general-2xl pb-general-md">
+            <div className="relative flex flex-1 flex-col justify-between px-general-2xl pb-general-lg sm:pb-general-md">
               <MobileNavList />
               <MobileNavContentContainer />
               <MobileLanguages />

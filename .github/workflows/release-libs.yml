@@ -1,0 +1,110 @@
+name: release libs to github npm packages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'libs/hooks/**'
+      - 'libs/blocks/**'
+      - 'libs/components/**'
+      - 'libs/providers/**'
+
+permissions:
+  contents: write # to be able to publish a GitHub release
+  issues: write # to be able to comment on released issues
+  pull-requests: write # to be able to comment on released pull requests
+  id-token: write # to enable use of OIDC for npm provenance
+  packages: write
+
+jobs:
+  build:
+    name: Build and Publish Libs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Setup Git
+        run: |
+          git config user.name "mohsen-deriv"
+          git config user.email "mohsen@regentmarkets.com"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - uses: marceloprado/has-changed-path@v1.0.1
+        id: changed-hooks
+        with:
+          paths: libs/hooks
+
+      - uses: marceloprado/has-changed-path@v1.0.1
+        id: changed-providers
+        with:
+          paths: libs/providers
+
+      - uses: marceloprado/has-changed-path@v1.0.1
+        id: changed-components
+        with:
+          paths: libs/components
+
+      - uses: marceloprado/has-changed-path@v1.0.1
+        id: changed-blocks
+        with:
+          paths: libs/blocks
+
+      - name: Bump version Hooks
+        if: steps.changed-hooks.outputs.changed == 'true'
+        shell: bash
+        run: npx nx run hooks:version --skip-nx-cache
+
+      - name: Bump version Blocks
+        if: steps.changed-blocks.outputs.changed == 'true'
+        shell: bash
+        run: npx nx run blocks:version --skip-nx-cache
+
+      - name: Bump version Components
+        if: steps.changed-components.outputs.changed == 'true'
+        shell: bash
+        run: npx nx run components:version --skip-nx-cache
+
+      - name: Bump version Providers
+        if: steps.changed-providers.outputs.changed == 'true'
+        shell: bash
+        run: npx nx run providers:version --skip-nx-cache
+
+      - name: Create npmrc file
+        shell: bash
+        run: echo '//npm.pkg.github.com/:_authToken=${{ secrets.PUBLISH_GITHUB_TOKEN }}' > .npmrc
+
+      - name: Publish Hooks
+        if: steps.changed-hooks.outputs.changed == 'true'
+        shell: bash
+        run: npx nx run hooks:deploy --skip-nx-cache
+
+      - name: Publish Blocks
+        if: steps.changed-blocks.outputs.changed == 'true'
+        shell: bash
+        run: npx nx run blocks:deploy --skip-nx-cache
+
+      - name: Publish Components
+        if: steps.changed-components.outputs.changed == 'true'
+        shell: bash
+        run: npx nx run components:deploy --skip-nx-cache
+
+      - name: Publish Providers
+        if: steps.changed-providers.outputs.changed == 'true'
+        shell: bash
+        run: npx nx run providers:deploy --skip-nx-cache
+
+      - name: Push Tags and Commits
+        shell: bash
+        run: git push origin main --follow-tags

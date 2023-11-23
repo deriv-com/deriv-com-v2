@@ -8,7 +8,7 @@ export const TableData: TableContent = {
   description:
     'Direct market access with fast order execution and no dealing desk intervention.',
   cta: (
-    <Button variant="secondary" colorStyle="black" size="lg" className="w-1/2">
+    <Button variant="secondary" colorStyle="black" size="lg">
       Get this account
     </Button>
   ),
