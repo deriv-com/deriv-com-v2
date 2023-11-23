@@ -44,6 +44,7 @@ Thumbs.db
 
 # environment vars
 .env 
+.env.development
 
 **/optimized-images/**/*
 

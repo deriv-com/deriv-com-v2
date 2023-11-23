@@ -1,0 +1,89 @@
+{
+  "name": "deriv-row",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/deriv-row",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/deriv-row"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/deriv-row"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build-images"],
+      "options": {
+        "buildTarget": "deriv-row:build",
+        "dev": true,
+        "keepAliveTimeout": 60000,
+        "hostname": "localhost",
+        "port": 4300,
+        "open": true
+       
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "deriv-row:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "deriv-row:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "dependsOn": ["clean", "build-images"],
+      "options": {
+        "buildTarget": "deriv-row:build:production"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/deriv-row/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "build-images": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/apps/deriv-row/public/images"],
+      "options": {
+        "command": "next-image-export-optimizer --nextConfigPath apps/deriv-row/next.config.js",
+        "parallel": true,
+        "readyWhen": "---- next-image-export-optimizer: Done ----"
+      }
+    },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rimraf apps/deriv-row/.next && rimraf apps/deriv-row/public/images"
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/deriv-row"
+      },
+      "configurations": {
+        "watch": {
+          "watch": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

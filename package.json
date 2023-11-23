@@ -5,8 +5,9 @@
   "scripts": {
     "prepare": "husky install",
     "dev:hk": "nx serve deriv-hk",
+    "dev:row": "nx serve deriv-row",
     "clean:hk": "nx clean deriv-hk",
-    "build:hk": "nx export deriv-hk",
+    "build:row": "nx export deriv-row",
     "build-storybook": "nx build-storybook storybook-host",
     "storybook": "nx storybook storybook-host",
     "clean:dist": "rimraf dist",

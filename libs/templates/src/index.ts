@@ -8,4 +8,5 @@ export * from './lib/help-center/about-deriv';
 export * from './lib/help-center/deriv-mt5';
 export * from './lib/who-we-are';
 export * from './lib/home';
+export * from './lib/home/row';
 export * from './lib/trade';
