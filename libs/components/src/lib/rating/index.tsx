@@ -118,7 +118,7 @@ export const Rating = ({
 
   const gapClassName = {
     sm: 'gap-gap-md',
-    md: 'gap-200',
+    md: 'gap-gap-sm',
   };
 
   return (
