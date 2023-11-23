@@ -3,12 +3,79 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AccordionBlock from '.';
 import { StandaloneAndroidIcon } from '@deriv/quill-icons/Standalone';
 
+const tabs: Record<string, object | null> = {
+  left: {
+    data: [
+      { id: 0, title: 'Label 1' },
+      { id: 1, title: 'Label 2' },
+      { id: 2, title: 'Label 3' },
+      { id: 3, title: 'Label 4' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+    ],
+  },
+  center: {
+    align: 'center',
+    data: [
+      { id: 0, title: 'Label 1' },
+      { id: 1, title: 'Label 2' },
+      { id: 2, title: 'Label 3' },
+      { id: 3, title: 'Label 4' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+    ],
+  },
+  right: {
+    align: 'end',
+    data: [
+      { id: 0, title: 'Label 1' },
+      { id: 1, title: 'Label 2' },
+      { id: 2, title: 'Label 3' },
+      { id: 3, title: 'Label 4' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+      { id: 4, title: 'Label 5' },
+    ],
+  },
+  none: null,
+};
+
 const meta = {
   title: 'Blocks/Accordion',
   component: AccordionBlock,
   tags: ['autodocs'],
   argTypes: {
-    tab: { description: '`id` here is refer to `content.data.index`' },
+    tab: {
+      description: '`id` here is refer to `content.data.index`',
+      options: Object.keys(tabs),
+      mapping: tabs,
+      control: {
+        type: 'select',
+      },
+    },
     variant: {
       options: ['Flush', 'Fill', 'Outline', 'Elevate'],
       control: { type: 'radio' },
@@ -24,13 +91,15 @@ type Story = StoryObj<typeof AccordionBlock>;
 export const Flush: Story = {
   args: {
     className: '',
-    tab: [
-      { id: 0, title: 'Label 1' },
-      { id: 1, title: 'Label 2' },
-      { id: 2, title: 'Label 3' },
-      { id: 3, title: 'Label 4' },
-      { id: 4, title: 'Label 5' },
-    ],
+    tab: {
+      data: [
+        { id: 0, title: 'Label 1' },
+        { id: 1, title: 'Label 2' },
+        { id: 2, title: 'Label 3' },
+        { id: 3, title: 'Label 4' },
+        { id: 4, title: 'Label 5' },
+      ],
+    },
     title: 'Title goes here',
     variant: 'Flush',
     content: {
@@ -198,5 +267,12 @@ export const Elevate: Story = {
   args: {
     ...Flush.args,
     variant: 'Elevate',
+  },
+};
+
+export const WithoutTab: Story = {
+  args: {
+    ...Flush.args,
+    tab: undefined,
   },
 };

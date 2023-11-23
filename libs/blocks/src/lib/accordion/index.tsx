@@ -16,7 +16,10 @@ import styles from './styles.module.scss';
 
 export interface AccordionBlockProps {
   title?: string;
-  tab?: { id: number; title: string }[];
+  tab?: {
+    align?: 'start' | 'center' | 'end';
+    data: { id: number; title: string }[];
+  };
   className?: string;
   variant?: keyof AccordionVariants;
   content: {
@@ -37,7 +40,7 @@ export const slugify = (input: string): string =>
 
 export function AccordionBlock({
   title,
-  tab,
+  tab = { align: 'start', data: [] },
   content,
   className,
   variant = 'Flush',
@@ -61,6 +64,12 @@ export function AccordionBlock({
     }
   };
 
+  const chipAlignment = {
+    start: 'justify-start',
+    center: 'justify-center',
+    end: 'justify-end',
+  };
+
   const DynamicAccordion = Accordion[variant];
 
   return (
@@ -71,14 +80,16 @@ export function AccordionBlock({
       )}
     >
       {title && <Heading.H2>{title}</Heading.H2>}
-      <div
-        className={qtJoin(
-          'flex w-full flex-nowrap gap-gap-md overflow-x-scroll',
-          styles['scrollbar_hide'],
-        )}
-      >
-        {tab &&
-          tab.map((tab) => (
+
+      {tab && tab.data.length > 0 && (
+        <div
+          className={qtJoin(
+            'flex w-full flex-nowrap gap-gap-md overflow-x-auto',
+            styles['scrollbar_hide'],
+            tab.align && chipAlignment[tab.align],
+          )}
+        >
+          {tab.data.map((tab) => (
             <Chip.Selectable
               key={tab.id}
               selected={selectedChip === tab.id}
@@ -88,7 +99,8 @@ export function AccordionBlock({
               {tab.title}
             </Chip.Selectable>
           ))}
-      </div>
+        </div>
+      )}
 
       <div className="flex w-full flex-col gap-general-lg">
         <div className={content?.className}>
