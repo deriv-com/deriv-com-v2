@@ -98,13 +98,13 @@ const TradingSpecTable = () => {
           <LabelPairedEllipsisVerticalBoldIcon
             fill="black"
             iconSize="md"
-            className="min-sm:block max-lg:block md:hidden lg:hidden"
+            className="block md:hidden"
             onClick={() => {
               setShowBottomSheet(true);
             }}
           />
 
-          <div className="min-sm:hidden w-max max-lg:hidden md:block lg:block">
+          <div className="hidden w-max md:block">
             <Chips
               onChangeChips={handleChipsData}
               onChangeSelectedInfo={handleChipsInfo}
@@ -222,7 +222,7 @@ const TradingSpecTable = () => {
         >
           <div className=" flex flex-col p-general-md">
             <div
-              className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
+              className="flex flex-row items-center gap-gap-md px-general-md py-general-sm"
               onClick={() => {
                 setSelectedFilter(mainInfo.data);
                 setSelectedInfo('mainInfo');
@@ -240,7 +240,7 @@ const TradingSpecTable = () => {
               </Text>
             </div>
             <div
-              className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
+              className="flex flex-row items-center gap-gap-md px-general-md py-general-sm"
               onClick={() => {
                 setSelectedFilter(tradingCondition.data);
                 setSelectedInfo('tradingCondition');
@@ -257,7 +257,7 @@ const TradingSpecTable = () => {
               </Text>
             </div>
             <div
-              className="flex flex-row items-center gap-gap-md px-general-md py-gap-md"
+              className="flex flex-row items-center gap-gap-md px-general-md py-general-sm"
               onClick={() => {
                 setSelectedFilter(additionalInfo.data);
                 setSelectedInfo('additionalInfo');
