@@ -94,7 +94,7 @@ const TradingSpecTable = () => {
           />
         </form>
 
-        <div className="flex gap-gap-md">
+        <div>
           <LabelPairedEllipsisVerticalBoldIcon
             fill="black"
             iconSize="md"

@@ -13,7 +13,7 @@ const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsProps) => {
   const [selectedInfo, setSelectedInfo] = useState('mainInfo');
 
   return (
-    <>
+    <div className="flex gap-gap-md ">
       <Chip.Selectable
         onChipSelect={() => {
           onChangeSelectedInfo('mainInfo');
@@ -44,7 +44,7 @@ const Chips = ({ onChangeChips, onChangeSelectedInfo }: ChipsProps) => {
       >
         <div className="w-max">Additional info</div>
       </Chip.Selectable>
-    </>
+    </div>
   );
 };
 
