@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import MainFooter from './main';
-import ROWFooter from './main/row.footer';
+import ROWFooter from './row';
 
 export type FooterVariants = {
   Main: typeof MainFooter;

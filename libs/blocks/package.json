@@ -1,12 +1,12 @@
 {
   "name": "@deriv-com/blocks",
-  "version": "0.3.0",
+  "version": "0.6.0",
   "main": "./index.js",
-  "types": "./index.d.ts",
   "exports": {
     ".": {
       "import": "./index.mjs",
-      "require": "./index.js"
+      "require": "./index.js",
+      "types": "./index.d.ts"
     },
     "./style.css": "./style.css"
   },

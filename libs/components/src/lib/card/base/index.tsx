@@ -39,7 +39,7 @@ const sizeVariantContainerGap = {
 const sizeVariantTextGap = {
   sm: 'gap-gap-md',
   md: 'gap-gap-lg',
-  lg: 'gap-gap-xl',
+  lg: 'gap-gap-lg',
 };
 
 const textSizeVariant: { [key: string]: 'sm' | 'md' | 'lg' } = {
@@ -93,6 +93,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
               textColorVariantClass[color],
               sizeVariantTextGap[size],
               !content && description && 'flex-1',
+              align === 'center' && 'text-center',
             )}
           >
             {header && <HeadingComponent>{header}</HeadingComponent>}
