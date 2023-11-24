@@ -2,6 +2,24 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.5.0...blocks-0.6.0) (2023-11-24)
+
+## [0.5.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.4.0...blocks-0.5.0) (2023-11-21)
+
+
+### Bug Fixes
+
+* updated blocks, components package json to fix types ([71767c3](https://github.com/deriv-com/deriv-com-v2/commit/71767c3758255e98e14686a19a4b394599abd248))
+
+## [0.4.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.3.0...blocks-0.4.0) (2023-11-20)
+
+
+### Bug Fixes
+
+* hover issue in desktop nav bar ([0051432](https://github.com/deriv-com/deriv-com-v2/commit/0051432f8a2781979652ba0acefe1554f2934953))
+
+## [0.3.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.2.0...blocks-0.3.0) (2023-11-20)
+
 ## [0.2.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.1.0...blocks-0.2.0) (2023-11-19)
 
 ## 0.1.0 (2023-11-19)
