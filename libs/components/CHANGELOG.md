@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.5.0...components-0.6.0) (2023-11-24)
+
+
+### Bug Fixes
+
+* gap issue between card title and description ([7e86187](https://github.com/deriv-com/deriv-com-v2/commit/7e86187d155805b57c287514700546788e0836a5))
+* text align issue for our locations ([db09def](https://github.com/deriv-com/deriv-com-v2/commit/db09def9a1ff7f9fd51575e99646461b25ea87f4))
+
 ## [0.5.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.4.0...components-0.5.0) (2023-11-21)
 
 
