@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ROWFooter from './row.footer';
+import ROWFooter from '.';
 
 const meta = {
   title: 'Features/Footer/Row',

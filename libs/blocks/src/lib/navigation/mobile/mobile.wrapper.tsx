@@ -11,7 +11,7 @@ export const NavMobileWrapper: React.FC<{ children: ReactNode }> = ({
     <div
       className={clsx(
         'absolute',
-        'h-screen w-screen',
+        'h-[100dvh] w-screen',
         'left-50 top-50',
         'bg-background-primary-container',
         '-translate-y-full transition-all duration-500 ease-in-out',

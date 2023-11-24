@@ -1,12 +1,16 @@
 {
   "name": "@deriv-com/components",
-  "version": "0.0.1",
+  "version": "0.6.0",
   "main": "./index.js",
-  "types": "./index.d.ts",
   "exports": {
     ".": {
       "import": "./index.mjs",
-      "require": "./index.js"
-    }
+      "require": "./index.js",
+      "types": "./index.bundle.d.ts"
+    },
+    "./style.css": "./style.css"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }

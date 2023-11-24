@@ -87,6 +87,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
               textColorVariantClass[color],
               sizeVariantTextGap[size],
               !content && description && 'flex-1',
+              align === 'center' && 'text-center',
             )}
           >
             {header && <HeadingComponent>{header}</HeadingComponent>}

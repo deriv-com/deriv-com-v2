@@ -15,7 +15,7 @@ export const MobileNavContentContainer = () => {
         'absolute',
         'h-full w-full',
         'bg-background-primary-container',
-        'pb-general-lg',
+        'pb-general-lg sm:pb-general-md',
         'px-1600',
         'left-50 top-50',
       )}

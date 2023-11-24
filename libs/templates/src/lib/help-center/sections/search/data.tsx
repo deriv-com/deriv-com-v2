@@ -940,7 +940,6 @@ export const FAQData: FAQDataType[] = [
                   width={568}
                   height={236}
                 />
-                ,
               </FaqBox>,
               <FaqBox>
                 <FaqText>Hit the pencil icon next to the password.</FaqText>
