@@ -65,9 +65,9 @@ export function AccordionBlock({
   };
 
   const chipAlignment = {
-    start: 'justify-start',
-    center: 'justify-center',
-    end: 'justify-end',
+    start: 'mr-auto',
+    center: 'mx-auto',
+    end: 'ml-auto',
   };
 
   const DynamicAccordion = Accordion[variant];
@@ -84,7 +84,7 @@ export function AccordionBlock({
       {tab && tab.data.length > 0 && (
         <div
           className={qtJoin(
-            'flex w-full flex-nowrap gap-gap-md overflow-x-auto',
+            'flex gap-gap-md overflow-x-scroll max-w-full',
             styles['scrollbar_hide'],
             tab.align && chipAlignment[tab.align],
           )}

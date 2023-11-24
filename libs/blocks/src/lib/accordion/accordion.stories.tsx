@@ -5,6 +5,7 @@ import { StandaloneAndroidIcon } from '@deriv/quill-icons/Standalone';
 
 const tabs: Record<string, object | null> = {
   left: {
+    align: 'start',
     data: [
       { id: 0, title: 'Label 1' },
       { id: 1, title: 'Label 2' },
