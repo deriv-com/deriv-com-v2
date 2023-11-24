@@ -112,7 +112,6 @@ export function AccordionBlock({
                 <DynamicAccordion
                   {...accData}
                   id={id}
-                  title={accTitle}
                   key={accTitle}
                   expanded={multiCollapse ? false : expanded === accTitle}
                   onExpand={(isExpanded, id) => handleExpand(isExpanded, id)}
