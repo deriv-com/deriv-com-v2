@@ -22,3 +22,26 @@ export const homeStatNumbers: StatCardContent[] = [
     description: 'commission',
   },
 ];
+
+export const homeStatNumbersRow: StatCardContent[] = [
+  {
+    header: '2.5M+',
+    description: 'Users worldwide',
+    color: 'transparent',
+  },
+  {
+    header: '$650B+',
+    description: 'Monthly volume',
+    color: 'transparent',
+  },
+  {
+    header: '1999',
+    description: 'Established since',
+    color: 'transparent',
+  },
+  {
+    header: '168M+',
+    description: 'Monthly deals',
+    color: 'transparent',
+  },
+];

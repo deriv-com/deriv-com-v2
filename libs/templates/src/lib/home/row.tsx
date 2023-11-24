@@ -13,12 +13,20 @@ import ReviewSection from './sections/review';
 import AccountSection from './sections/account-section';
 import CTASection from './sections/cta';
 import HeroBannerRow from './sections/hero/row';
+import SocialProofRow from './sections/social-proof';
+import NumberSectionRow from './sections/number-section/row';
+import StrongYearsSection from './sections/strong-years';
+import LiveMarketRowSection from './sections/live-market-section/row';
 
 export function HomeRowTemplate() {
   return (
     <PageLayout>
       <HeroBannerRow />
-      {/* <NumberSection />
+      <SocialProofRow />
+      <NumberSectionRow />
+      <StrongYearsSection />
+      <LiveMarketRowSection />
+      {/*
       <LiveMarketSection />
       <FastAndReliableSection />
       <WhyTradeSection />

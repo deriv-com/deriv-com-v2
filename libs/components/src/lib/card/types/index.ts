@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export type StatCardVariant = 'white' | 'dark' | 'coral';
+export type StatCardVariant = 'white' | 'dark' | 'coral' | 'transparent';
 export type CardColorVariant = 'light' | 'gray';
 export type CardAlignVariant = 'start' | 'center';
 export type CardSizeVariant = 'sm' | 'md' | 'lg';

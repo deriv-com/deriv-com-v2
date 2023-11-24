@@ -9,12 +9,14 @@ const colorVariants: { [key in StatCardVariant]: string } = {
   coral: 'bg-solid-coral-700',
   white: 'bg-solid-slate-50',
   dark: 'bg-solid-slate-1200',
+  transparent: '',
 };
 
 const textColorVariants: { [key in StatCardVariant]: string } = {
   coral: 'text-solid-slate-50',
   white: 'text-solid-slate-1400',
   dark: 'text-solid-slate-50',
+  transparent: 'text-solid-slate-1400',
 };
 
 export const StatCompanyCard: React.FC<StatCardProps> = ({

@@ -15,7 +15,7 @@ export interface LiveMarketProps<T extends CardVariantType> {
   description?: string;
   className?: string;
   tabHeader?: () => ReactNode;
-  disclaimer?: string;
+  disclaimer?: () => ReactNode;
   link: {
     href: string;
     content: string;
@@ -27,7 +27,7 @@ export const LiveMarket = <T extends CardVariantType>({
   header,
   description,
   className,
-  disclaimer,
+  disclaimer: Disclaimer,
   link,
   tabHeader: TabHeader,
   cardSliderProps,
@@ -62,10 +62,10 @@ export const LiveMarket = <T extends CardVariantType>({
             <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />
           </CustomLink>
         )}
-        {disclaimer && (
+        {Disclaimer && (
           <div className="max-w-[816px] max-sm:px-general-md">
             <Text size="sm" className="text-center text-typography-subtle">
-              {disclaimer}
+              <Disclaimer />
             </Text>
           </div>
         )}
