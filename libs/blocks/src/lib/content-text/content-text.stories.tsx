@@ -8,7 +8,11 @@ const meta = {
   component: ContentText,
   tags: ['autodocs'],
   argTypes: {
-    children: { description: '`() => ReactNode`', control: 'function' },
+    children: {
+      description: '`() => ReactNode`',
+      control: 'function',
+    },
+    className: { table: { disable: true } },
   },
 } satisfies Meta<typeof ContentText>;
 
@@ -52,5 +56,12 @@ export const Default: Story = {
       'my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200',
     title: 'Title here',
     children: <Content />,
+  },
+};
+
+export const WithoutTitle: Story = {
+  args: {
+    ...Default.args,
+    title: '',
   },
 };

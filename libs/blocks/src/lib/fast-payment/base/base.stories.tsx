@@ -17,7 +17,7 @@ const meta = {
       description: '`string`',
     },
     link: {
-      description: '`object`',
+      description: '`{content: ReactNode, href: string}`',
     },
     content: {
       description: '`object`',
