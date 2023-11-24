@@ -54,7 +54,7 @@ export function AccordionBlock({
         className,
       )}
     >
-      {title && <Heading.H2>{title}</Heading.H2>}
+      {title && <Heading.H2 className="text-center">{title}</Heading.H2>}
 
       <div className="flex w-full flex-col gap-general-lg">
         <div className={content?.className}>

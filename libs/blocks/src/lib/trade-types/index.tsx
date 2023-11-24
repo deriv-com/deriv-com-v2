@@ -3,13 +3,7 @@ import {
   CardVariantType,
   CardsContainer,
 } from '@deriv-com/components';
-import {
-  FluidContainer,
-  Heading,
-  Section,
-  Text,
-  qtJoin,
-} from '@deriv/quill-design';
+import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 
 export interface TradeTypeBlockProps<T extends CardVariantType> {
   title: string;
