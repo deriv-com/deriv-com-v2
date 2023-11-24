@@ -1,4 +1,4 @@
-import { FluidContainer, Heading, Text, qtMerge } from '@deriv/quill-design';
+import { Heading, Section, Text, qtMerge } from '@deriv/quill-design';
 import { OptimizedImage, Rating } from '@deriv-com/components';
 import { useTrustpilotApi } from '@deriv-com/hooks';
 
@@ -21,7 +21,7 @@ const SocialProofVertical = ({
   const themeClassNames = getThemeClassNames(theme);
 
   return (
-    <FluidContainer
+    <Section
       className={qtMerge(
         'py-general-4xl',
         themeClassNames.background,
@@ -65,7 +65,7 @@ const SocialProofVertical = ({
           )}
         </div>
       </div>
-    </FluidContainer>
+    </Section>
   );
 };
 
