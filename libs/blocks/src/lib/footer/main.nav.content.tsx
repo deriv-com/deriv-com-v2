@@ -32,8 +32,8 @@ export const MainNavContent = ({
                     className="flex flex-col items-start gap-gap-lg"
                     key={link.id}
                   >
-                    <CustomLink href={link.href}>
-                      <Text size="sm">{link.text}</Text>
+                    <CustomLink size="sm" href={link.href}>
+                      {link.text}
                     </CustomLink>
                   </div>
                 ))}
