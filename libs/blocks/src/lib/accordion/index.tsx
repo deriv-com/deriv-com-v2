@@ -17,7 +17,7 @@ import styles from './styles.module.scss';
 export interface AccordionBlockProps {
   title?: string;
   tab?: {
-    align?: 'start' | 'center' | 'end';
+    align?: 'center' | 'end';
     data: { id: number; title: string }[];
   };
   className?: string;
@@ -40,7 +40,7 @@ export const slugify = (input: string): string =>
 
 export function AccordionBlock({
   title,
-  tab = { align: 'start', data: [] },
+  tab,
   content,
   className,
   variant = 'Flush',
@@ -65,7 +65,6 @@ export function AccordionBlock({
   };
 
   const chipAlignment = {
-    start: 'mr-auto',
     center: 'mx-auto',
     end: 'ml-auto',
   };
@@ -86,17 +85,17 @@ export function AccordionBlock({
           className={qtJoin(
             'flex gap-gap-md overflow-x-scroll max-w-full',
             styles['scrollbar_hide'],
-            tab.align && chipAlignment[tab.align],
+            tab.align ? chipAlignment[tab.align] : 'mr-auto',
           )}
         >
-          {tab.data.map((tab) => (
+          {tab.data.map((item) => (
             <Chip.Selectable
-              key={tab.id}
-              selected={selectedChip === tab.id}
-              onChipSelect={() => handleChip(tab.id)}
+              key={item.id}
+              selected={selectedChip === item.id}
+              onChipSelect={() => handleChip(item.id)}
               className="whitespace-nowrap"
             >
-              {tab.title}
+              {item.title}
             </Chip.Selectable>
           ))}
         </div>
