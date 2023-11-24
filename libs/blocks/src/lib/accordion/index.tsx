@@ -105,12 +105,12 @@ export function AccordionBlock({
         <div className={content?.className}>
           {content &&
             content.data[selectedChip].map((accData) => {
-              const { title: accTitle, ...rest } = accData;
+              const { title: accTitle } = accData;
               const id = slugify(accTitle as string);
 
               return (
                 <DynamicAccordion
-                  {...rest}
+                  {...accData}
                   id={id}
                   title={accTitle}
                   key={accTitle}
