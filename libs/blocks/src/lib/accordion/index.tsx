@@ -78,7 +78,7 @@ export function AccordionBlock({
         className,
       )}
     >
-      {title && <Heading.H2>{title}</Heading.H2>}
+      {title && <Heading.H2 className="text-center">{title}</Heading.H2>}
 
       {tab && tab.data.length > 0 && (
         <div
