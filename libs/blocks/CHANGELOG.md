@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.6.0...blocks-0.7.0) (2023-11-24)
+
+
+### Bug Fixes
+
+* accordion title text alignment ([17fcb15](https://github.com/deriv-com/deriv-com-v2/commit/17fcb15c9477cb6de90e041cb86e923b19388862))
+
+## [0.6.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.5.0...blocks-0.6.0) (2023-11-24)
+
 ## [0.5.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.4.0...blocks-0.5.0) (2023-11-21)
 
 
