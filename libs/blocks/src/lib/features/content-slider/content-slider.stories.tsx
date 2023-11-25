@@ -9,13 +9,29 @@ import {
   IllustrativeSupport247Icon,
 } from '@deriv/quill-icons/Illustrative';
 
+const cta: Record<string, object | null> = {
+  with_cta: () => (
+    <div className="flex w-full justify-center">
+      <Button>CTA</Button>
+    </div>
+  ),
+  without_cta: null,
+};
+
 const meta = {
   title: 'Blocks/Features/ContentSlider',
   component: ContentSlider,
   tags: ['autodocs'],
   argTypes: {
     className: { table: { disable: true } },
-    cta: { description: '`() => ReactNode`' },
+    cta: {
+      options: Object.keys(cta),
+      mapping: cta,
+      control: {
+        type: 'select',
+      },
+      table: { type: { summary: '() => ReactNode' } },
+    },
   },
   parameters: {
     layout: 'centered',

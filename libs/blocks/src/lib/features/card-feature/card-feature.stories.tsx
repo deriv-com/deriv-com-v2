@@ -14,7 +14,14 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     cta: { control: 'function' },
-    cols: { description: '`"two"`, `"three"`, `"four"`' },
+    cards: { table: { type: { summary: 'CardContent[]' } } },
+    cols: {
+      options: ['two', 'three', 'four'],
+      control: { type: 'radio' },
+      table: { type: { summary: '"two", "three", "four"' } },
+    },
+    className: { table: { disable: true } },
+    variant: { table: { disable: true } },
   },
 } satisfies Meta<typeof Card>;
 

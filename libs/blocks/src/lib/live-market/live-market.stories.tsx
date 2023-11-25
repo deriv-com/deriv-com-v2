@@ -8,9 +8,25 @@ import {
   MarketForexUsdjpyIcon,
 } from '@deriv/quill-icons/Markets';
 
+const tabHeader: Record<string, object | null> = {
+  with_tab_header: () => <div>Tab Header</div>,
+  without_tab_header: null,
+};
+
 const meta = {
   title: 'Blocks/LiveMarket',
   component: LiveMarket,
+  tags: ['autodocs'],
+  argTypes: {
+    className: { table: { disable: true } },
+    tabHeader: {
+      options: Object.keys(tabHeader),
+      mapping: tabHeader,
+      control: {
+        type: 'select',
+      },
+    },
+  },
 } satisfies Meta<typeof LiveMarket>;
 
 export default meta;
@@ -20,6 +36,7 @@ export const Default: Story = {
   args: {
     header: 'Header here',
     description: 'desciption here description here',
+    tabHeader: () => <div>Tab Header</div>,
     cardSliderProps: {
       variant: 'LiveMarketCard',
       slideClasses: 'max-w-[286px]',
@@ -27,7 +44,7 @@ export const Default: Story = {
         spaceBetween: 16,
         breakpoints: {
           1280: {
-            slidesPerView: 4,
+            slidesPerView: 3.2,
           },
           1024: {
             slidesPerView: 'auto',
@@ -78,5 +95,33 @@ export const Default: Story = {
     disclaimer:
       '*Prices are used for currency conversion and are published for reference only. Prices shown on our website are indicative and for reference only.',
     link: { href: '/', content: 'More forex' },
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: '',
+  },
+};
+
+export const WithoutTabHeader: Story = {
+  args: {
+    ...Default.args,
+    tabHeader: () => <></>,
+  },
+};
+
+export const WithoutHeader: Story = {
+  args: {
+    ...Default.args,
+    header: '',
+  },
+};
+
+export const WithoutDisclaimer: Story = {
+  args: {
+    ...Default.args,
+    disclaimer: '',
   },
 };

@@ -1,6 +1,44 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Base from '.';
+import { CardVariantProps, CardVariantType } from '@deriv-com/components';
+
+function generateCards(count: number): CardVariantProps<CardVariantType>[] {
+  return Array.from({ length: count }, () => ({
+    header: '',
+    color: 'gray',
+    align: 'center',
+    size: 'lg',
+    description: 'test',
+  }));
+}
+
+const contents: Record<string, object | null> = {
+  two_column: {
+    cols: 'two',
+    cards: generateCards(2),
+  },
+  three_column: {
+    cols: 'three',
+    cards: generateCards(3),
+  },
+  four_column: {
+    cols: 'four',
+    cards: generateCards(4),
+  },
+  five_column: {
+    cols: 'five',
+    cards: generateCards(5),
+  },
+};
+
+const links: Record<string, object | null> = {
+  with_link: {
+    content: 'Learn More',
+    href: '#',
+  },
+  without_link: null,
+};
 
 const meta = {
   title: 'Blocks/FastPayment',
@@ -18,9 +56,19 @@ const meta = {
     },
     link: {
       description: '`{content: ReactNode, href: string}`',
+      options: Object.keys(links),
+      mapping: links,
+      control: {
+        type: 'select',
+      },
     },
     content: {
-      description: '`object`',
+      description: '`CardsContainerProps`',
+      options: Object.keys(contents),
+      mapping: contents,
+      control: {
+        type: 'select',
+      },
     },
   },
 } satisfies Meta<typeof Base>;

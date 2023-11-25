@@ -9,10 +9,12 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     variant: {
-      description: '`content-left`, `content-right`',
+      table: { type: { summary: '"content-left", "content-right' } },
       options: ['content-left', 'content-right'],
       control: { type: 'radio' },
     },
+    className: { table: { disable: true } },
+    children: { table: { type: { summary: 'ReactNode' } } },
   },
 } satisfies Meta<typeof Content>;
 

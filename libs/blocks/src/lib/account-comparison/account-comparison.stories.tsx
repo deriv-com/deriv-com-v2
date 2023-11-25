@@ -7,6 +7,7 @@ const meta: Meta = {
   component: AccountComparison,
   tags: ['autodocs'],
   argTypes: {
+    className: { table: { disable: true } },
     content: {
       control: { type: 'function' },
     },
