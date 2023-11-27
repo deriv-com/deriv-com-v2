@@ -17,11 +17,7 @@ export const V1StatBlock: React.FC<V1StatBlockProps> = ({
       <FluidContainer className="flex flex-col gap-gap-3xl bg-solid-slate-75">
         <div className="flex flex-col items-center gap-gap-lg text-center lg:gap-gap-xl">
           {title && <Heading.H2>{title}</Heading.H2>}
-          {description && (
-            <Text size="xl" className="text-typography-default">
-              {description}
-            </Text>
-          )}
+          {description && <Text size="md">{description}</Text>}
         </div>
         <CardsContainer variant="StatCard" cards={cards} cols="four" />
       </FluidContainer>
