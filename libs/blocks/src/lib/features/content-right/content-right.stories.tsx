@@ -6,6 +6,14 @@ import ContentRight from '.';
 const meta = {
   title: 'Blocks/Features/ContentRight',
   component: ContentRight,
+  tags: ['autodocs'],
+  argTypes: {
+    className: { table: { disable: true } },
+    title: { description: '`string`' },
+    description: { description: '`string`' },
+    children: { description: '`ReactNode`' },
+    content: { description: '`React.FC`' },
+  },
 } satisfies Meta<typeof ContentRight>;
 
 export default meta;
@@ -30,5 +38,12 @@ export const Default: Story = {
         alt="Placeholder"
       />
     ),
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: '',
   },
 };
