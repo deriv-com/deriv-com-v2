@@ -6,7 +6,6 @@ import {
 } from '@deriv-com/components';
 import { FluidContainer, Section, Text, qtMerge } from '@deriv/quill-design';
 import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone';
-import clsx from 'clsx';
 import { ReactNode } from 'react';
 import { HeaderSection } from './header-section';
 
@@ -53,7 +52,7 @@ export const LiveMarket = <T extends CardVariantType>({
         {link && (
           <CustomLink
             href={link.href}
-            className={clsx('flex items-center justify-center text-body-md')}
+            className="flex items-center justify-center text-body-md"
           >
             {link.content}
             <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />
