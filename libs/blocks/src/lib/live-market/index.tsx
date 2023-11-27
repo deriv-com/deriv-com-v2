@@ -55,6 +55,7 @@ export const LiveMarket = <T extends CardVariantType>({
         }
         {link && (
           <CustomLink
+            size="md"
             href={link.href}
             className={clsx('flex items-center justify-center text-body-lg')}
           >

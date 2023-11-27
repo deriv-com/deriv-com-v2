@@ -25,9 +25,11 @@ const ContentLimitless: React.FC<ContentLimitlessProps> = ({
       )}
     >
       <FluidContainer className="flex items-center lg:min-h-[680px] xl:min-h-[860px]">
-        <div className="flex flex-col gap-gap-3xl lg:max-w-[580px]">
-          {title && <Heading.Hero>{title}</Heading.Hero>}
-          {description && <Text size="xl">{description}</Text>}
+        <div className="flex flex-col gap-gap-3xl">
+          <div className="flex flex-col gap-gap-lg lg:max-w-[580px]">
+            {title && <Heading.H1>{title}</Heading.H1>}
+            {description && <Text size="md">{description}</Text>}
+          </div>
           {children}
         </div>
       </FluidContainer>
