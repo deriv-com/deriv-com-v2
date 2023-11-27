@@ -2,7 +2,7 @@ import { StatBlock } from '@deriv-com/blocks';
 import { homeStatData } from './data';
 
 const StaticNumberSection = () => {
-  return <StatBlock.NumbersWithTitle cards={homeStatData} />;
+  return <StatBlock.V1 cards={homeStatData} />;
 };
 
 export default StaticNumberSection;

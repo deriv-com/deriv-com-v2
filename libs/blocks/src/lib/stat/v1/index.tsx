@@ -1,13 +1,13 @@
 import { CardsContainer, StatCardContent } from '@deriv-com/components';
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 
-export interface NumbersWithTitleProps {
+export interface V1StatBlockProps {
   title?: string;
   description?: string;
   cards: StatCardContent[];
 }
 
-export const NumbersWithTitle: React.FC<NumbersWithTitleProps> = ({
+export const V1StatBlock: React.FC<V1StatBlockProps> = ({
   cards,
   description,
   title,
@@ -29,4 +29,4 @@ export const NumbersWithTitle: React.FC<NumbersWithTitleProps> = ({
   );
 };
 
-export default NumbersWithTitle;
+export default V1StatBlock;
