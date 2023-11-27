@@ -27,10 +27,10 @@ const FooterCTABlock = ({
         id="cta-container"
       >
         <div className="relative flex min-h-[496px] flex-col justify-end rounded-lg bg-cover lg:flex-row lg:justify-start">
-          <div className="absolute -z-10 h-full w-full overflow-hidden rounded-xl object-cover object-top">
+          <div className="absolute h-full w-full overflow-hidden rounded-xl object-cover object-top">
             {image}
           </div>
-          <div className="bottom-50 w-full p-general-3xl lg:mr-general-md lg:w-[608px]">
+          <div className="bottom-50 z-10 w-full p-general-3xl lg:mr-general-md lg:w-[608px]">
             {children}
           </div>
         </div>
