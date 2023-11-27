@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import FooterCTABlock from '.';
 import { Heading, Button } from '@deriv/quill-design';
-import { OptimizedImage } from '@deriv-com/components';
 
 const meta = {
   title: 'Blocks/Footer/FooterCTA',
