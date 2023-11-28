@@ -41,9 +41,13 @@ const ContentLeft = ({
               : 'lg:pr-general-2xl',
           )}
         >
-          <div className="flex flex-col gap-gap-xl">
+          <div className="flex flex-col gap-gap-lg">
             <Heading.H2>{title}</Heading.H2>
-            {description && <Text id="content-description">{description}</Text>}
+            {description && (
+              <Text size="md" id="content-description">
+                {description}
+              </Text>
+            )}
           </div>
           {children}
         </div>

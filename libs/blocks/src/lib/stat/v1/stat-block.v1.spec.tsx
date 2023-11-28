@@ -1,5 +1,5 @@
 import { cleanup, render, screen } from '@testing-library/react';
-import NumbersWithTitle from '.';
+import V1StatBlock from '.';
 import { StatCardContent } from '@deriv-com/components';
 import '@testing-library/jest-dom';
 
@@ -26,10 +26,10 @@ const homeStatData: StatCardContent[] = [
   },
 ];
 
-describe('NumbersWithTitle', () => {
+describe('V1 StatBlock', () => {
   beforeEach(() => {
     render(
-      <NumbersWithTitle
+      <V1StatBlock
         cards={homeStatData}
         title="The title"
         description="The description"

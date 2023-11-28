@@ -3,6 +3,8 @@ import { CardsContainer, CustomLink } from '@deriv-com/components';
 
 import { FastPaymentProps } from '../types';
 
+// TODO: Complete Redo needed
+
 const Base: React.FC<FastPaymentProps> = ({
   title,
   description,
