@@ -6,7 +6,6 @@ import {
 } from '@deriv-com/components';
 import { FluidContainer, Section, Text, qtMerge } from '@deriv/quill-design';
 import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone';
-import clsx from 'clsx';
 import { ReactNode } from 'react';
 import { HeaderSection } from './header-section';
 
@@ -41,22 +40,19 @@ export const LiveMarket = <T extends CardVariantType>({
       )}
     >
       <FluidContainer className="flex flex-col items-center justify-center gap-gap-3xl">
-        {(header || description || TabHeader) && (
-          <HeaderSection
-            header={header}
-            description={description}
-            TabHeader={TabHeader}
-          />
+        {(header || TabHeader) && (
+          <HeaderSection header={header} TabHeader={TabHeader} />
         )}
         {
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           <CardSlider {...cardSliderProps} />
         }
+        {description && <Text className="text-center">{description}</Text>}
         {link && (
           <CustomLink
             href={link.href}
-            className={clsx('flex items-center justify-center')}
+            className="flex items-center justify-center"
           >
             {link.content}
             <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />
