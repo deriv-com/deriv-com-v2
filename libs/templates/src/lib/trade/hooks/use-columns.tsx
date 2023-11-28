@@ -155,7 +155,7 @@ const UseColumns = (selected: string) => {
               <TableCell.TableHeaderCell
                 width="sm"
                 className="text-left"
-                header="Margin Requirement/lot"
+                header="Margin Requirement/ lot"
               ></TableCell.TableHeaderCell>
             ),
             cell: (info) => (
