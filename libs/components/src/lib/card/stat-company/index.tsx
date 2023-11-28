@@ -35,7 +35,7 @@ export const StatCompanyCard: React.FC<StatCardProps> = ({
         className,
       )}
     >
-      <Heading.H5 className={textColorVariants[color]}>{header}</Heading.H5>
+      <Heading.H3 className={textColorVariants[color]}>{header}</Heading.H3>
       <Text
         size="md"
         className={qtMerge(textColorVariants[color], 'text-center')}

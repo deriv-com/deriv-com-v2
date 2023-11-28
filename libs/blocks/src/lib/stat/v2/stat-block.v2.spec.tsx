@@ -1,5 +1,5 @@
 import { cleanup, render, screen } from '@testing-library/react';
-import NumbersOnly from '.';
+import V2StatBlock from '.';
 import { StatCardContent } from '@deriv-com/components';
 import '@testing-library/jest-dom';
 
@@ -9,9 +9,9 @@ const cards: StatCardContent[] = [
   { header: 'Header three', description: 'description three' },
 ];
 
-describe('Numbers Only Block', () => {
+describe('V2 StatBlock', () => {
   beforeEach(() => {
-    render(<NumbersOnly cards={cards} />);
+    render(<V2StatBlock cards={cards} />);
   });
 
   afterEach(() => {
@@ -21,7 +21,7 @@ describe('Numbers Only Block', () => {
     const headings = screen.getAllByRole('heading');
     expect(headings.length).toBe(3);
     headings.forEach((headingElement, index) => {
-      expect(headingElement).toHaveTextContent(cards[index].header);
+      expect(headingElement).toHaveTextContent(cards[index].header || '');
     });
   });
 

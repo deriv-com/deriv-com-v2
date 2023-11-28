@@ -4,9 +4,8 @@ import { Text, qtMerge } from '@deriv/quill-design';
 const Link = ({ href, children }: { href: string; children: string }) => {
   return (
     <CustomLink
-      className={qtMerge(
-        '!my-general-none inline font-bold text-typography-default underline',
-      )}
+      size="sm"
+      className={qtMerge('inline font-bold underline')}
       href={href}
     >
       {children}
@@ -14,9 +13,9 @@ const Link = ({ href, children }: { href: string; children: string }) => {
   );
 };
 
-export const MainDescriptionContent = () => {
+export const DescriptionContent = () => {
   return (
-    <Text size="sm" className="text-typography-default">
+    <Text size="sm">
       Please read our <Link href="/">Terms and conditions</Link>,{' '}
       <Link href="/"> Risk disclosure</Link>, and{' '}
       <Link href="/">Secure and responsible trading</Link> to fully understand
