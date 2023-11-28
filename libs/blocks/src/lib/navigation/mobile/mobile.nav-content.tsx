@@ -20,7 +20,7 @@ export const MobileNavContent = () => {
             >
               {column.header &&
                 (column.header.type === 'text' ? (
-                  column.header.text === null ? null : (
+                  column.header.text !== null && (
                     <Text size="sm" className="py-general-xs">
                       {column.header.text}
                     </Text>
