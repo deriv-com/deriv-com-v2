@@ -30,14 +30,13 @@ export const generateFaqs = (questions: string[], header: string) => {
             key={question}
             href={getHelpCentreLink(header, question)}
             className="justify-start"
-            size="md"
           >
             {question}
           </CustomLink>
         ))}
       </div>
       <div className="flex">
-        <CustomLink size="md" href={getHelpCentreLink(header)} hasIcon>
+        <CustomLink href={getHelpCentreLink(header)} hasIcon>
           View Questions
         </CustomLink>
       </div>
@@ -54,7 +53,7 @@ export const FaqText = ({ children, ...otherProps }: BodyTypographyProps) => (
   </Text>
 );
 export const FaqLink = ({ children, href }: CustomLinkProps) => (
-  <CustomLink className="m-200 inline w-fit" hasLinkColor size="md" href={href}>
+  <CustomLink className="m-200 inline w-fit" hasLinkColor href={href}>
     {children}
   </CustomLink>
 );

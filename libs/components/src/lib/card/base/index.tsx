@@ -99,7 +99,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
           </div>
         )}
         {link && (
-          <CustomLink href={link.href} size="md" hasIcon>
+          <CustomLink href={link.href} hasIcon>
             {link.content}
           </CustomLink>
         )}

@@ -24,12 +24,7 @@ const Base: React.FC<FastPaymentProps> = ({
 
             {link && (
               <div className="flex justify-center">
-                <CustomLink
-                  size="lg"
-                  href={link.href}
-                  className="w-fit"
-                  hasIcon
-                >
+                <CustomLink href={link.href} className="w-fit" hasIcon>
                   {link.content}
                 </CustomLink>
               </div>
