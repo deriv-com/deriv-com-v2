@@ -94,9 +94,8 @@ export const mainRowNavItems: NavLinkItems = {
       {
         id: 0,
         header: {
-          href: '/trade-types',
           text: 'Trade types',
-          type: 'direct',
+          type: 'text',
         },
         items: [
           {
@@ -131,9 +130,8 @@ export const mainRowNavItems: NavLinkItems = {
       {
         id: 1,
         header: {
-          href: '/platforms',
           text: 'Trading platforms',
-          type: 'direct',
+          type: 'text',
         },
         items: [
           {
@@ -189,6 +187,10 @@ export const mainRowNavItems: NavLinkItems = {
       },
       {
         id: 2,
+        header: {
+          text: null,
+          type: 'text',
+        },
         items: [
           {
             id: 0,
@@ -334,6 +336,7 @@ export const mainRowNavItems: NavLinkItems = {
             href: '/regulatory',
             text: 'Regulatory information',
             type: 'direct',
+            isDesktopNavOnly: true,
           },
           {
             id: 2,
@@ -369,13 +372,14 @@ export const mainRowNavItems: NavLinkItems = {
             href: 'deriv-life',
             text: 'Deriv Life',
             type: 'direct',
+            external: true,
           },
         ],
       },
     ],
   },
   resources: {
-    id: 0,
+    id: 3,
     type: 'nav-dropdown',
     text: 'Resources',
     columns: [
@@ -393,6 +397,7 @@ export const mainRowNavItems: NavLinkItems = {
             href: '/community',
             text: 'Community',
             type: 'direct',
+            external: true,
           },
           {
             id: 2,
@@ -419,8 +424,83 @@ export const mainRowNavItems: NavLinkItems = {
           },
           {
             id: 1,
+            href: '/status',
+            text: 'Status page',
+            type: 'direct',
+          },
+          {
+            id: 2,
             href: '/deriv-blog',
             text: 'Deriv Blog',
+            type: 'direct',
+            external: true,
+          },
+        ],
+      },
+    ],
+  },
+  legal: {
+    id: 4,
+    type: 'nav-dropdown',
+    text: 'Legal',
+    isMobileNavOnly: true,
+    columns: [
+      {
+        id: 0,
+        items: [
+          {
+            id: 0,
+            href: '/regulatory',
+            text: 'Regulatory information',
+            type: 'direct',
+          },
+          {
+            id: 1,
+            href: '/terms-and-conditions',
+            text: 'Terms & conditions',
+            type: 'direct',
+          },
+          {
+            id: 2,
+            href: '/Secure & responsible trading',
+            text: 'Secure & responsible trading',
+            type: 'direct',
+          },
+        ],
+      },
+    ],
+  },
+  partners: {
+    id: 5,
+    type: 'nav-dropdown',
+    text: 'Partners',
+    isMobileNavOnly: true,
+    columns: [
+      {
+        id: 0,
+        items: [
+          {
+            id: 0,
+            href: '/deriv-prime',
+            text: 'Deriv Prime',
+            type: 'direct',
+          },
+          {
+            id: 1,
+            href: '/affiliates-and-ibs',
+            text: 'Affiliates and IBs',
+            type: 'direct',
+          },
+          {
+            id: 2,
+            href: '/payment-agents',
+            text: 'Payment agents',
+            type: 'direct',
+          },
+          {
+            id: 3,
+            href: '/api',
+            text: 'API',
             type: 'direct',
           },
         ],

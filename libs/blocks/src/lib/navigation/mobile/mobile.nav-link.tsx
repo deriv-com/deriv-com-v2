@@ -2,6 +2,7 @@ import { CustomLink } from '@deriv-com/components';
 import { useNavigation } from '@deriv-com/hooks';
 import { DirectNavLink } from '@deriv-com/providers';
 import { qtMerge } from '@deriv/quill-design';
+import { LabelPairedArrowUpRightRegularIcon } from '@deriv/quill-icons/LabelPaired';
 
 export interface MobileNavLinkProps {
   item: DirectNavLink;
@@ -24,6 +25,7 @@ export const MobileNavLink: React.FC<MobileNavLinkProps> = ({
       onClick={toggleMobileNav}
     >
       {item.text}
+      {item.external && <LabelPairedArrowUpRightRegularIcon iconSize="sm" />}
     </CustomLink>
   );
 };

@@ -1,40 +1,52 @@
 import { useNavigation } from '@deriv-com/hooks';
 import NavigationLink from './navigation.link';
+import { Text } from '@deriv/quill-design';
 
 export const NavigationContent = () => {
   const { activeItem } = useNavigation();
   return (
-    <div className="my-general-xl grid w-full grid-cols-4 items-start gap-gap-3xl overflow-y-auto overscroll-y-contain py-general-lg">
+    <div className="grid w-full grid-cols-4 items-start gap-gap-3xl overflow-y-auto overscroll-y-contain py-general-2xl">
       {activeItem && activeItem.type === 'nav-dropdown' ? (
         <>
           {activeItem.columns.map((column) => (
             <div
               key={column.id}
-              className="flex flex-col items-start justify-center gap-gap-lg"
+              className="flex flex-col items-start justify-center gap-gap-md"
             >
-              {column.header && (
-                <NavigationLink
-                  item={column.header}
-                  className="font-regular text-typography-subtle underline"
-                />
-              )}
-              {column.items.map((subItem) => {
-                return subItem.type === 'direct' ? (
-                  <NavigationLink item={subItem} key={subItem.id} />
+              {column.header &&
+                (column.header.type === 'text' ? (
+                  column.header.text === null ? (
+                    <div className="h-[38px] w-full"></div>
+                  ) : (
+                    <Text size="sm" className="w-full py-general-sm">
+                      {column.header.text}
+                    </Text>
+                  )
                 ) : (
-                  <div
-                    key={subItem.id}
-                    className="flex flex-col justify-center gap-gap-md"
-                  >
-                    <NavigationLink item={subItem.header} />
-                    <div className="flex flex-col gap-gap-xl pl-general-md">
-                      {subItem.subLinks.map((item) => (
-                        <NavigationLink item={item} />
-                      ))}
+                  <NavigationLink
+                    item={column.header}
+                    className="font-regular text-typography-subtle underline"
+                  />
+                ))}
+              <div>
+                {column.items.map((subItem) => {
+                  return subItem.type === 'direct' ? (
+                    <NavigationLink item={subItem} key={subItem.id} />
+                  ) : (
+                    <div
+                      key={subItem.id}
+                      className="flex flex-col justify-center gap-gap-md"
+                    >
+                      <NavigationLink item={subItem.header} />
+                      <div className="flex flex-col gap-gap-xl pl-general-md">
+                        {subItem.subLinks.map((item) => (
+                          <NavigationLink item={item} />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           ))}
         </>
