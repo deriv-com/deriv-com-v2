@@ -40,7 +40,7 @@ export const NavigationContent = () => {
                       <NavigationLink item={subItem.header} />
                       <div className="flex flex-col gap-gap-xl pl-general-md">
                         {subItem.subLinks.map((item) => (
-                          <NavigationLink item={item} />
+                          <NavigationLink item={item} key={item.id} />
                         ))}
                       </div>
                     </div>

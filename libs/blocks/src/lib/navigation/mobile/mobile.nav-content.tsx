@@ -45,7 +45,7 @@ export const MobileNavContent = () => {
                       <MobileNavLink item={subItem.header} />
                       <div className="flex flex-col gap-gap-xl pl-general-md">
                         {subItem.subLinks.map((item) => (
-                          <MobileNavLink item={item} />
+                          <MobileNavLink item={item} key={item.id} />
                         ))}
                       </div>
                     </div>

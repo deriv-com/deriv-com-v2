@@ -18,13 +18,11 @@ export const MobileHeader = () => {
       {hasActiveMenu && (
         <StandaloneChevronLeftRegularIcon
           className="cursor-pointer"
-          iconSize="md"
           onClick={() => setActiveMenu?.('none')}
         />
       )}
       <StandaloneXmarkRegularIcon
         className="cursor-pointer"
-        iconSize="md"
         onClick={toggleMobileNav}
       />
     </FluidContainer>
