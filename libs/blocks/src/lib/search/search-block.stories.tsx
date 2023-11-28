@@ -72,7 +72,7 @@ const Content = () => {
                 {results.map(({ elements }) =>
                   elements.map((item) => {
                     return (
-                      <CustomLink key={item} href="" className="justify-start">
+                      <CustomLink key={item} href="" className="text-body-md">
                         {item}
                       </CustomLink>
                     );
