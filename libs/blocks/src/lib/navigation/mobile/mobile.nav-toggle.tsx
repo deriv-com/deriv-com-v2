@@ -1,18 +1,14 @@
 import { useNavigation } from '@deriv-com/hooks';
-import { IconButton } from '@deriv/quill-design';
-import { LabelPairedBarsBoldIcon } from '@deriv/quill-icons/LabelPaired';
+import { StandaloneBarsBoldIcon } from '@deriv/quill-icons/Standalone';
 
 export const MobileNavToggle = () => {
   const { toggleMobileNav } = useNavigation();
 
   return (
-    <IconButton
-      className="md:hidden"
-      colorStyle="black"
-      size="lg"
-      variant="tertiary"
+    <StandaloneBarsBoldIcon
       onClick={toggleMobileNav}
-      icon={LabelPairedBarsBoldIcon}
+      iconSize="md"
+      className="md:hidden"
     />
   );
 };

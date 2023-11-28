@@ -28,7 +28,7 @@ export const StatCard: React.FC<StatCardProps> = ({
       className={qtMerge(
         colorVariants[color],
         'rounded-xl',
-        'p-2000',
+        'p-general-2xl',
         'flex flex-col',
         'min-h-[160px] w-full lg:min-h-[340px]',
         'items-start  justify-end',

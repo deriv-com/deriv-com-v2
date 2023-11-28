@@ -24,11 +24,7 @@ export const TradeTypeBlock = <T extends CardVariantType>({
     <Section className="bg-background-primary-container py-general-4xl">
       <FluidContainer className="flex flex-col items-center justify-center gap-gap-xl">
         <Heading.H2>{title}</Heading.H2>
-        {description && (
-          <Text size="lg" className="text-typography-default">
-            {description}
-          </Text>
-        )}
+        {description && <Text size="md">{description}</Text>}
         <CardsContainer
           variant={variant}
           cards={cards}
