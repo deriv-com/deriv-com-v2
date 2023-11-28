@@ -51,9 +51,8 @@ export const LiveMarket = <T extends CardVariantType>({
         {description && <Text className="text-center">{description}</Text>}
         {link && (
           <CustomLink
-            size="md"
             href={link.href}
-            className="flex items-center justify-center text-body-md"
+            className="flex items-center justify-center"
           >
             {link.content}
             <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />
