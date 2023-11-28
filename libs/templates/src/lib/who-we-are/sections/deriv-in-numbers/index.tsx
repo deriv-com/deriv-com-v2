@@ -26,7 +26,7 @@ const derivInNumbersCard: StatCardContent[] = [
 
 export const WhoWeAreNumbers = () => {
   return (
-    <StatBlock.NumbersWithTitle
+    <StatBlock.V1
       title="Deriv in numbers"
       description="We aim to deliver market-leading products that are trusted around the world. "
       cards={derivInNumbersCard}

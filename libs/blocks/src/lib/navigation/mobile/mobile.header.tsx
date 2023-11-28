@@ -1,9 +1,8 @@
 import { useNavigation } from '@deriv-com/hooks';
 import { FluidContainer, IconButton } from '@deriv/quill-design';
-import {
-  LabelPairedChevronLeftRegularIcon,
-  LabelPairedXmarkRegularIcon,
-} from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedChevronLeftRegularIcon } from '@deriv/quill-icons/LabelPaired';
+
+import { StandaloneXmarkRegularIcon } from '@deriv/quill-icons/Standalone';
 import clsx from 'clsx';
 
 export const MobileHeader = () => {
@@ -25,13 +24,7 @@ export const MobileHeader = () => {
           icon={LabelPairedChevronLeftRegularIcon}
         />
       )}
-      <IconButton
-        colorStyle="black"
-        onClick={toggleMobileNav}
-        size="lg"
-        variant="tertiary"
-        icon={LabelPairedXmarkRegularIcon}
-      />
+      <StandaloneXmarkRegularIcon iconSize="md" onClick={toggleMobileNav} />
     </FluidContainer>
   );
 };
