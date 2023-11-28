@@ -1,12 +1,13 @@
 {
   "name": "@deriv-com/hooks",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
     ".": {
       "import": "./index.mjs",
-      "require": "./index.js"
+      "require": "./index.js",
+      "types": "./index.d.ts"
     }
   },
   "publishConfig": {

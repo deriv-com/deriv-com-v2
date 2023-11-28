@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.9.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.8.0...components-0.9.0) (2023-11-27)
+
+## [0.8.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.7.0...components-0.8.0) (2023-11-27)
+
+## [0.7.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.6.0...components-0.7.0) (2023-11-26)
+
+## [0.6.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.5.0...components-0.6.0) (2023-11-24)
+
+
+### Bug Fixes
+
+* gap issue between card title and description ([7e86187](https://github.com/deriv-com/deriv-com-v2/commit/7e86187d155805b57c287514700546788e0836a5))
+* text align issue for our locations ([db09def](https://github.com/deriv-com/deriv-com-v2/commit/db09def9a1ff7f9fd51575e99646461b25ea87f4))
+
 ## [0.5.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.4.0...components-0.5.0) (2023-11-21)
 
 
@@ -9,7 +23,6 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 * updated blocks, components package json to fix types ([71767c3](https://github.com/deriv-com/deriv-com-v2/commit/71767c3758255e98e14686a19a4b394599abd248))
 
-## [0.4.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.3.0...components-0.4.0) (2023-11-20)
 
 ## [0.3.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.2.0...components-0.3.0) (2023-11-20)
 
@@ -18,7 +31,6 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 * account table cta ([d879bb9](https://github.com/deriv-com/deriv-com-v2/commit/d879bb9ea22a39b1688397c907a720abde214265))
 
-## [0.2.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.1.0...components-0.2.0) (2023-11-19)
 
 ## 0.1.0 (2023-11-19)
 

@@ -1,8 +1,8 @@
 import { FastPayment } from '@deriv-com/blocks';
 import {
-  PaymentMethodChequeBrandLightIcon,
-  PaymentMethodFpsBrandLightIcon,
-  PaymentMethodWireTransferBrandLightIcon,
+  PaymentMethodChequeBrandIcon,
+  PaymentMethodFpsBrandIcon,
+  PaymentMethodWireTransferBrandIcon,
 } from '@deriv/quill-icons/Logo';
 
 const FastPaymentSection = () => {
@@ -22,7 +22,7 @@ const FastPaymentSection = () => {
             align: 'center',
             size: 'lg',
             icon: (
-              <PaymentMethodChequeBrandLightIcon
+              <PaymentMethodChequeBrandIcon
                 fill="black"
                 width={128}
                 height={80}
@@ -36,11 +36,7 @@ const FastPaymentSection = () => {
             align: 'center',
             size: 'lg',
             icon: (
-              <PaymentMethodFpsBrandLightIcon
-                fill="black"
-                width={128}
-                height={80}
-              />
+              <PaymentMethodFpsBrandIcon fill="black" width={128} height={80} />
             ),
             nonContentClassName: 'p-general-xl',
           },
@@ -50,7 +46,7 @@ const FastPaymentSection = () => {
             align: 'center',
             size: 'lg',
             icon: (
-              <PaymentMethodWireTransferBrandLightIcon
+              <PaymentMethodWireTransferBrandIcon
                 fill="black"
                 width={128}
                 height={80}

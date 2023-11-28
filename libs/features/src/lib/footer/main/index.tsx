@@ -1,10 +1,10 @@
 import { Footer } from '@deriv-com/blocks';
 import { footerData } from './data';
-import { MainDescriptionContent } from './main.description.content';
+import { DescriptionContent } from './description';
 
 export const MainFooter = () => {
   return (
-    <Footer.FooterBlock descriptionContent={MainDescriptionContent}>
+    <Footer.FooterBlock descriptionContent={DescriptionContent}>
       <Footer.MainNavContent items={footerData} />
     </Footer.FooterBlock>
   );
