@@ -19,7 +19,7 @@ const Base: React.FC<FastPaymentProps> = ({
           <div className="flex flex-col gap-gap-2xl">
             <div className="flex flex-col items-center justify-center gap-general-lg text-center max-sm:gap-general-md">
               <Heading.H2>{title}</Heading.H2>
-              {description && <Text size="xl">{description}</Text>}
+              {description && <Text size="md">{description}</Text>}
             </div>
 
             {link && (
@@ -30,7 +30,7 @@ const Base: React.FC<FastPaymentProps> = ({
               </div>
             )}
           </div>
-          <div className="flex flex-col items-center justify-center gap-general-lg">
+          <div className="flex flex-col items-center justify-center gap-gap-3xl">
             <div className="flex w-full justify-center">
               <CardsContainer
                 cards={cards}
@@ -40,7 +40,9 @@ const Base: React.FC<FastPaymentProps> = ({
               />
             </div>
             {disclaimer && (
-              <p className="text-100 text-typography-subtle">{disclaimer}</p>
+              <Text size="sm" className="text-typography-subtle">
+                {disclaimer}
+              </Text>
             )}
           </div>
         </div>
