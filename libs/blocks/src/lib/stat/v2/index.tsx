@@ -2,12 +2,12 @@ import { CardsContainer, StatCardContent } from '@deriv-com/components';
 import { FluidContainer, Section } from '@deriv/quill-design';
 import clsx from 'clsx';
 
-export interface NumbersOnlyProps {
+export interface V2StatBlockProps {
   cards: StatCardContent[];
   className?: string;
 }
 
-export const NumbersOnly: React.FC<NumbersOnlyProps> = ({
+export const V2StatBlock: React.FC<V2StatBlockProps> = ({
   cards,
   className,
 }) => {
@@ -20,4 +20,4 @@ export const NumbersOnly: React.FC<NumbersOnlyProps> = ({
   );
 };
 
-export default NumbersOnly;
+export default V2StatBlock;

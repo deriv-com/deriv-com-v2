@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import NumbersOnly from '.';
 
 const meta = {
-  title: 'Blocks/Stat/Numbers Only',
+  title: 'Blocks/Stat/V2',
   component: NumbersOnly,
 } satisfies Meta<typeof NumbersOnly>;
 
