@@ -16,12 +16,13 @@
     "chromatic": "chromatic --exit-zero-on-changes --only-changed --exit-once-uploaded --output-dir dist/storybook/storybook-host",
     "test:ci": "nx run-many --target=test --all --parallel --coverage --coverageReporters=lcov && node ./tools/coverageMerger.js",
     "lint": "npx nx run-many --target=lint --all --parallel",
-    "lint:fix": "npx nx run-many --target=lint --all --parallel --fix"
+    "lint:fix": "npx nx run-many --target=lint --all --parallel --fix",
+    "test": "npx nx run-many --target=test --all --parallel"
   },
   "private": true,
   "dependencies": {
-    "@deriv/quill-design": "1.1.12",
-    "@deriv/quill-icons": "^1.0.10",
+    "@deriv/quill-design": "^1.2.1",
+    "@deriv/quill-icons": "^1.0.11",
     "@nx/next": "16.8.1",
     "@react-hook/window-size": "^3.1.1",
     "@swc/helpers": "~0.5.0",

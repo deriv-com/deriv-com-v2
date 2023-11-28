@@ -3,6 +3,8 @@ import { CardsContainer, CustomLink } from '@deriv-com/components';
 
 import { FastPaymentProps } from '../types';
 
+// TODO: Complete Redo needed
+
 const Base: React.FC<FastPaymentProps> = ({
   title,
   description,
@@ -22,12 +24,7 @@ const Base: React.FC<FastPaymentProps> = ({
 
             {link && (
               <div className="flex justify-center">
-                <CustomLink
-                  size="md"
-                  href={link.href}
-                  className="w-fit"
-                  hasIcon
-                >
+                <CustomLink href={link.href} className="w-fit" hasIcon>
                   {link.content}
                 </CustomLink>
               </div>

@@ -20,7 +20,7 @@ export const MainNavigationButtons = () => {
   };
 
   return (
-    <div className="flex flex-row items-center gap-gap-sm">
+    <div className="flex flex-row items-center gap-gap-md">
       {isLoggedIn ? (
         <Button
           variant="secondary"

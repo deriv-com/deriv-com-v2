@@ -17,10 +17,7 @@ export const MobileNavLink: React.FC<MobileNavLinkProps> = ({
   return (
     <CustomLink
       href={item.href}
-      className={qtMerge(
-        'py-general-sm text-body-md font-bold leading-body-md text-typography-default',
-        className,
-      )}
+      className={qtMerge('py-general-sm font-bold leading-body-md ', className)}
       onClick={toggleMobileNav}
     >
       {item.text}
