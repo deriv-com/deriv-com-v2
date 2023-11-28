@@ -26,7 +26,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
     >
       {item.type === 'direct' ? (
         <CustomLink
-          className="text-typography-default"
+          size="sm"
           href={item.href}
           onMouseEnter={() => {
             onListItemHover?.(navItemName);
