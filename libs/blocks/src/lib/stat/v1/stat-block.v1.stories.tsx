@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import NumbersWithTitle from '.';
+import V1StatBlock from '.';
 
 const meta = {
-  title: 'Blocks/Stat/NumbersWithTitle',
-  component: NumbersWithTitle,
-} satisfies Meta<typeof NumbersWithTitle>;
+  title: 'Blocks/Stat/V1',
+  component: V1StatBlock,
+} satisfies Meta<typeof V1StatBlock>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
