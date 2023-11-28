@@ -35,11 +35,11 @@ export interface TPilotDataProps {
   trustScore: number;
 }
 
-type StarBoxProps = {
+interface StarBoxProps {
   percent: number;
   colorKey?: number;
   size?: 'sm' | 'md';
-};
+}
 
 const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
   const rateWidths: { [key: number]: string } = {
