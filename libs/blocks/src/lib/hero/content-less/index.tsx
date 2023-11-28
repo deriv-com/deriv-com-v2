@@ -5,7 +5,7 @@ export interface ContentLessProps {
   title: string;
   description?: string;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const ContentLess = ({
