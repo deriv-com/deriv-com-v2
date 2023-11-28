@@ -34,11 +34,7 @@ export const TradeTypeBlock = <T extends CardVariantType>({
         >
           {title}
         </Heading.H2>
-        {description && (
-          <Text size="lg" className="pb-general-2xl">
-            {description}
-          </Text>
-        )}
+        {description && <Text className="pb-general-2xl">{description}</Text>}
         <CardsContainer
           variant={variant}
           cards={cards}
