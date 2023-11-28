@@ -19,7 +19,7 @@ type SearchResults = {
   elements: string[];
 };
 
-export const Mockdata: SearchResults[] = [
+const Mockdata: SearchResults[] = [
   {
     header: 'Account',
     elements: [
