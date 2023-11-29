@@ -98,11 +98,11 @@ export const useTrustpilotApi = (
       try {
         const appName =
           process.env.NEXT_PUBLIC_TRUSTPILOT_APP_NAME ||
-          process.env.TRUSTPILOT_APP_NAME ||
+          process.env.GATSBY_TRUSTPILOT_APP_NAME ||
           '';
         const apiKey =
           process.env.NEXT_PUBLIC_TRUSTPILOT_API_KEY ||
-          process.env.TRUSTPILOT_API_KEY ||
+          process.env.GATSBY_TRUSTPILOT_API_KEY ||
           '';
 
         if (!appName || !apiKey) {
