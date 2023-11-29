@@ -1,6 +1,6 @@
 import { useNavigation } from '@deriv-com/hooks';
-import { FluidContainer, IconButton } from '@deriv/quill-design';
-import { LabelPairedChevronLeftRegularIcon } from '@deriv/quill-icons/LabelPaired';
+import { FluidContainer } from '@deriv/quill-design';
+import { StandaloneChevronLeftRegularIcon } from '@deriv/quill-icons';
 
 import { StandaloneXmarkRegularIcon } from '@deriv/quill-icons/Standalone';
 import clsx from 'clsx';
@@ -11,20 +11,20 @@ export const MobileHeader = () => {
   return (
     <FluidContainer
       className={clsx(
-        'flex min-h-[80px] items-center py-general-md',
+        'flex min-h-[80px] items-center py-general-lg',
         hasActiveMenu ? 'justify-between' : 'justify-end',
       )}
     >
       {hasActiveMenu && (
-        <IconButton
-          colorStyle="black"
+        <StandaloneChevronLeftRegularIcon
+          className="cursor-pointer"
           onClick={() => setActiveMenu?.('none')}
-          size="lg"
-          variant="tertiary"
-          icon={LabelPairedChevronLeftRegularIcon}
         />
       )}
-      <StandaloneXmarkRegularIcon iconSize="md" onClick={toggleMobileNav} />
+      <StandaloneXmarkRegularIcon
+        className="cursor-pointer"
+        onClick={toggleMobileNav}
+      />
     </FluidContainer>
   );
 };
