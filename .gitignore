@@ -43,8 +43,7 @@ Thumbs.db
 .next
 
 # environment vars
-.env 
-.env.development
+.env* 
 
 **/optimized-images/**/*
 
