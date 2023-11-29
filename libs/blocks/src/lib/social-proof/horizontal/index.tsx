@@ -1,5 +1,5 @@
 import { Section, Text, qtMerge } from '@deriv/quill-design';
-import { OptimizedImage, Rating } from '@deriv-com/components';
+import { Rating } from '@deriv-com/components';
 import { useTrustpilotApi } from '@deriv-com/hooks';
 import { SocialProofProps } from '../types';
 import { getThemeClassNames } from '../classnames';
@@ -8,6 +8,7 @@ const SocialProofHorizontal = ({
   theme,
   className,
   content,
+  logo,
   staticData = null,
 }: SocialProofProps) => {
   const { data } = useTrustpilotApi(staticData);
@@ -50,12 +51,7 @@ const SocialProofHorizontal = ({
             )}
           </>
         )}
-        <OptimizedImage
-          imageName={themeClassNames.logo}
-          alt="trustpilot"
-          width={97}
-          height={24}
-        />
+        {logo}
       </div>
     </Section>
   );

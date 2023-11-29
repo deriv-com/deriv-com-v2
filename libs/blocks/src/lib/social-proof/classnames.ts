@@ -1,8 +1,6 @@
 import {
   SocialProofCustomThemeProps,
   SocialProofThemeClassNames,
-  logoUrls,
-  themeVariant,
 } from './types';
 
 export const getThemeClassNames = (
@@ -10,9 +8,7 @@ export const getThemeClassNames = (
 ): SocialProofThemeClassNames => {
   const bgClassName = theme?.background || 'bg-background-primary-container';
   const colorClassName = theme?.color || '';
-  const logo: themeVariant = theme?.logo || 'light';
   const caret = theme?.divider || 'light';
-  const logoImage = logoUrls[logo];
 
   const caretClassName = {
     light: 'bg-opacity-black-200',
@@ -23,6 +19,5 @@ export const getThemeClassNames = (
     background: bgClassName,
     color: colorClassName,
     caret: caretClassName[caret],
-    logo: logoImage,
   };
 };
