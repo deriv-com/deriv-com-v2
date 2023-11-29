@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { additionalInfo, mainInfo, tradingCondition } from '../data/data';
 import { TableDataType } from '../types/types';
@@ -15,10 +16,9 @@ import {
   SearchField,
   Section,
   Text,
+  Pagination,
 } from '@deriv/quill-design';
 import {
-  StandaloneChevronLeftRegularIcon,
-  StandaloneChevronRightRegularIcon,
   StandaloneCircleDotFillIcon,
   StandaloneCircleRegularIcon,
   StandaloneXmarkBoldIcon,
@@ -28,6 +28,11 @@ import { BottomSheet } from '@deriv-com/components';
 import clsx from 'clsx';
 import Chips from '../chips';
 
+type TPaginationEvent = {
+  currentPage: number;
+  totalPageCount: number;
+};
+
 const TradingSpecTable = () => {
   const [data, setData] = useState<TableDataType[]>([]);
   const [selectedFilter, setSelectedFilter] = useState<TableDataType[]>(
@@ -36,6 +41,8 @@ const TradingSpecTable = () => {
   const [selectedInfo, setSelectedInfo] = useState('mainInfo');
   const [searchValue, setSearchValue] = useState('');
   const [showBottomSheet, setShowBottomSheet] = useState(false);
+  const pageSize = 15;
+  const pageCount = data.length + 1;
 
   const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -77,6 +84,12 @@ const TradingSpecTable = () => {
   useEffect(() => {
     document.body.style.overflow = showBottomSheet ? 'hidden' : 'scroll';
   }, [showBottomSheet]);
+
+  const handlePagination = ({ currentPage }: TPaginationEvent) => {
+    if (currentPage) {
+      table.setPageIndex(currentPage - 1);
+    }
+  };
   return (
     <Section className="py-general-4xl md:px-general-md lg:mx-auto lg:max-w-[1232px]">
       <div className="flex flex-row gap-gap-lg px-general-md pb-general-md lg:justify-between lg:px-general-none lg:pb-general-lg">
@@ -158,42 +171,15 @@ const TradingSpecTable = () => {
       )}
       {data.length > 1 && (
         <div className="flex flex-col gap-gap-xl pt-general-lg lg:gap-gap-2xl">
-          <div className="flex justify-center gap-gap-md">
-            <Button
-              onClick={() => table.previousPage()}
-              disabled={!table.getCanPreviousPage()}
-              className="bg-opacity-white-100"
-            >
-              <StandaloneChevronLeftRegularIcon fill="black" iconSize="sm" />
-            </Button>
-            {table.getPageOptions().map((page) => {
-              const selected = page === table.getState().pagination.pageIndex;
-              return (
-                <Button
-                  key={page}
-                  onClick={() => table.setPageIndex(page)}
-                  color="black"
-                  className={qtMerge(
-                    selected
-                      ? 'bg-solid-slate-1400'
-                      : ' bg-background-primary-container text-opacity-black-600',
-                    'p-general-md',
-                  )}
-                >
-                  {page + 1}
-                </Button>
-              );
-            })}
-            <Button
-              onClick={() => table.nextPage()}
-              disabled={!table.getCanNextPage()}
-              className="bg-opacity-white-100"
-            >
-              <StandaloneChevronRightRegularIcon fill="black" iconSize="sm" />
-            </Button>
-          </div>
+          <Pagination
+            variant="number"
+            contentPerPage={pageSize}
+            contentLength={pageCount}
+            onPagination={handlePagination}
+          />
         </div>
       )}
+
       <div className="flex justify-center pt-general-xl md:pt-general-2xl lg:pt-general-2xl">
         <Button
           colorStyle="coral"
