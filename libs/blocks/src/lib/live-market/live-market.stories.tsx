@@ -19,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     header: 'Header here',
-    description: 'desciption here description here',
+    description: 'Desciption goes here description goes here',
     cardSliderProps: {
       variant: 'LiveMarketCard',
       slideClasses: 'max-w-[286px]',

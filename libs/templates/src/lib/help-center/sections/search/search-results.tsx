@@ -53,7 +53,7 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
                         <CustomLink
                           key={question}
                           href={getHelpCentreLink(header, question)}
-                          className="justify-start"
+                          className="text-body-md"
                         >
                           {question}
                         </CustomLink>
