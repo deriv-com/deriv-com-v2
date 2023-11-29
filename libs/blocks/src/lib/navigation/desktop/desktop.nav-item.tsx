@@ -16,30 +16,32 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
   const { onListItemHover } = useNavigation();
 
   return (
-    <li
-      className="flex h-full items-center justify-center px-general-lg text-center"
-      onMouseEnter={() => {
-        if (item.type === 'nav-dropdown') {
-          onListItemHover?.(navItemName);
-        }
-      }}
-    >
-      {item.type === 'direct' ? (
-        <CustomLink
-          className="text-typography-default"
-          href={item.href}
-          onMouseEnter={() => {
+    !item.isMobileNavOnly && (
+      <li
+        className="flex h-full items-center justify-center px-general-lg text-center"
+        onMouseEnter={() => {
+          if (item.type === 'nav-dropdown') {
             onListItemHover?.(navItemName);
-          }}
-        >
-          {item.text}
-        </CustomLink>
-      ) : (
-        <Text size="sm" className="cursor-pointer hover:text-typography-link">
-          {item.text}
-        </Text>
-      )}
-    </li>
+          }
+        }}
+      >
+        {item.type === 'direct' ? (
+          <CustomLink
+            className="text-typography-default"
+            href={item.href}
+            onMouseEnter={() => {
+              onListItemHover?.(navItemName);
+            }}
+          >
+            {item.text}
+          </CustomLink>
+        ) : (
+          <Text size="sm" className="cursor-pointer hover:text-typography-link">
+            {item.text}
+          </Text>
+        )}
+      </li>
+    )
   );
 };
 

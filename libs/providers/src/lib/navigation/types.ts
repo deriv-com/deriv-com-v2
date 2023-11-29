@@ -2,12 +2,15 @@ type WithId<T> = T & { id: number };
 
 export interface BaseNavItem {
   text: string;
+  isMobileNavOnly?: boolean;
 }
 
 export interface BaseNavLink extends BaseNavItem {
   href: string;
   icon?: React.ReactNode;
   description?: string;
+  external?: boolean;
+  isDesktopNavOnly?: boolean;
 }
 
 export interface DirectNavLink extends BaseNavLink {
@@ -20,8 +23,13 @@ export interface SubNavLink {
   subLinks: WithId<DirectNavLink>[];
 }
 
+export interface NavHeaderText {
+  type: 'text';
+  text: string | null;
+}
+
 export interface DropdownNavLinkColumn {
-  header?: DirectNavLink;
+  header?: DirectNavLink | NavHeaderText;
   items: Array<WithId<SubNavLink> | WithId<DirectNavLink>>;
 }
 

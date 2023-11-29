@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.12.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.11.0...components-0.12.0) (2023-11-29)
+
+
+### Bug Fixes
+
+* Rating component export issue ([43e0c07](https://github.com/deriv-com/deriv-com-v2/commit/43e0c070ad49d0150397326abc5867cd8433690d))
+
 ## [0.11.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.10.0...components-0.11.0) (2023-11-29)
 
 
