@@ -44,6 +44,7 @@ export const CardsContainer = <T extends CardVariantType>({
               className={qtMerge(
                 'gap-gap-lg', // TODO: Add sm/md/lg/xl variants if needed
                 cardColsVariant[cols],
+                'pr-general-md',
                 className,
               )}
               id="infinite-carousel"

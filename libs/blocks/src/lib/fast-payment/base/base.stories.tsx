@@ -3,19 +3,19 @@ import Base from '.';
 import { cards } from './data';
 
 const content: Record<string, object | null> = {
-  two_cols: {
+  two_col: {
     cols: 'two',
     cards: cards.slice(0, 2),
   },
-  three_cols: {
+  three_col: {
     cols: 'three',
     cards: cards.slice(0, 3),
   },
-  four_cols: {
+  four_col: {
     cols: 'four',
     cards: cards.slice(0, 4),
   },
-  five_cols: {
+  five_col: {
     cols: 'five',
     cards: cards.slice(0, 5),
   },
