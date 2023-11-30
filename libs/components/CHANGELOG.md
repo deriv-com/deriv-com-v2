@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.15.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.14.0...components-0.15.0) (2023-11-30)
+
+## [0.14.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.13.0...components-0.14.0) (2023-11-30)
+
+## [0.13.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.12.0...components-0.13.0) (2023-11-30)
+
+
+### Features
+
+* add logo slide carousel in fastpayment ([5cce467](https://github.com/deriv-com/deriv-com-v2/commit/5cce4679d4a6b5259edec915e81e841ff5e06be1))
+
+
+### Bug Fixes
+
+* gap between each array ([ead3532](https://github.com/deriv-com/deriv-com-v2/commit/ead3532498e2e7486dcf9b92dba192b9c5a3866c))
+
 ## [0.12.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.11.0...components-0.12.0) (2023-11-29)
 
 
