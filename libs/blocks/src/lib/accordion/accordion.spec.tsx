@@ -2,24 +2,27 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AccordionBlock from '.';
 import { StandaloneAndroidIcon } from '@deriv/quill-icons/Standalone';
+import { AccordionProps } from '@deriv-com/components';
 
 const childTitle = 'This is the title';
 const subTitle = 'Subtitle goes here';
 
-const data = [
-  {
-    icon: <StandaloneAndroidIcon />,
-    title: childTitle,
-    subtitle: subTitle,
-    className: 'border-opacity-black-100 border-x-none',
-    content: () => (
-      <img
-        className="flex w-full flex-1"
-        src="https://placehold.co/640x320"
-        alt="Placeholder"
-      />
-    ),
-  },
+const data: AccordionProps[][] = [
+  [
+    {
+      icon: <StandaloneAndroidIcon />,
+      title: childTitle,
+      subtitle: subTitle,
+      className: 'border-opacity-black-100 border-x-none',
+      content: () => (
+        <img
+          className="flex w-full flex-1"
+          src="https://placehold.co/640x320"
+          alt="Placeholder"
+        />
+      ),
+    },
+  ],
 ];
 
 describe('AccordionBlock', () => {
@@ -33,7 +36,7 @@ describe('AccordionBlock', () => {
         title={title}
         variant="Flush"
         content={{
-          data: data,
+          data,
         }}
       />,
     );
