@@ -8,7 +8,7 @@ export const MobileNavToggle = () => {
     <StandaloneBarsBoldIcon
       onClick={toggleMobileNav}
       iconSize="md"
-      className="md:hidden"
+      className="cursor-pointer md:hidden"
     />
   );
 };

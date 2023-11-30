@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.12.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.11.0...components-0.12.0) (2023-11-29)
+
+
+### Bug Fixes
+
+* Rating component export issue ([43e0c07](https://github.com/deriv-com/deriv-com-v2/commit/43e0c070ad49d0150397326abc5867cd8433690d))
+
+## [0.11.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.10.0...components-0.11.0) (2023-11-29)
+
+
+### Bug Fixes
+
+* semantic classname usage ([fa34807](https://github.com/deriv-com/deriv-com-v2/commit/fa34807c97bb18be4fdacfb81b522d4ed52e5fe1))
+* truspilot icons ([672e1dc](https://github.com/deriv-com/deriv-com-v2/commit/672e1dcd8280204d6250ca7da9df1fd8cc5e1f1e))
+
 ## [0.10.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.9.0...components-0.10.0) (2023-11-28)
 
 
