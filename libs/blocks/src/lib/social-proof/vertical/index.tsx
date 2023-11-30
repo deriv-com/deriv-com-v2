@@ -1,5 +1,5 @@
 import { Heading, Section, Text, qtMerge } from '@deriv/quill-design';
-import { OptimizedImage, Rating } from '@deriv-com/components';
+import { Rating } from '@deriv-com/components';
 import { useTrustpilotApi } from '@deriv-com/hooks';
 
 import { SocialProofProps } from '../types';
@@ -15,6 +15,7 @@ const SocialProofVertical = ({
   className,
   content,
   staticData,
+  logo,
 }: SocialProofVerticalProps) => {
   const { data } = useTrustpilotApi(staticData);
 
@@ -34,12 +35,7 @@ const SocialProofVertical = ({
         )}
 
         <div className="flex flex-col items-center gap-gap-lg">
-          <OptimizedImage
-            imageName={themeClassNames.logo}
-            alt="trustpilot"
-            width={282}
-            height={67}
-          />
+          {logo}
           {data && (
             <>
               <Rating rate={data.stars} />

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SocialProof } from '..';
+import { OptimizedImage } from '@deriv-com/components';
 
 const meta = {
   title: 'Blocks/SocialProof/Horizontal',
@@ -20,6 +21,14 @@ export const Default: Story = {
       numberOfReviews: '45454',
       stars: 4.4,
     },
+    logo: (
+      <OptimizedImage
+        imageName="home/trustpilot/trustpilot-logo.png"
+        alt="trustpilot"
+        width={97}
+        height={24}
+      />
+    ),
   },
 };
 
@@ -37,8 +46,15 @@ export const CustomTheme: Story = {
     theme: {
       color: '!text-[#ffffff]',
       background: 'bg-solid-slate-700',
-      logo: 'dark',
     },
+    logo: (
+      <OptimizedImage
+        imageName="home/trustpilot/trustpilot-logo-white.png"
+        alt="trustpilot"
+        width={97}
+        height={24}
+      />
+    ),
   },
 };
 
@@ -53,6 +69,14 @@ export const BadScore: Story = {
       numberOfReviews: '45454',
       stars: 0.6,
     },
+    logo: (
+      <OptimizedImage
+        imageName="home/trustpilot/trustpilot-logo.png"
+        alt="trustpilot"
+        width={97}
+        height={24}
+      />
+    ),
   },
 };
 
@@ -67,6 +91,14 @@ export const PoorScore: Story = {
       numberOfReviews: '45454',
       stars: 1.6,
     },
+    logo: (
+      <OptimizedImage
+        imageName="home/trustpilot/trustpilot-logo.png"
+        alt="trustpilot"
+        width={97}
+        height={24}
+      />
+    ),
   },
 };
 
@@ -81,6 +113,14 @@ export const AverageScore: Story = {
       numberOfReviews: '45454',
       stars: 2.5,
     },
+    logo: (
+      <OptimizedImage
+        imageName="home/trustpilot/trustpilot-logo.png"
+        alt="trustpilot"
+        width={97}
+        height={24}
+      />
+    ),
   },
 };
 
@@ -95,6 +135,14 @@ export const GreatScore: Story = {
       numberOfReviews: '99990',
       stars: 3.8,
     },
+    logo: (
+      <OptimizedImage
+        imageName="home/trustpilot/trustpilot-logo.png"
+        alt="trustpilot"
+        width={97}
+        height={24}
+      />
+    ),
   },
 };
 
@@ -109,5 +157,13 @@ export const ExcellentScore: Story = {
       numberOfReviews: '45454',
       stars: 4.8,
     },
+    logo: (
+      <OptimizedImage
+        imageName="home/trustpilot/trustpilot-logo.png"
+        alt="trustpilot"
+        width={97}
+        height={24}
+      />
+    ),
   },
 };
