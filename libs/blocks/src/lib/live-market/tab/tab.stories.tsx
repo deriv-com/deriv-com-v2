@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import LiveMarketBlock from '..';
+import LiveMarketTab from '.';
 import {
   MarketForexAudusdIcon,
   MarketForexEurusdIcon,
@@ -10,16 +10,16 @@ import { CardsContainer } from '@deriv-com/components';
 
 const meta = {
   title: 'Blocks/LiveMarket/Tab',
-  component: LiveMarketBlock.Tab,
-} satisfies Meta<typeof LiveMarketBlock.Tab>;
+  component: LiveMarketTab,
+} satisfies Meta<typeof LiveMarketTab>;
 
 export default meta;
-type Story = StoryObj<typeof LiveMarketBlock.Tab>;
+type Story = StoryObj<typeof LiveMarketTab>;
 
 export const Default: Story = {
   render: () => {
     return (
-      <LiveMarketBlock.Tab
+      <LiveMarketTab
         header="Header here"
         description="desciption here description here"
         className="bg-background-primary-base"
@@ -175,7 +175,7 @@ export const Default: Story = {
             },
           ]}
         />
-      </LiveMarketBlock.Tab>
+      </LiveMarketTab>
     );
   },
   parameters: {

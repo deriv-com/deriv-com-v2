@@ -5,12 +5,12 @@ import {
   MarketForexGbpusdIcon,
   MarketForexUsdjpyIcon,
 } from '@deriv/quill-icons/Markets';
-import LiveMarketBlock from '.';
+import LiveMarketSlider from '.';
 
 const meta = {
   title: 'Blocks/LiveMarket/Slider',
-  component: LiveMarketBlock.Slider,
-} satisfies Meta<typeof LiveMarketBlock.Slider>;
+  component: LiveMarketSlider,
+} satisfies Meta<typeof LiveMarketSlider>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
