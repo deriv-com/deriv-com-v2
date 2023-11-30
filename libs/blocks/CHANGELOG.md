@@ -2,6 +2,24 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.18.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.17.0...blocks-0.18.0) (2023-11-30)
+
+
+### Features
+
+* chipset for accordion ([79e3dd5](https://github.com/deriv-com/deriv-com-v2/commit/79e3dd5c57929fb0ccbc84a9d377d7c6560f2e8d))
+* chipset for accordion ([07dd419](https://github.com/deriv-com/deriv-com-v2/commit/07dd41967de983ebe2ed76aff621f59fa2ac007b))
+* chipset for accordion ([a9a53b8](https://github.com/deriv-com/deriv-com-v2/commit/a9a53b811171ba8d6b22943620c33942d88236fc))
+* chipset for accordion ([9364568](https://github.com/deriv-com/deriv-com-v2/commit/93645687e3ee74f5cd970cc513f80d3d679e9e46))
+* chipset for accordion ([90f10f0](https://github.com/deriv-com/deriv-com-v2/commit/90f10f0bae67aaf59a440567e9e84be82ac2fec3))
+* chipset for accordion ([5d85eae](https://github.com/deriv-com/deriv-com-v2/commit/5d85eae2037d231e19e21113f04cbfa8c6142f17))
+
+
+### Bug Fixes
+
+* default align issue ([41d4987](https://github.com/deriv-com/deriv-com-v2/commit/41d4987c622f909bc9d0938789896c75359946f0))
+* overflow problem for tab in flex-end and flex-center ([7ea6f3d](https://github.com/deriv-com/deriv-com-v2/commit/7ea6f3d58fef92c6e489b08a29f7cdc8eb3596a6))
+
 ## [0.17.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.16.0...blocks-0.17.0) (2023-11-30)
 
 ## [0.16.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.15.0...blocks-0.16.0) (2023-11-30)
