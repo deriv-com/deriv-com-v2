@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 export type StatCardVariant = 'white' | 'dark' | 'coral';
 export type CardColorVariant = 'light' | 'gray';
 export type CardAlignVariant = 'start' | 'center';
-export type CardSizeVariant = 'sm' | 'md' | 'lg';
+export type CardSizeVariant = 'xs' | 'sm' | 'md' | 'lg';
 
 interface BaseCardContent {
   header?: string;

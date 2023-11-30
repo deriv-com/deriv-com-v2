@@ -2,6 +2,41 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.17.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.16.0...blocks-0.17.0) (2023-11-30)
+
+## [0.16.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.15.0...blocks-0.16.0) (2023-11-30)
+
+
+### Features
+
+* add logo slide carousel in fastpayment ([5cce467](https://github.com/deriv-com/deriv-com-v2/commit/5cce4679d4a6b5259edec915e81e841ff5e06be1))
+
+
+### Bug Fixes
+
+* gap between each array ([ead3532](https://github.com/deriv-com/deriv-com-v2/commit/ead3532498e2e7486dcf9b92dba192b9c5a3866c))
+
+## [0.15.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.14.0...blocks-0.15.0) (2023-11-29)
+
+
+### Bug Fixes
+
+* move logos to props ([06cb790](https://github.com/deriv-com/deriv-com-v2/commit/06cb790f6a325881e71f9c1362df6b9978117016))
+
+## [0.14.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.13.0...blocks-0.14.0) (2023-11-29)
+
+
+### Bug Fixes
+
+* pr comments ([0c77ab9](https://github.com/deriv-com/deriv-com-v2/commit/0c77ab9aedb2bc1452c249ac31838917adaec8dc))
+
+## [0.13.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.12.0...blocks-0.13.0) (2023-11-29)
+
+
+### Bug Fixes
+
+* main container holder ([4b41135](https://github.com/deriv-com/deriv-com-v2/commit/4b411350a974f8bd0cfa0b5b3b1d484ab08597c1))
+
 ## [0.12.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.11.0...blocks-0.12.0) (2023-11-27)
 
 ## [0.11.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.10.0...blocks-0.11.0) (2023-11-27)
