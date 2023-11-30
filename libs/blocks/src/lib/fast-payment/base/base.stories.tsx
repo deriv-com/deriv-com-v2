@@ -85,3 +85,73 @@ export const Default: Story = {
     },
   },
 };
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: undefined,
+  },
+};
+
+export const WithoutLink: Story = {
+  args: {
+    ...Default.args,
+    link: undefined,
+  },
+};
+
+export const WithoutDisclaimer: Story = {
+  args: {
+    ...Default.args,
+    disclaimer: undefined,
+  },
+};
+
+export const TwoColumn: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'two',
+      cards: cards.slice(0, 2),
+    },
+  },
+};
+
+export const ThreeColumn: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'three',
+      cards: cards.slice(0, 3),
+    },
+  },
+};
+
+export const FourColumn: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'four',
+      cards: cards.slice(0, 4),
+    },
+  },
+};
+export const FiveColumn: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'five',
+      cards: cards.slice(0, 5),
+    },
+  },
+};
+
+export const Carousel: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'infinite',
+      cards: cards,
+    },
+  },
+};
