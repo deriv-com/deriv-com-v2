@@ -12,6 +12,7 @@ import FastPaymentSection from './sections/fast-payments';
 import ReviewSection from './sections/review';
 import AccountSection from './sections/account-section';
 import CTASection from './sections/cta';
+import Spline from '@splinetool/react-spline';
 
 export function HomeTemplate() {
   return (
@@ -21,6 +22,9 @@ export function HomeTemplate() {
       <LiveMarketSection />
       <FastAndReliableSection />
       <WhyTradeSection />
+      {/* <Spline scene="https://prod.spline.design/5rFyk096jaOH7Cwi/scene.splinecode" /> */}
+      <Spline scene="https://prod.spline.design/MwOkEXYoifLpV30y/scene.splinecode" />
+
       <AccountSection />
       <FastPaymentSection />
       <ReviewSection />
