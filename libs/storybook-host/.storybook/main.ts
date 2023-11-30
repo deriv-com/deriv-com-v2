@@ -2,6 +2,7 @@ import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
   stories: ['../../**/src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  staticDirs: [{ from: '../../../assets/public', to: 'images' }],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
