@@ -35,7 +35,7 @@ export const CardsContainer = <T extends CardVariantType>({
   const CardComponent = Card[variant];
 
   return (
-    <div className="flex w-full overflow-hidden">
+    <div className="flex w-full overflow-hidden" id="cards-container">
       {cols === 'infinite' ? (
         <>
           {[0, 1, 2].map((index) => (
@@ -46,6 +46,7 @@ export const CardsContainer = <T extends CardVariantType>({
                 cardColsVariant[cols],
                 className,
               )}
+              id="infinite-carousel"
             >
               {cards.map((card) => (
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -3,13 +3,34 @@ import Base from '.';
 import { cards } from './data';
 
 const content: Record<string, object | null> = {
-  default: {
+  two_cols: {
+    cols: 'two',
+    cards: cards.slice(0, 2),
+  },
+  three_cols: {
+    cols: 'three',
     cards: cards.slice(0, 3),
+  },
+  four_cols: {
+    cols: 'four',
+    cards: cards.slice(0, 4),
+  },
+  five_cols: {
+    cols: 'five',
+    cards: cards.slice(0, 5),
   },
   carousel: {
     cols: 'infinite',
     cards: cards,
   },
+};
+
+const links: Record<string, object | null> = {
+  with_link: {
+    content: 'Learn More',
+    href: '#',
+  },
+  none: null,
 };
 
 const meta = {
@@ -24,7 +45,12 @@ const meta = {
       description: '`string`',
     },
     link: {
-      description: '`{content: "ReactNode", href: "string"}`',
+      description: '`{content: ReactNode, href: string}`',
+      options: Object.keys(links),
+      mapping: links,
+      control: {
+        type: 'select',
+      },
     },
     disclaimer: {
       description: '`string`',
