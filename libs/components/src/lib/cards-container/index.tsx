@@ -1,6 +1,5 @@
-import { qtJoin, qtMerge } from '@deriv/quill-design';
+import { qtMerge } from '@deriv/quill-design';
 import Card, { CardVariants } from '../card';
-import styles from './styles.module.scss';
 
 export type CardVariantType = keyof CardVariants;
 
@@ -22,7 +21,7 @@ const cardColsVariant: { [key in CardsContainerCols]: string } = {
   three: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
   four: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4',
   five: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5',
-  infinite: qtJoin(styles['slide-animation'], 'flex'),
+  infinite: 'animate-slide flex',
 };
 
 export const CardsContainer = <T extends CardVariantType>({
