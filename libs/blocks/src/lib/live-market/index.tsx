@@ -7,7 +7,7 @@ type LiveMarketBlockType = {
   Tab: typeof LiveMarketTab;
 };
 
-const LiveMarketBlock: LiveMarketBlockType = ({
+export const LiveMarketBlock: LiveMarketBlockType = ({
   children,
 }: {
   children: ReactNode;
