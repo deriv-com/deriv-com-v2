@@ -1,9 +1,9 @@
-import { LiveMarket } from '@deriv-com/blocks';
 import { LivePriceData } from './data';
+import { LiveMarketBlock } from '@deriv-com/blocks';
 
 const LiveMarketSection = () => {
   return (
-    <LiveMarket
+    <LiveMarketBlock.Slider
       className="bg-background-primary-base"
       disclaimer="*Prices are used for currency conversion and are published for reference only. Prices shown on our website are indicative and for reference only."
       link={{ href: '/', content: 'See all forex pairs' }}
