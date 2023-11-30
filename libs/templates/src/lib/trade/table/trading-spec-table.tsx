@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useEffect, useState } from 'react';
 import { additionalInfo, mainInfo, tradingCondition } from '../data/data';
 import { TableDataType } from '../types/types';
@@ -62,7 +62,6 @@ const TradingSpecTable = () => {
             item.instrument?.instrument?.match(new RegExp(searchValue, 'i')),
         ),
       ];
-
       setData(updatedRowData);
     } else {
       setData(selectedFilter);
@@ -85,11 +84,15 @@ const TradingSpecTable = () => {
     document.body.style.overflow = showBottomSheet ? 'hidden' : 'scroll';
   }, [showBottomSheet]);
 
-  const handlePagination = ({ currentPage }: TPaginationEvent) => {
-    if (currentPage) {
-      table.setPageIndex(currentPage - 1);
-    }
-  };
+  const handlePagination = useCallback(
+    ({ currentPage }: TPaginationEvent) => {
+      if (currentPage) {
+        table.setPageIndex(currentPage - 1);
+      }
+    },
+    [table],
+  );
+
   return (
     <Section className="py-general-4xl md:px-general-md lg:mx-auto lg:max-w-[1232px]">
       <div className="flex flex-row gap-gap-lg px-general-md pb-general-md lg:justify-between lg:px-general-none lg:pb-general-lg">
