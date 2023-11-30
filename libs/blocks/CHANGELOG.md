@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.19.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.18.0...blocks-0.19.0) (2023-11-30)
+
+
+### Bug Fixes
+
+* fixed stats gap ([96d7ce5](https://github.com/deriv-com/deriv-com-v2/commit/96d7ce5967a532a285e727293a0af631fd90467e))
+
 ## [0.18.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.17.0...blocks-0.18.0) (2023-11-30)
 
 
