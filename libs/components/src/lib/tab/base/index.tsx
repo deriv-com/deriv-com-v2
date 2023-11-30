@@ -25,7 +25,6 @@ export const TabBase = ({ tabs, children, className }: TabProps) => {
       </Tab.List>
       <Tab.Content>
         {Children.map(children, (child) => {
-          console.log('==>', child);
           if (!isValidElement(child)) return null;
           return (
             <Tab.Panel>
