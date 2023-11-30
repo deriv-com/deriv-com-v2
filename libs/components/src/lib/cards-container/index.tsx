@@ -37,7 +37,7 @@ export const CardsContainer = <T extends CardVariantType>({
     <div className="flex w-full overflow-hidden" id="cards-container">
       {cols === 'infinite' ? (
         <>
-          {[0, 1, 2].map((index) => (
+          {Array.from(Array(3).keys()).map((index) => (
             <div
               key={index}
               className={qtMerge(
