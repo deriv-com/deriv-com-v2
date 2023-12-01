@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.6.0...providers-0.7.0) (2023-12-01)
+
+
+### Bug Fixes
+
+* seperate language data from providers ([591ad52](https://github.com/deriv-com/deriv-com-v2/commit/591ad52ad54fdea9bbeeb06853399ff2f79c37a3))
+
 ## [0.6.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.5.0...providers-0.6.0) (2023-11-29)
 
 ## [0.5.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.4.0...providers-0.5.0) (2023-11-26)
