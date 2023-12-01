@@ -6,7 +6,7 @@ import DownloadBadges from './download';
 export const DerivGoBannerAndAwards = () => {
   return (
     <div className="flex flex-col gap-gap-lg">
-      <div className="flex flex-col gap-gap-lg rounded-lg border-xs border-opacity-black-100 p-general-md max-lg:flex-row">
+      <div className="flex gap-gap-lg rounded-lg border-xs border-solid border-opacity-black-100 p-general-md lg:flex-col">
         <div className="flex flex-col gap-gap-md max-lg:flex-1 max-lg:justify-center">
           <div className="flex flex-col gap-gap-md">
             <div className="flex items-center gap-gap-md">
@@ -19,7 +19,7 @@ export const DerivGoBannerAndAwards = () => {
             <Text size="sm">Trade multipliers on our mobile app.</Text>
           </div>
 
-          <div className="flex items-center gap-gap-md rounded-md border-[0.5px] border-opacity-black-200 p-general-sm max-sm:hidden">
+          <div className="flex items-center gap-gap-md rounded-md border-[0.5px] border-solid border-opacity-black-200 p-general-sm max-sm:hidden">
             <OptimizedImage
               imageName="footer/deriv-go-qr.png"
               width={64}
@@ -31,7 +31,7 @@ export const DerivGoBannerAndAwards = () => {
         </div>
         <DownloadBadges />
       </div>
-      <div className="rounded-lg border-xs border-opacity-black-100 p-general-md">
+      <div className="rounded-lg border-xs border-solid border-opacity-black-100 p-general-md">
         <OptimizedImage
           className="m-auto"
           imageName="footer/investors-in-people.png"

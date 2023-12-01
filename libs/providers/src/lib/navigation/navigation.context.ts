@@ -15,6 +15,7 @@ export interface NavigationContextType {
   setActiveMenu?: (menuName: string) => void;
   isLoggedIn: boolean;
   setIsLoggedIn?: (isLoggedIn: boolean) => void;
+  setIsDropContentOpen?: (isDropContentOpen: boolean) => void;
 }
 
 export const NavigationContext = createContext<NavigationContextType>({
