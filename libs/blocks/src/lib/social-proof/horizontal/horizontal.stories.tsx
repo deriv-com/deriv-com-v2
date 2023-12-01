@@ -13,6 +13,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     content: ({ numberOfReviews, trustScore }) => [
+      'Our customers say',
       'Excellent',
       `TrustScore ${trustScore} out of 5 based on ${numberOfReviews} reviews`,
     ],
@@ -35,6 +36,7 @@ export const Default: Story = {
 export const CustomTheme: Story = {
   args: {
     content: ({ numberOfReviews, trustScore }) => [
+      'Our customers say',
       'Excellent',
       `TrustScore ${trustScore} out of 5 based on ${numberOfReviews} reviews`,
     ],
@@ -61,6 +63,7 @@ export const CustomTheme: Story = {
 export const BadScore: Story = {
   args: {
     content: ({ numberOfReviews, trustScore }) => [
+      'Our customers say',
       'Excellent',
       `TrustScore ${trustScore} out of 5 based on ${numberOfReviews} reviews`,
     ],
@@ -83,6 +86,7 @@ export const BadScore: Story = {
 export const PoorScore: Story = {
   args: {
     content: ({ numberOfReviews, trustScore }) => [
+      'Our customers say',
       'Excellent',
       `TrustScore ${trustScore} out of 5 based on ${numberOfReviews} reviews`,
     ],
@@ -105,6 +109,7 @@ export const PoorScore: Story = {
 export const AverageScore: Story = {
   args: {
     content: ({ numberOfReviews, trustScore }) => [
+      'Our customers say',
       'Excellent',
       `TrustScore ${trustScore} out of 5 based on ${numberOfReviews} reviews`,
     ],
@@ -127,6 +132,7 @@ export const AverageScore: Story = {
 export const GreatScore: Story = {
   args: {
     content: ({ numberOfReviews, trustScore }) => [
+      'Our customers say',
       'Excellent',
       `TrustScore ${trustScore} out of 5 based on ${numberOfReviews} reviews`,
     ],
@@ -149,6 +155,7 @@ export const GreatScore: Story = {
 export const ExcellentScore: Story = {
   args: {
     content: ({ numberOfReviews, trustScore }) => [
+      'Our customers say',
       'Excellent',
       `TrustScore ${trustScore} out of 5 based on ${numberOfReviews} reviews`,
     ],

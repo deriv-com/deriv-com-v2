@@ -34,7 +34,7 @@ const sizeVariantComponents = {
 const sizeVariantContainerGap = {
   xs: 'gap-gap-lg p-general-md',
   sm: 'gap-gap-lg p-general-lg',
-  md: 'gap-gap-xl p-general-xl',
+  md: 'gap-gap-xl p-general-2xl',
   lg: 'gap-gap-2xl p-general-2xl',
 };
 
@@ -56,7 +56,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
   contentPosition,
   align,
   color,
-  size,
+  size = 'md',
   contentClassName,
   nonContentClassName,
 }) => {
