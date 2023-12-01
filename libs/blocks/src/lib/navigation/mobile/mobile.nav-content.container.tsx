@@ -1,14 +1,16 @@
 import clsx from 'clsx';
-import { useNavigation } from '@deriv-com/hooks';
+import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
 import MobileNavContent from './mobile.nav-content';
+import MobileLanguageContent from '../language-switcher/mobile-language.content';
 
 export const MobileNavContentContainer = () => {
   const { hasActiveMenu } = useNavigation();
+  const { showMobileLanguages } = useLanguageSwitcher();
 
   return (
     <div
       className={clsx(
-        hasActiveMenu && 'translate-x-50',
+        (hasActiveMenu || showMobileLanguages) && 'translate-x-50',
         'flex',
         'transition-all duration-500 ease-in-out',
         '-translate-x-full',
@@ -20,7 +22,8 @@ export const MobileNavContentContainer = () => {
         'left-50 top-50',
       )}
     >
-      <MobileNavContent />
+      {hasActiveMenu && <MobileNavContent />}
+      {showMobileLanguages && <MobileLanguageContent />}
     </div>
   );
 };

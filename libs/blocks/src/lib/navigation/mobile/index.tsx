@@ -3,8 +3,8 @@ import NavMobileWrapper from './mobile.wrapper';
 import MobileHeader from './mobile.header';
 import MobileNavList from './mobile.nav-list';
 import MobileNavContentContainer from './mobile.nav-content.container';
-import MobileLanguages from './mobile.languages';
 import { NavigationProps } from '..';
+import MobileLanguageToggler from '../language-switcher/mobile-language';
 
 export const MobileNav: React.FC<NavigationProps> = ({
   renderLogo,
@@ -20,7 +20,7 @@ export const MobileNav: React.FC<NavigationProps> = ({
             <div className="relative flex flex-1 flex-col justify-between px-general-2xl pb-general-lg sm:pb-general-md">
               <MobileNavList />
               <MobileNavContentContainer />
-              <MobileLanguages />
+              <MobileLanguageToggler />
             </div>
           </div>
         </NavMobileWrapper>

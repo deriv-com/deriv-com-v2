@@ -146,26 +146,26 @@ export const warnText =
 export const socialButtons = [
   {
     icon: <StandaloneFacebookIcon iconSize="md" />,
-    href: '/fb',
+    href: 'https://www.facebook.com/derivdotcom',
   },
   {
     icon: <StandaloneInstagramIcon iconSize="md" />,
-    href: '/insta',
+    href: 'https://www.instagram.com/deriv_official',
   },
   {
     icon: <StandaloneXTwitterIcon iconSize="md" />,
-    href: '/twitter',
+    href: 'https://twitter.com/derivdotcom/',
   },
   {
     icon: <StandaloneYoutubeIcon iconSize="md" />,
-    href: '/youtube',
+    href: 'https://www.youtube.com/@deriv',
   },
   {
     icon: <StandaloneLinkedinIcon iconSize="md" />,
-    href: '/linkedin',
+    href: 'https://www.linkedin.com/company/derivdotcom/',
   },
   {
     icon: <StandaloneTelegramIcon iconSize="md" />,
-    href: '/telegram',
+    href: 'https://t.me/derivdotcomofficial',
   },
 ];

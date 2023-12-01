@@ -1,5 +1,5 @@
+import { CustomLink } from '@deriv-com/components';
 import { SocialIcons } from './footer-block';
-import React from 'react';
 
 export const SocialMediaSection = ({
   socialButtons,
@@ -9,7 +9,9 @@ export const SocialMediaSection = ({
   return (
     <div className="flex gap-gap-lg max-lg:justify-center">
       {socialButtons.map((item) => (
-        <React.Fragment key={item.href}>{item.icon}</React.Fragment>
+        <CustomLink href={item.href} target="_blank" key={item.href}>
+          {item.icon}
+        </CustomLink>
       ))}
     </div>
   );
