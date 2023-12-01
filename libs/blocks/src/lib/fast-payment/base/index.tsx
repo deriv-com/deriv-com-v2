@@ -1,4 +1,4 @@
-import { FluidContainer, Heading, Text, qtJoin } from '@deriv/quill-design';
+import { FluidContainer, Heading, Text } from '@deriv/quill-design';
 import { CardsContainer, CustomLink } from '@deriv-com/components';
 
 import { FastPaymentProps } from '../types';
