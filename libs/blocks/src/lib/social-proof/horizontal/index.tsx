@@ -27,13 +27,18 @@ const SocialProofHorizontal = ({
         {data && (
           <>
             {content && (
-              <Text
-                size="md"
-                bold
-                className={qtMerge(themeClassNames.color, 'max-sm:hidden')}
-              >
-                {content(data)[0]}
-              </Text>
+              <>
+                <Text className={qtMerge(themeClassNames.color, 'md:hidden')}>
+                  {content(data)[0]}
+                </Text>
+                <Text
+                  size="md"
+                  bold
+                  className={qtMerge(themeClassNames.color, 'max-sm:hidden')}
+                >
+                  {content(data)[1]}
+                </Text>
+              </>
             )}
 
             {data && (
@@ -44,7 +49,7 @@ const SocialProofHorizontal = ({
                     size="md"
                     className={qtMerge(themeClassNames.color, 'max-sm:hidden')}
                   >
-                    {content(data)[1]}
+                    {content(data)[2]}
                   </Text>
                 )}
               </>
