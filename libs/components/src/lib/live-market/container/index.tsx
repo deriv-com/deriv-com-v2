@@ -12,7 +12,7 @@ import clsx from 'clsx';
 
 export interface ContainerProps {
   header?: string;
-  description?: string;
+  description?: ReactNode;
   className?: string;
   disclaimer?: string;
   link: {
