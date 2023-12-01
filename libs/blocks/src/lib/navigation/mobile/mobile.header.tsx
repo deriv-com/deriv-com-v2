@@ -1,4 +1,4 @@
-import { useNavigation } from '@deriv-com/hooks';
+import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
 import { FluidContainer } from '@deriv/quill-design';
 import { StandaloneChevronLeftRegularIcon } from '@deriv/quill-icons';
 
@@ -7,23 +7,32 @@ import clsx from 'clsx';
 
 export const MobileHeader = () => {
   const { hasActiveMenu, setActiveMenu, toggleMobileNav } = useNavigation();
+  const { showMobileLanguages, setShowMobileLanguages } = useLanguageSwitcher();
 
   return (
     <FluidContainer
       className={clsx(
         'flex min-h-[80px] items-center py-general-lg',
-        hasActiveMenu ? 'justify-between' : 'justify-end',
+        hasActiveMenu || showMobileLanguages
+          ? 'justify-between'
+          : 'justify-end',
       )}
     >
-      {hasActiveMenu && (
+      {(hasActiveMenu || showMobileLanguages) && (
         <StandaloneChevronLeftRegularIcon
           className="cursor-pointer"
-          onClick={() => setActiveMenu?.('none')}
+          onClick={() => {
+            setActiveMenu?.('none');
+            setShowMobileLanguages?.(false);
+          }}
         />
       )}
       <StandaloneXmarkRegularIcon
         className="cursor-pointer"
-        onClick={toggleMobileNav}
+        onClick={() => {
+          setShowMobileLanguages?.(false);
+          toggleMobileNav?.();
+        }}
       />
     </FluidContainer>
   );
