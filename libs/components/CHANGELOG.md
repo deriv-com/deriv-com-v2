@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.17.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.16.0...components-0.17.0) (2023-12-01)
+
+
+### Bug Fixes
+
+* carousel full width and auto scroll speed ([2dd83fe](https://github.com/deriv-com/deriv-com-v2/commit/2dd83fe71bb96029070ac5f03a7f71689a4a6372))
+
+## [0.16.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.15.0...components-0.16.0) (2023-12-01)
+
 ## [0.15.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.14.0...components-0.15.0) (2023-11-30)
 
 ## [0.14.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.13.0...components-0.14.0) (2023-11-30)
