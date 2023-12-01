@@ -2,8 +2,8 @@ import { createContext } from 'react';
 import { LangItem, LangItems } from './types';
 
 export interface LanguageContextType {
-  onLanguageHover?: VoidFunction;
   langItems: LangItems;
+  onLanguageHover?: VoidFunction;
   activeLanguage?: LangItem;
   onBlurHoverLang?: VoidFunction;
   showLangContent: boolean;

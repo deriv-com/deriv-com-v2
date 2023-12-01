@@ -5,11 +5,11 @@ import {
   SharedLinkProvider,
   SharedLink,
   LanguageProvider,
-  langItemsHK,
 } from '@deriv-com/providers';
 import Link from 'next/link';
 import { BreakpointProvider, ThemeProvider } from '@deriv/quill-design';
 import Head from 'next/head';
+import { langItemsHK } from './data';
 
 const NextSharedLink: SharedLink = ({ href, ...rest }) => {
   return <Link href={href ?? '/'} {...rest} />;

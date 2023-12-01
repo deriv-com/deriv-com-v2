@@ -5,10 +5,12 @@ import { LanguageContext } from './language.context';
 export interface LanguageProviderProps {
   children: React.ReactNode;
   langItems: LangItems;
+  onLangSelect?: (lang: LangItem) => void;
 }
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children,
   langItems,
+  onLangSelect,
 }) => {
   const [activeLanguage, setActiveLanguage] = useState(langItems.en);
   const [showLangContent, setShowLangContent] = useState(false);
@@ -25,13 +27,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   const selectLanguage = (item: LangItem) => {
     setActiveLanguage(item);
     setShowLangContent(false);
+    onLangSelect?.(item);
   };
 
   return (
     <LanguageContext.Provider
       value={{
-        onLanguageHover,
         langItems,
+        onLanguageHover,
         activeLanguage,
         showLangContent,
         setShowLangContent,
