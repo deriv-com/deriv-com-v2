@@ -12,6 +12,11 @@ import FastPaymentSection from './sections/fast-payments';
 import ReviewSection from './sections/review';
 import AccountSection from './sections/account-section';
 import CTASection from './sections/cta';
+import { FastPayment } from '@deriv-com/blocks';
+import {
+  PaymentMethodBitcoinBrandIcon,
+  PaymentMethodSkrillBrandIcon,
+} from '@deriv/quill-icons';
 
 export function HomeTemplate() {
   return (
@@ -27,6 +32,96 @@ export function HomeTemplate() {
       <ProvenExcellenceSection />
       <StaticNumberBlock />
       <CTASection />
+      <FastPayment
+        description="Make instant deposits from 10,000 HKD. Withdraw in minutes."
+        title="Hassle-free deposits and withdrawals"
+        disclaimer="*testing"
+        content={{
+          cols: 'infinite',
+          cards: [
+            {
+              icon: (
+                <PaymentMethodSkrillBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+            {
+              icon: (
+                <PaymentMethodSkrillBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+            {
+              icon: (
+                <PaymentMethodSkrillBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+            {
+              icon: (
+                <PaymentMethodSkrillBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+            {
+              icon: (
+                <PaymentMethodSkrillBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+            {
+              icon: (
+                <PaymentMethodBitcoinBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+            {
+              icon: (
+                <PaymentMethodBitcoinBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+            {
+              icon: (
+                <PaymentMethodBitcoinBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+            {
+              icon: (
+                <PaymentMethodBitcoinBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+            {
+              icon: (
+                <PaymentMethodBitcoinBrandIcon height="80px" width="128px" />
+              ),
+              color: 'gray',
+              size: 'xs',
+              align: 'center',
+            },
+          ],
+        }}
+      />
     </PageLayout>
   );
 }
