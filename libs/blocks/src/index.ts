@@ -14,3 +14,4 @@ export * from './lib/fast-payment';
 export * from './lib/footer';
 export * from './lib/search';
 export * from './lib/social-proof';
+export * from './lib/platform';
