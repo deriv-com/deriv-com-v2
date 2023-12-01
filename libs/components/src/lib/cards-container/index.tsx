@@ -1,4 +1,4 @@
-import { qtMerge } from '@deriv/quill-design';
+import { qtJoin, qtMerge } from '@deriv/quill-design';
 import Card, { CardVariants } from '../card';
 
 export type CardVariantType = keyof CardVariants;
@@ -34,7 +34,14 @@ export const CardsContainer = <T extends CardVariantType>({
   const CardComponent = Card[variant];
 
   return (
-    <div className="flex w-full overflow-hidden" id="cards-container">
+    <div
+      className={qtJoin(
+        'flex overflow-hidden',
+        cols === 'infinite' ? 'w-screen' : 'w-full',
+        className,
+      )}
+      id="cards-container"
+    >
       {cols === 'infinite' ? (
         <>
           {Array.from(Array(3).keys()).map((index) => (
@@ -44,7 +51,6 @@ export const CardsContainer = <T extends CardVariantType>({
                 'gap-gap-lg', // TODO: Add sm/md/lg/xl variants if needed
                 cardColsVariant[cols],
                 'pr-general-md',
-                className,
               )}
               id="infinite-carousel"
             >
@@ -62,7 +68,6 @@ export const CardsContainer = <T extends CardVariantType>({
             'gap-gap-lg', // TODO: we might need to add sm/md/lg/xl variants
             dense ? 'w-full lg:max-w-max' : 'w-full',
             cardColsVariant[cols],
-            className,
           )}
         >
           {cards.map((card) => (
