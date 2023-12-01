@@ -13,6 +13,7 @@ export interface CustomLinkProps extends HTMLAttributes<HTMLAnchorElement> {
   hasLinkColor?: boolean;
   disabled?: boolean;
   iconColor?: iconColorVariant;
+  target?: '_blank' | '_self' | '_parent' | '_top';
 }
 export type iconColorVariant = 'black' | 'subtle' | 'disabled' | 'default';
 export type textSize = 'sm' | 'md' | 'lg';
@@ -34,6 +35,7 @@ export function CustomLink({
   hasHoverDecoration = true,
   hasLinkColor = false,
   disabled = false,
+  target = '_self',
   children,
   ...rest
 }: CustomLinkProps) {
@@ -42,6 +44,7 @@ export function CustomLink({
   return (
     <DerivLink
       href={href}
+      target={target}
       className={qtMerge(
         'flex',
         'text-typography-default',
