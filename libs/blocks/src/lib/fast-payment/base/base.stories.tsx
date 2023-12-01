@@ -1,10 +1,70 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import Base from '.';
+import { cards } from './data';
+
+const content: Record<string, object | null> = {
+  two_col: {
+    cols: 'two',
+    cards: cards.slice(0, 2),
+  },
+  three_col: {
+    cols: 'three',
+    cards: cards.slice(0, 3),
+  },
+  four_col: {
+    cols: 'four',
+    cards: cards.slice(0, 4),
+  },
+  five_col: {
+    cols: 'five',
+    cards: cards.slice(0, 5),
+  },
+  carousel: {
+    cols: 'infinite',
+    cards: cards,
+  },
+};
+
+const links: Record<string, object | null> = {
+  with_link: {
+    content: 'Learn More',
+    href: '#',
+  },
+  none: null,
+};
 
 const meta = {
   title: 'Blocks/FastPayment/Default',
   component: Base,
+  tags: ['autodocs'],
+  argTypes: {
+    description: {
+      description: '`string`',
+    },
+    title: {
+      description: '`string`',
+    },
+    link: {
+      description: '`{content: ReactNode, href: string}`',
+      options: Object.keys(links),
+      mapping: links,
+      control: {
+        type: 'select',
+      },
+    },
+    disclaimer: {
+      description: '`string`',
+    },
+    content: {
+      description:
+        '`{cols: "two" | "three" | "four" | "five" | "infinite", cards: CardContent[], className: string}`',
+      options: Object.keys(content),
+      mapping: content,
+      control: {
+        type: 'select',
+      },
+    },
+  },
 } satisfies Meta<typeof Base>;
 
 export default meta;
@@ -21,29 +81,77 @@ export const Default: Story = {
     },
     disclaimer: '*Disclaimer text goes here.',
     content: {
-      cards: [
-        {
-          header: '',
-          color: 'gray',
-          align: 'center',
-          size: 'lg',
-          description: 'test',
-        },
-        {
-          header: '',
-          color: 'gray',
-          align: 'center',
-          size: 'lg',
-          description: 'test',
-        },
-        {
-          header: '',
-          color: 'gray',
-          align: 'center',
-          size: 'lg',
-          description: 'test',
-        },
-      ],
+      cards: cards.slice(0, 3),
+    },
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: undefined,
+  },
+};
+
+export const WithoutLink: Story = {
+  args: {
+    ...Default.args,
+    link: undefined,
+  },
+};
+
+export const WithoutDisclaimer: Story = {
+  args: {
+    ...Default.args,
+    disclaimer: undefined,
+  },
+};
+
+export const TwoColumn: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'two',
+      cards: cards.slice(0, 2),
+    },
+  },
+};
+
+export const ThreeColumn: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'three',
+      cards: cards.slice(0, 3),
+    },
+  },
+};
+
+export const FourColumn: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'four',
+      cards: cards.slice(0, 4),
+    },
+  },
+};
+export const FiveColumn: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'five',
+      cards: cards.slice(0, 5),
+    },
+  },
+};
+
+export const Carousel: Story = {
+  args: {
+    ...Default.args,
+    content: {
+      cols: 'infinite',
+      cards: cards,
     },
   },
 };

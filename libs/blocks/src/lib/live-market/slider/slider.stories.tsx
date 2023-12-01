@@ -1,17 +1,16 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import LiveMarket from '.';
 import {
   MarketForexAudusdIcon,
   MarketForexEurusdIcon,
   MarketForexGbpusdIcon,
   MarketForexUsdjpyIcon,
 } from '@deriv/quill-icons/Markets';
+import LiveMarketSlider from '.';
 
 const meta = {
-  title: 'Blocks/LiveMarket',
-  component: LiveMarket,
-} satisfies Meta<typeof LiveMarket>;
+  title: 'Blocks/LiveMarket/Slider',
+  component: LiveMarketSlider,
+} satisfies Meta<typeof LiveMarketSlider>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

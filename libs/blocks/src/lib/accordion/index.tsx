@@ -4,17 +4,27 @@ import {
   AccordionProps,
   AccordionVariants,
 } from '@deriv-com/components';
-import { FluidContainer, Heading, qtMerge } from '@deriv/quill-design';
+import {
+  Chip,
+  FluidContainer,
+  Heading,
+  qtJoin,
+  qtMerge,
+} from '@deriv/quill-design';
 import { useState } from 'react';
+import styles from './styles.module.scss';
 
 export interface AccordionBlockProps {
   title?: string;
-  tab?: string;
+  tab?: {
+    align?: 'center' | 'end';
+    data: { id: number; title: string }[];
+  };
   className?: string;
   variant?: keyof AccordionVariants;
   content: {
     className?: string;
-    data: AccordionProps[];
+    data: AccordionProps[][];
   };
   multiCollapse?: boolean;
 }
@@ -30,12 +40,14 @@ export const slugify = (input: string): string =>
 
 export function AccordionBlock({
   title,
+  tab,
   content,
   className,
   variant = 'Flush',
   multiCollapse = false,
 }: AccordionBlockProps) {
   const [expanded, setExpanded] = useState('');
+  const [selectedChip, setSelectedChip] = useState(0);
 
   const handleExpand = (isExpanded: boolean, id: string) => {
     if (!multiCollapse) {
@@ -43,6 +55,18 @@ export function AccordionBlock({
         setExpanded(id);
       }
     }
+  };
+
+  const handleChip = (id: number) => {
+    if (selectedChip !== id) {
+      setSelectedChip(id);
+      setExpanded('');
+    }
+  };
+
+  const chipAlignment = {
+    center: 'mx-auto',
+    end: 'ml-auto',
   };
 
   const DynamicAccordion = Accordion[variant];
@@ -56,22 +80,44 @@ export function AccordionBlock({
     >
       {title && <Heading.H2 className="text-center">{title}</Heading.H2>}
 
+      {tab && tab.data.length > 0 && (
+        <div
+          className={qtJoin(
+            'flex gap-gap-md overflow-x-scroll max-w-full',
+            styles['scrollbar_hide'],
+            tab.align ? chipAlignment[tab.align] : 'mr-auto',
+          )}
+        >
+          {tab.data.map((item) => (
+            <Chip.Selectable
+              key={item.id}
+              selected={selectedChip === item.id}
+              onChipSelect={() => handleChip(item.id)}
+              className="whitespace-nowrap"
+            >
+              {item.title}
+            </Chip.Selectable>
+          ))}
+        </div>
+      )}
+
       <div className="flex w-full flex-col gap-general-lg">
         <div className={content?.className}>
-          {content.data.map((accData) => {
-            const { title: accTitle } = accData;
-            const id = slugify(accTitle as string);
+          {content &&
+            content.data[selectedChip].map((accData) => {
+              const { title: accTitle } = accData;
+              const id = slugify(accTitle as string);
 
-            return (
-              <DynamicAccordion
-                {...accData}
-                id={id}
-                key={accTitle}
-                expanded={multiCollapse ? false : expanded === accTitle}
-                onExpand={(isExpanded, id) => handleExpand(isExpanded, id)}
-              />
-            );
-          })}
+              return (
+                <DynamicAccordion
+                  {...accData}
+                  id={id}
+                  key={accTitle}
+                  expanded={multiCollapse ? false : expanded === accTitle}
+                  onExpand={(isExpanded, id) => handleExpand(isExpanded, id)}
+                />
+              );
+            })}
         </div>
       </div>
     </FluidContainer>

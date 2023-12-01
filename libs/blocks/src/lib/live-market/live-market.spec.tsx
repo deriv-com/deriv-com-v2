@@ -7,13 +7,12 @@ import LiveMarket from '.';
 describe('LiveMarket', () => {
   beforeEach(() => {
     render(
-      <LiveMarket
+      <LiveMarket.Slider
         link={{
           href: '/',
           content: 'More forex',
         }}
         header="header here"
-        isHeaderSection={true}
         disclaimer="Disclaimer here"
       />,
       {

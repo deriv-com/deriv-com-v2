@@ -20,7 +20,7 @@ const AnswerSection = ({ header, questions, answers }: FAQDataType) => {
       <AccordionBlock
         title={header}
         content={{
-          data: accordionItems,
+          data: [accordionItems],
         }}
         className="pb-2400 pt-general-none"
       />

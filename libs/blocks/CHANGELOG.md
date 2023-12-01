@@ -2,6 +2,52 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.20.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.19.0...blocks-0.20.0) (2023-12-01)
+
+
+### Bug Fixes
+
+* build issues ([e3b8f55](https://github.com/deriv-com/deriv-com-v2/commit/e3b8f55153a85db73c6b77ac4f7a692cc30fe292))
+
+## [0.19.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.18.0...blocks-0.19.0) (2023-11-30)
+
+
+### Bug Fixes
+
+* fixed stats gap ([96d7ce5](https://github.com/deriv-com/deriv-com-v2/commit/96d7ce5967a532a285e727293a0af631fd90467e))
+
+## [0.18.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.17.0...blocks-0.18.0) (2023-11-30)
+
+
+### Features
+
+* chipset for accordion ([79e3dd5](https://github.com/deriv-com/deriv-com-v2/commit/79e3dd5c57929fb0ccbc84a9d377d7c6560f2e8d))
+* chipset for accordion ([07dd419](https://github.com/deriv-com/deriv-com-v2/commit/07dd41967de983ebe2ed76aff621f59fa2ac007b))
+* chipset for accordion ([a9a53b8](https://github.com/deriv-com/deriv-com-v2/commit/a9a53b811171ba8d6b22943620c33942d88236fc))
+* chipset for accordion ([9364568](https://github.com/deriv-com/deriv-com-v2/commit/93645687e3ee74f5cd970cc513f80d3d679e9e46))
+* chipset for accordion ([90f10f0](https://github.com/deriv-com/deriv-com-v2/commit/90f10f0bae67aaf59a440567e9e84be82ac2fec3))
+* chipset for accordion ([5d85eae](https://github.com/deriv-com/deriv-com-v2/commit/5d85eae2037d231e19e21113f04cbfa8c6142f17))
+
+
+### Bug Fixes
+
+* default align issue ([41d4987](https://github.com/deriv-com/deriv-com-v2/commit/41d4987c622f909bc9d0938789896c75359946f0))
+* overflow problem for tab in flex-end and flex-center ([7ea6f3d](https://github.com/deriv-com/deriv-com-v2/commit/7ea6f3d58fef92c6e489b08a29f7cdc8eb3596a6))
+
+## [0.17.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.16.0...blocks-0.17.0) (2023-11-30)
+
+## [0.16.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.15.0...blocks-0.16.0) (2023-11-30)
+
+
+### Features
+
+* add logo slide carousel in fastpayment ([5cce467](https://github.com/deriv-com/deriv-com-v2/commit/5cce4679d4a6b5259edec915e81e841ff5e06be1))
+
+
+### Bug Fixes
+
+* gap between each array ([ead3532](https://github.com/deriv-com/deriv-com-v2/commit/ead3532498e2e7486dcf9b92dba192b9c5a3866c))
+
 ## [0.15.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.14.0...blocks-0.15.0) (2023-11-29)
 
 
