@@ -11,7 +11,7 @@ export interface SocialProofCustomThemeProps {
 
 export interface SocialProofProps {
   theme?: SocialProofCustomThemeProps;
-  content?: ({ ...props }: TPilotDataProps) => string[];
+  content?: ({ ...props }: TPilotDataProps) => [string | ReactNode];
   className?: string;
   logo: ReactNode;
   staticData?: TPilotDataProps | null;
