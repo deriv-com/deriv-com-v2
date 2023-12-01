@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.19.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.18.0...components-0.19.0) (2023-12-01)
+
+
+### Bug Fixes
+
+* update social icons in footer to link ([06ed9e0](https://github.com/deriv-com/deriv-com-v2/commit/06ed9e053d91eaf3663a159a91e56bbb336f83c8))
+
 ## [0.18.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.17.0...components-0.18.0) (2023-12-01)
 
 ## [0.17.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.16.0...components-0.17.0) (2023-12-01)
