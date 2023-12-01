@@ -18,10 +18,8 @@ export const NavigationProvider: React.FC<NavigationProviderProps> = ({
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const onBlurHover = useCallback(() => {
-    if (activeMenu !== 'none') {
-      setIsDropContentOpen(false);
-    }
-  }, [activeMenu]);
+    setIsDropContentOpen(false);
+  }, []);
 
   const onListItemHover = useCallback(
     (navItemName: string) => {
