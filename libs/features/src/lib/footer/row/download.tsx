@@ -7,7 +7,7 @@ import {
 import clsx from 'clsx';
 
 const sharedClasses =
-  'flex items-center justify-center gap-gap-md px-general-sm py-[6px] rounded-sm border-xs border-opacity-black-100';
+  'flex items-center justify-center gap-gap-md px-general-sm py-[6px] rounded-sm border-solid border-xs border-opacity-black-100';
 
 const DownloadBadges = () => {
   return (
@@ -18,7 +18,7 @@ const DownloadBadges = () => {
           imageName="footer/get-googleplay.png"
           alt="get it on google play"
           width={89}
-          height={18}
+          height={28}
         />
       </div>
       <div className={clsx(sharedClasses)}>
@@ -27,7 +27,7 @@ const DownloadBadges = () => {
           imageName="footer/download-appstore.png"
           alt="download on the app store"
           width={89}
-          height={18}
+          height={28}
         />
       </div>
       <div className={clsx(sharedClasses)}>
@@ -36,7 +36,7 @@ const DownloadBadges = () => {
           imageName="footer/explore-appgallery.png"
           alt="explore it on appgallery"
           width={89}
-          height={18}
+          height={28}
         />
       </div>
     </div>
