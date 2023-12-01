@@ -14,38 +14,29 @@ const Base: React.FC<FastPaymentProps> = ({
 }) => {
   return (
     <FluidContainer className="bg-background-primary-container py-general-4xl">
-      <div className="flex flex-col items-center">
-        <div className="flex w-full flex-col gap-gap-3xl">
-          <div className="flex flex-col gap-gap-2xl">
-            <div className="flex flex-col items-center justify-center gap-general-lg text-center max-sm:gap-general-md">
-              <Heading.H2>{title}</Heading.H2>
-              {description && <Text size="md">{description}</Text>}
-            </div>
+      <div className="flex flex-col items-center text-center">
+        <Heading.H2>{title}</Heading.H2>
+        {description && <Text className="pt-general-lg">{description}</Text>}
 
-            {link && (
-              <div className="flex justify-center">
-                <CustomLink href={link.href} className="w-fit" hasIcon>
-                  {link.content}
-                </CustomLink>
-              </div>
-            )}
+        {link && (
+          <div className="flex justify-center pt-general-xl">
+            <CustomLink href={link.href} className="w-fit" hasIcon>
+              {link.content}
+            </CustomLink>
           </div>
-          <div className="flex flex-col items-center justify-center gap-gap-3xl">
-            <div className="flex w-full justify-center">
-              <CardsContainer
-                cards={cards}
-                variant="ContentBottom"
-                cols={cols}
-                dense={dense}
-              />
-            </div>
-            {disclaimer && (
-              <Text size="sm" className="text-typography-subtle">
-                {disclaimer}
-              </Text>
-            )}
-          </div>
-        </div>
+        )}
+        <CardsContainer
+          cards={cards}
+          variant="ContentBottom"
+          cols={cols}
+          dense={dense}
+          className="pt-general-2xl"
+        />
+        {disclaimer && (
+          <Text size="sm" className="pt-general-2xl text-typography-subtle">
+            {disclaimer}
+          </Text>
+        )}
       </div>
     </FluidContainer>
   );
