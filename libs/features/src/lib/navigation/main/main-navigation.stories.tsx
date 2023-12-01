@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import MainNavigation from '.';
+import { LanguageProvider, langItemsHK } from '@deriv-com/providers';
 
 const meta = {
   title: 'Features/Navigation/Main HK',
@@ -17,6 +18,17 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+const Template: Story = {
+  render: ({ ...args }) => {
+    return (
+      <LanguageProvider langItems={langItemsHK}>
+        <MainNavigation />
+      </LanguageProvider>
+    );
+  },
+};
+
+export const Default = {
+  ...Template,
   args: {},
 };
