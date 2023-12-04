@@ -17,6 +17,7 @@ import {
   PaymentMethodBitcoinBrandIcon,
   PaymentMethodSkrillBrandIcon,
 } from '@deriv/quill-icons';
+import FastPaymentSections from './fast-payment';
 
 export function HomeTemplate() {
   return (
@@ -32,6 +33,7 @@ export function HomeTemplate() {
       <ProvenExcellenceSection />
       <StaticNumberBlock />
       <CTASection />
+      <FastPaymentSections />
     </PageLayout>
   );
 }
