@@ -16,7 +16,7 @@ export interface TabProps {
 export const TabBase = ({ tabs, children, className }: TabProps) => {
   return (
     <Tab.Container className={className}>
-      <Tab.List className="justify-center">
+      <Tab.List>
         {tabs.map(({ children, ...rest }, i) => (
           <Tab.Trigger {...rest} key={i}>
             {children}
