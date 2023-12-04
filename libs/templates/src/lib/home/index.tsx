@@ -12,11 +12,6 @@ import FastPaymentSection from './sections/fast-payments';
 import ReviewSection from './sections/review';
 import AccountSection from './sections/account-section';
 import CTASection from './sections/cta';
-import { FastPayment } from '@deriv-com/blocks';
-import {
-  PaymentMethodBitcoinBrandIcon,
-  PaymentMethodSkrillBrandIcon,
-} from '@deriv/quill-icons';
 
 export function HomeTemplate() {
   return (
