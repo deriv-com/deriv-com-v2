@@ -19,8 +19,8 @@ const meta = {
 const Content = () => {
   return (
     <>
-      {Array.from(Array(3).keys()).map((_, index) => (
-        <Text key={index}>
+      {Array.from({ length: 3 }, (_, i) => (
+        <Text key={i}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta
           augue at dui ullamcorper, sed suscipit libero dapibus. Aenean interdum
           libero ac justo bibendum, a eleifend nulla hendrerit. Cras vel lacus
