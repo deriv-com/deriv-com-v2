@@ -7,7 +7,7 @@ import {
 import clsx from 'clsx';
 
 const sharedClasses =
-  'flex items-center justify-center gap-gap-md px-general-sm py-[6px] rounded-sm border-solid border-xs border-opacity-black-100';
+  'flex items-center justify-center gap-gap-md p-general-sm rounded-sm border-solid border-xs border-opacity-black-100';
 
 const DownloadBadges = () => {
   return (
