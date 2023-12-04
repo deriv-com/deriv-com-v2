@@ -26,11 +26,6 @@ export const Default: Story = {
           { children: 'All' },
           { children: 'CFDs' },
           { children: 'Options' },
-          { children: 'Options' },
-          { children: 'Options' },
-          { children: 'Options' },
-          { children: 'Options' },
-          { children: 'Options' },
         ]}
       >
         <CardsContainer
