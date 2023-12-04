@@ -1,4 +1,4 @@
-import { Heading, Text } from '@deriv/quill-design';
+import { Heading } from '@deriv/quill-design';
 import { FooterItems } from './types';
 import { CustomLink } from '@deriv-com/components';
 import React from 'react';
@@ -32,7 +32,11 @@ export const MainNavContent = ({
                     className="flex flex-col items-start gap-gap-lg"
                     key={link.id}
                   >
-                    <CustomLink size="sm" href={link.href}>
+                    <CustomLink
+                      size="sm"
+                      href={link.href}
+                      className="text-typography-prominent"
+                    >
                       {link.text}
                     </CustomLink>
                   </div>

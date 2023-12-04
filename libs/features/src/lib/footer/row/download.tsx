@@ -17,7 +17,7 @@ const DownloadBadges = () => {
         <OptimizedImage
           imageName="footer/get-googleplay.png"
           alt="get it on google play"
-          width={89}
+          width={90}
           height={28}
         />
       </div>
@@ -26,7 +26,7 @@ const DownloadBadges = () => {
         <OptimizedImage
           imageName="footer/download-appstore.png"
           alt="download on the app store"
-          width={89}
+          width={90}
           height={28}
         />
       </div>
@@ -35,7 +35,7 @@ const DownloadBadges = () => {
         <OptimizedImage
           imageName="footer/explore-appgallery.png"
           alt="explore it on appgallery"
-          width={89}
+          width={90}
           height={28}
         />
       </div>

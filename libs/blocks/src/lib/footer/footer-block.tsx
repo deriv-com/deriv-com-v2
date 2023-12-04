@@ -35,8 +35,8 @@ export const FooterBlock = ({
       )}
     >
       <FluidContainer className="flex flex-col gap-gap-3xl">
-        <div className="flex flex-col py-general-xs max-lg:gap-gap-xl lg:flex-row">
-          <div className="flex flex-1 max-lg:justify-center">
+        <div className="flex flex-col max-lg:gap-gap-xl lg:flex-row">
+          <div className="flex flex-1 py-general-xs max-lg:justify-center">
             <BrandDerivWordmarkSlateIcon
               height="24px"
               width="72.33px"
