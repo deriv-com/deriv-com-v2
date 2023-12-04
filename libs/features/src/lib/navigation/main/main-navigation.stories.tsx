@@ -21,7 +21,7 @@ type Story = StoryObj<typeof meta>;
 const Template: Story = {
   render: ({ ...args }) => {
     return (
-      <LanguageProvider langItems={langItemsHK}>
+      <LanguageProvider langItems={langItemsHK} activeLanguage={langItemsHK.en}>
         <MainNavigation />
       </LanguageProvider>
     );
