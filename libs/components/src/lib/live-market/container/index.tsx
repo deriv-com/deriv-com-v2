@@ -38,10 +38,10 @@ export const Container = ({
         className,
       )}
     >
-      <FluidContainer className="flex flex-col items-center justify-center gap-gap-3xl">
-        {header && <Heading.H2>{header}</Heading.H2>}
+      <FluidContainer className="flex flex-col gap-gap-3xl">
+        {header && <Heading.H2 className="text-center">{header}</Heading.H2>}
         {children}
-        {description && <Text>{description}</Text>}
+        {description && <Text className="text-center">{description}</Text>}
         {link && (
           <CustomLink
             size="md"
@@ -53,7 +53,7 @@ export const Container = ({
           </CustomLink>
         )}
         {disclaimer && (
-          <div className="max-w-[816px] max-sm:px-general-md">
+          <div className="mx-auto max-w-[816px] max-sm:px-general-md">
             <Text size="sm" className="text-center text-typography-subtle">
               {disclaimer}
             </Text>
