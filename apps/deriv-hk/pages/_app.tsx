@@ -20,7 +20,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <SharedLinkProvider DerivLink={NextSharedLink}>
         <BreakpointProvider>
           <ThemeProvider theme="light">
-            <LanguageProvider langItems={langItemsHK}>
+            <LanguageProvider
+              langItems={langItemsHK}
+              activeLanguage={langItemsHK.en}
+            >
               <>
                 <Head>
                   <meta name="color-scheme" content="light dark" />
