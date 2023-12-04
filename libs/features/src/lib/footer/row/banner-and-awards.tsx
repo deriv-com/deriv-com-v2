@@ -14,7 +14,7 @@ export const DerivGoBannerAndAwards = () => {
                 width={24}
                 height={24}
               />
-              <Heading.H6>Deriv GO</Heading.H6>
+              <Heading.H5>Deriv GO</Heading.H5>
             </div>
             <Text size="sm">Trade multipliers on our mobile app.</Text>
           </div>
@@ -26,7 +26,9 @@ export const DerivGoBannerAndAwards = () => {
               height={64}
               alt="download deriv-go"
             />
-            <CaptionText>Scan to download</CaptionText>
+            <CaptionText className="text-typography-default">
+              Scan to download
+            </CaptionText>
           </div>
         </div>
         <DownloadBadges />
@@ -36,7 +38,7 @@ export const DerivGoBannerAndAwards = () => {
           className="m-auto"
           imageName="footer/investors-in-people.png"
           alt="investors in people - gold"
-          width={158}
+          width={156}
           height={34}
         />
       </div>
