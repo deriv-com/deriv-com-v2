@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.28.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.27.0...blocks-0.28.0) (2023-12-04)
+
+## [0.27.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.26.0...blocks-0.27.0) (2023-12-04)
+
+
+### Bug Fixes
+
+* update images of download in footer ([8038989](https://github.com/deriv-com/deriv-com-v2/commit/8038989f2077d1689e27918212ce8fff48810b36))
+
 ## [0.26.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.25.0...blocks-0.26.0) (2023-12-01)
 
 
