@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.32.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.31.0...blocks-0.32.0) (2023-12-05)
+
+
+### Bug Fixes
+
+* hover effect on navigation items ([b204adc](https://github.com/deriv-com/deriv-com-v2/commit/b204adc948f1a06b56de1623003c28d33971135d))
+
 ## [0.31.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.30.0...blocks-0.31.0) (2023-12-05)
 
 
