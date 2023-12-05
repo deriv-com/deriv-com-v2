@@ -25,18 +25,21 @@ const textColorVariantClass = {
 };
 
 const sizeVariantComponents = {
+  xs: Heading.H4,
   sm: Heading.H4,
   md: Heading.H3,
   lg: Heading.H2,
 };
 
 const sizeVariantContainerGap = {
+  xs: 'gap-gap-lg p-general-md',
   sm: 'gap-gap-lg p-general-lg',
   md: 'gap-gap-xl p-general-xl',
   lg: 'gap-gap-2xl p-general-2xl',
 };
 
 const sizeVariantTextGap = {
+  xs: 'gap-gap-md',
   sm: 'gap-gap-md',
   md: 'gap-gap-md',
   lg: 'gap-gap-lg',
@@ -99,7 +102,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
           </div>
         )}
         {link && (
-          <CustomLink href={link.href} hasIcon>
+          <CustomLink href={link.href} size="md" hasIcon>
             {link.content}
           </CustomLink>
         )}
