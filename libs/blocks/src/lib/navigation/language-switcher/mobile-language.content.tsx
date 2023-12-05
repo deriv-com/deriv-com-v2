@@ -17,7 +17,7 @@ export const MobileLanguageContent = () => {
           <div className="py-general-sm" key={langItems[item].displayName}>
             <Text
               bold
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-typography-prominent"
               onClick={() => {
                 selectLanguage?.(langItems[item]);
                 setShowMobileLanguages?.(false);

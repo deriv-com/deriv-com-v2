@@ -15,8 +15,9 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
   return (
     <CustomLink
       href={item.href}
+      hasHoverDecoration={false}
       className={qtMerge(
-        'w-full justify-start gap-gap-md py-general-sm font-bold',
+        'group w-full justify-start gap-gap-md py-general-sm font-bold',
         item.icon && 'grid grid-cols-[24px_1fr]',
         !item.icon && item.description && 'flex flex-col',
         className,
@@ -24,7 +25,7 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
     >
       {item.icon ? item.icon : null}
       <div className="flex gap-gap-sm">
-        <Text size="md" bold>
+        <Text size="md" bold className="group-hover:text-typography-prominent">
           {item.text}
         </Text>
         {item.external && <LabelPairedArrowUpRightRegularIcon iconSize="sm" />}
