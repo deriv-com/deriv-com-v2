@@ -21,6 +21,12 @@ const ReviewSection = () => {
               height={67}
             />
           }
+          //TODO: We will remove this static data once the data fetching is finalized.
+          staticData={{
+            trustScore: 4.6,
+            numberOfReviews: '37,133',
+            stars: 4.6,
+          }}
         />
       </FluidContainer>
     </Section>
