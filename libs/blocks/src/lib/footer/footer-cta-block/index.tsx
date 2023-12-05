@@ -14,8 +14,6 @@ const FooterCTABlock = ({
   image,
   children,
 }: FooterCTAProps) => {
-  console.log(image);
-
   return (
     <Section>
       <FluidContainer
