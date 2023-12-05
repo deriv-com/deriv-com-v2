@@ -19,7 +19,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
   return (
     !item.isMobileNavOnly && (
       <li
-        className="flex h-full items-center justify-center px-general-lg text-center"
+        className="group flex h-full items-center justify-center px-general-lg text-center"
         onMouseEnter={() => {
           setShowLangContent?.(false);
           if (item.type === 'nav-dropdown') {
@@ -29,8 +29,9 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
       >
         {item.type === 'direct' ? (
           <CustomLink
-            className="text-typography-default"
+            className="text-typography-default group-hover:text-typography-prominent"
             href={item.href}
+            hasHoverDecoration={false}
             onMouseEnter={() => {
               setShowLangContent?.(false);
               onListItemHover?.(navItemName);
@@ -39,7 +40,10 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
             {item.text}
           </CustomLink>
         ) : (
-          <Text size="sm" className="cursor-pointer hover:text-typography-link">
+          <Text
+            size="sm"
+            className="cursor-pointer hover:text-typography-prominent"
+          >
             {item.text}
           </Text>
         )}

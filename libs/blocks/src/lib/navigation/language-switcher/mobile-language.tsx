@@ -7,13 +7,15 @@ export const MobileLanguageToggler = () => {
   return (
     <div className="border-t-xs border-solid border-opacity-black-100 pt-general-md">
       <div
-        className="flex cursor-pointer items-center gap-gap-md py-general-sm"
+        className="group flex cursor-pointer items-center gap-gap-md py-general-sm"
         onClick={() => {
           setShowMobileLanguages?.(true);
         }}
       >
         <FlagUnitedKingdomIcon width={24} height={16} />
-        <Text bold>{activeLanguage?.displayName}</Text>
+        <Text className="group-hover:text-typography-prominent" bold>
+          {activeLanguage?.displayName}
+        </Text>
       </div>
     </div>
   );

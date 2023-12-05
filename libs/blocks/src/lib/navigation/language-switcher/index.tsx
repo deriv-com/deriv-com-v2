@@ -8,7 +8,7 @@ const LanguageSwitcher = () => {
 
   return (
     <div
-      className="flex cursor-pointer items-center gap-gap-sm"
+      className="group flex cursor-pointer items-center gap-gap-sm"
       onMouseEnter={() => {
         setIsDropContentOpen?.(false);
         setActiveMenu?.('none');
@@ -16,7 +16,9 @@ const LanguageSwitcher = () => {
       }}
     >
       <FlagUnitedKingdomIcon className="inline" width={24} height={16} />
-      <Text className="inline-block">{activeLanguage?.shortName}</Text>
+      <Text className="inline-block group-hover:text-typography-prominent">
+        {activeLanguage?.shortName}
+      </Text>
     </div>
   );
 };

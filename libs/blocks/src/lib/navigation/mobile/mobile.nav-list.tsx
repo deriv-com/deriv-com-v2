@@ -13,10 +13,10 @@ export const MobileNavList = () => {
           return <MobileNavLink item={item} key={navItemName} />;
         }
         return (
-          <li key={navItemName} className="py-general-sm">
+          <li key={navItemName} className="group py-general-sm">
             <Text
               size="md"
-              className="cursor-pointer"
+              className="cursor-pointer group-hover:text-typography-prominent"
               bold
               onClick={() => {
                 setActiveMenu?.(navItemName);
