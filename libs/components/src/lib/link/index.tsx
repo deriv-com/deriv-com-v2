@@ -50,7 +50,7 @@ export function CustomLink({
         'text-typography-default',
         hasIcon && 'items-center justify-center',
         size === 'sm' && 'text-body-sm',
-        size === 'md' && 'text-body-sm lg:text-body-md',
+        size === 'md' && 'text-body-md',
         size === 'lg' && 'text-body-lg',
         hasLinkColor && 'text-typography-link',
         hasHoverDecoration && 'hover:underline',

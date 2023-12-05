@@ -6,7 +6,7 @@ import {
   MarketForexGbpusdIcon,
   MarketForexUsdjpyIcon,
 } from '@deriv/quill-icons/Markets';
-import { CardsContainer } from '@deriv-com/components';
+import { CardSlider, CardsContainer } from '@deriv-com/components';
 
 const meta = {
   title: 'Blocks/LiveMarket/Tab',
@@ -31,19 +31,22 @@ export const Default: Story = {
           { children: 'Etfs' },
         ]}
       >
-        <CardsContainer
-          cols="four"
+        <CardSlider
           variant="LiveMarketCard"
-          cards={[
-            {
-              instrumentIcon: <MarketForexEurusdIcon />,
-              instrument: 'EUR/USD',
-              changePercentage: '+0.11%',
-              status: 'up',
-              bidPrice: '1.07219',
-              askPrice: '1.07223',
-              spread: '0.00005',
+          slideClasses="max-w-full"
+          swiperData={{
+            spaceBetween: 16,
+            breakpoints: {
+              1280: {
+                slidesPerView: 4,
+              },
+              1024: {
+                slidesPerView: 'auto',
+              },
             },
+            pagination: undefined,
+          }}
+          cards={[
             {
               instrumentIcon: <MarketForexGbpusdIcon />,
               instrument: 'GBP/USD',
@@ -52,6 +55,15 @@ export const Default: Story = {
               bidPrice: '1.24112',
               askPrice: '1.24502',
               spread: '0.0001',
+            },
+            {
+              instrumentIcon: <MarketForexEurusdIcon />,
+              instrument: 'EUR/USD',
+              changePercentage: '+0.11%',
+              status: 'up',
+              bidPrice: '1.07219',
+              askPrice: '1.07223',
+              spread: '0.00005',
             },
             {
               instrumentIcon: <MarketForexUsdjpyIcon />,
@@ -73,9 +85,21 @@ export const Default: Story = {
             },
           ]}
         />
-        <CardsContainer
-          cols="four"
+        <CardSlider
           variant="LiveMarketCard"
+          slideClasses="max-w-full"
+          swiperData={{
+            spaceBetween: 16,
+            breakpoints: {
+              1280: {
+                slidesPerView: 4,
+              },
+              1024: {
+                slidesPerView: 'auto',
+              },
+            },
+            pagination: undefined,
+          }}
           cards={[
             {
               instrumentIcon: <MarketForexEurusdIcon />,
@@ -87,12 +111,12 @@ export const Default: Story = {
               spread: '0.00005',
             },
             {
-              instrumentIcon: <MarketForexEurusdIcon />,
-              instrument: 'EUR/USD',
+              instrumentIcon: <MarketForexUsdjpyIcon />,
+              instrument: 'USD/JPY',
               changePercentage: '+0.11%',
-              status: 'up',
-              bidPrice: '1.07219',
-              askPrice: '1.07223',
+              status: 'remain',
+              bidPrice: '0.24234',
+              askPrice: '0.24265',
               spread: '0.00005',
             },
             {
@@ -103,15 +127,6 @@ export const Default: Story = {
               bidPrice: '1.24112',
               askPrice: '1.24502',
               spread: '0.0001',
-            },
-            {
-              instrumentIcon: <MarketForexUsdjpyIcon />,
-              instrument: 'USD/JPY',
-              changePercentage: '+0.11%',
-              status: 'remain',
-              bidPrice: '0.24234',
-              askPrice: '0.24265',
-              spread: '0.00005',
             },
             {
               instrumentIcon: <MarketForexAudusdIcon />,
@@ -124,9 +139,21 @@ export const Default: Story = {
             },
           ]}
         />
-        <CardsContainer
-          cols="four"
+        <CardSlider
           variant="LiveMarketCard"
+          slideClasses="max-w-full"
+          swiperData={{
+            spaceBetween: 16,
+            breakpoints: {
+              1280: {
+                slidesPerView: 4,
+              },
+              1024: {
+                slidesPerView: 'auto',
+              },
+            },
+            pagination: undefined,
+          }}
           cards={[
             {
               instrumentIcon: <MarketForexAudusdIcon />,
@@ -162,15 +189,6 @@ export const Default: Story = {
               status: 'remain',
               bidPrice: '0.24234',
               askPrice: '0.24265',
-              spread: '0.00005',
-            },
-            {
-              instrumentIcon: <MarketForexAudusdIcon />,
-              instrument: 'AUD/USD',
-              changePercentage: '0.00%',
-              status: 'closed',
-              bidPrice: '0.66118',
-              askPrice: '0.66243',
               spread: '0.00005',
             },
           ]}
