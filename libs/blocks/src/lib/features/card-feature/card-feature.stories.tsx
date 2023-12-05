@@ -36,6 +36,10 @@ export const Default: Story = {
         color: 'gray',
         align: 'start',
         size: 'sm',
+        link: {
+          content: 'Learn more',
+          href: '/',
+        },
       },
       {
         header: '24/7 support',
@@ -45,6 +49,10 @@ export const Default: Story = {
         color: 'gray',
         align: 'start',
         size: 'sm',
+        link: {
+          content: 'Learn more',
+          href: '/',
+        },
       },
       {
         header: 'Regulated',
@@ -54,6 +62,10 @@ export const Default: Story = {
         color: 'gray',
         align: 'start',
         size: 'sm',
+        link: {
+          content: 'Learn more',
+          href: '/',
+        },
       },
       {
         header: 'Reliable',
@@ -63,6 +75,10 @@ export const Default: Story = {
         color: 'gray',
         align: 'start',
         size: 'sm',
+        link: {
+          content: 'Learn more',
+          href: '/',
+        },
       },
     ],
   },
