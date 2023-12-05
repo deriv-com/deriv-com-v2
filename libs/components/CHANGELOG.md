@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.22.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.21.0...components-0.22.0) (2023-12-05)
+
+
+### Bug Fixes
+
+* custom link md size ([1866748](https://github.com/deriv-com/deriv-com-v2/commit/1866748f16a451fdff0ac4caca930e6ae152350e))
+
 ## [0.21.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.20.0...components-0.21.0) (2023-12-05)
 
 ## [0.20.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.19.0...components-0.20.0) (2023-12-04)
