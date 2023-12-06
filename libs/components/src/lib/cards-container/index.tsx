@@ -16,6 +16,10 @@ export interface CardsContainerProps<T extends CardVariantType> {
   className?: string;
 }
 
+/**
+ * * Important: The gap is currently set at 16px. If additional gap variants are introduced, make sure to update this value accordingly.
+ */
+
 const cardColsVariant: { [key in CardsContainerCols]: string } = {
   two: 'basis-full sm:basis-[calc((100%-16px)/2)]',
   three:
