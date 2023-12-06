@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.24.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.23.0...components-0.24.0) (2023-12-06)
+
+
+### Bug Fixes
+
+* border style ([4c1cd47](https://github.com/deriv-com/deriv-com-v2/commit/4c1cd47ab0c5ea11520cac99a2bdb914d939fc30))
+
 ## [0.23.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.22.0...components-0.23.0) (2023-12-06)
 
 ## [0.22.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.21.0...components-0.22.0) (2023-12-05)
