@@ -34,8 +34,8 @@ export const Base = ({
   };
 
   const dividerClassNames = {
-    both: 'border-x-none border-b-opacity-black-100 border-t-opacity-black-100',
-    bottom: 'border-b-opacity-black-100 !border-t-none',
+    both: 'border-x-none border-b-opacity-black-100 border-t-opacity-black-100 border-100',
+    bottom: 'border-b-opacity-black-100 !border-t-none border-100',
     none: '!border-t-none',
   };
 
