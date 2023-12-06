@@ -28,7 +28,6 @@ export function HomeTemplate() {
       <ProvenExcellenceSection />
       <StaticNumberBlock />
       <CTASection />
-      <FastPaymentSections />
     </PageLayout>
   );
 }
