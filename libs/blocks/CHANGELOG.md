@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.37.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.36.0...blocks-0.37.0) (2023-12-06)
+
+
+### Bug Fixes
+
+* updated font size for desctiption in content limit ([4269a18](https://github.com/deriv-com/deriv-com-v2/commit/4269a187b4b113565d60cae1ea374dca44dd3991))
+
 ## [0.36.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.35.0...blocks-0.36.0) (2023-12-06)
 
 ## [0.35.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.34.0...blocks-0.35.0) (2023-12-05)
