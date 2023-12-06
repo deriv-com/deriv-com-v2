@@ -63,7 +63,7 @@ export const CardsContainer = <T extends CardVariantType>({
         Array.from({ length: 3 }, (_, index) => (
           <div
             key={index}
-            className={qtMerge(
+            className={qtJoin(
               'gap-gap-lg', // TODO: Add sm/md/lg/xl variants if needed
               cardColsVariant[cols],
               'pr-general-md',
