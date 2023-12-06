@@ -14,6 +14,7 @@ export interface CardsContainerProps<T extends CardVariantType> {
   cols?: CardsContainerCols;
   dense?: boolean;
   className?: string;
+  sliderClass?: string;
 }
 
 const cardColsVariant: { [key in CardsContainerCols]: string } = {
@@ -30,6 +31,7 @@ export const CardsContainer = <T extends CardVariantType>({
   dense = false,
   variant,
   className,
+  sliderClass,
 }: CardsContainerProps<T>) => {
   const CardComponent = Card[variant];
 
@@ -43,25 +45,24 @@ export const CardsContainer = <T extends CardVariantType>({
       id="cards-container"
     >
       {cols === 'infinite' ? (
-        <>
-          {Array.from(Array(3).keys()).map((index) => (
-            <div
-              key={index}
-              className={qtMerge(
-                'gap-gap-lg', // TODO: Add sm/md/lg/xl variants if needed
-                cardColsVariant[cols],
-                'pr-general-md',
-              )}
-              id="infinite-carousel"
-            >
-              {cards.map((card) => (
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                <CardComponent key={card.header} {...card} />
-              ))}
-            </div>
-          ))}
-        </>
+        Array.from({ length: 3 }, (_, index) => (
+          <div
+            key={index}
+            className={qtMerge(
+              'gap-gap-lg', // TODO: Add sm/md/lg/xl variants if needed
+              cardColsVariant[cols],
+              'pr-general-md',
+              sliderClass,
+            )}
+            id="infinite-carousel"
+          >
+            {cards.map((card) => (
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              <CardComponent key={card.header} {...card} />
+            ))}
+          </div>
+        ))
       ) : (
         <div
           className={qtMerge(
