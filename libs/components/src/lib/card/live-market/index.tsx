@@ -37,7 +37,7 @@ const ChartIcons = {
   ),
 };
 
-export interface LiveMarketCardProps extends LiveMarketContent {
+export interface LiveMarketCardProps extends Omit<LiveMarketContent, 'id'> {
   className?: string;
 }
 

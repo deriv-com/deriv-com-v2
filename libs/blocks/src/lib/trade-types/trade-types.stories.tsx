@@ -13,6 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 const cards: CardContent[] = [
   {
+    id: 1,
     header: 'Card One Header',
     align: 'start',
     description: 'Card One description',
@@ -21,6 +22,7 @@ const cards: CardContent[] = [
     icon: <IllustrativeAdvertiseIcon />,
   },
   {
+    id: 2,
     header: 'Card Two Header',
     align: 'start',
     description: 'Card Two description',
@@ -29,6 +31,7 @@ const cards: CardContent[] = [
     icon: <IllustrativeAdvertiseIcon />,
   },
   {
+    id: 3,
     header: 'Card Three Header',
     align: 'start',
     description: 'Card Three description',
@@ -37,6 +40,7 @@ const cards: CardContent[] = [
     icon: <IllustrativeAdvertiseIcon />,
   },
   {
+    id: 4,
     header: 'Card Four Header',
     align: 'start',
     description: 'Card Four description',

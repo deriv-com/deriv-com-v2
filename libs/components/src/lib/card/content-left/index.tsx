@@ -1,7 +1,7 @@
 import BaseCard from '../base';
 import { CardContent } from '../types';
 
-export const ContentLeftCard: React.FC<CardContent> = ({
+export const ContentLeftCard: React.FC<Omit<CardContent, 'id'>> = ({
   children,
   ...rest
 }) => {

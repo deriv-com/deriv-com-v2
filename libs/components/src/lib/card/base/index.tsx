@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { CardContent } from '../types';
 import CustomLink from '../../link';
 
-export interface BaseCardProps extends CardContent {
+export interface BaseCardProps extends Omit<CardContent, 'id'> {
   contentPosition: 'bottom' | 'top' | 'start' | 'end';
 }
 

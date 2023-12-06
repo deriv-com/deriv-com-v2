@@ -1,7 +1,7 @@
 import { Heading, qtMerge } from '@deriv/quill-design';
 import { StatCardContent, StatCardVariant } from '../types';
 
-export interface StatCardProps extends StatCardContent {
+export interface StatCardProps extends Omit<StatCardContent, 'id'> {
   className?: string;
 }
 

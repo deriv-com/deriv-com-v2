@@ -9,6 +9,7 @@ import {
 
 const ourValuesCards: CardContent[] = [
   {
+    id: 1,
     header: 'Integrity',
     description:
       'We serve our customers with fairness and transparency. We settle all contracts by the book and speak plainly and truthfully.',
@@ -19,6 +20,7 @@ const ourValuesCards: CardContent[] = [
     className: 'h-full',
   },
   {
+    id: 2,
     header: 'Customer focus',
     description:
       'We put the customer first and strive to build products that deliver the best customer experience.',
@@ -29,6 +31,7 @@ const ourValuesCards: CardContent[] = [
     icon: <IllustrativeCustomerFocusIcon />,
   },
   {
+    id: 3,
     header: 'Competence',
     description:
       'We value colleagues with the ability to use good judgement and an aptitude to learn and grow.',
@@ -39,6 +42,7 @@ const ourValuesCards: CardContent[] = [
     icon: <IllustrativeCompetenceIcon />,
   },
   {
+    id: 4,
     header: 'Teamwork',
     description:
       'We value team players that collaborate freely across departments with humility and ambition.',

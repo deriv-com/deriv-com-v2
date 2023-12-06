@@ -4,7 +4,9 @@ import Card, { CardVariants } from '../card';
 export type CardVariantType = keyof CardVariants;
 
 export type CardVariantProps<T extends CardVariantType> =
-  React.ComponentPropsWithoutRef<CardVariants[T]>;
+  React.ComponentPropsWithoutRef<CardVariants[T]> & {
+    id: number;
+  };
 
 export type CardsContainerCols = 'two' | 'three' | 'four' | 'five' | 'infinite';
 
@@ -69,7 +71,7 @@ export const CardsContainer = <T extends CardVariantType>({
               {cards.map((card) => (
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
-                <CardComponent key={card.header} {...card} />
+                <CardComponent key={card.id} {...card} />
               ))}
             </div>
           ))}
@@ -84,12 +86,12 @@ export const CardsContainer = <T extends CardVariantType>({
               : 'justify-start',
           )}
         >
-          {cards.map((card, i) => (
+          {cards.map((card) => (
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             <CardComponent
               className={cardColsVariant[cols]}
-              key={i}
+              key={card.id}
               {...card}
             />
           ))}
