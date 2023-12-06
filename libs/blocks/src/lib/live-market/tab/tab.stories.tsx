@@ -6,7 +6,7 @@ import {
   MarketForexGbpusdIcon,
   MarketForexUsdjpyIcon,
 } from '@deriv/quill-icons/Markets';
-import { CardSlider, CardsContainer } from '@deriv-com/components';
+import { CardSlider } from '@deriv-com/components';
 
 const meta = {
   title: 'Blocks/LiveMarket/Tab',
@@ -48,6 +48,7 @@ export const Default: Story = {
           }}
           cards={[
             {
+              id: 1,
               instrumentIcon: <MarketForexGbpusdIcon />,
               instrument: 'GBP/USD',
               changePercentage: '+0.11%',
@@ -57,6 +58,7 @@ export const Default: Story = {
               spread: '0.0001',
             },
             {
+              id: 2,
               instrumentIcon: <MarketForexEurusdIcon />,
               instrument: 'EUR/USD',
               changePercentage: '+0.11%',
@@ -66,6 +68,7 @@ export const Default: Story = {
               spread: '0.00005',
             },
             {
+              id: 3,
               instrumentIcon: <MarketForexUsdjpyIcon />,
               instrument: 'USD/JPY',
               changePercentage: '+0.11%',
@@ -75,6 +78,7 @@ export const Default: Story = {
               spread: '0.00005',
             },
             {
+              id: 4,
               instrumentIcon: <MarketForexAudusdIcon />,
               instrument: 'AUD/USD',
               changePercentage: '0.00%',
@@ -102,6 +106,7 @@ export const Default: Story = {
           }}
           cards={[
             {
+              id: 1,
               instrumentIcon: <MarketForexEurusdIcon />,
               instrument: 'EUR/USD',
               changePercentage: '+0.11%',
@@ -111,6 +116,7 @@ export const Default: Story = {
               spread: '0.00005',
             },
             {
+              id: 2,
               instrumentIcon: <MarketForexUsdjpyIcon />,
               instrument: 'USD/JPY',
               changePercentage: '+0.11%',
@@ -120,6 +126,7 @@ export const Default: Story = {
               spread: '0.00005',
             },
             {
+              id: 3,
               instrumentIcon: <MarketForexGbpusdIcon />,
               instrument: 'GBP/USD',
               changePercentage: '+0.11%',
@@ -129,6 +136,7 @@ export const Default: Story = {
               spread: '0.0001',
             },
             {
+              id: 4,
               instrumentIcon: <MarketForexAudusdIcon />,
               instrument: 'AUD/USD',
               changePercentage: '0.00%',
@@ -156,6 +164,7 @@ export const Default: Story = {
           }}
           cards={[
             {
+              id: 1,
               instrumentIcon: <MarketForexAudusdIcon />,
               instrument: 'AUD/USD',
               changePercentage: '0.00%',
@@ -165,6 +174,7 @@ export const Default: Story = {
               spread: '0.00005',
             },
             {
+              id: 2,
               instrumentIcon: <MarketForexEurusdIcon />,
               instrument: 'EUR/USD',
               changePercentage: '+0.11%',
@@ -174,6 +184,7 @@ export const Default: Story = {
               spread: '0.00005',
             },
             {
+              id: 3,
               instrumentIcon: <MarketForexGbpusdIcon />,
               instrument: 'GBP/USD',
               changePercentage: '+0.11%',
@@ -183,6 +194,7 @@ export const Default: Story = {
               spread: '0.0001',
             },
             {
+              id: 4,
               instrumentIcon: <MarketForexUsdjpyIcon />,
               instrument: 'USD/JPY',
               changePercentage: '+0.11%',

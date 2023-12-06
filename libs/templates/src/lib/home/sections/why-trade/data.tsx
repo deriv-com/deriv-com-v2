@@ -2,6 +2,7 @@ import { CardContent } from '@deriv-com/components';
 
 export const whyTradeWithUsData: CardContent[] = [
   {
+    id: 1,
     header: 'Trade diverse forex assets',
     description:
       'Trade over 50 forex pairs including major, minor, and exotic pairs',
@@ -14,6 +15,7 @@ export const whyTradeWithUsData: CardContent[] = [
     },
   },
   {
+    id: 2,
     header: 'Leveraged trading',
     description: 'Enjoy unbeatable spreads and speedy forex trades',
     color: 'light',
@@ -25,6 +27,7 @@ export const whyTradeWithUsData: CardContent[] = [
     },
   },
   {
+    id: 3,
     header: 'Powerful trading platform',
     description: 'The world’s favorite forex trading platform',
     color: 'light',

@@ -33,6 +33,7 @@ export const Default: Story = {
           variant="ContentBottom"
           cards={[
             {
+              id: 1,
               header: 'Deriv MT5',
               description:
                 'Your data is safe, and your funds are in segregated bank accounts per regulatory standards.',
@@ -51,6 +52,7 @@ export const Default: Story = {
               size: 'md',
             },
             {
+              id: 2,
               header: '24/7 support',
               description:
                 'Reach our professional, multilingual team anytime via live chat.',
@@ -69,6 +71,7 @@ export const Default: Story = {
               size: 'md',
             },
             {
+              id: 3,
               header: 'Regulated',
               description:
                 'We are licensed and overseen by leading global financial authorities.',
@@ -90,6 +93,7 @@ export const Default: Story = {
           variant="ContentBottom"
           cards={[
             {
+              id: 1,
               header: '24/7 support',
               description:
                 'Reach our professional, multilingual team anytime via live chat.',
@@ -108,6 +112,7 @@ export const Default: Story = {
               size: 'md',
             },
             {
+              id: 2,
               header: 'Deriv MT5',
               description:
                 'Your data is safe, and your funds are in segregated bank accounts per regulatory standards.',
@@ -126,6 +131,7 @@ export const Default: Story = {
               size: 'md',
             },
             {
+              id: 3,
               header: 'Regulated',
               description:
                 'We are licensed and overseen by leading global financial authorities.',
@@ -147,6 +153,7 @@ export const Default: Story = {
           variant="ContentBottom"
           cards={[
             {
+              id: 1,
               header: 'Regulated',
               description:
                 'We are licensed and overseen by leading global financial authorities.',
@@ -162,6 +169,7 @@ export const Default: Story = {
               size: 'md',
             },
             {
+              id: 2,
               header: 'Deriv MT5',
               description:
                 'Your data is safe, and your funds are in segregated bank accounts per regulatory standards.',
@@ -180,6 +188,7 @@ export const Default: Story = {
               size: 'md',
             },
             {
+              id: 3,
               header: '24/7 support',
               description:
                 'Reach our professional, multilingual team anytime via live chat.',

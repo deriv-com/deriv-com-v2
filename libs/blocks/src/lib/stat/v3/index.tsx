@@ -3,7 +3,6 @@ import {
   Heading,
   Section,
   Text,
-  qtJoin,
   qtMerge,
 } from '@deriv/quill-design';
 
@@ -23,7 +22,7 @@ export const V3StatBlock: React.FC<V3StatBlockProps> = ({
 }) => {
   return (
     <Section
-      className={qtJoin(
+      className={qtMerge(
         'bg-background-primary-container py-general-xl',
         className,
       )}
@@ -35,7 +34,7 @@ export const V3StatBlock: React.FC<V3StatBlockProps> = ({
       >
         {items.map((item) => {
           return (
-            <div className="flex h-full flex-col gap-400">
+            <div className="flex h-full flex-col gap-400" key={item.title}>
               <Heading.H3 className="min-h-[24px] text-center">
                 {item.title}
               </Heading.H3>

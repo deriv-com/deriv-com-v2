@@ -9,7 +9,9 @@ import { SwiperOptions } from 'swiper/types';
 type CardVariantType = keyof CardVariants;
 
 type CardVariantProps<T extends CardVariantType> =
-  React.ComponentPropsWithoutRef<CardVariants[T]>;
+  React.ComponentPropsWithoutRef<CardVariants[T]> & {
+    id: number;
+  };
 
 export interface CardSliderProps<T extends CardVariantType> {
   variant: T;
