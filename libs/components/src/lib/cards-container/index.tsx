@@ -43,6 +43,7 @@ export const CardsContainer = <T extends CardVariantType>({
         className,
       )}
       id="cards-container"
+      dir="ltr"
     >
       {cols === 'infinite' ? (
         Array.from({ length: 3 }, (_, index) => (

@@ -11,10 +11,14 @@ const Base: React.FC<FastPaymentProps> = ({
   link,
   disclaimer,
   content: { cards = [], cols = 'three', dense, sliderClass },
+  isRtl = false,
 }) => {
   return (
-    <FluidContainer className="flex flex-col items-center bg-background-primary-container py-general-4xl text-center">
-      <Heading.H2>{title}</Heading.H2>
+    <FluidContainer
+      className="flex flex-col items-center bg-background-primary-container py-general-4xl text-center"
+      dir={isRtl ? 'rtl' : 'ltr'}
+    >
+      <Heading.H2 dir="rtl">{title}</Heading.H2>
       {description && <Text className="pt-general-md">{description}</Text>}
 
       {link && (
