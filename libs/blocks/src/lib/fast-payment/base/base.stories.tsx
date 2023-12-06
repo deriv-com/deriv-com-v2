@@ -81,6 +81,7 @@ export const Default: Story = {
     },
     disclaimer: '*Disclaimer text goes here.',
     content: {
+      sliderClass: 'animate-[slide_100s_linear_infinite]',
       cards: cards.slice(0, 3),
     },
   },

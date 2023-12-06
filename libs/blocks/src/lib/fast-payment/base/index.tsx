@@ -13,32 +13,28 @@ const Base: React.FC<FastPaymentProps> = ({
   content: { cards = [], cols = 'three', dense, sliderClass },
 }) => {
   return (
-    <FluidContainer className="bg-background-primary-container py-general-4xl">
-      <div className="flex flex-col items-center text-center">
-        <Heading.H2>{title}</Heading.H2>
-        {description && <Text className="pt-general-lg">{description}</Text>}
+    <FluidContainer className="flex flex-col items-center bg-background-primary-container py-general-4xl text-center">
+      <Heading.H2>{title}</Heading.H2>
+      {description && <Text className="pt-general-md">{description}</Text>}
 
-        {link && (
-          <div className="flex justify-center pt-general-xl">
-            <CustomLink href={link.href} className="w-fit" hasIcon>
-              {link.content}
-            </CustomLink>
-          </div>
-        )}
-        <CardsContainer
-          cards={cards}
-          variant="ContentBottom"
-          cols={cols}
-          dense={dense}
-          className="pt-general-2xl"
-          sliderClass={sliderClass}
-        />
-        {disclaimer && (
-          <Text size="sm" className="pt-general-2xl text-typography-subtle">
-            {disclaimer}
-          </Text>
-        )}
-      </div>
+      {link && (
+        <CustomLink href={link.href} className="w-fit pt-general-xl" hasIcon>
+          {link.content}
+        </CustomLink>
+      )}
+      <CardsContainer
+        cards={cards}
+        variant="ContentBottom"
+        cols={cols}
+        dense={dense}
+        className="pt-general-2xl"
+        sliderClass={sliderClass}
+      />
+      {disclaimer && (
+        <Text size="sm" className="pt-general-2xl text-typography-subtle">
+          {disclaimer}
+        </Text>
+      )}
     </FluidContainer>
   );
 };
