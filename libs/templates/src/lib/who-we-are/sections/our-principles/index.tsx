@@ -4,6 +4,7 @@ import { Button } from '@deriv/quill-design';
 
 const ourPrinciplesCards: CardContent[] = [
   {
+    id: 1,
     header: 'Be reliable',
     description:
       'We settle all contracts fairly, process all deposits and withdrawals promptly, and provide reliable support and a high-quality trading experience to all our customers.',
@@ -12,6 +13,7 @@ const ourPrinciplesCards: CardContent[] = [
     color: 'light',
   },
   {
+    id: 2,
     header: 'Be fair',
     description:
       'We treat all customers equitably, handle complaints with integrity, and offer competitive prices with no hidden costs and no artificial barriers on customer withdrawals.',
@@ -20,6 +22,7 @@ const ourPrinciplesCards: CardContent[] = [
     color: 'light',
   },
   {
+    id: 3,
     header: 'Be transparent',
     description:
       'We speak plainly to avoid ambiguity, disclose the terms of all contracts, and are clear about the risks of trading and how we make money.',
@@ -28,6 +31,7 @@ const ourPrinciplesCards: CardContent[] = [
     color: 'light',
   },
   {
+    id: 4,
     header: 'Be responsible',
     description:
       'We don’t practise hard-selling, offer financial or trading advice, nor make promises of guaranteed returns. We don’t encourage vulnerable people to trade and implement controls to prevent any unlawful activity.',

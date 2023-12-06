@@ -17,6 +17,7 @@ const FastPaymentSection = () => {
       content={{
         cards: [
           {
+            id: 1,
             header: '',
             color: 'gray',
             align: 'center',
@@ -31,6 +32,7 @@ const FastPaymentSection = () => {
             nonContentClassName: 'p-general-xl',
           },
           {
+            id: 2,
             header: '',
             color: 'gray',
             align: 'center',
@@ -41,6 +43,7 @@ const FastPaymentSection = () => {
             nonContentClassName: 'p-general-xl',
           },
           {
+            id: 3,
             header: '',
             color: 'gray',
             align: 'center',

@@ -7,6 +7,7 @@ import { IllustrativeChatIcon } from '@deriv/quill-icons/Illustrative';
 
 export const helpCardsData: CardContent[] = [
   {
+    id: 1,
     header: 'Live chat',
     description: 'Get help from our expert support team.',
     size: 'sm',
@@ -19,6 +20,7 @@ export const helpCardsData: CardContent[] = [
     },
   },
   {
+    id: 2,
     header: 'Message us',
     description: 'Get personalised assistance via WhatsApp.',
     size: 'sm',
@@ -31,6 +33,7 @@ export const helpCardsData: CardContent[] = [
     },
   },
   {
+    id: 3,
     header: 'Complaints',
     description: 'Got a complaint? Here’s everything you need to know.',
     size: 'sm',

@@ -25,6 +25,7 @@ export const Default: Story = {
     variant: 'ContentBottom',
     cards: [
       {
+        id: 1,
         header: 'Card 1',
         description:
           'Description here. Description here. Description here. Description here.',
@@ -34,6 +35,7 @@ export const Default: Story = {
         size: 'sm',
       },
       {
+        id: 2,
         header: 'Card 2',
         description:
           'Description here. Description here. Description here. Description here.',
@@ -43,6 +45,7 @@ export const Default: Story = {
         size: 'sm',
       },
       {
+        id: 3,
         header: 'Card 3',
         description:
           'Description here. Description here. Description here. Description here.',
@@ -52,6 +55,7 @@ export const Default: Story = {
         size: 'sm',
       },
       {
+        id: 4,
         header: 'Card 4',
         description:
           'Description here. Description here. Description here. Description here.',
@@ -61,6 +65,7 @@ export const Default: Story = {
         size: 'sm',
       },
       {
+        id: 5,
         header: 'Card 5',
         description:
           'Description here. Description here. Description here. Description here.',

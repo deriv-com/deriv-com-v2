@@ -7,6 +7,7 @@ export type CardSizeVariant = 'xs' | 'sm' | 'md' | 'lg';
 
 interface BaseCardContent {
   header?: string;
+  id: number;
 }
 //todo: removed [LinkProps] from utils/generics and added here. we need to update this because we are using this on multiple places
 interface LinkProps {
@@ -35,6 +36,7 @@ export interface CardContent extends BaseCardContent {
 
 export type MarketStatus = 'up' | 'down' | 'remain' | 'closed';
 export interface LiveMarketContent {
+  id: number;
   instrumentIcon: ReactNode;
   instrument: string;
   changePercentage: string;
