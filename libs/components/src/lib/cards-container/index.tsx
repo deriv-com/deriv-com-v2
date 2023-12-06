@@ -23,15 +23,6 @@ export interface CardsContainerProps<T extends CardVariantType> {
  * * Important: The gap is currently set at 16px. If additional gap variants are introduced, make sure to update this value accordingly.
  */
 
-const cardColsVariant: { [key in CardsContainerCols]: string } = {
-  two: 'basis-full sm:basis-[calc((100%-16px)/2)]',
-  three:
-    'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*2)/3)]',
-  four: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*3)/4)]',
-  five: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*4)/5)]',
-  infinite: 'animate-slide flex',
-};
-
 const columns = {
   two: 2,
   three: 3,
@@ -48,6 +39,15 @@ export const CardsContainer = <T extends CardVariantType>({
   sliderClass,
 }: CardsContainerProps<T>) => {
   const CardComponent = Card[variant];
+
+  const cardColsVariant: { [key in CardsContainerCols]: string } = {
+    two: 'basis-full sm:basis-[calc((100%-16px)/2)]',
+    three:
+      'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*2)/3)]',
+    four: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*3)/4)]',
+    five: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*4)/5)]',
+    infinite: qtJoin('flex', sliderClass ? sliderClass : 'animate-slide'),
+  };
 
   return (
     <div
@@ -67,7 +67,6 @@ export const CardsContainer = <T extends CardVariantType>({
               'gap-gap-lg', // TODO: Add sm/md/lg/xl variants if needed
               cardColsVariant[cols],
               'pr-general-md',
-              sliderClass,
             )}
             id="infinite-carousel"
           >
