@@ -89,7 +89,6 @@ export const Default: Story = {
     className: 'bg-background-primary-container',
     disclaimer: '*Disclaimer text goes here.',
     content: {
-      // sliderClass: 'animate-[slide_100s_linear_infinite]',
       cards: cards.slice(0, 3),
     },
   },
@@ -160,6 +159,7 @@ export const Carousel: Story = {
     ...Default.args,
     content: {
       cols: 'infinite',
+      sliderClass: 'animate-[slide_100s_linear_infinite]',
       cards: sliderCards,
     },
   },
