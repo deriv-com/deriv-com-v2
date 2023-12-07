@@ -12,9 +12,14 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
         },
+        slideRtl: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
       },
       animation: {
-        slide: '20s slide infinite linear',
+        slide: '50s slide infinite linear',
+        slideRtl: '50s slideRtl infinite linear',
       },
     },
   },

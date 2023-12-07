@@ -17,6 +17,7 @@ export interface CardsContainerProps<T extends CardVariantType> {
   dense?: boolean;
   className?: string;
   sliderClass?: string;
+  isRtl?: boolean;
 }
 
 /**
@@ -37,6 +38,7 @@ export const CardsContainer = <T extends CardVariantType>({
   variant,
   className,
   sliderClass,
+  isRtl,
 }: CardsContainerProps<T>) => {
   const CardComponent = Card[variant];
 
@@ -46,7 +48,11 @@ export const CardsContainer = <T extends CardVariantType>({
       'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*2)/3)]',
     four: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*3)/4)]',
     five: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*4)/5)]',
-    infinite: qtJoin('flex', sliderClass ? sliderClass : 'animate-slide'),
+    infinite: qtJoin(
+      'flex',
+      isRtl ? `animate-slideRtl` : `animate-slide`,
+      sliderClass,
+    ),
   };
 
   return (
@@ -57,7 +63,6 @@ export const CardsContainer = <T extends CardVariantType>({
         className,
       )}
       id="cards-container"
-      dir="ltr"
     >
       {cols === 'infinite' ? (
         Array.from({ length: 3 }, (_, index) => (

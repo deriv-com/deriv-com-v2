@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Base from '.';
-import { cards } from './data';
+import { cards, sliderCards } from './data';
 
 const content: Record<string, object | null> = {
   two_col: {
@@ -21,7 +21,7 @@ const content: Record<string, object | null> = {
   },
   carousel: {
     cols: 'infinite',
-    cards: cards,
+    cards: sliderCards,
   },
 };
 
@@ -79,7 +79,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    description: 'Make instant deposits from 10,000 HKD. Withdraw in minutes',
+    description: 'Make instant deposits from 10,000 HKD. Withdraw in minutes.',
     title: 'Hassle-free deposits and withdrawals.',
     isRtl: false,
     link: {
@@ -89,7 +89,7 @@ export const Default: Story = {
     className: 'bg-background-primary-container',
     disclaimer: '*Disclaimer text goes here.',
     content: {
-      sliderClass: 'animate-[slide_100s_linear_infinite]',
+      // sliderClass: 'animate-[slide_100s_linear_infinite]',
       cards: cards.slice(0, 3),
     },
   },
@@ -160,7 +160,7 @@ export const Carousel: Story = {
     ...Default.args,
     content: {
       cols: 'infinite',
-      cards: cards,
+      cards: sliderCards,
     },
   },
 };

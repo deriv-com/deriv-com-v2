@@ -43,6 +43,7 @@ const Base: React.FC<FastPaymentProps> = ({
         dense={dense}
         className="pt-general-2xl"
         sliderClass={sliderClass}
+        isRtl={isRtl}
       />
       {disclaimer && (
         <Text size="sm" className="pt-general-2xl text-typography-subtle">
