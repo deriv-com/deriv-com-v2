@@ -79,8 +79,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    description: 'Make instant deposits from 10,000 HKD. Withdraw in minutes.',
-    title: 'Hassle-free deposits and withdrawals',
+    description: 'Make instant deposits from 10,000 HKD. Withdraw in minutes',
+    title: 'Hassle-free deposits and withdrawals.',
     isRtl: false,
     link: {
       content: 'Learn More',

@@ -21,12 +21,18 @@ const Base: React.FC<FastPaymentProps> = ({
         className,
       )}
       dir={isRtl ? 'rtl' : 'ltr'}
+      id="fast-payment-container"
     >
-      <Heading.H2 dir="rtl">{title}</Heading.H2>
+      <Heading.H2>{title}</Heading.H2>
       {description && <Text className="pt-general-md">{description}</Text>}
 
       {link && (
-        <CustomLink href={link.href} className="w-fit pt-general-xl" hasIcon>
+        <CustomLink
+          href={link.href}
+          className="w-fit pt-general-xl"
+          hasIcon
+          id="fast-payment-link"
+        >
           {link.content}
         </CustomLink>
       )}
