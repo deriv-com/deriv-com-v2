@@ -86,6 +86,7 @@ export const Default: Story = {
       content: 'Learn More',
       href: '#',
     },
+    className: 'bg-background-primary-container',
     disclaimer: '*Disclaimer text goes here.',
     content: {
       sliderClass: 'animate-[slide_100s_linear_infinite]',

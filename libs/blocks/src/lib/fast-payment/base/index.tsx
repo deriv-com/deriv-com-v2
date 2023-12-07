@@ -1,4 +1,4 @@
-import { FluidContainer, Heading, Text } from '@deriv/quill-design';
+import { FluidContainer, Heading, Text, qtJoin } from '@deriv/quill-design';
 import { CardsContainer, CustomLink } from '@deriv-com/components';
 
 import { FastPaymentProps } from '../types';
@@ -12,10 +12,14 @@ const Base: React.FC<FastPaymentProps> = ({
   disclaimer,
   content: { cards = [], cols = 'three', dense, sliderClass },
   isRtl = false,
+  className,
 }) => {
   return (
     <FluidContainer
-      className="flex flex-col items-center bg-background-primary-container py-general-4xl text-center"
+      className={qtJoin(
+        'flex flex-col items-center py-general-4xl text-center',
+        className,
+      )}
       dir={isRtl ? 'rtl' : 'ltr'}
     >
       <Heading.H2 dir="rtl">{title}</Heading.H2>
