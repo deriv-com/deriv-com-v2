@@ -12,6 +12,5 @@ export interface FastPaymentProps {
   link?: LinkProps;
   disclaimer?: string;
   content: Omit<CardsContainerProps<'ContentBottom'>, 'variant'>;
-  isRtl?: boolean;
   className?: string;
 }

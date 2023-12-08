@@ -11,7 +11,6 @@ const Base: React.FC<FastPaymentProps> = ({
   link,
   disclaimer,
   content: { cards = [], cols = 'three', dense, sliderClass },
-  isRtl = false,
   className,
 }) => {
   return (
@@ -20,18 +19,21 @@ const Base: React.FC<FastPaymentProps> = ({
         'flex flex-col items-center py-general-4xl text-center',
         className,
       )}
-      dir={isRtl ? 'rtl' : 'ltr'}
-      id="fast-payment-container"
+      data-testid="fast-payment-container"
     >
       <Heading.H2>{title}</Heading.H2>
-      {description && <Text className="pt-general-md">{description}</Text>}
+      {description && (
+        <Text data-testid="fast-payment-description" className="pt-general-md">
+          {description}
+        </Text>
+      )}
 
       {link && (
         <CustomLink
           href={link.href}
           className="w-fit pt-general-xl"
           hasIcon
-          id="fast-payment-link"
+          data-testid="fast-payment-link"
         >
           {link.content}
         </CustomLink>
@@ -43,7 +45,6 @@ const Base: React.FC<FastPaymentProps> = ({
         dense={dense}
         className="pt-general-2xl"
         sliderClass={sliderClass}
-        isRtl={isRtl}
       />
       {disclaimer && (
         <Text size="sm" className="pt-general-2xl text-typography-subtle">

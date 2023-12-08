@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Base from './index';
 import { cards } from './data';
 
@@ -27,8 +27,9 @@ describe('FastPayment', () => {
     expect(container.querySelector('h2')).toBeTruthy();
     expect(queryByText(title)).toBeTruthy();
     expect(queryByText(desc)).toBeTruthy();
-    expect(document.getElementById('cards-container')).toBeTruthy();
-    expect(document.getElementById('fast-payment-link')).toBeTruthy();
+    expect(screen.getByTestId('cards-container')).toBeTruthy();
+    expect(screen.getByTestId('fast-payment-link')).toBeTruthy();
+    expect(screen.getByTestId('fast-payment-description')).toBeTruthy();
   });
 
   //render without description
@@ -45,9 +46,9 @@ describe('FastPayment', () => {
     );
 
     expect(container.querySelector('h2')).toBeTruthy();
-    expect(document.getElementById('fast-payment-description')).toBeNull();
-    expect(document.getElementById('fast-payment-link')).toBeNull();
-    expect(document.getElementById('cards-container')).toBeTruthy();
-    expect(document.getElementById('infinite-carousel')).toBeTruthy();
+    expect(screen.queryByTestId('fast-payment-description')).toBeNull();
+    expect(screen.queryByTestId('fast-payment-link')).toBeNull();
+    expect(screen.getByTestId('cards-container')).toBeTruthy();
+    expect(screen.queryAllByTestId('infinite-carousel')).toBeTruthy();
   });
 });

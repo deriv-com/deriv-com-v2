@@ -17,7 +17,6 @@ export interface CardsContainerProps<T extends CardVariantType> {
   dense?: boolean;
   className?: string;
   sliderClass?: string;
-  isRtl?: boolean;
 }
 
 /**
@@ -37,8 +36,7 @@ export const CardsContainer = <T extends CardVariantType>({
   dense = false,
   variant,
   className,
-  isRtl,
-  sliderClass = isRtl ? `animate-slideRtl` : `animate-slide`,
+  sliderClass = 'animate-slide',
 }: CardsContainerProps<T>) => {
   const CardComponent = Card[variant];
 
@@ -58,7 +56,7 @@ export const CardsContainer = <T extends CardVariantType>({
         cols === 'infinite' ? 'w-screen' : 'w-full',
         className,
       )}
-      id="cards-container"
+      data-testid="cards-container"
     >
       {cols === 'infinite' ? (
         Array.from({ length: 3 }, (_, index) => (
@@ -69,7 +67,7 @@ export const CardsContainer = <T extends CardVariantType>({
               cardColsVariant[cols],
               'pr-general-md',
             )}
-            id="infinite-carousel"
+            data-testid="infinite-carousel"
           >
             {cards.map((card) => (
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
