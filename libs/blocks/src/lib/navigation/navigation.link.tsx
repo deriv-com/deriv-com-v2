@@ -22,7 +22,7 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
         !item.icon && item.description && 'flex flex-col',
         className,
       )}
-      target={item.external ? '_blank' : undefined}
+      target={item.target}
     >
       {item.icon ? item.icon : null}
       <div className="flex gap-gap-sm">

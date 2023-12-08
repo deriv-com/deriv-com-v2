@@ -36,6 +36,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
               setShowLangContent?.(false);
               onListItemHover?.(navItemName);
             }}
+            target={item.target}
           >
             {item.text}
           </CustomLink>
