@@ -117,8 +117,8 @@ export const Rating = ({
   const colorKey = Math.ceil(rate);
 
   const gapClassName = {
-    sm: 'gap-gap-md',
-    md: 'gap-gap-sm',
+    sm: 'gap-gap-xs',
+    md: 'gap-gap-md',
   };
 
   return (
