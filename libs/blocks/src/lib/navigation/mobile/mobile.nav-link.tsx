@@ -25,6 +25,7 @@ export const MobileNavLink: React.FC<MobileNavLinkProps> = ({
         className,
       )}
       onClick={toggleMobileNav}
+      target={item.target}
     >
       {item.text}
       {item.external && <LabelPairedArrowUpRightRegularIcon iconSize="sm" />}
