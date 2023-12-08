@@ -34,7 +34,7 @@ const links: Record<string, object | null> = {
 };
 
 const meta = {
-  title: 'Blocks/FastPayment/Default',
+  title: 'Blocks/FastPayment',
   component: Base,
   tags: ['autodocs'],
   argTypes: {
