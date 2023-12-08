@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.9.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.8.0...providers-0.9.0) (2023-12-08)
+
+
+### Bug Fixes
+
+* update navigation types to have translation ([8fdf798](https://github.com/deriv-com/deriv-com-v2/commit/8fdf798345163b143f00c76e8117f67108a9b235))
+
 ## [0.8.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.7.0...providers-0.8.0) (2023-12-04)
 
 ## [0.7.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.6.0...providers-0.7.0) (2023-12-01)

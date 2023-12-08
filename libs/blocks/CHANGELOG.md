@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.39.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.38.0...blocks-0.39.0) (2023-12-08)
+
+
+### Bug Fixes
+
+* update warning text type in footer for translation ([edc4932](https://github.com/deriv-com/deriv-com-v2/commit/edc4932fbee8dcfec4b30f893ed0a222a984802e))
+
+## [0.38.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.37.0...blocks-0.38.0) (2023-12-08)
+
+
+### Bug Fixes
+
+* update navigation types to have translation ([8fdf798](https://github.com/deriv-com/deriv-com-v2/commit/8fdf798345163b143f00c76e8117f67108a9b235))
+
 ## [0.37.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.36.0...blocks-0.37.0) (2023-12-06)
 
 
