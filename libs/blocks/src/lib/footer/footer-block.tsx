@@ -1,7 +1,7 @@
 import { FluidContainer, Section, Text } from '@deriv/quill-design';
 import { BrandDerivWordmarkSlateIcon } from '@deriv/quill-icons/Logo';
 import clsx from 'clsx';
-import { ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 import { SocialMediaSection } from './footer.social';
 
 export interface SocialIcons {
@@ -15,7 +15,7 @@ export interface FooterProps {
   socialButtons?: SocialIcons[];
   descriptionContent?: () => ReactNode;
   bannerAndAwards?: () => ReactNode;
-  warningText?: string;
+  warningText?: string | ReactElement;
 }
 
 export const FooterBlock = ({
