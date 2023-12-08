@@ -159,7 +159,6 @@ export const Carousel: Story = {
     ...Default.args,
     content: {
       cols: 'infinite',
-      sliderClass: 'animate-[slide_100s_linear_infinite]',
       cards: sliderCards,
     },
   },

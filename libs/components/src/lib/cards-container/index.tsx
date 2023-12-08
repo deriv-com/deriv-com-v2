@@ -37,8 +37,8 @@ export const CardsContainer = <T extends CardVariantType>({
   dense = false,
   variant,
   className,
-  sliderClass,
   isRtl,
+  sliderClass = isRtl ? `animate-slideRtl` : `animate-slide`,
 }: CardsContainerProps<T>) => {
   const CardComponent = Card[variant];
 
@@ -48,11 +48,7 @@ export const CardsContainer = <T extends CardVariantType>({
       'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*2)/3)]',
     four: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*3)/4)]',
     five: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*4)/5)]',
-    infinite: qtJoin(
-      'flex',
-      isRtl ? `animate-slideRtl` : `animate-slide`,
-      sliderClass,
-    ),
+    infinite: qtJoin('flex', sliderClass),
   };
 
   return (
