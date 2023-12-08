@@ -16,7 +16,6 @@ export interface CardsContainerProps<T extends CardVariantType> {
   cols?: CardsContainerCols;
   dense?: boolean;
   className?: string;
-  sliderClass?: string;
 }
 
 /**
@@ -45,7 +44,6 @@ export const CardsContainer = <T extends CardVariantType>({
   dense = false,
   variant,
   className,
-  sliderClass,
 }: CardsContainerProps<T>) => {
   const CardComponent = Card[variant];
 
