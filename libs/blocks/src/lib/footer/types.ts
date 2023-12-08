@@ -1,16 +1,16 @@
-import { ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 type WithId<T> = T & { id: number };
 
 export interface NavLink {
-  text: string;
+  text: string | ReactElement;
   href: string;
   icon?: React.ReactNode;
 }
 
 export interface LinkLayer {
   type: 'link';
-  header: string;
+  header: string | ReactElement;
   items: Array<WithId<NavLink>>;
 }
 
