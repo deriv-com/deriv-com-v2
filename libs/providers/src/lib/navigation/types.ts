@@ -1,14 +1,16 @@
+import { ReactElement } from 'react';
+
 type WithId<T> = T & { id: number };
 
 export interface BaseNavItem {
-  text: string;
+  text: string | ReactElement;
   isMobileNavOnly?: boolean;
 }
 
 export interface BaseNavLink extends BaseNavItem {
   href: string;
   icon?: React.ReactNode;
-  description?: string;
+  description?: string | ReactElement;
   external?: boolean;
   isDesktopNavOnly?: boolean;
 }
@@ -25,7 +27,7 @@ export interface SubNavLink {
 
 export interface NavHeaderText {
   type: 'text';
-  text: string | null;
+  text: string | ReactElement | null;
 }
 
 export interface DropdownNavLinkColumn {
