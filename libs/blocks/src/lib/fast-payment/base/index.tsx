@@ -10,7 +10,7 @@ const Base: React.FC<FastPaymentProps> = ({
   description,
   link,
   disclaimer,
-  content: { cards = [], cols = 'three', dense, sliderClass },
+  content: { cards = [], cols = 'three', dense },
 }) => {
   return (
     <FluidContainer className="bg-background-primary-container py-general-4xl">
@@ -31,7 +31,6 @@ const Base: React.FC<FastPaymentProps> = ({
           cols={cols}
           dense={dense}
           className="pt-general-2xl"
-          sliderClass={sliderClass}
         />
         {disclaimer && (
           <Text size="sm" className="pt-general-2xl text-typography-subtle">
