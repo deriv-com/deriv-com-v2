@@ -3,19 +3,19 @@ import Base from '.';
 import { cards, sliderCards } from './data';
 
 const content: Record<string, object | null> = {
-  two_col: {
+  twoCol: {
     cols: 'two',
     cards: cards.slice(0, 2),
   },
-  three_col: {
+  threeCol: {
     cols: 'three',
     cards: cards.slice(0, 3),
   },
-  four_col: {
+  fourCol: {
     cols: 'four',
     cards: cards.slice(0, 4),
   },
-  five_col: {
+  fiveCol: {
     cols: 'five',
     cards: cards.slice(0, 5),
   },
@@ -26,7 +26,7 @@ const content: Record<string, object | null> = {
 };
 
 const links: Record<string, object | null> = {
-  with_link: {
+  withLink: {
     content: 'Learn More',
     href: '#',
   },
