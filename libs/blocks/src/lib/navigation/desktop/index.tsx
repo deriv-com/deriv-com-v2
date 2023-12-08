@@ -16,13 +16,12 @@ const DesktopNavigation = ({ renderButtons, renderLogo }: NavigationProps) => {
 
   return (
     <DesktopNavigationWrapper>
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <nav className="flex min-h-[80px] w-full flex-row items-center justify-between">
-          {renderLogo?.()}
+          <div className="xl:w-[272px]">{renderLogo?.()}</div>
           <NavList items={navItems} />
           <div className="flex items-center gap-gap-md">
             {renderButtons?.()}
-            {/* // TODO: Implement Lang switcher when we have localization */}
             <LanguageSwitcher />
           </div>
         </nav>

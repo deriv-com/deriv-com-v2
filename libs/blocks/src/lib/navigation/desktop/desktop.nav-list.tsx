@@ -7,7 +7,7 @@ export interface NavListProps {
 
 const NavList = ({ items }: NavListProps) => {
   return (
-    <ul className="flex justify-center self-stretch">
+    <ul className="flex px-general-md xl:flex-1">
       {Object.keys(items).map((navItemName) => (
         <DesktopNavItem
           key={navItemName}
