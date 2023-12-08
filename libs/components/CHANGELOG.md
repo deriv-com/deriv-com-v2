@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.25.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.24.0...components-0.25.0) (2023-12-08)
+
+
+### Bug Fixes
+
+* spacing issues ([df6738c](https://github.com/deriv-com/deriv-com-v2/commit/df6738ca826abfced4ad95c2f5853824eace6bc4))
+
 ## [0.24.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.23.0...components-0.24.0) (2023-12-06)
 
 
