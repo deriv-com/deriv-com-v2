@@ -12,6 +12,7 @@ export interface BaseNavLink extends BaseNavItem {
   icon?: React.ReactNode;
   description?: string | ReactElement;
   external?: boolean;
+  target?: '_blank' | '_self' | '_parent' | '_top';
   isDesktopNavOnly?: boolean;
 }
 
