@@ -44,6 +44,7 @@ const meta = {
     title: {
       description: '`string`',
     },
+    className: { table: { disable: true } },
     link: {
       description: '`{content: ReactNode, href: string}`',
       options: Object.keys(links),
@@ -65,7 +66,7 @@ const meta = {
       },
     },
     isRtl: {
-      description: '`boolean`',
+      table: { type: { summary: 'boolean' } },
       control: {
         type: 'boolean',
       },
