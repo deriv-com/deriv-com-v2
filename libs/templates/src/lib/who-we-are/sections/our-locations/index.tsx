@@ -8,6 +8,7 @@ const LocationMap = dynamic(() => import('./map'), {
 
 const ourLocationCards: CardContent[] = [
   {
+    id: 1,
     header: '1,200+',
     description: 'employees',
     color: 'gray',
@@ -15,6 +16,7 @@ const ourLocationCards: CardContent[] = [
     align: 'center',
   },
   {
+    id: 2,
     header: '70+',
     description: 'nationalities',
     color: 'gray',
@@ -22,6 +24,7 @@ const ourLocationCards: CardContent[] = [
     align: 'center',
   },
   {
+    id: 3,
     header: '21',
     description: 'locations',
     color: 'gray',
@@ -29,6 +32,7 @@ const ourLocationCards: CardContent[] = [
     align: 'center',
   },
   {
+    id: 4,
     header: '17',
     description: 'countries',
     color: 'gray',

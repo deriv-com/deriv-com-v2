@@ -1109,6 +1109,7 @@ export const CardsFAQ = [...FAQData].map(({ header, questions }, faqKey) => {
   trimmedQuestions.length = faqCardsMaxItems[faqKey];
 
   return {
+    id: faqKey,
     header,
     children: generateFaqs(trimmedQuestions, header),
     ...cardSetting,
