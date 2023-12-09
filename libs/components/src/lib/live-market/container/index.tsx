@@ -15,7 +15,7 @@ export interface ContainerProps {
   description?: ReactNode;
   className?: string;
   disclaimer?: string;
-  link: {
+  link?: {
     href: string;
     content: string;
   };

@@ -1,7 +1,7 @@
 import { MobileNavToggle } from '@deriv-com/blocks';
 import { useNavigation } from '@deriv-com/hooks';
 import { Button, useTheme } from '@deriv/quill-design';
-import { StandalonePlaceholderRegularIcon } from '@deriv/quill-icons/Standalone';
+import { LabelPairedGrid2BoldIcon } from '@deriv/quill-icons/LabelPaired';
 
 export const MainNavigationButtons = () => {
   const { theme, toggleTheme } = useTheme();
@@ -24,10 +24,10 @@ export const MainNavigationButtons = () => {
       {isLoggedIn ? (
         <Button
           variant="secondary"
-          colorStyle="coral"
+          colorStyle="black"
           size="lg"
           onClick={onTradersHubClick}
-          icon={StandalonePlaceholderRegularIcon}
+          icon={LabelPairedGrid2BoldIcon}
           iconPosition="start"
         >
           Traders Hub
@@ -43,7 +43,7 @@ export const MainNavigationButtons = () => {
             Log in
           </Button>
           <Button size="lg" className="hidden lg:block" onClick={onSignupClick}>
-            Create free demo account
+            Open demo account
           </Button>
         </>
       )}

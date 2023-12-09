@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.42.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.41.0...blocks-0.42.0) (2023-12-08)
+
+
+### Bug Fixes
+
+* link target added ([6c171c7](https://github.com/deriv-com/deriv-com-v2/commit/6c171c737b3d953c2e3654a7a13943165cfc359c))
+* navigation design subtasks ([904dc29](https://github.com/deriv-com/deriv-com-v2/commit/904dc290cb7f165a553ca988ca3ec48bbe7bd5a2))
+
+## [0.41.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.40.0...blocks-0.41.0) (2023-12-08)
+
+## [0.40.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.39.0...blocks-0.40.0) (2023-12-08)
+
 ## [0.39.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.38.0...blocks-0.39.0) (2023-12-08)
 
 

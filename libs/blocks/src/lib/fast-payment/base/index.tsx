@@ -27,7 +27,6 @@ const Base: React.FC<FastPaymentProps> = ({
           {description}
         </Text>
       )}
-
       {link && (
         <CustomLink
           href={link.href}

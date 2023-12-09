@@ -6,6 +6,7 @@ export interface NavLink {
   text: string | ReactElement;
   href: string;
   icon?: React.ReactNode;
+  target?: '_self' | '_blank' | '_parent' | '_top';
 }
 
 export interface LinkLayer {

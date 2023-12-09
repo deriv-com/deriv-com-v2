@@ -272,7 +272,7 @@ export const mainRowNavItems: NavLinkItems = {
             type: 'direct',
             icon: <IllustrativeDerivedIcon width={24} height={24} />,
             description:
-              'Indices simulating real-world markets with 24/7 trading',
+              'Indices simulating real-world markets with 24/7 trading.',
           },
           {
             id: 2,
@@ -427,6 +427,7 @@ export const mainRowNavItems: NavLinkItems = {
             href: '/status',
             text: 'Status page',
             type: 'direct',
+            isMobileNavOnly: true,
           },
           {
             id: 2,

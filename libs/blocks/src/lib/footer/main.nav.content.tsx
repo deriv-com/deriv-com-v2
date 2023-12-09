@@ -36,6 +36,7 @@ export const MainNavContent = ({
                       size="sm"
                       href={link.href}
                       className="text-typography-prominent"
+                      target={link.target}
                     >
                       {link.text}
                     </CustomLink>

@@ -5,7 +5,7 @@ import { Text } from '@deriv/quill-design';
 export const NavigationContent = () => {
   const { activeItem } = useNavigation();
   return (
-    <div className="grid w-full grid-cols-4 items-start gap-gap-3xl overflow-y-auto overscroll-y-contain py-general-2xl">
+    <div className="grid w-full grid-cols-4 items-start gap-gap-lg overflow-y-auto overscroll-y-contain py-general-2xl">
       {activeItem && activeItem.type === 'nav-dropdown' ? (
         <>
           {activeItem.columns.map((column) => (
@@ -31,7 +31,9 @@ export const NavigationContent = () => {
               <div>
                 {column.items.map((subItem) => {
                   return subItem.type === 'direct' ? (
-                    <NavigationLink item={subItem} key={subItem.id} />
+                    !subItem.isMobileNavOnly && (
+                      <NavigationLink item={subItem} key={subItem.id} />
+                    )
                   ) : (
                     <div
                       key={subItem.id}
