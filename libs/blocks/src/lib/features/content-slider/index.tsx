@@ -8,8 +8,8 @@ import {
 } from '@deriv-com/components';
 
 export interface ContentSliderProps<T extends CardVariantType> {
-  title?: string;
-  description?: string;
+  title?: ReactNode;
+  description?: ReactNode;
   cta?: () => ReactNode;
   className?: string;
   cardSliderProps?: CardSliderProps<T>;

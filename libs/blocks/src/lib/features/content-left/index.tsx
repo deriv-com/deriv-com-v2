@@ -1,13 +1,13 @@
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 export interface ContentLeftProps {
-  title: string;
+  title: ReactNode;
   className?: string;
-  description?: string;
+  description?: ReactNode;
   content: React.FC;
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: 'content-left' | 'content-right';
 }
 

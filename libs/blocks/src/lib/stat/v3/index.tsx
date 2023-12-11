@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import {
   FluidContainer,
   Heading,
@@ -7,8 +8,9 @@ import {
 } from '@deriv/quill-design';
 
 export type V3Item = {
-  title: string;
-  description: string;
+  id: number;
+  title: ReactNode;
+  description: ReactNode;
 };
 
 export interface V3StatBlockProps {
@@ -34,7 +36,7 @@ export const V3StatBlock: React.FC<V3StatBlockProps> = ({
       >
         {items.map((item) => {
           return (
-            <div className="flex h-full flex-col gap-400" key={item.title}>
+            <div className="flex h-full flex-col gap-400" key={item.id}>
               <Heading.H3 className="min-h-[24px] text-center">
                 {item.title}
               </Heading.H3>
