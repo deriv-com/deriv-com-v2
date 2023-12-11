@@ -9,7 +9,7 @@ import {
 import { Tab } from '@deriv-com/components';
 
 export type PlatformBlockTabProps = ComponentProps<typeof Tab.Base> & {
-  header?: string;
+  header?: ReactNode;
   description?: ReactNode;
   className?: string;
   children: ReactNode;

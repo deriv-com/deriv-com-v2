@@ -1,9 +1,10 @@
+import { ReactNode } from 'react';
 import { CardsContainer, StatCardContent } from '@deriv-com/components';
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 
 export interface V1StatBlockProps {
-  title?: string;
-  description?: string;
+  title?: ReactNode;
+  description?: ReactNode;
   cards: StatCardContent[];
 }
 

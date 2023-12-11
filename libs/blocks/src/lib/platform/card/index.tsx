@@ -13,7 +13,7 @@ import {
 } from '@deriv-com/components';
 
 export type PlatformBlockCardProps = {
-  header?: string;
+  header?: ReactNode;
   description?: ReactNode;
   className?: string;
   cards?: CardContent[];

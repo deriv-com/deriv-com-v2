@@ -6,7 +6,7 @@ export type CardAlignVariant = 'start' | 'center';
 export type CardSizeVariant = 'xs' | 'sm' | 'md' | 'lg';
 
 interface BaseCardContent {
-  header?: string;
+  header?: ReactNode;
   id: number;
 }
 //todo: removed [LinkProps] from utils/generics and added here. we need to update this because we are using this on multiple places
@@ -22,7 +22,7 @@ export interface StatCardContent extends BaseCardContent {
 
 export interface CardContent extends BaseCardContent {
   icon?: ReactNode;
-  description?: string;
+  description?: ReactNode;
   children?: ReactNode;
   link?: LinkProps;
   content?: ReactNode;

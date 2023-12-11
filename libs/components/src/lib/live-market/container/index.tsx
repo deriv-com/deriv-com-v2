@@ -11,13 +11,13 @@ import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone
 import clsx from 'clsx';
 
 export interface ContainerProps {
-  header?: string;
+  header?: ReactNode;
   description?: ReactNode;
   className?: string;
-  disclaimer?: string;
+  disclaimer?: ReactNode;
   link?: {
     href: string;
-    content: string;
+    content: ReactNode;
   };
   children: ReactNode;
 }

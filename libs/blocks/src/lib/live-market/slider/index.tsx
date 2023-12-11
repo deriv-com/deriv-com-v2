@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import {
   CardSlider,
   CardSliderProps,
@@ -6,13 +7,13 @@ import {
 import { LiveMarket } from '@deriv-com/components';
 
 export interface LiveMarketProps<T extends CardVariantType> {
-  header?: string;
-  description?: string;
+  header?: ReactNode;
+  description?: ReactNode;
   className?: string;
-  disclaimer?: string;
+  disclaimer?: ReactNode;
   link: {
     href: string;
-    content: string;
+    content: ReactNode;
   };
   cardSliderProps?: CardSliderProps<T>;
 }

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { ReactNode } from 'react';
 
 export interface ContentTextProps {
-  title?: string;
+  title?: ReactNode;
   className?: string;
   children: ReactNode;
 }
