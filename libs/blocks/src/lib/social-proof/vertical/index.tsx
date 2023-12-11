@@ -4,6 +4,7 @@ import { useTrustpilotApi } from '@deriv-com/hooks';
 
 import { SocialProofProps } from '../types';
 import { getThemeClassNames } from '../classnames';
+import { redirectToTrustpilot } from '../helper';
 
 export interface SocialProofVerticalProps extends SocialProofProps {
   title?: string;
@@ -29,7 +30,10 @@ const SocialProofVertical = ({
         className,
       )}
     >
-      <div className="flex flex-col items-center gap-gap-3xl">
+      <div
+        className="flex flex-col items-center gap-gap-3xl"
+        onClick={redirectToTrustpilot}
+      >
         {title && (
           <Heading.H2 className={themeClassNames.color}>{title}</Heading.H2>
         )}

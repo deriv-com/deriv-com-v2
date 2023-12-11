@@ -3,6 +3,7 @@ import { Rating } from '@deriv-com/components';
 import { useTrustpilotApi } from '@deriv-com/hooks';
 import { SocialProofProps } from '../types';
 import { getThemeClassNames } from '../classnames';
+import { redirectToTrustpilot } from '../helper';
 
 const SocialProofHorizontal = ({
   theme,
@@ -23,7 +24,10 @@ const SocialProofHorizontal = ({
         className,
       )}
     >
-      <div className="flex items-center justify-center gap-gap-xl">
+      <div
+        className="flex items-center justify-center gap-gap-xl"
+        onClick={redirectToTrustpilot}
+      >
         {data && (
           <>
             {content && (
