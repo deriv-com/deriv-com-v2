@@ -16,7 +16,7 @@ export const Default: Story = {
       `TrustScore ${trustScore}`,
       `${numberOfReviews} reviews`,
     ],
-    staticData: {
+    data: {
       trustScore: 4.5,
       numberOfReviews: '45454',
       stars: 4.4,
@@ -38,7 +38,7 @@ export const CustomTheme: Story = {
       `TrustScore ${trustScore}`,
       `${numberOfReviews} reviews`,
     ],
-    staticData: {
+    data: {
       trustScore: 4.5,
       numberOfReviews: '45454',
       stars: 4.4,
@@ -65,7 +65,7 @@ export const BadScore: Story = {
       `TrustScore ${trustScore}`,
       `${numberOfReviews} reviews`,
     ],
-    staticData: {
+    data: {
       trustScore: 0.6,
       numberOfReviews: '45454',
       stars: 0.6,
@@ -87,7 +87,7 @@ export const PoorScore: Story = {
       `TrustScore ${trustScore}`,
       `${numberOfReviews} reviews`,
     ],
-    staticData: {
+    data: {
       trustScore: 1.6,
       numberOfReviews: '45454',
       stars: 1.6,
@@ -109,7 +109,7 @@ export const AverageScore: Story = {
       `TrustScore ${trustScore}`,
       `${numberOfReviews} reviews`,
     ],
-    staticData: {
+    data: {
       trustScore: 2.5,
       numberOfReviews: '45454',
       stars: 2.5,
@@ -131,7 +131,7 @@ export const GreatScore: Story = {
       `TrustScore ${trustScore}`,
       `${numberOfReviews} reviews`,
     ],
-    staticData: {
+    data: {
       trustScore: 3.8,
       numberOfReviews: '99990',
       stars: 3.8,
@@ -153,7 +153,7 @@ export const ExcellentScore: Story = {
       `TrustScore ${trustScore}`,
       `${numberOfReviews} reviews`,
     ],
-    staticData: {
+    data: {
       trustScore: 4.8,
       numberOfReviews: '45454',
       stars: 4.8,

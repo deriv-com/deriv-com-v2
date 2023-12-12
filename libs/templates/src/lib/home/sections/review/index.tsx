@@ -22,7 +22,7 @@ const ReviewSection = () => {
             />
           }
           //TODO: We will remove this static data once the data fetching is finalized.
-          staticData={{
+          data={{
             trustScore: 4.6,
             numberOfReviews: '37,133',
             stars: 4.6,
