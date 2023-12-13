@@ -36,7 +36,7 @@ export const SearchResults = ({ onSearchKeyChange }: SearchResultsProps) => {
   return (
     <FluidContainer className="flex w-full flex-col items-center">
       <SearchBlock
-        placeholder="Try “Trade“"
+        placeholder="Try “Trade”"
         showSearchResults={showSearchResults}
         onChange={(e) => setSearchKey(e)}
         content={
