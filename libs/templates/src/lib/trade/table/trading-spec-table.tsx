@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { additionalInfo, mainInfo, tradingCondition } from '../data/data';
 import { TableDataType } from '../types/types';
@@ -17,11 +18,13 @@ import {
   Section,
   Text,
   Pagination,
+  ActionSheet,
 } from '@deriv/quill-design';
 import {
   StandaloneCircleDotFillIcon,
   StandaloneCircleRegularIcon,
   StandaloneXmarkBoldIcon,
+  StandaloneXmarkRegularIcon,
 } from '@deriv/quill-icons/Standalone';
 import { LabelPairedEllipsisVerticalBoldIcon } from '@deriv/quill-icons/LabelPaired';
 import { BottomSheet } from '@deriv-com/components';
@@ -109,7 +112,38 @@ const TradingSpecTable = () => {
             className="w-auto"
           />
         </form>
-
+        <ActionSheet.Root>
+          <ActionSheet.Trigger>Click Here</ActionSheet.Trigger>
+          <ActionSheet.Portal>
+            <ActionSheet.Close aria-label="close">
+              <StandaloneXmarkRegularIcon />
+            </ActionSheet.Close>
+            <ActionSheet.Header className="py-400 text-center">
+              <div className="relative py-1100">
+                <h3 className="ml-auto">Title</h3>
+              </div>
+              <p>Description</p>
+            </ActionSheet.Header>
+            <ActionSheet.Content className="flex flex-col gap-500 py-800">
+              <p>
+                Bottom sheet is a surface fixed at the bottom of the screen
+                which includes content related to the previous screen.
+              </p>
+              <p>
+                Bottom sheet is a surface fixed at the bottom of the screen
+                which includes content related to the previous screen.
+              </p>
+              <p>
+                Bottom sheet is a surface fixed at the bottom of the screen
+                which includes content related to the previous screen.
+              </p>
+              <p>
+                Bottom sheet is a surface fixed at the bottom of the screen
+                which includes content related to the previous screen.
+              </p>
+            </ActionSheet.Content>
+          </ActionSheet.Portal>
+        </ActionSheet.Root>
         <div>
           <LabelPairedEllipsisVerticalBoldIcon
             fill="black"
