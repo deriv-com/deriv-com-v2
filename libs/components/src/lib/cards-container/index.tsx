@@ -1,5 +1,7 @@
-import { qtJoin, qtMerge } from '@deriv/quill-design';
+import { qtMerge } from '@deriv/quill-design';
 import Card, { CardVariants } from '../card';
+import { cva } from 'class-variance-authority';
+import { cardContainer, colsClass } from './cards-container.classname';
 
 export type CardVariantType = keyof CardVariants;
 
@@ -40,33 +42,41 @@ export const CardsContainer = <T extends CardVariantType>({
 }: CardsContainerProps<T>) => {
   const CardComponent = Card[variant];
 
-  const cardColsVariant: { [key in CardsContainerCols]: string } = {
-    two: 'basis-full sm:basis-[calc((100%-16px)/2)]',
-    three:
-      'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*2)/3)]',
-    four: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*3)/4)]',
-    five: 'basis-full sm:basis-[calc((100%-16px)/2)] lg:basis-[calc((100%-16px*4)/5)]',
-    infinite: qtJoin('flex', sliderClass),
-  };
+  const div = cva('gap-gap-lg pr-general-md', {
+    variants: {
+      cols: {
+        two: '',
+        three: 'lg:basis-[calc((100%-16px*2)/3)]',
+        four: 'lg:basis-[calc((100%-16px*3)/4)]',
+        five: 'lg:basis-[calc((100%-16px*4)/5)]',
+        infinite: 'flex',
+      },
+    },
+    compoundVariants: [
+      {
+        cols: ['two', 'three', 'four', 'five'],
+        className: 'basis-full sm:basis-[calc((100%-16px)/2)]',
+      },
+      {
+        cols: ['infinite'],
+        className: sliderClass,
+      },
+    ],
+    defaultVariants: {
+      cols: 'two',
+    },
+  });
 
   return (
     <div
-      className={qtMerge(
-        'flex overflow-hidden',
-        cols === 'infinite' ? 'w-screen' : 'w-full',
-        className,
-      )}
+      className={qtMerge(cardContainer({ cols: cols }), className)}
       data-testid="cards-container"
     >
       {cols === 'infinite' ? (
         Array.from({ length: 3 }, (_, index) => (
           <div
             key={index}
-            className={qtJoin(
-              'gap-gap-lg', // TODO: Add sm/md/lg/xl variants if needed
-              cardColsVariant[cols],
-              'pr-general-md',
-            )}
+            className={div({ cols: cols })}
             data-testid="infinite-carousel"
           >
             {cards.map((card) => (
@@ -78,19 +88,16 @@ export const CardsContainer = <T extends CardVariantType>({
         ))
       ) : (
         <div
-          className={qtJoin(
-            'flex flex-wrap gap-gap-lg', // TODO: we might need to add sm/md/lg/xl variants
-            dense ? 'w-full lg:max-w-max' : 'w-full',
-            cards.length < columns[cols]
-              ? 'lg:justify-center'
-              : 'justify-start',
-          )}
+          className={colsClass({
+            dense: dense,
+            justify: cards.length < columns[cols] ? 'center' : 'start',
+          })}
         >
           {cards.map((card) => (
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             <CardComponent
-              className={cardColsVariant[cols]}
+              className={div({ cols: cols })}
               key={card.id}
               {...card}
             />
