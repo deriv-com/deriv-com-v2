@@ -1,4 +1,4 @@
-import { FluidContainer, Heading, Text } from '@deriv/quill-design';
+import { FluidContainer, Heading, Text, qtJoin } from '@deriv/quill-design';
 import { CardsContainer, CustomLink } from '@deriv-com/components';
 
 import { FastPaymentProps } from '../types';
@@ -10,34 +10,46 @@ const Base: React.FC<FastPaymentProps> = ({
   description,
   link,
   disclaimer,
-  content: { cards = [], cols = 'three', dense },
+  content: { cards = [], cols = 'three', dense, sliderClass },
+  className,
 }) => {
   return (
-    <FluidContainer className="bg-background-primary-container py-general-4xl">
-      <div className="flex flex-col items-center text-center">
-        <Heading.H2>{title}</Heading.H2>
-        {description && <Text className="pt-general-lg">{description}</Text>}
-
-        {link && (
-          <div className="flex justify-center pt-general-xl">
-            <CustomLink href={link.href} className="w-fit" hasIcon>
-              {link.content}
-            </CustomLink>
-          </div>
-        )}
-        <CardsContainer
-          cards={cards}
-          variant="ContentBottom"
-          cols={cols}
-          dense={dense}
-          className="pt-general-2xl"
-        />
-        {disclaimer && (
-          <Text size="sm" className="pt-general-2xl text-typography-subtle">
-            {disclaimer}
-          </Text>
-        )}
-      </div>
+    <FluidContainer
+      className={qtJoin(
+        'flex flex-col items-center py-general-4xl text-center',
+        className,
+      )}
+      data-testid="fast-payment-container"
+    >
+      <Heading.H2>{title}</Heading.H2>
+      {description && (
+        <Text data-testid="fast-payment-description" className="pt-general-md">
+          {description}
+        </Text>
+      )}
+      {link && (
+        <CustomLink
+          href={link.href}
+          className="w-fit pt-general-xl"
+          hasIcon
+          data-testid="fast-payment-link"
+        >
+          {link.content}
+        </CustomLink>
+      )}
+      <CardsContainer
+        cards={cards}
+        variant="ContentBottom"
+        cols={cols}
+        dense={dense}
+        className="pt-general-2xl"
+        sliderClass={sliderClass}
+      />
+      {disclaimer && (
+        <Text size="sm" className="pt-general-2xl text-typography-subtle">
+          {disclaimer}
+        </Text>
+      )}
     </FluidContainer>
   );
 };

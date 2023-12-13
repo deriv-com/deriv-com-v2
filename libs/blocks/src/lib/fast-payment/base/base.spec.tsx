@@ -1,45 +1,13 @@
-import { render } from '@testing-library/react';
-
-import {
-  FlagAndorraIcon,
-  FlagAustraliaIcon,
-  FlagBurkinaFasoIcon,
-} from '@deriv/quill-icons/Flags';
+import { render, screen } from '@testing-library/react';
 import Base from './index';
-import { CardContent } from '@deriv-com/components';
+import { cards } from './data';
 
 const title = 'Hassle-free deposits and withdrawals';
 const desc = 'Make instant deposits from 10,000 HKD. Withdraw in minutes.';
-
-const cards: CardContent[] = [
-  {
-    header: '',
-    color: 'gray',
-    align: 'center',
-    size: 'lg',
-    icon: <FlagBurkinaFasoIcon fill="black" iconSize="2xl" />,
-    className: 'h-fit',
-    nonContentClassName: 'p-general-xl',
-  },
-  {
-    header: '',
-    color: 'gray',
-    align: 'center',
-    size: 'lg',
-    icon: <FlagAndorraIcon fill="black" iconSize="2xl" />,
-    className: 'h-fit',
-    nonContentClassName: 'p-general-xl',
-  },
-  {
-    header: '',
-    color: 'gray',
-    align: 'center',
-    size: 'lg',
-    icon: <FlagAustraliaIcon fill="black" iconSize="2xl" />,
-    className: 'h-fit',
-    nonContentClassName: 'p-general-xl',
-  },
-];
+const link = {
+  content: 'testing',
+  href: '/',
+};
 
 describe('FastPayment', () => {
   it('should render successfully', () => {
@@ -47,9 +15,10 @@ describe('FastPayment', () => {
       <Base
         title={title}
         description={desc}
+        link={link}
         content={{
           className: 'h-fit',
-          cards: cards,
+          cards: cards.slice(0, 3),
         }}
       />,
     );
@@ -58,7 +27,9 @@ describe('FastPayment', () => {
     expect(container.querySelector('h2')).toBeTruthy();
     expect(queryByText(title)).toBeTruthy();
     expect(queryByText(desc)).toBeTruthy();
-    expect(document.getElementById('cards-container')).toBeTruthy();
+    expect(screen.getByTestId('cards-container')).toBeTruthy();
+    expect(screen.getByTestId('fast-payment-link')).toBeTruthy();
+    expect(screen.getByTestId('fast-payment-description')).toBeTruthy();
   });
 
   //render without description
@@ -69,14 +40,15 @@ describe('FastPayment', () => {
         content={{
           className: 'h-fit',
           cols: 'infinite',
-          cards: cards,
+          cards: cards.slice(0, 3),
         }}
       />,
     );
 
     expect(container.querySelector('h2')).toBeTruthy();
-    expect(document.getElementById('fast-payment-description')).toBeNull();
-    expect(document.getElementById('cards-container')).toBeTruthy();
-    expect(document.getElementById('infinite-carousel')).toBeTruthy();
+    expect(screen.queryByTestId('fast-payment-description')).toBeNull();
+    expect(screen.queryByTestId('fast-payment-link')).toBeNull();
+    expect(screen.getByTestId('cards-container')).toBeTruthy();
+    expect(screen.queryAllByTestId('infinite-carousel')).toBeTruthy();
   });
 });

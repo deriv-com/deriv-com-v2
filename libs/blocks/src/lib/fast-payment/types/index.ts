@@ -12,4 +12,5 @@ export interface FastPaymentProps {
   link?: LinkProps;
   disclaimer?: ReactNode;
   content: Omit<CardsContainerProps<'ContentBottom'>, 'variant'>;
+  className?: string;
 }
