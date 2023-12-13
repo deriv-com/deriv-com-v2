@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import {
   CardVariantProps,
   CardVariantType,
@@ -6,8 +7,8 @@ import {
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 
 export interface TradeTypeBlockProps<T extends CardVariantType> {
-  title: string;
-  description?: string;
+  title: ReactNode;
+  description?: ReactNode;
   variant: T;
   cards: CardVariantProps<T>[];
   cols?: 'two' | 'three' | 'four';

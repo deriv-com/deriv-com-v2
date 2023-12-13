@@ -14,8 +14,8 @@ import {
 } from '@deriv-com/components';
 
 export interface FeatureCardProps {
-  title?: string;
-  description?: string;
+  title?: ReactNode;
+  description?: ReactNode;
   cta?: ReactNode;
   className?: string;
   cards?: CardContent[];

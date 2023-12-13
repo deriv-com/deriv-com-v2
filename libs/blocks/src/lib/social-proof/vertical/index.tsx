@@ -1,9 +1,8 @@
 import { Heading, Section, Text, qtMerge } from '@deriv/quill-design';
 import { Rating } from '@deriv-com/components';
-import { useTrustpilotApi } from '@deriv-com/hooks';
-
 import { SocialProofProps } from '../types';
 import { getThemeClassNames } from '../classnames';
+import { redirectToTrustpilot } from '../helper';
 
 export interface SocialProofVerticalProps extends SocialProofProps {
   title?: string;
@@ -14,11 +13,9 @@ const SocialProofVertical = ({
   theme,
   className,
   content,
-  staticData,
+  data,
   logo,
 }: SocialProofVerticalProps) => {
-  const { data } = useTrustpilotApi(staticData);
-
   const themeClassNames = getThemeClassNames(theme);
 
   return (
@@ -29,7 +26,10 @@ const SocialProofVertical = ({
         className,
       )}
     >
-      <div className="flex flex-col items-center gap-gap-3xl">
+      <div
+        className="flex cursor-pointer flex-col items-center gap-gap-3xl"
+        onClick={redirectToTrustpilot}
+      >
         {title && (
           <Heading.H2 className={themeClassNames.color}>{title}</Heading.H2>
         )}

@@ -7,10 +7,10 @@ interface LinkProps {
   href: string;
 }
 export interface FastPaymentProps {
-  title: string;
-  description?: string;
+  title: ReactNode;
+  description?: ReactNode;
   link?: LinkProps;
-  disclaimer?: string;
+  disclaimer?: ReactNode;
   content: Omit<CardsContainerProps<'ContentBottom'>, 'variant'>;
   className?: string;
 }

@@ -1,6 +1,6 @@
 {
   "name": "@deriv-com/hooks",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {

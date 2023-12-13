@@ -14,7 +14,7 @@ export interface SocialProofProps {
   content?: ({ ...props }: TPilotDataProps) => string[] | ReactNode[];
   className?: string;
   logo: ReactNode;
-  staticData?: TPilotDataProps | null;
+  data?: TPilotDataProps | null;
 }
 
 export interface SocialProofThemeClassNames {

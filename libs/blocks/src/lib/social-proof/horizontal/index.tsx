@@ -1,18 +1,16 @@
 import { Section, Text, qtMerge } from '@deriv/quill-design';
 import { Rating } from '@deriv-com/components';
-import { useTrustpilotApi } from '@deriv-com/hooks';
 import { SocialProofProps } from '../types';
 import { getThemeClassNames } from '../classnames';
+import { redirectToTrustpilot } from '../helper';
 
 const SocialProofHorizontal = ({
   theme,
   className,
   content,
   logo,
-  staticData = null,
+  data = null,
 }: SocialProofProps) => {
-  const { data } = useTrustpilotApi(staticData);
-
   const themeClassNames = getThemeClassNames(theme);
 
   return (
@@ -23,7 +21,10 @@ const SocialProofHorizontal = ({
         className,
       )}
     >
-      <div className="flex items-center justify-center gap-gap-xl">
+      <div
+        className="flex cursor-pointer items-center justify-center gap-gap-xl"
+        onClick={redirectToTrustpilot}
+      >
         {data && (
           <>
             {content && (
