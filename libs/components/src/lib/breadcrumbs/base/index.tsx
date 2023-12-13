@@ -41,7 +41,7 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
   }, [links]);
 
   return (
-    <div className={qtMerge('flex', className)}>
+    <div className={qtMerge('flex overflow-x-auto', className)}>
       {renderLinks.map(({ content, href }, lk) => (
         <Fragment key={`breadcrumbs-${content}`}>
           {hasExtra && lk === 1 && (
@@ -66,11 +66,11 @@ export function Base({ size = 'sm', links = [], className }: BreadcrumbsProps) {
           <CustomLink
             size={size}
             href={href}
-            hasHoverDecoration={isLastItem(lk)}
+            hasHoverDecoration={false}
             hasIcon={isLastItem(lk)}
             iconColor="subtle"
             disabled={!isLastItem(lk)}
-            className="items-center"
+            className="items-center whitespace-nowrap active:underline"
           >
             {content}
           </CustomLink>
