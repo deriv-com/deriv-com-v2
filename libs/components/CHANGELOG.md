@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.28.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.27.0...components-0.28.0) (2023-12-13)
+
+
+### Bug Fixes
+
+* sliderClass not able to overide default animation ([3efab5d](https://github.com/deriv-com/deriv-com-v2/commit/3efab5d34c806d42935a38907271e6f585fb00fd))
+
 ## [0.27.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.26.0...components-0.27.0) (2023-12-11)
 
 ## [0.26.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.25.0...components-0.26.0) (2023-12-08)
