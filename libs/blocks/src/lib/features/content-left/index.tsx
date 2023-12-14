@@ -1,4 +1,5 @@
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import { cva } from 'class-variance-authority';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 
@@ -10,6 +11,19 @@ export interface ContentLeftProps {
   children: ReactNode;
   variant?: 'content-left' | 'content-right';
 }
+
+const content = cva('', {
+  variants: {
+    content: {
+      left: '',
+      right: '',
+    },
+  },
+  compoundVariants: [{}],
+  defaultVariants: {
+    content: 'left',
+  },
+});
 
 const ContentLeft = ({
   title,
@@ -41,10 +55,8 @@ const ContentLeft = ({
               : 'lg:pr-general-2xl',
           )}
         >
-          <div className="flex flex-col gap-gap-lg">
-            <Heading.H2>{title}</Heading.H2>
-            {description && <Text size="md">{description}</Text>}
-          </div>
+          <Heading.H2>{title}</Heading.H2>
+          {description && <Text className="pt-general-md">{description}</Text>}
           {children}
         </div>
         {Content && (
