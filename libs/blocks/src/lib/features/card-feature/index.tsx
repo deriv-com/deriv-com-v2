@@ -4,6 +4,7 @@ import {
   Heading,
   Section,
   Text,
+  qtJoin,
   qtMerge,
 } from '@deriv/quill-design';
 import { ReactNode } from 'react';
@@ -40,25 +41,24 @@ const Card = ({
         className,
       )}
     >
-      <FluidContainer
-        className={qtMerge(
-          'flex flex-col items-center',
-          (title || description) && 'gap-gap-3xl',
+      <FluidContainer className="flex flex-col items-center">
+        {title && (
+          <Heading.H2
+            className={qtJoin(
+              'text-center lg:max-w-[816px]',
+              description && 'pb-general-md',
+            )}
+          >
+            {title}
+          </Heading.H2>
         )}
-      >
-        <div className="flex flex-col items-center justify-center gap-gap-lg">
-          {title && (
-            <Heading.H2 className="text-center lg:max-w-[816px]">
-              {title}
-            </Heading.H2>
-          )}
-          {description && (
-            <Text size="md" className="text-center">
-              {description}
-            </Text>
-          )}
-        </div>
-        <CardsContainer variant={variant} cols={cols} cards={cards} />
+        {description && <Text className="text-center">{description}</Text>}
+        <CardsContainer
+          variant={variant}
+          cols={cols}
+          cards={cards}
+          className={qtJoin(cta ? 'py-general-2xl' : 'pt-general-2xl')}
+        />
         {cta}
       </FluidContainer>
     </Section>
