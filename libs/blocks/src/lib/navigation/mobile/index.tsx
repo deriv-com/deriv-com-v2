@@ -9,6 +9,7 @@ import MobileLanguageToggler from '../language-switcher/mobile-language';
 export const MobileNav: React.FC<NavigationProps> = ({
   renderLogo,
   renderButtons,
+  hasLanguageSwitch,
 }) => {
   return (
     <FluidContainer className="fixed z-50 w-screen bg-background-primary-container lg:hidden">
@@ -20,7 +21,7 @@ export const MobileNav: React.FC<NavigationProps> = ({
             <div className="relative flex flex-1 flex-col justify-between px-general-2xl pb-general-lg sm:pb-general-md">
               <MobileNavList />
               <MobileNavContentContainer />
-              <MobileLanguageToggler />
+              {hasLanguageSwitch && <MobileLanguageToggler />}
             </div>
           </div>
         </NavMobileWrapper>
