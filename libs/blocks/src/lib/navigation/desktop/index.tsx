@@ -10,6 +10,7 @@ const DesktopNavigation = ({
   renderButtons,
   renderLogo,
   hasLanguageSwitch,
+  topNavigation,
 }: NavigationProps) => {
   const { activeMenu, navItems, activeItem, isDropContentOpen } =
     useNavigation();
@@ -19,8 +20,9 @@ const DesktopNavigation = ({
     activeMenu !== 'none' && activeItem?.type === 'nav-dropdown';
 
   return (
-    <DesktopNavigationWrapper>
+    <DesktopNavigationWrapper topNav={topNavigation !== undefined}>
       <div className="hidden lg:block">
+        {topNavigation?.()}
         <nav className="flex min-h-[80px] w-full flex-row items-center justify-between">
           <div className="xl:w-[272px]">{renderLogo?.()}</div>
           <NavList items={navItems} />
