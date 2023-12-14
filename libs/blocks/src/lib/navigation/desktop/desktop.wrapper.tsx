@@ -5,8 +5,10 @@ import { ReactNode } from 'react';
 import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
 
 export const DesktopNavigationWrapper = ({
+  topNav,
   children,
 }: {
+  topNav?: boolean;
   children: ReactNode;
 }) => {
   const { isBlurVisible, isDropContentOpen } = useNavigation();
@@ -22,9 +24,11 @@ export const DesktopNavigationWrapper = ({
       >
         <FluidContainer
           className={clsx(
-            isDropContentOpen || showLangContent
-              ? 'max-h-[100vh]'
-              : 'max-h-[80px]',
+            !topNav
+              ? isDropContentOpen || showLangContent
+                ? 'max-h-[100vh]'
+                : 'max-h-[80px]'
+              : 'max-h-max',
             'transition-max-height delay-0 duration-500 ease-in-out',
             'overflow-hidden',
           )}
