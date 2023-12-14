@@ -5,7 +5,6 @@ import {
   Section,
   Text,
   qtJoin,
-  qtMerge,
 } from '@deriv/quill-design';
 import { ReactNode } from 'react';
 import {
@@ -13,6 +12,7 @@ import {
   CardVariantType,
   CardsContainer,
 } from '@deriv-com/components';
+import Base from '../base';
 
 export interface FeatureCardProps {
   title?: ReactNode;
@@ -34,34 +34,19 @@ const Card = ({
   variant = 'ContentBottom',
 }: FeatureCardProps) => {
   return (
-    <Section
-      className={clsx(
-        'py-general-4xl',
-        'bg-background-primary-container',
-        className,
-      )}
+    <Base
+      title={title}
+      description={description}
+      className={className}
+      cta={cta}
     >
-      <FluidContainer className="flex flex-col items-center">
-        {title && (
-          <Heading.H2
-            className={qtJoin(
-              'text-center lg:max-w-[816px]',
-              description && 'pb-general-md',
-            )}
-          >
-            {title}
-          </Heading.H2>
-        )}
-        {description && <Text className="text-center">{description}</Text>}
-        <CardsContainer
-          variant={variant}
-          cols={cols}
-          cards={cards}
-          className={qtJoin(cta ? 'py-general-2xl' : 'pt-general-2xl')}
-        />
-        {cta}
-      </FluidContainer>
-    </Section>
+      <CardsContainer
+        variant={variant}
+        cols={cols}
+        cards={cards}
+        className={qtJoin(cta ? 'py-general-2xl' : 'pt-general-2xl')}
+      />
+    </Base>
   );
 };
 

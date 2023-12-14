@@ -2,16 +2,15 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@deriv/quill-design';
 import ContentSlider from '.';
-import {
-  IllustrativeLicensedAndRegulatedIcon,
-  IllustrativeProtectedAndSecureIcon,
-  IllustrativeSpreadsIcon,
-  IllustrativeSupport247Icon,
-} from '@deriv/quill-icons/Illustrative';
+import { IllustrativeProtectedAndSecureIcon } from '@deriv/quill-icons/Illustrative';
 
 const meta = {
   title: 'Blocks/Features/ContentSlider',
   component: ContentSlider,
+  tags: ['autodocs'],
+  argTypes: {
+    className: { table: { disable: true } },
+  },
 } satisfies Meta<typeof ContentSlider>;
 
 export default meta;
@@ -21,7 +20,7 @@ export const Default: Story = {
   args: {
     description:
       'Description goes here description goes here description goes here description goes here',
-    cta: () => (
+    cta: (
       <div className="flex w-full justify-center">
         <Button>CTA</Button>
       </div>
@@ -30,68 +29,37 @@ export const Default: Story = {
     cardSliderProps: {
       slideClasses: 'max-w-xs',
       variant: 'ContentBottom',
-      cards: [
-        {
-          id: 1,
-          header: 'Card 1',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeProtectedAndSecureIcon />,
-          color: 'gray',
-          align: 'start',
-          size: 'sm',
-        },
-        {
-          id: 2,
-          header: 'Card 2',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeSupport247Icon />,
-          color: 'gray',
-          align: 'start',
-          size: 'sm',
-        },
-        {
-          id: 3,
-          header: 'Card 3',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeLicensedAndRegulatedIcon />,
-          color: 'gray',
-          align: 'start',
-          size: 'sm',
-        },
-        {
-          id: 4,
-          header: 'Card 4',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeSpreadsIcon />,
-          color: 'gray',
-          align: 'start',
-          size: 'sm',
-        },
-        {
-          id: 5,
-          header: 'Card 5',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeLicensedAndRegulatedIcon />,
-          color: 'gray',
-          align: 'start',
-          size: 'sm',
-        },
-        {
-          id: 6,
-          header: 'Card 6',
-          description:
-            'Description here. Description here. Description here. Description here.',
-          icon: <IllustrativeSupport247Icon />,
-          color: 'gray',
-          align: 'start',
-          size: 'sm',
-        },
-      ],
+      cards: Array.from({ length: 6 }, (_, i) => ({
+        id: i,
+        header: `Card ${i + 1}`,
+        description:
+          'Description here. Description here. Description here. Description here.',
+        icon: <IllustrativeProtectedAndSecureIcon />,
+        color: 'gray',
+        align: 'start',
+        size: 'sm',
+      })),
     },
+  },
+};
+
+export const WithoutTitle: Story = {
+  args: {
+    ...Default.args,
+    title: '',
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: '',
+  },
+};
+
+export const WithoutCTA: Story = {
+  args: {
+    ...Default.args,
+    cta: null,
   },
 };
