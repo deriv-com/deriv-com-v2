@@ -1,6 +1,6 @@
-import { FlagUnitedKingdomIcon } from '@deriv/quill-icons';
 import { Text } from '@deriv/quill-design';
 import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
+import { LabelPairedGlobeRegularIcon } from '@deriv/quill-icons/LabelPaired';
 
 const LanguageSwitcher = () => {
   const { onLanguageHover, activeLanguage } = useLanguageSwitcher();
@@ -8,14 +8,14 @@ const LanguageSwitcher = () => {
 
   return (
     <div
-      className="group flex cursor-pointer items-center gap-gap-sm"
+      className="group flex cursor-pointer items-center"
       onMouseEnter={() => {
         setIsDropContentOpen?.(false);
         setActiveMenu?.('none');
         onLanguageHover?.();
       }}
     >
-      <FlagUnitedKingdomIcon className="inline" width={24} height={16} />
+      <LabelPairedGlobeRegularIcon className="inline" iconSize="md" />
       <Text className="inline-block group-hover:text-typography-prominent">
         {activeLanguage?.shortName}
       </Text>
