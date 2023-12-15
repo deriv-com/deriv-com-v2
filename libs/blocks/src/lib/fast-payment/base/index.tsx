@@ -20,12 +20,9 @@ const Base: React.FC<FastPaymentProps> = ({
   className,
 }) => {
   return (
-    <Section className="overflow-hidden">
+    <Section className="overflow-hidden py-general-4xl text-center">
       <FluidContainer
-        className={qtJoin(
-          'flex flex-col items-center py-general-4xl text-center',
-          className,
-        )}
+        className={qtJoin('flex flex-col items-center', className)}
         data-testid="fast-payment-container"
       >
         <Heading.H2>{title}</Heading.H2>
