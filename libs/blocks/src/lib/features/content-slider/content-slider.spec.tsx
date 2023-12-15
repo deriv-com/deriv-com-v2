@@ -1,4 +1,4 @@
-import { queryByText, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { IllustrativeProtectedAndSecureIcon } from '@deriv/quill-icons';
 import '@testing-library/jest-dom';
 
