@@ -28,8 +28,8 @@ const ContentLeft = ({
         className,
       )}
     >
-      <FluidContainer className={container({ content: variant })}>
-        <div className={contentContainer({ content: variant })}>
+      <FluidContainer className={container({ variant })}>
+        <div className={contentContainer({ variant })}>
           <Heading.H2 className="pb-general-md">{title}</Heading.H2>
           {description && (
             <Text className="pb-general-2xl" data-testid="content-description">
