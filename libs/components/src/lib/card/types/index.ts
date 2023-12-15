@@ -44,4 +44,6 @@ export interface LiveMarketContent {
   bidPrice: string;
   askPrice: string;
   spread: string;
+  onClickBuyButton?: () => void;
+  onClickSellButton?: () => void;
 }

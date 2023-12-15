@@ -1,15 +1,21 @@
 import { Text, TradeButton } from '@deriv/quill-design';
 import { MarketStatus } from '../types';
 
+export type BuySellButtonsProps = {
+  status: MarketStatus;
+  spread: string;
+  textClass: string;
+  onClickBuyButton?: () => void;
+  onClickSellButton?: () => void;
+};
+
 export const BuySellButtons = ({
   status,
   spread,
   textClass,
-}: {
-  status: MarketStatus;
-  spread: string;
-  textClass: string;
-}) => {
+  onClickBuyButton,
+  onClickSellButton,
+}: BuySellButtonsProps) => {
   return (
     <div className="flex flex-col gap-gap-md">
       <div className="flex flex-row gap-gap-md">
@@ -26,6 +32,7 @@ export const BuySellButtons = ({
           variant="secondary"
           disabled={status === 'closed'}
           className="flex-1"
+          onClick={onClickBuyButton}
         >
           Buy
         </TradeButton>
@@ -34,6 +41,7 @@ export const BuySellButtons = ({
           variant="secondary"
           disabled={status === 'closed'}
           className="flex-1"
+          onClick={onClickSellButton}
         >
           Sell
         </TradeButton>

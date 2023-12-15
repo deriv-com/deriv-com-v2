@@ -50,6 +50,8 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   bidPrice,
   askPrice,
   spread,
+  onClickBuyButton,
+  onClickSellButton,
 }) => {
   const textClassName =
     status === 'closed'
@@ -101,6 +103,8 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         status={status}
         spread={spread}
         textClass={textClassName}
+        onClickBuyButton={onClickBuyButton}
+        onClickSellButton={onClickSellButton}
       />
     </div>
   );
