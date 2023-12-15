@@ -6,7 +6,12 @@ import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
 import LanguageSwitcher from '../language-switcher';
 import LanguageContent from '../language-switcher/language.content';
 
-const DesktopNavigation = ({ renderButtons, renderLogo }: NavigationProps) => {
+const DesktopNavigation = ({
+  renderButtons,
+  renderLogo,
+  hasLanguageSwitch,
+  topNavigation,
+}: NavigationProps) => {
   const { activeMenu, navItems, activeItem, isDropContentOpen } =
     useNavigation();
   const { showLangContent } = useLanguageSwitcher();
@@ -15,14 +20,15 @@ const DesktopNavigation = ({ renderButtons, renderLogo }: NavigationProps) => {
     activeMenu !== 'none' && activeItem?.type === 'nav-dropdown';
 
   return (
-    <DesktopNavigationWrapper>
+    <DesktopNavigationWrapper topNav={topNavigation !== undefined}>
       <div className="hidden lg:block">
+        {topNavigation?.()}
         <nav className="flex min-h-[80px] w-full flex-row items-center justify-between">
           <div className="xl:w-[272px]">{renderLogo?.()}</div>
           <NavList items={navItems} />
           <div className="flex items-center gap-gap-md">
             {renderButtons?.()}
-            <LanguageSwitcher />
+            {hasLanguageSwitch && <LanguageSwitcher />}
           </div>
         </nav>
         {shouldRenderNavContent && isDropContentOpen && <NavigationContent />}
