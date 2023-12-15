@@ -1,11 +1,4 @@
-import clsx from 'clsx';
-import {
-  FluidContainer,
-  Heading,
-  Section,
-  Text,
-  qtJoin,
-} from '@deriv/quill-design';
+import { qtJoin } from '@deriv/quill-design';
 import { ReactNode } from 'react';
 import {
   CardContent,
