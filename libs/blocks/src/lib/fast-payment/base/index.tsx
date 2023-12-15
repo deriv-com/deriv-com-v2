@@ -3,7 +3,7 @@ import {
   Heading,
   Section,
   Text,
-  qtJoin,
+  qtMerge,
 } from '@deriv/quill-design';
 import { CardsContainer, CustomLink } from '@deriv-com/components';
 
@@ -22,7 +22,7 @@ const Base: React.FC<FastPaymentProps> = ({
   return (
     <Section className="overflow-hidden py-general-4xl text-center">
       <FluidContainer
-        className={qtJoin('flex flex-col items-center', className)}
+        className={qtMerge('flex flex-col items-center', className)}
         data-testid="fast-payment-container"
       >
         <Heading.H2>{title}</Heading.H2>
