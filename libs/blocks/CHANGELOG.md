@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.49.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.48.0...blocks-0.49.0) (2023-12-15)
+
+
+### Bug Fixes
+
+* x scroll ([54ffd52](https://github.com/deriv-com/deriv-com-v2/commit/54ffd52699e65f466d2b55795271af37dbe3673e))
+
 ## [0.48.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.47.0...blocks-0.48.0) (2023-12-14)
 
 ## [0.47.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.46.0...blocks-0.47.0) (2023-12-14)
