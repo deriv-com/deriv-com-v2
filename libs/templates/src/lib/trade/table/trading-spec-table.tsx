@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react';
-import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { additionalInfo, mainInfo, tradingCondition } from '../data/data';
 import { TableDataType } from '../types/types';
@@ -23,11 +22,8 @@ import {
 import {
   StandaloneCircleDotFillIcon,
   StandaloneCircleRegularIcon,
-  StandaloneXmarkBoldIcon,
-  StandaloneXmarkRegularIcon,
 } from '@deriv/quill-icons/Standalone';
 import { LabelPairedEllipsisVerticalBoldIcon } from '@deriv/quill-icons/LabelPaired';
-import { BottomSheet } from '@deriv-com/components';
 import clsx from 'clsx';
 import Chips from '../chips';
 
@@ -83,9 +79,6 @@ const TradingSpecTable = () => {
   useEffect(() => {
     table.setPageSize(15);
   }, [table]);
-  useEffect(() => {
-    document.body.style.overflow = showBottomSheet ? 'hidden' : 'scroll';
-  }, [showBottomSheet]);
 
   const handlePagination = useCallback(
     ({ currentPage }: TPaginationEvent) => {
@@ -112,48 +105,81 @@ const TradingSpecTable = () => {
             className="w-auto"
           />
         </form>
-        <ActionSheet.Root>
-          <ActionSheet.Trigger>Click Here</ActionSheet.Trigger>
-          <ActionSheet.Portal>
-            <ActionSheet.Close aria-label="close">
-              <StandaloneXmarkRegularIcon />
-            </ActionSheet.Close>
-            <ActionSheet.Header className="py-400 text-center">
-              <div className="relative py-1100">
-                <h3 className="ml-auto">Title</h3>
-              </div>
-              <p>Description</p>
-            </ActionSheet.Header>
-            <ActionSheet.Content className="flex flex-col gap-500 py-800">
-              <p>
-                Bottom sheet is a surface fixed at the bottom of the screen
-                which includes content related to the previous screen.
-              </p>
-              <p>
-                Bottom sheet is a surface fixed at the bottom of the screen
-                which includes content related to the previous screen.
-              </p>
-              <p>
-                Bottom sheet is a surface fixed at the bottom of the screen
-                which includes content related to the previous screen.
-              </p>
-              <p>
-                Bottom sheet is a surface fixed at the bottom of the screen
-                which includes content related to the previous screen.
-              </p>
-            </ActionSheet.Content>
-          </ActionSheet.Portal>
-        </ActionSheet.Root>
-        <div>
-          <LabelPairedEllipsisVerticalBoldIcon
-            fill="black"
-            iconSize="md"
-            className="block md:hidden"
-            onClick={() => {
-              setShowBottomSheet(true);
-            }}
-          />
+        <div className="block md:hidden">
+          <ActionSheet.Root>
+            <ActionSheet.Trigger>
+              <LabelPairedEllipsisVerticalBoldIcon
+                fill="black"
+                iconSize="md"
+                className="block md:hidden"
+              />
+            </ActionSheet.Trigger>
+            <ActionSheet.Portal>
+              <ActionSheet.Header className="py-400 text-center">
+                <Text bold>Table view</Text>
+              </ActionSheet.Header>
+              <ActionSheet.Content>
+                <div className=" flex flex-col p-general-md">
+                  <div
+                    className="flex flex-row items-center gap-gap-md px-general-md py-general-sm"
+                    onClick={() => {
+                      setSelectedFilter(mainInfo.data);
+                      setSelectedInfo('mainInfo');
+                      setShowBottomSheet(false);
+                    }}
+                  >
+                    {selectedInfo === 'mainInfo' ? (
+                      <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
+                    ) : (
+                      <StandaloneCircleRegularIcon fill="black" iconSize="md" />
+                    )}
 
+                    <Text size="md" className="text-typography-default">
+                      Main info
+                    </Text>
+                  </div>
+                  <div
+                    className="flex flex-row items-center gap-gap-md px-general-md py-general-sm"
+                    onClick={() => {
+                      setSelectedFilter(tradingCondition.data);
+                      setSelectedInfo('tradingCondition');
+                      setShowBottomSheet(false);
+                    }}
+                  >
+                    {selectedInfo === 'tradingCondition' ? (
+                      <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
+                    ) : (
+                      <StandaloneCircleRegularIcon fill="black" iconSize="md" />
+                    )}
+                    <Text size="md" className="text-typography-default">
+                      Trading conditions
+                    </Text>
+                  </div>
+                  <div
+                    className="flex flex-row items-center gap-gap-md px-general-md py-general-sm"
+                    onClick={() => {
+                      setSelectedFilter(additionalInfo.data);
+                      setSelectedInfo('additionalInfo');
+                      setShowBottomSheet(false);
+                    }}
+                  >
+                    {selectedInfo === 'additionalInfo' ? (
+                      <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
+                    ) : (
+                      <StandaloneCircleRegularIcon fill="black" iconSize="md" />
+                    )}
+
+                    <Text size="md" className="text-typography-default">
+                      Additional info
+                    </Text>
+                  </div>
+                </div>
+              </ActionSheet.Content>
+            </ActionSheet.Portal>
+          </ActionSheet.Root>
+        </div>
+
+        <div>
           <div className="hidden w-max md:block">
             <Chips
               onChangeChips={handleChipsData}
@@ -226,80 +252,6 @@ const TradingSpecTable = () => {
           Trade now
         </Button>
       </div>
-
-      {showBottomSheet && (
-        <BottomSheet
-          heading="Table view"
-          placeholderIcon={
-            <StandaloneXmarkBoldIcon fill="white" iconSize="md" />
-          }
-          icon={
-            <StandaloneXmarkBoldIcon
-              fill="black"
-              iconSize="md"
-              onClick={() => {
-                setShowBottomSheet(false);
-              }}
-            />
-          }
-        >
-          <div className=" flex flex-col p-general-md">
-            <div
-              className="flex flex-row items-center gap-gap-md px-general-md py-general-sm"
-              onClick={() => {
-                setSelectedFilter(mainInfo.data);
-                setSelectedInfo('mainInfo');
-                setShowBottomSheet(false);
-              }}
-            >
-              {selectedInfo === 'mainInfo' ? (
-                <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
-              ) : (
-                <StandaloneCircleRegularIcon fill="black" iconSize="md" />
-              )}
-
-              <Text size="md" className="text-typography-default">
-                Main info
-              </Text>
-            </div>
-            <div
-              className="flex flex-row items-center gap-gap-md px-general-md py-general-sm"
-              onClick={() => {
-                setSelectedFilter(tradingCondition.data);
-                setSelectedInfo('tradingCondition');
-                setShowBottomSheet(false);
-              }}
-            >
-              {selectedInfo === 'tradingCondition' ? (
-                <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
-              ) : (
-                <StandaloneCircleRegularIcon fill="black" iconSize="md" />
-              )}
-              <Text size="md" className="text-typography-default">
-                Trading conditions
-              </Text>
-            </div>
-            <div
-              className="flex flex-row items-center gap-gap-md px-general-md py-general-sm"
-              onClick={() => {
-                setSelectedFilter(additionalInfo.data);
-                setSelectedInfo('additionalInfo');
-                setShowBottomSheet(false);
-              }}
-            >
-              {selectedInfo === 'additionalInfo' ? (
-                <StandaloneCircleDotFillIcon fill="black" iconSize="md" />
-              ) : (
-                <StandaloneCircleRegularIcon fill="black" iconSize="md" />
-              )}
-
-              <Text size="md" className="text-typography-default">
-                Additional info
-              </Text>
-            </div>
-          </div>
-        </BottomSheet>
-      )}
     </Section>
   );
 };
