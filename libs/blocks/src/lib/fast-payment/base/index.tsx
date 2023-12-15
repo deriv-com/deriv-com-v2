@@ -20,9 +20,14 @@ const Base: React.FC<FastPaymentProps> = ({
   className,
 }) => {
   return (
-    <Section className="overflow-hidden py-general-4xl text-center">
+    <Section
+      className={qtMerge(
+        'overflow-hidden py-general-4xl text-center',
+        className,
+      )}
+    >
       <FluidContainer
-        className={qtMerge('flex flex-col items-center', className)}
+        className="flex flex-col items-center"
         data-testid="fast-payment-container"
       >
         <Heading.H2>{title}</Heading.H2>
