@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.51.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.50.0...blocks-0.51.0) (2023-12-18)
+
+
+### Bug Fixes
+
+* show eu-modal prop added to customlink ([925cbb2](https://github.com/deriv-com/deriv-com-v2/commit/925cbb2febbaf7ac586286c559f97b9919187670))
+
 ## [0.50.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.49.0...blocks-0.50.0) (2023-12-18)
 
 
