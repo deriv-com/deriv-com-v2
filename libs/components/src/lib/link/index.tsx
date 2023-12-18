@@ -14,6 +14,7 @@ export interface CustomLinkProps extends HTMLAttributes<HTMLAnchorElement> {
   disabled?: boolean;
   iconColor?: iconColorVariant;
   target?: '_blank' | '_self' | '_parent' | '_top';
+  show_eu_modal?: boolean;
 }
 export type iconColorVariant = 'black' | 'subtle' | 'disabled' | 'default';
 export type textSize = 'sm' | 'md' | 'lg';
