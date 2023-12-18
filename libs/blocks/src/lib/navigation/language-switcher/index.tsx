@@ -16,7 +16,10 @@ const LanguageSwitcher = () => {
       }}
     >
       <LabelPairedGlobeRegularIcon className="inline" iconSize="md" />
-      <Text className="inline-block group-hover:text-typography-prominent">
+      <Text
+        size="sm"
+        className="inline-block group-hover:text-typography-prominent"
+      >
         {activeLanguage?.shortName}
       </Text>
     </div>
