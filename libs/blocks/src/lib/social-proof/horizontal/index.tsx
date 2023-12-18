@@ -3,6 +3,7 @@ import { Rating } from '@deriv-com/components';
 import { SocialProofProps } from '../types';
 import { getThemeClassNames } from '../classnames';
 import { redirectToTrustpilot } from '../helper';
+import { Fragment } from 'react';
 
 const SocialProofHorizontal = ({
   theme,
@@ -20,6 +21,7 @@ const SocialProofHorizontal = ({
         themeClassNames.background,
         className,
       )}
+      data-testid="social-proof-section"
     >
       <div
         className="flex cursor-pointer items-center justify-center gap-gap-xl"
