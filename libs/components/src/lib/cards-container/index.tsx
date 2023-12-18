@@ -1,4 +1,4 @@
-import { qtJoin, qtMerge } from '@deriv/quill-design';
+import { qtMerge } from '@deriv/quill-design';
 import Card, { CardVariants } from '../card';
 import { cva } from 'class-variance-authority';
 import { cardContainer, colsClass } from './cards-container.classname';
