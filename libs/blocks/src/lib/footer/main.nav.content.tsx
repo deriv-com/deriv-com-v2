@@ -27,18 +27,19 @@ export const MainNavContent = ({
             layer.type === 'link' ? (
               <div className="flex w-full flex-col gap-gap-lg" key={layer.id}>
                 <Heading.H6>{layer.header}</Heading.H6>
-                {layer.items.map((link) => (
+                {layer.items.map(({ id, href, target, text, ...rest }) => (
                   <div
                     className="flex flex-col items-start gap-gap-lg"
-                    key={link.id}
+                    key={id}
                   >
                     <CustomLink
                       size="sm"
-                      href={link.href}
+                      href={href}
                       className="text-typography-prominent"
-                      target={link.target}
+                      target={target}
+                      {...rest}
                     >
-                      {link.text}
+                      {text}
                     </CustomLink>
                   </div>
                 ))}
