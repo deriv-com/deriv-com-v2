@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.29.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.28.0...components-0.29.0) (2023-12-18)
+
+
+### Features
+
+* breadcrumb scroll and underline on click ([c6b55a6](https://github.com/deriv-com/deriv-com-v2/commit/c6b55a6824fdd12fde1a70c23fa514f85294c160))
+
+
+### Bug Fixes
+
+* show eu-modal prop added to customlink ([925cbb2](https://github.com/deriv-com/deriv-com-v2/commit/925cbb2febbaf7ac586286c559f97b9919187670))
+
 ## [0.28.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.27.0...components-0.28.0) (2023-12-13)
 
 
