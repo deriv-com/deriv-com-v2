@@ -1,5 +1,5 @@
 import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
-import { Text } from '@deriv/quill-design';
+import { Text, qtMerge } from '@deriv/quill-design';
 
 export const MobileLanguageContent = () => {
   const { toggleMobileNav } = useNavigation();
@@ -8,6 +8,7 @@ export const MobileLanguageContent = () => {
     setShowMobileLanguages,
     selectLanguage,
     langItems,
+    activeLanguage,
   } = useLanguageSwitcher();
 
   return (
@@ -17,7 +18,11 @@ export const MobileLanguageContent = () => {
           <div className="py-general-sm" key={langItems[item].displayName}>
             <Text
               bold
-              className="cursor-pointer hover:text-typography-prominent"
+              className={qtMerge(
+                'cursor-pointer hover:text-typography-prominent',
+                langItems[item].path === activeLanguage?.path &&
+                  'text-typography-prominent',
+              )}
               onClick={() => {
                 selectLanguage?.(langItems[item]);
                 setShowMobileLanguages?.(false);
