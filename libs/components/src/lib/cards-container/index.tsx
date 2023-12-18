@@ -1,4 +1,4 @@
-import { qtMerge } from '@deriv/quill-design';
+import { qtJoin, qtMerge } from '@deriv/quill-design';
 import Card, { CardVariants } from '../card';
 import { cva } from 'class-variance-authority';
 import { cardContainer, colsClass } from './cards-container.classname';
@@ -42,7 +42,7 @@ export const CardsContainer = <T extends CardVariantType>({
 }: CardsContainerProps<T>) => {
   const CardComponent = Card[variant];
 
-  const div = cva('gap-gap-lg pr-general-md', {
+  const div = cva('gap-gap-lg', {
     variants: {
       cols: {
         two: '',
@@ -59,7 +59,7 @@ export const CardsContainer = <T extends CardVariantType>({
       },
       {
         cols: ['infinite'],
-        className: sliderClass,
+        className: qtMerge(sliderClass, 'pr-general-md'),
       },
     ],
     defaultVariants: {
