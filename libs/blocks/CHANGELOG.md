@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.52.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.51.0...blocks-0.52.0) (2023-12-18)
+
+
+### Bug Fixes
+
+* active language color in mobile nav ([5d7bf25](https://github.com/deriv-com/deriv-com-v2/commit/5d7bf25216d6fec6dde7c471e64b57e437d1e5c8))
+
 ## [0.51.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.50.0...blocks-0.51.0) (2023-12-18)
 
 
