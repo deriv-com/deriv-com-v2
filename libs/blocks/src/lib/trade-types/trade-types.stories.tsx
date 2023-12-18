@@ -6,6 +6,7 @@ import { IllustrativeAdvertiseIcon } from '@deriv/quill-icons/Illustrative';
 const meta = {
   title: 'Blocks/TradeTypes',
   component: TradeTypeBlock,
+  tags: ['autodocs'],
 } satisfies Meta<typeof TradeTypeBlock>;
 
 export default meta;

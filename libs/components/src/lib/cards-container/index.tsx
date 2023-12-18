@@ -89,7 +89,7 @@ export const CardsContainer = <T extends CardVariantType>({
       ) : (
         <div
           className={colsClass({
-            dense: dense,
+            dense,
             justify: cards.length < columns[cols] ? 'center' : 'start',
           })}
         >

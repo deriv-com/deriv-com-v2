@@ -23,14 +23,19 @@ export const TradeTypeBlock = <T extends CardVariantType>({
 }: TradeTypeBlockProps<T>) => {
   return (
     <Section className="bg-background-primary-container py-general-4xl">
-      <FluidContainer className="flex flex-col items-center justify-center gap-gap-xl">
+      <FluidContainer className="flex flex-col items-center justify-center">
         <Heading.H2>{title}</Heading.H2>
-        {description && <Text size="md">{description}</Text>}
+        {description && (
+          <Text size="md" className="pt-general-md">
+            {description}
+          </Text>
+        )}
         <CardsContainer
           variant={variant}
           cards={cards}
           cols={cols}
           dense={cols === 'two'}
+          className="pt-general-2xl"
         />
       </FluidContainer>
     </Section>
