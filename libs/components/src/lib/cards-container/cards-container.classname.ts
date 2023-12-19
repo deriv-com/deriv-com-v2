@@ -10,7 +10,6 @@ export const cardClass = cva('gap-gap-lg pr-general-md', {
       three: 'lg:basis-[calc((100%-16px*2)/3)]',
       four: 'lg:basis-[calc((100%-16px*3)/4)]',
       five: 'lg:basis-[calc((100%-16px*4)/5)]',
-      infinite: 'flex',
     },
   },
   compoundVariants: [
