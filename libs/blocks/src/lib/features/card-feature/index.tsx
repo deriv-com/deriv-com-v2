@@ -1,4 +1,3 @@
-import { qtJoin } from '@deriv/quill-design';
 import { ReactNode } from 'react';
 import {
   CardContent,
@@ -37,7 +36,7 @@ const Card = ({
         variant={variant}
         cols={cols}
         cards={cards}
-        className={qtJoin(cta ? 'py-general-2xl' : 'pt-general-2xl')}
+        className={cta ? 'py-general-2xl' : 'pt-general-2xl'}
       />
     </Base>
   );

@@ -1,7 +1,7 @@
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
-import { container, contentContainer } from './content-left.classnames';
+import { containerCVA, contentContainerCVA } from './content-left.classnames';
 
 export interface ContentLeftProps {
   title: ReactNode;
@@ -28,8 +28,8 @@ const ContentLeft = ({
         className,
       )}
     >
-      <FluidContainer className={container({ variant })}>
-        <div className={contentContainer({ variant })}>
+      <FluidContainer className={containerCVA({ variant })}>
+        <div className={contentContainerCVA({ variant })}>
           <Heading.H2 className="pb-general-md">{title}</Heading.H2>
           {description && (
             <Text className="pb-general-2xl" data-testid="content-description">

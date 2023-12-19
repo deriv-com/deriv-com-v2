@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-export const container = cva(
+export const containerCVA = cva(
   'flex flex-col gap-gap-xl lg:gap-gap-lg justify-center',
   {
     variants: {
@@ -15,7 +15,7 @@ export const container = cva(
   },
 );
 
-export const contentContainer = cva(
+export const contentContainerCVA = cva(
   'flex flex-1 basis-1/2 flex-col lg:justify-center',
   {
     variants: {
