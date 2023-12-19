@@ -3,7 +3,6 @@ import { Rating } from '@deriv-com/components';
 import { SocialProofProps } from '../types';
 import { getThemeClassNames } from '../classnames';
 import { redirectToTrustpilot } from '../helper';
-import { Fragment } from 'react';
 
 const SocialProofHorizontal = ({
   theme,
