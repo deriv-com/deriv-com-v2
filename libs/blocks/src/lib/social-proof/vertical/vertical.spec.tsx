@@ -1,12 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SocialProofHorizontal from '.';
 import { OptimizedImage } from '@deriv-com/components';
+import SocialProofVertical from '.';
 
 describe('SocialProofHorizontal', () => {
-  it('render social proof horizontal block correctly', () => {
+  it('render social proof vertical block correctly', () => {
     render(
-      <SocialProofHorizontal
+      <SocialProofVertical
+        title="Title goes here"
         content={({ numberOfReviews, trustScore }) => [
           'Our customers say',
           'Excellent',
@@ -32,12 +33,10 @@ describe('SocialProofHorizontal', () => {
       />,
     );
 
-    expect(screen.getByText('Our customers say')).toBeInTheDocument();
-
-    expect(screen.getByTestId('social-proof-section')).toHaveClass(
+    expect(screen.getByTestId('vertical-section')).toHaveClass(
       'bg-solid-slate-700',
     );
-
+    expect(screen.getByText('Our customers say')).toBeInTheDocument();
     expect(screen.getByAltText('trustpilot')).toBeInTheDocument();
   });
 });
