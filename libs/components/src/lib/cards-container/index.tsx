@@ -1,7 +1,10 @@
-import { qtMerge } from '@deriv/quill-design';
+import { qtJoin, qtMerge } from '@deriv/quill-design';
 import Card, { CardVariants } from '../card';
-import { cva } from 'class-variance-authority';
-import { cardContainer, colsClass } from './cards-container.classname';
+import {
+  cardClass,
+  cardContainer,
+  colsClass,
+} from './cards-container.classname';
 
 export type CardVariantType = keyof CardVariants;
 
@@ -21,10 +24,6 @@ export interface CardsContainerProps<T extends CardVariantType> {
   sliderClass?: string;
 }
 
-/**
- * * Important: The gap is currently set at 16px. If additional gap variants are introduced, make sure to update this value accordingly.
- */
-
 const columns = {
   two: 2,
   three: 3,
@@ -42,31 +41,6 @@ export const CardsContainer = <T extends CardVariantType>({
 }: CardsContainerProps<T>) => {
   const CardComponent = Card[variant];
 
-  const div = cva('gap-gap-lg', {
-    variants: {
-      cols: {
-        two: '',
-        three: 'lg:basis-[calc((100%-16px*2)/3)]',
-        four: 'lg:basis-[calc((100%-16px*3)/4)]',
-        five: 'lg:basis-[calc((100%-16px*4)/5)]',
-        infinite: 'flex',
-      },
-    },
-    compoundVariants: [
-      {
-        cols: ['two', 'three', 'four', 'five'],
-        className: 'basis-full sm:basis-[calc((100%-16px)/2)]',
-      },
-      {
-        cols: ['infinite'],
-        className: qtMerge(sliderClass, 'pr-general-md'),
-      },
-    ],
-    defaultVariants: {
-      cols: 'two',
-    },
-  });
-
   return (
     <div
       className={qtMerge(cardContainer({ cols: cols }), className)}
@@ -76,7 +50,7 @@ export const CardsContainer = <T extends CardVariantType>({
         Array.from({ length: 3 }, (_, index) => (
           <div
             key={index}
-            className={div({ cols: cols })}
+            className={qtJoin('flex gap-gap-lg pr-general-md', sliderClass)}
             data-testid="infinite-carousel"
           >
             {cards.map((card) => (
@@ -91,13 +65,14 @@ export const CardsContainer = <T extends CardVariantType>({
           className={colsClass({
             dense,
             justify: cards.length < columns[cols] ? 'center' : 'start',
+            itemLessThanTwo: cards.length < 2,
           })}
         >
           {cards.map((card) => (
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             <CardComponent
-              className={div({ cols: cols })}
+              className={cardClass({ cols: cols })}
               key={card.id}
               {...card}
             />
