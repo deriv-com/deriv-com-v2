@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 /**
  * * Important: The gap is currently set at 16px. If additional gap variants are introduced, make sure to update this value accordingly.
  */
-export const cardClass = cva('gap-gap-lg', {
+export const cardClass = cva('', {
   variants: {
     cols: {
       two: '',
