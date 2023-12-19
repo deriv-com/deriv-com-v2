@@ -1,6 +1,5 @@
 import { qtJoin, qtMerge } from '@deriv/quill-design';
 import Card, { CardVariants } from '../card';
-import { cva } from 'class-variance-authority';
 import {
   cardClass,
   cardContainer,
