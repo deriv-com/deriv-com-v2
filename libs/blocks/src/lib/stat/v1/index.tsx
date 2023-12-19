@@ -15,12 +15,23 @@ export const V1StatBlock: React.FC<V1StatBlockProps> = ({
 }) => {
   return (
     <Section className="bg-solid-slate-75 py-general-4xl">
-      <FluidContainer className="flex flex-col gap-gap-3xl bg-solid-slate-75">
-        <div className="flex flex-col items-center gap-gap-lg text-center lg:gap-gap-xl">
-          {title && <Heading.H2>{title}</Heading.H2>}
-          {description && <Text size="md">{description}</Text>}
-        </div>
-        <CardsContainer variant="StatCard" cards={cards} cols="four" />
+      <FluidContainer className="flex flex-col items-center bg-solid-slate-75">
+        {title && (
+          <Heading.H2 className={description ? 'pb-general-lg' : undefined}>
+            {title}
+          </Heading.H2>
+        )}
+        {description && (
+          <Text size="md" className="text-center">
+            {description}
+          </Text>
+        )}
+        <CardsContainer
+          variant="StatCard"
+          cards={cards}
+          cols="four"
+          className={title || description ? 'pt-general-2xl' : undefined}
+        />
       </FluidContainer>
     </Section>
   );
