@@ -32,4 +32,9 @@ describe('ContentLess', () => {
     const button = screen.getByRole('button', { name: 'Click me' });
     expect(button).toBeInTheDocument();
   });
+
+  it('should render classname passed to it', () => {
+    const section = screen.getByTestId('content-less-section');
+    expect(section).toHaveClass('bg-solid-red-500');
+  });
 });
