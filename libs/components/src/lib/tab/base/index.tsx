@@ -7,7 +7,10 @@ import {
 } from 'react';
 import { Tab, qtJoin } from '@deriv/quill-design';
 
-type TabTrigger = Omit<ComponentProps<typeof Tab.Trigger>, 'children'> & {
+type TabTrigger = Omit<
+  ComponentProps<typeof Tab.Trigger>,
+  'children' | 'content'
+> & {
   content: ReactNode;
 };
 
