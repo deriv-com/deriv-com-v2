@@ -7,8 +7,12 @@ import {
 } from 'react';
 import { Tab, qtJoin } from '@deriv/quill-design';
 
+type TabTrigger = Omit<ComponentProps<typeof Tab.Trigger>, 'children'> & {
+  content: ReactNode;
+};
+
 export interface TabProps {
-  tabs: ComponentProps<typeof Tab.Trigger>[];
+  tabs: TabTrigger[];
   className?: string;
   children: ReactNode;
 }
@@ -17,13 +21,13 @@ export const TabBase = ({ tabs, children, className }: TabProps) => {
   return (
     <Tab.Container className={className}>
       <Tab.List>
-        {tabs.map(({ children, className, ...rest }, i) => (
+        {tabs.map(({ content, className, ...rest }, i) => (
           <Tab.Trigger
             className={qtJoin('whitespace-nowrap', className)}
             {...rest}
             key={i}
           >
-            {children}
+            {content}
           </Tab.Trigger>
         ))}
       </Tab.List>

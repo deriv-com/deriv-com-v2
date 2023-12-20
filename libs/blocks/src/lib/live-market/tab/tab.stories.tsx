@@ -26,9 +26,9 @@ export const Default: Story = {
         disclaimer="*Prices are used for currency conversion and are published for reference only. Prices shown on our website are indicative and for reference only."
         link={{ href: '/', content: 'More forex' }}
         tabs={[
-          { children: 'Forex' },
-          { children: 'Derived Indices' },
-          { children: 'Etfs' },
+          { content: 'Forex' },
+          { content: 'Derived Indices' },
+          { content: 'Etfs' },
         ]}
       >
         <CardSlider
