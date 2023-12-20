@@ -38,7 +38,11 @@ const PlatformBlockCard = ({
       )}
     >
       <FluidContainer className="flex flex-col gap-gap-3xl">
-        {header && <Heading.H2 className="text-center">{header}</Heading.H2>}
+        {header && (
+          <Heading.H2 className="mx-auto max-w-[816px] text-center">
+            {header}
+          </Heading.H2>
+        )}
         <CardsContainer variant={variant} cols={cols} cards={cards} />
         {description && <Text className="text-center">{description}</Text>}
       </FluidContainer>
