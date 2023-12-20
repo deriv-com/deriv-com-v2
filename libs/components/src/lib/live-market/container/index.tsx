@@ -40,7 +40,7 @@ export const Container = ({
     >
       <FluidContainer className="flex flex-col gap-gap-3xl">
         {header && (
-          <Heading.H2 className="relative mx-auto max-w-[816px] text-center">
+          <Heading.H2 className="mx-auto max-w-[816px] text-center">
             {header}
           </Heading.H2>
         )}
