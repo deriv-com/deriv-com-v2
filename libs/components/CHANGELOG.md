@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.31.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.30.0...components-0.31.0) (2023-12-19)
+
+
+### Bug Fixes
+
+* update link color to prominant ([0b92959](https://github.com/deriv-com/deriv-com-v2/commit/0b929598ddcca3f0c96a3b237fcf8ebf4d00da10))
+
 ## [0.30.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.29.0...components-0.30.0) (2023-12-19)
 
 ## [0.29.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.28.0...components-0.29.0) (2023-12-18)
