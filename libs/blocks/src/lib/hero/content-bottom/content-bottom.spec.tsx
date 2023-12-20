@@ -24,4 +24,9 @@ describe('ContentBottom', () => {
     const description = screen.getByText('Content Bottom description');
     expect(description).toBeInTheDocument();
   });
+
+  it('should render classname pass in', () => {
+    const section = screen.getByTestId('content-bottom-section');
+    expect(section).toBeInTheDocument();
+  });
 });
