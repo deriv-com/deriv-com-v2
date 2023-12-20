@@ -50,7 +50,7 @@ export const Default: Story = {
             {
               id: 1,
               instrumentIcon: <MarketForexGbpusdIcon />,
-              instrument: 'GBP/USD',
+              instrument: 'EUR/USD DFX 10 Index',
               changePercentage: '+0.11%',
               status: 'down',
               bidPrice: '1.24112',
