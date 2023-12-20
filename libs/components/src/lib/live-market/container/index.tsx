@@ -39,7 +39,11 @@ export const Container = ({
       )}
     >
       <FluidContainer className="flex flex-col gap-gap-3xl">
-        {header && <Heading.H2 className="text-center">{header}</Heading.H2>}
+        {header && (
+          <Heading.H2 className="relative text-center lg:left-1/2 lg:max-w-[816px] lg:-translate-x-1/2">
+            {header}
+          </Heading.H2>
+        )}
         {children}
         {description && <Text className="text-center">{description}</Text>}
         {link && (

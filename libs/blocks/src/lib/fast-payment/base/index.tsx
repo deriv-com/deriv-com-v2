@@ -30,7 +30,7 @@ const Base: React.FC<FastPaymentProps> = ({
         className="flex flex-col items-center"
         data-testid="fast-payment-container"
       >
-        <Heading.H2>{title}</Heading.H2>
+        <Heading.H2 className="lg:max-w-[816px]">{title}</Heading.H2>
         {description && (
           <Text
             data-testid="fast-payment-description"
