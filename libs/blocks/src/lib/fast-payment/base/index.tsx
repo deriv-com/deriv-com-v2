@@ -44,6 +44,7 @@ const Base: React.FC<FastPaymentProps> = ({
             href={link.href}
             className="w-fit pt-general-xl"
             hasIcon
+            size="md"
             data-testid="fast-payment-link"
           >
             {link.content}
