@@ -16,13 +16,8 @@ const ContentBottom = ({
 }: ContentBottomProps) => {
   return (
     <Section className={clsx('py-general-4xl', className)}>
-      <FluidContainer
-        className={clsx(
-          'flex flex-col gap-gap-3xl md:px-general-lg lg:px-general-none',
-          containerClassName,
-        )}
-      >
-        <Heading.H1 className="text-center">{title}</Heading.H1>
+      <FluidContainer className={clsx('flex flex-col', containerClassName)}>
+        <Heading.H1 className="pb-general-2xl text-center">{title}</Heading.H1>
         {children}
       </FluidContainer>
     </Section>
