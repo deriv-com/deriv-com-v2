@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.35.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.34.0...components-0.35.0) (2023-12-20)
+
+## [0.34.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.33.0...components-0.34.0) (2023-12-20)
+
+## [0.33.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.32.0...components-0.33.0) (2023-12-20)
+
 ## [0.32.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.31.0...components-0.32.0) (2023-12-20)
 
 

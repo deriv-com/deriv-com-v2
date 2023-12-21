@@ -5,10 +5,17 @@ import {
   cloneElement,
   isValidElement,
 } from 'react';
-import { Tab } from '@deriv/quill-design';
+import { Tab, qtJoin } from '@deriv/quill-design';
+
+type TabTrigger = Omit<
+  ComponentProps<typeof Tab.Trigger>,
+  'children' | 'content'
+> & {
+  content: ReactNode;
+};
 
 export interface TabProps {
-  tabs: ComponentProps<typeof Tab.Trigger>[];
+  tabs: TabTrigger[];
   className?: string;
   children: ReactNode;
 }
@@ -17,9 +24,13 @@ export const TabBase = ({ tabs, children, className }: TabProps) => {
   return (
     <Tab.Container className={className}>
       <Tab.List>
-        {tabs.map(({ children, ...rest }, i) => (
-          <Tab.Trigger {...rest} key={i}>
-            {children}
+        {tabs.map(({ content, className, ...rest }, i) => (
+          <Tab.Trigger
+            className={qtJoin('whitespace-nowrap', className)}
+            {...rest}
+            key={i}
+          >
+            {content}
           </Tab.Trigger>
         ))}
       </Tab.List>

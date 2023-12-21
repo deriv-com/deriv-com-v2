@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.54.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.53.0...blocks-0.54.0) (2023-12-20)
+
+
+### Bug Fixes
+
+* fast payment block custom link size ([ca6f7f0](https://github.com/deriv-com/deriv-com-v2/commit/ca6f7f04b47f94d570d1b6f477b95af52d33e599))
+
+## [0.53.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.52.0...blocks-0.53.0) (2023-12-20)
+
 ## [0.52.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.51.0...blocks-0.52.0) (2023-12-18)
 
 
