@@ -70,8 +70,8 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         className,
       )}
     >
-      <div className="flex h-[52px] shrink-0 grow flex-row gap-gap-sm">
-        <div className="flex flex-1 flex-row gap-gap-md">
+      <div className="flex h-[52px] shrink-0 grow flex-row justify-between gap-gap-sm">
+        <div className="flex max-w-[141px] flex-1 flex-row gap-gap-md">
           <div className={clsx(status === 'closed' && 'opacity-600')}>
             {instrumentIcon}
           </div>
@@ -85,7 +85,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
             {instrument}
           </Text>
         </div>
-        <div className="flex flex-row gap-gap-md pt-[2px]">
+        <div className="flex max-w-[90px] flex-row gap-gap-md pt-[2px]">
           {status !== 'closed' && ChartIcons[status]}
           <Text size="md" className={colorVariant[status]}>
             {changePercentage}
