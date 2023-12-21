@@ -50,7 +50,7 @@ export const CardsContainer = <T extends CardVariantType>({
         Array.from({ length: 3 }, (_, index) => (
           <div
             key={index}
-            className={qtJoin('flex gap-gap-lg', sliderClass)}
+            className={qtJoin('flex gap-gap-lg pr-general-xl', sliderClass)}
             data-testid="infinite-carousel"
           >
             {cards.map((card) => (
