@@ -2,7 +2,6 @@
   "name": "@deriv-com/providers",
   "version": "0.10.0",
   "main": "./index.js",
-  "type": "module",
   "types": "./index.d.ts",
   "exports": {
     ".": {
