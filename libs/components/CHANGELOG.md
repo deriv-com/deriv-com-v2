@@ -2,6 +2,30 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.35.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.34.0...components-0.35.0) (2023-12-20)
+
+## [0.34.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.33.0...components-0.34.0) (2023-12-20)
+
+## [0.33.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.32.0...components-0.33.0) (2023-12-20)
+
+## [0.32.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.31.0...components-0.32.0) (2023-12-20)
+
+
+### Bug Fixes
+
+* fixed gap issue ([e07d690](https://github.com/deriv-com/deriv-com-v2/commit/e07d690ae930424a7fd915ef464007c07c6c6df5))
+* fixed padding issue ([c0f4939](https://github.com/deriv-com/deriv-com-v2/commit/c0f49398f9ae26a66dd095bfeb07ee723522638e))
+* removed extra padding ([6cda9c8](https://github.com/deriv-com/deriv-com-v2/commit/6cda9c887e8ee4d42ddea7cae7ba40b2b7eff63c))
+
+## [0.31.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.30.0...components-0.31.0) (2023-12-19)
+
+
+### Bug Fixes
+
+* update link color to prominant ([0b92959](https://github.com/deriv-com/deriv-com-v2/commit/0b929598ddcca3f0c96a3b237fcf8ebf4d00da10))
+
+## [0.30.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.29.0...components-0.30.0) (2023-12-19)
+
 ## [0.29.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.28.0...components-0.29.0) (2023-12-18)
 
 

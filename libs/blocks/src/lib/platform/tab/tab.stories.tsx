@@ -22,11 +22,7 @@ export const Default: Story = {
         header="Header here"
         description="desciption here description here"
         className="bg-background-primary-base"
-        tabs={[
-          { children: 'All' },
-          { children: 'CFDs' },
-          { children: 'Options' },
-        ]}
+        tabs={[{ content: 'All' }, { content: 'CFDs' }, { content: 'Options' }]}
       >
         <CardsContainer
           cols="three"
