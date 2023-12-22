@@ -2,6 +2,7 @@
   "name": "@deriv-com/hooks",
   "version": "0.10.0",
   "main": "./index.js",
+  "type": "module",
   "types": "./index.d.ts",
   "exports": {
     ".": {

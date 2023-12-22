@@ -2,6 +2,7 @@
   "name": "@deriv-com/blocks",
   "version": "0.55.0",
   "main": "./index.js",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./index.mjs",
