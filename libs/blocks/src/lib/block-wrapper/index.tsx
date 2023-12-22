@@ -30,9 +30,9 @@ export const BlockWrapper = ({
         className,
       )}
     >
-      <div className="flex flex-col gap-gap-lg">
-        {title && <Heading.H2 className="text-center">{title}</Heading.H2>}
-        {description && <Text className="text-center">{description}</Text>}
+      <div className="flex flex-col items-center gap-gap-lg">
+        {title && <Heading.H2>{title}</Heading.H2>}
+        {description && <Text>{description}</Text>}
       </div>
       {children}
     </FluidContainer>
