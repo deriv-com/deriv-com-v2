@@ -1,6 +1,6 @@
 import { useSharedLink } from '@deriv-com/hooks';
 import { qtMerge } from '@deriv/quill-design';
-import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons';
+import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone';
 import clsx from 'clsx';
 import { HTMLAttributes } from 'react';
 

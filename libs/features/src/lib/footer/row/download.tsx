@@ -1,8 +1,8 @@
 import { OptimizedImage } from '@deriv-com/components';
 import {
-  LabelPairedAppleIcon,
-  LabelPairedGooglePlayIcon,
-  LabelPairedHuaweiAppGalleryIcon,
+  LabelPairedAppleMdIcon,
+  LabelPairedGooglePlayMdIcon,
+  LabelPairedHuaweiAppGalleryMdIcon,
 } from '@deriv/quill-icons/LabelPaired';
 import clsx from 'clsx';
 
@@ -13,7 +13,7 @@ const DownloadBadges = () => {
   return (
     <div className="flex flex-col gap-gap-md max-lg:flex-1">
       <div className={clsx(sharedClasses)}>
-        <LabelPairedGooglePlayIcon iconSize="md" />
+        <LabelPairedGooglePlayMdIcon />
         <OptimizedImage
           imageName="footer/get-googleplay.png"
           alt="get it on google play"
@@ -22,7 +22,7 @@ const DownloadBadges = () => {
         />
       </div>
       <div className={clsx(sharedClasses)}>
-        <LabelPairedAppleIcon iconSize="md" />
+        <LabelPairedAppleMdIcon />
         <OptimizedImage
           imageName="footer/download-appstore.png"
           alt="download on the app store"
@@ -31,7 +31,7 @@ const DownloadBadges = () => {
         />
       </div>
       <div className={clsx(sharedClasses)}>
-        <LabelPairedHuaweiAppGalleryIcon iconSize="md" />
+        <LabelPairedHuaweiAppGalleryMdIcon />
         <OptimizedImage
           imageName="footer/explore-appgallery.png"
           alt="explore it on appgallery"
