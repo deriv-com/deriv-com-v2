@@ -47,19 +47,21 @@ export const CardsContainer = <T extends CardVariantType>({
       data-testid="cards-container"
     >
       {cols === 'infinite' ? (
-        Array.from({ length: 3 }, (_, index) => (
-          <div
-            key={index}
-            className={qtJoin('flex gap-gap-lg pr-general-xl', sliderClass)}
-            data-testid="infinite-carousel"
-          >
-            {cards.map((card) => (
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              <CardComponent key={card.id} {...card} />
-            ))}
-          </div>
-        ))
+        <div className="flex w-screen gap-gap-lg overflow-hidden pt-general-2xl">
+          {Array.from({ length: 3 }, (_, index) => (
+            <div
+              key={index}
+              className={qtJoin('flex gap-gap-lg pr-general-md', sliderClass)}
+              data-testid="infinite-carousel"
+            >
+              {cards.map((card) => (
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                <CardComponent key={card.id} {...card} />
+              ))}
+            </div>
+          ))}
+        </div>
       ) : (
         <div
           className={colsClass({
