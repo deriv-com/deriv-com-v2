@@ -38,8 +38,8 @@ export const FooterBlock = ({
         <div className="flex flex-col max-lg:gap-gap-xl lg:flex-row">
           <div className="flex flex-1 py-general-xs max-lg:justify-center">
             <BrandDerivWordmarkSlateIcon
-              height="24px"
-              width="72.33px"
+              height="24"
+              width="72.33"
               className="opacity-800"
             />
           </div>
