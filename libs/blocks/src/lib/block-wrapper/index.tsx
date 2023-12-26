@@ -12,21 +12,21 @@ export interface ContentTextProps {
   description?: ReactNode;
   className?: string;
   children: ReactNode;
-  color: bgVariant;
+  background: bgVariant;
 }
 
 export const BlockWrapper = ({
   title,
   description,
   className,
-  color,
+  background = 'light',
   children,
 }: ContentTextProps) => {
   return (
     <FluidContainer
       className={qtMerge(
         'py-general-4xl',
-        bgColorVariantClass[color],
+        bgColorVariantClass[background],
         className,
       )}
     >
