@@ -1,21 +1,31 @@
+import React, { useEffect, useState } from 'react';
 import { CustomLink } from '@deriv-com/components';
 import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
 import { NavItem } from '@deriv-com/providers';
 import { Text } from '@deriv/quill-design';
-import React from 'react';
-
 export interface DesktopNavItemProps {
   item: NavItem;
   navItemName: string;
 }
-
+const removeTrailingSlash = (str: string) => {
+  return str.replace(/\/+$/, '');
+};
 export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
   item,
   navItemName,
 }) => {
   const { onListItemHover } = useNavigation();
   const { setShowLangContent } = useLanguageSwitcher();
-
+  const [isActive, setIsActive] = useState(false);
+  useEffect(() => {
+    if (item.type === 'direct' && typeof window !== undefined) {
+      const { pathname } = window.location;
+      setIsActive(
+        removeTrailingSlash(pathname) === removeTrailingSlash(item.href),
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     !item.isMobileNavOnly && (
       <li
@@ -29,7 +39,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
       >
         {item.type === 'direct' ? (
           <CustomLink
-            className="text-typography-default group-hover:text-typography-prominent"
+            className="text-typography-default group-hover:text-typography-prominent aria-[current=true]:text-typography-prominent"
             href={item.href}
             hasHoverDecoration={false}
             onMouseEnter={() => {
@@ -37,6 +47,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
               onListItemHover?.(navItemName);
             }}
             target={item.target}
+            aria-current={isActive}
           >
             {item.text}
           </CustomLink>
@@ -52,5 +63,4 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
     )
   );
 };
-
 export default DesktopNavItem;
