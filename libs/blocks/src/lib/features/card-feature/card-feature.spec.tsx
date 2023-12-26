@@ -12,6 +12,7 @@ import { CardContent } from '@deriv-com/components';
 
 const cards: CardContent[] = [
   {
+    id: 0,
     header: 'Protected and secure',
     description:
       'Your data is safe, and your funds are in segregated bank accounts per regulatory standards.',
@@ -21,6 +22,7 @@ const cards: CardContent[] = [
     size: 'sm',
   },
   {
+    id: 1,
     header: '24/7 support',
     description:
       'Reach our professional, multilingual team anytime via live chat.',
@@ -30,6 +32,7 @@ const cards: CardContent[] = [
     size: 'sm',
   },
   {
+    id: 2,
     header: 'Regulated',
     description:
       'We are licensed and overseen by leading global financial authorities.',
@@ -39,6 +42,7 @@ const cards: CardContent[] = [
     size: 'sm',
   },
   {
+    id: 3,
     header: 'Reliable',
     icon: <IllustrativeSpreadsIcon />,
     description:

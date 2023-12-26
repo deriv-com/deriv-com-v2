@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.57.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.56.0...blocks-0.57.0) (2023-12-26)
+
+
+### Bug Fixes
+
+* menu text color ([9ae3d3b](https://github.com/deriv-com/deriv-com-v2/commit/9ae3d3b170e21ca09a1ad4a7d2b33de9cc00bab5))
+
+## [0.56.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.55.0...blocks-0.56.0) (2023-12-22)
+
+## [0.55.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.54.0...blocks-0.55.0) (2023-12-22)
+
+
+### Bug Fixes
+
+* remove navigation gap in mobile ([9617f0c](https://github.com/deriv-com/deriv-com-v2/commit/9617f0c4306c5afd50ca0444c9fbde3da0fe6ab2))
+
 ## [0.54.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.53.0...blocks-0.54.0) (2023-12-20)
 
 
