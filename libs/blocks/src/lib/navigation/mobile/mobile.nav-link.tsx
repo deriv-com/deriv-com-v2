@@ -20,6 +20,7 @@ export const MobileNavLink: React.FC<MobileNavLinkProps> = ({
       href={item.href}
       hasHoverDecoration={false}
       className={qtMerge(
+        'text-typography-default',
         'py-general-sm text-body-md font-bold leading-body-md',
         'hover:text-typography-prominent',
         className,

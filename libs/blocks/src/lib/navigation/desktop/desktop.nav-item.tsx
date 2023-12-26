@@ -18,7 +18,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
   const { setShowLangContent } = useLanguageSwitcher();
   const [isActive, setIsActive] = useState(false);
   useEffect(() => {
-    if (item.type === 'direct') {
+    if (item.type === 'direct' && typeof window !== undefined) {
       const { pathname } = window.location;
       setIsActive(
         removeTrailingSlash(pathname) === removeTrailingSlash(item.href),
@@ -39,7 +39,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
       >
         {item.type === 'direct' ? (
           <CustomLink
-            className="group-hover:text-typography-prominent aria-[current=true]:text-typography-prominent"
+            className="text-typography-default group-hover:text-typography-prominent aria-[current=true]:text-typography-prominent"
             href={item.href}
             hasHoverDecoration={false}
             onMouseEnter={() => {
