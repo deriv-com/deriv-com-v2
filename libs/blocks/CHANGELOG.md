@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.58.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.57.0...blocks-0.58.0) (2023-12-26)
+
+
+### Bug Fixes
+
+* added items center class name ([32cd621](https://github.com/deriv-com/deriv-com-v2/commit/32cd621a8cf5a12a5c42d2ddcb968c81adba03c5))
+* fixed prettier problem in trade page ([f4f8120](https://github.com/deriv-com/deriv-com-v2/commit/f4f8120dbb0bb7a18a957ca4b990cf5f974a4969))
+
 ## [0.57.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.56.0...blocks-0.57.0) (2023-12-26)
 
 
