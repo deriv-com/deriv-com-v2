@@ -23,7 +23,7 @@ export const heroItems: { key: string; image: ReactNode }[] = [
         alt="hero 1"
         fill
         priority
-        className="object-cover max-lg:m-auto"
+        className="object-cover"
       />
     ),
   },
@@ -35,13 +35,13 @@ export const heroItems: { key: string; image: ReactNode }[] = [
         alt="hero 2"
         fill
         priority
-        className="object-cover max-lg:m-auto"
+        className="object-cover"
       />
     ),
   },
 ];
 
-export const renderHomeHeroSliderContent = () => (
+export const RenderHomeHeroSliderContent = () => (
   <Swiper
     speed={1500}
     centeredSlides={true}
@@ -57,10 +57,11 @@ export const renderHomeHeroSliderContent = () => (
     slidesPerView={1}
     modules={[Autoplay, EffectFade]}
     loop={true}
+    className="relative h-full"
   >
     {heroItems.map((slide) => (
       <SwiperSlide
-        className="min-h-[100vw] lg:max-h-[720px] lg:min-h-[580px] xl:min-h-[768px] 2xl:min-h-[860px]"
+        className="mt-auto min-h-[100vw] lg:max-h-[720px] lg:min-h-[580px] xl:min-h-[910px]"
         key={slide.key}
       >
         {slide.image}
@@ -71,7 +72,8 @@ export const renderHomeHeroSliderContent = () => (
 
 export const HomeHeroForm = () => {
   return (
-    <div className={'flex flex-col gap-general-lg'}>
+    <div className="flex flex-col gap-general-lg max-lg:max-w-[549px]">
+      <Text>Enter your email to get a demo account.</Text>
       <div className="flex flex-col items-center justify-between gap-gap-md md:flex-row">
         <TextField placeholder="Email Address" type="email" />
         <Button size="lg" fullWidth>

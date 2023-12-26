@@ -10,11 +10,11 @@ describe('ContentLimit', () => {
         className={'bg-solid-red-1000'}
         title={'title goes here'}
         description={'description goes here'}
-        content={() => (
+        content={
           <div>
             <Heading.H2>content goes here</Heading.H2>
           </div>
-        )}
+        }
       >
         <Button>Click me</Button>
       </ContentLimit>,
@@ -44,5 +44,10 @@ describe('ContentLimit', () => {
       level: 2,
     });
     expect(content).toBeInTheDocument();
+  });
+
+  it('should render classname passing in', () => {
+    const section = screen.getByTestId('content-limit-section');
+    expect(section).toHaveClass('bg-solid-red-1000');
   });
 });
