@@ -25,7 +25,7 @@ describe('ContentTop', () => {
     expect(description).toBeInTheDocument();
   });
 
-  it('should render class name pass into section', () => {
+  it('should render className pass into section', () => {
     const section = screen.getByTestId('content-bottom-section');
     expect(section).toHaveClass('bg-solid-red-1000');
   });
