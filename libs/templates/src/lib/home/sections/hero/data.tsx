@@ -61,7 +61,7 @@ export const RenderHomeHeroSliderContent = () => (
   >
     {heroItems.map((slide) => (
       <SwiperSlide
-        className="mt-auto min-h-[100vw] lg:max-h-[720px] lg:min-h-[580px] xl:min-h-[910px]"
+        className="mt-auto min-h-[100vw] lg:max-h-[720px] lg:min-h-[580px] xl:min-h-[768px] 2xl:min-h-[910px]"
         key={slide.key}
       >
         {slide.image}
