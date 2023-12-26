@@ -17,7 +17,7 @@ export const Default: Story = {
       <img
         className="w-full"
         src="https://placehold.co/712x200"
-        alt="Placeholderss"
+        alt="Placeholder"
       />
     ),
   },
