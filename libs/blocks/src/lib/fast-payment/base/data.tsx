@@ -2,7 +2,7 @@ import { CardContent } from '@deriv-com/components';
 import {
   PaymentMethodBitcoinBrandIcon,
   PaymentMethodSkrillBrandIcon,
-} from '@deriv/quill-icons';
+} from '@deriv/quill-icons/Logo';
 
 export const sliderCards: CardContent[] = [
   {

@@ -32,7 +32,11 @@ const PlatformBlockTab = ({
     >
       <FluidContainer>
         <div className="flex flex-col gap-gap-3xl">
-          {header && <Heading.H2 className="text-center">{header}</Heading.H2>}
+          {header && (
+            <Heading.H2 className="mx-auto max-w-[816px] text-center">
+              {header}
+            </Heading.H2>
+          )}
           <Tab.Base tabs={tabs} className="flex flex-col gap-gap-2xl">
             {children}
           </Tab.Base>

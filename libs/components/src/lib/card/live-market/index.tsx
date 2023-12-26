@@ -63,14 +63,14 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
       className={qtMerge(
         'flex flex-col',
         'rounded-xl',
-        'h-[262px] w-[286px]',
+        'h-[284px] w-[296px]',
         'bg-background-primary-container',
         'p-general-xl',
         'gap-gap-xl',
         className,
       )}
     >
-      <div className="flex h-[52px] flex-row gap-gap-sm">
+      <div className="flex h-[52px] shrink-0 grow flex-row gap-gap-sm">
         <div className="flex flex-1 flex-row gap-gap-md">
           <div className={clsx(status === 'closed' && 'opacity-600')}>
             {instrumentIcon}

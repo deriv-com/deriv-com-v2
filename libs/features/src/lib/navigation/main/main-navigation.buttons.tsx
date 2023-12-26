@@ -1,7 +1,7 @@
 import { MobileNavToggle } from '@deriv-com/blocks';
 import { useNavigation } from '@deriv-com/hooks';
 import { Button, useTheme } from '@deriv/quill-design';
-import { LabelPairedGridBoldIcon } from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedGridMdBoldIcon } from '@deriv/quill-icons/LabelPaired';
 
 export const MainNavigationButtons = () => {
   const { theme, toggleTheme } = useTheme();
@@ -27,7 +27,7 @@ export const MainNavigationButtons = () => {
           colorStyle="black"
           size="lg"
           onClick={onTradersHubClick}
-          icon={LabelPairedGridBoldIcon}
+          icon={LabelPairedGridMdBoldIcon}
           iconPosition="start"
         >
           Traders Hub

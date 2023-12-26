@@ -2,6 +2,39 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.58.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.57.0...blocks-0.58.0) (2023-12-26)
+
+
+### Bug Fixes
+
+* added items center class name ([32cd621](https://github.com/deriv-com/deriv-com-v2/commit/32cd621a8cf5a12a5c42d2ddcb968c81adba03c5))
+* fixed prettier problem in trade page ([f4f8120](https://github.com/deriv-com/deriv-com-v2/commit/f4f8120dbb0bb7a18a957ca4b990cf5f974a4969))
+
+## [0.57.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.56.0...blocks-0.57.0) (2023-12-26)
+
+
+### Bug Fixes
+
+* menu text color ([9ae3d3b](https://github.com/deriv-com/deriv-com-v2/commit/9ae3d3b170e21ca09a1ad4a7d2b33de9cc00bab5))
+
+## [0.56.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.55.0...blocks-0.56.0) (2023-12-22)
+
+## [0.55.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.54.0...blocks-0.55.0) (2023-12-22)
+
+
+### Bug Fixes
+
+* remove navigation gap in mobile ([9617f0c](https://github.com/deriv-com/deriv-com-v2/commit/9617f0c4306c5afd50ca0444c9fbde3da0fe6ab2))
+
+## [0.54.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.53.0...blocks-0.54.0) (2023-12-20)
+
+
+### Bug Fixes
+
+* fast payment block custom link size ([ca6f7f0](https://github.com/deriv-com/deriv-com-v2/commit/ca6f7f04b47f94d570d1b6f477b95af52d33e599))
+
+## [0.53.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.52.0...blocks-0.53.0) (2023-12-20)
+
 ## [0.52.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.51.0...blocks-0.52.0) (2023-12-18)
 
 
