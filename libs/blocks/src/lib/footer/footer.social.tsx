@@ -10,6 +10,7 @@ export const SocialMediaSection = ({
     <div className="flex gap-gap-lg max-lg:justify-center">
       {socialButtons.map((item) => (
         <CustomLink
+          data-cy={item['data-cy']}
           href={item.href}
           target="_blank"
           show_eu_modal={true}
