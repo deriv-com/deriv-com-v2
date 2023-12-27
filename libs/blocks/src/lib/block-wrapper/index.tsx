@@ -1,4 +1,10 @@
-import { FluidContainer, Heading, qtMerge, Text } from '@deriv/quill-design';
+import {
+  FluidContainer,
+  Heading,
+  qtMerge,
+  Section,
+  Text,
+} from '@deriv/quill-design';
 import { ReactNode } from 'react';
 
 type bgVariant = 'light' | 'gray';
@@ -23,19 +29,21 @@ export const BlockWrapper = ({
   children,
 }: ContentTextProps) => {
   return (
-    <FluidContainer
+    <Section
       className={qtMerge(
         'py-general-4xl',
         bgColorVariantClass[background],
         className,
       )}
     >
-      <div className="flex flex-col items-center gap-gap-lg">
-        {title && <Heading.H2>{title}</Heading.H2>}
-        {description && <Text>{description}</Text>}
-      </div>
-      {children}
-    </FluidContainer>
+      <FluidContainer>
+        <div className="flex flex-col items-center gap-gap-lg">
+          {title && <Heading.H2>{title}</Heading.H2>}
+          {description && <Text>{description}</Text>}
+        </div>
+        {children}
+      </FluidContainer>
+    </Section>
   );
 };
 
