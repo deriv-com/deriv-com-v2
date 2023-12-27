@@ -22,6 +22,13 @@ const nextConfig = {
     'next-image-export-optimizer',
     '@deriv/quill-design',
     '@deriv/quill-icons',
+    '@deriv/quill-icons/LabelPaired',
+    '@deriv/quill-icons/Standalone',
+    '@deriv/quill-icons/Flags',
+    '@deriv/quill-icons/Logo',
+    '@deriv/quill-icons/Illustrative',
+    '@deriv/quill-icons/Markets',
+    '@deriv/quill-icons/Social',
   ],
   env: {
     nextImageExportOptimizer_imageFolderPath: 'assets/public',

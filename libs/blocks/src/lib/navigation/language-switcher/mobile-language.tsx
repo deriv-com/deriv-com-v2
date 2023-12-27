@@ -1,6 +1,6 @@
 import { useLanguageSwitcher } from '@deriv-com/hooks';
 import { Text } from '@deriv/quill-design';
-import { LabelPairedGlobeRegularIcon } from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedGlobeMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 
 export const MobileLanguageToggler = () => {
   const { setShowMobileLanguages, activeLanguage } = useLanguageSwitcher();
@@ -12,7 +12,7 @@ export const MobileLanguageToggler = () => {
           setShowMobileLanguages?.(true);
         }}
       >
-        <LabelPairedGlobeRegularIcon className="inline" iconSize="md" />
+        <LabelPairedGlobeMdRegularIcon className="inline" />
         <Text className="group-hover:text-typography-prominent" bold>
           {activeLanguage?.displayName}
         </Text>

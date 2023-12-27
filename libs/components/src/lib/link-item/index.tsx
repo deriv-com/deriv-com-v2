@@ -6,7 +6,7 @@ import {
   linkItemIconCva,
 } from './link-item.classnames';
 
-import { LabelPairedChevronRightRegularIcon } from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedChevronRightMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import { LinkItemProps } from './types';
 import { qtJoin, qtMerge } from '@deriv/quill-design';
 
@@ -42,7 +42,7 @@ export const LinkItem = forwardRef<HTMLSpanElement, LinkItemProps>(
         {children}
 
         {hasIcon && (
-          <LabelPairedChevronRightRegularIcon
+          <LabelPairedChevronRightMdRegularIcon
             className={qtJoin(linkItemIconCva({ colorStyle }))}
             data-testid="dt-link-item-chevron"
             {...LinkItemIconSizes[size]}
