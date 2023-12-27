@@ -1,3 +1,4 @@
+/* eslint-disable @nx/enforce-module-boundaries */
 import { ReactNode } from 'react';
 import {
   CardSlider,
@@ -37,7 +38,7 @@ export const LiveMarketSlider = <T extends CardVariantType>({
       {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        <CardSlider {...cardSliderProps} />
+        <CardSlider {...cardSliderProps} className="py-general-2xl" />
       }
     </LiveMarket.Container>
   );

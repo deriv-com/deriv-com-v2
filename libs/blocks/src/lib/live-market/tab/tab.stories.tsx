@@ -6,6 +6,7 @@ import {
   MarketForexGbpusdIcon,
   MarketForexUsdjpyIcon,
 } from '@deriv/quill-icons/Markets';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { CardSlider } from '@deriv-com/components';
 
 const meta = {
@@ -33,6 +34,7 @@ export const Default: Story = {
       >
         <CardSlider
           variant="LiveMarketCard"
+          className="pt-general-2xl"
           slideClasses="max-w-full"
           swiperData={{
             spaceBetween: 16,
