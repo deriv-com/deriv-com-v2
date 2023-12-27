@@ -7,6 +7,7 @@ import { SocialMediaSection } from './footer.social';
 export interface SocialIcons {
   icon: ReactNode;
   href: string;
+  'data-cy': string;
 }
 
 export interface FooterProps {
