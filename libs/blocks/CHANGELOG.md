@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.61.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.60.0...blocks-0.61.0) (2023-12-27)
+
+
+### Bug Fixes
+
+* applied max w for header ([db28495](https://github.com/deriv-com/deriv-com-v2/commit/db2849591f879648cf08bc085e0eea5ce16b609d))
+
 ## [0.60.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.59.0...blocks-0.60.0) (2023-12-27)
 
 
