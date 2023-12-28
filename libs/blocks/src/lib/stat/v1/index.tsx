@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { CardsContainer, StatCardContent } from '@deriv-com/components';
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import BlockWrapper from '../../block-wrapper';
 
 export interface V1StatBlockProps {
   title?: ReactNode;
@@ -14,15 +15,10 @@ export const V1StatBlock: React.FC<V1StatBlockProps> = ({
   title,
 }) => {
   return (
-    <Section className="bg-solid-slate-75 py-general-4xl">
-      <FluidContainer className="flex flex-col items-center bg-solid-slate-75">
-        {title && (
-          <Heading.H2 className={description ? 'pb-general-lg' : undefined}>
-            {title}
-          </Heading.H2>
-        )}
+    <BlockWrapper background="light" title={title}>
+      <FluidContainer>
         {description && (
-          <Text size="md" className="text-center">
+          <Text size="md" className="text-center pt-general-lg">
             {description}
           </Text>
         )}
@@ -33,7 +29,7 @@ export const V1StatBlock: React.FC<V1StatBlockProps> = ({
           className={title || description ? 'pt-general-2xl' : undefined}
         />
       </FluidContainer>
-    </Section>
+    </BlockWrapper>
   );
 };
 
