@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SocialProof } from '..';
 import { OptimizedImage } from '@deriv-com/components';
-import { data } from '../stories-data';
+import { data } from '../mock-data';
 
 const meta = {
   title: 'Blocks/SocialProof/Vertical',
