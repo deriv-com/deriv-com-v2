@@ -2,6 +2,32 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.62.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.61.0...blocks-0.62.0) (2023-12-27)
+
+## [0.61.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.60.0...blocks-0.61.0) (2023-12-27)
+
+
+### Bug Fixes
+
+* applied max w for header ([db28495](https://github.com/deriv-com/deriv-com-v2/commit/db2849591f879648cf08bc085e0eea5ce16b609d))
+
+## [0.60.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.59.0...blocks-0.60.0) (2023-12-27)
+
+
+### Bug Fixes
+
+* wrapped fluid container with section ([3ac3596](https://github.com/deriv-com/deriv-com-v2/commit/3ac3596442f37367f6b6abba58c8f9066186607c))
+
+## [0.59.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.58.0...blocks-0.59.0) (2023-12-26)
+
+## [0.58.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.57.0...blocks-0.58.0) (2023-12-26)
+
+
+### Bug Fixes
+
+* added items center class name ([32cd621](https://github.com/deriv-com/deriv-com-v2/commit/32cd621a8cf5a12a5c42d2ddcb968c81adba03c5))
+* fixed prettier problem in trade page ([f4f8120](https://github.com/deriv-com/deriv-com-v2/commit/f4f8120dbb0bb7a18a957ca4b990cf5f974a4969))
+
 ## [0.57.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.56.0...blocks-0.57.0) (2023-12-26)
 
 
