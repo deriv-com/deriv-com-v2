@@ -32,6 +32,7 @@ export const BlockWrapper = ({
     <Section
       className={qtMerge(
         'py-general-4xl',
+        'flex flex-col',
         bgColorVariantClass[background],
         className,
       )}
