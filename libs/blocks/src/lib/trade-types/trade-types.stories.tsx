@@ -12,44 +12,15 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const cards: CardContent[] = [
-  {
-    id: 1,
-    header: 'Card One Header',
-    align: 'start',
-    description: 'Card One description',
-    color: 'gray',
-    size: 'sm',
-    icon: <IllustrativeAdvertiseIcon />,
-  },
-  {
-    id: 2,
-    header: 'Card Two Header',
-    align: 'start',
-    description: 'Card Two description',
-    color: 'gray',
-    size: 'sm',
-    icon: <IllustrativeAdvertiseIcon />,
-  },
-  {
-    id: 3,
-    header: 'Card Three Header',
-    align: 'start',
-    description: 'Card Three description',
-    color: 'gray',
-    size: 'sm',
-    icon: <IllustrativeAdvertiseIcon />,
-  },
-  {
-    id: 4,
-    header: 'Card Four Header',
-    align: 'start',
-    description: 'Card Four description',
-    color: 'gray',
-    size: 'sm',
-    icon: <IllustrativeAdvertiseIcon />,
-  },
-];
+const cards: CardContent[] = Array.from({ length: 4 }).map((_, i) => ({
+  id: i,
+  header: `Card Header ${i + 1}`,
+  align: 'start',
+  description: `Card description ${i + 1}`,
+  color: 'gray',
+  size: 'sm',
+  icon: <IllustrativeAdvertiseIcon />,
+}));
 
 export const Default: Story = {
   args: {
