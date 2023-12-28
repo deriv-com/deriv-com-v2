@@ -4,7 +4,7 @@ import {
   CardVariantType,
   CardsContainer,
 } from '@deriv-com/components';
-import Base from '../base';
+import BlockWrapper from '../../block-wrapper';
 
 export interface FeatureCardProps {
   title?: ReactNode;
@@ -26,11 +26,11 @@ const Card = ({
   variant = 'ContentBottom',
 }: FeatureCardProps) => {
   return (
-    <Base
+    <BlockWrapper
       title={title}
       description={description}
       className={className}
-      cta={cta}
+      background="light"
     >
       <CardsContainer
         variant={variant}
@@ -38,7 +38,8 @@ const Card = ({
         cards={cards}
         className={cta ? 'py-general-2xl' : 'pt-general-2xl'}
       />
-    </Base>
+      {cta}
+    </BlockWrapper>
   );
 };
 

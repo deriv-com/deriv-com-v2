@@ -4,8 +4,8 @@ import {
   CardSliderProps,
   CardVariantType,
 } from '@deriv-com/components';
-import Base from '../base';
 import { qtJoin } from '@deriv/quill-design';
+import BlockWrapper from '../../block-wrapper';
 
 export interface ContentSliderProps<T extends CardVariantType> {
   title?: ReactNode;
@@ -23,11 +23,11 @@ const ContentSlider = <T extends CardVariantType>({
   cardSliderProps,
 }: ContentSliderProps<T>) => {
   return (
-    <Base
+    <BlockWrapper
       title={title}
       description={description}
       className={className}
-      cta={cta}
+      background="light"
     >
       {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -40,7 +40,8 @@ const ContentSlider = <T extends CardVariantType>({
           )}
         />
       }
-    </Base>
+      {cta}
+    </BlockWrapper>
   );
 };
 

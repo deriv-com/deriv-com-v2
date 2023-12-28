@@ -31,11 +31,7 @@ const ContentLeft = ({
       <FluidContainer className={containerCVA({ variant })}>
         <div className={contentContainerCVA({ variant })}>
           <Heading.H2 className="pb-general-md">{title}</Heading.H2>
-          {description && (
-            <Text className="pb-general-2xl" data-testid="content-description">
-              {description}
-            </Text>
-          )}
+          {description && <Text className="pb-general-2xl">{description}</Text>}
           {children}
         </div>
         {Content && (

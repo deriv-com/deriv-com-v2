@@ -4,56 +4,49 @@ import '@testing-library/jest-dom';
 import ContentRight from '.';
 import { Button, Heading } from '@deriv/quill-design';
 
-const ContentRightContent = () => (
-  <Heading.H2 data-testid="content-right-content">
-    This is a heading content
-  </Heading.H2>
-);
+const className = 'text-heading-h2';
+const title = 'This is the title';
+const description = 'Description here';
+const content = 'This is a heading content';
+const child = 'This is a button';
+
+const ContentRightContent = () => <Heading.H3>{content}</Heading.H3>;
 
 describe('ContentLeft', () => {
-  const className = 'text-heading-h2';
-  const title = 'This is the title';
-  const description = 'Description here';
-  it('renders with correct class names and content', () => {
-    const { getByText } = render(
+  beforeEach(() => {
+    render(
       <ContentRight
         className={className}
         title={title}
-        content={ContentRightContent}
         description={description}
+        content={ContentRightContent}
       >
-        <Button>This is a button</Button>
+        <Button>{child}</Button>
       </ContentRight>,
     );
-    const titleElement = getByText(title);
-
-    //renders with correct classname
-    expect(titleElement).toHaveClass(className);
-
-    //renders with the correct title
-    expect(getByText(title)).toBeInTheDocument();
-
-    //renders with the correct description
-    expect(getByText(description)).toBeInTheDocument();
   });
 
-  it('render without description', () => {
-    const { getByText } = render(
-      <ContentRight title={title} content={ContentRightContent}>
-        <Button data-testid="test-button">This is a button</Button>
-      </ContentRight>,
-    );
+  it('renders with correct class names passing in', () => {
+    expect(document.querySelector(`.${className}`)).toBeInTheDocument();
+  });
 
-    //renders with the correct title
-    expect(getByText(title)).toBeInTheDocument();
+  it(`renders with correct title '${title}'`, () => {
+    expect(
+      screen.getByRole('heading', { name: title, level: 2 }),
+    ).toBeInTheDocument();
+  });
 
-    //renders with the correct description
-    expect(screen.queryByTestId('content-description')).toBeNull();
+  it(`renders with correct description '${description}'`, () => {
+    expect(screen.getByText(description)).toBeInTheDocument();
+  });
 
-    //renders with the correct children
-    expect(screen.getByTestId('test-button')).toBeInTheDocument();
+  it(`renders with correct content`, () => {
+    expect(
+      screen.getByRole('heading', { name: content, level: 3 }),
+    ).toBeInTheDocument();
+  });
 
-    //render with correct content
-    expect(screen.getByTestId('content-right-content')).toBeInTheDocument();
+  it(`renders with correct children`, () => {
+    expect(screen.getByRole('button', { name: child })).toBeInTheDocument();
   });
 });

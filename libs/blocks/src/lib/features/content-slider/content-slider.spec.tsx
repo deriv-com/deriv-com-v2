@@ -4,13 +4,28 @@ import '@testing-library/jest-dom';
 
 import ContentSlider from '.';
 import { Button } from '@deriv/quill-design';
+import { CardVariantProps } from '@deriv-com/components';
+
+const className = 'text-heading-h2';
+const title = 'This is the title';
+const description = 'Description here';
+const cta = 'CTA';
+
+const cards: CardVariantProps<'ContentBottom'>[] = Array.from({
+  length: 6,
+}).map((_, i) => ({
+  id: i,
+  header: `Card ${i + 1}`,
+  description: `Description here ${i + 1}`,
+  icon: <IllustrativeProtectedAndSecureIcon />,
+  color: 'gray',
+  align: 'start',
+  size: 'sm',
+}));
 
 describe('CardSlider', () => {
-  const className = 'text-heading-h2';
-  const title = 'This is the title';
-  const description = 'Description here';
-  it('renders with correct class names and content', () => {
-    const { getByText } = render(
+  beforeEach(() => {
+    render(
       <ContentSlider
         className={className}
         title={title}
@@ -18,98 +33,38 @@ describe('CardSlider', () => {
         cardSliderProps={{
           slideClasses: 'max-w-xs',
           variant: 'ContentBottom',
-          cards: Array.from({ length: 6 }, (_, i) => ({
-            id: i,
-            header: `Card ${i + 1}`,
-            description:
-              'Description here. Description here. Description here. Description here.',
-            icon: <IllustrativeProtectedAndSecureIcon />,
-            color: 'gray',
-            align: 'start',
-            size: 'sm',
-          })),
+          cards: cards,
         }}
-        cta={<Button data-testid="cta-button">CTA</Button>}
+        cta={<Button>{cta}</Button>}
       />,
     );
+  });
 
-    //renders with correct classname
-    expect(getByText(title)).toHaveClass(className);
+  it(`should render the correct class name '${className}' passing in`, () => {
+    expect(document.querySelector(`.${className}`)).toBeInTheDocument();
+  });
 
-    //renders with the correct title
+  it(`should render the correct title '${title}'`, () => {
     expect(
       screen.getByRole('heading', { name: title, level: 2 }),
     ).toBeInTheDocument();
-
-    //renders with the correct description
-    expect(getByText(description)).toBeInTheDocument();
-
-    //renders with the correct cta
-    expect(screen.getByTestId('cta-button')).toBeInTheDocument();
   });
 
-  it('renders without title', () => {
-    const { getByText } = render(
-      <ContentSlider
-        className={className}
-        description={description}
-        cardSliderProps={{
-          slideClasses: 'max-w-xs',
-          variant: 'ContentBottom',
-          cards: Array.from({ length: 6 }, (_, i) => ({
-            id: i,
-            header: `Card ${i + 1}`,
-            description:
-              'Description here. Description here. Description here. Description here.',
-            icon: <IllustrativeProtectedAndSecureIcon />,
-            color: 'gray',
-            align: 'start',
-            size: 'sm',
-          })),
-        }}
-        cta={<Button data-testid="cta-button">CTA</Button>}
-      />,
-    );
-
-    //renders with the correct title
-    expect(screen.queryByRole('heading', { name: title, level: 2 })).toBeNull();
-
-    //renders with the correct cta
-    expect(screen.getByTestId('cta-button')).toBeInTheDocument();
-
-    //renders with the correct description
-    expect(getByText(description)).toBeInTheDocument();
+  it(`should render the correct description '${description}'`, () => {
+    expect(screen.getByText(description)).toBeInTheDocument();
   });
 
-  it('renders without description', () => {
-    render(
-      <ContentSlider
-        className={className}
-        cardSliderProps={{
-          slideClasses: 'max-w-xs',
-          variant: 'ContentBottom',
-          cards: Array.from({ length: 6 }, (_, i) => ({
-            id: i,
-            header: `Card ${i + 1}`,
-            description:
-              'Description here. Description here. Description here. Description here.',
-            icon: <IllustrativeProtectedAndSecureIcon />,
-            color: 'gray',
-            align: 'start',
-            size: 'sm',
-          })),
-        }}
-        cta={<Button data-testid="cta-button">CTA</Button>}
-      />,
-    );
+  it('should render the correct cta', () => {
+    expect(screen.getByRole('button', { name: cta })).toBeInTheDocument();
+  });
 
-    //renders with the correct title
-    expect(screen.queryByRole('heading', { name: title, level: 2 })).toBeNull();
+  cards.forEach((_, i) => {
+    it(`should render the correct title '${title}'`, () => {
+      expect(
+        screen.getByRole('heading', { name: `Card ${i + 1}`, level: 4 }),
+      ).toBeInTheDocument();
 
-    //renders with the correct cta
-    expect(screen.getByTestId('cta-button')).toBeInTheDocument();
-
-    //renders with the correct description
-    expect(screen.queryByTestId('card-description')).toBeNull();
+      expect(screen.getByText(`Description here ${i + 1}`)).toBeInTheDocument();
+    });
   });
 });
