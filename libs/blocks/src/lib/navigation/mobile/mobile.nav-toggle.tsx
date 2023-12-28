@@ -9,6 +9,7 @@ export const MobileNavToggle = () => {
       onClick={toggleMobileNav}
       iconSize="md"
       className="cursor-pointer lg:hidden"
+      data-cy="hamburger-menu"
     />
   );
 };
