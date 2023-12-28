@@ -6,8 +6,7 @@ export const cards: CardVariantProps<'ContentBottom'>[] = Array.from({
 }).map((_, i) => ({
   id: i,
   header: `Card ${i + 1}`,
-  description:
-    'Description here. Description here. Description here. Description here.',
+  description: `Description here ${i + 1}`,
   icon: <IllustrativeProtectedAndSecureIcon />,
   color: 'gray',
   align: 'start',

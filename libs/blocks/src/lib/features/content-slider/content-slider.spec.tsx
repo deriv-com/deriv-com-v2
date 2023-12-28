@@ -50,7 +50,9 @@ describe('CardSlider', () => {
       expect(
         screen.getByRole('heading', { name: `Card ${i + 1}`, level: 4 }),
       ).toBeInTheDocument();
+    });
 
+    it(`should render the correct description '${description}'`, () => {
       expect(screen.getByText(`Description here ${i + 1}`)).toBeInTheDocument();
     });
   });
