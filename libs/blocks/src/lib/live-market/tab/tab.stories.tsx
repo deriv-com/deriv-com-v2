@@ -26,9 +26,9 @@ export const Default: Story = {
         disclaimer="*Prices are used for currency conversion and are published for reference only. Prices shown on our website are indicative and for reference only."
         link={{ href: '/', content: 'More forex' }}
         tabs={[
-          { children: 'Forex' },
-          { children: 'Derived Indices' },
-          { children: 'Etfs' },
+          { content: 'Forex' },
+          { content: 'Derived Indices' },
+          { content: 'Etfs' },
         ]}
       >
         <CardSlider
@@ -50,7 +50,7 @@ export const Default: Story = {
             {
               id: 1,
               instrumentIcon: <MarketForexGbpusdIcon />,
-              instrument: 'GBP/USD',
+              instrument: 'EUR/USD DFX 10 Index',
               changePercentage: '+0.11%',
               status: 'down',
               bidPrice: '1.24112',

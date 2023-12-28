@@ -7,7 +7,7 @@ import {
   StandaloneGooglePlayIcon,
   StandaloneAppStoreIosIcon,
 } from '@deriv/quill-icons/Standalone';
-import { LabelPairedWindowsIcon } from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedWindowsMdIcon } from '@deriv/quill-icons/LabelPaired';
 
 export const data = {
   content: (
@@ -40,7 +40,7 @@ export const data = {
       name: 'Web browser',
     },
     {
-      icon: <LabelPairedWindowsIcon />,
+      icon: <LabelPairedWindowsMdIcon />,
       name: 'Windows',
     },
     {

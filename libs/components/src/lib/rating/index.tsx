@@ -1,5 +1,5 @@
 import { qtMerge } from '@deriv/quill-design';
-import { LabelPairedTrustpilotIcon } from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedTrustpilotMdIcon } from '@deriv/quill-icons/LabelPaired';
 
 export type RatingProps = {
   rate: number | undefined;
@@ -88,7 +88,7 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
         )}
       />
       <div className="absolute left-50 top-50 flex h-full w-full items-center justify-center">
-        <LabelPairedTrustpilotIcon
+        <LabelPairedTrustpilotMdIcon
           width={100}
           height={100}
           className={StarClassName[size]}

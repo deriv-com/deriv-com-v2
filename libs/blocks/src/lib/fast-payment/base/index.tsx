@@ -30,7 +30,7 @@ const Base: React.FC<FastPaymentProps> = ({
         className="flex flex-col items-center"
         data-testid="fast-payment-container"
       >
-        <Heading.H2>{title}</Heading.H2>
+        <Heading.H2 className="max-w-[816px] text-center">{title}</Heading.H2>
         {description && (
           <Text
             data-testid="fast-payment-description"
@@ -44,6 +44,7 @@ const Base: React.FC<FastPaymentProps> = ({
             href={link.href}
             className="w-fit pt-general-xl"
             hasIcon
+            size="md"
             data-testid="fast-payment-link"
           >
             {link.content}
