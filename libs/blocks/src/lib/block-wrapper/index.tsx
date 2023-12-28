@@ -36,17 +36,15 @@ export const BlockWrapper = ({
         className,
       )}
     >
-      <FluidContainer className={qtMerge(className)}>
-        <div className="flex flex-col items-center gap-gap-lg">
-          {title && (
-            <Heading.H2 className="text-center lg:max-w-[816px]">
-              {title}
-            </Heading.H2>
-          )}
-          {description && <Text className="text-center">{description}</Text>}
-        </div>
-        {children}
+      <FluidContainer className="flex flex-col items-center gap-gap-lg">
+        {title && (
+          <Heading.H2 className="text-center lg:max-w-[816px]">
+            {title}
+          </Heading.H2>
+        )}
+        {description && <Text className="text-center">{description}</Text>}
       </FluidContainer>
+      {children}
     </Section>
   );
 };

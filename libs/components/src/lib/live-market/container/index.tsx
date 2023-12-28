@@ -24,25 +24,27 @@ export const Container = ({
 }: ContainerProps) => {
   return (
     <BlockWrapper title={header} background={'gray'}>
-      {children}
-      {description && <Text className="text-center">{description}</Text>}
-      {link && (
-        <CustomLink
-          size="md"
-          href={link.href}
-          hasIcon
-          className="py-general-2xl"
-        >
-          {link.content}
-        </CustomLink>
-      )}
-      {disclaimer && (
-        <div className="mx-auto max-w-[816px] max-sm:px-general-md">
-          <Text size="sm" className="text-center text-typography-subtle">
-            {disclaimer}
-          </Text>
-        </div>
-      )}
+      <div className="mx-auto">
+        {children}
+        {description && <Text className="text-center">{description}</Text>}
+        {link && (
+          <CustomLink
+            size="md"
+            href={link.href}
+            hasIcon
+            className="py-general-2xl"
+          >
+            {link.content}
+          </CustomLink>
+        )}
+        {disclaimer && (
+          <div className="mx-auto max-w-[816px] max-sm:px-general-md">
+            <Text size="sm" className="text-center text-typography-subtle">
+              {disclaimer}
+            </Text>
+          </div>
+        )}
+      </div>
     </BlockWrapper>
   );
 };
