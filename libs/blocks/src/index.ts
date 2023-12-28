@@ -15,3 +15,4 @@ export * from './lib/footer';
 export * from './lib/search';
 export * from './lib/social-proof';
 export * from './lib/platform';
+export * from './lib/block-wrapper';

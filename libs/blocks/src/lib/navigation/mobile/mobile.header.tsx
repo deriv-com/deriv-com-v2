@@ -20,6 +20,7 @@ export const MobileHeader = () => {
     >
       {(hasActiveMenu || showMobileLanguages) && (
         <StandaloneChevronLeftRegularIcon
+          data-cy="nav-back-icon"
           className="cursor-pointer"
           onClick={() => {
             setActiveMenu?.('none');
@@ -28,6 +29,7 @@ export const MobileHeader = () => {
         />
       )}
       <StandaloneXmarkRegularIcon
+        data-cy="nav-cross-icon"
         className="cursor-pointer"
         onClick={() => {
           setShowMobileLanguages?.(false);
