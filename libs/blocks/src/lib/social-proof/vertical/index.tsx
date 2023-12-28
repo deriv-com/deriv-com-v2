@@ -31,7 +31,6 @@ const SocialProofVertical = ({
         themeClassNames.background,
         className,
       )}
-      data-testid="vertical-section"
     >
       <FluidContainer
         className="flex cursor-pointer flex-col items-center"

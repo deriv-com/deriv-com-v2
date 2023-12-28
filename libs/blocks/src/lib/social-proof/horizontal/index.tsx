@@ -20,7 +20,6 @@ const SocialProofHorizontal = ({
         themeClassNames.background,
         className,
       )}
-      data-testid="social-proof-section"
     >
       <div
         className="flex cursor-pointer items-center justify-center gap-gap-xl"

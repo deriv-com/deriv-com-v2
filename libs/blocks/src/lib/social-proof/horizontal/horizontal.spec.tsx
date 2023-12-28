@@ -34,9 +34,7 @@ describe('SocialProofHorizontal', () => {
 
     expect(screen.getByText('Our customers say')).toBeInTheDocument();
 
-    expect(screen.getByTestId('social-proof-section')).toHaveClass(
-      'bg-solid-slate-700',
-    );
+    expect(document.querySelector('.bg-solid-slate-700')).toBeInTheDocument();
 
     expect(screen.getByAltText('trustpilot')).toBeInTheDocument();
   });
