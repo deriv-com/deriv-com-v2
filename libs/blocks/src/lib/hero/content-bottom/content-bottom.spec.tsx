@@ -9,7 +9,7 @@ describe('ContentBottom', () => {
       <ContentBottom
         title="Content Bottom Title"
         className="bg-solid-red-1000"
-        containerClassName="bg-solid-red-1000"
+        containerClassName="bg-solid-red-200"
       >
         <Text>Content Bottom description</Text>
       </ContentBottom>,
@@ -30,12 +30,12 @@ describe('ContentBottom', () => {
   });
 
   it('should render classname pass into section', () => {
-    const section = screen.getByTestId('content-bottom-section');
-    expect(section).toHaveClass('bg-solid-red-1000');
+    const section = document.querySelector('.bg-solid-red-1000');
+    expect(section).toBeInTheDocument();
   });
 
   it('should render classname pass into fluid container', () => {
-    const section = screen.getByTestId('content-bottom-container');
-    expect(section).toHaveClass('bg-solid-red-1000');
+    const section = document.querySelector('.bg-solid-red-200');
+    expect(section).toBeInTheDocument();
   });
 });

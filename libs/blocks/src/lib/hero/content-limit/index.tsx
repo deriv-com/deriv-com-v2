@@ -19,10 +19,7 @@ const ContentLimit: React.FC<ContentLimitProps> = ({
   children,
 }) => {
   return (
-    <Section
-      className={qtMerge('relative py-general-4xl', className)}
-      data-testid="content-limit-section"
-    >
+    <Section className={qtMerge('relative py-general-4xl', className)}>
       <FluidContainer
         className={clsx(
           'lg:flex-row',

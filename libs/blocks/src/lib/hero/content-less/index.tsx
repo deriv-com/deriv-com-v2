@@ -1,5 +1,3 @@
-import { FluidContainer, Section } from '@deriv/quill-design';
-import { clsx } from 'clsx';
 import Content from '../content';
 import BlockWrapper from '../../block-wrapper';
 

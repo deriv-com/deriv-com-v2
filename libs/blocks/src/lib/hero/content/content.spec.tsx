@@ -37,7 +37,7 @@ describe('Content', () => {
   });
 
   it('should render classname passed to it', () => {
-    const section = screen.getByTestId('content-container');
-    expect(section).toHaveClass('bg-solid-red-500');
+    const section = document.querySelector('.bg-solid-red-500');
+    expect(section).toBeInTheDocument();
   });
 });

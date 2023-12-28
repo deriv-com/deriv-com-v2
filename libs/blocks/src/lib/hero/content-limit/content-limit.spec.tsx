@@ -47,7 +47,7 @@ describe('ContentLimit', () => {
   });
 
   it('should render classname passing in', () => {
-    const section = screen.getByTestId('content-limit-section');
-    expect(section).toHaveClass('bg-solid-red-1000');
+    const section = document.querySelector('.bg-solid-red-1000');
+    expect(section).toBeInTheDocument();
   });
 });

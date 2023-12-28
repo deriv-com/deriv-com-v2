@@ -3,10 +3,13 @@ import '@testing-library/jest-dom';
 import ContentTop from '.';
 import { Text } from '@deriv/quill-design';
 
+const title = 'Content Bottom Title';
+const className = 'bg-solid-red-1000';
+
 describe('ContentTop', () => {
   beforeEach(() => {
     render(
-      <ContentTop title="Content Bottom Title" className="bg-solid-red-1000">
+      <ContentTop title={title} className={className}>
         <Text>Content Bottom description</Text>
       </ContentTop>,
     );
@@ -26,7 +29,7 @@ describe('ContentTop', () => {
   });
 
   it('should render className pass into section', () => {
-    const section = screen.getByTestId('content-bottom-section');
-    expect(section).toHaveClass('bg-solid-red-1000');
+    const section = document.querySelector(`.${className}`);
+    expect(section).toBeInTheDocument();
   });
 });
