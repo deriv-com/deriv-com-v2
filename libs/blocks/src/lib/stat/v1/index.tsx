@@ -18,9 +18,7 @@ export const V1StatBlock: React.FC<V1StatBlockProps> = ({
     <BlockWrapper background="light" title={title}>
       <FluidContainer>
         {description && (
-          <Text size="md" className="text-center pt-general-lg">
-            {description}
-          </Text>
+          <Text className="text-center pt-general-lg">{description}</Text>
         )}
         <CardsContainer
           variant="StatCard"
