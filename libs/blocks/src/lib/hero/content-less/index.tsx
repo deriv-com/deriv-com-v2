@@ -1,6 +1,7 @@
 import { FluidContainer, Section } from '@deriv/quill-design';
 import { clsx } from 'clsx';
 import Content from '../content';
+import BlockWrapper from '../../block-wrapper';
 
 export type ContentLessProps = {
   title?: string;
@@ -16,16 +17,11 @@ const ContentLess = ({
   children,
 }: ContentLessProps) => {
   return (
-    <Section
-      className={clsx('py-general-4xl', className)}
-      data-testid="content-less-section"
-    >
-      <FluidContainer>
-        <Content title={title} description={description} center={true}>
-          {children}
-        </Content>
-      </FluidContainer>
-    </Section>
+    <BlockWrapper className={className} background="light">
+      <Content title={title} description={description} center={true}>
+        {children}
+      </Content>
+    </BlockWrapper>
   );
 };
 

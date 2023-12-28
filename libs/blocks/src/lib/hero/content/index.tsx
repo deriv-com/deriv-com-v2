@@ -13,7 +13,7 @@ const Content = ({
   className,
 }: ContentProps) => {
   return (
-    <div className={className} data-testid="content-container">
+    <div className={className}>
       {title && (
         <Heading.H1
           className={qtJoin(
