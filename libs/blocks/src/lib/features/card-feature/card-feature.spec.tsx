@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { cardsData } from './data';
+import { cardsData } from './mock-data';
 import CardContentBlock from '.';
 
 const className = 'text-heading-h2';

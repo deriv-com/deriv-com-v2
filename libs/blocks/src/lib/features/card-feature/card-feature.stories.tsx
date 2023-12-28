@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@deriv/quill-design';
 import Card from '.';
-import { cardsData } from './data';
+import { cardsData } from './mock-data';
 
 const meta = {
   title: 'Blocks/Features/Card',

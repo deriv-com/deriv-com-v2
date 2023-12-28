@@ -2,7 +2,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@deriv/quill-design';
 import ContentSlider from '.';
-import { IllustrativeProtectedAndSecureIcon } from '@deriv/quill-icons/Illustrative';
+import { cards } from './mock-data';
 
 const meta = {
   title: 'Blocks/Features/ContentSlider',
@@ -29,16 +29,7 @@ export const Default: Story = {
     cardSliderProps: {
       slideClasses: 'max-w-xs',
       variant: 'ContentBottom',
-      cards: Array.from({ length: 6 }, (_, i) => ({
-        id: i,
-        header: `Card ${i + 1}`,
-        description:
-          'Description here. Description here. Description here. Description here.',
-        icon: <IllustrativeProtectedAndSecureIcon />,
-        color: 'gray',
-        align: 'start',
-        size: 'sm',
-      })),
+      cards: cards,
     },
   },
 };
