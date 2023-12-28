@@ -23,7 +23,7 @@ import {
   StandaloneCircleRegularIcon,
   StandaloneXmarkBoldIcon,
 } from '@deriv/quill-icons/Standalone';
-import { LabelPairedEllipsisVerticalBoldIcon } from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedEllipsisVerticalMdBoldIcon } from '@deriv/quill-icons/LabelPaired';
 import { BottomSheet } from '@deriv-com/components';
 import clsx from 'clsx';
 import Chips from '../chips';
@@ -111,9 +111,8 @@ const TradingSpecTable = () => {
         </form>
 
         <div>
-          <LabelPairedEllipsisVerticalBoldIcon
+          <LabelPairedEllipsisVerticalMdBoldIcon
             fill="black"
-            iconSize="md"
             className="block md:hidden"
             onClick={() => {
               setShowBottomSheet(true);

@@ -14,9 +14,9 @@ export const Default: Story = {
     return (
       <Tab.Base
         tabs={[
-          { children: 'Home' },
-          { children: 'Profile' },
-          { children: 'Contact' },
+          { content: 'Home' },
+          { content: 'Profile' },
+          { content: 'Contact' },
         ]}
       >
         <div>Home Tab</div>
