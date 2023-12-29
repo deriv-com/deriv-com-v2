@@ -1,16 +1,11 @@
 import { ReactNode } from 'react';
-import {
-  FluidContainer,
-  Heading,
-  Section,
-  Text,
-  qtMerge,
-} from '@deriv/quill-design';
+import { FluidContainer, Text } from '@deriv/quill-design';
 import {
   CardContent,
   CardVariantType,
   CardsContainer,
 } from '@deriv-com/components';
+import BlockWrapper from '../../block-wrapper';
 
 export type PlatformBlockCardProps = {
   header?: ReactNode;
@@ -30,23 +25,14 @@ const PlatformBlockCard = ({
   variant = 'ContentBottom',
 }: PlatformBlockCardProps) => {
   return (
-    <Section
-      className={qtMerge(
-        'py-general-4xl',
-        'bg-background-primary-container',
-        className,
-      )}
-    >
-      <FluidContainer className="flex flex-col gap-gap-3xl">
-        {header && (
-          <Heading.H2 className="mx-auto max-w-[816px] text-center">
-            {header}
-          </Heading.H2>
-        )}
+    <BlockWrapper className={className} background="light" title={header}>
+      <FluidContainer className="pt-general-2xl">
         <CardsContainer variant={variant} cols={cols} cards={cards} />
-        {description && <Text className="text-center">{description}</Text>}
+        {description && (
+          <Text className="text-center pt-general-xl">{description}</Text>
+        )}
       </FluidContainer>
-    </Section>
+    </BlockWrapper>
   );
 };
 

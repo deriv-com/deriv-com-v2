@@ -4,9 +4,11 @@ import {
   Heading,
   Section,
   Text,
+  qtJoin,
   qtMerge,
 } from '@deriv/quill-design';
 import { Tab } from '@deriv-com/components';
+import BlockWrapper from '../../block-wrapper';
 
 export type PlatformBlockTabProps = ComponentProps<typeof Tab.Base> & {
   header?: ReactNode;
@@ -23,29 +25,16 @@ const PlatformBlockTab = ({
   children,
 }: PlatformBlockTabProps) => {
   return (
-    <Section
-      className={qtMerge(
-        'py-general-4xl',
-        'bg-background-primary-container',
-        className,
-      )}
-    >
-      <FluidContainer>
-        <div className="flex flex-col gap-gap-3xl">
-          {header && (
-            <Heading.H2 className="mx-auto max-w-[816px] text-center">
-              {header}
-            </Heading.H2>
-          )}
-          <Tab.Base tabs={tabs} className="flex flex-col gap-gap-2xl">
-            {children}
-          </Tab.Base>
-        </div>
+    <BlockWrapper className={className} background="light" title={header}>
+      <FluidContainer className={qtJoin(header && 'pt-general-2xl')}>
+        <Tab.Base tabs={tabs} className="flex flex-col gap-gap-2xl">
+          {children}
+        </Tab.Base>
         {description && (
-          <Text className="my-general-xl text-center">{description}</Text>
+          <Text className="pt-general-xl text-center">{description}</Text>
         )}
       </FluidContainer>
-    </Section>
+    </BlockWrapper>
   );
 };
 
