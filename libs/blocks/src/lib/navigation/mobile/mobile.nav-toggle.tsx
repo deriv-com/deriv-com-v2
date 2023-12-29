@@ -1,7 +1,11 @@
 import { useNavigation } from '@deriv-com/hooks';
 import { StandaloneBarsBoldIcon } from '@deriv/quill-icons/Standalone';
 
-export const MobileNavToggle = () => {
+type MobileNavToggleProps = {
+  'data-cy'?: string;
+};
+
+export const MobileNavToggle = (props: MobileNavToggleProps) => {
   const { toggleMobileNav } = useNavigation();
 
   return (
@@ -9,7 +13,7 @@ export const MobileNavToggle = () => {
       onClick={toggleMobileNav}
       iconSize="md"
       className="cursor-pointer lg:hidden"
-      data-cy="hamburger-menu"
+      data-cy={props['data-cy']}
     />
   );
 };
