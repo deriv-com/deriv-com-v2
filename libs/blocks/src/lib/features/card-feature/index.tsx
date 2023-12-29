@@ -5,6 +5,7 @@ import {
   CardsContainer,
 } from '@deriv-com/components';
 import BlockWrapper from '../../block-wrapper';
+import { FluidContainer } from '@deriv/quill-design';
 
 export interface FeatureCardProps {
   title?: ReactNode;
@@ -32,13 +33,15 @@ const Card = ({
       className={className}
       background="light"
     >
-      <CardsContainer
-        variant={variant}
-        cols={cols}
-        cards={cards}
-        className={cta ? 'py-general-2xl' : 'pt-general-2xl'}
-      />
-      {cta}
+      <FluidContainer>
+        <CardsContainer
+          variant={variant}
+          cols={cols}
+          cards={cards}
+          className={cta ? 'py-general-2xl' : 'pt-general-2xl'}
+        />
+        {cta}
+      </FluidContainer>
     </BlockWrapper>
   );
 };

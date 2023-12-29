@@ -4,7 +4,7 @@ import {
   CardSliderProps,
   CardVariantType,
 } from '@deriv-com/components';
-import { qtJoin } from '@deriv/quill-design';
+import { FluidContainer, qtJoin } from '@deriv/quill-design';
 import BlockWrapper from '../../block-wrapper';
 
 export interface ContentSliderProps<T extends CardVariantType> {
@@ -29,18 +29,20 @@ const ContentSlider = <T extends CardVariantType>({
       className={className}
       background="light"
     >
-      {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        <CardSlider
-          {...cardSliderProps}
-          className={qtJoin(
-            cta ? 'py-general-2xl' : 'pt-general-2xl',
-            cardSliderProps && cardSliderProps.className,
-          )}
-        />
-      }
-      {cta}
+      <FluidContainer>
+        {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          <CardSlider
+            {...cardSliderProps}
+            className={qtJoin(
+              cta ? 'py-general-2xl' : 'pt-general-2xl',
+              cardSliderProps && cardSliderProps.className,
+            )}
+          />
+        }
+        {cta}
+      </FluidContainer>
     </BlockWrapper>
   );
 };
