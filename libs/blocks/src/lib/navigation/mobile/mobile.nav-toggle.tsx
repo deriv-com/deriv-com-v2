@@ -2,7 +2,7 @@ import { useNavigation } from '@deriv-com/hooks';
 import { StandaloneBarsBoldIcon } from '@deriv/quill-icons/Standalone';
 
 type MobileNavToggleProps = {
-  'data-cy': string;
+  'data-cy'?: string;
 };
 
 export const MobileNavToggle = (props: MobileNavToggleProps) => {
