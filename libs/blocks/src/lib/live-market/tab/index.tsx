@@ -1,8 +1,9 @@
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { LiveMarket, Tab } from '@deriv-com/components';
+import { Tab } from '@deriv-com/components';
 import { ComponentProps } from 'react';
+import { LiveMarketBlock } from '../base';
 
-export type LiveMarketTabType = ComponentProps<typeof LiveMarket.Container> &
+export type LiveMarketTabType = ComponentProps<typeof LiveMarketBlock> &
   ComponentProps<typeof Tab.Base>;
 
 export const LiveMarketTab = ({
@@ -15,17 +16,17 @@ export const LiveMarketTab = ({
   className,
 }: LiveMarketTabType) => {
   return (
-    <LiveMarket.Container
+    <LiveMarketBlock
       header={header}
       description={description}
       disclaimer={disclaimer}
       link={link}
       className={className}
     >
-      <Tab.Base tabs={tabs} className="flex flex-col py-general-2xl">
+      <Tab.Base tabs={tabs} className="flex flex-col gap-gap-2xl">
         {children}
       </Tab.Base>
-    </LiveMarket.Container>
+    </LiveMarketBlock>
   );
 };
 

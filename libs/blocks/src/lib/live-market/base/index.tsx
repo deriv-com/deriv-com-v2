@@ -1,9 +1,11 @@
 import { ReactNode } from 'react';
-import CustomLink from '../../link';
-import { Text } from '@deriv/quill-design';
+import { FluidContainer, Text, qtMerge } from '@deriv/quill-design';
+import clsx from 'clsx';
+import BlockWrapper from '../../block-wrapper';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { BlockWrapper } from '@deriv-com/blocks';
-export interface ContainerProps {
+import { CustomLink } from '@deriv-com/components';
+
+export interface LiveMarket {
   header?: ReactNode;
   description?: ReactNode;
   className?: string;
@@ -15,24 +17,30 @@ export interface ContainerProps {
   children: ReactNode;
 }
 
-export const Container = ({
+export const LiveMarketBlock = ({
   header,
   description,
   disclaimer,
   link,
   children,
-}: ContainerProps) => {
+}: LiveMarket) => {
   return (
     <BlockWrapper title={header} background={'gray'}>
-      <div className="mx-auto">
+      <FluidContainer
+        className={qtMerge(
+          'flex flex-col gap-gap-3xl',
+          header && 'pt-general-2xl',
+        )}
+      >
         {children}
+
         {description && <Text className="text-center">{description}</Text>}
         {link && (
           <CustomLink
             size="md"
             href={link.href}
+            className={clsx('flex items-center justify-center text-body-lg')}
             hasIcon
-            className="py-general-2xl"
           >
             {link.content}
           </CustomLink>
@@ -44,9 +52,9 @@ export const Container = ({
             </Text>
           </div>
         )}
-      </div>
+      </FluidContainer>
     </BlockWrapper>
   );
 };
 
-export default Container;
+export default LiveMarketBlock;

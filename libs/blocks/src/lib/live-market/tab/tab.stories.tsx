@@ -34,7 +34,6 @@ export const Default: Story = {
       >
         <CardSlider
           variant="LiveMarketCard"
-          className="pt-general-2xl"
           slideClasses="max-w-full"
           swiperData={{
             spaceBetween: 16,
