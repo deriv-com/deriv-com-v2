@@ -13,7 +13,10 @@ export const MobileNav: React.FC<NavigationProps> = ({
   topNavigation,
 }) => {
   return (
-    <FluidContainer className="fixed z-50 w-screen bg-background-primary-container lg:hidden">
+    <FluidContainer
+      className="fixed z-50 w-screen bg-background-primary-container lg:hidden"
+      data-cy="mobile-header"
+    >
       {topNavigation?.()}
       <nav className="flex min-h-[80px] w-full flex-row items-center justify-between md:gap-gap-3xl">
         {renderLogo?.()}
