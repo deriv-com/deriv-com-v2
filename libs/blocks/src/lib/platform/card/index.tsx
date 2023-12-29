@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { FluidContainer, Text } from '@deriv/quill-design';
+import { FluidContainer, Text, qtJoin } from '@deriv/quill-design';
 import {
   CardContent,
   CardVariantType,
@@ -26,7 +26,7 @@ const PlatformBlockCard = ({
 }: PlatformBlockCardProps) => {
   return (
     <BlockWrapper className={className} background="light" title={header}>
-      <FluidContainer className="pt-general-2xl">
+      <FluidContainer className={qtJoin(header && 'pt-general-2xl')}>
         <CardsContainer variant={variant} cols={cols} cards={cards} />
         {description && (
           <Text className="text-center pt-general-xl">{description}</Text>

@@ -1,221 +1,44 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import PlatformBlockTab from '.';
-import { CardsContainer } from '@deriv-com/components';
-import {
-  DerivProductDerivXBrandLightLogoIcon,
-  PartnersProductDerivCtraderBrandLightLogoHorizontalIcon,
-  PartnersProductDerivMt5BrandDarkLogoHorizontalIcon,
-} from '@deriv/quill-icons/Logo';
+import { tabsItem } from './mock-data';
+
+const { tabs, children, title, description, className } = tabsItem;
 
 const meta = {
   title: 'Blocks/Platform/Tab',
   component: PlatformBlockTab,
+  tags: ['autodocs'],
+  argTypes: {
+    header: { description: '`ReactNode`' },
+    description: { description: '`ReactNode`' },
+    className: { table: { disable: true } },
+    children: { description: '`ReactNode`' },
+  },
 } satisfies Meta<typeof PlatformBlockTab>;
 
 export default meta;
 type Story = StoryObj<typeof PlatformBlockTab>;
 
 export const Default: Story = {
-  render: () => {
-    return (
-      <PlatformBlockTab
-        header="Header here"
-        description="desciption here description here"
-        className="bg-background-primary-base"
-        tabs={[
-          { content: 'Tab 1' },
-          { content: 'Tab 2' },
-          { content: 'Tab 3' },
-        ]}
-      >
-        <CardsContainer
-          cols="three"
-          variant="ContentBottom"
-          cards={[
-            {
-              id: 1,
-              header: 'Deriv MT5',
-              description:
-                'Your data is safe, and your funds are in segregated bank accounts per regulatory standards.',
-              icon: (
-                <PartnersProductDerivMt5BrandDarkLogoHorizontalIcon
-                  width={48}
-                  height={48}
-                />
-              ),
-              link: {
-                href: '/',
-                content: 'Learn more',
-              },
-              color: 'light',
-              align: 'start',
-              size: 'md',
-            },
-            {
-              id: 2,
-              header: '24/7 support',
-              description:
-                'Reach our professional, multilingual team anytime via live chat.',
-              icon: (
-                <PartnersProductDerivCtraderBrandLightLogoHorizontalIcon
-                  width={48}
-                  height={48}
-                />
-              ),
-              link: {
-                href: '/',
-                content: 'Learn more',
-              },
-              color: 'light',
-              align: 'start',
-              size: 'md',
-            },
-            {
-              id: 3,
-              header: 'Regulated',
-              description:
-                'We are licensed and overseen by leading global financial authorities.',
-              icon: (
-                <DerivProductDerivXBrandLightLogoIcon width={48} height={48} />
-              ),
-              link: {
-                href: '/',
-                content: 'Learn more',
-              },
-              color: 'light',
-              align: 'start',
-              size: 'md',
-            },
-          ]}
-        />
-        <CardsContainer
-          cols="three"
-          variant="ContentBottom"
-          cards={[
-            {
-              id: 1,
-              header: '24/7 support',
-              description:
-                'Reach our professional, multilingual team anytime via live chat.',
-              icon: (
-                <PartnersProductDerivCtraderBrandLightLogoHorizontalIcon
-                  width={48}
-                  height={48}
-                />
-              ),
-              link: {
-                href: '/',
-                content: 'Learn more',
-              },
-              color: 'light',
-              align: 'start',
-              size: 'md',
-            },
-            {
-              id: 2,
-              header: 'Deriv MT5',
-              description:
-                'Your data is safe, and your funds are in segregated bank accounts per regulatory standards.',
-              icon: (
-                <PartnersProductDerivMt5BrandDarkLogoHorizontalIcon
-                  width={48}
-                  height={48}
-                />
-              ),
-              link: {
-                href: '/',
-                content: 'Learn more',
-              },
-              color: 'light',
-              align: 'start',
-              size: 'md',
-            },
-            {
-              id: 3,
-              header: 'Regulated',
-              description:
-                'We are licensed and overseen by leading global financial authorities.',
-              icon: (
-                <DerivProductDerivXBrandLightLogoIcon width={48} height={48} />
-              ),
-              link: {
-                href: '/',
-                content: 'Learn more',
-              },
-              color: 'light',
-              align: 'start',
-              size: 'md',
-            },
-          ]}
-        />
-        <CardsContainer
-          cols="three"
-          variant="ContentBottom"
-          cards={[
-            {
-              id: 1,
-              header: 'Regulated',
-              description:
-                'We are licensed and overseen by leading global financial authorities.',
-              icon: (
-                <DerivProductDerivXBrandLightLogoIcon width={48} height={48} />
-              ),
-              link: {
-                href: '/',
-                content: 'Learn more',
-              },
-              color: 'light',
-              align: 'start',
-              size: 'md',
-            },
-            {
-              id: 2,
-              header: 'Deriv MT5',
-              description:
-                'Your data is safe, and your funds are in segregated bank accounts per regulatory standards.',
-              icon: (
-                <PartnersProductDerivMt5BrandDarkLogoHorizontalIcon
-                  width={48}
-                  height={48}
-                />
-              ),
-              link: {
-                href: '/',
-                content: 'Learn more',
-              },
-              color: 'light',
-              align: 'start',
-              size: 'md',
-            },
-            {
-              id: 3,
-              header: '24/7 support',
-              description:
-                'Reach our professional, multilingual team anytime via live chat.',
-              icon: (
-                <PartnersProductDerivCtraderBrandLightLogoHorizontalIcon
-                  width={48}
-                  height={48}
-                />
-              ),
-              link: {
-                href: '/',
-                content: 'Learn more',
-              },
-              color: 'light',
-              align: 'start',
-              size: 'md',
-            },
-          ]}
-        />
-      </PlatformBlockTab>
-    );
+  args: {
+    header: title,
+    description: description,
+    className: className,
+    tabs: tabs,
+    children: children,
   },
-  parameters: {
-    docs: {
-      source: {
-        code: 'disabled',
-      },
-    },
+};
+
+export const WithoutTitle: Story = {
+  args: {
+    ...Default.args,
+    header: '',
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: '',
   },
 };

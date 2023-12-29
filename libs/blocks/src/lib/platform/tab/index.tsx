@@ -1,12 +1,5 @@
 import { ComponentProps, ReactNode } from 'react';
-import {
-  FluidContainer,
-  Heading,
-  Section,
-  Text,
-  qtJoin,
-  qtMerge,
-} from '@deriv/quill-design';
+import { FluidContainer, Text, qtJoin } from '@deriv/quill-design';
 import { Tab } from '@deriv-com/components';
 import BlockWrapper from '../../block-wrapper';
 
