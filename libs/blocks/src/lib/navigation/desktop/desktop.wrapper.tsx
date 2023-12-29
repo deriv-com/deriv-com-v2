@@ -15,7 +15,7 @@ export const DesktopNavigationWrapper = ({
   const { showLangContent } = useLanguageSwitcher();
 
   return (
-    <div className={'fixed z-50 w-screen'}>
+    <div className={'fixed z-50 w-screen'} data-cy="desktop-header">
       <FixContainer
         className={clsx(
           'bg-background-primary-container',
