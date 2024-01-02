@@ -26,7 +26,7 @@ const ContentLess = ({
           )}
         </div>
 
-        {children}
+        {children && children}
       </FluidContainer>
     </Section>
   );
