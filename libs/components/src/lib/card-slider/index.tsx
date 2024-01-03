@@ -45,9 +45,9 @@ export const CardSlider = <T extends CardVariantType>({
   const CardComponent = Card[variant];
 
   return (
-    <div className="flex w-full justify-center">
+    <div className={qtJoin('flex w-full justify-center', className)}>
       <Swiper
-        className={qtJoin('h-full w-full', className)}
+        className="h-full w-full"
         slidesPerView={slidesPerView}
         spaceBetween={spaceBetween}
         breakpoints={breakpoints}

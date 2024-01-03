@@ -4,14 +4,24 @@ import { Text } from '@deriv/quill-design';
 import ContentLeft from '.';
 
 const meta = {
-  title: 'Blocks/Features/ContentLeft',
+  title: 'Blocks/Features/Content',
   component: ContentLeft,
+  tags: ['autodocs'],
+  argTypes: {
+    className: { table: { disable: true } },
+    variant: {
+      control: 'radio',
+      options: ['content-left', 'content-right'],
+      table: { type: { summary: 'content-left | content-right' } },
+    },
+  },
 } satisfies Meta<typeof ContentLeft>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  name: 'Content Left',
   args: {
     className:
       'my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200',
@@ -30,5 +40,19 @@ export const Default: Story = {
         alt="Placeholder"
       />
     ),
+  },
+};
+
+export const ContentRight: Story = {
+  args: {
+    ...Default.args,
+    variant: 'content-right',
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: '',
   },
 };

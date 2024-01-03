@@ -1,17 +1,11 @@
-import clsx from 'clsx';
-import {
-  FluidContainer,
-  Heading,
-  Section,
-  Text,
-  qtMerge,
-} from '@deriv/quill-design';
 import { ReactNode } from 'react';
 import {
   CardContent,
   CardVariantType,
   CardsContainer,
 } from '@deriv-com/components';
+import BlockWrapper from '../../block-wrapper';
+import { FluidContainer } from '@deriv/quill-design';
 
 export interface FeatureCardProps {
   title?: ReactNode;
@@ -33,35 +27,22 @@ const Card = ({
   variant = 'ContentBottom',
 }: FeatureCardProps) => {
   return (
-    <Section
-      className={clsx(
-        'py-general-4xl',
-        'bg-background-primary-container',
-        className,
-      )}
+    <BlockWrapper
+      title={title}
+      description={description}
+      className={className}
+      background="light"
     >
-      <FluidContainer
-        className={qtMerge(
-          'flex flex-col items-center',
-          (title || description) && 'gap-gap-3xl',
-        )}
-      >
-        <div className="flex flex-col items-center justify-center gap-gap-lg">
-          {title && (
-            <Heading.H2 className="text-center lg:max-w-[816px]">
-              {title}
-            </Heading.H2>
-          )}
-          {description && (
-            <Text size="md" className="text-center">
-              {description}
-            </Text>
-          )}
-        </div>
-        <CardsContainer variant={variant} cols={cols} cards={cards} />
+      <FluidContainer>
+        <CardsContainer
+          variant={variant}
+          cols={cols}
+          cards={cards}
+          className={cta ? 'py-general-2xl' : 'pt-general-2xl'}
+        />
         {cta}
       </FluidContainer>
-    </Section>
+    </BlockWrapper>
   );
 };
 

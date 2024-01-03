@@ -1,16 +1,16 @@
-import clsx from 'clsx';
-import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import { ReactNode } from 'react';
 import {
   CardSlider,
   CardSliderProps,
   CardVariantType,
 } from '@deriv-com/components';
+import { FluidContainer, qtJoin } from '@deriv/quill-design';
+import BlockWrapper from '../../block-wrapper';
 
 export interface ContentSliderProps<T extends CardVariantType> {
   title?: ReactNode;
   description?: ReactNode;
-  cta?: () => ReactNode;
+  cta?: ReactNode;
   className?: string;
   cardSliderProps?: CardSliderProps<T>;
 }
@@ -18,35 +18,32 @@ export interface ContentSliderProps<T extends CardVariantType> {
 const ContentSlider = <T extends CardVariantType>({
   title,
   description,
-  cta: CTA,
+  cta,
   className,
   cardSliderProps,
 }: ContentSliderProps<T>) => {
   return (
-    <Section
-      className={clsx(
-        'py-general-4xl',
-        'bg-background-primary-container',
-        className,
-      )}
+    <BlockWrapper
+      title={title}
+      description={description}
+      className={className}
+      background="light"
     >
-      <FluidContainer className="flex flex-col items-center gap-gap-3xl">
-        <div className="flex flex-col items-center justify-center gap-gap-lg">
-          <Heading.H2 className="text-center">{title}</Heading.H2>
-          {description && (
-            <Text size="md" className="text-center">
-              {description}
-            </Text>
-          )}
-        </div>
+      <FluidContainer>
         {
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
-          <CardSlider {...cardSliderProps} />
+          <CardSlider
+            {...cardSliderProps}
+            className={qtJoin(
+              cta ? 'py-general-2xl' : 'pt-general-2xl',
+              cardSliderProps && cardSliderProps.className,
+            )}
+          />
         }
-        {CTA && <CTA />}
+        {cta}
       </FluidContainer>
-    </Section>
+    </BlockWrapper>
   );
 };
 
