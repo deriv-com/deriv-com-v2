@@ -7,8 +7,8 @@ import { ReactNode } from 'react';
 
 export interface HeroProps {
   className?: string;
-  title?: string;
-  description?: string;
+  title?: ReactNode;
+  description?: ReactNode;
   content?: ReactNode;
   children?: ReactNode;
 }
