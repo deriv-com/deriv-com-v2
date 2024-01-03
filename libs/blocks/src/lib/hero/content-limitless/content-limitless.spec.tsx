@@ -3,18 +3,18 @@ import '@testing-library/jest-dom';
 import ContentLimitless from '.';
 import { Button, Heading } from '@deriv/quill-design';
 
-describe('ContentLimitless', () => {
+describe('ContentLimitlesss', () => {
   beforeEach(() => {
     render(
       <ContentLimitless
         className={'bg-solid-red-500'}
         title={'title goes here'}
         description={'description goes here'}
-        content={() => (
+        content={
           <div>
             <Heading.H2>content goes here</Heading.H2>
           </div>
-        )}
+        }
       >
         <Button>Click me</Button>
       </ContentLimitless>,
@@ -39,14 +39,15 @@ describe('ContentLimitless', () => {
   });
 
   it("should render content passed to it's content prop", () => {
-    const contentContainer = screen.getByTestId(
-      'content-limitless__mobile-big-red',
-    );
-
-    const content = getByRole(contentContainer, 'heading', {
+    const content = screen.getByRole('heading', {
       name: 'content goes here',
       level: 2,
     });
     expect(content).toBeInTheDocument();
+  });
+
+  it('should render correct classname', () => {
+    const section = screen.getByTestId('limitless-section');
+    expect(section).toHaveClass('bg-solid-red-500');
   });
 });

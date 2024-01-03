@@ -4,7 +4,6 @@ import ContentBottom from './content-bottom';
 import ContentTop from './content-top';
 import ContentLess from './content-less';
 import { ReactNode } from 'react';
-
 export interface HeroProps {
   className?: string;
   title?: string;

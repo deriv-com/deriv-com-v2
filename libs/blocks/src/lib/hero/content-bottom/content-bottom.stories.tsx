@@ -5,6 +5,12 @@ import ContentBottom from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Bottom',
   component: ContentBottom,
+  tags: ['autodocs'],
+  argTypes: {
+    className: { table: { disable: true } },
+    containerClassName: { table: { disable: true } },
+    children: { table: { type: { summary: 'ReactNode' } } },
+  },
 } satisfies Meta<typeof ContentBottom>;
 
 export default meta;

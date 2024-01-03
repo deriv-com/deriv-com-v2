@@ -4,6 +4,11 @@ import ContentTop from '.';
 const meta = {
   title: 'Blocks/Hero/Content-Top',
   component: ContentTop,
+  tags: ['autodocs'],
+  argTypes: {
+    title: { description: '`string`' },
+    children: { description: '`ReactNode`' },
+  },
 } satisfies Meta<typeof ContentTop>;
 
 export default meta;
