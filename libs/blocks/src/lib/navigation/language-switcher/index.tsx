@@ -1,6 +1,5 @@
 import { Text } from '@deriv/quill-design';
 import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
-import { LabelPairedGlobeMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import { StandaloneGlobeRegularIcon } from '@deriv/quill-icons';
 
 const LanguageSwitcher = () => {
