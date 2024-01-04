@@ -1,7 +1,7 @@
 import { CustomLink } from '@deriv-com/components';
 import { DirectNavLink } from '@deriv-com/providers';
 import { Text, qtJoin, qtMerge } from '@deriv/quill-design';
-import { LabelPairedArrowUpRightRegularIcon } from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedArrowUpRightSmRegularIcon } from '@deriv/quill-icons/LabelPaired';
 
 export interface NavigationLinkProps {
   item: DirectNavLink;
@@ -29,7 +29,7 @@ export const NavigationLink: React.FC<NavigationLinkProps> = ({
         <Text size="md" bold className="group-hover:text-typography-prominent">
           {item.text}
         </Text>
-        {item.external && <LabelPairedArrowUpRightRegularIcon iconSize="sm" />}
+        {item.external && <LabelPairedArrowUpRightSmRegularIcon />}
       </div>
       {item.description ? (
         <Text size="sm" className={qtJoin(item.icon && 'col-start-2')}>

@@ -10,8 +10,8 @@ import React from 'react';
 
 export interface ContentLimitProps {
   className?: string;
-  title?: string;
-  description?: string;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
   content?: () => React.ReactNode;
   children?: React.ReactNode;
 }

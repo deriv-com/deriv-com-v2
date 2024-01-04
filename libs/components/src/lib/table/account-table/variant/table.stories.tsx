@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import AccountTable from '.';
 import { Button } from '@deriv/quill-design';
-import { LabelPairedMinusRegularIcon } from '@deriv/quill-icons/LabelPaired';
+import { LabelPairedMinusMdRegularIcon } from '@deriv/quill-icons/LabelPaired';
 import { IllustrativeForexIcon } from '@deriv/quill-icons/Illustrative';
 
 const meta = {
@@ -66,12 +66,7 @@ export const Default = {
                   type: 'compound',
                   text: 'Forex',
                   icon: <IllustrativeForexIcon iconSize="sm" />,
-                  listIcon: (
-                    <LabelPairedMinusRegularIcon
-                      iconSize="sm"
-                      fill="#0000007a"
-                    />
-                  ),
+                  listIcon: <LabelPairedMinusMdRegularIcon fill="#0000007a" />,
                   items: ['Majors', 'Minors', 'Exotics'],
                 },
               ],

@@ -7,6 +7,7 @@ import { SocialMediaSection } from './footer.social';
 export interface SocialIcons {
   icon: ReactNode;
   href: string;
+  'data-cy'?: string;
 }
 
 export interface FooterProps {
@@ -14,8 +15,9 @@ export interface FooterProps {
   children: ReactNode;
   socialButtons?: SocialIcons[];
   descriptionContent?: () => ReactNode;
-  bannerAndAwards?: () => ReactNode;
+  banner?: () => ReactNode;
   warningText?: string | ReactElement;
+  awards?: () => ReactNode;
 }
 
 export const FooterBlock = ({
@@ -23,8 +25,9 @@ export const FooterBlock = ({
   children,
   socialButtons,
   descriptionContent: DescriptionContent,
-  bannerAndAwards: BannerAndAwards,
+  banner: DerivGoBanner,
   warningText,
+  awards: IIPAward,
 }: FooterProps) => {
   return (
     <Section
@@ -38,8 +41,8 @@ export const FooterBlock = ({
         <div className="flex flex-col max-lg:gap-gap-xl lg:flex-row">
           <div className="flex flex-1 py-general-xs max-lg:justify-center">
             <BrandDerivWordmarkSlateIcon
-              height="24px"
-              width="72.33px"
+              height="24"
+              width="72.33"
               className="opacity-800"
             />
           </div>
@@ -48,9 +51,9 @@ export const FooterBlock = ({
           )}
         </div>
         <div className="hidden lg:block">{children}</div>
-        {BannerAndAwards && (
+        {DerivGoBanner && (
           <div className="hidden max-lg:block ">
-            <BannerAndAwards />
+            <DerivGoBanner />
           </div>
         )}
         <div className="flex flex-col gap-gap-lg">
@@ -63,6 +66,11 @@ export const FooterBlock = ({
             </div>
           )}
         </div>
+        {IIPAward && (
+          <div className="hidden max-lg:block ">
+            <IIPAward />
+          </div>
+        )}
       </FluidContainer>
     </Section>
   );

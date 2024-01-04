@@ -2,6 +2,63 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.67.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.66.0...blocks-0.67.0) (2023-12-29)
+
+## [0.66.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.65.0...blocks-0.66.0) (2023-12-29)
+
+## [0.65.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.64.0...blocks-0.65.0) (2023-12-29)
+
+## [0.64.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.63.0...blocks-0.64.0) (2023-12-28)
+
+## [0.63.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.62.0...blocks-0.63.0) (2023-12-28)
+
+
+### Bug Fixes
+
+* blcok wrapper improvements ([c066fc1](https://github.com/deriv-com/deriv-com-v2/commit/c066fc1a58fa213c3f46aae1aeedab39ccf01bd6))
+
+## [0.62.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.61.0...blocks-0.62.0) (2023-12-27)
+
+## [0.61.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.60.0...blocks-0.61.0) (2023-12-27)
+
+
+### Bug Fixes
+
+* applied max w for header ([db28495](https://github.com/deriv-com/deriv-com-v2/commit/db2849591f879648cf08bc085e0eea5ce16b609d))
+
+## [0.60.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.59.0...blocks-0.60.0) (2023-12-27)
+
+
+### Bug Fixes
+
+* wrapped fluid container with section ([3ac3596](https://github.com/deriv-com/deriv-com-v2/commit/3ac3596442f37367f6b6abba58c8f9066186607c))
+
+## [0.59.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.58.0...blocks-0.59.0) (2023-12-26)
+
+## [0.58.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.57.0...blocks-0.58.0) (2023-12-26)
+
+
+### Bug Fixes
+
+* added items center class name ([32cd621](https://github.com/deriv-com/deriv-com-v2/commit/32cd621a8cf5a12a5c42d2ddcb968c81adba03c5))
+* fixed prettier problem in trade page ([f4f8120](https://github.com/deriv-com/deriv-com-v2/commit/f4f8120dbb0bb7a18a957ca4b990cf5f974a4969))
+
+## [0.57.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.56.0...blocks-0.57.0) (2023-12-26)
+
+
+### Bug Fixes
+
+* menu text color ([9ae3d3b](https://github.com/deriv-com/deriv-com-v2/commit/9ae3d3b170e21ca09a1ad4a7d2b33de9cc00bab5))
+
+## [0.56.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.55.0...blocks-0.56.0) (2023-12-22)
+
+## [0.55.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.54.0...blocks-0.55.0) (2023-12-22)
+
+
+### Bug Fixes
+
+* remove navigation gap in mobile ([9617f0c](https://github.com/deriv-com/deriv-com-v2/commit/9617f0c4306c5afd50ca0444c9fbde3da0fe6ab2))
+
 ## [0.54.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.53.0...blocks-0.54.0) (2023-12-20)
 
 
