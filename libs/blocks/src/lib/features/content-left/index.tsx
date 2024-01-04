@@ -11,7 +11,7 @@ export interface ContentLeftProps {
   variant?: 'content-left' | 'content-right';
 }
 
-// trigger deployment - 3
+// trigger deployment - 4
 const ContentLeft = ({
   title,
   className,
