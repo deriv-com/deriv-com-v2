@@ -21,12 +21,14 @@ export interface FeatureCardProps {
   cards?: CardContent[];
   cols?: 'two' | 'three' | 'four';
   variant?: CardVariantType;
+  hasPadding?: boolean;
 }
 
 const Card = ({
   title,
   description,
   cta,
+  hasPadding,
   className,
   cards = [],
   cols = 'two',
@@ -35,7 +37,7 @@ const Card = ({
   return (
     <Section
       className={clsx(
-        'py-general-4xl',
+        hasPadding ? 'py-general-4xl' : 'py-general-xl',
         'bg-background-primary-container',
         className,
       )}
