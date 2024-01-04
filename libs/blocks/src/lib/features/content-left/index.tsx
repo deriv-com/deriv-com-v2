@@ -19,6 +19,7 @@ const ContentLeft = ({
   content: Content,
   variant = 'content-left',
 }: ContentLeftProps) => {
+  // trigger build via this comment
   return (
     <Section
       className={clsx(
