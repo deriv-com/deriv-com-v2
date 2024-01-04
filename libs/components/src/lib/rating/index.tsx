@@ -63,7 +63,7 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
   };
 
   const StarClassName = {
-    sm: 'p-200',
+    sm: 'p-general-2xs',
     md: 'lg:px-700 lg:py-800 px-500 py-400',
   };
 
