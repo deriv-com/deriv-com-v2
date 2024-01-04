@@ -38,6 +38,9 @@ jobs:
           git config user.name "prince-deriv"
           git config user.email "prince@deriv.com"
 
+      - name: Echo NPM Whoami
+        run: echo "NPM Whoami: $(npm whoami)"
+
       - name: Install dependencies
         run: npm ci
 
