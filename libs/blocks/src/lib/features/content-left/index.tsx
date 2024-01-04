@@ -11,6 +11,7 @@ export interface ContentLeftProps {
   variant?: 'content-left' | 'content-right';
 }
 
+// trigger deployment - 2
 const ContentLeft = ({
   title,
   className,
@@ -19,7 +20,6 @@ const ContentLeft = ({
   content: Content,
   variant = 'content-left',
 }: ContentLeftProps) => {
-  // trigger build via this comment
   return (
     <Section
       className={clsx(
