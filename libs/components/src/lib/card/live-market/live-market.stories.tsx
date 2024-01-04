@@ -19,7 +19,7 @@ export const Default: Story = {
     instrumentIcon: <MarketForexEurusdIcon />,
     instrument: 'EUR/USD',
     changePercentage: '+0.11%',
-    status: 'up',
+    mid: 1.07221,
     bidPrice: '1.07219',
     askPrice: '1.07223',
     spread: '0.00005',
