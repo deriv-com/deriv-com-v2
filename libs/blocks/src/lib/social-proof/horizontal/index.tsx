@@ -37,10 +37,7 @@ const SocialProofHorizontal = ({
                 <Text
                   size="md"
                   bold
-                  className={qtMerge(
-                    themeClassNames.color,
-                    'max-md:hidden max-sm:hidden',
-                  )}
+                  className={qtMerge(themeClassNames.color, 'max-sm:hidden')}
                 >
                   {content(data)[1]}
                 </Text>
