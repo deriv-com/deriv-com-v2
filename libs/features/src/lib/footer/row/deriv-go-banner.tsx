@@ -3,7 +3,7 @@ import { CaptionText, Heading, Text } from '@deriv/quill-design';
 import { DerivProductDerivGoBrandLightLogoHorizontalIcon } from '@deriv/quill-icons/Logo';
 import DownloadBadges from './download';
 
-export const DerivGoBannerAndAwards = () => {
+export const DerivGoBanner = () => {
   return (
     <div className="flex flex-col gap-gap-lg">
       <div className="flex gap-gap-lg rounded-lg border-xs border-solid border-opacity-black-100 p-general-md lg:flex-col">
@@ -32,15 +32,6 @@ export const DerivGoBannerAndAwards = () => {
           </div>
         </div>
         <DownloadBadges />
-      </div>
-      <div className="rounded-lg border-xs border-solid border-opacity-black-100 p-general-md">
-        <OptimizedImage
-          className="m-auto"
-          imageName="footer/investors-in-people.png"
-          alt="investors in people - gold"
-          width={156}
-          height={34}
-        />
       </div>
     </div>
   );
