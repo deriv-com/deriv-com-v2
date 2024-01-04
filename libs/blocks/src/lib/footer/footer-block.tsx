@@ -15,8 +15,9 @@ export interface FooterProps {
   children: ReactNode;
   socialButtons?: SocialIcons[];
   descriptionContent?: () => ReactNode;
-  bannerAndAwards?: () => ReactNode;
+  banner?: () => ReactNode;
   warningText?: string | ReactElement;
+  awards?: () => ReactNode;
 }
 
 export const FooterBlock = ({
@@ -24,8 +25,9 @@ export const FooterBlock = ({
   children,
   socialButtons,
   descriptionContent: DescriptionContent,
-  bannerAndAwards: BannerAndAwards,
+  banner: DerivGoBanner,
   warningText,
+  awards: IIPAward,
 }: FooterProps) => {
   return (
     <Section
@@ -49,9 +51,9 @@ export const FooterBlock = ({
           )}
         </div>
         <div className="hidden lg:block">{children}</div>
-        {BannerAndAwards && (
+        {DerivGoBanner && (
           <div className="hidden max-lg:block ">
-            <BannerAndAwards />
+            <DerivGoBanner />
           </div>
         )}
         <div className="flex flex-col gap-gap-lg">
@@ -64,6 +66,11 @@ export const FooterBlock = ({
             </div>
           )}
         </div>
+        {IIPAward && (
+          <div className="hidden max-lg:block ">
+            <IIPAward />
+          </div>
+        )}
       </FluidContainer>
     </Section>
   );
