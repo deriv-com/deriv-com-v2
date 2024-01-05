@@ -51,7 +51,7 @@ export const CardsContainer = <T extends CardVariantType>({
           <div
             key={index}
             className={qtJoin(
-              'flex gap-gap-lg pr-general-md ltr:animate-slide rtl:animate-slideRtl',
+              'flex gap-gap-lg pr-general-md animate-slide rtl:animate-slideRtl',
               sliderClass,
             )}
             data-testid="infinite-carousel"
