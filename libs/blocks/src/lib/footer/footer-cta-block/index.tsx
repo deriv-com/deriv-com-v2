@@ -21,6 +21,7 @@ const FooterCTABlock = ({
         padding ? 'py-general-4xl' : 'py-general-xl',
         className,
       )}
+      dir="rtl"
       {...rest}
     >
       <FluidContainer
@@ -30,7 +31,7 @@ const FooterCTABlock = ({
         <div className="absolute -z-10 h-full w-full overflow-hidden rounded-xl object-cover object-top">
           {image}
         </div>
-        <div className="h-full w-full p-general-3xl lg:mr-general-md lg:w-[608px]">
+        <div className="h-full w-full p-general-3xl rtl:mr-auto lg:mr-general-md lg:w-[608px]">
           {children}
         </div>
       </FluidContainer>
