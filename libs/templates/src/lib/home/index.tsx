@@ -1,4 +1,4 @@
-import { PageLayout } from '@deriv-com/components';
+import { PageLayout, StatCardContent } from '@deriv-com/components';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import HeroBanner from './sections/hero';
