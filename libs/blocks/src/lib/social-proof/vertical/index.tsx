@@ -1,4 +1,10 @@
-import { Heading, Section, Text, qtMerge } from '@deriv/quill-design';
+import {
+  FluidContainer,
+  Heading,
+  Section,
+  Text,
+  qtMerge,
+} from '@deriv/quill-design';
 import { Rating } from '@deriv-com/components';
 import { SocialProofProps } from '../types';
 import { getThemeClassNames } from '../classnames';
@@ -26,41 +32,43 @@ const SocialProofVertical = ({
         className,
       )}
     >
-      <div
-        className="flex cursor-pointer flex-col items-center gap-gap-3xl"
+      <FluidContainer
+        className="flex cursor-pointer flex-col items-center"
         onClick={redirectToTrustpilot}
       >
         {title && (
-          <Heading.H2 className={themeClassNames.color}>{title}</Heading.H2>
+          <Heading.H2
+            className={qtMerge('pb-general-2xl', themeClassNames.color)}
+          >
+            {title}
+          </Heading.H2>
         )}
 
-        <div className="flex flex-col items-center gap-gap-lg">
-          {logo}
-          {data && (
-            <>
-              <Rating rate={data.stars} />
-              <div className="flex gap-gap-lg">
-                {content && (
-                  <Text size="xl" className={themeClassNames.color}>
-                    {content(data)[0]}
-                  </Text>
+        {logo}
+        {data && (
+          <>
+            <Rating rate={data.stars} className="py-general-md" />
+            <div className="flex">
+              {content && (
+                <Text size="xl" className={themeClassNames.color}>
+                  {content(data)[0]}
+                </Text>
+              )}
+              <div
+                className={qtMerge(
+                  'mx-general-md h-1300 w-[1px] self-center max-md:h-general-md',
+                  themeClassNames.caret,
                 )}
-                <div
-                  className={qtMerge(
-                    'h-1300 w-[1px] self-center max-md:h-general-md',
-                    themeClassNames.caret,
-                  )}
-                />
-                {content && (
-                  <Text size="xl" className={themeClassNames.color}>
-                    {content(data)[1]}
-                  </Text>
-                )}
-              </div>
-            </>
-          )}
-        </div>
-      </div>
+              />
+              {content && (
+                <Text size="xl" className={themeClassNames.color}>
+                  {content(data)[1]}
+                </Text>
+              )}
+            </div>
+          </>
+        )}
+      </FluidContainer>
     </Section>
   );
 };
