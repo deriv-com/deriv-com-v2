@@ -5,8 +5,6 @@ import { AccordionProps } from '../types';
 import { StandaloneChevronDownRegularIcon } from '@deriv/quill-icons/Standalone';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-// component publish trigger - 1
-
 export const Base = ({
   id,
   className,
