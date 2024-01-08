@@ -1,5 +1,6 @@
 import './styles.scss';
 export * from './lib/accordion';
+export * from './lib/block-wrapper';
 export * from './lib/live-market';
 export * from './lib/content-text';
 export * from './lib/account-comparison';

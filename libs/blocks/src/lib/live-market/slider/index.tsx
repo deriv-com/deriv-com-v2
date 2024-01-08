@@ -1,10 +1,11 @@
+/* eslint-disable @nx/enforce-module-boundaries */
 import { ReactNode } from 'react';
 import {
   CardSlider,
   CardSliderProps,
   CardVariantType,
 } from '@deriv-com/components';
-import { LiveMarket } from '@deriv-com/components';
+import LiveMarketBlock from '../base';
 
 export interface LiveMarketProps<T extends CardVariantType> {
   header?: ReactNode;
@@ -27,19 +28,18 @@ export const LiveMarketSlider = <T extends CardVariantType>({
   cardSliderProps,
 }: LiveMarketProps<T>) => {
   return (
-    <LiveMarket.Container
+    <LiveMarketBlock
       header={header}
       description={description}
       disclaimer={disclaimer}
       link={link}
-      className={className}
     >
       {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         <CardSlider {...cardSliderProps} />
       }
-    </LiveMarket.Container>
+    </LiveMarketBlock>
   );
 };
 

@@ -10,5 +10,4 @@ export * from './lib/table/account-table';
 export * from './lib/action-sheet/bottom-sheet';
 export * from './lib/table-cell';
 export * from './lib/rating';
-export * from './lib/live-market';
 export * from './lib/tab';

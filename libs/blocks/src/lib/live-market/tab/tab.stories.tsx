@@ -6,6 +6,7 @@ import {
   MarketForexGbpusdIcon,
   MarketForexUsdjpyIcon,
 } from '@deriv/quill-icons/Markets';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { CardSlider } from '@deriv-com/components';
 
 const meta = {

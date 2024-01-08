@@ -1,16 +1,11 @@
 import { ReactNode } from 'react';
-import CustomLink from '../../link';
-import {
-  FluidContainer,
-  Heading,
-  Section,
-  Text,
-  qtMerge,
-} from '@deriv/quill-design';
-import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone';
+import { FluidContainer, Text, qtMerge } from '@deriv/quill-design';
 import clsx from 'clsx';
+import BlockWrapper from '../../block-wrapper';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { CustomLink } from '@deriv-com/components';
 
-export interface ContainerProps {
+export interface LiveMarket {
   header?: ReactNode;
   description?: ReactNode;
   className?: string;
@@ -22,38 +17,32 @@ export interface ContainerProps {
   children: ReactNode;
 }
 
-export const Container = ({
+export const LiveMarketBlock = ({
   header,
   description,
-  className,
   disclaimer,
   link,
   children,
-}: ContainerProps) => {
+}: LiveMarket) => {
   return (
-    <Section
-      className={qtMerge(
-        'py-general-4xl',
-        'bg-background-primary-container',
-        className,
-      )}
-    >
-      <FluidContainer className="flex flex-col gap-gap-3xl">
-        {header && (
-          <Heading.H2 className="mx-auto max-w-[816px] text-center">
-            {header}
-          </Heading.H2>
+    <BlockWrapper title={header} background={'gray'}>
+      <FluidContainer
+        className={qtMerge(
+          'flex flex-col gap-gap-3xl',
+          header && 'pt-general-2xl',
         )}
+      >
         {children}
+
         {description && <Text className="text-center">{description}</Text>}
         {link && (
           <CustomLink
             size="md"
             href={link.href}
             className={clsx('flex items-center justify-center text-body-lg')}
+            hasIcon
           >
             {link.content}
-            <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />
           </CustomLink>
         )}
         {disclaimer && (
@@ -64,8 +53,8 @@ export const Container = ({
           </div>
         )}
       </FluidContainer>
-    </Section>
+    </BlockWrapper>
   );
 };
 
-export default Container;
+export default LiveMarketBlock;
