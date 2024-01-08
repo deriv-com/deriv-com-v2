@@ -30,6 +30,7 @@ export interface CardContent extends BaseCardContent {
   align: CardAlignVariant;
   size: CardSizeVariant;
   className?: string;
+  minHeight?: string;
   contentClassName?: string;
   nonContentClassName?: string;
 }
