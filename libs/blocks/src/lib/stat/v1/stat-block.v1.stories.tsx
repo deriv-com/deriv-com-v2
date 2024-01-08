@@ -4,6 +4,7 @@ import V1StatBlock from '.';
 const meta = {
   title: 'Blocks/Stat/V1',
   component: V1StatBlock,
+  tags: ['autodocs'],
 } satisfies Meta<typeof V1StatBlock>;
 
 export default meta;
@@ -40,5 +41,19 @@ export const Default: Story = {
         description: 'Monthly active traders',
       },
     ],
+  },
+};
+
+export const WithoutTitle: Story = {
+  args: {
+    ...Default.args,
+    title: '',
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: '',
   },
 };

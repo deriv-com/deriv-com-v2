@@ -4,6 +4,8 @@ import NumbersOnly from '.';
 const meta = {
   title: 'Blocks/Stat/V2',
   component: NumbersOnly,
+  tags: ['autodocs'],
+  argTypes: { className: { table: { disable: true } } },
 } satisfies Meta<typeof NumbersOnly>;
 
 export default meta;

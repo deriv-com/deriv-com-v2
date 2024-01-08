@@ -23,24 +23,21 @@ export const Default: Story = {
 
 export const White: Story = {
   args: {
-    header: 'Stat Card Title',
-    description: 'Stat Card description',
+    ...Default.args,
     color: 'white',
   },
 };
 
 export const Coral: Story = {
   args: {
-    header: 'Stat Card Title',
-    description: 'Stat Card description',
+    ...Default.args,
     color: 'coral',
   },
 };
 
 export const Dark: Story = {
   args: {
-    header: 'Stat Card Title',
-    description: 'Stat Card description',
+    ...Default.args,
     color: 'dark',
   },
 };

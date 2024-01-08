@@ -4,9 +4,9 @@ import { StatCardContent } from '@deriv-com/components';
 import '@testing-library/jest-dom';
 
 const cards: StatCardContent[] = [
-  { header: 'Header one', description: 'description one' },
-  { header: 'Header two', description: 'description two' },
-  { header: 'Header three', description: 'description three' },
+  { id: 1, header: 'Header one', description: 'description one' },
+  { id: 2, header: 'Header two', description: 'description two' },
+  { id: 3, header: 'Header three', description: 'description three' },
 ];
 
 describe('V2 StatBlock', () => {
