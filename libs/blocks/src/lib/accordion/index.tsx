@@ -29,7 +29,7 @@ export interface AccordionBlockProps {
   multiCollapse?: boolean;
 }
 
-//todo: removed [slugify] from utils/../utils and added here. we need to update this because we are using this on multiple places
+//todo: removed [slugify] from utils/../utils and added here. we need to update this because we are using this on multiple places.
 
 export const slugify = (input: string): string =>
   input
