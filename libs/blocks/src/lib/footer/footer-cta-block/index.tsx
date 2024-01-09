@@ -21,7 +21,6 @@ const FooterCTABlock = ({
         padding ? 'py-general-4xl' : 'py-general-xl',
         className,
       )}
-      dir="rtl"
       {...rest}
     >
       <FluidContainer
