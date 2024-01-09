@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.38.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.37.0...components-0.38.0) (2024-01-08)
+
+
+### Bug Fixes
+
+* updated padding and display for trustpiolet ([8a096db](https://github.com/deriv-com/deriv-com-v2/commit/8a096db128c4801667a2effb129fae01dd858b52))
+
 ## [0.37.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.36.0...components-0.37.0) (2023-12-27)
 
 ## [0.36.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.35.0...components-0.36.0) (2023-12-22)
