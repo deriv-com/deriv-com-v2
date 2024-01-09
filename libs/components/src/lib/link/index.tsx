@@ -64,7 +64,7 @@ export function CustomLink({
       {hasIcon && (
         <StandaloneChevronRightRegularIcon
           iconSize="sm"
-          className={clsx(iconColorStyle[iconColor])}
+          className={clsx(iconColorStyle[iconColor], 'rtl:rotate-180')}
         />
       )}
     </DerivLink>
