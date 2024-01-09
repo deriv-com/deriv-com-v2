@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.40.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.39.0...components-0.40.0) (2024-01-09)
+
+
+### Bug Fixes
+
+* added min height in storybook ([8484106](https://github.com/deriv-com/deriv-com-v2/commit/8484106acce18f749d964a2b72a3ef7d79d97560))
+* modified storybook ([4fd2f8e](https://github.com/deriv-com/deriv-com-v2/commit/4fd2f8e85900a259e6a4d34712d08d942cc2e06f))
+* passed min height prop for card component ([01aaee4](https://github.com/deriv-com/deriv-com-v2/commit/01aaee4a82fac7c1db31a5bb90992a241cb2e536))
+
 ## [0.39.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.38.0...components-0.39.0) (2024-01-09)
 
 ## [0.38.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.37.0...components-0.38.0) (2024-01-08)
