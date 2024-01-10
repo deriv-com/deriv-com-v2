@@ -45,6 +45,11 @@ export interface LiveMarketContent {
   bidPrice: string;
   askPrice: string;
   spread: string;
+  bidContent: ReactNode;
+  askContent: ReactNode;
+  spreadContent: ReactNode;
+  buyContent: ReactNode;
+  sellContent: ReactNode;
   onClickBuyButton?: () => void;
   onClickSellButton?: () => void;
 }
