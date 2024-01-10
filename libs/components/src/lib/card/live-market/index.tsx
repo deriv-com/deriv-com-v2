@@ -43,6 +43,11 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   bidPrice,
   askPrice,
   spread,
+  bidContent,
+  askContent,
+  spreadContent,
+  buyContent,
+  sellContent,
   onClickBuyButton,
   onClickSellButton,
 }) => {
@@ -100,14 +105,19 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
 
       <LivePrice
         status={status}
+        bidContent={bidContent}
         bidPrice={bidPrice}
+        askContent={askContent}
         askPrice={askPrice}
         textClass={textClassName}
       />
       <BuySellButtons
         status={status}
+        spreadContent={spreadContent}
         spread={spread}
         textClass={textClassName}
+        buyContent={buyContent}
+        sellContent={sellContent}
         onClickBuyButton={onClickBuyButton}
         onClickSellButton={onClickSellButton}
       />

@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Text } from '@deriv/quill-design';
 import clsx from 'clsx';
 import { MarketStatus } from '../types';
@@ -7,6 +8,8 @@ export interface LivePriceProps {
   bidPrice: string;
   askPrice: string;
   textClass: string;
+  bidContent: ReactNode;
+  askContent: ReactNode;
 }
 
 const colorVariant = {
@@ -20,12 +23,14 @@ export const LivePrice = ({
   bidPrice,
   askPrice,
   textClass,
+  bidContent,
+  askContent,
 }: LivePriceProps) => {
   return (
     <div className="flex flex-row gap-gap-md">
       <div className="flex flex-1 flex-col">
         <Text size="sm" className={textClass}>
-          Bid
+          {bidContent}
         </Text>
         <Text
           size="lg"
@@ -39,7 +44,7 @@ export const LivePrice = ({
       </div>
       <div className="flex flex-1 flex-col">
         <Text size="sm" className={textClass}>
-          Ask
+          {askContent}
         </Text>
         <Text
           size="lg"
