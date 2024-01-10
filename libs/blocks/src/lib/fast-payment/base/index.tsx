@@ -18,6 +18,7 @@ const Base: React.FC<FastPaymentProps> = ({
   disclaimer,
   content: { cards = [], cols = 'three', dense, sliderClass },
   className,
+  ...rest
 }) => {
   return (
     <Section
@@ -25,6 +26,7 @@ const Base: React.FC<FastPaymentProps> = ({
         'overflow-hidden py-general-4xl text-center',
         className,
       )}
+      {...rest}
     >
       <FluidContainer
         className="flex flex-col items-center"

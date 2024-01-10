@@ -6,14 +6,14 @@ import {
   Text,
   qtMerge,
 } from '@deriv/quill-design';
-import { ReactNode } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 import {
   CardContent,
   CardVariantType,
   CardsContainer,
 } from '@deriv-com/components';
 
-export interface FeatureCardProps {
+export type FeatureCardProps = ComponentProps<typeof Section> & {
   title?: ReactNode;
   description?: ReactNode;
   cta?: ReactNode;
@@ -22,7 +22,7 @@ export interface FeatureCardProps {
   cols?: 'two' | 'three' | 'four';
   variant?: CardVariantType;
   hasPadding?: boolean;
-}
+};
 
 const Card = ({
   title,
@@ -33,6 +33,7 @@ const Card = ({
   cards = [],
   cols = 'two',
   variant = 'ContentBottom',
+  ...rest
 }: FeatureCardProps) => {
   return (
     <Section
@@ -41,6 +42,7 @@ const Card = ({
         'bg-background-primary-container',
         className,
       )}
+      {...rest}
     >
       <FluidContainer
         className={qtMerge(
