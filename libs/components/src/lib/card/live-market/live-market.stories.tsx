@@ -23,5 +23,10 @@ export const Default: Story = {
     bidPrice: '1.07219',
     askPrice: '1.07223',
     spread: '0.00005',
+    askContent: 'Ask',
+    bidContent: 'Bid',
+    buyContent: 'Buy',
+    sellContent: 'Sell',
+    spreadContent: 'Spread',
   },
 };
