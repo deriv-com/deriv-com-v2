@@ -92,7 +92,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
             {instrument}
           </Text>
         </div>
-        <div className="flex max-w-[90px] flex-row gap-gap-md pt-[2px]">
+        <div className="flex max-w-[90px] flex-row gap-gap-md pt-[2px] rtl:flex-row-reverse">
           {status !== 'closed' && ChartIcons[status]}
           <Text size="md" className={colorVariant[status]}>
             {changePercentage}
