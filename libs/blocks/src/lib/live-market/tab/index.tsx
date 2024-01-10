@@ -12,6 +12,7 @@ export const LiveMarketTab = ({
   tabs,
   children,
   className,
+  ...rest
 }: LiveMarketTabType) => {
   return (
     <LiveMarket.Container
@@ -20,6 +21,7 @@ export const LiveMarketTab = ({
       disclaimer={disclaimer}
       link={link}
       className={className}
+      {...rest}
     >
       <Tab.Base tabs={tabs} className="flex flex-col gap-gap-2xl">
         {children}
