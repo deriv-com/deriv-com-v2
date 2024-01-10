@@ -1,6 +1,6 @@
 {
   "name": "@deriv-com/components",
-  "version": "0.41.0",
+  "version": "0.42.0",
   "private": false,
   "main": "./index.js",
   "exports": {
