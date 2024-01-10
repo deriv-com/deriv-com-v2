@@ -30,17 +30,18 @@ export interface CardContent extends BaseCardContent {
   align: CardAlignVariant;
   size: CardSizeVariant;
   className?: string;
+  minHeight?: string;
   contentClassName?: string;
   nonContentClassName?: string;
 }
 
-export type MarketStatus = 'up' | 'down' | 'remain' | 'closed';
+export type MarketStatus = 'up' | 'down' | 'closed';
 export interface LiveMarketContent {
   id: number;
   instrumentIcon: ReactNode;
   instrument: string;
   changePercentage: string;
-  status: MarketStatus;
+  mid: number;
   bidPrice: string;
   askPrice: string;
   spread: string;

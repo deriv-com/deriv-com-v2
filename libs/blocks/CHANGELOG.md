@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.69.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.68.0...blocks-0.69.0) (2024-01-09)
+
+## [0.68.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.67.0...blocks-0.68.0) (2024-01-08)
+
+
+### Bug Fixes
+
+* pass children as optional param in content less ([eb21658](https://github.com/deriv-com/deriv-com-v2/commit/eb21658d0901b2ed65b67771c84c50e10069f3ca))
+* updated padding and display for trustpiolet ([fcc8db3](https://github.com/deriv-com/deriv-com-v2/commit/fcc8db32b54362aadacb80a6ffbdec78a186a334))
+* updated ts for strings with reactnode and ucards without padding ([eb1a075](https://github.com/deriv-com/deriv-com-v2/commit/eb1a07545b61140dca95a7f787cdedaf971b0e41))
+
 ## [0.67.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.66.0...blocks-0.67.0) (2023-12-29)
 
 ## [0.66.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.65.0...blocks-0.66.0) (2023-12-29)
