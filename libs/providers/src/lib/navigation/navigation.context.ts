@@ -1,11 +1,10 @@
 import { createContext } from 'react';
 import { NavItem, NavLinkItems } from './types';
+import { NavDropStateType } from '.';
 
 export interface NavigationContextType {
   activeMenu: string;
-  isDropContentOpen: boolean;
-  isMenuContentOpen: boolean;
-  isLangContentOpen: boolean;
+  navDropDownState: NavDropStateType;
   isMobileNavOpen: boolean;
   activeItem?: NavItem;
   navItems: NavLinkItems;
@@ -21,9 +20,7 @@ export interface NavigationContextType {
 
 export const NavigationContext = createContext<NavigationContextType>({
   activeMenu: 'none',
-  isDropContentOpen: false,
-  isMenuContentOpen: false,
-  isLangContentOpen: false,
+  navDropDownState: { type: 'menu', isOpen: false },
   isMobileNavOpen: false,
   hasActiveMenu: false,
   navItems: {},
