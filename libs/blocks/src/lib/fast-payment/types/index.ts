@@ -8,7 +8,7 @@ interface LinkProps {
   href: string;
 }
 
-type SectionProps = Omit<ComponentProps<typeof Section>, 'content'>;
+type SectionProps = Omit<ComponentProps<typeof Section>, 'content' | 'title'>;
 
 export type FastPaymentProps = SectionProps & {
   title: ReactNode;
