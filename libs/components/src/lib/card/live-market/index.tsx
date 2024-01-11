@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { qtMerge, Text } from '@deriv/quill-design';
+import { qtJoin, qtMerge, Text } from '@deriv/quill-design';
 import {
   StandaloneChartTrendDownRegularIcon,
   StandaloneChartTrendUpRegularIcon,
@@ -94,7 +94,10 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         </div>
         <div className="flex max-w-[90px] flex-row gap-gap-md pt-[2px] rtl:flex-row-reverse">
           {status !== 'closed' && ChartIcons[status]}
-          <Text size="md" className={colorVariant[status]}>
+          <Text
+            size="md"
+            className={qtJoin(colorVariant[status], 'rtl:[direction:ltr]')}
+          >
             {changePercentage}
           </Text>
         </div>
