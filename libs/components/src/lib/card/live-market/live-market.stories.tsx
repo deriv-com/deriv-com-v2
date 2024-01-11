@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     instrumentIcon: <MarketForexEurusdIcon />,
-    instrument: 'EUR/USD',
+    instrument: 'MSCI Emerging Markets (EEM)',
     changePercentage: '+0.11%',
     mid: 1.07221,
     bidPrice: '1.07219',

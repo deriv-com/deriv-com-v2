@@ -65,6 +65,9 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
       ? 'text-typography-disabled'
       : 'text-typography-default';
 
+  const instrumentText =
+    `${instrument.match(/\((.*?)\)/)?.[1]}...` || instrument;
+
   return (
     <div
       className={qtMerge(
@@ -88,8 +91,9 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
               'pt-general-xs',
               status === 'closed' && 'text-typography-subtle',
             )}
+            title={instrument}
           >
-            {instrument}
+            {instrumentText}
           </Text>
         </div>
         <div className="flex max-w-[90px] flex-row gap-gap-md pt-[2px] rtl:flex-row-reverse">
