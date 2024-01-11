@@ -50,6 +50,7 @@ export interface LiveMarketContent {
   spreadContent: ReactNode;
   buyContent: ReactNode;
   sellContent: ReactNode;
+  isEtf?: boolean;
   onClickBuyButton?: () => void;
   onClickSellButton?: () => void;
 }

@@ -48,6 +48,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   spreadContent,
   buyContent,
   sellContent,
+  isEtf,
   onClickBuyButton,
   onClickSellButton,
 }) => {
@@ -65,9 +66,8 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
       ? 'text-typography-disabled'
       : 'text-typography-default';
 
-  const abbr = instrument.match(/\((.*?)\)/)?.[1];
-
-  const instrumentText = abbr ? `${abbr}...` : instrument;
+  const abbr = isEtf ? instrument.match(/\(([^)]+)\)/) : null;
+  const instrumentText = abbr?.[1] ? `${abbr}...` : instrument;
 
   return (
     <div
@@ -92,7 +92,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
               'pt-general-xs',
               status === 'closed' && 'text-typography-subtle',
             )}
-            title={instrument}
+            title={abbr?.[0]}
           >
             {instrumentText}
           </Text>
