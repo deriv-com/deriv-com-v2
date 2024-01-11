@@ -18,7 +18,7 @@ export const DesktopNavigationWrapper = ({
       <FixContainer
         className={clsx(
           'bg-background-primary-container',
-          navDropDownState.isOpen ? 'shadow-330' : '',
+          navDropDownState.isOpen && 'shadow-330',
         )}
       >
         <FluidContainer
