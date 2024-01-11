@@ -34,6 +34,21 @@ export interface LiveMarketCardProps extends Omit<LiveMarketContent, 'id'> {
   className?: string;
 }
 
+function transformInstrument(text: string) {
+  // Find the index of the opening parenthesis
+  const openParenthesisIndex = text.indexOf('(');
+
+  // Find the index of the closing parenthesis
+  const closeParenthesisIndex = text.indexOf(')');
+
+  // Extract the substring between the parentheses
+  const extractedSubstring = text.slice(
+    openParenthesisIndex + 1,
+    closeParenthesisIndex,
+  );
+  return extractedSubstring;
+}
+
 export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   className,
   instrumentIcon,
@@ -66,7 +81,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
       ? 'text-typography-disabled'
       : 'text-typography-default';
 
-  const abbr = isEtf ? instrument.match(/\(([^)]+)\)/) : null;
+  const abbr = isEtf ? transformInstrument(instrument) : null;
   const instrumentText = abbr?.[1] ? `${abbr}...` : instrument;
 
   return (
@@ -92,7 +107,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
               'pt-general-xs',
               status === 'closed' && 'text-typography-subtle',
             )}
-            title={abbr?.[0]}
+            // title={abbr?.[0]}
           >
             {instrumentText}
           </Text>
