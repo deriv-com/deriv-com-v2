@@ -12,33 +12,39 @@ export const NavigationProvider: React.FC<NavigationProviderProps> = ({
 }) => {
   const [activeMenu, setActiveMenu] = useState('none');
   const [isDropContentOpen, setIsDropContentOpen] = useState(false);
+  const [isMenuContentOpen, setIsMenuContentOpen] = useState(false);
+  const [isLangContentOpen, setIsLangContentOpen] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   // TODO: when we have backend logic and authentication, please update this
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const onBlurHover = useCallback(() => {
-    setIsDropContentOpen(false);
+    setIsMenuContentOpen(false);
+    setIsLangContentOpen(false);
   }, []);
 
-  const onListItemHover = useCallback(
-    (navItemName: string) => {
-      if (navItems[navItemName].type === 'nav-dropdown') {
-        setActiveMenu(navItemName);
-        setIsDropContentOpen(true);
-      } else {
-        setActiveMenu('none');
-        setIsDropContentOpen(false);
+  useEffect(() => {
+    isMenuContentOpen || isLangContentOpen
+      ? setIsDropContentOpen(true)
+      : setIsDropContentOpen(false);
+  }, [isMenuContentOpen, isLangContentOpen]);
+
+  const onItemHover = useCallback(
+    (item: string) => {
+      setIsLangContentOpen(false);
+      setActiveMenu('none');
+      setIsMenuContentOpen(false);
+
+      if (item === 'lang') {
+        setIsLangContentOpen(true);
+      } else if (navItems[item]?.type === 'nav-dropdown') {
+        setActiveMenu(item);
+        setIsMenuContentOpen(true);
       }
     },
     [navItems],
   );
-
-  const isBlurVisible = useMemo(() => {
-    return (
-      activeMenu !== 'none' && navItems[activeMenu].type === 'nav-dropdown'
-    );
-  }, [activeMenu, navItems]);
 
   const activeItem: NavItem | undefined = useMemo(() => {
     return navItems[activeMenu];
@@ -66,11 +72,13 @@ export const NavigationProvider: React.FC<NavigationProviderProps> = ({
       value={{
         activeMenu,
         isDropContentOpen,
+        isMenuContentOpen,
+        isLangContentOpen,
         isMobileNavOpen,
         activeItem,
-        isBlurVisible,
+        // isBlurVisible,
         onBlurHover,
-        onListItemHover,
+        onItemHover,
         toggleMobileNav,
         navItems,
         setActiveMenu,
