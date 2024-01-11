@@ -24,7 +24,7 @@ const FooterCTABlock = ({
         )}
         id="cta-container"
       >
-        <div className="relative flex min-h-[496px] flex-col justify-end rounded-lg bg-cover lg:flex-row lg:justify-start">
+        <div className="relative isolate flex min-h-[496px] flex-col justify-end rounded-lg bg-cover lg:flex-row lg:justify-start">
           <div className="absolute h-full w-full overflow-hidden rounded-xl object-cover object-top">
             {image}
           </div>
