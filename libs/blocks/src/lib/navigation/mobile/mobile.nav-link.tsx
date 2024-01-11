@@ -29,7 +29,9 @@ export const MobileNavLink: React.FC<MobileNavLinkProps> = ({
       target={item.target}
     >
       {item.text}
-      {item.external && <LabelPairedArrowUpRightSmRegularIcon />}
+      {item.external && (
+        <LabelPairedArrowUpRightSmRegularIcon className="ml-general-xs" />
+      )}
     </CustomLink>
   );
 };

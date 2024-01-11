@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CustomLink } from '@deriv-com/components';
-import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
+import { useNavigation } from '@deriv-com/hooks';
 import { NavItem } from '@deriv-com/providers';
 import { Text } from '@deriv/quill-design';
 export interface DesktopNavItemProps {
@@ -14,8 +14,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
   item,
   navItemName,
 }) => {
-  const { onListItemHover } = useNavigation();
-  const { setShowLangContent } = useLanguageSwitcher();
+  const { onItemHover } = useNavigation();
   const [isActive, setIsActive] = useState(false);
   useEffect(() => {
     if (item.type === 'direct' && typeof window !== undefined) {
@@ -31,9 +30,8 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
       <li
         className="group flex h-full items-center justify-center px-general-lg text-center"
         onMouseEnter={() => {
-          setShowLangContent?.(false);
           if (item.type === 'nav-dropdown') {
-            onListItemHover?.(navItemName);
+            onItemHover?.(navItemName);
           }
         }}
       >
@@ -43,8 +41,7 @@ export const DesktopNavItem: React.FC<DesktopNavItemProps> = ({
             href={item.href}
             hasHoverDecoration={false}
             onMouseEnter={() => {
-              setShowLangContent?.(false);
-              onListItemHover?.(navItemName);
+              onItemHover?.(navItemName);
             }}
             target={item.target}
             aria-current={isActive}

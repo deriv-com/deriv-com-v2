@@ -2,7 +2,7 @@ import { FixContainer, FluidContainer } from '@deriv/quill-design';
 import DesktopNavBlur from './desktop.blur';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
-import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
+import { useNavigation } from '@deriv-com/hooks';
 
 export const DesktopNavigationWrapper = ({
   topNav,
@@ -11,21 +11,20 @@ export const DesktopNavigationWrapper = ({
   topNav?: boolean;
   children: ReactNode;
 }) => {
-  const { isBlurVisible, isDropContentOpen } = useNavigation();
-  const { showLangContent } = useLanguageSwitcher();
+  const { navDropDownState } = useNavigation();
 
   return (
     <div className={'fixed z-50 w-screen'} data-cy="desktop-header">
       <FixContainer
         className={clsx(
           'bg-background-primary-container',
-          isDropContentOpen || showLangContent ? 'shadow-330' : '',
+          navDropDownState.isOpen ? 'shadow-330' : '',
         )}
       >
         <FluidContainer
           className={clsx(
             !topNav
-              ? isDropContentOpen || showLangContent
+              ? navDropDownState.isOpen
                 ? 'max-h-[100vh]'
                 : 'max-h-[80px]'
               : 'max-h-max',
@@ -36,8 +35,8 @@ export const DesktopNavigationWrapper = ({
           {children}
         </FluidContainer>
       </FixContainer>
-      {(isBlurVisible || showLangContent) && (
-        <DesktopNavBlur isVisible={isDropContentOpen || showLangContent} />
+      {navDropDownState.isOpen && (
+        <DesktopNavBlur isVisible={navDropDownState.isOpen} />
       )}
     </div>
   );
