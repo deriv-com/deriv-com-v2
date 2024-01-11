@@ -41,12 +41,12 @@ function transformInstrument(text: string) {
   // Find the index of the closing parenthesis
   const closeParenthesisIndex = text.indexOf(')');
 
+  if (openParenthesisIndex === -1) return null;
+
   // Extract the substring between the parentheses
-  const extractedSubstring = text.slice(
-    openParenthesisIndex + 1,
-    closeParenthesisIndex,
-  );
-  return extractedSubstring;
+  const abbr = text.slice(openParenthesisIndex + 1, closeParenthesisIndex);
+  const fullText = text.slice(0, openParenthesisIndex);
+  return { fullText, abbr };
 }
 
 export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
@@ -81,8 +81,10 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
       ? 'text-typography-disabled'
       : 'text-typography-default';
 
-  const abbr = isEtf ? transformInstrument(instrument) : null;
-  const instrumentText = abbr?.[1] ? `${abbr}...` : instrument;
+  const transformedInstrument = isEtf ? transformInstrument(instrument) : null;
+  const instrumentText = transformedInstrument?.['abbr']
+    ? `${transformedInstrument?.['abbr']}...`
+    : instrument;
 
   return (
     <div
@@ -107,7 +109,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
               'pt-general-xs',
               status === 'closed' && 'text-typography-subtle',
             )}
-            // title={abbr?.[0]}
+            title={transformedInstrument?.['fullText']}
           >
             {instrumentText}
           </Text>
