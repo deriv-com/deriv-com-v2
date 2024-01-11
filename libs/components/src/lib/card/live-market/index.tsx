@@ -65,8 +65,9 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
       ? 'text-typography-disabled'
       : 'text-typography-default';
 
-  const instrumentText =
-    `${instrument.match(/\((.*?)\)/)?.[1]}...` || instrument;
+  const abbr = instrument.match(/\((.*?)\)/)?.[1];
+
+  const instrumentText = abbr ? `${abbr}...` : instrument;
 
   return (
     <div
