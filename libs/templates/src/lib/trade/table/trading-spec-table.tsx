@@ -17,6 +17,7 @@ import {
   Section,
   Text,
   Pagination,
+  ActionSheet,
 } from '@deriv/quill-design';
 import {
   StandaloneCircleDotFillIcon,
@@ -109,7 +110,9 @@ const TradingSpecTable = () => {
             className="w-auto"
           />
         </form>
-
+        <ActionSheet.Trigger
+          icon={LabelPairedEllipsisVerticalMdBoldIcon}
+        ></ActionSheet.Trigger>
         <div>
           <LabelPairedEllipsisVerticalMdBoldIcon
             fill="black"
