@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import { LangItem, LangItems } from '.';
 import { LanguageContext } from './language.context';
 
@@ -14,19 +14,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   onLangSelect,
   activeLanguage,
 }) => {
-  const [showLangContent, setShowLangContent] = useState(false);
   const [showMobileLanguages, setShowMobileLanguages] = useState(false);
 
-  const onLanguageHover = () => {
-    setShowLangContent(true);
-  };
-
-  const onBlurHoverLang = useCallback(() => {
-    setShowLangContent(false);
-  }, []);
-
   const selectLanguage = (item: LangItem) => {
-    setShowLangContent(false);
     onLangSelect?.(item);
   };
 
@@ -34,11 +24,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     <LanguageContext.Provider
       value={{
         langItems,
-        onLanguageHover,
         activeLanguage,
-        showLangContent,
-        setShowLangContent,
-        onBlurHoverLang,
         selectLanguage,
         showMobileLanguages,
         setShowMobileLanguages,
