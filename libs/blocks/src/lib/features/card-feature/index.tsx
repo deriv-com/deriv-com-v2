@@ -13,7 +13,9 @@ import {
   CardsContainer,
 } from '@deriv-com/components';
 
-export type FeatureCardProps = ComponentProps<typeof Section> & {
+type SectionProps = Omit<ComponentProps<typeof Section>, 'title'>;
+
+export type FeatureCardProps = SectionProps & {
   title?: ReactNode;
   description?: ReactNode;
   cta?: ReactNode;

@@ -1,4 +1,4 @@
-import { qtJoin, qtMerge } from '@deriv/quill-design';
+import { qtMerge } from '@deriv/quill-design';
 import Card, { CardVariants } from '../card';
 import {
   cardClass,
@@ -50,8 +50,8 @@ export const CardsContainer = <T extends CardVariantType>({
         Array.from({ length: 3 }, (_, index) => (
           <div
             key={index}
-            className={qtJoin(
-              'flex gap-gap-lg pr-general-md animate-slide rtl:animate-slideRtl',
+            className={qtMerge(
+              'flex animate-slide gap-gap-lg pr-general-md rtl:animate-slideRtl',
               sliderClass,
             )}
             data-testid="infinite-carousel"
