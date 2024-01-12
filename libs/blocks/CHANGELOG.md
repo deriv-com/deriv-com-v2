@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.73.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.72.0...blocks-0.73.0) (2024-01-12)
+
+
+### Bug Fixes
+
+* added .nx files to gitignore and style condition ([1176667](https://github.com/deriv-com/deriv-com-v2/commit/11766678e22d0f697fe3d2e14b5a14d97a9ba41c))
+* hover issue in menu dropdown ([d9616ee](https://github.com/deriv-com/deriv-com-v2/commit/d9616ee66b968169a3e162b9c013928f2c26612a))
+* remove unused file ([40187c6](https://github.com/deriv-com/deriv-com-v2/commit/40187c642d2113889f3b8b20440b9a40c3ec4653))
+
 ## [0.72.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.71.0...blocks-0.72.0) (2024-01-11)
 
 ## [0.71.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.70.0...blocks-0.71.0) (2024-01-10)
