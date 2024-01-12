@@ -89,6 +89,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
               'truncate-overflow overflow-hidden text-ellipsis whitespace-normal pt-general-xs [-webkit-box-orient:vertical] [-webkit-line-clamp:2] [display:-webkit-box]',
               status === 'closed' && 'text-typography-subtle',
             )}
+            title={instrument}
           >
             {instrument}
           </Text>
