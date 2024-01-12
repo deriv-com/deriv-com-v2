@@ -110,9 +110,11 @@ const TradingSpecTable = () => {
             className="w-auto"
           />
         </form>
-        <ActionSheet.Trigger
-          icon={LabelPairedEllipsisVerticalMdBoldIcon}
-        ></ActionSheet.Trigger>
+        <ActionSheet.Root>
+          <ActionSheet.Trigger
+            iconComponent={LabelPairedEllipsisVerticalMdBoldIcon}
+          />
+        </ActionSheet.Root>
         <div>
           <LabelPairedEllipsisVerticalMdBoldIcon
             fill="black"
