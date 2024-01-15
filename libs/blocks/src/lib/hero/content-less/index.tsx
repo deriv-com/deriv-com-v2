@@ -1,12 +1,12 @@
 import Content from '../content';
 import BlockWrapper from '../../block-wrapper';
 
-export type ContentLessProps = {
-  title?: string;
-  description?: string;
-  children?: React.ReactNode;
+export interface ContentLessProps {
+  title: React.ReactNode;
+  description?: React.ReactNode;
   className?: string;
-};
+  children?: React.ReactNode;
+}
 
 const ContentLess = ({
   className,

@@ -3,16 +3,14 @@ import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
 import { StandaloneGlobeRegularIcon } from '@deriv/quill-icons';
 
 const LanguageSwitcher = () => {
-  const { onLanguageHover, activeLanguage } = useLanguageSwitcher();
-  const { setIsDropContentOpen, setActiveMenu } = useNavigation();
+  const { activeLanguage } = useLanguageSwitcher();
+  const { onItemHover } = useNavigation();
 
   return (
     <div
       className="group flex cursor-pointer items-center"
       onMouseEnter={() => {
-        setIsDropContentOpen?.(false);
-        setActiveMenu?.('none');
-        onLanguageHover?.();
+        onItemHover?.('lang');
       }}
     >
       <StandaloneGlobeRegularIcon className="inline" />

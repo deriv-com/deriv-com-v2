@@ -10,6 +10,7 @@ const SocialProofHorizontal = ({
   content,
   logo,
   data = null,
+  ...rest
 }: SocialProofProps) => {
   const themeClassNames = getThemeClassNames(theme);
 
@@ -20,6 +21,7 @@ const SocialProofHorizontal = ({
         themeClassNames.background,
         className,
       )}
+      {...rest}
     >
       <div
         className="flex cursor-pointer items-center justify-center gap-gap-xl"
@@ -37,10 +39,7 @@ const SocialProofHorizontal = ({
                 <Text
                   size="md"
                   bold
-                  className={qtMerge(
-                    themeClassNames.color,
-                    'max-md:hidden max-sm:hidden',
-                  )}
+                  className={qtMerge(themeClassNames.color, 'max-sm:hidden')}
                 >
                   {content(data)[1]}
                 </Text>
