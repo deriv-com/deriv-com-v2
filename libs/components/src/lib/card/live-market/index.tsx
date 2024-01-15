@@ -84,9 +84,8 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
           </div>
           <Text
             size="md"
-            // eslint-disable-next-line tailwindcss/no-custom-classname
             className={qtMerge(
-              'truncate-overflow overflow-hidden text-ellipsis whitespace-normal pt-general-xs [-webkit-box-orient:vertical] [-webkit-line-clamp:2] [display:-webkit-box]',
+              'overflow-hidden text-ellipsis whitespace-normal pt-general-xs [-webkit-box-orient:vertical] [-webkit-line-clamp:2] [display:-webkit-box]',
               status === 'closed' && 'text-typography-subtle',
             )}
             title={instrument}
