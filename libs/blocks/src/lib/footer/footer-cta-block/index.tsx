@@ -24,12 +24,14 @@ const FooterCTABlock = ({
       id="cta-container"
       {...rest}
     >
-      <FluidContainer className="relative isolate h-[496px] rounded-lg">
-        <div className="absolute -z-10 h-full w-full overflow-hidden rounded-xl object-cover object-top">
-          {image}
-        </div>
-        <div className="h-full w-full p-general-3xl rtl:mr-auto lg:mr-general-md lg:w-[608px]">
-          {children}
+      <FluidContainer>
+        <div className="relative isolate h-[496px] rounded-lg">
+          <div className="absolute -z-10 h-full w-full overflow-hidden rounded-xl object-cover object-top">
+            {image}
+          </div>
+          <div className="h-full w-full p-general-3xl rtl:mr-auto lg:mr-general-md lg:w-[608px]">
+            {children}
+          </div>
         </div>
       </FluidContainer>
     </Section>
