@@ -15,6 +15,7 @@ export interface CustomLinkProps extends HTMLAttributes<HTMLAnchorElement> {
   iconColor?: iconColorVariant;
   target?: '_blank' | '_self' | '_parent' | '_top';
   show_eu_modal?: boolean;
+  descriptiveText?: string;
 }
 export type iconColorVariant = 'black' | 'subtle' | 'disabled' | 'default';
 export type textSize = 'sm' | 'md' | 'lg';
@@ -38,6 +39,7 @@ export function CustomLink({
   disabled = false,
   target = '_self',
   children,
+  descriptiveText,
   ...rest
 }: CustomLinkProps) {
   const { DerivLink } = useSharedLink();
@@ -61,6 +63,7 @@ export function CustomLink({
       {...rest}
     >
       {children}
+      {descriptiveText && <span className="sr-only"> {descriptiveText}</span>}
       {hasIcon && (
         <StandaloneChevronRightRegularIcon
           iconSize="sm"
