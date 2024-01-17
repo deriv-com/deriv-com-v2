@@ -15,6 +15,10 @@ export interface CustomLinkProps extends HTMLAttributes<HTMLAnchorElement> {
   iconColor?: iconColorVariant;
   target?: '_blank' | '_self' | '_parent' | '_top';
   show_eu_modal?: boolean;
+  /*
+   * It's for SEO
+   * Pleae check SEO on lighthouse before passing this value
+   */
   descriptiveText?: string;
 }
 export type iconColorVariant = 'black' | 'subtle' | 'disabled' | 'default';
