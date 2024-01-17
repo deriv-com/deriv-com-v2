@@ -13,6 +13,7 @@ export const Default: Story = {
   render: () => {
     return (
       <Tab.Base
+        tabId="base-tab"
         tabs={[
           { content: 'Home' },
           { content: 'Profile' },
