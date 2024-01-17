@@ -21,20 +21,13 @@ export const MainNavContent = ({
 }: MainNavContentProps) => {
   return (
     <div className={clsx('grid gap-gap-lg', gridColsVariant[cols])}>
-      <h2 className="sr-only">Footer Navigation</h2>
+      <h3 className="sr-only">Footer Navigation</h3>
       {items.map((item) => (
         <div className="flex flex-col gap-gap-xl" key={item.id}>
           {item.layers.map((layer) =>
             layer.type === 'link' ? (
-              <div
-                className="flex w-full flex-col gap-gap-lg"
-                role="region"
-                aria-labelledby={`heading-${layer.id}`}
-                key={layer.id}
-              >
-                <Heading.H6 id={`heading-${layer.id}`}>
-                  {layer.header}
-                </Heading.H6>
+              <div className="flex w-full flex-col gap-gap-lg" key={layer.id}>
+                <Heading.H6>{layer.header}</Heading.H6>
                 {layer.items.map(({ id, href, target, text, ...rest }) => (
                   <div
                     className="flex flex-col items-start gap-gap-lg"
