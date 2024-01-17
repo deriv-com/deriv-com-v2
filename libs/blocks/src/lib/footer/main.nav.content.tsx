@@ -23,7 +23,12 @@ export const MainNavContent = ({
     <div className={clsx('grid gap-gap-lg', gridColsVariant[cols])}>
       <h3 className="sr-only">Footer Navigation</h3>
       {items.map((item) => (
-        <div className="flex flex-col gap-gap-xl" key={item.id}>
+        <div
+          className="flex flex-col gap-gap-xl"
+          key={item.id}
+          role="region"
+          aria-label="footer navigation"
+        >
           {item.layers.map((layer) =>
             layer.type === 'link' ? (
               <div className="flex w-full flex-col gap-gap-lg" key={layer.id}>
