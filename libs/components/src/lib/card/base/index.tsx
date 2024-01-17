@@ -104,7 +104,12 @@ export const BaseCard: React.FC<BaseCardProps> = ({
           </div>
         )}
         {link && (
-          <CustomLink href={link.href} size="md" hasIcon>
+          <CustomLink
+            href={link.href}
+            size="md"
+            aria-label={link.ariaLabel}
+            hasIcon
+          >
             {link.content}
           </CustomLink>
         )}
