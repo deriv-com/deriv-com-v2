@@ -8,7 +8,6 @@ describe('ContentText', () => {
     const { container, queryByText } = render(
       <BlockWrapper
         title="Title goes here"
-        color="light"
         description="Description goes here"
         className="py-general-4xl"
       >
