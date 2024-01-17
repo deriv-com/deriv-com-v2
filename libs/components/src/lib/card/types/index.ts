@@ -13,10 +13,6 @@ interface BaseCardContent {
 interface LinkProps {
   content: ReactNode;
   href: string;
-  /*
-   * It's for SEO
-   * Pleae check SEO on lighthouse before passing this value
-   */
   descriptiveText?: string;
 }
 
