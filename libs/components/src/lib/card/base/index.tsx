@@ -110,7 +110,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
             aria-label={link.ariaLabel}
             hasIcon
           >
-            {link.content}
+            {link.content} <span className="sr-only">{link.ariaLabel}</span>
           </CustomLink>
         )}
         {children}
