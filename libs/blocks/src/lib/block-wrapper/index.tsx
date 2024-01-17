@@ -7,9 +7,9 @@ import {
 } from '@deriv/quill-design';
 import { ReactNode } from 'react';
 
-type bgVariant = 'light' | 'gray';
+type BgVariant = 'light' | 'gray';
 
-const bgColorVariantClass: { [key in bgVariant]: string } = {
+const bgColorVariantClass: { [key in BgVariant]: string } = {
   light: 'bg-background-primary-container',
   gray: 'bg-background-primary-base',
 };
@@ -18,7 +18,7 @@ export interface BlockWrapperProps {
   description?: ReactNode;
   className?: string;
   children: ReactNode;
-  background: bgVariant;
+  background: BgVariant;
 }
 
 export const BlockWrapper = ({
