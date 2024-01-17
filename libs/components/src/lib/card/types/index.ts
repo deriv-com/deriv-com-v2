@@ -13,7 +13,11 @@ interface BaseCardContent {
 interface LinkProps {
   content: ReactNode;
   href: string;
-  ariaLabel?: string;
+  /*
+   * It's for SEO
+   * Pleae check SEO on lighthouse before passing this value
+   */
+  descriptiveText?: string;
 }
 
 export interface StatCardContent extends BaseCardContent {
