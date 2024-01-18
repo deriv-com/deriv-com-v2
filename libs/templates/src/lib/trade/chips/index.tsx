@@ -1,8 +1,7 @@
-import { Chip, qtMerge } from '@deriv/quill-design';
+import { Chip } from '@deriv/quill-design';
 import { TableDataType } from '../types/types';
 import { additionalInfo, mainInfo, tradingCondition } from '../data/data';
 import { useState } from 'react';
-import { Text } from '@deriv/quill-design';
 
 export type ChipsProps = {
   onChangeChips: (value: TableDataType[]) => void;
