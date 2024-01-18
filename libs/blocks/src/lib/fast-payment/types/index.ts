@@ -6,6 +6,7 @@ import { Section } from '@deriv/quill-design';
 interface LinkProps {
   content: ReactNode;
   href: string;
+  descriptiveText?: string;
 }
 
 type SectionProps = Omit<ComponentProps<typeof Section>, 'content' | 'title'>;
