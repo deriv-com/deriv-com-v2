@@ -2,14 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.79.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.78.0...blocks-0.79.0) (2024-01-18)
+
+## [0.78.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.77.0...blocks-0.78.0) (2024-01-18)
+
 ## [0.77.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.76.0...blocks-0.77.0) (2024-01-17)
 
 ## [0.76.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.75.0...blocks-0.76.0) (2024-01-17)
 
-
 ### Bug Fixes
 
-* fix case for background ([b657586](https://github.com/deriv-com/deriv-com-v2/commit/b6575866cb4c5f5c6db094e4ea1c1cb607e7d33d))
+- fix case for background ([b657586](https://github.com/deriv-com/deriv-com-v2/commit/b6575866cb4c5f5c6db094e4ea1c1cb607e7d33d))
 
 ## [0.75.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.74.0...blocks-0.75.0) (2024-01-16)
 
@@ -17,12 +20,11 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.73.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.72.0...blocks-0.73.0) (2024-01-12)
 
-
 ### Bug Fixes
 
-* added .nx files to gitignore and style condition ([1176667](https://github.com/deriv-com/deriv-com-v2/commit/11766678e22d0f697fe3d2e14b5a14d97a9ba41c))
-* hover issue in menu dropdown ([d9616ee](https://github.com/deriv-com/deriv-com-v2/commit/d9616ee66b968169a3e162b9c013928f2c26612a))
-* remove unused file ([40187c6](https://github.com/deriv-com/deriv-com-v2/commit/40187c642d2113889f3b8b20440b9a40c3ec4653))
+- added .nx files to gitignore and style condition ([1176667](https://github.com/deriv-com/deriv-com-v2/commit/11766678e22d0f697fe3d2e14b5a14d97a9ba41c))
+- hover issue in menu dropdown ([d9616ee](https://github.com/deriv-com/deriv-com-v2/commit/d9616ee66b968169a3e162b9c013928f2c26612a))
+- remove unused file ([40187c6](https://github.com/deriv-com/deriv-com-v2/commit/40187c642d2113889f3b8b20440b9a40c3ec4653))
 
 ## [0.72.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.71.0...blocks-0.72.0) (2024-01-11)
 
@@ -34,12 +36,11 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.68.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.67.0...blocks-0.68.0) (2024-01-08)
 
-
 ### Bug Fixes
 
-* pass children as optional param in content less ([eb21658](https://github.com/deriv-com/deriv-com-v2/commit/eb21658d0901b2ed65b67771c84c50e10069f3ca))
-* updated padding and display for trustpiolet ([fcc8db3](https://github.com/deriv-com/deriv-com-v2/commit/fcc8db32b54362aadacb80a6ffbdec78a186a334))
-* updated ts for strings with reactnode and ucards without padding ([eb1a075](https://github.com/deriv-com/deriv-com-v2/commit/eb1a07545b61140dca95a7f787cdedaf971b0e41))
+- pass children as optional param in content less ([eb21658](https://github.com/deriv-com/deriv-com-v2/commit/eb21658d0901b2ed65b67771c84c50e10069f3ca))
+- updated padding and display for trustpiolet ([fcc8db3](https://github.com/deriv-com/deriv-com-v2/commit/fcc8db32b54362aadacb80a6ffbdec78a186a334))
+- updated ts for strings with reactnode and ucards without padding ([eb1a075](https://github.com/deriv-com/deriv-com-v2/commit/eb1a07545b61140dca95a7f787cdedaf971b0e41))
 
 ## [0.67.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.66.0...blocks-0.67.0) (2023-12-29)
 
@@ -51,89 +52,78 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.63.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.62.0...blocks-0.63.0) (2023-12-28)
 
-
 ### Bug Fixes
 
-* blcok wrapper improvements ([c066fc1](https://github.com/deriv-com/deriv-com-v2/commit/c066fc1a58fa213c3f46aae1aeedab39ccf01bd6))
+- blcok wrapper improvements ([c066fc1](https://github.com/deriv-com/deriv-com-v2/commit/c066fc1a58fa213c3f46aae1aeedab39ccf01bd6))
 
 ## [0.62.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.61.0...blocks-0.62.0) (2023-12-27)
 
 ## [0.61.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.60.0...blocks-0.61.0) (2023-12-27)
 
-
 ### Bug Fixes
 
-* applied max w for header ([db28495](https://github.com/deriv-com/deriv-com-v2/commit/db2849591f879648cf08bc085e0eea5ce16b609d))
+- applied max w for header ([db28495](https://github.com/deriv-com/deriv-com-v2/commit/db2849591f879648cf08bc085e0eea5ce16b609d))
 
 ## [0.60.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.59.0...blocks-0.60.0) (2023-12-27)
 
-
 ### Bug Fixes
 
-* wrapped fluid container with section ([3ac3596](https://github.com/deriv-com/deriv-com-v2/commit/3ac3596442f37367f6b6abba58c8f9066186607c))
+- wrapped fluid container with section ([3ac3596](https://github.com/deriv-com/deriv-com-v2/commit/3ac3596442f37367f6b6abba58c8f9066186607c))
 
 ## [0.59.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.58.0...blocks-0.59.0) (2023-12-26)
 
 ## [0.58.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.57.0...blocks-0.58.0) (2023-12-26)
 
-
 ### Bug Fixes
 
-* added items center class name ([32cd621](https://github.com/deriv-com/deriv-com-v2/commit/32cd621a8cf5a12a5c42d2ddcb968c81adba03c5))
-* fixed prettier problem in trade page ([f4f8120](https://github.com/deriv-com/deriv-com-v2/commit/f4f8120dbb0bb7a18a957ca4b990cf5f974a4969))
+- added items center class name ([32cd621](https://github.com/deriv-com/deriv-com-v2/commit/32cd621a8cf5a12a5c42d2ddcb968c81adba03c5))
+- fixed prettier problem in trade page ([f4f8120](https://github.com/deriv-com/deriv-com-v2/commit/f4f8120dbb0bb7a18a957ca4b990cf5f974a4969))
 
 ## [0.57.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.56.0...blocks-0.57.0) (2023-12-26)
 
-
 ### Bug Fixes
 
-* menu text color ([9ae3d3b](https://github.com/deriv-com/deriv-com-v2/commit/9ae3d3b170e21ca09a1ad4a7d2b33de9cc00bab5))
+- menu text color ([9ae3d3b](https://github.com/deriv-com/deriv-com-v2/commit/9ae3d3b170e21ca09a1ad4a7d2b33de9cc00bab5))
 
 ## [0.56.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.55.0...blocks-0.56.0) (2023-12-22)
 
 ## [0.55.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.54.0...blocks-0.55.0) (2023-12-22)
 
-
 ### Bug Fixes
 
-* remove navigation gap in mobile ([9617f0c](https://github.com/deriv-com/deriv-com-v2/commit/9617f0c4306c5afd50ca0444c9fbde3da0fe6ab2))
+- remove navigation gap in mobile ([9617f0c](https://github.com/deriv-com/deriv-com-v2/commit/9617f0c4306c5afd50ca0444c9fbde3da0fe6ab2))
 
 ## [0.54.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.53.0...blocks-0.54.0) (2023-12-20)
 
-
 ### Bug Fixes
 
-* fast payment block custom link size ([ca6f7f0](https://github.com/deriv-com/deriv-com-v2/commit/ca6f7f04b47f94d570d1b6f477b95af52d33e599))
+- fast payment block custom link size ([ca6f7f0](https://github.com/deriv-com/deriv-com-v2/commit/ca6f7f04b47f94d570d1b6f477b95af52d33e599))
 
 ## [0.53.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.52.0...blocks-0.53.0) (2023-12-20)
 
 ## [0.52.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.51.0...blocks-0.52.0) (2023-12-18)
 
-
 ### Bug Fixes
 
-* active language color in mobile nav ([5d7bf25](https://github.com/deriv-com/deriv-com-v2/commit/5d7bf25216d6fec6dde7c471e64b57e437d1e5c8))
+- active language color in mobile nav ([5d7bf25](https://github.com/deriv-com/deriv-com-v2/commit/5d7bf25216d6fec6dde7c471e64b57e437d1e5c8))
 
 ## [0.51.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.50.0...blocks-0.51.0) (2023-12-18)
 
-
 ### Bug Fixes
 
-* show eu-modal prop added to customlink ([925cbb2](https://github.com/deriv-com/deriv-com-v2/commit/925cbb2febbaf7ac586286c559f97b9919187670))
+- show eu-modal prop added to customlink ([925cbb2](https://github.com/deriv-com/deriv-com-v2/commit/925cbb2febbaf7ac586286c559f97b9919187670))
 
 ## [0.50.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.49.0...blocks-0.50.0) (2023-12-18)
 
-
 ### Bug Fixes
 
-* language switcher fixes ([61aacf6](https://github.com/deriv-com/deriv-com-v2/commit/61aacf65fce76eecfc4fee4a3ec2447cca4ffd8a))
+- language switcher fixes ([61aacf6](https://github.com/deriv-com/deriv-com-v2/commit/61aacf65fce76eecfc4fee4a3ec2447cca4ffd8a))
 
 ## [0.49.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.48.0...blocks-0.49.0) (2023-12-15)
 
-
 ### Bug Fixes
 
-* x scroll ([54ffd52](https://github.com/deriv-com/deriv-com-v2/commit/54ffd52699e65f466d2b55795271af37dbe3673e))
+- x scroll ([54ffd52](https://github.com/deriv-com/deriv-com-v2/commit/54ffd52699e65f466d2b55795271af37dbe3673e))
 
 ## [0.48.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.47.0...blocks-0.48.0) (2023-12-14)
 
@@ -149,11 +139,10 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.42.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.41.0...blocks-0.42.0) (2023-12-08)
 
-
 ### Bug Fixes
 
-* link target added ([6c171c7](https://github.com/deriv-com/deriv-com-v2/commit/6c171c737b3d953c2e3654a7a13943165cfc359c))
-* navigation design subtasks ([904dc29](https://github.com/deriv-com/deriv-com-v2/commit/904dc290cb7f165a553ca988ca3ec48bbe7bd5a2))
+- link target added ([6c171c7](https://github.com/deriv-com/deriv-com-v2/commit/6c171c737b3d953c2e3654a7a13943165cfc359c))
+- navigation design subtasks ([904dc29](https://github.com/deriv-com/deriv-com-v2/commit/904dc290cb7f165a553ca988ca3ec48bbe7bd5a2))
 
 ## [0.41.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.40.0...blocks-0.41.0) (2023-12-08)
 
@@ -161,24 +150,21 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.39.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.38.0...blocks-0.39.0) (2023-12-08)
 
-
 ### Bug Fixes
 
-* update warning text type in footer for translation ([edc4932](https://github.com/deriv-com/deriv-com-v2/commit/edc4932fbee8dcfec4b30f893ed0a222a984802e))
+- update warning text type in footer for translation ([edc4932](https://github.com/deriv-com/deriv-com-v2/commit/edc4932fbee8dcfec4b30f893ed0a222a984802e))
 
 ## [0.38.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.37.0...blocks-0.38.0) (2023-12-08)
 
-
 ### Bug Fixes
 
-* update navigation types to have translation ([8fdf798](https://github.com/deriv-com/deriv-com-v2/commit/8fdf798345163b143f00c76e8117f67108a9b235))
+- update navigation types to have translation ([8fdf798](https://github.com/deriv-com/deriv-com-v2/commit/8fdf798345163b143f00c76e8117f67108a9b235))
 
 ## [0.37.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.36.0...blocks-0.37.0) (2023-12-06)
 
-
 ### Bug Fixes
 
-* updated font size for desctiption in content limit ([4269a18](https://github.com/deriv-com/deriv-com-v2/commit/4269a187b4b113565d60cae1ea374dca44dd3991))
+- updated font size for desctiption in content limit ([4269a18](https://github.com/deriv-com/deriv-com-v2/commit/4269a187b4b113565d60cae1ea374dca44dd3991))
 
 ## [0.36.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.35.0...blocks-0.36.0) (2023-12-06)
 
@@ -186,31 +172,27 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.34.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.33.0...blocks-0.34.0) (2023-12-05)
 
-
 ### Bug Fixes
 
-* responsive rendering ([b4f6a92](https://github.com/deriv-com/deriv-com-v2/commit/b4f6a92582c2969e677b05ae5fee5a2012ca94b1))
+- responsive rendering ([b4f6a92](https://github.com/deriv-com/deriv-com-v2/commit/b4f6a92582c2969e677b05ae5fee5a2012ca94b1))
 
 ## [0.33.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.32.0...blocks-0.33.0) (2023-12-05)
 
-
 ### Bug Fixes
 
-* props for content ([05d3a8e](https://github.com/deriv-com/deriv-com-v2/commit/05d3a8ee1a72e792b5467047f7207cddcb5ca1e0))
+- props for content ([05d3a8e](https://github.com/deriv-com/deriv-com-v2/commit/05d3a8ee1a72e792b5467047f7207cddcb5ca1e0))
 
 ## [0.32.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.31.0...blocks-0.32.0) (2023-12-05)
 
-
 ### Bug Fixes
 
-* hover effect on navigation items ([b204adc](https://github.com/deriv-com/deriv-com-v2/commit/b204adc948f1a06b56de1623003c28d33971135d))
+- hover effect on navigation items ([b204adc](https://github.com/deriv-com/deriv-com-v2/commit/b204adc948f1a06b56de1623003c28d33971135d))
 
 ## [0.31.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.30.0...blocks-0.31.0) (2023-12-05)
 
-
 ### Bug Fixes
 
-* custom link md size ([1866748](https://github.com/deriv-com/deriv-com-v2/commit/1866748f16a451fdff0ac4caca930e6ae152350e))
+- custom link md size ([1866748](https://github.com/deriv-com/deriv-com-v2/commit/1866748f16a451fdff0ac4caca930e6ae152350e))
 
 ## [0.30.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.29.0...blocks-0.30.0) (2023-12-05)
 
@@ -220,24 +202,21 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.27.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.26.0...blocks-0.27.0) (2023-12-04)
 
-
 ### Bug Fixes
 
-* update images of download in footer ([8038989](https://github.com/deriv-com/deriv-com-v2/commit/8038989f2077d1689e27918212ce8fff48810b36))
+- update images of download in footer ([8038989](https://github.com/deriv-com/deriv-com-v2/commit/8038989f2077d1689e27918212ce8fff48810b36))
 
 ## [0.26.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.25.0...blocks-0.26.0) (2023-12-01)
 
-
 ### Bug Fixes
 
-* responsive content ([0184a81](https://github.com/deriv-com/deriv-com-v2/commit/0184a8198f9c544326a1235a0739467f7c39d629))
+- responsive content ([0184a81](https://github.com/deriv-com/deriv-com-v2/commit/0184a8198f9c544326a1235a0739467f7c39d629))
 
 ## [0.25.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.24.0...blocks-0.25.0) (2023-12-01)
 
-
 ### Bug Fixes
 
-* update social icons in footer to link ([06ed9e0](https://github.com/deriv-com/deriv-com-v2/commit/06ed9e053d91eaf3663a159a91e56bbb336f83c8))
+- update social icons in footer to link ([06ed9e0](https://github.com/deriv-com/deriv-com-v2/commit/06ed9e053d91eaf3663a159a91e56bbb336f83c8))
 
 ## [0.24.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.23.0...blocks-0.24.0) (2023-12-01)
 
@@ -245,79 +224,69 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.22.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.21.0...blocks-0.22.0) (2023-12-01)
 
-
 ### Bug Fixes
 
-* carousel full width and auto scroll speed ([2dd83fe](https://github.com/deriv-com/deriv-com-v2/commit/2dd83fe71bb96029070ac5f03a7f71689a4a6372))
+- carousel full width and auto scroll speed ([2dd83fe](https://github.com/deriv-com/deriv-com-v2/commit/2dd83fe71bb96029070ac5f03a7f71689a4a6372))
 
 ## [0.21.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.20.0...blocks-0.21.0) (2023-12-01)
 
 ## [0.20.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.19.0...blocks-0.20.0) (2023-12-01)
 
-
 ### Bug Fixes
 
-* build issues ([e3b8f55](https://github.com/deriv-com/deriv-com-v2/commit/e3b8f55153a85db73c6b77ac4f7a692cc30fe292))
+- build issues ([e3b8f55](https://github.com/deriv-com/deriv-com-v2/commit/e3b8f55153a85db73c6b77ac4f7a692cc30fe292))
 
 ## [0.19.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.18.0...blocks-0.19.0) (2023-11-30)
 
-
 ### Bug Fixes
 
-* fixed stats gap ([96d7ce5](https://github.com/deriv-com/deriv-com-v2/commit/96d7ce5967a532a285e727293a0af631fd90467e))
+- fixed stats gap ([96d7ce5](https://github.com/deriv-com/deriv-com-v2/commit/96d7ce5967a532a285e727293a0af631fd90467e))
 
 ## [0.18.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.17.0...blocks-0.18.0) (2023-11-30)
 
-
 ### Features
 
-* chipset for accordion ([79e3dd5](https://github.com/deriv-com/deriv-com-v2/commit/79e3dd5c57929fb0ccbc84a9d377d7c6560f2e8d))
-* chipset for accordion ([07dd419](https://github.com/deriv-com/deriv-com-v2/commit/07dd41967de983ebe2ed76aff621f59fa2ac007b))
-* chipset for accordion ([a9a53b8](https://github.com/deriv-com/deriv-com-v2/commit/a9a53b811171ba8d6b22943620c33942d88236fc))
-* chipset for accordion ([9364568](https://github.com/deriv-com/deriv-com-v2/commit/93645687e3ee74f5cd970cc513f80d3d679e9e46))
-* chipset for accordion ([90f10f0](https://github.com/deriv-com/deriv-com-v2/commit/90f10f0bae67aaf59a440567e9e84be82ac2fec3))
-* chipset for accordion ([5d85eae](https://github.com/deriv-com/deriv-com-v2/commit/5d85eae2037d231e19e21113f04cbfa8c6142f17))
-
+- chipset for accordion ([79e3dd5](https://github.com/deriv-com/deriv-com-v2/commit/79e3dd5c57929fb0ccbc84a9d377d7c6560f2e8d))
+- chipset for accordion ([07dd419](https://github.com/deriv-com/deriv-com-v2/commit/07dd41967de983ebe2ed76aff621f59fa2ac007b))
+- chipset for accordion ([a9a53b8](https://github.com/deriv-com/deriv-com-v2/commit/a9a53b811171ba8d6b22943620c33942d88236fc))
+- chipset for accordion ([9364568](https://github.com/deriv-com/deriv-com-v2/commit/93645687e3ee74f5cd970cc513f80d3d679e9e46))
+- chipset for accordion ([90f10f0](https://github.com/deriv-com/deriv-com-v2/commit/90f10f0bae67aaf59a440567e9e84be82ac2fec3))
+- chipset for accordion ([5d85eae](https://github.com/deriv-com/deriv-com-v2/commit/5d85eae2037d231e19e21113f04cbfa8c6142f17))
 
 ### Bug Fixes
 
-* default align issue ([41d4987](https://github.com/deriv-com/deriv-com-v2/commit/41d4987c622f909bc9d0938789896c75359946f0))
-* overflow problem for tab in flex-end and flex-center ([7ea6f3d](https://github.com/deriv-com/deriv-com-v2/commit/7ea6f3d58fef92c6e489b08a29f7cdc8eb3596a6))
+- default align issue ([41d4987](https://github.com/deriv-com/deriv-com-v2/commit/41d4987c622f909bc9d0938789896c75359946f0))
+- overflow problem for tab in flex-end and flex-center ([7ea6f3d](https://github.com/deriv-com/deriv-com-v2/commit/7ea6f3d58fef92c6e489b08a29f7cdc8eb3596a6))
 
 ## [0.17.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.16.0...blocks-0.17.0) (2023-11-30)
 
 ## [0.16.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.15.0...blocks-0.16.0) (2023-11-30)
 
-
 ### Features
 
-* add logo slide carousel in fastpayment ([5cce467](https://github.com/deriv-com/deriv-com-v2/commit/5cce4679d4a6b5259edec915e81e841ff5e06be1))
-
+- add logo slide carousel in fastpayment ([5cce467](https://github.com/deriv-com/deriv-com-v2/commit/5cce4679d4a6b5259edec915e81e841ff5e06be1))
 
 ### Bug Fixes
 
-* gap between each array ([ead3532](https://github.com/deriv-com/deriv-com-v2/commit/ead3532498e2e7486dcf9b92dba192b9c5a3866c))
+- gap between each array ([ead3532](https://github.com/deriv-com/deriv-com-v2/commit/ead3532498e2e7486dcf9b92dba192b9c5a3866c))
 
 ## [0.15.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.14.0...blocks-0.15.0) (2023-11-29)
 
-
 ### Bug Fixes
 
-* move logos to props ([06cb790](https://github.com/deriv-com/deriv-com-v2/commit/06cb790f6a325881e71f9c1362df6b9978117016))
+- move logos to props ([06cb790](https://github.com/deriv-com/deriv-com-v2/commit/06cb790f6a325881e71f9c1362df6b9978117016))
 
 ## [0.14.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.13.0...blocks-0.14.0) (2023-11-29)
 
-
 ### Bug Fixes
 
-* pr comments ([0c77ab9](https://github.com/deriv-com/deriv-com-v2/commit/0c77ab9aedb2bc1452c249ac31838917adaec8dc))
+- pr comments ([0c77ab9](https://github.com/deriv-com/deriv-com-v2/commit/0c77ab9aedb2bc1452c249ac31838917adaec8dc))
 
 ## [0.13.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.12.0...blocks-0.13.0) (2023-11-29)
 
-
 ### Bug Fixes
 
-* main container holder ([4b41135](https://github.com/deriv-com/deriv-com-v2/commit/4b411350a974f8bd0cfa0b5b3b1d484ab08597c1))
+- main container holder ([4b41135](https://github.com/deriv-com/deriv-com-v2/commit/4b411350a974f8bd0cfa0b5b3b1d484ab08597c1))
 
 ## [0.12.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.11.0...blocks-0.12.0) (2023-11-27)
 
@@ -325,10 +294,9 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.10.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.9.0...blocks-0.10.0) (2023-11-27)
 
-
 ### Features
 
-* footer cta block ([b1cd59a](https://github.com/deriv-com/deriv-com-v2/commit/b1cd59abf963294d2ed631e7edf422e886eb70bb))
+- footer cta block ([b1cd59a](https://github.com/deriv-com/deriv-com-v2/commit/b1cd59abf963294d2ed631e7edf422e886eb70bb))
 
 ## [0.9.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.8.0...blocks-0.9.0) (2023-11-27)
 
