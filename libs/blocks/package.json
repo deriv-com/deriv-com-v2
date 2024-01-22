@@ -10,8 +10,5 @@
       "types": "./index.d.ts"
     },
     "./style.css": "./style.css"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
