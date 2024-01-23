@@ -18,6 +18,7 @@ export type LiveMarketContainerProps = ComponentProps<typeof Section> & {
   link?: {
     href: string;
     content: ReactNode;
+    descriptiveText?: string;
   };
   children: ReactNode;
 };
@@ -53,6 +54,7 @@ export const Container = ({
             size="md"
             href={link.href}
             className={clsx('flex items-center justify-center text-body-lg')}
+            descriptiveText={link.descriptiveText}
           >
             {link.content}
             <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />

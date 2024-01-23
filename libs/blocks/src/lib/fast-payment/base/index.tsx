@@ -47,6 +47,7 @@ const Base: React.FC<FastPaymentProps> = ({
             className="w-fit pt-general-xl"
             hasIcon
             size="md"
+            descriptiveText={link.descriptiveText}
             data-testid="fast-payment-link"
           >
             {link.content}
