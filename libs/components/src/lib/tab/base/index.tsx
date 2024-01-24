@@ -16,13 +16,14 @@ type TabTrigger = Omit<
 
 export interface TabProps {
   tabs: TabTrigger[];
+  tabId: string;
   className?: string;
   children: ReactNode;
 }
 
-export const TabBase = ({ tabs, children, className }: TabProps) => {
+export const TabBase = ({ tabs, children, className, tabId }: TabProps) => {
   return (
-    <Tab.Container className={className}>
+    <Tab.Container className={className} id={tabId}>
       <Tab.List>
         {tabs.map(({ content, className, ...rest }, i) => (
           <Tab.Trigger

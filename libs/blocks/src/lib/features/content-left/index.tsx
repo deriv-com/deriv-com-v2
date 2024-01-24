@@ -7,11 +7,12 @@ export interface ContentLeftProps {
   title: ReactNode;
   className?: string;
   description?: ReactNode;
-  content: React.FC;
-  children: ReactNode;
+  content?: React.FC;
+  children?: ReactNode;
   variant?: 'content-left' | 'content-right';
 }
 
+// trigger deployment - 5
 const ContentLeft = ({
   title,
   className,

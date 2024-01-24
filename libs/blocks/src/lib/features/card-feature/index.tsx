@@ -1,13 +1,22 @@
-import { ReactNode } from 'react';
+import clsx from 'clsx';
+import {
+  FluidContainer,
+  Heading,
+  Section,
+  Text,
+  qtMerge,
+} from '@deriv/quill-design';
+import { ComponentProps, ReactNode } from 'react';
 import {
   CardContent,
   CardVariantType,
   CardsContainer,
 } from '@deriv-com/components';
 import BlockWrapper from '../../block-wrapper';
-import { FluidContainer } from '@deriv/quill-design';
 
-export interface FeatureCardProps {
+type SectionProps = Omit<ComponentProps<typeof Section>, 'title'>;
+
+export type FeatureCardProps = SectionProps & {
   title?: ReactNode;
   description?: ReactNode;
   cta?: ReactNode;
@@ -15,22 +24,28 @@ export interface FeatureCardProps {
   cards?: CardContent[];
   cols?: 'two' | 'three' | 'four';
   variant?: CardVariantType;
-}
+  hasPadding?: boolean;
+};
 
 const Card = ({
   title,
   description,
   cta,
+  hasPadding,
   className,
   cards = [],
   cols = 'two',
   variant = 'ContentBottom',
+  ...rest
 }: FeatureCardProps) => {
   return (
     <BlockWrapper
-      title={title}
-      description={description}
-      className={className}
+      className={clsx(
+        hasPadding ? 'py-general-4xl' : 'py-general-xl',
+        'bg-background-primary-container',
+        className,
+      )}
+      {...rest}
       background="light"
     >
       <FluidContainer>

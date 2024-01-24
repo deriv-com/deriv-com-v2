@@ -1,22 +1,19 @@
 import { cva } from 'class-variance-authority';
 
-export const containerCVA = cva(
-  'flex flex-col gap-gap-xl lg:gap-gap-lg justify-center',
-  {
-    variants: {
-      variant: {
-        'content-left': 'lg:flex-row-reverse',
-        'content-right': 'lg:flex-row',
-      },
-    },
-    defaultVariants: {
-      variant: 'content-left',
+export const containerCVA = cva('flex flex-col gap-gap-xl lg:gap-gap-lg', {
+  variants: {
+    variant: {
+      'content-left': 'lg:flex-row-reverse',
+      'content-right': 'lg:flex-row',
     },
   },
-);
+  defaultVariants: {
+    variant: 'content-left',
+  },
+});
 
 export const contentContainerCVA = cva(
-  'flex flex-1 basis-1/2 flex-col lg:justify-center',
+  'flex flex-1 basis-1/2 flex-col lg:justify-center lg:gap-gap-3xl',
   {
     variants: {
       variant: {

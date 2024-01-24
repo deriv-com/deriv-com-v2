@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Text, TradeButton } from '@deriv/quill-design';
 import { MarketStatus } from '../types';
 
@@ -5,6 +6,9 @@ export type BuySellButtonsProps = {
   status: MarketStatus;
   spread: string;
   textClass: string;
+  spreadContent: ReactNode;
+  buyContent: ReactNode;
+  sellContent: ReactNode;
   onClickBuyButton?: () => void;
   onClickSellButton?: () => void;
 };
@@ -13,6 +17,9 @@ export const BuySellButtons = ({
   status,
   spread,
   textClass,
+  spreadContent,
+  buyContent,
+  sellContent,
   onClickBuyButton,
   onClickSellButton,
 }: BuySellButtonsProps) => {
@@ -20,7 +27,7 @@ export const BuySellButtons = ({
     <div className="flex flex-col gap-gap-md">
       <div className="flex flex-row gap-gap-md">
         <Text size="sm" className={textClass}>
-          Spread
+          {spreadContent}
         </Text>
         <Text size="sm" bold className={textClass}>
           {spread}
@@ -34,7 +41,7 @@ export const BuySellButtons = ({
           className="flex-1"
           onClick={onClickBuyButton}
         >
-          Buy
+          {buyContent}
         </TradeButton>
         <TradeButton
           tradeType="sell"
@@ -43,7 +50,7 @@ export const BuySellButtons = ({
           className="flex-1"
           onClick={onClickSellButton}
         >
-          Sell
+          {sellContent}
         </TradeButton>
       </div>
     </div>

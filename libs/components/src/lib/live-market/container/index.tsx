@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 import CustomLink from '../../link';
 import {
   FluidContainer,
@@ -10,7 +10,7 @@ import {
 import { StandaloneChevronRightRegularIcon } from '@deriv/quill-icons/Standalone';
 import clsx from 'clsx';
 
-export interface ContainerProps {
+export type LiveMarketContainerProps = ComponentProps<typeof Section> & {
   header?: ReactNode;
   description?: ReactNode;
   className?: string;
@@ -18,9 +18,10 @@ export interface ContainerProps {
   link?: {
     href: string;
     content: ReactNode;
+    descriptiveText?: string;
   };
   children: ReactNode;
-}
+};
 
 export const Container = ({
   header,
@@ -29,7 +30,8 @@ export const Container = ({
   disclaimer,
   link,
   children,
-}: ContainerProps) => {
+  ...rest
+}: LiveMarketContainerProps) => {
   return (
     <Section
       className={qtMerge(
@@ -37,6 +39,7 @@ export const Container = ({
         'bg-background-primary-container',
         className,
       )}
+      {...rest}
     >
       <FluidContainer className="flex flex-col gap-gap-3xl">
         {header && (
@@ -51,6 +54,7 @@ export const Container = ({
             size="md"
             href={link.href}
             className={clsx('flex items-center justify-center text-body-lg')}
+            descriptiveText={link.descriptiveText}
           >
             {link.content}
             <StandaloneChevronRightRegularIcon className="text-solid-slate-1400" />
