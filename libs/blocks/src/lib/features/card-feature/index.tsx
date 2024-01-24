@@ -1,11 +1,5 @@
 import clsx from 'clsx';
-import {
-  FluidContainer,
-  Heading,
-  Section,
-  Text,
-  qtMerge,
-} from '@deriv/quill-design';
+import { FluidContainer, Section } from '@deriv/quill-design';
 import { ComponentProps, ReactNode } from 'react';
 import {
   CardContent,
@@ -45,8 +39,10 @@ const Card = ({
         'bg-background-primary-container',
         className,
       )}
-      {...rest}
       background="light"
+      title={title}
+      description={description}
+      {...rest}
     >
       <FluidContainer>
         <CardsContainer
