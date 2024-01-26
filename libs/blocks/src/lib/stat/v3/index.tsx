@@ -38,8 +38,8 @@ export const V3StatBlock: React.FC<V3StatBlockProps> = ({
       >
         {items.map((item) => {
           return (
-            <div className="flex h-full flex-col gap-400" key={item.id}>
-              <Heading.H3 className="min-h-[24px] text-center">
+            <div className="flex h-full flex-col" key={item.id}>
+              <Heading.H3 className="min-h-[24px] pb-general-sm text-center">
                 {item.title}
               </Heading.H3>
               <Text size="md" className="text-center">
