@@ -6,39 +6,56 @@ export interface NavigationProviderProps {
   children: React.ReactNode;
   navItems: NavLinkItems;
 }
+
+export interface NavDropStateType {
+  type: 'menu' | 'lang';
+  isOpen: boolean;
+}
+
 export const NavigationProvider: React.FC<NavigationProviderProps> = ({
   children,
   navItems,
 }) => {
   const [activeMenu, setActiveMenu] = useState('none');
-  const [isDropContentOpen, setIsDropContentOpen] = useState(false);
+  const [navDropDownState, setNavDropDownState] = useState<NavDropStateType>({
+    type: 'menu',
+    isOpen: false,
+  });
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   // TODO: when we have backend logic and authentication, please update this
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const onBlurHover = useCallback(() => {
-    setIsDropContentOpen(false);
-  }, []);
+    setNavDropDownState({
+      ...navDropDownState,
+      isOpen: false,
+    });
+  }, [navDropDownState]);
 
-  const onListItemHover = useCallback(
-    (navItemName: string) => {
-      if (navItems[navItemName].type === 'nav-dropdown') {
-        setActiveMenu(navItemName);
-        setIsDropContentOpen(true);
-      } else {
-        setActiveMenu('none');
-        setIsDropContentOpen(false);
+  const onItemHover = useCallback(
+    (item: string) => {
+      setNavDropDownState({
+        ...navDropDownState,
+        isOpen: false,
+      });
+      setActiveMenu('none');
+
+      if (item === 'lang') {
+        setNavDropDownState({
+          type: 'lang',
+          isOpen: true,
+        });
+      } else if (navItems[item]?.type === 'nav-dropdown') {
+        setActiveMenu(item);
+        setNavDropDownState({
+          type: 'menu',
+          isOpen: true,
+        });
       }
     },
-    [navItems],
+    [navItems, navDropDownState],
   );
-
-  const isBlurVisible = useMemo(() => {
-    return (
-      activeMenu !== 'none' && navItems[activeMenu].type === 'nav-dropdown'
-    );
-  }, [activeMenu, navItems]);
 
   const activeItem: NavItem | undefined = useMemo(() => {
     return navItems[activeMenu];
@@ -65,12 +82,11 @@ export const NavigationProvider: React.FC<NavigationProviderProps> = ({
     <NavigationContext.Provider
       value={{
         activeMenu,
-        isDropContentOpen,
+        navDropDownState,
         isMobileNavOpen,
         activeItem,
-        isBlurVisible,
         onBlurHover,
-        onListItemHover,
+        onItemHover,
         toggleMobileNav,
         navItems,
         setActiveMenu,

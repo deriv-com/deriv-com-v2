@@ -2,6 +2,49 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.50.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.49.0...components-0.50.0) (2024-01-23)
+
+## [0.49.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.48.0...components-0.49.0) (2024-01-22)
+
+## [0.48.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.47.0...components-0.48.0) (2024-01-19)
+
+
+### Bug Fixes
+
+* add autoplay reverse for rtl ([4b39268](https://github.com/deriv-com/deriv-com-v2/commit/4b39268f8ceed999dc02813bc72f87067e8442e3))
+
+## [0.47.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.46.0...components-0.47.0) (2024-01-18)
+
+## [0.46.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.45.0...components-0.46.0) (2024-01-17)
+
+## [0.45.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.44.0...components-0.45.0) (2024-01-15)
+
+## [0.44.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.43.0...components-0.44.0) (2024-01-12)
+
+## [0.43.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.42.0...components-0.43.0) (2024-01-11)
+
+## [0.42.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.41.0...components-0.42.0) (2024-01-10)
+
+## [0.41.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.40.0...components-0.41.0) (2024-01-10)
+
+## [0.40.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.39.0...components-0.40.0) (2024-01-09)
+
+
+### Bug Fixes
+
+* added min height in storybook ([8484106](https://github.com/deriv-com/deriv-com-v2/commit/8484106acce18f749d964a2b72a3ef7d79d97560))
+* modified storybook ([4fd2f8e](https://github.com/deriv-com/deriv-com-v2/commit/4fd2f8e85900a259e6a4d34712d08d942cc2e06f))
+* passed min height prop for card component ([01aaee4](https://github.com/deriv-com/deriv-com-v2/commit/01aaee4a82fac7c1db31a5bb90992a241cb2e536))
+
+## [0.39.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.38.0...components-0.39.0) (2024-01-09)
+
+## [0.38.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.37.0...components-0.38.0) (2024-01-08)
+
+
+### Bug Fixes
+
+* updated padding and display for trustpiolet ([8a096db](https://github.com/deriv-com/deriv-com-v2/commit/8a096db128c4801667a2effb129fae01dd858b52))
+
 ## [0.37.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.36.0...components-0.37.0) (2023-12-27)
 
 ## [0.36.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.35.0...components-0.36.0) (2023-12-22)

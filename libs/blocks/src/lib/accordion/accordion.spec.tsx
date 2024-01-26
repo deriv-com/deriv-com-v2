@@ -5,7 +5,7 @@ import { StandaloneAndroidIcon } from '@deriv/quill-icons/Standalone';
 import { AccordionProps } from '@deriv-com/components';
 
 const childTitle = 'This is the title';
-const subTitle = 'Subtitle goes here';
+const subTitle = 'Subtitle goes here.';
 
 const data: AccordionProps[][] = [
   [
