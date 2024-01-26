@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.80.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.79.0...blocks-0.80.0) (2024-01-22)
+
+## [0.79.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.78.0...blocks-0.79.0) (2024-01-18)
+
+## [0.78.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.77.0...blocks-0.78.0) (2024-01-18)
+
+## [0.77.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.76.0...blocks-0.77.0) (2024-01-17)
+
+## [0.76.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.75.0...blocks-0.76.0) (2024-01-17)
+
+
+### Bug Fixes
+
+* fix case for background ([b657586](https://github.com/deriv-com/deriv-com-v2/commit/b6575866cb4c5f5c6db094e4ea1c1cb607e7d33d))
+
 ## [0.75.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.74.0...blocks-0.75.0) (2024-01-16)
 
 ## [0.74.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.73.0...blocks-0.74.0) (2024-01-12)

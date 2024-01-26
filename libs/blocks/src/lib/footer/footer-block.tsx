@@ -1,13 +1,12 @@
 import { FluidContainer, Section, Text } from '@deriv/quill-design';
 import { BrandDerivWordmarkSlateIcon } from '@deriv/quill-icons/Logo';
 import clsx from 'clsx';
-import { ReactElement, ReactNode } from 'react';
+import { ComponentProps, ReactElement, ReactNode } from 'react';
 import { SocialMediaSection } from './footer.social';
 
-export interface SocialIcons {
+export interface SocialIcons extends ComponentProps<'a'> {
   icon: ReactNode;
   href: string;
-  'data-cy'?: string;
 }
 
 export interface FooterProps {

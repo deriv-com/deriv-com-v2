@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.50.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.49.0...components-0.50.0) (2024-01-23)
+
+## [0.49.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.48.0...components-0.49.0) (2024-01-22)
+
+## [0.48.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.47.0...components-0.48.0) (2024-01-19)
+
+
+### Bug Fixes
+
+* add autoplay reverse for rtl ([4b39268](https://github.com/deriv-com/deriv-com-v2/commit/4b39268f8ceed999dc02813bc72f87067e8442e3))
+
+## [0.47.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.46.0...components-0.47.0) (2024-01-18)
+
+## [0.46.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.45.0...components-0.46.0) (2024-01-17)
+
 ## [0.45.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.44.0...components-0.45.0) (2024-01-15)
 
 ## [0.44.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.43.0...components-0.44.0) (2024-01-12)

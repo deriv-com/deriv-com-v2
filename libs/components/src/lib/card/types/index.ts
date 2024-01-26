@@ -13,6 +13,7 @@ interface BaseCardContent {
 interface LinkProps {
   content: ReactNode;
   href: string;
+  descriptiveText?: string;
 }
 
 export interface StatCardContent extends BaseCardContent {
