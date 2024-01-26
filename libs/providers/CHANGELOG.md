@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.12.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.11.0...providers-0.12.0) (2024-01-22)
+
+## [0.11.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.10.0...providers-0.11.0) (2024-01-12)
+
+
+### Bug Fixes
+
+* refactor providers to handle menu open, close logic ([887d582](https://github.com/deriv-com/deriv-com-v2/commit/887d582fbacfac6db68df448fbd3d00c60f1ba57))
+* refactor the usage of states ([457ebca](https://github.com/deriv-com/deriv-com-v2/commit/457ebca330f007654d24ec53b15719b8a52c08d4))
+
 ## [0.10.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.9.0...providers-0.10.0) (2023-12-08)
 
 ## [0.9.0](https://github.com/deriv-com/deriv-com-v2/compare/providers-0.8.0...providers-0.9.0) (2023-12-08)

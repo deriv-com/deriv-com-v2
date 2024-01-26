@@ -63,7 +63,7 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
   };
 
   const StarClassName = {
-    sm: 'p-200',
+    sm: 'p-general-2xs',
     md: 'lg:px-700 lg:py-800 px-500 py-400',
   };
 
@@ -77,7 +77,7 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
     >
       <div
         className={qtMerge(
-          'absolute left-50 top-50 h-full',
+          'absolute left-50 top-50 h-full rtl:left-auto rtl:right-50',
           // This is added like this due to tailwind limitation for dynamic custom values.
           colorKey === 1 && 'bg-[#ff3722]',
           colorKey === 2 && 'bg-[#ff8622]',

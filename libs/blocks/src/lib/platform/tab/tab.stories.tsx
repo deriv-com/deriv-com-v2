@@ -22,6 +22,7 @@ export const Default: Story = {
         header="Header here"
         description="desciption here description here"
         className="bg-background-primary-base"
+        tabId="platform-tab"
         tabs={[{ content: 'All' }, { content: 'CFDs' }, { content: 'Options' }]}
       >
         <CardsContainer

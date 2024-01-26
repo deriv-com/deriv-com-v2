@@ -13,6 +13,7 @@ interface BaseCardContent {
 interface LinkProps {
   content: ReactNode;
   href: string;
+  descriptiveText?: string;
 }
 
 export interface StatCardContent extends BaseCardContent {
@@ -30,20 +31,26 @@ export interface CardContent extends BaseCardContent {
   align: CardAlignVariant;
   size: CardSizeVariant;
   className?: string;
+  minHeight?: string;
   contentClassName?: string;
   nonContentClassName?: string;
 }
 
-export type MarketStatus = 'up' | 'down' | 'remain' | 'closed';
+export type MarketStatus = 'up' | 'down' | 'closed';
 export interface LiveMarketContent {
   id: number;
   instrumentIcon: ReactNode;
   instrument: string;
   changePercentage: string;
-  status: MarketStatus;
+  mid: number;
   bidPrice: string;
   askPrice: string;
   spread: string;
+  bidContent: ReactNode;
+  askContent: ReactNode;
+  spreadContent: ReactNode;
+  buyContent: ReactNode;
+  sellContent: ReactNode;
   onClickBuyButton?: () => void;
   onClickSellButton?: () => void;
 }

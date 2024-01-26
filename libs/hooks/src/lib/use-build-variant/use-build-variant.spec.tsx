@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react';
 
 import useBuildVariant from '.';
 
-describe('useBuildVariant', () => {
+describe('useBuildVariant ', () => {
   it('should render successfully', () => {
     const { result } = renderHook(() => useBuildVariant());
 
