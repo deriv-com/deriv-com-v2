@@ -1,18 +1,19 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ContentLess from '.';
 import { Button } from '@deriv/quill-design';
+import Content from '.';
 
-describe('ContentLess', () => {
+describe('Content', () => {
   beforeEach(() => {
     render(
-      <ContentLess
+      <Content
         className={'bg-solid-red-500'}
         title={'this is title'}
         description={'this is description'}
+        center
       >
         <Button>Click me</Button>
-      </ContentLess>,
+      </Content>,
     );
   });
   it('should render heading successfully', () => {
@@ -21,11 +22,13 @@ describe('ContentLess', () => {
       level: 1,
     });
     expect(heading).toBeInTheDocument();
+    expect(heading).toHaveClass('text-center');
   });
 
   it('should render description successfully', () => {
     const description = screen.getByText('this is description');
     expect(description).toBeInTheDocument();
+    expect(description).toHaveClass('text-center');
   });
 
   it('should render children passed to it', () => {

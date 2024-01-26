@@ -1,5 +1,5 @@
-import { FluidContainer, Heading, Section } from '@deriv/quill-design';
-import clsx from 'clsx';
+import { Heading, qtMerge } from '@deriv/quill-design';
+import BlockWrapper from '../../block-wrapper';
 
 export interface ContentBottomProps {
   title: string;
@@ -15,17 +15,12 @@ const ContentBottom = ({
   children,
 }: ContentBottomProps) => {
   return (
-    <Section className={clsx('py-general-4xl', className)}>
-      <FluidContainer
-        className={clsx(
-          'flex flex-col gap-gap-3xl md:px-general-lg lg:px-general-none',
-          containerClassName,
-        )}
-      >
+    <BlockWrapper background="light" className={className}>
+      <div className={qtMerge('flex flex-col gap-gap-3xl', containerClassName)}>
         <Heading.H1 className="text-center">{title}</Heading.H1>
         {children}
-      </FluidContainer>
-    </Section>
+      </div>
+    </BlockWrapper>
   );
 };
 
