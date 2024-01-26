@@ -1,5 +1,5 @@
 import { FooterItems } from '@deriv-com/blocks';
-import { DerivGoBannerAndAwards } from '../row/banner-and-awards';
+import { DerivGoBanner } from './deriv-go-banner';
 import {
   StandaloneFacebookIcon,
   StandaloneInstagramIcon,
@@ -8,6 +8,7 @@ import {
   StandaloneXTwitterIcon,
   StandaloneYoutubeIcon,
 } from '@deriv/quill-icons/Standalone';
+import { IIPAward } from './iip-award';
 
 export const footerNavData: FooterItems[] = [
   {
@@ -34,6 +35,11 @@ export const footerNavData: FooterItems[] = [
           { id: 6, href: '/careers', text: 'Careers' },
           { id: 7, href: '/deriv-life', text: 'Deriv life' },
         ],
+      },
+      {
+        id: 1,
+        type: 'node',
+        node: <IIPAward />,
       },
     ],
   },
@@ -134,7 +140,7 @@ export const footerNavData: FooterItems[] = [
       {
         id: 0,
         type: 'node',
-        node: <DerivGoBannerAndAwards />,
+        node: <DerivGoBanner />,
       },
     ],
   },

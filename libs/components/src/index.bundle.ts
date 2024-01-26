@@ -7,7 +7,6 @@ export * from './lib/card-slider';
 export * from './lib/page-layout';
 export * from './lib/link';
 export * from './lib/table/account-table';
-export * from './lib/action-sheet/bottom-sheet';
 export * from './lib/table-cell';
 export * from './lib/rating';
 export * from './lib/live-market';

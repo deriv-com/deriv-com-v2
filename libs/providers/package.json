@@ -1,6 +1,7 @@
 {
   "name": "@deriv-com/providers",
-  "version": "0.10.0",
+  "version": "0.12.0",
+  "private": false,
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
@@ -9,8 +10,5 @@
       "require": "./index.js",
       "types": "./index.d.ts"
     }
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }

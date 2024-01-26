@@ -2,10 +2,10 @@ import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import clsx from 'clsx';
 
 export interface ContentLessProps {
-  title: string;
-  description?: string;
+  title: React.ReactNode;
+  description?: React.ReactNode;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const ContentLess = ({
@@ -26,7 +26,7 @@ const ContentLess = ({
           )}
         </div>
 
-        {children}
+        {children && children}
       </FluidContainer>
     </Section>
   );

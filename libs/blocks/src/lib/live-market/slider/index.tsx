@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ComponentProps } from 'react';
 import {
   CardSlider,
   CardSliderProps,
@@ -6,17 +6,12 @@ import {
 } from '@deriv-com/components';
 import { LiveMarket } from '@deriv-com/components';
 
-export interface LiveMarketProps<T extends CardVariantType> {
-  header?: ReactNode;
-  description?: ReactNode;
-  className?: string;
-  disclaimer?: ReactNode;
-  link: {
-    href: string;
-    content: ReactNode;
-  };
+export type LiveMarketProps<T extends CardVariantType> = Omit<
+  ComponentProps<typeof LiveMarket.Container>,
+  'children'
+> & {
   cardSliderProps?: CardSliderProps<T>;
-}
+};
 
 export const LiveMarketSlider = <T extends CardVariantType>({
   header,
@@ -25,6 +20,7 @@ export const LiveMarketSlider = <T extends CardVariantType>({
   disclaimer,
   link,
   cardSliderProps,
+  ...rest
 }: LiveMarketProps<T>) => {
   return (
     <LiveMarket.Container
@@ -33,6 +29,7 @@ export const LiveMarketSlider = <T extends CardVariantType>({
       disclaimer={disclaimer}
       link={link}
       className={className}
+      {...rest}
     >
       {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -1,10 +1,10 @@
-import { qtMerge, Text } from '@deriv/quill-design';
+import { useRef } from 'react';
+import { qtJoin, qtMerge, Text } from '@deriv/quill-design';
 import {
   StandaloneChartTrendDownRegularIcon,
-  StandaloneChartTrendSidewayRegularIcon,
   StandaloneChartTrendUpRegularIcon,
 } from '@deriv/quill-icons/Standalone';
-import { LiveMarketContent } from '../types';
+import { LiveMarketContent, MarketStatus } from '../types';
 import LivePrice from './live-price';
 import { BuySellButtons } from './buy-sell.buttons';
 import clsx from 'clsx';
@@ -12,7 +12,6 @@ import clsx from 'clsx';
 const colorVariant: { [key: string]: string } = {
   up: 'fill-solid-emerald-900 text-solid-emerald-900',
   down: 'fill-solid-cherry-700 text-solid-cherry-700',
-  remain: 'fill-opacity-black-400 text-typography-subtle',
   closed: 'fill-opacity-black-300 text-typography-disabled',
 };
 
@@ -29,12 +28,6 @@ const ChartIcons = {
       className={colorVariant['down']}
     />
   ),
-  remain: (
-    <StandaloneChartTrendSidewayRegularIcon
-      iconSize="sm"
-      className={colorVariant['remain']}
-    />
-  ),
 };
 
 export interface LiveMarketCardProps extends Omit<LiveMarketContent, 'id'> {
@@ -46,13 +39,27 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
   instrumentIcon,
   instrument,
   changePercentage,
-  status,
+  mid,
   bidPrice,
   askPrice,
   spread,
+  bidContent,
+  askContent,
+  spreadContent,
+  buyContent,
+  sellContent,
   onClickBuyButton,
   onClickSellButton,
 }) => {
+  const prevMid = useRef<HTMLDivElement>(null);
+  const prevStatus = prevMid.current?.dataset['status'] as MarketStatus;
+  let status: MarketStatus = 'up';
+  if (prevMid?.current?.textContent) {
+    if (mid > +prevMid.current.textContent) status = 'up';
+    if (mid < +prevMid.current.textContent) status = 'down';
+    if (mid === +prevMid.current.textContent) status = prevStatus;
+  }
+
   const textClassName =
     status === 'closed'
       ? 'text-typography-disabled'
@@ -70,39 +77,51 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
         className,
       )}
     >
-      <div className="flex h-[52px] shrink-0 grow flex-row gap-gap-sm">
-        <div className="flex flex-1 flex-row gap-gap-md">
+      <div className="flex h-[52px] shrink-0 grow flex-row justify-between gap-gap-sm">
+        <div className="flex max-w-[141px] flex-1 flex-row gap-gap-md">
           <div className={clsx(status === 'closed' && 'opacity-600')}>
             {instrumentIcon}
           </div>
           <Text
             size="md"
             className={qtMerge(
-              'pt-general-xs',
+              'overflow-hidden text-ellipsis whitespace-normal pt-general-xs [-webkit-box-orient:vertical] [-webkit-line-clamp:2] [display:-webkit-box]',
               status === 'closed' && 'text-typography-subtle',
             )}
+            title={instrument}
           >
             {instrument}
           </Text>
         </div>
-        <div className="flex flex-row gap-gap-md pt-[2px]">
+        <div className="flex max-w-[90px] flex-row gap-gap-md pt-[2px] rtl:flex-row-reverse">
           {status !== 'closed' && ChartIcons[status]}
-          <Text size="md" className={colorVariant[status]}>
+          <Text
+            size="md"
+            className={qtJoin(colorVariant[status], 'rtl:[direction:ltr]')}
+          >
             {changePercentage}
           </Text>
         </div>
       </div>
+      <div ref={prevMid} data-status={status} className="sr-only">
+        {mid}
+      </div>
 
       <LivePrice
         status={status}
+        bidContent={bidContent}
         bidPrice={bidPrice}
+        askContent={askContent}
         askPrice={askPrice}
         textClass={textClassName}
       />
       <BuySellButtons
         status={status}
+        spreadContent={spreadContent}
         spread={spread}
         textClass={textClassName}
+        buyContent={buyContent}
+        sellContent={sellContent}
         onClickBuyButton={onClickBuyButton}
         onClickSellButton={onClickSellButton}
       />

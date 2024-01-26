@@ -3,8 +3,8 @@ import { ReactNode } from 'react';
 import styles from './styles.module.scss';
 import clsx from 'clsx';
 export interface ContentLimitlessProps {
-  title?: string;
-  description?: string;
+  title?: ReactNode;
+  description?: ReactNode;
   content?: () => ReactNode;
   children?: ReactNode;
   className?: string;

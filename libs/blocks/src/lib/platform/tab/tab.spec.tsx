@@ -9,6 +9,7 @@ describe('ContentText', () => {
   beforeEach(() => {
     render(
       <PlatformBlockTab
+        tabId="platform-tab"
         header={title}
         description={description}
         className={className}
