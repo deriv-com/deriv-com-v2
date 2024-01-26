@@ -58,7 +58,7 @@
       "options": {
         "access": "public",
         "buildTarget": "production",
-        "registry": "https://npm.pkg.github.com",
+        "registry": "https://registry.npmjs.org",
         "dist-folder-path": "dist/libs/providers"
       }
     }

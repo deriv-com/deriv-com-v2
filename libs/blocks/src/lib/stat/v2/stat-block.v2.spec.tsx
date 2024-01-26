@@ -18,10 +18,14 @@ describe('V2 StatBlock', () => {
     cleanup();
   });
   it('should render all the card headings', () => {
-    const headings = screen.getAllByRole('heading');
+    const headings = screen.getAllByRole('heading', {
+      level: 3,
+    });
     expect(headings.length).toBe(3);
     headings.forEach((headingElement, index) => {
-      expect(headingElement).toHaveTextContent(cards[index].header || '');
+      expect(headingElement).toHaveTextContent(
+        String(cards[index]['header'] || ''),
+      );
     });
   });
 

@@ -2,6 +2,51 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.80.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.79.0...blocks-0.80.0) (2024-01-22)
+
+## [0.79.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.78.0...blocks-0.79.0) (2024-01-18)
+
+## [0.78.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.77.0...blocks-0.78.0) (2024-01-18)
+
+## [0.77.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.76.0...blocks-0.77.0) (2024-01-17)
+
+## [0.76.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.75.0...blocks-0.76.0) (2024-01-17)
+
+
+### Bug Fixes
+
+* fix case for background ([b657586](https://github.com/deriv-com/deriv-com-v2/commit/b6575866cb4c5f5c6db094e4ea1c1cb607e7d33d))
+
+## [0.75.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.74.0...blocks-0.75.0) (2024-01-16)
+
+## [0.74.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.73.0...blocks-0.74.0) (2024-01-12)
+
+## [0.73.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.72.0...blocks-0.73.0) (2024-01-12)
+
+
+### Bug Fixes
+
+* added .nx files to gitignore and style condition ([1176667](https://github.com/deriv-com/deriv-com-v2/commit/11766678e22d0f697fe3d2e14b5a14d97a9ba41c))
+* hover issue in menu dropdown ([d9616ee](https://github.com/deriv-com/deriv-com-v2/commit/d9616ee66b968169a3e162b9c013928f2c26612a))
+* remove unused file ([40187c6](https://github.com/deriv-com/deriv-com-v2/commit/40187c642d2113889f3b8b20440b9a40c3ec4653))
+
+## [0.72.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.71.0...blocks-0.72.0) (2024-01-11)
+
+## [0.71.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.70.0...blocks-0.71.0) (2024-01-10)
+
+## [0.70.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.69.0...blocks-0.70.0) (2024-01-10)
+
+## [0.69.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.68.0...blocks-0.69.0) (2024-01-09)
+
+## [0.68.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.67.0...blocks-0.68.0) (2024-01-08)
+
+
+### Bug Fixes
+
+* pass children as optional param in content less ([eb21658](https://github.com/deriv-com/deriv-com-v2/commit/eb21658d0901b2ed65b67771c84c50e10069f3ca))
+* updated padding and display for trustpiolet ([fcc8db3](https://github.com/deriv-com/deriv-com-v2/commit/fcc8db32b54362aadacb80a6ffbdec78a186a334))
+* updated ts for strings with reactnode and ucards without padding ([eb1a075](https://github.com/deriv-com/deriv-com-v2/commit/eb1a07545b61140dca95a7f787cdedaf971b0e41))
+
 ## [0.67.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.66.0...blocks-0.67.0) (2023-12-29)
 
 ## [0.66.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.65.0...blocks-0.66.0) (2023-12-29)

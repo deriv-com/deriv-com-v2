@@ -6,11 +6,12 @@ export interface ContentLeftProps {
   title: ReactNode;
   className?: string;
   description?: ReactNode;
-  content: React.FC;
-  children: ReactNode;
+  content?: React.FC;
+  children?: ReactNode;
   variant?: 'content-left' | 'content-right';
 }
 
+// trigger deployment - 5
 const ContentLeft = ({
   title,
   className,
@@ -45,7 +46,7 @@ const ContentLeft = ({
             <Heading.H2>{title}</Heading.H2>
             {description && <Text size="md">{description}</Text>}
           </div>
-          {children}
+          {children && children}
         </div>
         {Content && (
           <div className="flex flex-1 basis-1/2 justify-center">

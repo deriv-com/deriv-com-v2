@@ -1,4 +1,4 @@
-import { useLanguageSwitcher, useNavigation } from '@deriv-com/hooks';
+import { useNavigation } from '@deriv-com/hooks';
 import clsx from 'clsx';
 import { useEffect, useRef } from 'react';
 import { useHover } from 'usehooks-ts';
@@ -11,15 +11,13 @@ const DesktopNavBlur = ({ isVisible }: NavBlurProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const { onBlurHover } = useNavigation();
-  const { onBlurHoverLang } = useLanguageSwitcher();
   const isHovering = useHover(ref);
 
   useEffect(() => {
     if (isHovering) {
       onBlurHover?.();
-      onBlurHoverLang?.();
     }
-  }, [isHovering, onBlurHover, onBlurHoverLang]);
+  }, [isHovering, onBlurHover]);
 
   return (
     <div
