@@ -4,6 +4,8 @@ import V3StatBlock from '.';
 const meta = {
   title: 'Blocks/Stat/V3',
   component: V3StatBlock,
+  tags: ['autodocs'],
+  argTypes: { className: { table: { disable: true } } },
 } satisfies Meta<typeof V3StatBlock>;
 
 export default meta;

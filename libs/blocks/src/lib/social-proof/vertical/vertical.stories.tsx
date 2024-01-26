@@ -1,11 +1,26 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SocialProof } from '..';
 import { OptimizedImage } from '@deriv-com/components';
+import { data } from '../mock-data';
 
 const meta = {
   title: 'Blocks/SocialProof/Vertical',
   component: SocialProof.Vertical,
-} satisfies Meta<typeof SocialProof.Vertical>;
+  tags: ['autodocs'],
+  argTypes: {
+    content: {
+      description:
+        '`({ ...props }: TPilotDataProps) => string[] | ReactNode[]`',
+    },
+    data: {
+      table: { type: { summary: 'TPilotDataProps' } },
+      options: Object.keys(data),
+      mapping: data,
+      control: { type: 'select' },
+    },
+    logo: { description: '`ReactNode`' },
+  },
+} satisfies Meta<typeof SocialProof.Horizontal>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -32,139 +47,54 @@ export const Default: Story = {
   },
 };
 
+export const WithTitle: Story = {
+  args: {
+    ...Default.args,
+    title: 'Title goes here',
+  },
+};
+
 export const CustomTheme: Story = {
   args: {
-    content: ({ numberOfReviews, trustScore }) => [
-      `TrustScore ${trustScore}`,
-      `${numberOfReviews} reviews`,
-    ],
-    data: {
-      trustScore: 4.5,
-      numberOfReviews: '45454',
-      stars: 4.4,
-    },
+    ...Default.args,
     theme: {
       color: '!text-[#ffffff]',
       background: 'bg-solid-slate-700',
-      divider: 'dark',
     },
-    logo: (
-      <OptimizedImage
-        imageName="home/trustpilot/trustpilot-logo.png"
-        alt="trustpilot"
-        width={97}
-        height={24}
-      />
-    ),
   },
 };
 
 export const BadScore: Story = {
   args: {
-    content: ({ numberOfReviews, trustScore }) => [
-      `TrustScore ${trustScore}`,
-      `${numberOfReviews} reviews`,
-    ],
-    data: {
-      trustScore: 0.6,
-      numberOfReviews: '45454',
-      stars: 0.6,
-    },
-    logo: (
-      <OptimizedImage
-        imageName="home/trustpilot/trustpilot-logo.png"
-        alt="trustpilot"
-        width={97}
-        height={24}
-      />
-    ),
+    ...Default.args,
+    data: data.BadScore,
   },
 };
 
 export const PoorScore: Story = {
   args: {
-    content: ({ numberOfReviews, trustScore }) => [
-      `TrustScore ${trustScore}`,
-      `${numberOfReviews} reviews`,
-    ],
-    data: {
-      trustScore: 1.6,
-      numberOfReviews: '45454',
-      stars: 1.6,
-    },
-    logo: (
-      <OptimizedImage
-        imageName="home/trustpilot/trustpilot-logo.png"
-        alt="trustpilot"
-        width={97}
-        height={24}
-      />
-    ),
+    ...Default.args,
+    data: data.PoorScore,
   },
 };
 
 export const AverageScore: Story = {
   args: {
-    content: ({ numberOfReviews, trustScore }) => [
-      `TrustScore ${trustScore}`,
-      `${numberOfReviews} reviews`,
-    ],
-    data: {
-      trustScore: 2.5,
-      numberOfReviews: '45454',
-      stars: 2.5,
-    },
-    logo: (
-      <OptimizedImage
-        imageName="home/trustpilot/trustpilot-logo.png"
-        alt="trustpilot"
-        width={97}
-        height={24}
-      />
-    ),
+    ...Default.args,
+    data: data.AverageScore,
   },
 };
 
 export const GreatScore: Story = {
   args: {
-    content: ({ numberOfReviews, trustScore }) => [
-      `TrustScore ${trustScore}`,
-      `${numberOfReviews} reviews`,
-    ],
-    data: {
-      trustScore: 3.8,
-      numberOfReviews: '99990',
-      stars: 3.8,
-    },
-    logo: (
-      <OptimizedImage
-        imageName="home/trustpilot/trustpilot-logo.png"
-        alt="trustpilot"
-        width={97}
-        height={24}
-      />
-    ),
+    ...Default.args,
+    data: data.GreatScore,
   },
 };
 
 export const ExcellentScore: Story = {
   args: {
-    content: ({ numberOfReviews, trustScore }) => [
-      `TrustScore ${trustScore}`,
-      `${numberOfReviews} reviews`,
-    ],
-    data: {
-      trustScore: 4.8,
-      numberOfReviews: '45454',
-      stars: 4.8,
-    },
-    logo: (
-      <OptimizedImage
-        imageName="home/trustpilot/trustpilot-logo.png"
-        alt="trustpilot"
-        width={97}
-        height={24}
-      />
-    ),
+    ...Default.args,
+    data: data.ExcellentScore,
   },
 };
