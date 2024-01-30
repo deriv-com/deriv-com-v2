@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import SocialProofVertical from './vertical';
 import SocialProofHorizontal from './horizontal';
 
-type SocialProofVariants = {
+export type SocialProofVariants = {
   Vertical: typeof SocialProofVertical;
   Horizontal: typeof SocialProofHorizontal;
 };
