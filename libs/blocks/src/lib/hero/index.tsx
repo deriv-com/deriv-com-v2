@@ -1,16 +1,12 @@
-import ContentLimit, { ContentLimitProps } from './content-limit';
-import ContentLimitless, { ContentLimitlessProps } from './content-limitless';
-import ContentBottom, { ContentBottomProps } from './content-bottom';
+import ContentLimit from './content-limit';
+import ContentLimitless from './content-limitless';
+import ContentBottom from './content-bottom';
 import ContentTop from './content-top';
-import ContentLess, { ContentLessProps } from './content-less';
+import ContentLess from './content-less';
 import { ReactNode } from 'react';
+import { HeroBlockProps } from './types';
 
-export {
-  ContentLessProps,
-  ContentLimitProps,
-  ContentLimitlessProps,
-  ContentBottomProps,
-};
+export { HeroBlockProps };
 export interface HeroProps {
   className?: string;
   title?: ReactNode;

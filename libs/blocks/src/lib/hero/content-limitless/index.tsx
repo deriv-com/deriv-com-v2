@@ -1,15 +1,9 @@
 import { FluidContainer, Section } from '@deriv/quill-design';
-import { ReactNode } from 'react';
 import clsx from 'clsx';
 import Content from '../content';
-export interface ContentLimitlessProps {
-  title?: string;
-  description?: string;
-  content?: ReactNode;
-  children?: ReactNode;
-  className?: string;
-}
-const ContentLimitless: React.FC<ContentLimitlessProps> = ({
+import { HeroBlockProps } from '../types';
+
+const ContentLimitless: React.FC<HeroBlockProps> = ({
   title,
   description,
   content,

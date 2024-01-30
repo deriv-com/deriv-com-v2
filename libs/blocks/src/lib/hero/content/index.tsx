@@ -1,7 +1,7 @@
 import { Heading, Text, qtJoin } from '@deriv/quill-design';
-import { ContentLessProps } from '../content-less';
+import { HeroBlockProps } from '../types';
 
-export interface ContentProps extends ContentLessProps {
+export interface ContentProps extends HeroBlockProps {
   center?: boolean;
 }
 
