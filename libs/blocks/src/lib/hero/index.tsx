@@ -12,7 +12,7 @@ export interface HeroProps {
   children?: ReactNode;
 }
 
-type HeroVariants = {
+export type HeroVariants = {
   ContentLimitless: typeof ContentLimitless;
   ContentLimit: typeof ContentLimit;
   ContentBottom: typeof ContentBottom;
