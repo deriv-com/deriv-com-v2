@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.86.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.85.0...blocks-0.86.0) (2024-01-31)
+
+
+### Bug Fixes
+
+* exported social proof types ([714b42e](https://github.com/deriv-com/deriv-com-v2/commit/714b42e0f2d83781b93ec69bb2800e5d509ec97a))
+
 ## [0.85.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.84.0...blocks-0.85.0) (2024-01-31)
 
 
