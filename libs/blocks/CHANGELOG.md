@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.85.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.84.0...blocks-0.85.0) (2024-01-31)
+
+
+### Bug Fixes
+
+* added heroblock props and removed duplicates ([6793e99](https://github.com/deriv-com/deriv-com-v2/commit/6793e990a940074387531fd56f73409f1babeefa))
+* fixed import issue ([4019975](https://github.com/deriv-com/deriv-com-v2/commit/401997548300bf07c66d343890498bb9afd686ae))
+
 ## [0.84.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.83.0...blocks-0.84.0) (2024-01-30)
 
 ## [0.83.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.82.0...blocks-0.83.0) (2024-01-30)
