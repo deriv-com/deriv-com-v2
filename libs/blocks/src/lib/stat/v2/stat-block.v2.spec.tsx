@@ -4,9 +4,9 @@ import { StatCardContent } from '@deriv-com/components';
 import '@testing-library/jest-dom';
 
 const cards: StatCardContent[] = [
-  { header: 'Header one', description: 'description one' },
-  { header: 'Header two', description: 'description two' },
-  { header: 'Header three', description: 'description three' },
+  { id: 1, header: 'Header one', description: 'description one' },
+  { id: 2, header: 'Header two', description: 'description two' },
+  { id: 3, header: 'Header three', description: 'description three' },
 ];
 
 describe('V2 StatBlock', () => {
@@ -18,10 +18,14 @@ describe('V2 StatBlock', () => {
     cleanup();
   });
   it('should render all the card headings', () => {
-    const headings = screen.getAllByRole('heading');
+    const headings = screen.getAllByRole('heading', {
+      level: 3,
+    });
     expect(headings.length).toBe(3);
     headings.forEach((headingElement, index) => {
-      expect(headingElement).toHaveTextContent(cards[index].header || '');
+      expect(headingElement).toHaveTextContent(
+        String(cards[index]['header'] || ''),
+      );
     });
   });
 

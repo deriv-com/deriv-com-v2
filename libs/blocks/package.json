@@ -1,6 +1,7 @@
 {
   "name": "@deriv-com/blocks",
-  "version": "0.67.0",
+  "version": "0.85.0",
+  "private": false,
   "main": "./index.js",
   "exports": {
     ".": {
@@ -9,8 +10,5 @@
       "types": "./index.d.ts"
     },
     "./style.css": "./style.css"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }

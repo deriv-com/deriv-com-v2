@@ -21,6 +21,7 @@ const PlatformBlockTab = ({
   className,
   tabs,
   children,
+  tabId,
 }: PlatformBlockTabProps) => {
   return (
     <Section
@@ -37,7 +38,11 @@ const PlatformBlockTab = ({
               {header}
             </Heading.H2>
           )}
-          <Tab.Base tabs={tabs} className="flex flex-col gap-gap-2xl">
+          <Tab.Base
+            tabs={tabs}
+            tabId={tabId}
+            className="flex flex-col gap-gap-2xl"
+          >
             {children}
           </Tab.Base>
         </div>

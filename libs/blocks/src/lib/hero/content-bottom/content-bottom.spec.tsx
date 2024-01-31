@@ -6,7 +6,11 @@ import { Text } from '@deriv/quill-design';
 describe('ContentBottom', () => {
   beforeEach(() => {
     render(
-      <ContentBottom title="Content Bottom Title" className="bg-solid-red-1000">
+      <ContentBottom
+        title="Content Bottom Title"
+        className="bg-solid-red-1000"
+        containerClassName="bg-solid-red-200"
+      >
         <Text>Content Bottom description</Text>
       </ContentBottom>,
     );
@@ -23,5 +27,15 @@ describe('ContentBottom', () => {
   it('should render description successfully', () => {
     const description = screen.getByText('Content Bottom description');
     expect(description).toBeInTheDocument();
+  });
+
+  it('should render classname pass into section', () => {
+    const section = document.querySelector('.bg-solid-red-1000');
+    expect(section).toBeInTheDocument();
+  });
+
+  it('should render classname pass into fluid container', () => {
+    const section = document.querySelector('.bg-solid-red-200');
+    expect(section).toBeInTheDocument();
   });
 });

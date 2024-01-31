@@ -52,6 +52,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
   content,
   icon,
   link,
+  minHeight,
   className,
   contentPosition,
   align,
@@ -68,6 +69,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
         'flex overflow-hidden rounded-xl',
         contentVariantClass[contentPosition],
         bgColorVariantClass[color],
+        minHeight && minHeight,
         className,
       )}
     >
@@ -102,7 +104,12 @@ export const BaseCard: React.FC<BaseCardProps> = ({
           </div>
         )}
         {link && (
-          <CustomLink href={link.href} size="md" hasIcon>
+          <CustomLink
+            href={link.href}
+            size="md"
+            descriptiveText={link?.descriptiveText}
+            hasIcon
+          >
             {link.content}
           </CustomLink>
         )}

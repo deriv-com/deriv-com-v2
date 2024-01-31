@@ -54,6 +54,7 @@ export const CardSlider = <T extends CardVariantType>({
         spaceBetween={spaceBetween}
         breakpoints={breakpoints}
         dir={dir}
+        autoplay={{ reverseDirection: true }}
       >
         {cards.map((card, index) => (
           <SwiperSlide className={clsx(slideClasses)} key={index}>

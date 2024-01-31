@@ -1,31 +1,20 @@
-import { FluidContainer, Heading, Section } from '@deriv/quill-design';
-import clsx from 'clsx';
-
-export interface ContentBottomProps {
-  title: string;
-  className?: string;
-  containerClassName?: string;
-  children: React.ReactNode;
-}
+import { Heading, qtMerge } from '@deriv/quill-design';
+import BlockWrapper from '../../block-wrapper';
+import { HeroBlockProps } from '..';
 
 const ContentBottom = ({
   className = '',
   containerClassName = '',
   title,
   children,
-}: ContentBottomProps) => {
+}: HeroBlockProps) => {
   return (
-    <Section className={clsx('py-general-4xl', className)}>
-      <FluidContainer
-        className={clsx(
-          'flex flex-col gap-gap-3xl md:px-general-lg lg:px-general-none',
-          containerClassName,
-        )}
-      >
+    <BlockWrapper background="light" className={className}>
+      <div className={qtMerge('flex flex-col gap-gap-3xl', containerClassName)}>
         <Heading.H1 className="text-center">{title}</Heading.H1>
         {children}
-      </FluidContainer>
-    </Section>
+      </div>
+    </BlockWrapper>
   );
 };
 

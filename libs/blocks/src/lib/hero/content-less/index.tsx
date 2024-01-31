@@ -1,34 +1,19 @@
-import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
-import clsx from 'clsx';
-
-export interface ContentLessProps {
-  title: string;
-  description?: string;
-  className?: string;
-  children: React.ReactNode;
-}
+import Content from '../content';
+import BlockWrapper from '../../block-wrapper';
+import { HeroBlockProps } from '..';
 
 const ContentLess = ({
   className,
   title,
   description,
   children,
-}: ContentLessProps) => {
+}: HeroBlockProps) => {
   return (
-    <Section className={clsx('py-general-4xl', className)}>
-      <FluidContainer className="flex flex-col gap-gap-3xl lg:px-general-none">
-        <div className="flex flex-col gap-gap-2xl">
-          <Heading.H1 className="text-center">{title}</Heading.H1>
-          {description && (
-            <Text size="xl" className="text-center text-typography-default">
-              {description}
-            </Text>
-          )}
-        </div>
-
+    <BlockWrapper className={className} background="light">
+      <Content title={title} description={description} center={true}>
         {children}
-      </FluidContainer>
-    </Section>
+      </Content>
+    </BlockWrapper>
   );
 };
 
