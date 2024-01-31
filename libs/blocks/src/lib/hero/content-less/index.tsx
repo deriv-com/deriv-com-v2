@@ -1,6 +1,6 @@
 import Content from '../content';
 import BlockWrapper from '../../block-wrapper';
-import { HeroBlockProps } from '../types';
+import { HeroBlockProps } from '..';
 
 const ContentLess = ({
   className,

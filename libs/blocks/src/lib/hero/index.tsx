@@ -4,17 +4,15 @@ import ContentBottom from './content-bottom';
 import ContentTop from './content-top';
 import ContentLess from './content-less';
 import { ReactNode } from 'react';
-import { HeroBlockProps } from './types';
 
-export { HeroBlockProps };
-export interface HeroProps {
-  className?: string;
-  title?: ReactNode;
-  description?: ReactNode;
+export type HeroBlockProps = {
+  title?: string;
+  description?: string;
+  containerClassName?: string;
   content?: ReactNode;
   children?: ReactNode;
-}
-
+  className?: string;
+};
 export type HeroVariants = {
   ContentLimitless: typeof ContentLimitless;
   ContentLimit: typeof ContentLimit;

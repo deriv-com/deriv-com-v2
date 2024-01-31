@@ -2,7 +2,7 @@ import React from 'react';
 import Content from '../content';
 import { FluidContainer, Section, qtMerge } from '@deriv/quill-design';
 import clsx from 'clsx';
-import { HeroBlockProps } from '../types';
+import { HeroBlockProps } from '..';
 
 const ContentLimit: React.FC<HeroBlockProps> = ({
   title,

@@ -1,6 +1,6 @@
 import { Heading, qtMerge } from '@deriv/quill-design';
 import BlockWrapper from '../../block-wrapper';
-import { HeroBlockProps } from '../types';
+import { HeroBlockProps } from '..';
 
 const ContentBottom = ({
   className = '',

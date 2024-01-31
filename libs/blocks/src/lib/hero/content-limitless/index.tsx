@@ -1,7 +1,7 @@
 import { FluidContainer, Section } from '@deriv/quill-design';
 import clsx from 'clsx';
 import Content from '../content';
-import { HeroBlockProps } from '../types';
+import { HeroBlockProps } from '..';
 
 const ContentLimitless: React.FC<HeroBlockProps> = ({
   title,

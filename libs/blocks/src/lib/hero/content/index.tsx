@@ -1,5 +1,5 @@
 import { Heading, Text, qtJoin } from '@deriv/quill-design';
-import { HeroBlockProps } from '../types';
+import { HeroBlockProps } from '..';
 
 export interface ContentProps extends HeroBlockProps {
   center?: boolean;
