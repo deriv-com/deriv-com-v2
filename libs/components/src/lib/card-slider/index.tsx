@@ -19,6 +19,7 @@ export interface CardSliderProps<T extends CardVariantType> {
   className?: string;
   slideClasses?: string;
   swiperData?: SwiperOptions;
+  dir?: 'ltr' | 'rtl';
 }
 
 const defaultSwiperProps: SwiperOptions = {
@@ -37,6 +38,7 @@ export const CardSlider = <T extends CardVariantType>({
   className,
   slideClasses,
   swiperData,
+  dir,
 }: CardSliderProps<T>) => {
   const { slidesPerView, spaceBetween, breakpoints } = Object.assign(
     defaultSwiperProps,
@@ -51,6 +53,7 @@ export const CardSlider = <T extends CardVariantType>({
         slidesPerView={slidesPerView}
         spaceBetween={spaceBetween}
         breakpoints={breakpoints}
+        dir={dir}
         autoplay={{ reverseDirection: true }}
       >
         {cards.map((card, index) => (
