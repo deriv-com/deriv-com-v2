@@ -4,7 +4,7 @@ import { LiveMarketTab } from './tab';
 
 export * from './types';
 
-type LiveMarketBlockType = {
+export type LiveMarketBlockType = {
   Slider: typeof LiveMarketSlider;
   Tab: typeof LiveMarketTab;
 };
