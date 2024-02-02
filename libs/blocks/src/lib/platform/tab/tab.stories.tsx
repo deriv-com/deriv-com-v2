@@ -10,6 +10,13 @@ import {
 const meta = {
   title: 'Blocks/Platform/Tab',
   component: PlatformBlockTab,
+  tags: ['autodocs'],
+  argTypes: {
+    header: { description: '`ReactNode`' },
+    description: { description: '`ReactNode`' },
+    className: { table: { disable: true } },
+    children: { description: '`ReactNode`' },
+  },
 } satisfies Meta<typeof PlatformBlockTab>;
 
 export default meta;
