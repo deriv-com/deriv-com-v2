@@ -2,16 +2,9 @@ import React from 'react';
 import Content from '../content';
 import { FluidContainer, Section, qtMerge } from '@deriv/quill-design';
 import clsx from 'clsx';
+import { HeroBlockProps } from '..';
 
-export interface ContentLimitProps {
-  className?: string;
-  title?: string;
-  description?: string;
-  content?: React.ReactNode;
-  children?: React.ReactNode;
-}
-
-const ContentLimit: React.FC<ContentLimitProps> = ({
+const ContentLimit: React.FC<HeroBlockProps> = ({
   title,
   description,
   content,

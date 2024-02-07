@@ -2,7 +2,9 @@ import { ReactNode } from 'react';
 import { LiveMarketSlider } from './slider';
 import { LiveMarketTab } from './tab';
 
-type LiveMarketBlockType = {
+export * from './types';
+
+export type LiveMarketBlockType = {
   Slider: typeof LiveMarketSlider;
   Tab: typeof LiveMarketTab;
 };

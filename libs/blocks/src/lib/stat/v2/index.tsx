@@ -1,11 +1,7 @@
-import { CardsContainer, StatCardContent } from '@deriv-com/components';
+import { CardsContainer } from '@deriv-com/components';
 import { FluidContainer, Section } from '@deriv/quill-design';
 import clsx from 'clsx';
-
-export interface V2StatBlockProps {
-  cards: StatCardContent[];
-  className?: string;
-}
+import { V2StatBlockProps } from '../types';
 
 export const V2StatBlock: React.FC<V2StatBlockProps> = ({
   cards,

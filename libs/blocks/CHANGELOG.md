@@ -2,6 +2,36 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.89.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.88.0...blocks-0.89.0) (2024-02-02)
+
+## [0.88.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.87.0...blocks-0.88.0) (2024-02-02)
+
+
+### Bug Fixes
+
+* export vertical props types ([4f7dac0](https://github.com/deriv-com/deriv-com-v2/commit/4f7dac0ff487e527d0a76985758232d99b75204f))
+
+## [0.87.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.86.0...blocks-0.87.0) (2024-02-01)
+
+## [0.86.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.85.0...blocks-0.86.0) (2024-01-31)
+
+
+### Bug Fixes
+
+* exported social proof types ([714b42e](https://github.com/deriv-com/deriv-com-v2/commit/714b42e0f2d83781b93ec69bb2800e5d509ec97a))
+
+## [0.85.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.84.0...blocks-0.85.0) (2024-01-31)
+
+
+### Bug Fixes
+
+* added heroblock props and removed duplicates ([6793e99](https://github.com/deriv-com/deriv-com-v2/commit/6793e990a940074387531fd56f73409f1babeefa))
+* fixed import issue ([4019975](https://github.com/deriv-com/deriv-com-v2/commit/401997548300bf07c66d343890498bb9afd686ae))
+
+## [0.84.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.83.0...blocks-0.84.0) (2024-01-30)
+
+## [0.83.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.82.0...blocks-0.83.0) (2024-01-30)
+
 ## [0.82.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.81.0...blocks-0.82.0) (2024-01-26)
 
 ## [0.81.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.80.0...blocks-0.81.0) (2024-01-26)

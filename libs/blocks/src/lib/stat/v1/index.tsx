@@ -1,13 +1,7 @@
-import { ReactNode } from 'react';
-import { CardsContainer, StatCardContent } from '@deriv-com/components';
-import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import { CardsContainer } from '@deriv-com/components';
+import { FluidContainer, Text } from '@deriv/quill-design';
 import BlockWrapper from '../../block-wrapper';
-
-export interface V1StatBlockProps {
-  title?: ReactNode;
-  description?: ReactNode;
-  cards: StatCardContent[];
-}
+import { V1StatBlockProps } from '../types';
 
 export const V1StatBlock: React.FC<V1StatBlockProps> = ({
   cards,
@@ -18,7 +12,7 @@ export const V1StatBlock: React.FC<V1StatBlockProps> = ({
     <BlockWrapper background="light" title={title}>
       <FluidContainer>
         {description && (
-          <Text className="text-center pt-general-lg">{description}</Text>
+          <Text className="pt-general-lg text-center">{description}</Text>
         )}
         <CardsContainer
           variant="StatCard"
