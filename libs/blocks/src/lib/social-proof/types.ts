@@ -25,3 +25,7 @@ export interface SocialProofThemeClassNames {
   color: string;
   caret: string;
 }
+
+export interface SocialProofVerticalProps extends SocialProofProps {
+  title?: string;
+}
