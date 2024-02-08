@@ -1,19 +1,7 @@
 import clsx from 'clsx';
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
-import { ReactNode } from 'react';
-import {
-  CardSlider,
-  CardSliderProps,
-  CardVariantType,
-} from '@deriv-com/components';
-
-export interface ContentSliderProps<T extends CardVariantType> {
-  title?: ReactNode;
-  description?: ReactNode;
-  cta?: () => ReactNode;
-  className?: string;
-  cardSliderProps?: CardSliderProps<T>;
-}
+import { CardSlider, CardVariantType } from '@deriv-com/components';
+import { ContentSliderProps } from '../types';
 
 const ContentSlider = <T extends CardVariantType>({
   title,

@@ -25,3 +25,5 @@ Features.ContentRight = ContentRight;
 Features.ContentSlider = ContentSlider;
 
 export default Features;
+
+export * from './types';

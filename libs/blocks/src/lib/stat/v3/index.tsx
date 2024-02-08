@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import {
   FluidContainer,
   Heading,
@@ -6,17 +5,7 @@ import {
   Text,
   qtMerge,
 } from '@deriv/quill-design';
-
-export type V3Item = {
-  id: number;
-  title: ReactNode;
-  description: ReactNode;
-};
-
-export interface V3StatBlockProps {
-  items: V3Item[];
-  className?: string;
-}
+import { V3StatBlockProps } from '../types';
 
 export const V3StatBlock: React.FC<V3StatBlockProps> = ({
   items,
