@@ -1,15 +1,6 @@
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
-
-export interface ContentLeftProps {
-  title: ReactNode;
-  className?: string;
-  description?: ReactNode;
-  content?: React.FC;
-  children?: ReactNode;
-  variant?: 'content-left' | 'content-right';
-}
+import { ContentLeftProps } from '../types';
 
 // trigger deployment - 5
 const ContentLeft = ({
