@@ -1,4 +1,5 @@
-import ContentLeft, { ContentLeftProps } from '../content-left';
+import ContentLeft from '../content-left';
+import { ContentLeftProps } from '../types';
 
 const ContentRight = ({
   title,
