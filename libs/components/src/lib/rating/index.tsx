@@ -70,8 +70,8 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
   const iconProps = {
     fill: '#ffffff',
     fillOpacity: 1,
+    width: 100,
     ...(size === 'md' && {
-      width: 100,
       height: 100,
       className: StarClassName[size],
     }),
