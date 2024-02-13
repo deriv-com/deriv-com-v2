@@ -5,7 +5,6 @@ export type RatingProps = {
   rate: number | undefined;
   size?: 'sm' | 'md';
   className?: string;
-  isHorizontal?: true;
 };
 
 export interface TrustPilotDataProps {
@@ -40,15 +39,9 @@ interface StarBoxProps {
   percent: number;
   colorKey?: number;
   size?: 'sm' | 'md';
-  isHorizontal?: boolean;
 }
 
-const StarBox = ({
-  percent,
-  colorKey = 0,
-  size = 'md',
-  isHorizontal,
-}: StarBoxProps) => {
+const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
   const rateWidths: { [key: number]: string } = {
     10: 'w-1/6',
     20: 'w-1/5',
@@ -74,6 +67,16 @@ const StarBox = ({
     md: 'lg:px-700 lg:py-800 px-500 py-400',
   };
 
+  const iconProps = {
+    fill: '#ffffff',
+    fillOpacity: 1,
+    ...(size === 'md' && {
+      width: 100,
+      height: 100,
+      className: StarClassName[size],
+    }),
+  };
+
   return (
     <div
       className={qtMerge(
@@ -95,17 +98,7 @@ const StarBox = ({
         )}
       />
       <div className="absolute left-50 top-50 flex h-full w-full items-center justify-center">
-        {isHorizontal ? (
-          <LabelPairedTrustpilotMdIcon fill="#ffffff" fillOpacity={1} />
-        ) : (
-          <LabelPairedTrustpilotMdIcon
-            width={100}
-            height={100}
-            className={StarClassName[size]}
-            fill="#ffffff"
-            fillOpacity={1}
-          />
-        )}
+        <LabelPairedTrustpilotMdIcon {...iconProps} />
       </div>
     </div>
   );
@@ -115,7 +108,6 @@ export const Rating = ({
   rate = 0,
   size = 'md',
   className = '',
-  isHorizontal,
 }: RatingProps) => {
   const starContainers = Array.from({ length: 5 }).map((_, index) => index * 1);
   const rateFloat = rate.toString();
@@ -142,7 +134,6 @@ export const Rating = ({
             percent={getStarPercentage(ci)}
             colorKey={colorKey}
             size={size}
-            isHorizontal={isHorizontal}
           />
         );
       })}
