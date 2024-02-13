@@ -48,7 +48,7 @@ const SocialProofHorizontal = ({
 
             {data && (
               <>
-                <Rating rate={data?.stars} size="sm" />
+                <Rating rate={data?.stars} size="sm" isHorizontal />
                 {content && (
                   <Text
                     size="md"
