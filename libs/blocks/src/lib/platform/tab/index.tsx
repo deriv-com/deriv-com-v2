@@ -1,4 +1,3 @@
-import { ComponentProps, ReactNode } from 'react';
 import {
   FluidContainer,
   Heading,
@@ -7,13 +6,7 @@ import {
   qtMerge,
 } from '@deriv/quill-design';
 import { Tab } from '@deriv-com/components';
-
-export type PlatformBlockTabProps = ComponentProps<typeof Tab.Base> & {
-  header?: ReactNode;
-  description?: ReactNode;
-  className?: string;
-  children: ReactNode;
-};
+import { PlatformBlockTabProps } from '../types';
 
 const PlatformBlockTab = ({
   header,

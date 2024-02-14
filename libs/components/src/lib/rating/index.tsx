@@ -67,6 +67,16 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
     md: 'lg:px-700 lg:py-800 px-500 py-400',
   };
 
+  const iconProps = {
+    fill: '#ffffff',
+    fillOpacity: 1,
+    width: 100,
+    ...(size === 'md' && {
+      height: 100,
+      className: StarClassName[size],
+    }),
+  };
+
   return (
     <div
       className={qtMerge(
@@ -88,13 +98,7 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
         )}
       />
       <div className="absolute left-50 top-50 flex h-full w-full items-center justify-center">
-        <LabelPairedTrustpilotMdIcon
-          width={100}
-          height={100}
-          className={StarClassName[size]}
-          fill="#ffffff"
-          fillOpacity={1}
-        />
+        <LabelPairedTrustpilotMdIcon {...iconProps} />
       </div>
     </div>
   );

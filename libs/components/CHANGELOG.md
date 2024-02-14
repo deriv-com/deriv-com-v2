@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.54.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.53.0...components-0.54.0) (2024-02-13)
+
+
+### Bug Fixes
+
+* added width ([d3b4d40](https://github.com/deriv-com/deriv-com-v2/commit/d3b4d4035b85536b16e3e9aafcb239bb25895bc5))
+
+## [0.53.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.52.0...components-0.53.0) (2024-02-13)
+
+
+### Bug Fixes
+
+* added condition for horizontal ([fdde7e8](https://github.com/deriv-com/deriv-com-v2/commit/fdde7e88cc511af024fb131368f5ef2f190cf2d0))
+* refactor ([ff65319](https://github.com/deriv-com/deriv-com-v2/commit/ff65319a8bce259dae1b0de04025cdae5d177811))
+* removed icon class name ([143c428](https://github.com/deriv-com/deriv-com-v2/commit/143c428ce48a05a71522fa3e0e7264b9ac3af15b))
+
 ## [0.52.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.51.0...components-0.52.0) (2024-01-31)
 
 
