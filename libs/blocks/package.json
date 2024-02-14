@@ -1,6 +1,6 @@
 {
   "name": "@deriv-com/blocks",
-  "version": "0.92.0",
+  "version": "0.93.0",
   "private": false,
   "main": "./index.js",
   "exports": {
