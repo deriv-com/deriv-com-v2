@@ -6,8 +6,8 @@ import ContentLess from './content-less';
 import { ReactNode } from 'react';
 
 export type HeroBlockProps = {
-  title?: string;
-  description?: string;
+  title?: ReactNode | string;
+  description?: ReactNode | string;
   containerClassName?: string;
   content?: ReactNode;
   children?: ReactNode;
