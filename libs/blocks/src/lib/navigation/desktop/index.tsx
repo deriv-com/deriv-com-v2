@@ -1,10 +1,9 @@
 import { NavigationProps } from '..';
 import DesktopNavigationWrapper from './desktop.wrapper';
 import NavList from './desktop.nav-list';
-import { NavigationContent } from '../navigation.content';
 import { useNavigation } from '@deriv-com/hooks';
 import LanguageSwitcher from '../language-switcher';
-import LanguageContent from '../language-switcher/language.content';
+import { Suspense, lazy } from 'react';
 
 const DesktopNavigation = ({
   renderButtons,
@@ -12,6 +11,16 @@ const DesktopNavigation = ({
   hasLanguageSwitch,
   topNavigation,
 }: NavigationProps) => {
+  const LazyNavigationContent = lazy(() =>
+    import('../navigation.content').then(({ NavigationContent }) => ({
+      default: NavigationContent,
+    })),
+  );
+
+  const LazyLanguageContent = lazy(
+    () => import('../language-switcher/language.content'),
+  );
+
   const { activeMenu, navItems, activeItem, navDropDownState, onItemHover } =
     useNavigation();
 
@@ -47,8 +56,16 @@ const DesktopNavigation = ({
             {hasLanguageSwitch && <LanguageSwitcher />}
           </div>
         </nav>
-        {shouldRenderNavContent && <NavigationContent />}
-        {showLangContent && <LanguageContent />}
+        {shouldRenderNavContent && (
+          <Suspense>
+            <LazyNavigationContent />
+          </Suspense>
+        )}
+        {showLangContent && (
+          <Suspense>
+            <LazyLanguageContent />
+          </Suspense>
+        )}
       </div>
     </DesktopNavigationWrapper>
   );
