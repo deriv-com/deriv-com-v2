@@ -22,7 +22,7 @@ export const V3StatBlock: React.FC<V3StatBlockProps> = ({
       <h2 className="sr-only">Stat Section</h2>
       <FluidContainer
         className={
-          'grid grid-cols-2 grid-rows-2 items-center justify-center gap-x-gap-lg gap-y-gap-2xl md:grid-cols-4 md:grid-rows-1 lg:gap-gap-xl'
+          'grid grid-cols-2 grid-rows-2 items-center justify-center gap-x-gap-lg gap-y-gap-2xl md:grid-cols-4 md:grid-rows-1'
         }
       >
         {items.map((item) => {
