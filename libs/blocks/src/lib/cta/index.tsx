@@ -18,16 +18,16 @@ const CTABlock = ({
   variant = 'content-left',
 }: CTABlockProps) => {
   return (
-    <Section className="py-general-4xl">
+    <Section className=" py-general-4xl">
       <div
         className={clsx(
-          ' relative isolate flex flex-col justify-center gap-gap-lg  lg:mx-auto lg:max-w-[1232px]',
+          ' relative isolate flex  h-full min-h-[496px] flex-col justify-end gap-gap-lg  md:justify-center  lg:mx-auto  lg:max-w-[1232px] ',
           variant === 'content-left' ? 'lg:flex-row-reverse' : 'lg:flex-row  ',
         )}
       >
         <div
           className={clsx(
-            'flex flex-col justify-center gap-gap-3xl px-general-lg lg:px-general-none ',
+            'flex w-full flex-col justify-center gap-gap-3xl px-general-lg pb-general-2xl lg:px-general-none lg:pb-general-none',
             variant === 'content-left'
               ? 'lg:ps-general-2xl '
               : 'lg:pe-general-2xl ',
@@ -41,7 +41,11 @@ const CTABlock = ({
               'lg:w-full',
             )}
           >
-            {title && <Heading.H2>{title}</Heading.H2>}
+            {title && (
+              <Heading.H2 className="text-solid-slate-50 lg:text-typography-prominent">
+                {title}
+              </Heading.H2>
+            )}
             {description && <Text>{description}</Text>}
           </div>
           {children && children}
@@ -49,7 +53,7 @@ const CTABlock = ({
         {content && (
           <div
             className={clsx([
-              'absolute -z-10  overflow-hidden object-cover object-top',
+              'absolute -z-10  h-full overflow-hidden object-cover object-top ',
               'h-full w-full lg:relative',
             ])}
           >

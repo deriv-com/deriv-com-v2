@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import CTABlock from '.';
-import { Text } from '@deriv/quill-design';
+import { Button, Text } from '@deriv/quill-design';
 
 const meta = {
   title: 'Blocks/CTABlock',
@@ -36,8 +36,8 @@ export const CTAContentLeft: Story = {
     content: (
       <>
         <img
-          className="block  w-full lg:hidden"
-          src="https://placehold.co/420x230"
+          className="block  w-full flex-1  lg:hidden"
+          src="https://placehold.co/256x496"
           alt="Placeholder"
         />
         <img
