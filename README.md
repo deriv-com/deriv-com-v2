@@ -32,7 +32,7 @@ npm ci
 ```
 
 ## - Step 3: Build/Run projects
-Inside the apps folder there can be multiple projects. Check `package.json` file to setup custome commands for each projects. To run `HK` project
+Inside the apps folder there can be multiple projects. Check `package.json` file to setup custom commands for each projects. To run `HK` project
 
 Develop HK Project:
 `npm run dev:hk`
