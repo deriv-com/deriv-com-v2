@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.55.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.54.0...components-0.55.0) (2024-02-19)
+
+
+### Bug Fixes
+
+* rating size on lg ([80c0858](https://github.com/deriv-com/deriv-com-v2/commit/80c0858f1292efaeb8a699edfd594040c7cce5c7))
+
 ## [0.54.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.53.0...components-0.54.0) (2024-02-13)
 
 
