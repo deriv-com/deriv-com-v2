@@ -10,7 +10,7 @@ export type CTABlockProps = {
   className?: string;
   variant?: 'content-left' | 'content-right';
 };
-const CTABlock = ({
+export const CTABlock = ({
   content,
   children,
   title,
