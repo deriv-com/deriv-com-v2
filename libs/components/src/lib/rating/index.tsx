@@ -59,7 +59,7 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
 
   const BoxSizeClassName = {
     sm: 'w-1200 h-1200',
-    md: 'lg:w-[96px] lg:h-[96px] w-[48px] h-[48px]',
+    md: 'max-lg:w-[48px] max-lg:h-[48px] lg:w-[96px] lg:h-[96px]',
   };
 
   const StarClassName = {
