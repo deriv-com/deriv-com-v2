@@ -5,6 +5,7 @@ import {
   CardsContainer,
 } from '@deriv-com/components';
 import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import BlockWrapper from '../block-wrapper';
 
 export interface TradeTypeBlockProps<T extends CardVariantType> {
   title: ReactNode;
@@ -22,18 +23,17 @@ export const TradeTypeBlock = <T extends CardVariantType>({
   cols = 'two',
 }: TradeTypeBlockProps<T>) => {
   return (
-    <Section className="bg-background-primary-container py-general-4xl">
-      <FluidContainer className="flex flex-col items-center justify-center gap-gap-xl">
-        <Heading.H2>{title}</Heading.H2>
-        {description && <Text size="md">{description}</Text>}
+    <BlockWrapper title={title} description={description} background="light">
+      <FluidContainer>
         <CardsContainer
           variant={variant}
           cards={cards}
           cols={cols}
           dense={cols === 'two'}
+          className="pt-general-2xl"
         />
       </FluidContainer>
-    </Section>
+    </BlockWrapper>
   );
 };
 
