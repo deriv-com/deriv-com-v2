@@ -1,23 +1,38 @@
+# Name
+
+Deriv.com V2 - a sandbox for the Quill Design System
+
 [![Coverage Status](https://coveralls.io/repos/github/deriv-com/deriv-com-v2/badge.svg?branch=main)](https://coveralls.io/github/deriv-com/deriv-com-v2?branch=main)
 
-# Deriv Com V2
+# Description
 
-Deriv Com V2 Project
+The Deriv Com V2 Project serves as a sandbox for the Quill Design System. This is where we construct our Quill blocks and components, and develop our application within the apps folder utilizing these reusable elements. Additionally, Quill Icons are incorporated here.
 
-### Requirements
+# Installation
+
+Follow these steps to install, set up and run the project locally. Make sure you have the prerequisites installed before you begin.
+
+### Prerequisites
 
 - Node v18.x
-- Git v2.3x
+- Git v2.3
 
-### Project Setup
+## - Step 1: Clone the repository 
 
-#### Steps:
+```
+git clone git@github.com:deriv-com/deriv-com-v2.git
+cd deriv-com-v2
+```
 
-1. clone the project: `git clone git@github.com:deriv-com/deriv-com-v2.git`
-2. cd into the folder: `cd deriv-com-v2`
-3. install the packages: `npm ci`
 
-### Commands
+## - Step 2: Install dependencies
+
+```
+npm ci
+```
+
+## - Step 3: Build/Run projects
+Inside the apps folder there can be multiple projects. Check `package.json` file to setup custom commands for each projects. To run `HK` project
 
 Develop HK Project:
 `npm run dev:hk`
@@ -34,3 +49,11 @@ Build Storybook:
 `npm run build-storybook`
 
 **Note:** the build files will be in: `dist/storybook/storybook-host`
+
+# Contributors
+
+- Deriv Frontend Team
+
+# References
+
+- [Deriv.com GitHub Repository](https://github.com/binary-com/deriv-com)
