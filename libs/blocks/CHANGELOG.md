@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.101.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.100.0...blocks-0.101.0) (2024-02-20)
+
+
+### Bug Fixes
+
+* condition for awards set padding ([103418d](https://github.com/deriv-com/deriv-com-v2/commit/103418dd7b106c5b84a365201d45deb910023d55))
+
 ## [0.100.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.99.0...blocks-0.100.0) (2024-02-20)
 
 
