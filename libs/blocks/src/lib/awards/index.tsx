@@ -1,6 +1,7 @@
 import React from 'react';
 import BlockWrapper from '../block-wrapper';
 import { FluidContainer } from '@deriv/quill-design';
+import clsx from 'clsx';
 
 export type AwardBlockProps = {
   title?: string;
@@ -17,7 +18,9 @@ export const AwardsBlock = ({
   return (
     <BlockWrapper title={title} description={description} className={className}>
       <FluidContainer className="flex justify-center">
-        <div className="pt-general-2xl">{awardsSet}</div>
+        <div className={clsx((title || description) && 'pt-general-2xl')}>
+          {awardsSet}
+        </div>
       </FluidContainer>
     </BlockWrapper>
   );
