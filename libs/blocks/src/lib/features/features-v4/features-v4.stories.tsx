@@ -17,6 +17,7 @@ export const Default: Story = {
     description:
       'Description goes here description goes here description goes here description goes here',
     children: <Text>Any Content here</Text>,
+    contentBottom: false,
     content: (
       <img
         className="flex w-full flex-1"

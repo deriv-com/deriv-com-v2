@@ -40,3 +40,33 @@ describe('FeaturesV4', () => {
     expect(data).toBeInTheDocument();
   });
 });
+
+describe('Content Position', () => {
+  it('Should render Feature Block correct content left', () => {
+    const { container } = render(
+      <FeaturesV4
+        title={title}
+        description={description}
+        content={content}
+        variant="content-left"
+      >
+        <Button>Click me</Button>
+      </FeaturesV4>,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('Should render Feature Block correct content right', () => {
+    const { container } = render(
+      <FeaturesV4
+        title={title}
+        description={description}
+        content={content}
+        variant="content-right"
+      >
+        <Button>Click me</Button>
+      </FeaturesV4>,
+    );
+    expect(container).toMatchSnapshot();
+  });
+});

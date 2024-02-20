@@ -6,14 +6,8 @@ import {
   Section,
   Text,
 } from '@deriv/quill-design';
-import { ReactNode } from 'react';
-import { bgColorVariantClass, BlockWrapperProps } from '../../block-wrapper';
-
-export interface FeaturesV4Props extends BlockWrapperProps {
-  content: ReactNode;
-  variant?: 'content-left' | 'content-right';
-  contentTop?: boolean;
-}
+import { bgColorVariantClass } from '../../block-wrapper';
+import { FeaturesV4Props } from '../types';
 
 export const FeaturesV4 = ({
   title,
@@ -22,8 +16,8 @@ export const FeaturesV4 = ({
   background = 'light',
   content,
   children,
-  variant = 'content-right',
-  contentTop = false,
+  variant = 'content-left',
+  contentBottom = false,
 }: FeaturesV4Props) => {
   return (
     <Section
@@ -35,16 +29,16 @@ export const FeaturesV4 = ({
     >
       <FluidContainer
         className={qtJoin(
-          'flex flex-col max-w-[1024px] items-center gap-gap-3xl lg:gap-gap-lg justify-center',
-          variant === 'content-left' ? 'lg:flex-row-reverse' : 'lg:flex-row',
-          contentTop && 'flex-col-reverse',
+          'flex max-w-[1024px] items-center gap-gap-3xl lg:gap-gap-lg justify-center',
+          variant === 'content-right' ? 'lg:flex-row-reverse' : 'lg:flex-row',
+          contentBottom ? 'flex-col-reverse' : 'flex-col',
         )}
       >
         <div className="flex">{content}</div>
         <div
           className={qtJoin(
             'flex flex-1 basis-full flex-col w-full',
-            variant === 'content-left'
+            variant === 'content-right'
               ? 'lg:pr-general-2xl'
               : 'lg:pl-general-2xl',
           )}

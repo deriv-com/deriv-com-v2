@@ -21,6 +21,8 @@ export const Default: Story = {
         <Text>Any Content here</Text>
       </div>
     ),
+    variant: 'content-right',
+    contentBottom: false,
     content: (
       <img
         className="flex w-full flex-1"
