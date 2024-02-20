@@ -6,7 +6,7 @@ exports[`Content Position > Should render Feature Block correct content left 1`]
     class="w-full py-general-4xl bg-background-primary-container"
   >
     <div
-      class="mx-auto w-full px-800 md:px-1200 min-[1232px]:px-general-none flex max-w-[1024px] items-center gap-gap-3xl lg:gap-gap-lg justify-center lg:flex-row flex-col"
+      class="mx-auto w-full px-800 md:px-1200 min-[1232px]:px-general-none flex max-w-[1024px] items-center gap-gap-3xl lg:gap-gap-lg justify-center max-lg:flex-col lg:flex-row"
     >
       <div
         class="flex"
@@ -55,7 +55,7 @@ exports[`Content Position > Should render Feature Block correct content right 1`
     class="w-full py-general-4xl bg-background-primary-container"
   >
     <div
-      class="mx-auto w-full px-800 md:px-1200 min-[1232px]:px-general-none flex max-w-[1024px] items-center gap-gap-3xl lg:gap-gap-lg justify-center lg:flex-row-reverse flex-col"
+      class="mx-auto w-full px-800 md:px-1200 min-[1232px]:px-general-none flex max-w-[1024px] items-center gap-gap-3xl lg:gap-gap-lg justify-center max-lg:flex-col lg:flex-row-reverse"
     >
       <div
         class="flex"

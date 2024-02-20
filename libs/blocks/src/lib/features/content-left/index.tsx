@@ -30,8 +30,8 @@ const ContentLeft = ({
       <FluidContainer
         className={clsx(
           variant === 'content-left' ? 'lg:flex-row-reverse' : 'lg:flex-row',
-          'flex flex-col gap-gap-3xl px-general-none lg:gap-gap-lg',
-          contentTop ? 'flex-col-reverse' : 'flex-col',
+          'flex gap-gap-3xl px-general-none lg:gap-gap-lg',
+          contentTop ? 'max-lg:flex-col-reverse' : 'max-lg:flex-col',
         )}
       >
         <div
