@@ -30,8 +30,8 @@ export const FeaturesV4 = ({
       <FluidContainer
         className={qtJoin(
           'flex max-w-[1024px] items-center gap-gap-3xl lg:gap-gap-lg justify-center',
+          contentBottom ? 'max-lg:flex-col-reverse' : 'max-lg:flex-col',
           variant === 'content-right' ? 'lg:flex-row-reverse' : 'lg:flex-row',
-          contentBottom ? 'flex-col-reverse' : 'flex-col',
         )}
       >
         <div className="flex">{content}</div>
@@ -45,7 +45,7 @@ export const FeaturesV4 = ({
         >
           {title && <Heading.H2>{title}</Heading.H2>}
           {description && <Text className="pt-general-md">{description}</Text>}
-          <div className="pt-general-2xl">{children}</div>
+          {children && <div className="pt-general-2xl">{children}</div>}
         </div>
       </FluidContainer>
     </Section>
