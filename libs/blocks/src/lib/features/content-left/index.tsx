@@ -36,7 +36,7 @@ const ContentLeft = ({
       >
         <div
           className={clsx(
-            'flex flex-1 basis-1/2 flex-col gap-general-2xl px-general-md lg:justify-center lg:gap-gap-3xl',
+            'flex flex-1 basis-1/2 flex-col gap-general-2xl px-general-md lg:justify-center lg:gap-gap-3xl lg:px-general-none',
             variant === 'content-left'
               ? 'lg:pl-general-xl'
               : 'lg:pr-general-2xl',
@@ -52,7 +52,7 @@ const ContentLeft = ({
           <div
             className={qtJoin(
               'flex flex-1 basis-1/2 justify-center',
-              contentPadding && 'px-general-md',
+              contentPadding && 'px-general-md lg:px-general-none',
             )}
           >
             <Content />
