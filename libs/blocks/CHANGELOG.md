@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.99.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.98.0...blocks-0.99.0) (2024-02-20)
+
+
+### Features
+
+* added content left and right to match v2 and v3 ([67c2f6e](https://github.com/deriv-com/deriv-com-v2/commit/67c2f6e883a1b43d644d2935a49b23e9ef3924df))
+* added features block v4 and v5 ([438fc7f](https://github.com/deriv-com/deriv-com-v2/commit/438fc7f8519678b45df874d7f51ab131018604db))
+
 ## [0.98.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.97.0...blocks-0.98.0) (2024-02-19)
 
 
