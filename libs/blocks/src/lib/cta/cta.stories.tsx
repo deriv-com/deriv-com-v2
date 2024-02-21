@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import CTABlock from '.';
-import { Button, Text } from '@deriv/quill-design';
+import { Text } from '@deriv/quill-design';
 
 const meta = {
   title: 'Blocks/CTABlock',
@@ -13,8 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const CTAContentLeft: Story = {
   args: {
-    lgTitle: 'Join over 2.5 million online traders worldwide',
-    smTitle: 'Join over 2.5 million online traders worldwide',
+    title: 'Join over 2.5 million online traders worldwide',
     description:
       'Description goes here Description goes here Description goes here Description goes here Description goes here Description goes here',
     children: <Text>This is the children</Text>,
@@ -37,8 +36,7 @@ export const CTAContentLeft: Story = {
 export const CTAContentRight: Story = {
   args: {
     variant: 'content-right',
-    lgTitle: 'Join over 2.5 million online traders worldwide',
-    smTitle: 'Join over 2.5 million online traders worldwide',
+    title: 'Join over 2.5 million online traders worldwide',
     description:
       'Description goes here Description goes here Description goes here Description goes here Description goes here Description goes here',
     children: <Text>This is the children</Text>,
