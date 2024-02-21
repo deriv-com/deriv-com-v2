@@ -39,7 +39,7 @@ export const CTABlock = ({
         >
           <div className="flex w-full flex-col gap-gap-lg sm:w-[50%] lg:w-full">
             {title && (
-              <Heading.H2 className="max-lg:text-solid-slate-50 lg:text-typography-prominent">
+              <Heading.H2 className="text-solid-slate-50 lg:text-typography-prominent">
                 {title}
               </Heading.H2>
             )}
