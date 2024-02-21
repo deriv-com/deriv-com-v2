@@ -11,37 +11,22 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    title: 'Title goes here',
-    description:
-      'Description goes here Description goes here Description goes here Description goes here Description goes here Description goes here',
-    children: <Text>This is the children</Text>,
-    content: (
-      <img
-        className="flex  rounded-xl"
-        src="https://placehold.co/608x480"
-        alt="Placeholder"
-      />
-    ),
-  },
-};
 export const CTAContentLeft: Story = {
   args: {
-    title: 'Title goes here',
-
+    lgTitle: 'Join over 2.5 million online traders worldwide',
+    smTitle: 'Join over 2.5 million online traders worldwide',
     description:
       'Description goes here Description goes here Description goes here Description goes here Description goes here Description goes here',
     children: <Text>This is the children</Text>,
     content: (
       <>
         <img
-          className="block  w-full flex-1  lg:hidden"
+          className="block h-full w-full object-cover lg:hidden"
           src="https://placehold.co/256x496"
           alt="Placeholder"
         />
         <img
-          className="hidden w-full rounded-xl lg:block"
+          className="relative hidden h-full w-full rounded-xl lg:block"
           src="https://placehold.co/608x480"
           alt="Placeholder"
         />
@@ -52,19 +37,20 @@ export const CTAContentLeft: Story = {
 export const CTAContentRight: Story = {
   args: {
     variant: 'content-right',
-    title: 'Title goes here',
+    lgTitle: 'Join over 2.5 million online traders worldwide',
+    smTitle: 'Join over 2.5 million online traders worldwide',
     description:
       'Description goes here Description goes here Description goes here Description goes here Description goes here Description goes here',
     children: <Text>This is the children</Text>,
     content: (
       <>
         <img
-          className="block  w-full lg:hidden"
+          className="block h-full w-full object-cover lg:hidden"
           src="https://placehold.co/420x230"
           alt="Placeholder"
         />
         <img
-          className="hidden w-full rounded-xl lg:block"
+          className="relative hidden h-full w-full rounded-xl lg:block"
           src="https://placehold.co/608x480"
           alt="Placeholder"
         />

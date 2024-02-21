@@ -4,7 +4,8 @@ import { Heading, Section, Text, qtMerge } from '@deriv/quill-design';
 export type CTABlockProps = {
   content?: React.ReactNode;
   children?: React.ReactNode;
-  title: React.ReactNode | string;
+  lgTitle: React.ReactNode | string;
+  smTitle?: React.ReactNode | string;
   description?: React.ReactNode | string;
   className?: string;
   variant?: 'content-left' | 'content-right';
@@ -12,7 +13,8 @@ export type CTABlockProps = {
 export const CTABlock = ({
   content,
   children,
-  title,
+  lgTitle,
+  smTitle,
   description,
   variant = 'content-left',
 }: CTABlockProps) => {
@@ -25,9 +27,12 @@ export const CTABlock = ({
         )}
       >
         {content && (
-          <div className="-z-10 h-full w-full overflow-hidden object-cover object-top max-lg:absolute lg:relative ">
-            {content}
-          </div>
+          <>
+            <div className="absolute inset-50 z-10 bg-cta-gradient lg:bg-none"></div>
+            <div className="-z-10 h-full w-full overflow-hidden  object-cover object-top max-lg:absolute lg:relative ">
+              {content}
+            </div>
+          </>
         )}
         <div
           className={qtMerge(
@@ -37,10 +42,13 @@ export const CTABlock = ({
             'flex w-full flex-col justify-center gap-gap-3xl px-general-lg pb-general-2xl md:justify-center lg:px-general-none lg:pb-general-none',
           )}
         >
-          <div className="flex w-full flex-col gap-gap-lg sm:w-[50%] lg:w-full">
-            {title && (
-              <Heading.H2 className="text-solid-slate-50 lg:text-typography-prominent">
-                {title}
+          <div className="flex w-full flex-col gap-gap-lg">
+            {lgTitle && (
+              <Heading.H2 className="hidden lg:block">{lgTitle}</Heading.H2>
+            )}
+            {smTitle && (
+              <Heading.H2 className="z-20 block text-solid-slate-50 max-sm:w-full sm:w-[350px] lg:hidden lg:w-full">
+                {smTitle}
               </Heading.H2>
             )}
             {description && <Text>{description}</Text>}
