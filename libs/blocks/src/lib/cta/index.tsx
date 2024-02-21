@@ -25,9 +25,12 @@ export const CTABlock = ({
         )}
       >
         {content && (
-          <div className="-z-10 h-full w-full overflow-hidden object-cover object-top max-lg:absolute lg:relative ">
-            {content}
-          </div>
+          <>
+            <div className="absolute inset-50 z-10 bg-cta-gradient lg:bg-none"></div>
+            <div className="-z-10 h-full w-full overflow-hidden  object-cover object-top max-lg:absolute lg:relative ">
+              {content}
+            </div>
+          </>
         )}
         <div
           className={qtMerge(
@@ -37,12 +40,16 @@ export const CTABlock = ({
             'flex w-full flex-col justify-center gap-gap-3xl px-general-lg pb-general-2xl md:justify-center lg:px-general-none lg:pb-general-none',
           )}
         >
-          <div className="flex w-full flex-col gap-gap-lg sm:w-[50%] lg:w-full">
+          <div className="flex w-full flex-col gap-gap-lg">
             {title && (
-              <Heading.H2 className="text-solid-slate-50 lg:text-typography-prominent">
-                {title}
-              </Heading.H2>
+              <>
+                <Heading.H2 className="hidden lg:block">{title}</Heading.H2>
+                <Heading.H2 className="z-20 block text-solid-slate-50 max-sm:w-full sm:w-[350px] lg:hidden lg:w-full">
+                  {title}
+                </Heading.H2>
+              </>
             )}
+
             {description && <Text>{description}</Text>}
           </div>
           {children && children}
