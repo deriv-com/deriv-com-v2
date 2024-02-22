@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.56.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.55.0...components-0.56.0) (2024-02-22)
+
+
+### Bug Fixes
+
+* added max width ([a229869](https://github.com/deriv-com/deriv-com-v2/commit/a229869cd49beaae017253b36ec9cf28b6b640cf))
+
 ## [0.55.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.54.0...components-0.55.0) (2024-02-19)
 
 
