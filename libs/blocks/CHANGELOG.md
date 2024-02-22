@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.107.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.106.0...blocks-0.107.0) (2024-02-22)
+
+
+### Bug Fixes
+
+* update home hero block ([91b5903](https://github.com/deriv-com/deriv-com-v2/commit/91b5903c6117a281244a0f9f5bb0516ca061d90d))
+
 ## [0.106.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.105.0...blocks-0.106.0) (2024-02-21)
 
 
