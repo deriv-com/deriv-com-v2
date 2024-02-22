@@ -22,6 +22,7 @@ export interface HomeHeroProps {
   awards?: ReactNode;
   backgroundImage: ReactNode;
   heroImage?: ReactNode;
+  heroImageClass?: string;
 }
 
 export type HeroVariants = {
