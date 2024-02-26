@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.109.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.108.0...blocks-0.109.0) (2024-02-26)
+
+
+### Bug Fixes
+
+* remove nav dropdown content lazy loading ([aa94674](https://github.com/deriv-com/deriv-com-v2/commit/aa946749d05060a192773da72a6eb4a1a76587ad))
+
 ## [0.108.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.107.0...blocks-0.108.0) (2024-02-22)
 
 ## [0.107.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.106.0...blocks-0.107.0) (2024-02-22)
