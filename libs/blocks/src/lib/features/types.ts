@@ -5,6 +5,7 @@ import {
 } from '@deriv-com/components';
 import { Section } from '@deriv/quill-design';
 import { ComponentProps, ReactNode } from 'react';
+import { BlockWrapperProps } from '../block-wrapper';
 
 type SectionProps = Omit<ComponentProps<typeof Section>, 'title'>;
 
@@ -26,6 +27,14 @@ export interface ContentLeftProps {
   content?: React.FC;
   children?: ReactNode;
   variant?: 'content-left' | 'content-right';
+  contentTop?: boolean;
+  contentPadding?: boolean;
+}
+
+export interface FeaturesV4Props extends BlockWrapperProps {
+  content: ReactNode;
+  variant?: 'content-left' | 'content-right';
+  contentBottom?: boolean;
 }
 
 export interface ContentSliderProps<T extends CardVariantType> {

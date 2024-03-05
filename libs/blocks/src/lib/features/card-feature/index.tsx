@@ -22,7 +22,7 @@ const Card = ({
 }: FeatureCardProps) => {
   return (
     <Section
-      className={clsx(
+      className={qtMerge(
         hasPadding ? 'py-general-4xl' : 'py-general-xl',
         'bg-background-primary-container',
         className,
