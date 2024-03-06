@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.110.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.109.0...blocks-0.110.0) (2024-03-06)
+
+
+### Bug Fixes
+
+* id is not accepted in accordion ([a64cb4f](https://github.com/deriv-com/deriv-com-v2/commit/a64cb4febc36c2a52c01eeeaf5cfe0711090011f))
+
 ## [0.109.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.108.0...blocks-0.109.0) (2024-02-26)
 
 
