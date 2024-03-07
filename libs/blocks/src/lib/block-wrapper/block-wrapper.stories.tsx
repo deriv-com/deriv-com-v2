@@ -18,7 +18,7 @@ export const Default: Story = {
   },
 };
 
-export const BloclWrapperWithContent: Story = {
+export const BlockWrapperWithContent: Story = {
   args: {
     title: 'Title goes here',
     description: 'Description goes here',
