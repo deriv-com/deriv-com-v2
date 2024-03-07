@@ -1,8 +1,5 @@
 import { LiveMarket, Tab } from '@deriv-com/components';
-import { ComponentProps } from 'react';
-
-export type LiveMarketTabType = ComponentProps<typeof LiveMarket.Container> &
-  ComponentProps<typeof Tab.Base>;
+import { LiveMarketTabType } from '../types';
 
 export const LiveMarketTab = ({
   header,

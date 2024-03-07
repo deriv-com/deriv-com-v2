@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import {
   FluidContainer,
   Heading,
@@ -6,20 +5,8 @@ import {
   Text,
   qtMerge,
 } from '@deriv/quill-design';
-import {
-  CardContent,
-  CardVariantType,
-  CardsContainer,
-} from '@deriv-com/components';
-
-export type PlatformBlockCardProps = {
-  header?: ReactNode;
-  description?: ReactNode;
-  className?: string;
-  cards?: CardContent[];
-  cols?: 'two' | 'three' | 'four';
-  variant?: CardVariantType;
-};
+import { CardsContainer } from '@deriv-com/components';
+import { PlatformBlockCardProps } from '../types';
 
 const PlatformBlockCard = ({
   header,

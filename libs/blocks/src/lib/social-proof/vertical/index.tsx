@@ -6,13 +6,9 @@ import {
   qtMerge,
 } from '@deriv/quill-design';
 import { Rating } from '@deriv-com/components';
-import { SocialProofProps } from '../types';
+import { SocialProofVerticalProps } from '../types';
 import { getThemeClassNames } from '../classnames';
 import { redirectToTrustpilot } from '../helper';
-
-export interface SocialProofVerticalProps extends SocialProofProps {
-  title?: string;
-}
 
 const SocialProofVertical = ({
   title,

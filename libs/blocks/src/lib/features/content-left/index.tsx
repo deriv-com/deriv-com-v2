@@ -1,15 +1,12 @@
-import { FluidContainer, Heading, Section, Text } from '@deriv/quill-design';
+import {
+  FluidContainer,
+  Heading,
+  Section,
+  Text,
+  qtJoin,
+} from '@deriv/quill-design';
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
-
-export interface ContentLeftProps {
-  title: ReactNode;
-  className?: string;
-  description?: ReactNode;
-  content?: React.FC;
-  children?: ReactNode;
-  variant?: 'content-left' | 'content-right';
-}
+import { ContentLeftProps } from '../types';
 
 // trigger deployment - 5
 const ContentLeft = ({
@@ -19,6 +16,8 @@ const ContentLeft = ({
   children,
   content: Content,
   variant = 'content-left',
+  contentTop = false,
+  contentPadding = true,
 }: ContentLeftProps) => {
   return (
     <Section
@@ -31,12 +30,13 @@ const ContentLeft = ({
       <FluidContainer
         className={clsx(
           variant === 'content-left' ? 'lg:flex-row-reverse' : 'lg:flex-row',
-          'flex flex-col gap-gap-xl lg:gap-gap-lg',
+          'flex gap-gap-3xl px-general-none lg:gap-gap-lg',
+          contentTop ? 'max-lg:flex-col-reverse' : 'max-lg:flex-col',
         )}
       >
         <div
           className={clsx(
-            'flex flex-1 basis-1/2 flex-col gap-general-2xl lg:justify-center lg:gap-gap-3xl',
+            'flex flex-1 basis-1/2 flex-col gap-general-2xl px-general-md lg:justify-center lg:gap-gap-3xl lg:px-general-none',
             variant === 'content-left'
               ? 'lg:pl-general-xl'
               : 'lg:pr-general-2xl',
@@ -49,7 +49,12 @@ const ContentLeft = ({
           {children && children}
         </div>
         {Content && (
-          <div className="flex flex-1 basis-1/2 justify-center">
+          <div
+            className={qtJoin(
+              'flex flex-1 basis-1/2 justify-center',
+              contentPadding && 'px-general-md lg:px-general-none',
+            )}
+          >
             <Content />
           </div>
         )}

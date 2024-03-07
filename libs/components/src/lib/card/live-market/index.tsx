@@ -78,7 +78,7 @@ export const LiveMarketCard: React.FC<LiveMarketCardProps> = ({
       )}
     >
       <div className="flex h-[52px] shrink-0 grow flex-row justify-between gap-gap-sm">
-        <div className="flex max-w-[141px] flex-1 flex-row gap-gap-md">
+        <div className="flex max-w-[151px] flex-1 flex-row gap-gap-md">
           <div className={clsx(status === 'closed' && 'opacity-600')}>
             {instrumentIcon}
           </div>

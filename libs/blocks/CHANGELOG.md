@@ -2,6 +2,151 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.110.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.109.0...blocks-0.110.0) (2024-03-06)
+
+
+### Bug Fixes
+
+* id is not accepted in accordion ([a64cb4f](https://github.com/deriv-com/deriv-com-v2/commit/a64cb4febc36c2a52c01eeeaf5cfe0711090011f))
+
+## [0.109.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.108.0...blocks-0.109.0) (2024-02-26)
+
+
+### Bug Fixes
+
+* remove nav dropdown content lazy loading ([aa94674](https://github.com/deriv-com/deriv-com-v2/commit/aa946749d05060a192773da72a6eb4a1a76587ad))
+
+## [0.108.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.107.0...blocks-0.108.0) (2024-02-22)
+
+## [0.107.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.106.0...blocks-0.107.0) (2024-02-22)
+
+
+### Bug Fixes
+
+* update home hero block ([91b5903](https://github.com/deriv-com/deriv-com-v2/commit/91b5903c6117a281244a0f9f5bb0516ca061d90d))
+
+## [0.106.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.105.0...blocks-0.106.0) (2024-02-21)
+
+
+### Bug Fixes
+
+* cta fixes ([7b88ef7](https://github.com/deriv-com/deriv-com-v2/commit/7b88ef757ebdec1fcda286f2145fb7e5a177feb0))
+* title fixes ([fd78cce](https://github.com/deriv-com/deriv-com-v2/commit/fd78cceaa34863bc358ba291964751e15b86a3e5))
+
+## [0.105.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.104.0...blocks-0.105.0) (2024-02-21)
+
+## [0.104.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.103.0...blocks-0.104.0) (2024-02-21)
+
+
+### Bug Fixes
+
+* text color fix ([56d04aa](https://github.com/deriv-com/deriv-com-v2/commit/56d04aa854f9af5c34987370f4646550c23495ab))
+
+## [0.103.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.102.0...blocks-0.103.0) (2024-02-20)
+
+
+### Bug Fixes
+
+* cta fixes ([f7bbe17](https://github.com/deriv-com/deriv-com-v2/commit/f7bbe1750a94ad9c0f63c11ff4d90ed4306d57fa))
+
+## [0.102.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.101.0...blocks-0.102.0) (2024-02-20)
+
+## [0.101.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.100.0...blocks-0.101.0) (2024-02-20)
+
+
+### Bug Fixes
+
+* condition for awards set padding ([103418d](https://github.com/deriv-com/deriv-com-v2/commit/103418dd7b106c5b84a365201d45deb910023d55))
+
+## [0.100.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.99.0...blocks-0.100.0) (2024-02-20)
+
+
+### Bug Fixes
+
+* cta fixes ([40ab460](https://github.com/deriv-com/deriv-com-v2/commit/40ab460b13c336bb2eb68dcaaf9ce949aac6d958))
+
+## [0.99.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.98.0...blocks-0.99.0) (2024-02-20)
+
+
+### Features
+
+* added content left and right to match v2 and v3 ([67c2f6e](https://github.com/deriv-com/deriv-com-v2/commit/67c2f6e883a1b43d644d2935a49b23e9ef3924df))
+* added features block v4 and v5 ([438fc7f](https://github.com/deriv-com/deriv-com-v2/commit/438fc7f8519678b45df874d7f51ab131018604db))
+
+## [0.98.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.97.0...blocks-0.98.0) (2024-02-19)
+
+
+### Bug Fixes
+
+* export cta ([210c2ae](https://github.com/deriv-com/deriv-com-v2/commit/210c2aef7d58b6c0406a222072048908221ccac0))
+
+## [0.97.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.96.0...blocks-0.97.0) (2024-02-19)
+
+
+### Bug Fixes
+
+* stats v3 block gap issue ([5077187](https://github.com/deriv-com/deriv-com-v2/commit/5077187a338e29da9bdb1f24aca24e38afbe57bc))
+
+## [0.96.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.95.0...blocks-0.96.0) (2024-02-16)
+
+
+### Bug Fixes
+
+* cta block fixes ([16595ae](https://github.com/deriv-com/deriv-com-v2/commit/16595ae92c5b483971b412c498c67a0a31fd0a79))
+* export cta block ([64f4f31](https://github.com/deriv-com/deriv-com-v2/commit/64f4f31a6733ba2460710e00433c03c56c93926e))
+
+## [0.95.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.94.0...blocks-0.95.0) (2024-02-15)
+
+
+### Bug Fixes
+
+* cta variant fix ([d00a0fb](https://github.com/deriv-com/deriv-com-v2/commit/d00a0fb6c661d4a92a0d087e8702c9eb05be1c82))
+
+## [0.94.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.93.0...blocks-0.94.0) (2024-02-15)
+
+## [0.93.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.92.0...blocks-0.93.0) (2024-02-14)
+
+
+### Bug Fixes
+
+* ts fix ([4b304fc](https://github.com/deriv-com/deriv-com-v2/commit/4b304fcd5c37f2fcbbbf5ab918e45a3aa386d0fd))
+
+## [0.92.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.91.0...blocks-0.92.0) (2024-02-08)
+
+## [0.91.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.90.0...blocks-0.91.0) (2024-02-08)
+
+## [0.90.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.89.0...blocks-0.90.0) (2024-02-07)
+
+## [0.89.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.88.0...blocks-0.89.0) (2024-02-02)
+
+## [0.88.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.87.0...blocks-0.88.0) (2024-02-02)
+
+
+### Bug Fixes
+
+* export vertical props types ([4f7dac0](https://github.com/deriv-com/deriv-com-v2/commit/4f7dac0ff487e527d0a76985758232d99b75204f))
+
+## [0.87.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.86.0...blocks-0.87.0) (2024-02-01)
+
+## [0.86.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.85.0...blocks-0.86.0) (2024-01-31)
+
+
+### Bug Fixes
+
+* exported social proof types ([714b42e](https://github.com/deriv-com/deriv-com-v2/commit/714b42e0f2d83781b93ec69bb2800e5d509ec97a))
+
+## [0.85.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.84.0...blocks-0.85.0) (2024-01-31)
+
+
+### Bug Fixes
+
+* added heroblock props and removed duplicates ([6793e99](https://github.com/deriv-com/deriv-com-v2/commit/6793e990a940074387531fd56f73409f1babeefa))
+* fixed import issue ([4019975](https://github.com/deriv-com/deriv-com-v2/commit/401997548300bf07c66d343890498bb9afd686ae))
+
+## [0.84.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.83.0...blocks-0.84.0) (2024-01-30)
+
+## [0.83.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.82.0...blocks-0.83.0) (2024-01-30)
+
 ## [0.82.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.81.0...blocks-0.82.0) (2024-01-26)
 
 ## [0.81.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.80.0...blocks-0.81.0) (2024-01-26)

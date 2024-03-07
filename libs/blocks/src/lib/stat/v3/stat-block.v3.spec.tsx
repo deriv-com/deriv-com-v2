@@ -1,6 +1,7 @@
 import { cleanup, render, screen } from '@testing-library/react';
-import V3StatBlock, { V3Item } from '.';
+import V3StatBlock from '.';
 import '@testing-library/jest-dom';
+import { V3Item } from '..';
 
 const cards: V3Item[] = [
   { id: 1, title: 'Header one', description: 'description one' },

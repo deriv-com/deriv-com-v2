@@ -1,17 +1,6 @@
-import { ComponentProps } from 'react';
-import {
-  CardSlider,
-  CardSliderProps,
-  CardVariantType,
-} from '@deriv-com/components';
+import { CardSlider, CardVariantType } from '@deriv-com/components';
 import { LiveMarket } from '@deriv-com/components';
-
-export type LiveMarketProps<T extends CardVariantType> = Omit<
-  ComponentProps<typeof LiveMarket.Container>,
-  'children'
-> & {
-  cardSliderProps?: CardSliderProps<T>;
-};
+import { LiveMarketProps } from '../types';
 
 export const LiveMarketSlider = <T extends CardVariantType>({
   header,

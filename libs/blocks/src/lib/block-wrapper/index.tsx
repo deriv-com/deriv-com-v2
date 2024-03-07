@@ -7,9 +7,9 @@ import {
 } from '@deriv/quill-design';
 import { ReactNode } from 'react';
 
-type BgVariant = 'light' | 'gray';
+export type BgVariant = 'light' | 'gray';
 
-const bgColorVariantClass: { [key in BgVariant]: string } = {
+export const bgColorVariantClass: { [key in BgVariant]: string } = {
   light: 'bg-background-primary-container',
   gray: 'bg-background-primary-base',
 };
