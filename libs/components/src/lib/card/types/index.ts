@@ -4,6 +4,7 @@ export type StatCardVariant = 'white' | 'dark' | 'coral';
 export type CardColorVariant = 'light' | 'gray';
 export type CardAlignVariant = 'start' | 'center';
 export type CardSizeVariant = 'xs' | 'sm' | 'md' | 'lg';
+export type CardLinkTargetVariant = '_blank' | '_self' | '_parent' | '_top';
 
 interface BaseCardContent {
   header?: ReactNode;
@@ -14,6 +15,7 @@ interface LinkProps {
   content: ReactNode;
   href: string;
   descriptiveText?: string;
+  target?: CardLinkTargetVariant;
 }
 
 export interface StatCardContent extends BaseCardContent {
