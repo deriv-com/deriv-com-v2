@@ -4,7 +4,7 @@ export const CTARight = ({
   variant = 'content-right',
   ...rest
 }: CTABlockProps) => {
-  return <CTALeft variant={variant} {...rest}></CTALeft>;
+  return <CTALeft variant={variant} {...rest} />;
 };
 
 export default CTARight;

@@ -6,6 +6,7 @@ const ContentLess = ({
   title,
   description,
   children,
+  background,
 }: HeroBlockProps) => {
   return (
     <BlockWrapper
@@ -13,7 +14,7 @@ const ContentLess = ({
       description={description}
       heading="H1"
       className={className}
-      background="light"
+      background={background}
     >
       {children}
     </BlockWrapper>
