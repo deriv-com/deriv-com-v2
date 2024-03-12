@@ -3,7 +3,7 @@ import FooterCTABlock from '.';
 import { Heading, Button } from '@deriv/quill-design';
 
 const meta = {
-  title: 'Blocks/CTA',
+  title: 'Blocks/CTA/FooterCTABlock',
   component: FooterCTABlock,
   tags: ['autodocs'],
   argTypes: {
