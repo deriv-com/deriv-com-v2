@@ -13,6 +13,7 @@ export type HeroBlockProps = {
   content?: ReactNode;
   children?: ReactNode;
   className?: string;
+  background?: 'gray' | 'light';
 };
 
 export interface HomeHeroProps {

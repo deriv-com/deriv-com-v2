@@ -1,4 +1,3 @@
-import Content from '../content';
 import BlockWrapper from '../../block-wrapper';
 import { HeroBlockProps } from '..';
 
@@ -7,12 +6,17 @@ const ContentLess = ({
   title,
   description,
   children,
+  background,
 }: HeroBlockProps) => {
   return (
-    <BlockWrapper className={className} background="light">
-      <Content title={title} description={description} center={true}>
-        {children}
-      </Content>
+    <BlockWrapper
+      title={title}
+      description={description}
+      heading="H1"
+      className={className}
+      background={background}
+    >
+      {children}
     </BlockWrapper>
   );
 };
