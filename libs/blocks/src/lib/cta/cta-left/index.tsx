@@ -44,7 +44,7 @@ export const CTALeft = ({
             {title && (
               <>
                 <Heading.H2 className="hidden lg:block">{title}</Heading.H2>
-                <Heading.H2 className="z-20 block text-solid-slate-50 max-sm:w-full sm:w-[350px] lg:hidden lg:w-full">
+                <Heading.H2 className="z-20 block w-full text-solid-slate-50 sm:w-[350px] lg:hidden">
                   {title}
                 </Heading.H2>
               </>
