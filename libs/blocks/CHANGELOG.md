@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.113.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.112.0...blocks-0.113.0) (2024-03-12)
+
+
+### Features
+
+* added new cta block varient ([a472c2c](https://github.com/deriv-com/deriv-com-v2/commit/a472c2c16cd487d37ada9343649b7ef78342486f))
+* addressed hasans comment ([e383450](https://github.com/deriv-com/deriv-com-v2/commit/e383450de09dd5ae45a7eec2068dd43d2ac71438))
+* removed harcoded bg and updated code ([f0f8cbc](https://github.com/deriv-com/deriv-com-v2/commit/f0f8cbc665028d67985cd60dd6aa5e2c676e5f5e))
+* removed max lg ([4ed090d](https://github.com/deriv-com/deriv-com-v2/commit/4ed090dd92d7ffa7ed0e0079e7c2d2055248ef58))
+
 ## [0.112.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.111.0...blocks-0.112.0) (2024-03-11)
 
 
