@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.57.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.56.0...components-0.57.0) (2024-03-11)
+
+
+### Bug Fixes
+
+* added target prop to link props ([8043e4a](https://github.com/deriv-com/deriv-com-v2/commit/8043e4ae91f765c4210aef1f5b8259583f07bc85))
+* passed target props in component ([deb46b5](https://github.com/deriv-com/deriv-com-v2/commit/deb46b57238eae256f6c7cb8fd943f62d0431301))
+
 ## [0.56.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.55.0...components-0.56.0) (2024-02-22)
 
 

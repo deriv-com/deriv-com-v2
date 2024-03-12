@@ -109,6 +109,7 @@ export const BaseCard: React.FC<BaseCardProps> = ({
             size="md"
             descriptiveText={link?.descriptiveText}
             hasIcon
+            target={link?.target || '_self'}
           >
             {link.content}
           </CustomLink>

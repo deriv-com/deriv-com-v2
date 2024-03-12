@@ -11,11 +11,11 @@ import {
   qtJoin,
   qtMerge,
 } from '@deriv/quill-design';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import styles from './styles.module.scss';
 
 export interface AccordionBlockProps {
-  title?: string;
+  title?: ReactNode | string;
   tab?: {
     align?: 'center' | 'end';
     data: { id: number; title: string }[];

@@ -22,7 +22,7 @@ export const ContentText = ({
       )}
     >
       <FluidContainer className="md:px-general-xl lg:max-w-[816px] lg:px-general-none">
-        <div className="flex flex-col gap-gap-xl">
+        <div className="flex flex-col gap-gap-lg">
           {title && <Heading.H2>{title}</Heading.H2>}
           {children}
         </div>
