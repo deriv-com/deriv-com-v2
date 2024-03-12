@@ -27,7 +27,7 @@ export const CTALeft = ({
         {content && (
           <>
             <div className="absolute inset-50 z-10 bg-cta-gradient lg:bg-none"></div>
-            <div className="-z-10 h-full w-full overflow-hidden  object-cover object-top max-lg:absolute lg:relative ">
+            <div className="absolute -z-10 h-full w-full  overflow-hidden object-cover object-top lg:relative ">
               {content}
             </div>
           </>
