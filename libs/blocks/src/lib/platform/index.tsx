@@ -2,6 +2,8 @@ import { ReactNode } from 'react';
 import PlatformBlockTab from './tab';
 import PlatformBlockCard from './card';
 
+export * from './types';
+
 export type PlatformBlockType = {
   Tab: typeof PlatformBlockTab;
   Card: typeof PlatformBlockCard;

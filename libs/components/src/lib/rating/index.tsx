@@ -59,12 +59,22 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
 
   const BoxSizeClassName = {
     sm: 'w-1200 h-1200',
-    md: 'lg:w-[96px] lg:h-[96px] w-[48px] h-[48px]',
+    md: 'max-lg:w-[48px] max-lg:h-[48px] lg:w-[96px] lg:h-[96px]',
   };
 
   const StarClassName = {
     sm: 'p-general-2xs',
     md: 'lg:px-700 lg:py-800 px-500 py-400',
+  };
+
+  const iconProps = {
+    fill: '#ffffff',
+    fillOpacity: 1,
+    width: 100,
+    ...(size === 'md' && {
+      height: 100,
+      className: StarClassName[size],
+    }),
   };
 
   return (
@@ -88,13 +98,7 @@ const StarBox = ({ percent, colorKey = 0, size = 'md' }: StarBoxProps) => {
         )}
       />
       <div className="absolute left-50 top-50 flex h-full w-full items-center justify-center">
-        <LabelPairedTrustpilotMdIcon
-          width={100}
-          height={100}
-          className={StarClassName[size]}
-          fill="#ffffff"
-          fillOpacity={1}
-        />
+        <LabelPairedTrustpilotMdIcon {...iconProps} />
       </div>
     </div>
   );

@@ -2,6 +2,51 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.57.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.56.0...components-0.57.0) (2024-03-11)
+
+
+### Bug Fixes
+
+* added target prop to link props ([8043e4a](https://github.com/deriv-com/deriv-com-v2/commit/8043e4ae91f765c4210aef1f5b8259583f07bc85))
+* passed target props in component ([deb46b5](https://github.com/deriv-com/deriv-com-v2/commit/deb46b57238eae256f6c7cb8fd943f62d0431301))
+
+## [0.56.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.55.0...components-0.56.0) (2024-02-22)
+
+
+### Bug Fixes
+
+* added max width ([a229869](https://github.com/deriv-com/deriv-com-v2/commit/a229869cd49beaae017253b36ec9cf28b6b640cf))
+
+## [0.55.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.54.0...components-0.55.0) (2024-02-19)
+
+
+### Bug Fixes
+
+* rating size on lg ([80c0858](https://github.com/deriv-com/deriv-com-v2/commit/80c0858f1292efaeb8a699edfd594040c7cce5c7))
+
+## [0.54.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.53.0...components-0.54.0) (2024-02-13)
+
+
+### Bug Fixes
+
+* added width ([d3b4d40](https://github.com/deriv-com/deriv-com-v2/commit/d3b4d4035b85536b16e3e9aafcb239bb25895bc5))
+
+## [0.53.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.52.0...components-0.53.0) (2024-02-13)
+
+
+### Bug Fixes
+
+* added condition for horizontal ([fdde7e8](https://github.com/deriv-com/deriv-com-v2/commit/fdde7e88cc511af024fb131368f5ef2f190cf2d0))
+* refactor ([ff65319](https://github.com/deriv-com/deriv-com-v2/commit/ff65319a8bce259dae1b0de04025cdae5d177811))
+* removed icon class name ([143c428](https://github.com/deriv-com/deriv-com-v2/commit/143c428ce48a05a71522fa3e0e7264b9ac3af15b))
+
+## [0.52.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.51.0...components-0.52.0) (2024-01-31)
+
+
+### Features
+
+* :sparkles: add direction props for swiper slider ([6a7ca58](https://github.com/deriv-com/deriv-com-v2/commit/6a7ca58a217f0eb96c5040a1ced81c7ee0face84))
+
 ## [0.51.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.50.0...components-0.51.0) (2024-01-26)
 
 ## [0.50.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.49.0...components-0.50.0) (2024-01-23)

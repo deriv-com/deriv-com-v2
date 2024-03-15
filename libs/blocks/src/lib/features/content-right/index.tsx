@@ -1,23 +1,8 @@
-import ContentLeft, { ContentLeftProps } from '../content-left';
+import ContentLeft from '../content-left';
+import { ContentLeftProps } from '../types';
 
-const ContentRight = ({
-  title,
-  className,
-  description,
-  children,
-  content,
-}: Omit<ContentLeftProps, 'variant'>) => {
-  return (
-    <ContentLeft
-      title={title}
-      variant="content-right"
-      description={description}
-      content={content}
-      className={className}
-    >
-      {children}
-    </ContentLeft>
-  );
+const ContentRight = ({ ...rest }: Omit<ContentLeftProps, 'variant'>) => {
+  return <ContentLeft variant="content-right" {...rest} />;
 };
 
 export default ContentRight;

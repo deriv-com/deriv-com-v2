@@ -13,8 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    className:
-      'my-1000 bg-background-primary-container max-sm:px-800 max-lg:px-1200',
+    className: 'bg-background-primary-container',
     title: 'Title here',
     description:
       'Description goes here description goes here description goes here description goes here',
@@ -23,6 +22,8 @@ export const Default: Story = {
         <Text>Any Content here</Text>
       </div>
     ),
+    contentPadding: true,
+    contentTop: false,
     content: () => (
       <img
         className="flex w-full flex-1"

@@ -11,11 +11,11 @@ import {
   qtJoin,
   qtMerge,
 } from '@deriv/quill-design';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import styles from './styles.module.scss';
 
 export interface AccordionBlockProps {
-  title?: string;
+  title?: ReactNode | string;
   tab?: {
     align?: 'center' | 'end';
     data: { id: number; title: string }[];
@@ -105,13 +105,13 @@ export function AccordionBlock({
         <div className={content?.className}>
           {content &&
             content.data[selectedChip].map((accData) => {
-              const { title: accTitle } = accData;
-              const id = slugify(accTitle as string);
+              const { title: accTitle, id } = accData;
+              const dataId = id || slugify(accTitle as string);
 
               return (
                 <DynamicAccordion
                   {...accData}
-                  id={id}
+                  id={dataId}
                   key={accTitle}
                   expanded={multiCollapse ? false : expanded === accTitle}
                   onExpand={(isExpanded, id) => handleExpand(isExpanded, id)}

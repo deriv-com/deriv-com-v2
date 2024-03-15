@@ -1,19 +1,13 @@
 import { Heading, qtMerge } from '@deriv/quill-design';
 import BlockWrapper from '../../block-wrapper';
-
-export interface ContentBottomProps {
-  title: string;
-  className?: string;
-  containerClassName?: string;
-  children: React.ReactNode;
-}
+import { HeroBlockProps } from '..';
 
 const ContentBottom = ({
   className = '',
   containerClassName = '',
   title,
   children,
-}: ContentBottomProps) => {
+}: HeroBlockProps) => {
   return (
     <BlockWrapper background="light" className={className}>
       <div className={qtMerge('flex flex-col gap-gap-3xl', containerClassName)}>

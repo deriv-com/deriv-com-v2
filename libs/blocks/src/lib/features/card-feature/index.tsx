@@ -6,25 +6,8 @@ import {
   Text,
   qtMerge,
 } from '@deriv/quill-design';
-import { ComponentProps, ReactNode } from 'react';
-import {
-  CardContent,
-  CardVariantType,
-  CardsContainer,
-} from '@deriv-com/components';
-
-type SectionProps = Omit<ComponentProps<typeof Section>, 'title'>;
-
-export type FeatureCardProps = SectionProps & {
-  title?: ReactNode;
-  description?: ReactNode;
-  cta?: ReactNode;
-  className?: string;
-  cards?: CardContent[];
-  cols?: 'two' | 'three' | 'four';
-  variant?: CardVariantType;
-  hasPadding?: boolean;
-};
+import { CardsContainer } from '@deriv-com/components';
+import { FeatureCardProps } from '../types';
 
 const Card = ({
   title,
@@ -39,7 +22,7 @@ const Card = ({
 }: FeatureCardProps) => {
   return (
     <Section
-      className={clsx(
+      className={qtMerge(
         hasPadding ? 'py-general-4xl' : 'py-general-xl',
         'bg-background-primary-container',
         className,

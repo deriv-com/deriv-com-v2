@@ -1,0 +1,99 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Content Position > Should render Feature Block correct content left 1`] = `
+<div>
+  <section
+    class="w-full py-general-4xl bg-background-primary-container"
+  >
+    <div
+      class="mx-auto w-full px-800 md:px-1200 min-[1232px]:px-general-none flex max-w-[1024px] items-center gap-gap-3xl lg:gap-gap-lg justify-center max-lg:flex-col lg:flex-row"
+    >
+      <div
+        class="flex"
+      >
+        <h3
+          class="font-heading text-heading-h3 font-bold leading-heading-h3 space-y-paragraphSpacing-heading-h3 text-typography-prominent"
+        >
+          content
+        </h3>
+      </div>
+      <div
+        class="flex flex-1 basis-full flex-col w-full lg:pl-general-2xl"
+      >
+        <h2
+          class="font-heading text-heading-h2 font-bold leading-heading-h2 space-y-paragraphSpacing-heading-h2 text-typography-prominent"
+        >
+          this is title
+        </h2>
+        <p
+          class="font-regular text-typography-default text-body-md leading-body-md space-y-paragraphSpacing-body-md pt-general-md"
+        >
+          this is description
+        </p>
+        <div
+          class="pt-general-2xl"
+        >
+          <button
+            class="transition-colors duration-150 ease-in-out font-bold disabled:opacity-600 disabled:cursor-not-allowed flex items-center justify-center cursor-pointer bg-solid-coral-700 text-solid-slate-50 enabled:hover:bg-solid-coral-800 enabled:active:bg-solid-coral-900 rounded-600 text-body-sm leading-body-sm h-[32px] min-w-[64px] px-600 py-300 gap-300"
+          >
+            <span
+              class="flex-1"
+            >
+              Click me
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Content Position > Should render Feature Block correct content right 1`] = `
+<div>
+  <section
+    class="w-full py-general-4xl bg-background-primary-container"
+  >
+    <div
+      class="mx-auto w-full px-800 md:px-1200 min-[1232px]:px-general-none flex max-w-[1024px] items-center gap-gap-3xl lg:gap-gap-lg justify-center max-lg:flex-col lg:flex-row-reverse"
+    >
+      <div
+        class="flex"
+      >
+        <h3
+          class="font-heading text-heading-h3 font-bold leading-heading-h3 space-y-paragraphSpacing-heading-h3 text-typography-prominent"
+        >
+          content
+        </h3>
+      </div>
+      <div
+        class="flex flex-1 basis-full flex-col w-full lg:pr-general-2xl"
+      >
+        <h2
+          class="font-heading text-heading-h2 font-bold leading-heading-h2 space-y-paragraphSpacing-heading-h2 text-typography-prominent"
+        >
+          this is title
+        </h2>
+        <p
+          class="font-regular text-typography-default text-body-md leading-body-md space-y-paragraphSpacing-body-md pt-general-md"
+        >
+          this is description
+        </p>
+        <div
+          class="pt-general-2xl"
+        >
+          <button
+            class="transition-colors duration-150 ease-in-out font-bold disabled:opacity-600 disabled:cursor-not-allowed flex items-center justify-center cursor-pointer bg-solid-coral-700 text-solid-slate-50 enabled:hover:bg-solid-coral-800 enabled:active:bg-solid-coral-900 rounded-600 text-body-sm leading-body-sm h-[32px] min-w-[64px] px-600 py-300 gap-300"
+          >
+            <span
+              class="flex-1"
+            >
+              Click me
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

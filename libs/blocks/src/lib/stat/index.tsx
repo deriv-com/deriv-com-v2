@@ -22,3 +22,5 @@ StatBlock.V2 = V2StatBlock;
 StatBlock.V3 = V3StatBlock;
 
 export default StatBlock;
+
+export * from './types';
