@@ -11,6 +11,7 @@ export const MobileNav: React.FC<NavigationProps> = ({
   renderButtons,
   hasLanguageSwitch,
   topNavigation,
+  mobileWrapClass,
 }) => {
   return (
     <FluidContainer
@@ -20,7 +21,7 @@ export const MobileNav: React.FC<NavigationProps> = ({
       {topNavigation?.()}
       <nav className="flex min-h-[80px] w-full flex-row items-center justify-between md:gap-gap-3xl">
         {renderLogo?.()}
-        <NavMobileWrapper>
+        <NavMobileWrapper mobileWrapClass={mobileWrapClass}>
           <div className="flex h-full flex-col justify-between">
             <MobileHeader />
             <div className="relative flex flex-1 flex-col justify-between px-general-2xl pb-general-lg sm:pb-general-md">

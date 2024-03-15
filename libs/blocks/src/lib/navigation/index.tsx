@@ -9,6 +9,7 @@ export interface NavigationProps {
   items?: NavLinkItems;
   hasLanguageSwitch?: boolean;
   topNavigation?: () => ReactNode;
+  mobileWrapClass?: string;
 }
 
 export const NavigationBlock = ({
@@ -17,6 +18,7 @@ export const NavigationBlock = ({
   items = {},
   hasLanguageSwitch = true,
   topNavigation,
+  mobileWrapClass,
 }: NavigationProps) => {
   return (
     <NavigationProvider navItems={items}>
@@ -32,6 +34,7 @@ export const NavigationBlock = ({
         renderLogo={renderLogo}
         hasLanguageSwitch={hasLanguageSwitch}
         topNavigation={topNavigation}
+        mobileWrapClass={mobileWrapClass}
       />
     </NavigationProvider>
   );
