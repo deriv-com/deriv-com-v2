@@ -93,5 +93,6 @@ export const Default: Story = {
         },
       ],
     },
+    bottomContent: <>Bottom Content</>,
   },
 };
