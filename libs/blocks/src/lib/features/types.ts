@@ -40,6 +40,7 @@ export interface FeaturesV4Props extends BlockWrapperProps {
 export interface ContentSliderProps<T extends CardVariantType> {
   title?: ReactNode;
   description?: ReactNode;
+  bottomContent?: ReactNode;
   cta?: () => ReactNode;
   className?: string;
   cardSliderProps?: CardSliderProps<T>;

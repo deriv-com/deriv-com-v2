@@ -8,6 +8,7 @@ const ContentSlider = <T extends CardVariantType>({
   description,
   cta: CTA,
   className,
+  bottomContent,
   cardSliderProps,
 }: ContentSliderProps<T>) => {
   return (
@@ -33,6 +34,7 @@ const ContentSlider = <T extends CardVariantType>({
           <CardSlider {...cardSliderProps} />
         }
         {CTA && <CTA />}
+        {bottomContent}
       </FluidContainer>
     </Section>
   );
