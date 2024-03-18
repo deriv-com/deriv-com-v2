@@ -11,7 +11,8 @@ export interface AccordionProps {
   customContent?: () => ReactNode;
   divider?: AccordionDivider;
   contentClass?: string;
+  background?: BgVariant;
   onExpand?: (e: boolean, i: string) => void;
 }
-
+export type BgVariant = 'light' | 'gray';
 export type AccordionDivider = 'none' | 'both' | 'bottom';

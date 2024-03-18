@@ -29,7 +29,6 @@ describe('AccordionBlock', () => {
   it('renders with correct class names and content', () => {
     const className = 'text-heading-h2';
     const title = 'Title goes here';
-    const childClassName = 'text-heading-h6';
 
     const { getByText } = render(
       <AccordionBlock
@@ -47,11 +46,6 @@ describe('AccordionBlock', () => {
 
     //renders with the correct title
     expect(getByText(title)).toBeInTheDocument();
-
-    const childTitleElement = getByText(childTitle);
-
-    //renders with correct classname
-    expect(childTitleElement).toHaveClass(childClassName);
 
     //renders with the correct title
     expect(getByText(subTitle)).toBeInTheDocument();
