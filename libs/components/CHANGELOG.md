@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.58.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.57.0...components-0.58.0) (2024-03-18)
+
+
+### Bug Fixes
+
+* accordian block fixes ([beebe87](https://github.com/deriv-com/deriv-com-v2/commit/beebe8769c6ce1da56461ca52deecc989e6c05a7))
+
 ## [0.57.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.56.0...components-0.57.0) (2024-03-11)
 
 
