@@ -1,9 +1,10 @@
 import styles from './base.module.css';
 
-import { Heading, qtMerge, Text } from '@deriv/quill-design';
+import { qtMerge, Text } from '@deriv/quill-design';
 import { AccordionProps } from '../types';
 import { StandaloneChevronDownRegularIcon } from '@deriv/quill-icons/Standalone';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import clsx from 'clsx';
 
 export const Base = ({
   id,
@@ -14,6 +15,7 @@ export const Base = ({
   expanded = false,
   icon,
   divider = 'none',
+  background = 'light',
   customContent: CustomContent,
   contentClass,
   onExpand,
@@ -31,6 +33,11 @@ export const Base = ({
     if (onExpand) {
       onExpand(!isExpanded, title);
     }
+  };
+
+  const bgColorVariantClass = {
+    light: 'bg-background-primary-container',
+    gray: 'bg-background-primary-base',
   };
 
   const dividerClassNames = {
@@ -114,7 +121,9 @@ export const Base = ({
           <>
             {icon && <div className="flex">{icon}</div>}
             <div className="flex w-full flex-col gap-general-xs">
-              <Heading.H6 className="overflow-hidden">{title}</Heading.H6>
+              <Text className="overflow-hidden text-typography-prominent">
+                {title}
+              </Text>
               {subtitle && (
                 <Text
                   size="sm"
@@ -142,7 +151,12 @@ export const Base = ({
         )}
       >
         {(isAutoExpand || isExpanded) && (
-          <div className="flex h-fit p-general-lg">
+          <div
+            className={clsx(
+              'flex h-fit p-general-lg',
+              bgColorVariantClass[background],
+            )}
+          >
             {Content && <Content />}
           </div>
         )}
