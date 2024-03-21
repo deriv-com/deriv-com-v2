@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.118.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.117.0...blocks-0.118.0) (2024-03-21)
+
+
+### Bug Fixes
+
+* desktop screen width fix ([ea98917](https://github.com/deriv-com/deriv-com-v2/commit/ea98917e2df73157c5a05c7ff2b0018645f9fa15))
+* removed curly brace ([a6f7153](https://github.com/deriv-com/deriv-com-v2/commit/a6f7153562af5ee37005fdf651e52bfc38a7ff53))
+
 ## [0.117.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.116.0...blocks-0.117.0) (2024-03-18)
 
 
