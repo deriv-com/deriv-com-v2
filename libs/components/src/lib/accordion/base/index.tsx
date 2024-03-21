@@ -37,7 +37,7 @@ export const Base = ({
 
   const bgColorVariantClass = {
     light: 'bg-background-primary-container',
-    gray: 'bg-background-primary-base',
+    gray: 'bg-opacity-black-75',
   };
 
   const dividerClassNames = {
@@ -107,9 +107,8 @@ export const Base = ({
       <div
         className={qtMerge(
           'flex cursor-pointer items-center justify-between',
+          isExpanded && 'bg-opacity-black-75',
           'gap-general-lg p-general-lg',
-          'hover:bg-opacity-black-100',
-          'active:bg-opacity-black-200',
           'border-opacity-black-100',
           contentClass,
         )}
