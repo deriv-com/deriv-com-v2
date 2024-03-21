@@ -14,7 +14,10 @@ export const DesktopNavigationWrapper = ({
   const { navDropDownState } = useNavigation();
 
   return (
-    <div className={'fixed z-50 w-screen'} data-cy="desktop-header">
+    <div
+      className={'fixed z-50 w-screen max-w-[256rem]'}
+      data-cy="desktop-header"
+    >
       <FixContainer
         className={clsx(
           'bg-background-primary-container',
