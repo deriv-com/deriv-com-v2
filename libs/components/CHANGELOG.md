@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.59.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.58.0...components-0.59.0) (2024-03-21)
+
+
+### Bug Fixes
+
+* fix bg for expanded state ([5cae8e1](https://github.com/deriv-com/deriv-com-v2/commit/5cae8e1a18c674440e79d6b235f9b09374da657e))
+
 ## [0.58.0](https://github.com/deriv-com/deriv-com-v2/compare/components-0.57.0...components-0.58.0) (2024-03-18)
 
 
