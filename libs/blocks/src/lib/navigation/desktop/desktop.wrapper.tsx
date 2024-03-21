@@ -15,7 +15,7 @@ export const DesktopNavigationWrapper = ({
 
   return (
     <div
-      className={'fixed z-50 w-screen max-w-[256rem]'}
+      className="fixed z-50 w-screen max-w-[256rem]"
       data-cy="desktop-header"
     >
       <FixContainer
