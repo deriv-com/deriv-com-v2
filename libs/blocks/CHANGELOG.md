@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.119.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.118.0...blocks-0.119.0) (2024-04-02)
+
+
+### Bug Fixes
+
+* keep language switcher open when hover over buttons ([9518692](https://github.com/deriv-com/deriv-com-v2/commit/9518692f1341f48a275212524b2120482eea605e))
+
 ## [0.118.0](https://github.com/deriv-com/deriv-com-v2/compare/blocks-0.117.0...blocks-0.118.0) (2024-03-21)
 
 
