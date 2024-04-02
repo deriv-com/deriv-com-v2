@@ -41,7 +41,7 @@ const DesktopNavigation = ({
           </div>
           <NavList items={navItems} />
           <div className="flex items-center gap-gap-md">
-            <div onMouseEnter={() => onItemHover?.('')}>
+            <div onMouseEnter={() => showMenuContent && onItemHover?.('')}>
               {renderButtons?.()}
             </div>
             {hasLanguageSwitch && <LanguageSwitcher />}
