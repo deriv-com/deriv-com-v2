@@ -40,22 +40,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - uses: marceloprado/has-changed-path@v1.0.1
+      - uses: marceloprado/has-changed-path@df1b7a3161b8fb9fd8c90403c66a9e66dfde50cb
         id: changed-hooks
         with:
           paths: libs/hooks
 
-      - uses: marceloprado/has-changed-path@v1.0.1
+      - uses: marceloprado/has-changed-path@df1b7a3161b8fb9fd8c90403c66a9e66dfde50cb
         id: changed-providers
         with:
           paths: libs/providers
 
-      - uses: marceloprado/has-changed-path@v1.0.1
+      - uses: marceloprado/has-changed-path@df1b7a3161b8fb9fd8c90403c66a9e66dfde50cb
         id: changed-components
         with:
           paths: libs/components
 
-      - uses: marceloprado/has-changed-path@v1.0.1
+      - uses: marceloprado/has-changed-path@df1b7a3161b8fb9fd8c90403c66a9e66dfde50cb
         id: changed-blocks
         with:
           paths: libs/blocks
