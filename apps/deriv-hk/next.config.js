@@ -13,6 +13,7 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  output: 'export',
   images: {
     loader: 'custom',
     imageSizes: [10, 256, 384],
